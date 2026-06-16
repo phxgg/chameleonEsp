@@ -10,6 +10,11 @@ public:
 	bool bBox;
 	bool bSkeleton;
 	bool bDumpBones;
+	bool bEnemyOnly;
+	int iTeleportTarget;
+	float colVisible[4];
+	float colNotVisible[4];
+	float colLines[4];
 	void InitializeSettings();
 	void SaveSettings();
 	void LoadSettings();

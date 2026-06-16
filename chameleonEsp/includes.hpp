@@ -2,6 +2,7 @@
 
 #include <Windows.h>
 #include <iostream>
+#include <vector>
 #include <direct.h>
 #include <Psapi.h>
 #include <d3d12.h>
@@ -19,6 +20,7 @@
 
 #include "SDK/Engine_classes.hpp"
 #include "SDK/BP_FirstPersonCharacter_Main_classes.hpp"
+#include "SDK/BP_FirstPersonCharacter_cLeon_Character_classes.hpp"
 #include "skeleton.hpp"
 #include "CheatManager.hpp"
 #include "Menu.hpp"

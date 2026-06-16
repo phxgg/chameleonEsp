@@ -4,6 +4,8 @@ void CheatManager::Init()
 {
 	auto& io = ImGui::GetIO();
 
+	PlayerInfos.clear();
+
 	gWorld = SDK::UWorld::GetWorld();
 	if (!gWorld) return;
 
@@ -50,15 +52,32 @@ void CheatManager::Init()
 		if (PlayerController)
 			PlayerController->FOV(cfg->bFovChanger ? cfg->fFovValue : 90); // fov changer
 
+		// if player is dead, skip
+		if (!BaseClass->PlayerState) continue;
+
 		auto PlayerName = BaseClass->PlayerState->PlayerNamePrivate;
 		bool IsVisible = PlayerController->LineOfSightTo(obj, { 0,0,0 }, false); // visible check
 
-		static bool once = false;
-		if (cfg->bDumpBones&& !once) {
+		if (obj != MyPlayer)
+			PlayerInfos.push_back({ PlayerName.IsValid() ? PlayerName.ToString() : "Unknown", Location });
+		else
+			continue;
+
+		if (cfg->bDumpBones) {
 			DumpBones();
 			cfg->bDumpBones = false;
-			once = true;
 		}
+
+		if (cfg->bEnemyOnly)
+		{
+			auto* MyChar = (SDK::ABP_FirstPersonCharacter_cLeon_Character_C*)MyPlayer;
+			auto* TargetChar = (SDK::ABP_FirstPersonCharacter_cLeon_Character_C*)BaseClass;
+			if (MyChar->IsHunter == TargetChar->IsHunter)
+				continue;
+		}
+
+		ImU32 colEsp  = ImGui::ColorConvertFloat4ToU32(IsVisible ? *(ImVec4*)cfg->colVisible : *(ImVec4*)cfg->colNotVisible);
+		ImU32 colLine = ImGui::ColorConvertFloat4ToU32(*(ImVec4*)cfg->colLines);
 
 		// draw bones
 		SDK::FVector2D BoneScreen, PrevBoneScreen;
@@ -72,7 +91,7 @@ void CheatManager::Init()
 			{
 				if (cfg->bSkeleton)
 				{
-					ImGui::GetForegroundDrawList()->AddLine(ImVec2(BoneScreen.X, BoneScreen.Y), ImVec2(PrevBoneScreen.X, PrevBoneScreen.Y), IsVisible ? ImColor(0, 255, 0) : ImColor(255, 0, 0), 1.0f);
+					ImGui::GetForegroundDrawList()->AddLine(ImVec2(BoneScreen.X, BoneScreen.Y), ImVec2(PrevBoneScreen.X, PrevBoneScreen.Y), colEsp, 1.0f);
 				}
 			}
 		}
@@ -104,10 +123,10 @@ void CheatManager::Init()
 		if (bHasBox)
 		{
 			if (cfg->bNames)
-				ImGui::GetForegroundDrawList()->AddText(ImVec2(BoxMin.X, BoxMin.Y - 15), IsVisible ? ImColor(0, 255, 0) : ImColor(255, 0, 0), PlayerName.IsValid() ? PlayerName.ToString().c_str() : " ");
+				ImGui::GetForegroundDrawList()->AddText(ImVec2(BoxMin.X, BoxMin.Y - 15), colEsp, PlayerName.IsValid() ? PlayerName.ToString().c_str() : " ");
 
 			if (cfg->bBox)
-				draw->DrawBox(BoxMin.X, BoxMin.Y, BoxMax.X - BoxMin.X, BoxMax.Y - BoxMin.Y, IsVisible ? ImColor(0, 255, 0) : ImColor(255, 0, 0), 1.0f);
+				draw->DrawBox(BoxMin.X, BoxMin.Y, BoxMax.X - BoxMin.X, BoxMax.Y - BoxMin.Y, colEsp, 1.0f);
 		}
 
 		//example how to draw without bones in relative location
@@ -117,8 +136,15 @@ void CheatManager::Init()
 			ImVec2 Pos(Screen.X, Screen.Y);
 
 			if (cfg->bLines)
-				ImGui::GetForegroundDrawList()->AddLine(ImVec2(static_cast<float>(io.DisplaySize.x / 2), static_cast<float>(io.DisplaySize.y)), Pos, ImColor(255, 255, 255), 0.7);
+				ImGui::GetForegroundDrawList()->AddLine(ImVec2(static_cast<float>(io.DisplaySize.x / 2), static_cast<float>(io.DisplaySize.y)), Pos, colLine, 0.7f);
 		}
+	}
+
+	if (cfg->iTeleportTarget != -1 && cfg->iTeleportTarget < (int)PlayerInfos.size() && MyPlayer)
+	{
+		SDK::FRotator CurrentRotation = MyPlayer->K2_GetActorRotation();
+		MyPlayer->K2_TeleportTo(PlayerInfos[cfg->iTeleportTarget].Location, CurrentRotation);
+		cfg->iTeleportTarget = -1;
 	}
 }
 

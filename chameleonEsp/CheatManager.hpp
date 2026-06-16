@@ -16,6 +16,11 @@ private:
 	SDK::UKismetMathLibrary* MathLib;
 	int x, y = 0;
 public:
+	struct PlayerInfo {
+		std::string Name;
+		SDK::FVector Location;
+	};
+	std::vector<PlayerInfo> PlayerInfos;
 	void Init();
 	void DumpBones();
 };

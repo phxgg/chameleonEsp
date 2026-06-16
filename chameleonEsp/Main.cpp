@@ -48,8 +48,21 @@ namespace DirectX12Interface {
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 LRESULT __stdcall WndProc(const HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
-    if (true && ImGui_ImplWin32_WndProcHandler(hWnd, uMsg, wParam, lParam))
+    if (ImGui_ImplWin32_WndProcHandler(hWnd, uMsg, wParam, lParam))
         return true;
+
+    if (cfg->bMenuOpen && ImGui::GetIO().WantCaptureMouse)
+    {
+        switch (uMsg)
+        {
+        case WM_LBUTTONDOWN: case WM_LBUTTONUP:
+        case WM_RBUTTONDOWN: case WM_RBUTTONUP:
+        case WM_MBUTTONDOWN: case WM_MBUTTONUP:
+        case WM_XBUTTONDOWN: case WM_XBUTTONUP:
+        case WM_MOUSEWHEEL:  case WM_MOUSEHWHEEL:
+            return true;
+        }
+    }
 
     return CallWindowProc(Process::WndProc, hWnd, uMsg, wParam, lParam);
 }
@@ -164,7 +177,6 @@ HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT
 
     if (cfg->bMenuOpen)
     {
-        cfg->SaveSettings();
         ImGui::StyleColorsDark();
         gui->Init();
     }
@@ -293,22 +305,22 @@ DWORD MainThread(HMODULE Module)
     freopen_s(&Dummy, "CONOUT$", "w", stdout);
     freopen_s(&Dummy, "CONIN$", "r", stdin);
 
-    //_mkdir("C:\\chameleonEsp");
+    _mkdir("C:\\chameleonEsp");
 
 	// Initialize global instances
-    cfg = static_cast<Settings*>(malloc(sizeof(Settings)));
+    cfg = new Settings();
     if (!cfg) return 0;
 
-    cheat = static_cast<CheatManager*>(malloc(sizeof(CheatManager)));
+    cheat = new CheatManager();
     if (!cheat) return 0;
 
-    gui = static_cast<Menu*>(malloc(sizeof(Menu)));
+    gui = new Menu();
     if (!gui) return 0;
 
-    draw = static_cast<Drawings*>(malloc(sizeof(Drawings)));
+    draw = new Drawings();
     if (!draw) return 0;
 
-    cfg->InitializeSettings();
+    cfg->LoadSettings();
 
 	// Wait for the game window to be in focus before proceeding
     bool WindowFocus = false;
