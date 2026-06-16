@@ -51,10 +51,10 @@ namespace DirectX12Interface {
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 LRESULT __stdcall WndProc(const HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
-    if (ImGui_ImplWin32_WndProcHandler(hWnd, uMsg, wParam, lParam))
+    if (ImGui::GetCurrentContext() && ImGui::GetIO().BackendPlatformUserData && ImGui_ImplWin32_WndProcHandler(hWnd, uMsg, wParam, lParam))
         return true;
 
-    if (cfg->bMenuOpen && ImGui::GetIO().WantCaptureMouse)
+    if (cfg->bMenuOpen && ImGui::GetCurrentContext() && ImGui::GetIO().BackendPlatformUserData && ImGui::GetIO().WantCaptureMouse)
     {
         switch (uMsg)
         {
@@ -93,6 +93,27 @@ HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT
             io.ConfigFlags |= ImGuiConfigFlags_NoMouseCursorChange;
             io.ConfigFlags |= ImGuiConfigFlags_NavEnableSetMousePos;
             io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+
+            // Load Unicode fonts so non-ASCII player names (Chinese, Arabic, Cyrillic, etc.) render correctly.
+            // Segoe UI ships on all Windows 10/11 and covers Latin, Cyrillic, Greek, Arabic, Hebrew, Thai, and more.
+            // CJK fonts are merged in when present; AddFontFromFileTTF silently returns nullptr if the file is missing.
+            {
+                ImFontConfig cfg;
+                cfg.OversampleH = 1;
+                cfg.OversampleV = 1;
+
+                if (io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\segoeui.ttf", 15.0f, &cfg, io.Fonts->GetGlyphRangesDefault()))
+                {
+                    cfg.MergeMode = true;
+                    io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\segoeui.ttf", 15.0f, &cfg, io.Fonts->GetGlyphRangesCyrillic());
+                    io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\segoeui.ttf", 15.0f, &cfg, io.Fonts->GetGlyphRangesGreek());
+                    static const ImWchar arabic_ranges[] = { 0x0600, 0x06FF, 0xFB50, 0xFDFF, 0xFE70, 0xFEFF, 0 };
+                    io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\segoeui.ttf", 15.0f, &cfg, arabic_ranges);
+                    io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\msyh.ttc",    15.0f, &cfg, io.Fonts->GetGlyphRangesChineseSimplifiedCommon());
+                    io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\meiryo.ttc",  15.0f, &cfg, io.Fonts->GetGlyphRangesJapanese());
+                    io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\malgun.ttf",  15.0f, &cfg, io.Fonts->GetGlyphRangesKorean());
+                }
+            }
 
             DXGI_SWAP_CHAIN_DESC Desc;
             pSwapChain->GetDesc(&Desc);
@@ -152,7 +173,11 @@ HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT
             ImGui_ImplDX12_CreateDeviceObjects();
             //ImGui::GetIO().ImeWindowHandle = Process::Hwnd;
 			ImGui::GetMainViewport()->PlatformHandleRaw = Process::Hwnd;
-            Process::WndProc = (WNDPROC)SetWindowLongPtr(Process::Hwnd, GWLP_WNDPROC, (__int3264)(LONG_PTR)WndProc);
+            // Only hook WndProc once — on resize init reruns, Process::WndProc already holds
+            // the original game proc. Hooking again would overwrite it with our own hook,
+            // causing CallWindowProc -> WndProc -> CallWindowProc infinite recursion.
+            if (!Process::WndProc)
+                Process::WndProc = (WNDPROC)SetWindowLongPtr(Process::Hwnd, GWLP_WNDPROC, (__int3264)(LONG_PTR)WndProc);
         }
         init = true;
     }
@@ -237,19 +262,34 @@ HRESULT __stdcall hkResizeBuffers(IDXGISwapChain3* pSwapChain, UINT BufferCount,
 {
     if (init)
     {
-        ImGui::DestroyContext();
+        // Backends must be shut down before the context is destroyed
         ImGui_ImplDX12_Shutdown();
         ImGui_ImplWin32_Shutdown();
+        ImGui::DestroyContext();
+
+        // Release per-frame back buffer resources — DXGI requires all GetBuffer()
+        // references to be dropped before ResizeBuffers is called
+        for (size_t i = 0; i < DirectX12Interface::BuffersCounts; i++)
+        {
+            if (DirectX12Interface::FrameContext[i].Resource) {
+                DirectX12Interface::FrameContext[i].Resource->Release();
+                DirectX12Interface::FrameContext[i].Resource = nullptr;
+            }
+        }
+        delete[] DirectX12Interface::FrameContext;
+        DirectX12Interface::FrameContext = nullptr;
 
         if (DirectX12Interface::DescriptorHeapBackBuffers) {
             DirectX12Interface::DescriptorHeapBackBuffers->Release();
-            DirectX12Interface::DescriptorHeapBackBuffers  = nullptr;
-        }
-        if (DirectX12Interface::Device) {
-            DirectX12Interface::Device->Release();
-            DirectX12Interface::Device = nullptr;
+            DirectX12Interface::DescriptorHeapBackBuffers = nullptr;
         }
 
+        if (DirectX12Interface::DescriptorHeapImGuiRender) {
+            DirectX12Interface::DescriptorHeapImGuiRender->Release();
+            DirectX12Interface::DescriptorHeapImGuiRender = nullptr;
+        }
+
+        // Device is NOT tied to swap chain buffers and must not be released here
         init = false;
     }
 
@@ -267,12 +307,38 @@ void Unload()
 	MH_DisableHook(MH_ALL_HOOKS);
 	MH_Uninitialize();
 
-    // ImGui
+    // ImGui + D3D12 resources
     if (init)
     {
         ImGui_ImplDX12_Shutdown();
         ImGui_ImplWin32_Shutdown();
         ImGui::DestroyContext();
+
+        // Release back buffer COM references so the game's ResizeBuffers can succeed
+        // after re-injection. hkPresent re-acquires these after every resize, so they
+        // must be explicitly released here — not doing so leaks the references.
+        if (DirectX12Interface::FrameContext)
+        {
+            for (size_t i = 0; i < DirectX12Interface::BuffersCounts; i++)
+            {
+                if (DirectX12Interface::FrameContext[i].Resource)
+                    DirectX12Interface::FrameContext[i].Resource->Release();
+            }
+            delete[] DirectX12Interface::FrameContext;
+            DirectX12Interface::FrameContext = nullptr;
+        }
+
+        if (DirectX12Interface::DescriptorHeapBackBuffers)
+        {
+            DirectX12Interface::DescriptorHeapBackBuffers->Release();
+            DirectX12Interface::DescriptorHeapBackBuffers = nullptr;
+        }
+
+        if (DirectX12Interface::DescriptorHeapImGuiRender)
+        {
+            DirectX12Interface::DescriptorHeapImGuiRender->Release();
+            DirectX12Interface::DescriptorHeapImGuiRender = nullptr;
+        }
     }
 
     // misc
