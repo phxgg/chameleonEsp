@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <Windows.h>
+#include <atomic>
 #include <iostream>
 #include <vector>
 #include <unordered_set>

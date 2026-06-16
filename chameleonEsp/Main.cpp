@@ -81,8 +81,11 @@ void __fastcall hkProcessEvent(SDK::UObject* pObject, SDK::UFunction* pFunction,
 }
 
 bool init = false;
+static std::atomic<bool> bRunning(true);
+
 HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT Flags)
 {
+    if (!bRunning) return oPresent(pSwapChain, SyncInterval, Flags);
     if (!init) {
         if (SUCCEEDED(pSwapChain->GetDevice(__uuidof(ID3D12Device), (void**)&DirectX12Interface::Device))) {
             ImGui::CreateContext();
@@ -260,6 +263,8 @@ void __stdcall hkExecuteCommandLists(ID3D12CommandQueue* queue, UINT NumCommandL
 
 HRESULT __stdcall hkResizeBuffers(IDXGISwapChain3* pSwapChain, UINT BufferCount, UINT Width, UINT Height, DXGI_FORMAT NewFormat, UINT SwapChainFlags)
 {
+    if (!bRunning) return oResizeBuffers(pSwapChain, BufferCount, Width, Height, NewFormat, SwapChainFlags);
+
     if (init)
     {
         // Backends must be shut down before the context is destroyed
@@ -298,6 +303,13 @@ HRESULT __stdcall hkResizeBuffers(IDXGISwapChain3* pSwapChain, UINT BufferCount,
 
 void Unload()
 {
+    // Signal hooks to bail out immediately, then wait long enough for any call
+    // that is already mid-execution on the render thread to return before we
+    // start freeing shared state. MH_DisableHook only blocks future calls —
+    // it cannot stop one that is already inside hkPresent/hkResizeBuffers.
+    bRunning = false;
+    Sleep(100);
+
     // Restore the original WndProc before this module is unmapped, otherwise the window
     // keeps a dangling pointer into our WndProc and crashes on the next message.
     if (Process::WndProc)
