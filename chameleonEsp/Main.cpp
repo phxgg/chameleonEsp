@@ -94,6 +94,27 @@ HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT
             io.ConfigFlags |= ImGuiConfigFlags_NavEnableSetMousePos;
             io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
 
+            // Load Unicode fonts so non-ASCII player names (Chinese, Arabic, Cyrillic, etc.) render correctly.
+            // Segoe UI ships on all Windows 10/11 and covers Latin, Cyrillic, Greek, Arabic, Hebrew, Thai, and more.
+            // CJK fonts are merged in when present; AddFontFromFileTTF silently returns nullptr if the file is missing.
+            {
+                ImFontConfig cfg;
+                cfg.OversampleH = 1;
+                cfg.OversampleV = 1;
+
+                if (io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\segoeui.ttf", 13.0f, &cfg, io.Fonts->GetGlyphRangesDefault()))
+                {
+                    cfg.MergeMode = true;
+                    io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\segoeui.ttf", 13.0f, &cfg, io.Fonts->GetGlyphRangesCyrillic());
+                    io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\segoeui.ttf", 13.0f, &cfg, io.Fonts->GetGlyphRangesGreek());
+                    static const ImWchar arabic_ranges[] = { 0x0600, 0x06FF, 0xFB50, 0xFDFF, 0xFE70, 0xFEFF, 0 };
+                    io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\segoeui.ttf", 13.0f, &cfg, arabic_ranges);
+                    io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\msyh.ttc",    13.0f, &cfg, io.Fonts->GetGlyphRangesChineseSimplifiedCommon());
+                    io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\meiryo.ttc",  13.0f, &cfg, io.Fonts->GetGlyphRangesJapanese());
+                    io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\malgun.ttf",  13.0f, &cfg, io.Fonts->GetGlyphRangesKorean());
+                }
+            }
+
             DXGI_SWAP_CHAIN_DESC Desc;
             pSwapChain->GetDesc(&Desc);
             Process::Hwnd = Desc.OutputWindow; // use the window the swapchain actually presents to, not GetForegroundWindow()'s guess
