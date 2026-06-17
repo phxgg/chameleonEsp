@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "EN_LINK_PlayerStateValueType_structs.hpp"
 #include "BP_FirstPersonPlayerState_classes.hpp"
+#include "EN_LINK_PlayerStateValueType_structs.hpp"
 
 
 SDK_NAMESPACE_START

@@ -64,6 +64,26 @@ void ABP_FirstPersonGameMode_V2_C::UpdateJoinState(bool JoinState)
 }
 
 
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.UpdateGamePhaseSession
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    GamePhaseName                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonGameMode_V2_C::UpdateGamePhaseSession(const class FString& GamePhaseName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonGameMode_V2_C", "UpdateGamePhaseSession");
+
+	Params::BP_FirstPersonGameMode_V2_C_UpdateGamePhaseSession Parms{};
+
+	Parms.GamePhaseName = std::move(GamePhaseName);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.Spawn
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -140,6 +160,28 @@ void ABP_FirstPersonGameMode_V2_C::OnUpdateSessionComplete_DE97626F47E9317836E9D
 }
 
 
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.OnUpdateSessionComplete_4C3FEC454ACE9E1456DA7DAD80AB4E11
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             SessionName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonGameMode_V2_C::OnUpdateSessionComplete_4C3FEC454ACE9E1456DA7DAD80AB4E11(class FName SessionName, bool bWasSuccessful)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonGameMode_V2_C", "OnUpdateSessionComplete_4C3FEC454ACE9E1456DA7DAD80AB4E11");
+
+	Params::BP_FirstPersonGameMode_V2_C_OnUpdateSessionComplete_4C3FEC454ACE9E1456DA7DAD80AB4E11 Parms{};
+
+	Parms.SessionName = SessionName;
+	Parms.bWasSuccessful = bWasSuccessful;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.OnUpdateSessionComplete_0B8BFF2042E91A2A39DAD2BE5940BD84
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -184,6 +226,28 @@ void ABP_FirstPersonGameMode_V2_C::OnCallFailed_DE97626F47E9317836E9DF84671CB5B8
 }
 
 
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.OnCallFailed_4C3FEC454ACE9E1456DA7DAD80AB4E11
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             SessionName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonGameMode_V2_C::OnCallFailed_4C3FEC454ACE9E1456DA7DAD80AB4E11(class FName SessionName, bool bWasSuccessful)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonGameMode_V2_C", "OnCallFailed_4C3FEC454ACE9E1456DA7DAD80AB4E11");
+
+	Params::BP_FirstPersonGameMode_V2_C_OnCallFailed_4C3FEC454ACE9E1456DA7DAD80AB4E11 Parms{};
+
+	Parms.SessionName = SessionName;
+	Parms.bWasSuccessful = bWasSuccessful;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.OnCallFailed_0B8BFF2042E91A2A39DAD2BE5940BD84
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -217,6 +281,30 @@ void ABP_FirstPersonGameMode_V2_C::NumUpdateDelay()
 		Func = Class->GetFunction("BP_FirstPersonGameMode_V2_C", "NumUpdateDelay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.MakeUpdateGamePhaseSettings
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    GamePhaseName                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// struct FOnlineSessionSettingsBP*        StructOut                                              (Parm, OutParm)
+
+void ABP_FirstPersonGameMode_V2_C::MakeUpdateGamePhaseSettings(const class FString& GamePhaseName, struct FOnlineSessionSettingsBP* StructOut)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonGameMode_V2_C", "MakeUpdateGamePhaseSettings");
+
+	Params::BP_FirstPersonGameMode_V2_C_MakeUpdateGamePhaseSettings Parms{};
+
+	Parms.GamePhaseName = std::move(GamePhaseName);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (StructOut != nullptr)
+		*StructOut = std::move(Parms.StructOut);
 }
 
 
@@ -325,6 +413,20 @@ void ABP_FirstPersonGameMode_V2_C::ExecuteUbergraph_BP_FirstPersonGameMode_V2(in
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.DelayUpdate
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_FirstPersonGameMode_V2_C::DelayUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonGameMode_V2_C", "DelayUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
