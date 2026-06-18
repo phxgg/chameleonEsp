@@ -39,10 +39,17 @@ namespace DirectX12Interface {
         ID3D12CommandAllocator* CommandAllocator;
         ID3D12Resource* Resource;
         D3D12_CPU_DESCRIPTOR_HANDLE DescriptorHandle;
+        UINT64 FenceValue;  // GPU fence value of the last submission that used this context's allocator
     };
 
     uintx_t BuffersCounts = -1;
     _FrameContext* FrameContext;
+
+    // Single fence shared across frame contexts; each context records the value it was last
+    // signaled with so we can wait for the GPU to finish before reusing its allocator.
+    ID3D12Fence* Fence = nullptr;
+    HANDLE FenceEvent = nullptr;
+    UINT64 FenceLastSignaledValue = 0;
 }
 
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
@@ -137,18 +144,32 @@ HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT
             if (DirectX12Interface::Device->CreateDescriptorHeap(&DescriptorImGuiRender, IID_PPV_ARGS(&DirectX12Interface::DescriptorHeapImGuiRender)) != S_OK)
                 return oPresent(pSwapChain, SyncInterval, Flags);
 
-            ID3D12CommandAllocator* Allocator;
-            if (DirectX12Interface::Device->CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE_DIRECT, IID_PPV_ARGS(&Allocator)) != S_OK)
-                return oPresent(pSwapChain, SyncInterval, Flags);
-
+            // One command allocator per frame context. Sharing a single allocator and
+            // resetting it every frame corrupts state while the GPU is still executing the
+            // previous frame's commands; a per-context allocator gated by the fence below
+            // is only reset once the GPU is provably done with it.
             for (size_t i = 0; i < DirectX12Interface::BuffersCounts; i++)
             {
-                DirectX12Interface::FrameContext[i].CommandAllocator = Allocator;
+                if (DirectX12Interface::Device->CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE_DIRECT, IID_PPV_ARGS(&DirectX12Interface::FrameContext[i].CommandAllocator)) != S_OK)
+                    return oPresent(pSwapChain, SyncInterval, Flags);
+                DirectX12Interface::FrameContext[i].FenceValue = 0;
             }
 
-            if (DirectX12Interface::Device->CreateCommandList(0, D3D12_COMMAND_LIST_TYPE_DIRECT, Allocator, NULL, IID_PPV_ARGS(&DirectX12Interface::CommandList)) != S_OK ||
+            if (DirectX12Interface::Device->CreateCommandList(0, D3D12_COMMAND_LIST_TYPE_DIRECT, DirectX12Interface::FrameContext[0].CommandAllocator, NULL, IID_PPV_ARGS(&DirectX12Interface::CommandList)) != S_OK ||
                 DirectX12Interface::CommandList->Close() != S_OK)
                 return oPresent(pSwapChain, SyncInterval, Flags);
+
+            // Fence + event survive resizes (init reruns), so guard creation to avoid leaking
+            // one per resize. FenceLastSignaledValue keeps counting across re-inits.
+            if (!DirectX12Interface::Fence)
+            {
+                if (DirectX12Interface::Device->CreateFence(0, D3D12_FENCE_FLAG_NONE, IID_PPV_ARGS(&DirectX12Interface::Fence)) != S_OK)
+                    return oPresent(pSwapChain, SyncInterval, Flags);
+
+                DirectX12Interface::FenceEvent = CreateEvent(nullptr, FALSE, FALSE, nullptr);
+                if (!DirectX12Interface::FenceEvent)
+                    return oPresent(pSwapChain, SyncInterval, Flags);
+            }
 
             D3D12_DESCRIPTOR_HEAP_DESC DescriptorBackBuffers;
             DescriptorBackBuffers.Type = D3D12_DESCRIPTOR_HEAP_TYPE_RTV;
@@ -183,9 +204,18 @@ HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT
             // causing CallWindowProc -> WndProc -> CallWindowProc infinite recursion.
             if (!Process::WndProc)
                 Process::WndProc = (WNDPROC)SetWindowLongPtr(Process::Hwnd, GWLP_WNDPROC, (__int3264)(LONG_PTR)WndProc);
+
+            // Mark initialized only after every resource above was created - any failed step
+            // returns early and leaves init false, so the next frame retries cleanly instead
+            // of falling through to the render path with null D3D state.
+            init = true;
         }
-        init = true;
     }
+
+    // Init hasn't completed (device not ready, or a create step failed this frame) - don't
+    // run the render path against half-built state.
+    if (!init)
+        return oPresent(pSwapChain, SyncInterval, Flags);
 
     if (DirectX12Interface::CommandQueue == nullptr)
     {
@@ -227,6 +257,15 @@ HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT
     ImGui::EndFrame();
 
     DirectX12Interface::_FrameContext& CurrentFrameContext = DirectX12Interface::FrameContext[pSwapChain->GetCurrentBackBufferIndex()];
+
+    // Wait for the GPU to finish the last frame that used this context's allocator before
+    // resetting it — resetting an allocator with in-flight commands is undefined behaviour.
+    if (DirectX12Interface::Fence->GetCompletedValue() < CurrentFrameContext.FenceValue)
+    {
+        DirectX12Interface::Fence->SetEventOnCompletion(CurrentFrameContext.FenceValue, DirectX12Interface::FenceEvent);
+        WaitForSingleObject(DirectX12Interface::FenceEvent, INFINITE);
+    }
+
     CurrentFrameContext.CommandAllocator->Reset();
 
     D3D12_RESOURCE_BARRIER Barrier;
@@ -250,17 +289,42 @@ HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT
     DirectX12Interface::CommandList->Close();
     DirectX12Interface::CommandQueue->ExecuteCommandLists(1, reinterpret_cast<ID3D12CommandList* const*>(&DirectX12Interface::CommandList));
 
+    // Signal the fence on the queue and record the value for this frame context, so next time
+    // we cycle back to it we know when the GPU has finished this frame's commands.
+    const UINT64 signalValue = ++DirectX12Interface::FenceLastSignaledValue;
+    DirectX12Interface::CommandQueue->Signal(DirectX12Interface::Fence, signalValue);
+    CurrentFrameContext.FenceValue = signalValue;
+
     return oPresent(pSwapChain, SyncInterval, Flags);
 }
 
 void __stdcall hkExecuteCommandLists(ID3D12CommandQueue* queue, UINT NumCommandLists, ID3D12CommandList* ppCommandLists)
 {
-    if (!DirectX12Interface::CommandQueue)
+    // Only capture the DIRECT (graphics) queue — the game also runs copy/compute queues, and
+    // submitting our graphics command list to one of those would be an invalid submission and
+    // remove the device. Filtering by queue type avoids grabbing the wrong one.
+    if (!DirectX12Interface::CommandQueue && queue && queue->GetDesc().Type == D3D12_COMMAND_LIST_TYPE_DIRECT)
     {
         DirectX12Interface::CommandQueue = queue;
     }
 
     return oExecuteCommandLists(queue, NumCommandLists, ppCommandLists);
+}
+
+// Wait until the GPU has finished every frame we've submitted, reusing the persistent render
+// fence, so the command list and per-frame allocators can be released without freeing memory
+// the GPU is still reading. Bounded so a wedged GPU can't hang teardown forever.
+static void WaitForGpuIdle()
+{
+    if (!DirectX12Interface::Fence || !DirectX12Interface::FenceEvent)
+        return;
+
+    const UINT64 value = DirectX12Interface::FenceLastSignaledValue;
+    if (value != 0 && DirectX12Interface::Fence->GetCompletedValue() < value)
+    {
+        DirectX12Interface::Fence->SetEventOnCompletion(value, DirectX12Interface::FenceEvent);
+        WaitForSingleObject(DirectX12Interface::FenceEvent, 1000);
+    }
 }
 
 HRESULT __stdcall hkResizeBuffers(IDXGISwapChain3* pSwapChain, UINT BufferCount, UINT Width, UINT Height, DXGI_FORMAT NewFormat, UINT SwapChainFlags)
@@ -269,18 +333,32 @@ HRESULT __stdcall hkResizeBuffers(IDXGISwapChain3* pSwapChain, UINT BufferCount,
 
     if (init)
     {
+        // Make sure the GPU is done with our command list / allocators before freeing them.
+        WaitForGpuIdle();
+
         // Backends must be shut down before the context is destroyed
         ImGui_ImplDX12_Shutdown();
         ImGui_ImplWin32_Shutdown();
         ImGui::DestroyContext();
 
-        // Release per-frame back buffer resources — DXGI requires all GetBuffer()
-        // references to be dropped before ResizeBuffers is called
+        // The command list is recreated on the next hkPresent init, so drop the old one.
+        if (DirectX12Interface::CommandList) {
+            DirectX12Interface::CommandList->Release();
+            DirectX12Interface::CommandList = nullptr;
+        }
+
+        // Release per-frame back buffer resources (DXGI requires all GetBuffer() references
+        // dropped before ResizeBuffers) and the per-frame command allocators, which hkPresent
+        // recreates after the resize.
         for (size_t i = 0; i < DirectX12Interface::BuffersCounts; i++)
         {
             if (DirectX12Interface::FrameContext[i].Resource) {
                 DirectX12Interface::FrameContext[i].Resource->Release();
                 DirectX12Interface::FrameContext[i].Resource = nullptr;
+            }
+            if (DirectX12Interface::FrameContext[i].CommandAllocator) {
+                DirectX12Interface::FrameContext[i].CommandAllocator->Release();
+                DirectX12Interface::FrameContext[i].CommandAllocator = nullptr;
             }
         }
         delete[] DirectX12Interface::FrameContext;
@@ -329,19 +407,30 @@ void Unload()
     // ImGui + D3D12 resources
     if (init)
     {
+        // Make sure the GPU is done with our command list / allocators before freeing them.
+        WaitForGpuIdle();
+
         ImGui_ImplDX12_Shutdown();
         ImGui_ImplWin32_Shutdown();
         ImGui::DestroyContext();
 
+        if (DirectX12Interface::CommandList) {
+            DirectX12Interface::CommandList->Release();
+            DirectX12Interface::CommandList = nullptr;
+        }
+
         // Release back buffer COM references so the game's ResizeBuffers can succeed
         // after re-injection. hkPresent re-acquires these after every resize, so they
-        // must be explicitly released here — not doing so leaks the references.
+        // must be explicitly released here — not doing so leaks the references. The
+        // per-frame command allocators are owned by us too and need releasing.
         if (DirectX12Interface::FrameContext)
         {
             for (size_t i = 0; i < DirectX12Interface::BuffersCounts; i++)
             {
                 if (DirectX12Interface::FrameContext[i].Resource)
                     DirectX12Interface::FrameContext[i].Resource->Release();
+                if (DirectX12Interface::FrameContext[i].CommandAllocator)
+                    DirectX12Interface::FrameContext[i].CommandAllocator->Release();
             }
             delete[] DirectX12Interface::FrameContext;
             DirectX12Interface::FrameContext = nullptr;
@@ -358,6 +447,18 @@ void Unload()
             DirectX12Interface::DescriptorHeapImGuiRender->Release();
             DirectX12Interface::DescriptorHeapImGuiRender = nullptr;
         }
+    }
+
+    // Fence + event persist across resizes (guarded creation), so release them once here.
+    if (DirectX12Interface::Fence)
+    {
+        DirectX12Interface::Fence->Release();
+        DirectX12Interface::Fence = nullptr;
+    }
+    if (DirectX12Interface::FenceEvent)
+    {
+        CloseHandle(DirectX12Interface::FenceEvent);
+        DirectX12Interface::FenceEvent = nullptr;
     }
 
     // misc
