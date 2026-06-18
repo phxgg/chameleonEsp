@@ -419,6 +419,7 @@ DWORD MainThread(HMODULE Module)
     while (WindowFocus == false)
     {
         InitProcess(&WindowFocus);
+        Sleep(100);
     }
 
 	if (MH_Initialize() != MH_OK)

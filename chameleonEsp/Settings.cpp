@@ -30,7 +30,13 @@ void Settings::SaveSettings()
 	_mkdir("C:\\chameleonEsp");
 	fopen_s(&file, ConfigFile, "wb");
 	if (file) {
-		fwrite(cfg, sizeof(*cfg), 1, file);
+		// iTeleportTarget and bDumpBones are transient runtime commands, not persisted
+		// settings - write them as their inert defaults so a saved config can't carry a
+		// stale teleport index or a pending bone dump.
+		Settings tmp = *this;
+		tmp.iTeleportTarget = -1;
+		tmp.bDumpBones = false;
+		fwrite(&tmp, sizeof(tmp), 1, file);
 		fclose(file);
 	}
 }
@@ -46,6 +52,10 @@ void Settings::LoadSettings()
 			fseek(file, 0, SEEK_SET);
 			fread(cfg, sizeof(*cfg), 1, file);
 			fclose(file);
+
+			// Never restore transient command flags from disk - they are not settings.
+			cfg->iTeleportTarget = -1;
+			cfg->bDumpBones = false;
 		}
 		else
 		{

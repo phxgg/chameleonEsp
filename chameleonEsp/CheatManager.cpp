@@ -90,7 +90,9 @@ void CheatManager::Init()
 
 		if (cfg->bEnemyOnly)
 		{
-			auto* MyChar = (SDK::ABP_FirstPersonCharacter_cLeon_Character_C*)MyPlayer;
+			if (!MyPlayer->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_C::StaticClass()))
+				continue;
+			auto* MyChar = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_C*>(MyPlayer);
 			if (MyChar->IsHunter == BaseClass->IsHunter)
 				continue;
 		}
@@ -184,6 +186,10 @@ void CheatManager::Init()
 
 void CheatManager::DumpBones()
 {
+	// Guard the whole pointer chain - any of these can be null on proxies/streaming actors.
+	if (!BaseClass || !BaseClass->Mesh || !BaseClass->Mesh->SkeletalMesh || !BaseClass->Mesh->SkeletalMesh->Skeleton)
+		return;
+
 	FILE* Log = fopen("C:\\bones.txt", "w");
 
 	if (Log) {
