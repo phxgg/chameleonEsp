@@ -54,14 +54,48 @@ void CheatManager::Init()
 		if (PlayerController)
 			PlayerController->FOV(cfg->bFovChanger ? cfg->fFovValue : 90); // fov changer
 
-		// if player is dead, skip
-		if (!BaseClass->PlayerState || BaseClass->Dead) continue;
+		// Skip ragdolled corpses. Neither the raw `Dead` field (not replicated - stays 0 on remote
+		// corpses) nor IsLive() (returns true even for dead bodies in infection mode) works here.
+		// A live character - survivor or hunter - is animation-driven, so its mesh isn't simulating
+		// physics; only a dead body ragdolls. That makes IsAnySimulatingPhysics() the clean signal,
+		// confirmed by logging: every live player reads 0, only the corpse reads 1.
+		if (BaseClass->Mesh && BaseClass->Mesh->IsAnySimulatingPhysics())
+			continue;
 
-		auto PlayerName = BaseClass->PlayerState->PlayerNamePrivate;
+		// PlayerState replicates as its own actor, independently of the pawn, so on clients its
+		// pointer routinely blips to null for a frame or two even while the pawn is fully valid.
+		// Don't drop the whole ESP over that - just fall back to the last name we saw for this actor.
+		std::string PlayerName = "Unknown";
+		if (BaseClass->PlayerState)
+		{
+			// Prefer the custom in-game name (CustomPlayerName) over the platform/Steam name
+			// (PlayerNamePrivate). Guard the cast with IsA in case a non-Online PlayerState shows up,
+			// and fall back to the Steam name if the custom name hasn't replicated in yet.
+			SDK::FString* Name = &BaseClass->PlayerState->PlayerNamePrivate;
+			if (BaseClass->PlayerState->IsA(SDK::ABP_FirstPersonPlayerState_Online_C::StaticClass()))
+			{
+				auto* ps = static_cast<SDK::ABP_FirstPersonPlayerState_Online_C*>(BaseClass->PlayerState);
+				if (ps->CustomPlayerName.IsValid())
+					Name = &ps->CustomPlayerName;
+			}
+
+			if (Name->IsValid())
+			{
+				PlayerName = Name->ToString();
+				playerNameCache[obj] = PlayerName; // remember it for the null windows
+			}
+		}
+		else
+		{
+			auto it = playerNameCache.find(obj);
+			if (it != playerNameCache.end())
+				PlayerName = it->second;
+		}
+
 		bool IsVisible = PlayerController->LineOfSightTo(obj, { 0,0,0 }, false); // visible check
 
 		if (obj != MyPlayer)
-			PlayerInfos.push_back({ PlayerName.IsValid() ? PlayerName.ToString() : "Unknown", Location });
+			PlayerInfos.push_back({ PlayerName, Location });
 		else
 			continue;
 
@@ -148,7 +182,7 @@ void CheatManager::Init()
 		if (bHasBox)
 		{
 			if (cfg->bNames)
-				ImGui::GetForegroundDrawList()->AddText(ImVec2(BoxMin.X, BoxMin.Y - 15), colEsp, PlayerName.IsValid() ? PlayerName.ToString().c_str() : " ");
+				ImGui::GetForegroundDrawList()->AddText(ImVec2(BoxMin.X, BoxMin.Y - 15), colEsp, PlayerName.c_str());
 
 			if (cfg->bBox)
 				draw->DrawBox(BoxMin.X, BoxMin.Y, BoxMax.X - BoxMin.X, BoxMax.Y - BoxMin.Y, colEsp, 1.0f);

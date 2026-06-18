@@ -4,7 +4,9 @@
 #include <atomic>
 #include <iostream>
 #include <vector>
+#include <string>
 #include <unordered_set>
+#include <unordered_map>
 #include <direct.h>
 #include <Psapi.h>
 #include <d3d12.h>
@@ -23,6 +25,7 @@
 #include "SDK/Engine_classes.hpp"
 #include "SDK/BP_FirstPersonCharacter_Main_classes.hpp"
 #include "SDK/BP_FirstPersonCharacter_cLeon_Character_classes.hpp"
+#include "SDK/BP_FirstPersonPlayerState_Online_classes.hpp"
 #include "skeleton.hpp"
 #include "CheatManager.hpp"
 #include "Menu.hpp"
