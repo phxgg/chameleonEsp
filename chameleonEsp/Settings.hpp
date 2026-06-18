@@ -9,6 +9,7 @@ public:
 	bool bNames;
 	bool bBox;
 	bool bSkeleton;
+	bool bDistance;
 	bool bDumpBones;
 	bool bEnemyOnly;
 	bool bForceCharacterVisibility;

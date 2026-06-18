@@ -12,6 +12,7 @@ void Settings::InitializeSettings()
 	this->bNames = false;
 	this->bBox = false;
 	this->bSkeleton = false;
+	this->bDistance = false;
 	this->bDumpBones = false;
 	this->bEnemyOnly = false;
 	this->bForceCharacterVisibility = false;

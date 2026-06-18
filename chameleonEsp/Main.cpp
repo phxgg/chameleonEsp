@@ -78,7 +78,12 @@ void __fastcall hkProcessEvent(SDK::UObject* pObject, SDK::UFunction* pFunction,
 }
 
 bool init = false;
+// Controls whether the hook is active. Set to false to disable the hook and restore the original Present() function.
 static std::atomic<bool> bRunning(true);
+// Guards Unload() so it runs exactly once - both the unload hotkey and
+// DLL_PROCESS_DETACH funnel through it, and tearing down twice would
+// double-disable MinHook and double-release the D3D12 resources.
+static std::atomic<bool> bUnloaded(false);
 
 HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT Flags)
 {
@@ -300,9 +305,14 @@ HRESULT __stdcall hkResizeBuffers(IDXGISwapChain3* pSwapChain, UINT BufferCount,
 
 void Unload()
 {
+    // Run the teardown exactly once, no matter how many paths call us.
+    bool expected = false;
+    if (!bUnloaded.compare_exchange_strong(expected, true))
+        return;
+
     // Signal hooks to bail out immediately, then wait long enough for any call
     // that is already mid-execution on the render thread to return before we
-    // start freeing shared state. MH_DisableHook only blocks future calls —
+    // start freeing shared state. MH_DisableHook only blocks future calls -
     // it cannot stop one that is already inside hkPresent/hkResizeBuffers.
     bRunning = false;
     Sleep(100);
@@ -351,7 +361,13 @@ void Unload()
     }
 
     // misc
-	FreeConsole();
+    // Detach the CRT's stdio from the console before freeing it. While the
+    // freopen_s'd CONOUT$/CONIN$ handles stay open the console host keeps the
+    // window alive, so FreeConsole alone leaves it lingering after ejecting.
+    FILE* Dummy;
+    freopen_s(&Dummy, "NUL", "w", stdout);
+    freopen_s(&Dummy, "NUL", "r", stdin);
+    FreeConsole();
 }
 
 void InitProcess(bool *WindowFocus)
@@ -445,7 +461,22 @@ DWORD MainThread(HMODULE Module)
 
     MH_EnableHook(MH_ALL_HOOKS);
 
-    return 0;
+    // Keep our own thread alive to watch for the unload hotkey. Tearing down and
+    // ejecting must happen from a thread we own (not the game's render thread that
+    // runs the hooks), which is exactly this one.
+    while (bRunning)
+    {
+        if (GetAsyncKeyState(VK_END) & 1)
+            break;
+        Sleep(50);
+    }
+
+    Unload();
+    // Release our own reference and exit this thread atomically. Under LoadLibrary
+    // injection this unmaps the module; under manual mapping FreeLibrary no-ops
+    // (the loader doesn't know us) but the thread still exits cleanly.
+    FreeLibraryAndExitThread(Process::Module, 0);
+    return 0; // not reached
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved)
@@ -453,6 +484,10 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved)
     switch (reason)
     {
     case DLL_PROCESS_ATTACH:
+        // We never handle the per-thread notifications, and a UE game spawns many
+        // threads — skip the loader-lock round-trip for each one. No-ops harmlessly
+        // under manual mapping (the loader isn't tracking this module anyway).
+        DisableThreadLibraryCalls(hModule);
         Process::Module = hModule;
         CreateThread(0, 0, (LPTHREAD_START_ROUTINE)MainThread, hModule, 0, 0);
         break;

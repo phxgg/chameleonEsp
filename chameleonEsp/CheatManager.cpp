@@ -27,6 +27,7 @@ void CheatManager::Init()
 	MyPlayer = PlayerController->K2_GetPawn();
 	if (!MyPlayer) return;
 
+	auto MyLocation = MyPlayer->K2_GetActorLocation();
 
 	UGStatics = (SDK::UGameplayStatics*)SDK::UGameplayStatics::StaticClass();
 	if (!UGStatics) return;
@@ -149,6 +150,17 @@ void CheatManager::Init()
 
 			if (cfg->bBox)
 				draw->DrawBox(BoxMin.X, BoxMin.Y, BoxMax.X - BoxMin.X, BoxMax.Y - BoxMin.Y, colEsp, 1.0f);
+
+			if (cfg->bDistance)
+			{
+				char DistanceText[32];
+				snprintf(DistanceText, sizeof(DistanceText), "%.0fm", MyLocation.GetDistanceToInMeters(Location));
+
+				// center the label just under the box
+				const ImVec2 TextSize = ImGui::CalcTextSize(DistanceText);
+				const float TextX = (BoxMin.X + BoxMax.X) * 0.5f - TextSize.x * 0.5f;
+				ImGui::GetForegroundDrawList()->AddText(ImVec2(TextX, BoxMax.Y + 2), colEsp, DistanceText);
+			}
 		}
 
 		//example how to draw without bones in relative location
