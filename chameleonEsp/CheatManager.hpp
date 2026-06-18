@@ -22,6 +22,7 @@ public:
 	};
 	std::vector<PlayerInfo> PlayerInfos;
 	std::unordered_set<SDK::AActor*> forcedVisibleActors;
+	std::unordered_map<SDK::AActor*, std::string> playerNameCache; // last-known name per actor, so ESP survives PlayerState replication blips
 	void Init();
 	void DumpBones();
 };

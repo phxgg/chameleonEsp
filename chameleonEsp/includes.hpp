@@ -4,7 +4,9 @@
 #include <atomic>
 #include <iostream>
 #include <vector>
+#include <string>
 #include <unordered_set>
+#include <unordered_map>
 #include <direct.h>
 #include <Psapi.h>
 #include <d3d12.h>
