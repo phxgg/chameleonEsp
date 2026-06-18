@@ -68,10 +68,20 @@ void CheatManager::Init()
 		std::string PlayerName = "Unknown";
 		if (BaseClass->PlayerState)
 		{
-			auto Name = BaseClass->PlayerState->PlayerNamePrivate;
-			if (Name.IsValid())
+			// Prefer the custom in-game name (CustomPlayerName) over the platform/Steam name
+			// (PlayerNamePrivate). Guard the cast with IsA in case a non-Online PlayerState shows up,
+			// and fall back to the Steam name if the custom name hasn't replicated in yet.
+			SDK::FString* Name = &BaseClass->PlayerState->PlayerNamePrivate;
+			if (BaseClass->PlayerState->IsA(SDK::ABP_FirstPersonPlayerState_Online_C::StaticClass()))
 			{
-				PlayerName = Name.ToString();
+				auto* ps = static_cast<SDK::ABP_FirstPersonPlayerState_Online_C*>(BaseClass->PlayerState);
+				if (ps->CustomPlayerName.IsValid())
+					Name = &ps->CustomPlayerName;
+			}
+
+			if (Name->IsValid())
+			{
+				PlayerName = Name->ToString();
 				playerNameCache[obj] = PlayerName; // remember it for the null windows
 			}
 		}
