@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "PhysicsCore_structs.hpp"
-#include "EN_DamageType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EN_DamageType_structs.hpp"
 #include "EN_StanType_structs.hpp"
 
 

@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ST_EventValue_structs.hpp"
 #include "EN_DeviceOnlineMode_structs.hpp"
+#include "ST_EventValue_structs.hpp"
 
 
 SDK_NAMESPACE_START

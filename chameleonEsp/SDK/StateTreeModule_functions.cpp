@@ -16,125 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function StateTreeModule.StateTreeFunctionLibrary.K2_GetParametersProperty
-// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FStateTreeReference&       Reference                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// const struct FGuid&                     PropertyID                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32*                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UStateTreeFunctionLibrary::K2_GetParametersProperty(const struct FStateTreeReference& Reference, const struct FGuid& PropertyID, int32* ReturnValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("StateTreeFunctionLibrary", "K2_GetParametersProperty");
-
-	Params::StateTreeFunctionLibrary_K2_GetParametersProperty Parms{};
-
-	Parms.Reference = std::move(Reference);
-	Parms.PropertyID = std::move(PropertyID);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (ReturnValue != nullptr)
-		*ReturnValue = Parms.ReturnValue;
-}
-
-
-// Function StateTreeModule.StateTreeFunctionLibrary.K2_SetParametersProperty
-// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FStateTreeReference&             Reference                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// const struct FGuid&                     PropertyID                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32&                            NewValue                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UStateTreeFunctionLibrary::K2_SetParametersProperty(struct FStateTreeReference& Reference, const struct FGuid& PropertyID, const int32& NewValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("StateTreeFunctionLibrary", "K2_SetParametersProperty");
-
-	Params::StateTreeFunctionLibrary_K2_SetParametersProperty Parms{};
-
-	Parms.Reference = std::move(Reference);
-	Parms.PropertyID = std::move(PropertyID);
-	Parms.NewValue = NewValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	Reference = std::move(Parms.Reference);
-}
-
-
-// Function StateTreeModule.StateTreeFunctionLibrary.MakeStateTreeReference
-// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UStateTree*                       StateTree                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FStateTreeReference              ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FStateTreeReference UStateTreeFunctionLibrary::MakeStateTreeReference(class UStateTree* StateTree)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("StateTreeFunctionLibrary", "MakeStateTreeReference");
-
-	Params::StateTreeFunctionLibrary_MakeStateTreeReference Parms{};
-
-	Parms.StateTree = StateTree;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function StateTreeModule.StateTreeFunctionLibrary.SetStateTree
-// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FStateTreeReference&             Reference                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class UStateTree*                       StateTree                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UStateTreeFunctionLibrary::SetStateTree(struct FStateTreeReference& Reference, class UStateTree* StateTree)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("StateTreeFunctionLibrary", "SetStateTree");
-
-	Params::StateTreeFunctionLibrary_SetStateTree Parms{};
-
-	Parms.Reference = std::move(Reference);
-	Parms.StateTree = StateTree;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	Reference = std::move(Parms.Reference);
-}
-
-
 // Function StateTreeModule.StateTreeNodeBlueprintBase.RequestTransition
 // (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -518,6 +399,125 @@ void UStateTreeTaskBlueprintBase::UnbindDelegate(const struct FStateTreeDelegate
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function StateTreeModule.StateTreeFunctionLibrary.K2_GetParametersProperty
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FStateTreeReference&       Reference                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FGuid&                     PropertyID                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UStateTreeFunctionLibrary::K2_GetParametersProperty(const struct FStateTreeReference& Reference, const struct FGuid& PropertyID, int32* ReturnValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("StateTreeFunctionLibrary", "K2_GetParametersProperty");
+
+	Params::StateTreeFunctionLibrary_K2_GetParametersProperty Parms{};
+
+	Parms.Reference = std::move(Reference);
+	Parms.PropertyID = std::move(PropertyID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (ReturnValue != nullptr)
+		*ReturnValue = Parms.ReturnValue;
+}
+
+
+// Function StateTreeModule.StateTreeFunctionLibrary.K2_SetParametersProperty
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FStateTreeReference&             Reference                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FGuid&                     PropertyID                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32&                            NewValue                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UStateTreeFunctionLibrary::K2_SetParametersProperty(struct FStateTreeReference& Reference, const struct FGuid& PropertyID, const int32& NewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("StateTreeFunctionLibrary", "K2_SetParametersProperty");
+
+	Params::StateTreeFunctionLibrary_K2_SetParametersProperty Parms{};
+
+	Parms.Reference = std::move(Reference);
+	Parms.PropertyID = std::move(PropertyID);
+	Parms.NewValue = NewValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	Reference = std::move(Parms.Reference);
+}
+
+
+// Function StateTreeModule.StateTreeFunctionLibrary.MakeStateTreeReference
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UStateTree*                       StateTree                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FStateTreeReference              ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FStateTreeReference UStateTreeFunctionLibrary::MakeStateTreeReference(class UStateTree* StateTree)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("StateTreeFunctionLibrary", "MakeStateTreeReference");
+
+	Params::StateTreeFunctionLibrary_MakeStateTreeReference Parms{};
+
+	Parms.StateTree = StateTree;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function StateTreeModule.StateTreeFunctionLibrary.SetStateTree
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FStateTreeReference&             Reference                                              (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UStateTree*                       StateTree                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UStateTreeFunctionLibrary::SetStateTree(struct FStateTreeReference& Reference, class UStateTree* StateTree)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("StateTreeFunctionLibrary", "SetStateTree");
+
+	Params::StateTreeFunctionLibrary_SetStateTree Parms{};
+
+	Parms.Reference = std::move(Reference);
+	Parms.StateTree = StateTree;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	Reference = std::move(Parms.Reference);
 }
 
 

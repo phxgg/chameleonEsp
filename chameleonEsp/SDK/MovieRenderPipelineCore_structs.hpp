@@ -414,15 +414,6 @@ public:
 };
 DUMPER7_ASSERTS_FMovieGraphEvaluatedBranchConfig;
 
-// ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluationContext_VisitedNodeInfo
-// 0x0050 (0x0050 - 0x0000)
-struct FMovieGraphEvaluationContext_VisitedNodeInfo final
-{
-public:
-	TSet<class UMovieGraphNode*>                  VisitedNodes;                                      // 0x0000(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
-};
-DUMPER7_ASSERTS_FMovieGraphEvaluationContext_VisitedNodeInfo;
-
 // ScriptStruct MovieRenderPipelineCore.MovieGraphTimeStepData
 // 0x0080 (0x0080 - 0x0000)
 struct FMovieGraphTimeStepData final
@@ -469,6 +460,15 @@ public:
 	struct FMovieGraphTimeStepData                Time;                                              // 0x0068(0x0080)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMovieGraphTraversalContext;
+
+// ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluationContext_VisitedNodeInfo
+// 0x0050 (0x0050 - 0x0000)
+struct FMovieGraphEvaluationContext_VisitedNodeInfo final
+{
+public:
+	TSet<class UMovieGraphNode*>                  VisitedNodes;                                      // 0x0000(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
+};
+DUMPER7_ASSERTS_FMovieGraphEvaluationContext_VisitedNodeInfo;
 
 // ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluationContext
 // 0x0178 (0x0178 - 0x0000)

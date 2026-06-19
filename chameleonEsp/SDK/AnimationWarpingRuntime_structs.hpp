@@ -81,18 +81,6 @@ enum class EOrientationWarpingSpace : uint8
 	EOrientationWarpingSpace_MAX             = 3,
 };
 
-// ScriptStruct AnimationWarpingRuntime.AnimNode_WarpTest
-// 0x00A0 (0x00B0 - 0x0010)
-struct alignas(0x10) FAnimNode_WarpTest final : public FAnimNode_Base
-{
-public:
-	struct FPoseLink                              Source;                                            // 0x0010(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	TArray<struct FTransform>                     Transforms;                                        // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         SecondsToWait;                                     // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x7C];                                      // 0x0034(0x007C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAnimNode_WarpTest;
-
 // ScriptStruct AnimationWarpingRuntime.FootPlacementInterpolationSettings
 // 0x002C (0x002C - 0x0000)
 struct FFootPlacementInterpolationSettings final
@@ -114,6 +102,18 @@ public:
 	uint8                                         Pad_2B[0x1];                                       // 0x002B(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FFootPlacementInterpolationSettings;
+
+// ScriptStruct AnimationWarpingRuntime.AnimNode_WarpTest
+// 0x00A0 (0x00B0 - 0x0010)
+struct alignas(0x10) FAnimNode_WarpTest final : public FAnimNode_Base
+{
+public:
+	struct FPoseLink                              Source;                                            // 0x0010(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     Transforms;                                        // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         SecondsToWait;                                     // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x7C];                                      // 0x0034(0x007C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnimNode_WarpTest;
 
 // ScriptStruct AnimationWarpingRuntime.FootPlacementTraceSettings
 // 0x0018 (0x0018 - 0x0000)

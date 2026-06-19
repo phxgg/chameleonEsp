@@ -60,6 +60,193 @@ public:
 };
 DUMPER7_ASSERTS_InterchangeFactoryBase_SetSourceFilename;
 
+// Function InterchangeCore.InterchangeBaseNodeContainer.AddNode
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeBaseNodeContainer_AddNode final
+{
+public:
+	class UInterchangeBaseNode*                   Node;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_AddNode;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.ClearNodeParentUid
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeBaseNodeContainer_ClearNodeParentUid final
+{
+public:
+	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_ClearNodeParentUid;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.GetNodeChildren
+// 0x0020 (0x0020 - 0x0000)
+struct InterchangeBaseNodeContainer_GetNodeChildren final
+{
+public:
+	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ChildIndex;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInterchangeBaseNode*                   ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_GetNodeChildren;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.LoadFromFile
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeBaseNodeContainer_LoadFromFile final
+{
+public:
+	class FString                                 Filename;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_LoadFromFile;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.RemoveNode
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeBaseNodeContainer_RemoveNode final
+{
+public:
+	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_RemoveNode;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.ReplaceNode
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeBaseNodeContainer_ReplaceNode final
+{
+public:
+	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeFactoryBaseNode*            NewNode;                                           // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_ReplaceNode;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.SaveToFile
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeBaseNodeContainer_SaveToFile final
+{
+public:
+	class FString                                 Filename;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_SaveToFile;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.SetNamespace
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeBaseNodeContainer_SetNamespace final
+{
+public:
+	class FString                                 Namespace;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                 TargetClass;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_SetNamespace;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.SetNodeDesiredChildIndex
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeBaseNodeContainer_SetNodeDesiredChildIndex final
+{
+public:
+	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NewNodeDesiredChildIndex;                          // 0x0010(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_SetNodeDesiredChildIndex;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.SetNodeParentUid
+// 0x0028 (0x0028 - 0x0000)
+struct InterchangeBaseNodeContainer_SetNodeParentUid final
+{
+public:
+	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 NewParentNodeUid;                                  // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_SetNodeParentUid;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.GetFactoryNode
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeBaseNodeContainer_GetFactoryNode final
+{
+public:
+	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeFactoryBaseNode*            ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_GetFactoryNode;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.GetIsAncestor
+// 0x0028 (0x0028 - 0x0000)
+struct InterchangeBaseNodeContainer_GetIsAncestor final
+{
+public:
+	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AncestorUID;                                       // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_GetIsAncestor;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.GetNode
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeBaseNodeContainer_GetNode final
+{
+public:
+	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UInterchangeBaseNode*             ReturnValue;                                       // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_GetNode;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.GetNodeChildrenCount
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeBaseNodeContainer_GetNodeChildrenCount final
+{
+public:
+	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_GetNodeChildrenCount;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.GetNodeChildrenUids
+// 0x0020 (0x0020 - 0x0000)
+struct InterchangeBaseNodeContainer_GetNodeChildrenUids final
+{
+public:
+	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_GetNodeChildrenUids;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.GetNodes
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeBaseNodeContainer_GetNodes final
+{
+public:
+	const class UClass*                           ClassNode;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         OutNodes;                                          // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_GetNodes;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.GetRoots
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeBaseNodeContainer_GetRoots final
+{
+public:
+	TArray<class FString>                         RootNodes;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_GetRoots;
+
+// Function InterchangeCore.InterchangeBaseNodeContainer.IsNodeUidValid
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeBaseNodeContainer_IsNodeUidValid final
+{
+public:
+	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeBaseNodeContainer_IsNodeUidValid;
+
 // Function InterchangeCore.InterchangePipelineBase.FindOrAddPropertyStates
 // 0x0010 (0x0010 - 0x0000)
 struct InterchangePipelineBase_FindOrAddPropertyStates final
@@ -179,55 +366,6 @@ public:
 };
 DUMPER7_ASSERTS_InterchangePipelineBase_SupportReimport;
 
-// Function InterchangeCore.InterchangeSourceData.SetFilename
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeSourceData_SetFilename final
-{
-public:
-	class FString                                 InFilename;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeSourceData_SetFilename;
-
-// Function InterchangeCore.InterchangeSourceData.GetAllContextObjectTags
-// 0x0010 (0x0010 - 0x0000)
-struct InterchangeSourceData_GetAllContextObjectTags final
-{
-public:
-	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeSourceData_GetAllContextObjectTags;
-
-// Function InterchangeCore.InterchangeSourceData.GetContextObjectByTag
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeSourceData_GetContextObjectByTag final
-{
-public:
-	class FString                                 Tag;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeSourceData_GetContextObjectByTag;
-
-// Function InterchangeCore.InterchangeSourceData.GetFilename
-// 0x0010 (0x0010 - 0x0000)
-struct InterchangeSourceData_GetFilename final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeSourceData_GetFilename;
-
-// Function InterchangeCore.InterchangeSourceData.SetContextObjectByTag
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeSourceData_SetContextObjectByTag final
-{
-public:
-	class FString                                 Tag;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                Object;                                            // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeSourceData_SetContextObjectByTag;
-
 // Function InterchangeCore.InterchangeTranslatorBase.SetSettings
 // 0x0008 (0x0008 - 0x0000)
 struct InterchangeTranslatorBase_SetSettings final
@@ -292,6 +430,55 @@ public:
 	EInterchangeTranslatorType                    ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_InterchangeTranslatorBase_GetTranslatorType;
+
+// Function InterchangeCore.InterchangeSourceData.SetFilename
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeSourceData_SetFilename final
+{
+public:
+	class FString                                 InFilename;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_InterchangeSourceData_SetFilename;
+
+// Function InterchangeCore.InterchangeSourceData.GetAllContextObjectTags
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeSourceData_GetAllContextObjectTags final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeSourceData_GetAllContextObjectTags;
+
+// Function InterchangeCore.InterchangeSourceData.GetContextObjectByTag
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeSourceData_GetContextObjectByTag final
+{
+public:
+	class FString                                 Tag;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeSourceData_GetContextObjectByTag;
+
+// Function InterchangeCore.InterchangeSourceData.GetFilename
+// 0x0010 (0x0010 - 0x0000)
+struct InterchangeSourceData_GetFilename final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeSourceData_GetFilename;
+
+// Function InterchangeCore.InterchangeSourceData.SetContextObjectByTag
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeSourceData_SetContextObjectByTag final
+{
+public:
+	class FString                                 Tag;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                Object;                                            // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_InterchangeSourceData_SetContextObjectByTag;
 
 // Function InterchangeCore.InterchangeBaseNode.AddBooleanAttribute
 // 0x0018 (0x0018 - 0x0000)
@@ -671,193 +858,6 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_InterchangeBaseNode_RemoveTargetNodeUid;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.AddNode
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeBaseNodeContainer_AddNode final
-{
-public:
-	class UInterchangeBaseNode*                   Node;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_AddNode;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.ClearNodeParentUid
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeBaseNodeContainer_ClearNodeParentUid final
-{
-public:
-	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_ClearNodeParentUid;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.GetNodeChildren
-// 0x0020 (0x0020 - 0x0000)
-struct InterchangeBaseNodeContainer_GetNodeChildren final
-{
-public:
-	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ChildIndex;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInterchangeBaseNode*                   ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_GetNodeChildren;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.LoadFromFile
-// 0x0010 (0x0010 - 0x0000)
-struct InterchangeBaseNodeContainer_LoadFromFile final
-{
-public:
-	class FString                                 Filename;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_LoadFromFile;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.RemoveNode
-// 0x0010 (0x0010 - 0x0000)
-struct InterchangeBaseNodeContainer_RemoveNode final
-{
-public:
-	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_RemoveNode;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.ReplaceNode
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeBaseNodeContainer_ReplaceNode final
-{
-public:
-	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeFactoryBaseNode*            NewNode;                                           // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_ReplaceNode;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.SaveToFile
-// 0x0010 (0x0010 - 0x0000)
-struct InterchangeBaseNodeContainer_SaveToFile final
-{
-public:
-	class FString                                 Filename;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_SaveToFile;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.SetNamespace
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeBaseNodeContainer_SetNamespace final
-{
-public:
-	class FString                                 Namespace;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UClass*                                 TargetClass;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_SetNamespace;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.SetNodeDesiredChildIndex
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeBaseNodeContainer_SetNodeDesiredChildIndex final
-{
-public:
-	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NewNodeDesiredChildIndex;                          // 0x0010(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_SetNodeDesiredChildIndex;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.SetNodeParentUid
-// 0x0028 (0x0028 - 0x0000)
-struct InterchangeBaseNodeContainer_SetNodeParentUid final
-{
-public:
-	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 NewParentNodeUid;                                  // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_SetNodeParentUid;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.GetFactoryNode
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeBaseNodeContainer_GetFactoryNode final
-{
-public:
-	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeFactoryBaseNode*            ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_GetFactoryNode;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.GetIsAncestor
-// 0x0028 (0x0028 - 0x0000)
-struct InterchangeBaseNodeContainer_GetIsAncestor final
-{
-public:
-	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 AncestorUID;                                       // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_GetIsAncestor;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.GetNode
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeBaseNodeContainer_GetNode final
-{
-public:
-	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	const class UInterchangeBaseNode*             ReturnValue;                                       // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_GetNode;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.GetNodeChildrenCount
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeBaseNodeContainer_GetNodeChildrenCount final
-{
-public:
-	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_GetNodeChildrenCount;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.GetNodeChildrenUids
-// 0x0020 (0x0020 - 0x0000)
-struct InterchangeBaseNodeContainer_GetNodeChildrenUids final
-{
-public:
-	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_GetNodeChildrenUids;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.GetNodes
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeBaseNodeContainer_GetNodes final
-{
-public:
-	const class UClass*                           ClassNode;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         OutNodes;                                          // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_GetNodes;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.GetRoots
-// 0x0010 (0x0010 - 0x0000)
-struct InterchangeBaseNodeContainer_GetRoots final
-{
-public:
-	TArray<class FString>                         RootNodes;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_GetRoots;
-
-// Function InterchangeCore.InterchangeBaseNodeContainer.IsNodeUidValid
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeBaseNodeContainer_IsNodeUidValid final
-{
-public:
-	class FString                                 NodeUniqueID;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_InterchangeBaseNodeContainer_IsNodeUidValid;
 
 // Function InterchangeCore.InterchangeFactoryBaseNode.AddFactoryDependencyUid
 // 0x0018 (0x0018 - 0x0000)

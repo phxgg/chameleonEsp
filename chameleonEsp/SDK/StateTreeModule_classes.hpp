@@ -19,6 +19,79 @@
 
 SDK_NAMESPACE_START
 
+// Class StateTreeModule.StateTreeNodeBlueprintBase
+// 0x0030 (0x0058 - 0x0028)
+class UStateTreeNodeBlueprintBase : public UObject
+{
+public:
+	uint8                                         Pad_28[0x30];                                      // 0x0028(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void RequestTransition(const struct FStateTreeStateLink& TargetState, const EStateTreeTransitionPriority Priority);
+	void SendEvent(const struct FStateTreeEvent& Event);
+
+	class FText GetPropertyDescriptionByPropertyName(class FName PropertyName) const;
+	void GetPropertyReference(const struct FStateTreeBlueprintPropertyRef& PropertyRef) const;
+	bool IsPropertyRefValid(const struct FStateTreeBlueprintPropertyRef& PropertyRef) const;
+	class FText ReceiveGetDescription(EStateTreeNodeFormatting Formatting) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("StateTreeNodeBlueprintBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"StateTreeNodeBlueprintBase")
+	}
+	static class UStateTreeNodeBlueprintBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UStateTreeNodeBlueprintBase>();
+	}
+};
+DUMPER7_ASSERTS_UStateTreeNodeBlueprintBase;
+
+// Class StateTreeModule.StateTreeTaskBlueprintBase
+// 0x0008 (0x0060 - 0x0058)
+class UStateTreeTaskBlueprintBase final : public UStateTreeNodeBlueprintBase
+{
+public:
+	uint8                                         Pad_58[0x1];                                       // 0x0058(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bShouldStateChangeOnReselect : 1;                  // 0x0059(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         BitPad_59_1 : 1;                                   // 0x0059(0x0001)(Fixing Bit-Field Size Between Bits [ Dumper-7 ])
+	uint8                                         bShouldCallTickOnlyOnEvents : 1;                   // 0x0059(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bShouldCopyBoundPropertiesOnTick : 1;              // 0x0059(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bShouldCopyBoundPropertiesOnExitState : 1;         // 0x0059(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void BindDelegate(const struct FStateTreeDelegateListener& Listener, const TDelegate<void()>& Delegate);
+	void BroadcastDelegate(const struct FStateTreeDelegateDispatcher& Dispatcher);
+	void FinishTask(const bool bSucceeded);
+	EStateTreeRunStatus ReceiveEnterState(const struct FStateTreeTransitionResult& Transition);
+	void ReceiveExitState(const struct FStateTreeTransitionResult& Transition);
+	void ReceiveLatentEnterState(const struct FStateTreeTransitionResult& Transition);
+	void ReceiveLatentTick(const float DeltaTime);
+	void ReceiveStateCompleted(const EStateTreeRunStatus CompletionStatus, const struct FStateTreeActiveStates& CompletedActiveStates);
+	EStateTreeRunStatus ReceiveTick(const float DeltaTime);
+	void UnbindDelegate(const struct FStateTreeDelegateListener& Listener);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("StateTreeTaskBlueprintBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"StateTreeTaskBlueprintBase")
+	}
+	static class UStateTreeTaskBlueprintBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UStateTreeTaskBlueprintBase>();
+	}
+};
+DUMPER7_ASSERTS_UStateTreeTaskBlueprintBase;
+
 // Class StateTreeModule.StateTreeSchemaProvider
 // 0x0000 (0x0000 - 0x0000)
 class IStateTreeSchemaProvider final
@@ -97,79 +170,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UStateTreeSettings;
-
-// Class StateTreeModule.StateTreeNodeBlueprintBase
-// 0x0030 (0x0058 - 0x0028)
-class UStateTreeNodeBlueprintBase : public UObject
-{
-public:
-	uint8                                         Pad_28[0x30];                                      // 0x0028(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void RequestTransition(const struct FStateTreeStateLink& TargetState, const EStateTreeTransitionPriority Priority);
-	void SendEvent(const struct FStateTreeEvent& Event);
-
-	class FText GetPropertyDescriptionByPropertyName(class FName PropertyName) const;
-	void GetPropertyReference(const struct FStateTreeBlueprintPropertyRef& PropertyRef) const;
-	bool IsPropertyRefValid(const struct FStateTreeBlueprintPropertyRef& PropertyRef) const;
-	class FText ReceiveGetDescription(EStateTreeNodeFormatting Formatting) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("StateTreeNodeBlueprintBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"StateTreeNodeBlueprintBase")
-	}
-	static class UStateTreeNodeBlueprintBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UStateTreeNodeBlueprintBase>();
-	}
-};
-DUMPER7_ASSERTS_UStateTreeNodeBlueprintBase;
-
-// Class StateTreeModule.StateTreeTaskBlueprintBase
-// 0x0008 (0x0060 - 0x0058)
-class UStateTreeTaskBlueprintBase final : public UStateTreeNodeBlueprintBase
-{
-public:
-	uint8                                         Pad_58[0x1];                                       // 0x0058(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bShouldStateChangeOnReselect : 1;                  // 0x0059(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         BitPad_59_1 : 1;                                   // 0x0059(0x0001)(Fixing Bit-Field Size Between Bits [ Dumper-7 ])
-	uint8                                         bShouldCallTickOnlyOnEvents : 1;                   // 0x0059(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bShouldCopyBoundPropertiesOnTick : 1;              // 0x0059(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bShouldCopyBoundPropertiesOnExitState : 1;         // 0x0059(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void BindDelegate(const struct FStateTreeDelegateListener& Listener, const TDelegate<void()>& Delegate);
-	void BroadcastDelegate(const struct FStateTreeDelegateDispatcher& Dispatcher);
-	void FinishTask(const bool bSucceeded);
-	EStateTreeRunStatus ReceiveEnterState(const struct FStateTreeTransitionResult& Transition);
-	void ReceiveExitState(const struct FStateTreeTransitionResult& Transition);
-	void ReceiveLatentEnterState(const struct FStateTreeTransitionResult& Transition);
-	void ReceiveLatentTick(const float DeltaTime);
-	void ReceiveStateCompleted(const EStateTreeRunStatus CompletionStatus, const struct FStateTreeActiveStates& CompletedActiveStates);
-	EStateTreeRunStatus ReceiveTick(const float DeltaTime);
-	void UnbindDelegate(const struct FStateTreeDelegateListener& Listener);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("StateTreeTaskBlueprintBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"StateTreeTaskBlueprintBase")
-	}
-	static class UStateTreeTaskBlueprintBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UStateTreeTaskBlueprintBase>();
-	}
-};
-DUMPER7_ASSERTS_UStateTreeTaskBlueprintBase;
 
 // Class StateTreeModule.StateTreeConditionBlueprintBase
 // 0x0008 (0x0060 - 0x0058)

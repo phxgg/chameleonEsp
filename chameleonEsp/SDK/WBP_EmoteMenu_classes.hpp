@@ -12,8 +12,8 @@
 
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UMG_classes.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
+#include "UMG_classes.hpp"
 
 
 SDK_NAMESPACE_START

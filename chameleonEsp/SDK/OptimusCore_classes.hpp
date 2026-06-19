@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "OptimusCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "ComputeFramework_structs.hpp"
 #include "ComputeFramework_classes.hpp"
-#include "OptimusCore_structs.hpp"
 #include "Engine_classes.hpp"
 #include "SlateCore_structs.hpp"
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "EN_DamageType_structs.hpp"
-#include "Engine_structs.hpp"
 #include "BP_EnvironmentSystem_Base_classes.hpp"
+#include "Engine_structs.hpp"
+#include "EN_DamageType_structs.hpp"
 
 
 SDK_NAMESPACE_START

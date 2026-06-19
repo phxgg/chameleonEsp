@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "IKRig_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -71,45 +71,6 @@ public:
 };
 DUMPER7_ASSERTS_IKRetargetCurveRemapController_SetSettings;
 
-// Function IKRig.RetargetProfileLibrary.CopyRetargetProfileFromRetargetAsset
-// 0x0130 (0x0130 - 0x0000)
-struct RetargetProfileLibrary_CopyRetargetProfileFromRetargetAsset final
-{
-public:
-	const class UIKRetargeter*                    InRetargetAsset;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRetargetProfile                       ReturnValue;                                       // 0x0008(0x0128)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RetargetProfileLibrary_CopyRetargetProfileFromRetargetAsset;
-
-// Function IKRig.RetargetProfileLibrary.GetOpControllerFromRetargetProfile
-// 0x0138 (0x0138 - 0x0000)
-struct RetargetProfileLibrary_GetOpControllerFromRetargetProfile final
-{
-public:
-	struct FRetargetProfile                       InRetargetProfile;                                 // 0x0000(0x0128)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FName                                   InRetargetOpName;                                  // 0x0128(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UIKRetargetOpControllerBase*            ReturnValue;                                       // 0x0130(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_RetargetProfileLibrary_GetOpControllerFromRetargetProfile;
-
-// Function IKRig.IKRetargetIKChainsController.GetSettings
-// 0x0038 (0x0038 - 0x0000)
-struct IKRetargetIKChainsController_GetSettings final
-{
-public:
-	struct FIKRetargetIKChainsOpSettings          ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_IKRetargetIKChainsController_GetSettings;
-
-// Function IKRig.IKRetargetIKChainsController.SetSettings
-// 0x0038 (0x0038 - 0x0000)
-struct IKRetargetIKChainsController_SetSettings final
-{
-public:
-	struct FIKRetargetIKChainsOpSettings          InSettings;                                        // 0x0000(0x0038)(Parm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_IKRetargetIKChainsController_SetSettings;
-
 // Function IKRig.IKRetargetFKChainsController.GetSettings
 // 0x0040 (0x0040 - 0x0000)
 struct IKRetargetFKChainsController_GetSettings final
@@ -127,15 +88,6 @@ public:
 	struct FIKRetargetFKChainsOpSettings          InSettings;                                        // 0x0000(0x0040)(Parm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_IKRetargetFKChainsController_SetSettings;
-
-// Function IKRig.IKGoalCreatorInterface.AddIKGoals
-// 0x0050 (0x0050 - 0x0000)
-struct IKGoalCreatorInterface_AddIKGoals final
-{
-public:
-	TMap<class FName, struct FIKRigGoal>          OutGoals;                                          // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_IKGoalCreatorInterface_AddIKGoals;
 
 // Function IKRig.IKRetargetPelvisMotionController.GetSettings
 // 0x00C8 (0x00C8 - 0x0000)
@@ -190,6 +142,54 @@ public:
 	class FName                                   InTargetPelvisBone;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_IKRetargetPelvisMotionController_SetTargetPelvisBone;
+
+// Function IKRig.IKRetargetIKChainsController.GetSettings
+// 0x0038 (0x0038 - 0x0000)
+struct IKRetargetIKChainsController_GetSettings final
+{
+public:
+	struct FIKRetargetIKChainsOpSettings          ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetIKChainsController_GetSettings;
+
+// Function IKRig.IKRetargetIKChainsController.SetSettings
+// 0x0038 (0x0038 - 0x0000)
+struct IKRetargetIKChainsController_SetSettings final
+{
+public:
+	struct FIKRetargetIKChainsOpSettings          InSettings;                                        // 0x0000(0x0038)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetIKChainsController_SetSettings;
+
+// Function IKRig.RetargetProfileLibrary.CopyRetargetProfileFromRetargetAsset
+// 0x0130 (0x0130 - 0x0000)
+struct RetargetProfileLibrary_CopyRetargetProfileFromRetargetAsset final
+{
+public:
+	const class UIKRetargeter*                    InRetargetAsset;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRetargetProfile                       ReturnValue;                                       // 0x0008(0x0128)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RetargetProfileLibrary_CopyRetargetProfileFromRetargetAsset;
+
+// Function IKRig.RetargetProfileLibrary.GetOpControllerFromRetargetProfile
+// 0x0138 (0x0138 - 0x0000)
+struct RetargetProfileLibrary_GetOpControllerFromRetargetProfile final
+{
+public:
+	struct FRetargetProfile                       InRetargetProfile;                                 // 0x0000(0x0128)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FName                                   InRetargetOpName;                                  // 0x0128(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UIKRetargetOpControllerBase*            ReturnValue;                                       // 0x0130(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RetargetProfileLibrary_GetOpControllerFromRetargetProfile;
+
+// Function IKRig.IKGoalCreatorInterface.AddIKGoals
+// 0x0050 (0x0050 - 0x0000)
+struct IKGoalCreatorInterface_AddIKGoals final
+{
+public:
+	TMap<class FName, struct FIKRigGoal>          OutGoals;                                          // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKGoalCreatorInterface_AddIKGoals;
 
 // Function IKRig.IKRetargetPinBoneController.GetAllBonePairs
 // 0x0050 (0x0050 - 0x0000)

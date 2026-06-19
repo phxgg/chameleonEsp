@@ -19,6 +19,32 @@
 
 SDK_NAMESPACE_START
 
+// Class MediaCompositing.MovieSceneMediaTrack
+// 0x0020 (0x0130 - 0x0110)
+class UMovieSceneMediaTrack final : public UMovieSceneNameableTrack
+{
+public:
+	uint8                                         Pad_110[0x8];                                      // 0x0110(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bSynchronousScrubbing;                             // 0x0118(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMovieSceneSection*>             MediaSections;                                     // 0x0120(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneMediaTrack")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneMediaTrack")
+	}
+	static class UMovieSceneMediaTrack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneMediaTrack>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneMediaTrack;
+
 // Class MediaCompositing.MovieSceneMediaPlayerPropertySection
 // 0x0010 (0x0118 - 0x0108)
 class UMovieSceneMediaPlayerPropertySection final : public UMovieSceneSection
@@ -105,31 +131,5 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieSceneMediaSection;
-
-// Class MediaCompositing.MovieSceneMediaTrack
-// 0x0020 (0x0130 - 0x0110)
-class UMovieSceneMediaTrack final : public UMovieSceneNameableTrack
-{
-public:
-	uint8                                         Pad_110[0x8];                                      // 0x0110(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bSynchronousScrubbing;                             // 0x0118(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneSection*>             MediaSections;                                     // 0x0120(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneMediaTrack")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneMediaTrack")
-	}
-	static class UMovieSceneMediaTrack* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneMediaTrack>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneMediaTrack;
 
 SDK_NAMESPACE_END

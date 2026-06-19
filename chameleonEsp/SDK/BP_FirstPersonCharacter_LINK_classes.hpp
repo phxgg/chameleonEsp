@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "EN_DamageType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "EN_LINK_PlayerStateValueType_structs.hpp"
 #include "BP_FirstPersonCharacter_Main_classes.hpp"
+#include "EN_LINK_PlayerStateValueType_structs.hpp"
+#include "EN_DamageType_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
 #include "ENUM_ItemBindType_structs.hpp"

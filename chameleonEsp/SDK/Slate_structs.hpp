@@ -290,6 +290,15 @@ public:
 };
 DUMPER7_ASSERTS_FVirtualKeyboardOptions;
 
+// ScriptStruct Slate.CustomizedToolMenuEntry
+// 0x0004 (0x0004 - 0x0000)
+struct FCustomizedToolMenuEntry final
+{
+public:
+	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCustomizedToolMenuEntry;
+
 // ScriptStruct Slate.InputChord
 // 0x0020 (0x0020 - 0x0000)
 struct FInputChord final
@@ -303,15 +312,6 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FInputChord;
-
-// ScriptStruct Slate.CustomizedToolMenuEntry
-// 0x0004 (0x0004 - 0x0000)
-struct FCustomizedToolMenuEntry final
-{
-public:
-	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCustomizedToolMenuEntry;
 
 // ScriptStruct Slate.Anchors
 // 0x0020 (0x0020 - 0x0000)

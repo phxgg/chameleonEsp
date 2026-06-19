@@ -172,6 +172,17 @@ public:
 };
 DUMPER7_ASSERTS_FImageCenterInfo;
 
+// ScriptStruct CameraCalibrationCore.STMapInfo
+// 0x0010 (0x0010 - 0x0000)
+struct FSTMapInfo final
+{
+public:
+	class UTexture*                               DistortionMap;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+	struct FCalibratedMapFormat                   MapFormat;                                         // 0x0008(0x0003)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FSTMapInfo;
+
 // ScriptStruct CameraCalibrationCore.NodalPointOffset
 // 0x0040 (0x0040 - 0x0000)
 struct FNodalPointOffset final
@@ -191,17 +202,6 @@ public:
 	TArray<float>                                 Parameters;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FDistortionInfo;
-
-// ScriptStruct CameraCalibrationCore.STMapInfo
-// 0x0010 (0x0010 - 0x0000)
-struct FSTMapInfo final
-{
-public:
-	class UTexture*                               DistortionMap;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-	struct FCalibratedMapFormat                   MapFormat;                                         // 0x0008(0x0003)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FSTMapInfo;
 
 // ScriptStruct CameraCalibrationCore.DistortionCalibrationResult
 // 0x00C0 (0x00C0 - 0x0000)

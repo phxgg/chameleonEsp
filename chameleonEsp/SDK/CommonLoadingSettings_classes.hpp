@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 #include "Slate_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CommonLoadingSettings_structs.hpp"
-#include "SlateCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
