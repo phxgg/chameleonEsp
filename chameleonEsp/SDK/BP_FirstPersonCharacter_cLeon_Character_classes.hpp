@@ -12,10 +12,10 @@
 
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Mover_structs.hpp"
+#include "BP_FirstPersonCharacter_Main_classes.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "BP_FirstPersonCharacter_Main_classes.hpp"
-#include "Mover_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -82,6 +82,7 @@ public:
 
 public:
 	void ExecuteUbergraph_BP_FirstPersonCharacter_cLeon_Character(int32 EntryPoint);
+	void EEYANChange();
 	void SetStencilValue_Force_(int32 StencilValue);
 	void ResetRagdoll();
 	void GameEndResetState(bool IsLive);

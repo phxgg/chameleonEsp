@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_PlayerController_cLeon.BP_PlayerController_cLeon_C
-// 0x0050 (0x07B8 - 0x0768)
+// 0x0070 (0x07D8 - 0x0768)
 class ABP_PlayerController_cLeon_C final : public ABP_FirstPersonPlayerController_C
 {
 public:
@@ -32,17 +32,26 @@ public:
 	bool                                          IsPlayMovie;                                       // 0x07B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          WatchRankingVisibility;                            // 0x07B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          GlobalNameplateVisibility;                         // 0x07B2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          YYEAN_Activate;                                    // 0x07B3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7B4[0x4];                                      // 0x07B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_EEYAN_Arrow_C*                      EEYAN_Arrow;                                       // 0x07B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CurrentSelectActor;                                // 0x07C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(const class FString& Name_0)> eeyan;                               // 0x07C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void TeleportMovie();
 	void ReceiveTick(float DeltaSeconds_ReceiveTick);
 	void ReceiveBeginPlay();
 	void OnNamePlateVisibilityChange(bool Visibility);
-	void InpActEvt_Three_K2Node_InputKeyEvent_1(const struct FKey& Key);
-	void InpActEvt_Six_K2Node_InputKeyEvent_0(const struct FKey& Key);
+	class AActor* NearSurvivor_IgnoreSelf(const struct FVector& Location, const struct FVector& Direction, float* OutDotProduct);
+	void InpActEvt_U_K2Node_InputDebugKeyEvent_0(const struct FKey& Key, const struct FInputActionValue& ActionValue);
+	void InpActEvt_Three_K2Node_InputKeyEvent_2(const struct FKey& Key);
+	void InpActEvt_Six_K2Node_InputKeyEvent_1(const struct FKey& Key);
+	void InpActEvt_G_K2Node_InputKeyEvent_0(const struct FKey& Key);
 	void GetPawnCentorLocation(struct FVector* ReturnLocation);
 	void Finish();
 	void ExecuteUbergraph_BP_PlayerController_cLeon(int32 EntryPoint);
+	void EEYAN_State(bool State);
 	void CameraReset();
 	void AddMainWidgets();
 

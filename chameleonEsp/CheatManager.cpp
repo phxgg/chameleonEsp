@@ -14,6 +14,11 @@ void CheatManager::Init()
 	SDK::TArray<SDK::AActor*> Players;
 	UGStatics->GetAllActorsOfClass(gWorld, SDK::ABP_FirstPersonCharacter_cLeon_Character_C::StaticClass(), &Players);
 
+	// Track which actors exist this frame so we can drop stale entries from the latched
+	// dead set below - otherwise a destroyed corpse's pointer could later be reused by a
+	// live actor and wrongly suppress its ESP.
+	std::unordered_set<SDK::AActor*> currentActors;
+
 	for (int i = 0; i < Players.Num(); i++)
 	{
 		if (!Players.IsValidIndex(i)) continue;
@@ -23,12 +28,10 @@ void CheatManager::Init()
 		BaseClass = (SDK::ABP_FirstPersonCharacter_cLeon_Character_C*)obj;
 		if (!BaseClass) continue;
 
-		// Skip ragdolled corpses. Neither the raw `Dead` field (not replicated - stays 0 on remote
-		// corpses) nor IsLive() (returns true even for dead bodies in infection mode) works here.
-		// A live character - survivor or hunter - is animation-driven, so its mesh isn't simulating
-		// physics; only a dead body ragdolls. That makes IsAnySimulatingPhysics() the clean signal,
-		// confirmed by logging: every live player reads 0, only the corpse reads 1.
-		if (BaseClass->Mesh && BaseClass->Mesh->IsAnySimulatingPhysics())
+		currentActors.insert(obj);
+
+		// Skip dead/ragdolled corpses (see IsDead for why the obvious flags don't work).
+		if (IsDead())
 			continue;
 
 		const auto Location = BaseClass->K2_GetActorLocation();
@@ -50,6 +53,16 @@ void CheatManager::Init()
 			continue;
 
 		DrawEsp(PlayerName, Location, MyLocation, IsVisible);
+	}
+
+	// Drop dead-latch entries for actors that no longer exist (round restart, corpse despawn),
+	// keeping the set bounded and preventing pointer reuse from suppressing a live actor's ESP.
+	for (auto it = deadActors.begin(); it != deadActors.end(); )
+	{
+		if (currentActors.count(*it))
+			++it;
+		else
+			it = deadActors.erase(it);
 	}
 
 	HandleTeleport();
@@ -141,6 +154,26 @@ void CheatManager::UpdateForcedVisibility()
 		BaseClass->OnRep_BodyVisibility();
 		forcedVisibleActors.erase(obj);
 	}
+}
+
+// True when the current actor (obj/BaseClass) should be treated as a dead corpse and skipped.
+//
+// We can't use the obvious signals: the raw `Dead` field isn't replicated (stays 0 on remote
+// corpses), IsLive() returns true for dead bodies in infection, and BodyVisibility is reserved
+// for the Force Character Visibility feature (which reveals stealthed/invisible survivors), so it
+// can't double as a death flag.
+//
+// Instead detect death by ragdoll: a live character - survivor or hunter - is animation-driven, so
+// its mesh isn't simulating physics; only a dead body ragdolls (confirmed by logging: live = 0,
+// corpse = 1). That flag is transient though - in infection the game hides the corpse and resets
+// the ragdoll, flipping it back to 0 while the player is still dead - so we latch it: once an actor
+// has ragdolled it stays dead for as long as it exists. The latch set is pruned to live actors back
+// in Init() to avoid stale-pointer reuse.
+bool CheatManager::IsDead()
+{
+	if (BaseClass->Mesh && BaseClass->Mesh->IsAnySimulatingPhysics())
+		deadActors.insert(obj);
+	return deadActors.count(obj) > 0;
 }
 
 // True when the current actor is on the opposing team (survivor vs. hunter) from us.

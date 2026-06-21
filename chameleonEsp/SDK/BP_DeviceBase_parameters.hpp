@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "ENUM_SaveDataUpdateType_structs.hpp"
-#include "EN_DeviceState_structs.hpp"
 #include "ST_EventValue_structs.hpp"
+#include "EN_DeviceState_structs.hpp"
 
 
 SDK_NAMESPACE_START

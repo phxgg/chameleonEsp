@@ -21,6 +21,7 @@ private:
 	// Per-player helpers, operating on the current `obj`/`BaseClass` being iterated.
 	std::string ResolvePlayerName();
 	void UpdateForcedVisibility();
+	bool IsDead();
 	bool IsEnemy();
 	void DrawSkeleton(ImU32 colEsp);
 	bool ComputeBoundingBox(SDK::FVector2D& BoxMin, SDK::FVector2D& BoxMax);
@@ -33,6 +34,7 @@ public:
 	};
 	std::vector<PlayerInfo> PlayerInfos;
 	std::unordered_set<SDK::AActor*> forcedVisibleActors;
+	std::unordered_set<SDK::AActor*> deadActors; // actors seen ragdolling; latched so ESP stays off after the corpse stops simulating physics
 	std::unordered_map<SDK::AActor*, std::string> playerNameCache; // last-known name per actor, so ESP survives PlayerState replication blips
 	void Init();
 	void DumpBones();
