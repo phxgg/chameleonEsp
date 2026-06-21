@@ -36,6 +36,26 @@ void UWBP_Nameplate_C::SetPlayerName(const class FString& playerName)
 }
 
 
+// Function WBP_Nameplate.WBP_Nameplate_C.SetEEYAN
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Point                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Nameplate_C::SetEEYAN(int32 Point)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Nameplate_C", "SetEEYAN");
+
+	Params::WBP_Nameplate_C_SetEEYAN Parms{};
+
+	Parms.Point = Point;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_Nameplate.WBP_Nameplate_C.SetColor
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

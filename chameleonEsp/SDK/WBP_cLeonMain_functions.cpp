@@ -370,6 +370,26 @@ void UWBP_cLeonMain_C::ExecuteUbergraph_WBP_cLeonMain(int32 EntryPoint)
 }
 
 
+// Function WBP_cLeonMain.WBP_cLeonMain_C.eeyan
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWBP_cLeonMain_C::eeyan(const class FString& Name_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonMain_C", "eeyan");
+
+	Params::WBP_cLeonMain_C_eeyan Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_cLeonMain.WBP_cLeonMain_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

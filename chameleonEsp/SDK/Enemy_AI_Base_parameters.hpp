@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "EN_DamageType_structs.hpp"
 #include "EN_ThrowState_structs.hpp"
-#include "EN_StrafingDirection_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ENUM_ActorType_structs.hpp"
+#include "EN_DamageType_structs.hpp"
 #include "FinishFilter_structs.hpp"
+#include "ENUM_ActorType_structs.hpp"
+#include "EN_StrafingDirection_structs.hpp"
 #include "EN_StanType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ENUM_CameraMode_structs.hpp"
@@ -766,7 +766,7 @@ struct Enemy_AI_Base_C_ExecuteUbergraph_Enemy_AI_Base final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class WBP_LockOn_0::UWBP_LockOn_C*            CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class WBP_LockOn::UWBP_LockOn_C*              CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

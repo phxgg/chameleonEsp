@@ -84,19 +84,70 @@ void ABP_PlayerController_cLeon_C::OnNamePlateVisibilityChange(bool Visibility)
 }
 
 
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Three_K2Node_InputKeyEvent_1
-// (BlueprintEvent)
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.NearSurvivor_IgnoreSelf
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FVector&                   Location                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Direction                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  OutDotProduct                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlayerController_cLeon_C::InpActEvt_Three_K2Node_InputKeyEvent_1(const struct FKey& Key)
+class AActor* ABP_PlayerController_cLeon_C::NearSurvivor_IgnoreSelf(const struct FVector& Location, const struct FVector& Direction, float* OutDotProduct)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_Three_K2Node_InputKeyEvent_1");
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "NearSurvivor_IgnoreSelf");
 
-	Params::BP_PlayerController_cLeon_C_InpActEvt_Three_K2Node_InputKeyEvent_1 Parms{};
+	Params::BP_PlayerController_cLeon_C_NearSurvivor_IgnoreSelf Parms{};
+
+	Parms.Location = std::move(Location);
+	Parms.Direction = std::move(Direction);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutDotProduct != nullptr)
+		*OutDotProduct = Parms.OutDotProduct;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_U_K2Node_InputDebugKeyEvent_0
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+
+void ABP_PlayerController_cLeon_C::InpActEvt_U_K2Node_InputDebugKeyEvent_0(const struct FKey& Key, const struct FInputActionValue& ActionValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_U_K2Node_InputDebugKeyEvent_0");
+
+	Params::BP_PlayerController_cLeon_C_InpActEvt_U_K2Node_InputDebugKeyEvent_0 Parms{};
+
+	Parms.Key = std::move(Key);
+	Parms.ActionValue = std::move(ActionValue);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Three_K2Node_InputKeyEvent_2
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ABP_PlayerController_cLeon_C::InpActEvt_Three_K2Node_InputKeyEvent_2(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_Three_K2Node_InputKeyEvent_2");
+
+	Params::BP_PlayerController_cLeon_C_InpActEvt_Three_K2Node_InputKeyEvent_2 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -104,19 +155,39 @@ void ABP_PlayerController_cLeon_C::InpActEvt_Three_K2Node_InputKeyEvent_1(const 
 }
 
 
-// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Six_K2Node_InputKeyEvent_0
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_Six_K2Node_InputKeyEvent_1
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ABP_PlayerController_cLeon_C::InpActEvt_Six_K2Node_InputKeyEvent_0(const struct FKey& Key)
+void ABP_PlayerController_cLeon_C::InpActEvt_Six_K2Node_InputKeyEvent_1(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_Six_K2Node_InputKeyEvent_0");
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_Six_K2Node_InputKeyEvent_1");
 
-	Params::BP_PlayerController_cLeon_C_InpActEvt_Six_K2Node_InputKeyEvent_0 Parms{};
+	Params::BP_PlayerController_cLeon_C_InpActEvt_Six_K2Node_InputKeyEvent_1 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.InpActEvt_G_K2Node_InputKeyEvent_0
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ABP_PlayerController_cLeon_C::InpActEvt_G_K2Node_InputKeyEvent_0(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "InpActEvt_G_K2Node_InputKeyEvent_0");
+
+	Params::BP_PlayerController_cLeon_C_InpActEvt_G_K2Node_InputKeyEvent_0 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -174,6 +245,26 @@ void ABP_PlayerController_cLeon_C::ExecuteUbergraph_BP_PlayerController_cLeon(in
 	Params::BP_PlayerController_cLeon_C_ExecuteUbergraph_BP_PlayerController_cLeon Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.EEYAN_State
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PlayerController_cLeon_C::EEYAN_State(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "EEYAN_State");
+
+	Params::BP_PlayerController_cLeon_C_EEYAN_State Parms{};
+
+	Parms.State = State;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

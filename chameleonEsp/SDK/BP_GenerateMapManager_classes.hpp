@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ST_PriorityGenerateComonents_structs.hpp"
 #include "ST_GenerateBoxLocation_structs.hpp"
+#include "ST_PriorityGenerateComonents_structs.hpp"
 
 
 SDK_NAMESPACE_START

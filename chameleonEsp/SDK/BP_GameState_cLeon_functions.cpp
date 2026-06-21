@@ -660,6 +660,20 @@ void ABP_GameState_cLeon_C::ExecuteUbergraph_BP_GameState_cLeon(int32 EntryPoint
 }
 
 
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.EEYAN_Activate
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::EEYAN_Activate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "EEYAN_Activate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_GameState_cLeon.BP_GameState_cLeon_C.CountUIReset
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 

@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "ST_cLeonMapData_structs.hpp"
+#include "EN_cLeonGamePhase_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "EN_cLeonMainGamePhase_structs.hpp"
-#include "EN_cLeonGamePhase_structs.hpp"
 #include "EN_cLeonGameMode_structs.hpp"
+#include "EN_cLeonMainGamePhase_structs.hpp"
+#include "ST_cLeonMapData_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -115,6 +115,7 @@ public:
 	void ForceStart();
 	void ForceModeWidgetReset();
 	void ExecuteUbergraph_BP_GameState_cLeon(int32 EntryPoint);
+	void EEYAN_Activate();
 	void CountUIReset();
 	void Complete();
 	void ClearWatchRanking();
