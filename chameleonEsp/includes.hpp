@@ -26,6 +26,8 @@
 #include "SDK/BP_FirstPersonCharacter_Main_classes.hpp"
 #include "SDK/BP_FirstPersonCharacter_cLeon_Character_classes.hpp"
 #include "SDK/BP_FirstPersonPlayerState_Online_classes.hpp"
+#include "SDK/BP_FirstPersonCharacter_cLeon_Character_Hunter_classes.hpp"
+#include "SDK/BP_FirstPersonCharacter_cLeon_Character_Survivor_classes.hpp"
 #include "skeleton.hpp"
 #include "CheatManager.hpp"
 #include "Menu.hpp"

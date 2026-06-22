@@ -232,6 +232,10 @@ void CheatManager::DrawEsp(const std::string& PlayerName, SDK::FVector Location,
 	const ImU32 colEsp  = ImGui::ColorConvertFloat4ToU32(IsVisible ? *(ImVec4*)cfg->colVisible : *(ImVec4*)cfg->colNotVisible);
 	const ImU32 colLine = ImGui::ColorConvertFloat4ToU32(*(ImVec4*)cfg->colLines);
 
+	// white color
+	const float fff[4] = { 1.0f,  1.0f,  1.0f, 1.0f };
+	const ImU32 colWhite = ImGui::ColorConvertFloat4ToU32(*(ImVec4*)fff);
+
 	SDK::FVector2D BoxMin{}, BoxMax{};
 	bool bHasBox = false;
 
@@ -247,6 +251,21 @@ void CheatManager::DrawEsp(const std::string& PlayerName, SDK::FVector Location,
 	{
 		if (cfg->bNames)
 			ImGui::GetForegroundDrawList()->AddText(ImVec2(BoxMin.X, BoxMin.Y - 15), colEsp, PlayerName.c_str());
+
+		if (cfg->bRoles)
+		{
+			const char* roleText = nullptr;
+			if (BaseClass->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::StaticClass()))
+				roleText = "Hunter";
+			else if (BaseClass->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_Survivor_C::StaticClass()))
+				roleText = "Survivor";
+
+			if (roleText)
+			{
+				const float nameWidth = cfg->bNames ? ImGui::CalcTextSize(PlayerName.c_str()).x + 5 : 0.0f;
+				ImGui::GetForegroundDrawList()->AddText(ImVec2(BoxMin.X + nameWidth, BoxMin.Y - 15), colWhite, roleText);
+			}
+		}
 
 		if (cfg->bBox)
 			draw->DrawBox(BoxMin.X, BoxMin.Y, BoxMax.X - BoxMin.X, BoxMax.Y - BoxMin.Y, colEsp, 1.0f);

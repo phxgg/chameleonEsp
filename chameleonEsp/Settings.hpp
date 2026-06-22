@@ -7,6 +7,7 @@ public:
 	float fFovValue;
 	bool bLines;
 	bool bNames;
+	bool bRoles;
 	bool bBox;
 	bool bSkeleton;
 	bool bDistance;

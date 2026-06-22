@@ -10,6 +10,7 @@ void Settings::InitializeSettings()
 	this->fFovValue = 90.0f;
 	this->bLines = false;
 	this->bNames = false;
+	this->bRoles = false;
 	this->bBox = false;
 	this->bSkeleton = false;
 	this->bDistance = false;
