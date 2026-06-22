@@ -487,7 +487,7 @@ void Unload()
     FreeConsole();
 }
 
-void InitProcess(bool *WindowFocus)
+void InitProcess(bool &WindowFocus)
 {
     DWORD ForegroundWindowProcessID;
     GetWindowThreadProcessId(GetForegroundWindow(), &ForegroundWindowProcessID);
@@ -502,7 +502,7 @@ void InitProcess(bool *WindowFocus)
         Process::WindowWidth = TempRect.right - TempRect.left;
         Process::WindowHeight = TempRect.bottom - TempRect.top;
 
-        *WindowFocus = true;
+        WindowFocus = true;
     }
 }
 
@@ -535,7 +535,7 @@ DWORD MainThread(HMODULE Module)
     bool WindowFocus = false;
     while (WindowFocus == false)
     {
-        InitProcess(&WindowFocus);
+        InitProcess(WindowFocus);
         Sleep(100);
     }
 
