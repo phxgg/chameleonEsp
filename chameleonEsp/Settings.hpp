@@ -17,6 +17,7 @@ public:
 	bool bNoGunCooldown;
 	bool bAntiDetection;
 	bool bMagnetEnabled;
+	bool bPreventKick;
 	float colVisible[4];
 	float colNotVisible[4];
 	float colLines[4];

@@ -93,6 +93,7 @@ void Menu::Init()
 
 			ImGui::Checkbox("Anti Detection (Survivors)", &cfg->bAntiDetection);
 			ImGui::Checkbox("No Gun Cooldown (Hunters)", &cfg->bNoGunCooldown);
+			ImGui::Checkbox("Anti Server Kick", &cfg->bPreventKick);
 
 			if (ImGui::Button("Dump Bones"))
 				cfg->bDumpBones = true;

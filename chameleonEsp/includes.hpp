@@ -23,6 +23,8 @@
 #include "imgui/imgui_impl_dx12.h"
 
 #include "SDK/Engine_classes.hpp"
+#include "SDK/BP_FirstPersonCharacter_LINK_classes.hpp"
+#include "SDK/BP_FirstPersonPlayerState_Online_classes.hpp"
 #include "SDK/BP_FirstPersonCharacter_Main_classes.hpp"
 #include "SDK/BP_FirstPersonCharacter_cLeon_Character_classes.hpp"
 #include "SDK/BP_FirstPersonPlayerState_Online_classes.hpp"
@@ -40,3 +42,7 @@ inline Settings* cfg;
 inline FILE* file;
 inline Drawings* draw;
 inline SDK::UFunction* g_OnRepBodyVisibilityFunc = nullptr;
+inline SDK::UFunction* g_KickLINK = nullptr;
+inline SDK::UFunction* g_KickOnline = nullptr;
+inline SDK::UFunction* g_ClientWasKicked = nullptr;
+inline SDK::UFunction* g_ClientReturnToMainMenuWithTextReason = nullptr;

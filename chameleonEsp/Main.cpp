@@ -81,6 +81,27 @@ void __fastcall hkProcessEvent(SDK::UObject* pObject, SDK::UFunction* pFunction,
         // Force BodyVisibility = true before OnRep reads it, so the character appears visible
         static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_C*>(pObject)->BodyVisibility = true;
     }
+
+    // g_KickOnline is most likely the only needed one,
+    // but hook everything just to make sure we catch all the kick functions
+    if (!g_KickLINK)
+        g_KickLINK = SDK::ABP_FirstPersonCharacter_LINK_C::StaticClass()->GetFunction("BP_FirstPersonCharacter_LINK_C", "Kick");
+
+    if (!g_KickOnline)
+        g_KickOnline = SDK::ABP_FirstPersonPlayerState_Online_C::StaticClass()->GetFunction("BP_FirstPersonPlayerState_Online_C", "Kick");
+
+    if (!g_ClientWasKicked)
+        g_ClientWasKicked = SDK::APlayerController::StaticClass()->GetFunction("PlayerController", "ClientWasKicked");
+
+    if (!g_ClientReturnToMainMenuWithTextReason)
+        g_ClientReturnToMainMenuWithTextReason = SDK::APlayerController::StaticClass()->GetFunction("PlayerController", "ClientReturnToMainMenuWithTextReason");
+
+    if (cfg && cfg->bPreventKick && (pFunction == g_KickLINK || pFunction == g_KickOnline || pFunction == g_ClientWasKicked || pFunction == g_ClientReturnToMainMenuWithTextReason))
+    {
+        std::cout << "[ProcessEvent] Prevented kick function: " << pFunction->GetFullName() << std::endl;
+        return;
+    }
+
     return oProcessEvent(pObject, pFunction, pParms);
 }
 
