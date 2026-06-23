@@ -36,11 +36,14 @@
 #include "Settings.hpp"
 #include "Drawings.hpp"
 
+// Main global variables
 inline CheatManager* cheat;
 inline Menu* gui;
 inline Settings* cfg;
 inline FILE* file;
 inline Drawings* draw;
+
+// Function pointers for event handling
 inline SDK::UFunction* g_OnRepBodyVisibilityFunc = nullptr;
 inline SDK::UFunction* g_KickLINK = nullptr;
 inline SDK::UFunction* g_KickOnline = nullptr;
