@@ -91,6 +91,8 @@ void Menu::Init()
 		{
 			ImGui::BeginChild("##tools_list", ImVec2(0, 0), false);
 
+			ImGui::Checkbox("No Gun Cooldown", &cfg->bNoGunCooldown);
+
 			if (ImGui::Button("Dump Bones"))
 				cfg->bDumpBones = true;
 

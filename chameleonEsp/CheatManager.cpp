@@ -39,6 +39,18 @@ void CheatManager::Init()
 		const bool IsVisible = PlayerController->LineOfSightTo(obj, { 0,0,0 }, false); // visible check
 
 		if (obj == MyPlayer)
+		{
+			if (cfg->bNoGunCooldown)
+			{
+				if (BaseClass->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::StaticClass()))
+				{
+					auto* hunter = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*>(BaseClass);
+					hunter->GunCoolTime = 0.0;
+				}
+			}
+		}
+
+		if (obj == MyPlayer)
 			continue;
 		PlayerInfos.push_back({ PlayerName, Location, obj });
 

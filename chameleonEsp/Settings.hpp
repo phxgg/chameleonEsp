@@ -14,6 +14,7 @@ public:
 	bool bDumpBones;
 	bool bEnemyOnly;
 	bool bForceCharacterVisibility;
+	bool bNoGunCooldown;
 	float colVisible[4];
 	float colNotVisible[4];
 	float colLines[4];
