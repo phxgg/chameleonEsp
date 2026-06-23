@@ -40,12 +40,10 @@ void CheatManager::Init()
 
 		if (objActor == MyPlayer)
 		{
-			bool isHunter = BaseClass->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::StaticClass());
-			SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C* hunter = nullptr;
-
-			if (isHunter)
+			// Hunter
+			if (BaseClass->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::StaticClass()))
 			{
-				hunter = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*>(BaseClass);
+				auto* hunter = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*>(BaseClass);
 
 				if (!hunter)
 					continue;
