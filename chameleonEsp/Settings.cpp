@@ -17,7 +17,6 @@ void Settings::InitializeSettings()
 	this->bDumpBones = false;
 	this->bEnemyOnly = false;
 	this->bForceCharacterVisibility = false;
-	this->iTeleportTarget = -1;
 	float colVisible[4]    = { 0.0f,  1.0f,  0.0f, 1.0f };
 	float colNotVisible[4] = { 0.706f, 0.392f, 1.0f, 1.0f };
 	float colLines[4]      = { 1.0f,  1.0f,  1.0f, 1.0f };
@@ -31,11 +30,9 @@ void Settings::SaveSettings()
 	_mkdir("C:\\chameleonEsp");
 	fopen_s(&file, ConfigFile, "wb");
 	if (file) {
-		// iTeleportTarget and bDumpBones are transient runtime commands, not persisted
-		// settings - write them as their inert defaults so a saved config can't carry a
-		// stale teleport index or a pending bone dump.
+		// bDumpBones is a transient runtime command, not a persisted setting - write it as
+		// its inert default so a saved config can't carry a pending bone dump.
 		Settings tmp = *this;
-		tmp.iTeleportTarget = -1;
 		tmp.bDumpBones = false;
 		fwrite(&tmp, sizeof(tmp), 1, file);
 		fclose(file);
@@ -54,8 +51,7 @@ void Settings::LoadSettings()
 			fread(cfg, sizeof(*cfg), 1, file);
 			fclose(file);
 
-			// Never restore transient command flags from disk - they are not settings.
-			cfg->iTeleportTarget = -1;
+			// Never restore the transient command flag from disk - it is not a setting.
 			cfg->bDumpBones = false;
 		}
 		else

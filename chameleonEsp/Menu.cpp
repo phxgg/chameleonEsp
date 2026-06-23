@@ -76,7 +76,7 @@ void Menu::Init()
 				{
 					ImGui::PushID(i);
 					if (ImGui::Button("TP"))
-						cfg->iTeleportTarget = i;
+						cheat->RequestTeleport(cheat->PlayerInfos[i].Actor);
 					ImGui::SameLine();
 					ImGui::Text("%s", cheat->PlayerInfos[i].Name.c_str());
 					ImGui::PopID();

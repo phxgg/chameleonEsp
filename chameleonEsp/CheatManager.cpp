@@ -40,7 +40,7 @@ void CheatManager::Init()
 
 		if (obj == MyPlayer)
 			continue;
-		PlayerInfos.push_back({ PlayerName, Location });
+		PlayerInfos.push_back({ PlayerName, Location, obj });
 
 		UpdateForcedVisibility();
 
@@ -65,7 +65,7 @@ void CheatManager::Init()
 			it = deadActors.erase(it);
 	}
 
-	HandleTeleport();
+	HandleTeleport(currentActors);
 }
 
 // Walk the world -> game instance -> local player -> controller -> pawn chain, plus the
@@ -291,15 +291,18 @@ void CheatManager::DrawEsp(const std::string& PlayerName, SDK::FVector Location,
 	}
 }
 
-// Teleport us onto the selected player from the last-built PlayerInfos list, then clear the request.
-void CheatManager::HandleTeleport()
+// Teleport us onto the requested actor, then clear the request. The target is resolved by actor
+// pointer rather than a PlayerInfos index, since that list (and the dead-player latch that filters
+// it) is rebuilt every frame and a captured index can drift to the wrong entry or go out of range
+// by the time this runs. currentActors confirms the actor still exists this frame before we use it.
+void CheatManager::HandleTeleport(const std::unordered_set<SDK::AActor*>& currentActors)
 {
-	if (cfg->iTeleportTarget != -1 && cfg->iTeleportTarget < (int)PlayerInfos.size() && MyPlayer)
+	if (TeleportTarget && currentActors.count(TeleportTarget) && MyPlayer)
 	{
 		SDK::FRotator CurrentRotation = MyPlayer->K2_GetActorRotation();
-		MyPlayer->K2_TeleportTo(PlayerInfos[cfg->iTeleportTarget].Location, CurrentRotation);
-		cfg->iTeleportTarget = -1;
+		MyPlayer->K2_TeleportTo(TeleportTarget->K2_GetActorLocation(), CurrentRotation);
 	}
+	TeleportTarget = nullptr;
 }
 
 void CheatManager::DumpBones()
