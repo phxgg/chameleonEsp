@@ -23,11 +23,18 @@ private:
 	void UpdateForcedVisibility();
 	bool IsDead();
 	bool IsDead(SDK::AActor* actor);
+	bool IsSurvivor();
+	bool IsSurvivor(SDK::AActor* actor);
+	bool IsSurvivor(SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass);
+	bool IsHunter();
+	bool IsHunter(SDK::AActor* actor);
+	bool IsHunter(SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass);
 	bool IsEnemy();
 	void DrawSkeleton(ImU32 colEsp);
 	bool ComputeBoundingBox(SDK::FVector2D& BoxMin, SDK::FVector2D& BoxMax);
 	void DrawEsp(const std::string& PlayerName, SDK::FVector Location, SDK::FVector MyLocation, bool IsVisible);
 	void HandleTeleport(const std::unordered_set<SDK::AActor*>& currentActors);
+	void HandleMagnet(const std::unordered_set<SDK::AActor*>& currentActors, const SDK::FVector& MyLocation, SDK::TArray<SDK::AActor*>& Players);
 	SDK::AActor* TeleportTarget = nullptr; // resolved by actor pointer, not list index, since PlayerInfos is rebuilt every frame
 public:
 	struct PlayerInfo {
