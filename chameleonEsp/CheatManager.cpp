@@ -23,12 +23,12 @@ void CheatManager::Init()
 	{
 		if (!Players.IsValidIndex(i)) continue;
 
-		obj = Players[i];
-		if (!obj) continue;
-		BaseClass = (SDK::ABP_FirstPersonCharacter_cLeon_Character_C*)obj;
+		objActor = Players[i];
+		if (!objActor) continue;
+		BaseClass = (SDK::ABP_FirstPersonCharacter_cLeon_Character_C*)objActor;
 		if (!BaseClass) continue;
 
-		currentActors.insert(obj);
+		currentActors.insert(objActor);
 
 		// Skip dead/ragdolled corpses (see IsDead for why the obvious flags don't work).
 		if (IsDead())
@@ -36,22 +36,50 @@ void CheatManager::Init()
 
 		const auto Location = BaseClass->K2_GetActorLocation();
 		const std::string PlayerName = ResolvePlayerName();
-		const bool IsVisible = PlayerController->LineOfSightTo(obj, { 0,0,0 }, false); // visible check
+		const bool IsVisible = PlayerController->LineOfSightTo(objActor, { 0,0,0 }, false); // visible check
 
-		if (obj == MyPlayer)
+		if (objActor == MyPlayer)
 		{
-			if (cfg->bNoGunCooldown)
+			bool isHunter = BaseClass->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::StaticClass());
+			SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C* hunter = nullptr;
+
+			if (isHunter)
 			{
-				if (BaseClass->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::StaticClass()))
-				{
-					auto* hunter = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*>(BaseClass);
+				hunter = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*>(BaseClass);
+
+				if (!hunter)
+					continue;
+				
+				if (cfg->bNoGunCooldown)
 					hunter->GunCoolTime = 0.0;
+				
+				if (cfg->bMagnetEnabled) {
+					// Magnet effect: move all other players toward the local player, but only if they are alive
+					for (int j = 0; j < Players.Num(); j++)
+					{
+						if (!Players.IsValidIndex(j)) continue;
+
+						SDK::AActor* otherActor = Players[j];
+						if (!otherActor || otherActor == objActor) continue;
+
+						SDK::ABP_FirstPersonCharacter_cLeon_Character_C* otherBaseClass = (SDK::ABP_FirstPersonCharacter_cLeon_Character_C*)otherActor;
+						if (!otherBaseClass) continue;
+
+						// Skip dead
+						if (IsDead(otherActor))
+							continue;
+
+						// Teleport the other player in front of the local player, but only if they are alive
+						SDK::FVector direction = MyLocation - otherBaseClass->K2_GetActorLocation();
+						direction.Normalize();
+						otherBaseClass->K2_SetActorLocation(MyLocation + direction * 100.0f, false, nullptr, true);
+					}
 				}
 			}
 			continue;
 		}
 
-		PlayerInfos.push_back({ PlayerName, Location, obj });
+		PlayerInfos.push_back({ PlayerName, Location, objActor });
 
 		UpdateForcedVisibility();
 
@@ -121,7 +149,7 @@ std::string CheatManager::ResolvePlayerName()
 	// Don't drop the whole ESP over that - just fall back to the last name we saw for this actor.
 	if (!BaseClass->PlayerState)
 	{
-		auto it = playerNameCache.find(obj);
+		auto it = playerNameCache.find(objActor);
 		return it != playerNameCache.end() ? it->second : "Unknown";
 	}
 
@@ -139,7 +167,7 @@ std::string CheatManager::ResolvePlayerName()
 	if (Name->IsValid())
 	{
 		std::string PlayerName = Name->ToString();
-		playerNameCache[obj] = PlayerName; // remember it for the null windows
+		playerNameCache[objActor] = PlayerName; // remember it for the null windows
 		return PlayerName;
 	}
 
@@ -157,13 +185,13 @@ void CheatManager::UpdateForcedVisibility()
 	{
 		BaseClass->BodyVisibility = true;
 		BaseClass->OnRep_BodyVisibility();
-		forcedVisibleActors.insert(obj);
+		forcedVisibleActors.insert(objActor);
 	}
-	else if (!cfg->bForceCharacterVisibility && forcedVisibleActors.count(obj))
+	else if (!cfg->bForceCharacterVisibility && forcedVisibleActors.count(objActor))
 	{
 		BaseClass->BodyVisibility = false;
 		BaseClass->OnRep_BodyVisibility();
-		forcedVisibleActors.erase(obj);
+		forcedVisibleActors.erase(objActor);
 	}
 }
 
@@ -183,8 +211,19 @@ void CheatManager::UpdateForcedVisibility()
 bool CheatManager::IsDead()
 {
 	if (BaseClass->Mesh && BaseClass->Mesh->IsAnySimulatingPhysics())
-		deadActors.insert(obj);
-	return deadActors.count(obj) > 0;
+		deadActors.insert(objActor);
+	return deadActors.count(objActor) > 0;
+}
+
+bool CheatManager::IsDead(SDK::AActor* actor)
+{
+	if (!actor) return false;
+	auto* baseClass = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_C*>(actor);
+	if (!baseClass || !baseClass->Mesh) return false;
+
+	if (baseClass->Mesh->IsAnySimulatingPhysics())
+		deadActors.insert(actor);
+	return deadActors.count(actor) > 0;
 }
 
 // True when the current actor is on the opposing team (survivor vs. hunter) from us.

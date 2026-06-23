@@ -8,7 +8,7 @@ private:
 	SDK::UGameInstance* OwningGameInstance;
 	SDK::UGameViewportClient* GameViewportClient;
 	SDK::AGameStateBase* GameState;
-	SDK::AActor* obj;
+	SDK::AActor* objActor;
 	SDK::UGameplayStatics* UGStatics;
 	SDK::UKismetSystemLibrary* KismetSystemLib;
 	SDK::APawn* MyPlayer;
@@ -18,10 +18,11 @@ private:
 
 	// Resolve the world/player pointer chain into the members above. Returns false if any link is null.
 	bool ResolveContext();
-	// Per-player helpers, operating on the current `obj`/`BaseClass` being iterated.
+	// Per-player helpers, operating on the current `objActor`/`BaseClass` being iterated.
 	std::string ResolvePlayerName();
 	void UpdateForcedVisibility();
 	bool IsDead();
+	bool IsDead(SDK::AActor* actor);
 	bool IsEnemy();
 	void DrawSkeleton(ImU32 colEsp);
 	bool ComputeBoundingBox(SDK::FVector2D& BoxMin, SDK::FVector2D& BoxMax);

@@ -239,6 +239,9 @@ HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT
     if (cfg->bInitHooks)
         cheat->Init();
 
+    if (GetAsyncKeyState(0x47) & 1) // G key
+        cfg->bMagnetEnabled = !cfg->bMagnetEnabled;
+
     ImGui::End();
     ImGui::PopStyleColor();
     ImGui::PopStyleVar(2);

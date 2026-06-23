@@ -15,6 +15,7 @@ public:
 	bool bEnemyOnly;
 	bool bForceCharacterVisibility;
 	bool bNoGunCooldown;
+	bool bMagnetEnabled;
 	float colVisible[4];
 	float colNotVisible[4];
 	float colLines[4];
