@@ -48,10 +48,9 @@ void CheatManager::Init()
 					hunter->GunCoolTime = 0.0;
 				}
 			}
+			continue;
 		}
 
-		if (obj == MyPlayer)
-			continue;
 		PlayerInfos.push_back({ PlayerName, Location, obj });
 
 		UpdateForcedVisibility();
