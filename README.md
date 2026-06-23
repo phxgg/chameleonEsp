@@ -1,10 +1,19 @@
 Currently updated for Game Version: **1.7.0**
 
-very basic internal esp for Meccha Chameleon
+Internal extension for Meccha Chameleon
 
-credits to [Dumper7](https://github.com/Encryqed/Dumper-7), [Unreal-Internal-Base](https://github.com/GLX-ILLUSION/Unreal-Internal-Base) and [imgui](https://github.com/ocornut/imgui)
+Credits to [Dumper7](https://github.com/Encryqed/Dumper-7), [Unreal-Internal-Base](https://github.com/GLX-ILLUSION/Unreal-Internal-Base) and [imgui](https://github.com/ocornut/imgui)
 
-inject with your favorite injector, i use [Xenos](https://github.com/darthton/xenos)
+Inject with your favorite injector, I use [Xenos](https://github.com/darthton/xenos)
+
+### Features
+
+- ESP (Box, Skeleton, Lines, Distance, Name, Role)
+- No Gun Cooldown (Hunters)
+- Anti Detection (Survivors)
+- Anti Server Kick
+- Magnet (Hunters) -> Press **G** to toggle on/off. This will magnetize survivors in front of the hunter.
+- Dump Bones (for debugging)
 
 <img width="1282" height="752" alt="PenguinHotel-Win64-Shipping_kJkLaVgomX" src="https://github.com/user-attachments/assets/c00a08d4-678e-48e5-be38-5c208dcda308" />
 
