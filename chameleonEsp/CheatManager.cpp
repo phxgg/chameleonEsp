@@ -54,7 +54,23 @@ void CheatManager::Init()
 					hunter->GunCoolTime = 0.0;
 				
 				if (cfg->bMagnetEnabled) {
-					// Magnet effect: move all other players toward the local player, but only if they are alive
+					// Draw "MAGNET ACTIVE" text at the bottom center in red
+					const float redColor[4] = { 1.0f, 0.0f, 0.0f, 1.0f };
+					const ImU32 colRed = ImGui::ColorConvertFloat4ToU32(*(ImVec4*)redColor);
+
+					const char* magnetText = "MAGNET ACTIVE";
+					const ImVec2 textSize = ImGui::CalcTextSize(magnetText);
+					const float textX = (x / 2.0f) - (textSize.x / 2.0f);
+					const float textY = y - 30.0f;
+
+					ImGui::GetForegroundDrawList()->AddText(ImVec2(textX, textY), colRed, magnetText);
+
+					// Get the player's forward direction from their rotation
+					SDK::FVector ForwardDirection = MyPlayer->GetActorForwardVector();
+					ForwardDirection.Normalize();
+
+					// Magnet effect: pull all other players in front of the local player's view
+					int depthIndex = 0;
 					for (int j = 0; j < Players.Num(); j++)
 					{
 						if (!Players.IsValidIndex(j)) continue;
@@ -69,10 +85,15 @@ void CheatManager::Init()
 						if (IsDead(otherActor))
 							continue;
 
-						// Teleport the other player in front of the local player, but only if they are alive
-						SDK::FVector direction = MyLocation - otherBaseClass->K2_GetActorLocation();
-						direction.Normalize();
-						otherBaseClass->K2_SetActorLocation(MyLocation + direction * 100.0f, false, nullptr, true);
+						// Only pull survivors
+						if (!otherBaseClass->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_Survivor_C::StaticClass()))
+							continue;
+
+						// Spread players in depth to prevent stacking
+						float depthSpread = depthIndex * 120.0f;
+						SDK::FVector targetPosition = MyLocation + ForwardDirection * (150.0f + depthSpread);
+						otherBaseClass->K2_SetActorLocation(targetPosition, false, nullptr, true);
+						++depthIndex;
 					}
 				}
 			}
