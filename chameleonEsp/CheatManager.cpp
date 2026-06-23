@@ -425,6 +425,21 @@ void CheatManager::HandleMagnet(const std::unordered_set<SDK::AActor*>& currentA
 	}
 }
 
+void CheatManager::ApplyLikes(SDK::AActor* actor, int32_t amount)
+{
+	if (!actor || amount <= 0) return;
+
+	auto* baseClass = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_C*>(actor);
+	if (!baseClass) return;
+
+	auto* playerState = static_cast<SDK::ABP_FirstPersonPlayerState_Online_cLeon_C*>(baseClass->PlayerState);
+	if (!playerState) return;
+
+	playerState->UpdateEEYANPoint_Local_(amount);
+	playerState->UpdateEEYANPoint_Server_(amount);
+	playerState->WriteEEYANPoint();
+}
+
 void CheatManager::DumpBones()
 {
 	// Guard the whole pointer chain - any of these can be null on proxies/streaming actors.

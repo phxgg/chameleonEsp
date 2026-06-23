@@ -35,6 +35,7 @@ private:
 	void DrawEsp(const std::string& PlayerName, SDK::FVector Location, SDK::FVector MyLocation, bool IsVisible);
 	void HandleTeleport(const std::unordered_set<SDK::AActor*>& currentActors);
 	void HandleMagnet(const std::unordered_set<SDK::AActor*>& currentActors, const SDK::FVector& MyLocation, SDK::TArray<SDK::AActor*>& Players);
+	void ApplyLikes(SDK::AActor* actor, int32_t amount);
 	SDK::AActor* TeleportTarget = nullptr; // resolved by actor pointer, not list index, since PlayerInfos is rebuilt every frame
 public:
 	struct PlayerInfo {
@@ -44,6 +45,7 @@ public:
 	};
 	std::vector<PlayerInfo> PlayerInfos;
 	void RequestTeleport(SDK::AActor* Actor) { TeleportTarget = Actor; }
+	void ApplyLikesToPlayer(SDK::AActor* actor, int32_t amount) { ApplyLikes(actor, amount); }
 	std::unordered_set<SDK::AActor*> forcedVisibleActors;
 	std::unordered_set<SDK::AActor*> deadActors; // actors seen ragdolling; latched so ESP stays off after the corpse stops simulating physics
 	std::unordered_map<SDK::AActor*, std::string> playerNameCache; // last-known name per actor, so ESP survives PlayerState replication blips

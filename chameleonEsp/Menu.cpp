@@ -95,6 +95,83 @@ void Menu::Init()
 			ImGui::Checkbox("No Gun Cooldown (Hunters)", &cfg->bNoGunCooldown);
 			ImGui::Checkbox("Anti Server Kick", &cfg->bPreventKick);
 
+			ImGui::Separator();
+			ImGui::TextUnformatted("Likes");
+
+			static SDK::AActor* selectedPlayer = nullptr;
+			static int likesAmount = 1;
+			const float okButtonWidth = 42.0f;
+			const float likesInputWidth = 55.0f;
+			const float rowSpacing = ImGui::GetStyle().ItemInnerSpacing.x;
+			const float comboWidth = ImGui::GetContentRegionAvail().x - likesInputWidth - okButtonWidth - rowSpacing * 2.0f;
+			const float fixedComboWidth = comboWidth > 0.0f ? comboWidth : 0.0f;
+
+			if (!cheat->PlayerInfos.empty())
+			{
+				bool selectedPlayerStillExists = false;
+				for (const auto& playerInfo : cheat->PlayerInfos)
+				{
+					if (playerInfo.Actor == selectedPlayer)
+					{
+						selectedPlayerStillExists = true;
+						break;
+					}
+				}
+
+				if (!selectedPlayerStillExists)
+					selectedPlayer = cheat->PlayerInfos.front().Actor;
+
+				const char* previewText = "Select player";
+				for (const auto& playerInfo : cheat->PlayerInfos)
+				{
+					if (playerInfo.Actor == selectedPlayer)
+					{
+						previewText = playerInfo.Name.c_str();
+						break;
+					}
+				}
+
+				ImGui::SetNextItemWidth(fixedComboWidth);
+				if (ImGui::BeginCombo("##likes_player", previewText))
+				{
+					for (const auto& playerInfo : cheat->PlayerInfos)
+					{
+						const bool isSelected = playerInfo.Actor == selectedPlayer;
+						if (ImGui::Selectable(playerInfo.Name.c_str(), isSelected))
+							selectedPlayer = playerInfo.Actor;
+
+						if (isSelected)
+							ImGui::SetItemDefaultFocus();
+					}
+
+					ImGui::EndCombo();
+				}
+			}
+			else
+			{
+				ImGui::SetNextItemWidth(fixedComboWidth);
+				ImGui::BeginDisabled();
+				ImGui::BeginCombo("##likes_player", "No players found");
+				ImGui::EndCombo();
+				ImGui::EndDisabled();
+			}
+
+			ImGui::SameLine();
+			ImGui::SetNextItemWidth(likesInputWidth);
+			ImGui::InputInt("##likes_amount", &likesAmount);
+			if (likesAmount < 1)
+				likesAmount = 1;
+
+			ImGui::SameLine();
+			const bool canApplyLikes = selectedPlayer != nullptr && !cheat->PlayerInfos.empty();
+			if (!canApplyLikes)
+				ImGui::BeginDisabled();
+			ImGui::SetNextItemWidth(okButtonWidth);
+			if (ImGui::Button("OK"))
+				cheat->ApplyLikesToPlayer(selectedPlayer, likesAmount);
+			if (!canApplyLikes)
+				ImGui::EndDisabled();
+
 			if (ImGui::Button("Dump Bones"))
 				cfg->bDumpBones = true;
 

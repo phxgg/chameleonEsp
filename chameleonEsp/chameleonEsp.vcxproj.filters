@@ -92,6 +92,9 @@
     <ClCompile Include="SDK\BP_FirstPersonCharacter_cLeon_Character_functions.cpp">
       <Filter>SDK-Source</Filter>
     </ClCompile>
+    <ClCompile Include="SDK\BP_FirstPersonPlayerState_Online_cLeon_functions.cpp">
+      <Filter>SDK-Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Menu.hpp">
