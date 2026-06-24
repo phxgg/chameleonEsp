@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "BP_FirstPersonPlayerState_Online_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_FirstPersonPlayerState_Online_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonPlayerState_Online_cLeon.BP_FirstPersonPlayerState_Online_cLeon_C
-// 0x0040 (0x03F8 - 0x03B8)
+// 0x0048 (0x0400 - 0x03B8)
 class ABP_FirstPersonPlayerState_Online_cLeon_C final : public ABP_FirstPersonPlayerState_Online_C
 {
 public:
@@ -31,12 +31,14 @@ public:
 	int32                                         CurrentEEYAN_Point;                                // 0x03E0(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void()>              EEYANChange;                                       // 0x03E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UClass*                                 CurrentBodyClass;                                  // 0x03F8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void WriteEEYANPoint();
 	void UpdateEEYANPoint_Server_(int32 CurrentEEYAN_Point);
 	void UpdateEEYANPoint_Local_(int32 CurrentEEYAN_Point);
 	void SetModState(bool ModState);
+	void SetBodyClass(class UClass* CurrentBodyClass);
 	void ReciveEEYAN(class ABP_FirstPersonPlayerState_Online_cLeon_C* Source);
 	void ReceiveBeginPlay();
 	void OnWriteUserFileProgress64_0646E9BD4A18BBF176FCAEA4EB4F18EF(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);

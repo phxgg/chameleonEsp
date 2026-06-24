@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "EN_SoundPlayType_structs.hpp"
+#include "Engine_structs.hpp"
 #include "BP_DeviceBase_classes.hpp"
 
 

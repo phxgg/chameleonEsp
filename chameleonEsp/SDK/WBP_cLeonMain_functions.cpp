@@ -54,6 +54,26 @@ void UWBP_cLeonMain_C::UpdateWatchRanking(const TArray<class ABP_FirstPersonPlay
 }
 
 
+// Function WBP_cLeonMain.WBP_cLeonMain_C.UpdateDecoyCoolTime
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<double>&                   CoolTimes                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWBP_cLeonMain_C::UpdateDecoyCoolTime(const TArray<double>& CoolTimes)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonMain_C", "UpdateDecoyCoolTime");
+
+	Params::WBP_cLeonMain_C_UpdateDecoyCoolTime Parms{};
+
+	Parms.CoolTimes = std::move(CoolTimes);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_cLeonMain.WBP_cLeonMain_C.TimerTextUpdate
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -270,6 +290,26 @@ void UWBP_cLeonMain_C::NamePlateVisibilityChange(bool Visibility)
 }
 
 
+// Function WBP_cLeonMain.WBP_cLeonMain_C.MapDataUpdate
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FST_cLeonMapData&          MapData                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWBP_cLeonMain_C::MapDataUpdate(const struct FST_cLeonMapData& MapData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonMain_C", "MapDataUpdate");
+
+	Params::WBP_cLeonMain_C_MapDataUpdate Parms{};
+
+	Parms.MapData = std::move(MapData);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_cLeonMain.WBP_cLeonMain_C.IsHunter
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -285,6 +325,26 @@ void UWBP_cLeonMain_C::IsHunter(bool Hunter)
 	Params::WBP_cLeonMain_C_IsHunter Parms{};
 
 	Parms.Hunter = Hunter;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_cLeonMain.WBP_cLeonMain_C.InitDecoyWidget
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Num                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_cLeonMain_C::InitDecoyWidget(int32 Num)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_cLeonMain_C", "InitDecoyWidget");
+
+	Params::WBP_cLeonMain_C_InitDecoyWidget Parms{};
+
+	Parms.Num = Num;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -387,20 +447,6 @@ void UWBP_cLeonMain_C::eeyan(const class FString& Name_0)
 	Parms.Name_0 = std::move(Name_0);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_cLeonMain.WBP_cLeonMain_C.DecoyChange
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_cLeonMain_C::DecoyChange()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_cLeonMain_C", "DecoyChange");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

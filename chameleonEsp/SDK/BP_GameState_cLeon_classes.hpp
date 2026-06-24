@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
-#include "ST_cLeonMapData_structs.hpp"
-#include "EN_cLeonGamePhase_structs.hpp"
-#include "EN_cLeonGameMode_structs.hpp"
 #include "ST_cLeonSurvivorVariation_structs.hpp"
 #include "EN_cLeonMainGamePhase_structs.hpp"
+#include "ST_cLeonMapData_structs.hpp"
+#include "EN_cLeonGameMode_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
+#include "EN_cLeonGamePhase_structs.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_GameState_cLeon.BP_GameState_cLeon_C
-// 0x0240 (0x0540 - 0x0300)
+// 0x0270 (0x0570 - 0x0300)
 class ABP_GameState_cLeon_C final : public AGameStateBase
 {
 public:
@@ -71,13 +71,16 @@ public:
 	uint8                                         Pad_4C1[0x7];                                      // 0x04C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FST_cLeonMapData>               DefaultMapDatas;                                   // 0x04C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FST_cLeonMapData>               ModMapDatas;                                       // 0x04D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FST_cLeonMapData                       CurrentPreviewMapData;                             // 0x04E8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FST_cLeonMapData                       CurrentPreviewMapData;                             // 0x04E8(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, HasGetValueTypeHash)
 	class FString                                 NeedModId;                                         // 0x0500(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, HasGetValueTypeHash)
 	class UWBP_ModQueueAll_C*                     ModQueue;                                          // 0x0510(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TMulticastInlineDelegate<void()>              ModComplete;                                       // 0x0518(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          CanHunterShowWatchRanking;                         // 0x0528(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_529[0x7];                                      // 0x0529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FST_cLeonSurvivorVariation>     SurvivorVariations;                                // 0x0530(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMulticastInlineDelegate<void(int32 Num)>     InitDecoyWidget;                                   // 0x0540(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const TArray<double>& CoolTimes)> UpdateDecoyCoolTime;             // 0x0550(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const struct FST_cLeonMapData& MapData)> MapDataUpdate;            // 0x0560(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void Winner(class ABP_FirstPersonPlayerState_Online_C* WinnerPlayerState);
@@ -107,6 +110,7 @@ public:
 	void OnRep_Filter_Mosaic();
 	void OnRep_Filter_Monochrome();
 	void OnRep_Filter_Horror();
+	void OnRep_CurrentPreviewMapData();
 	void ModStateUpdate();
 	void ModDownloadWait();
 	void KillLog(class ABP_FirstPersonPlayerState_Online_cLeon_C* HunterPlayerState, class ABP_FirstPersonPlayerState_Online_cLeon_C* SurvivorPlayerState);
@@ -122,6 +126,7 @@ public:
 	void CountUIReset();
 	void Complete();
 	void ClearWatchRanking();
+	void BodyTypeSelectWidget();
 	void AllHunterStencilOff();
 	void AddToViewDatas(class ABP_FirstPersonPlayerState_Online_cLeon_C* SourcePlayerState, const TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>& PlayerStates, const TArray<int32>& Points);
 

@@ -90,6 +90,26 @@ void ABP_FirstPersonPlayerState_Online_cLeon_C::SetModState(bool ModState)
 }
 
 
+// Function BP_FirstPersonPlayerState_Online_cLeon.BP_FirstPersonPlayerState_Online_cLeon_C.SetBodyClass
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UClass*                           CurrentBodyClass                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonPlayerState_Online_cLeon_C::SetBodyClass(class UClass* CurrentBodyClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_Online_cLeon_C", "SetBodyClass");
+
+	Params::BP_FirstPersonPlayerState_Online_cLeon_C_SetBodyClass Parms{};
+
+	Parms.CurrentBodyClass = CurrentBodyClass;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_FirstPersonPlayerState_Online_cLeon.BP_FirstPersonPlayerState_Online_cLeon_C.ReciveEEYAN
 // (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:

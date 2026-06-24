@@ -274,10 +274,10 @@ DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_KillPlayer;
 struct BP_FirstPersonCharacter_cLeon_Character_Hunter_C_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2 final
 {
 public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2; // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2; // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2; // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2; // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_cLeon_Character_Hunter_C_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2;
 

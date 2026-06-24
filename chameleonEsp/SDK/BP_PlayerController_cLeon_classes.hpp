@@ -17,7 +17,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_PlayerController_cLeon.BP_PlayerController_cLeon_C
-// 0x0070 (0x07D8 - 0x0768)
+// 0x0078 (0x07E0 - 0x0768)
 class ABP_PlayerController_cLeon_C final : public ABP_FirstPersonPlayerController_C
 {
 public:
@@ -37,6 +37,7 @@ public:
 	class ABP_EEYAN_Arrow_C*                      EEYAN_Arrow;                                       // 0x07B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CurrentSelectActor;                                // 0x07C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TMulticastInlineDelegate<void(const class FString& Name_0)> eeyan;                               // 0x07C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UWBP_ChooseBody_C*                      ChooseBody;                                        // 0x07D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void TeleportMovie();
@@ -54,6 +55,7 @@ public:
 	void EEYAN_State(bool State);
 	void CameraReset();
 	void AddMainWidgets();
+	void AddBodyTypeSesttings();
 
 public:
 	static class UClass* StaticClass()

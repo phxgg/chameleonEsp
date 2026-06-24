@@ -609,12 +609,12 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::KillPlayer(class ABP_Fir
 // Function BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C.InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2
 // (BlueprintEvent)
 // Parameters:
-// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FInputActionValue&         ActionValue_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UInputAction*               SourceAction_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2, float ElapsedTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2, float TriggeredTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2, const class UInputAction* SourceAction_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2)
 {
 	static class UFunction* Func = nullptr;
 
@@ -623,10 +623,10 @@ void ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::InpActEvt_IA_Shot_K2Node
 
 	Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2 Parms{};
 
-	Parms.ActionValue = std::move(ActionValue);
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.TriggeredTime = TriggeredTime;
-	Parms.SourceAction = SourceAction;
+	Parms.ActionValue_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2 = std::move(ActionValue_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2);
+	Parms.ElapsedTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2 = ElapsedTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2;
+	Parms.TriggeredTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2 = TriggeredTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2;
+	Parms.SourceAction_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2 = SourceAction_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

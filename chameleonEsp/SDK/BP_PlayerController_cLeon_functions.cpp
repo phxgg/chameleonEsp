@@ -298,4 +298,18 @@ void ABP_PlayerController_cLeon_C::AddMainWidgets()
 }
 
 
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.AddBodyTypeSesttings
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_PlayerController_cLeon_C::AddBodyTypeSesttings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "AddBodyTypeSesttings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 SDK_NAMESPACE_END

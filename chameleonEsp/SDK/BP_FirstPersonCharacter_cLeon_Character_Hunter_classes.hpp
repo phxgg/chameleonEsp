@@ -11,30 +11,30 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BP_FirstPersonCharacter_cLeon_Character_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "BP_FirstPersonCharacter_cLeon_Character_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FirstPersonCharacter_cLeon_Character_Hunter.BP_FirstPersonCharacter_cLeon_Character_Hunter_C
-// 0x00D0 (0x0D70 - 0x0CA0)
+// 0x00D0 (0x0D90 - 0x0CC0)
 class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C final : public ABP_FirstPersonCharacter_cLeon_Character_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FirstPersonCharacter_cLeon_Character_Hunter_C; // 0x0CA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        GunTop1;                                           // 0x0CA8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0CB0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 LocalViewBody;                                     // 0x0CB8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   crown;                                             // 0x0CC0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        GunTop;                                            // 0x0CC8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Gun1;                                              // 0x0CD0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   gun;                                               // 0x0CD8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                StandRelativeCameraLocation;                       // 0x0CE0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        GunCoolTime;                                       // 0x0CF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class ABP_FirstPersonPlayerState_C*>   FoundTargetPlayerState;                            // 0x0D00(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnTemplate, DisableEditOnInstance, RepNotify)
-	TMap<class ABP_FirstPersonPlayerState_Online_cLeon_C*, int32> SendTargetInView;                  // 0x0D10(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	class UMaterialInstanceDynamic*               LocalTarget;                                       // 0x0D60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_FirstPersonCharacter_cLeon_Character_Hunter_C; // 0x0CC0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        GunTop1;                                           // 0x0CC8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0CD0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 LocalViewBody;                                     // 0x0CD8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   crown;                                             // 0x0CE0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        GunTop;                                            // 0x0CE8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Gun1;                                              // 0x0CF0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   gun;                                               // 0x0CF8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                StandRelativeCameraLocation;                       // 0x0D00(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GunCoolTime;                                       // 0x0D18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class ABP_FirstPersonPlayerState_C*>   FoundTargetPlayerState;                            // 0x0D20(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnTemplate, DisableEditOnInstance, RepNotify)
+	TMap<class ABP_FirstPersonPlayerState_Online_cLeon_C*, int32> SendTargetInView;                  // 0x0D30(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	class UMaterialInstanceDynamic*               LocalTarget;                                       // 0x0D80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void SpawnShotEffect_Server_(const struct FVector& Endpoint, bool IsHit, const struct FRotator& HitRotation, int32 Seed);
@@ -67,7 +67,7 @@ public:
 	void OnBlendOut_53A71DDF483CC968C1A61DAF788E875A(class FName NotifyName);
 	void OnBlendOut_12AC243E438FB95C3F7F978927A1E9CD(class FName NotifyName);
 	void KillPlayer(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter, class ABP_FirstPersonPlayerState_C* SourcePlayerState);
-	void InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2, float ElapsedTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2, float TriggeredTime_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2, const class UInputAction* SourceAction_InpActEvt_IA_Shot_K2Node_EnhancedInputActionEvent_2);
 	void InpActEvt_IA_Jump_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void InpActEvt_IA_Crouch_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void HitSuccess(class ABP_FirstPersonCharacter_cLeon_Character_C* FirstpersonCharacter);

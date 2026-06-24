@@ -17,6 +17,34 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function WBP_PaintCursor.WBP_PaintCursor_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WBP_PaintCursor_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry_Tick;                                   // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime_Tick;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_PaintCursor_C_Tick;
+
+// Function WBP_PaintCursor.WBP_PaintCursor_C.SetPickVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_PaintCursor_C_SetPickVisibility final
+{
+public:
+	bool                                          Visibility;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_PaintCursor_C_SetPickVisibility;
+
+// Function WBP_PaintCursor.WBP_PaintCursor_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_PaintCursor_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_PaintCursor_C_PreConstruct;
+
 // Function WBP_PaintCursor.WBP_PaintCursor_C.ExecuteUbergraph_WBP_PaintCursor
 // 0x0088 (0x0088 - 0x0000)
 struct WBP_PaintCursor_C_ExecuteUbergraph_WBP_PaintCursor final
@@ -41,34 +69,6 @@ public:
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_PaintCursor_C_ExecuteUbergraph_WBP_PaintCursor;
-
-// Function WBP_PaintCursor.WBP_PaintCursor_C.SetPickVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_PaintCursor_C_SetPickVisibility final
-{
-public:
-	bool                                          Visibility;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_PaintCursor_C_SetPickVisibility;
-
-// Function WBP_PaintCursor.WBP_PaintCursor_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WBP_PaintCursor_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry_Tick;                                   // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime_Tick;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_PaintCursor_C_Tick;
-
-// Function WBP_PaintCursor.WBP_PaintCursor_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_PaintCursor_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_PaintCursor_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

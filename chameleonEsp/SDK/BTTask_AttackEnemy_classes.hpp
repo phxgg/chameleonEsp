@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "AttackType_structs.hpp"
 #include "BTTask_AttackToPlayer_classes.hpp"
+#include "AttackType_structs.hpp"
 
 
 SDK_NAMESPACE_START
