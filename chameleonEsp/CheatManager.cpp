@@ -51,7 +51,9 @@ void CheatManager::Init()
 				if (cfg->bNoGunCooldown)
 				{
 					auto* hunterPtr = hunter;
-					QueueGameThreadAction([hunterPtr]() { hunterPtr->GunCoolTime = 0.0; });
+					QueueGameThreadAction([hunterPtr]() {
+						if (IsObjectValid(hunterPtr)) hunterPtr->GunCoolTime = 0.0;
+					});
 				}
 				
 				if (cfg->bMagnetEnabled)
@@ -68,7 +70,9 @@ void CheatManager::Init()
 				if (cfg->bAntiDetection)
 				{
 					auto* survivorPtr = survivor;
-					QueueGameThreadAction([survivorPtr]() { survivorPtr->OverlapCheckCapsules.Clear(); });
+					QueueGameThreadAction([survivorPtr]() {
+						if (IsObjectValid(survivorPtr)) survivorPtr->OverlapCheckCapsules.Clear();
+					});
 				}
 			}
 			continue;
@@ -181,6 +185,7 @@ void CheatManager::UpdateForcedVisibility()
 	{
 		auto* target = BaseClass;
 		QueueGameThreadAction([target]() {
+			if (!IsObjectValid(target)) return;
 			target->BodyVisibility = true;
 			target->OnRep_BodyVisibility();
 		});
@@ -190,6 +195,7 @@ void CheatManager::UpdateForcedVisibility()
 	{
 		auto* target = BaseClass;
 		QueueGameThreadAction([target]() {
+			if (!IsObjectValid(target)) return;
 			target->BodyVisibility = false;
 			target->OnRep_BodyVisibility();
 		});
@@ -390,6 +396,7 @@ void CheatManager::HandleTeleport(const std::unordered_set<SDK::AActor*>& curren
 		SDK::AActor* target = TeleportTarget;
 		SDK::APawn* player = MyPlayer;
 		QueueGameThreadAction([player, target]() {
+			if (!IsObjectValid(player) || !IsObjectValid(target)) return;
 			SDK::FRotator CurrentRotation = player->K2_GetActorRotation();
 			player->K2_TeleportTo(target->K2_GetActorLocation(), CurrentRotation);
 		});
@@ -438,7 +445,8 @@ void CheatManager::HandleMagnet(const std::unordered_set<SDK::AActor*>& currentA
 		float depthSpread = depthIndex * 120.0f;
 		SDK::FVector targetPosition = MyLocation + ForwardDirection * (150.0f + depthSpread);
 		QueueGameThreadAction([otherBaseClass, targetPosition]() {
-			otherBaseClass->K2_SetActorLocation(targetPosition, false, nullptr, true);
+			if (IsObjectValid(otherBaseClass))
+				otherBaseClass->K2_SetActorLocation(targetPosition, false, nullptr, true);
 		});
 		++depthIndex;
 	}
@@ -452,7 +460,8 @@ void CheatManager::KillSurvivor(SDK::AActor* actor)
 	auto* hunter = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*>(MyPlayer);
 	auto* survivor = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Survivor_C*>(actor);
 	QueueGameThreadAction([hunter, survivor]() {
-		hunter->KillPlayer(survivor, hunter->MyPlayerState);
+		if (IsObjectValid(hunter) && IsObjectValid(survivor))
+			hunter->KillPlayer(survivor, hunter->MyPlayerState);
 	});
 }
 
@@ -488,6 +497,16 @@ void CheatManager::FlushGameThreadActions()
 	}
 	for (auto& action : actions)
 		action();
+}
+
+// True if Obj is still the live object at its GObjects slot. Queued actions capture raw
+// pointers on the render thread but only execute later on the game thread, so the actor may
+// have been destroyed/GC'd in the meantime - each queued lambda must re-check this right
+// before touching its captured pointers.
+bool CheatManager::IsObjectValid(SDK::UObject* Obj)
+{
+	if (!Obj || Obj->Index < 0) return false;
+	return SDK::UObject::GObjects->GetByIndex(Obj->Index) == Obj;
 }
 
 void CheatManager::DumpBones()

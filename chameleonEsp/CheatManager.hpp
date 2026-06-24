@@ -61,4 +61,10 @@ public:
 	void DumpBones();
 	void QueueGameThreadAction(std::function<void()> action);
 	void FlushGameThreadActions();
+
+	// True if Obj is still the live object at its GObjects slot. Queued actions capture raw
+	// pointers on the render thread but only run later on the game thread (see
+	// QueueGameThreadAction), so the actor may have been destroyed/GC'd in between - calling
+	// into a freed UObject is exactly the null-pointer-deep-in-engine-code crash this guards.
+	static bool IsObjectValid(SDK::UObject* Obj);
 };

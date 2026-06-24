@@ -74,11 +74,16 @@ LRESULT __stdcall WndProc(const HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
     return CallWindowProc(Process::WndProc, hWnd, uMsg, wParam, lParam);
 }
 
+// all SDK wrapper function call UObject::ProcessEvent internally
+// so anything we do in the render thread (CheatManager::Init()) re-enters hkProcessEvent 
+// FlushGameThreadActions must only run on the game thread,
+// so this is compared against the render thread ID captured in hkPresent
+static std::atomic<DWORD> g_RenderThreadId(0);
+
 void __fastcall hkProcessEvent(SDK::UObject* pObject, SDK::UFunction* pFunction, void* pParms)
 {
-    // ProcessEvent is called on the game thread, so this is where queued actions
-    // that mutate game state can run safely
-    if (cheat)
+    // only flush on threads other than the render thread
+    if (cheat && GetCurrentThreadId() != g_RenderThreadId)
         cheat->FlushGameThreadActions();
 
     if (cfg && cfg->bForceCharacterVisibility && g_fnOnRepBodyVisibilityFunc && pFunction == g_fnOnRepBodyVisibilityFunc)
@@ -159,6 +164,7 @@ static std::atomic<bool> bUnloaded(false);
 
 HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT Flags)
 {
+    g_RenderThreadId = GetCurrentThreadId();
     if (!bRunning) return oPresent(pSwapChain, SyncInterval, Flags);
     if (!init) {
         if (SUCCEEDED(pSwapChain->GetDevice(__uuidof(ID3D12Device), (void**)&DirectX12Interface::Device))) {
