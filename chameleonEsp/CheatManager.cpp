@@ -24,7 +24,7 @@ void CheatManager::Init()
 		if (!Players.IsValidIndex(i)) continue;
 
 		objActor = Players[i];
-		if (!objActor) continue;
+		if (!objActor || !IsObjectValid(objActor)) continue;
 		BaseClass = (SDK::ABP_FirstPersonCharacter_cLeon_Character_C*)objActor;
 		if (!BaseClass) continue;
 
@@ -177,17 +177,17 @@ std::string CheatManager::ResolvePlayerName()
 // Force the current actor's body visibility on/off, tracking who we touched so they can be restored.
 void CheatManager::UpdateForcedVisibility()
 {
-	// Cache the OnRep_BodyVisibility UFunction for the ProcessEvent hook (done once)
-	if (!g_fnOnRepBodyVisibilityFunc)
-		g_fnOnRepBodyVisibilityFunc = SDK::ABP_FirstPersonCharacter_cLeon_Character_C::StaticClass()->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "OnRep_BodyVisibility");
-
 	if (cfg->bForceCharacterVisibility && !BaseClass->BodyVisibility)
 	{
 		auto* target = BaseClass;
 		QueueGameThreadAction([target]() {
 			if (!IsObjectValid(target)) return;
+			// Resolve the function fresh from the object's current class at call time and invoke it
+			// directly, instead of the SDK wrapper's cached-once static which dangles after a round.
+			SDK::UFunction* fn = target->Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "OnRep_BodyVisibility");
+			if (!fn) return;
 			target->BodyVisibility = true;
-			target->OnRep_BodyVisibility();
+			target->ProcessEvent(fn, nullptr);
 		});
 		forcedVisibleActors.insert(objActor);
 	}
@@ -196,8 +196,10 @@ void CheatManager::UpdateForcedVisibility()
 		auto* target = BaseClass;
 		QueueGameThreadAction([target]() {
 			if (!IsObjectValid(target)) return;
+			SDK::UFunction* fn = target->Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "OnRep_BodyVisibility");
+			if (!fn) return;
 			target->BodyVisibility = false;
-			target->OnRep_BodyVisibility();
+			target->ProcessEvent(fn, nullptr);
 		});
 		forcedVisibleActors.erase(objActor);
 	}
@@ -218,7 +220,7 @@ void CheatManager::UpdateForcedVisibility()
 // in Init() to avoid stale-pointer reuse.
 bool CheatManager::IsDead()
 {
-	if (BaseClass->Mesh && BaseClass->Mesh->IsAnySimulatingPhysics())
+	if (BaseClass->Mesh && IsObjectValid(BaseClass->Mesh) && BaseClass->Mesh->IsAnySimulatingPhysics())
 		deadActors.insert(objActor);
 	return deadActors.count(objActor) > 0;
 }
@@ -229,7 +231,7 @@ bool CheatManager::IsDead(SDK::AActor* actor)
 	auto* baseClass = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_C*>(actor);
 	if (!baseClass || !baseClass->Mesh) return false;
 
-	if (baseClass->Mesh->IsAnySimulatingPhysics())
+	if (baseClass->Mesh && IsObjectValid(baseClass->Mesh) && baseClass->Mesh->IsAnySimulatingPhysics())
 		deadActors.insert(actor);
 	return deadActors.count(actor) > 0;
 }
@@ -335,7 +337,7 @@ void CheatManager::DrawEsp(const std::string& PlayerName, SDK::FVector Location,
 	SDK::FVector2D BoxMin{}, BoxMax{};
 	bool bHasBox = false;
 
-	if (BaseClass->Mesh)
+	if (BaseClass->Mesh && IsObjectValid(BaseClass->Mesh))
 	{
 		if (cfg->bSkeleton)
 			DrawSkeleton(colEsp);
@@ -495,18 +497,26 @@ void CheatManager::FlushGameThreadActions()
 		if (GameThreadQueue.empty()) return;
 		actions.swap(GameThreadQueue);
 	}
+
+	// mark the nested ProcessEvent calls these actions trigger as self invoked,
+	// so we don't re-enter our hook logic in hkProcessEvent
+	struct FlushGuard {
+		FlushGuard()  { g_inGameThreadFlush = true; }
+		~FlushGuard() { g_inGameThreadFlush = false; }
+	} flushGuard;
+
 	for (auto& action : actions)
 		action();
 }
 
-// True if Obj is still the live object at its GObjects slot. Queued actions capture raw
-// pointers on the render thread but only execute later on the game thread, so the actor may
-// have been destroyed/GC'd in the meantime - each queued lambda must re-check this right
-// before touching its captured pointers.
+// True if Obj is still a fully-live object. Queued actions capture raw pointers on the render
+// thread but only execute later on the game thread, so the actor may have been destroyed/GC'd
+// in the meantime - each queued lambda must re-check this right before touching its pointers.
 bool CheatManager::IsObjectValid(SDK::UObject* Obj)
 {
 	if (!Obj || Obj->Index < 0) return false;
-	return SDK::UObject::GObjects->GetByIndex(Obj->Index) == Obj;
+	if (SDK::UObject::GObjects->GetByIndex(Obj->Index) != Obj) return false;
+	return true;
 }
 
 void CheatManager::DumpBones()
