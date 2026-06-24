@@ -7,6 +7,8 @@
 #include <string>
 #include <unordered_set>
 #include <unordered_map>
+#include <functional>
+#include <mutex>
 #include <direct.h>
 #include <Psapi.h>
 #include <d3d12.h>

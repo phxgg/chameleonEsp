@@ -49,7 +49,10 @@ void CheatManager::Init()
 					continue;
 				
 				if (cfg->bNoGunCooldown)
-					hunter->GunCoolTime = 0.0;
+				{
+					auto* hunterPtr = hunter;
+					QueueGameThreadAction([hunterPtr]() { hunterPtr->GunCoolTime = 0.0; });
+				}
 				
 				if (cfg->bMagnetEnabled)
 					HandleMagnet(currentActors, MyLocation, Players);
@@ -63,7 +66,10 @@ void CheatManager::Init()
 					continue;
 
 				if (cfg->bAntiDetection)
-					survivor->OverlapCheckCapsules.Clear();
+				{
+					auto* survivorPtr = survivor;
+					QueueGameThreadAction([survivorPtr]() { survivorPtr->OverlapCheckCapsules.Clear(); });
+				}
 			}
 			continue;
 		}
@@ -173,14 +179,20 @@ void CheatManager::UpdateForcedVisibility()
 
 	if (cfg->bForceCharacterVisibility && !BaseClass->BodyVisibility)
 	{
-		BaseClass->BodyVisibility = true;
-		BaseClass->OnRep_BodyVisibility();
+		auto* target = BaseClass;
+		QueueGameThreadAction([target]() {
+			target->BodyVisibility = true;
+			target->OnRep_BodyVisibility();
+		});
 		forcedVisibleActors.insert(objActor);
 	}
 	else if (!cfg->bForceCharacterVisibility && forcedVisibleActors.count(objActor))
 	{
-		BaseClass->BodyVisibility = false;
-		BaseClass->OnRep_BodyVisibility();
+		auto* target = BaseClass;
+		QueueGameThreadAction([target]() {
+			target->BodyVisibility = false;
+			target->OnRep_BodyVisibility();
+		});
 		forcedVisibleActors.erase(objActor);
 	}
 }
@@ -375,8 +387,12 @@ void CheatManager::HandleTeleport(const std::unordered_set<SDK::AActor*>& curren
 {
 	if (TeleportTarget && currentActors.count(TeleportTarget) && MyPlayer)
 	{
-		SDK::FRotator CurrentRotation = MyPlayer->K2_GetActorRotation();
-		MyPlayer->K2_TeleportTo(TeleportTarget->K2_GetActorLocation(), CurrentRotation);
+		SDK::AActor* target = TeleportTarget;
+		SDK::APawn* player = MyPlayer;
+		QueueGameThreadAction([player, target]() {
+			SDK::FRotator CurrentRotation = player->K2_GetActorRotation();
+			player->K2_TeleportTo(target->K2_GetActorLocation(), CurrentRotation);
+		});
 	}
 	TeleportTarget = nullptr;
 }
@@ -421,7 +437,9 @@ void CheatManager::HandleMagnet(const std::unordered_set<SDK::AActor*>& currentA
 		// Spread players in depth to prevent stacking
 		float depthSpread = depthIndex * 120.0f;
 		SDK::FVector targetPosition = MyLocation + ForwardDirection * (150.0f + depthSpread);
-		otherBaseClass->K2_SetActorLocation(targetPosition, false, nullptr, true);
+		QueueGameThreadAction([otherBaseClass, targetPosition]() {
+			otherBaseClass->K2_SetActorLocation(targetPosition, false, nullptr, true);
+		});
 		++depthIndex;
 	}
 }
@@ -433,7 +451,9 @@ void CheatManager::KillSurvivor(SDK::AActor* actor)
 
 	auto* hunter = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*>(MyPlayer);
 	auto* survivor = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Survivor_C*>(actor);
-	hunter->KillPlayer(survivor, hunter->MyPlayerState);
+	QueueGameThreadAction([hunter, survivor]() {
+		hunter->KillPlayer(survivor, hunter->MyPlayerState);
+	});
 }
 
 void CheatManager::HandleKillAllSurvivors(const std::unordered_set<SDK::AActor*>& currentActors)
@@ -447,6 +467,27 @@ void CheatManager::HandleKillAllSurvivors(const std::unordered_set<SDK::AActor*>
 		KillSurvivor(actor);
 		Sleep(50); // small delay to avoid overwhelming the server
 	}
+}
+
+// queue an action that touches game state so it runs on the game thread
+// instead of the render thread. see the GameThreadQueue comments
+void CheatManager::QueueGameThreadAction(std::function<void()> action)
+{
+	std::lock_guard<std::mutex> lock(GameThreadQueueMutex);
+	GameThreadQueue.push_back(std::move(action));
+}
+
+// called from hkProcessEvent, which UE only ever invokes from the game thread
+void CheatManager::FlushGameThreadActions()
+{
+	std::vector<std::function<void()>> actions;
+	{
+		std::lock_guard<std::mutex> lock(GameThreadQueueMutex);
+		if (GameThreadQueue.empty()) return;
+		actions.swap(GameThreadQueue);
+	}
+	for (auto& action : actions)
+		action();
 }
 
 void CheatManager::DumpBones()

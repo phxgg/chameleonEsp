@@ -76,6 +76,11 @@ LRESULT __stdcall WndProc(const HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 
 void __fastcall hkProcessEvent(SDK::UObject* pObject, SDK::UFunction* pFunction, void* pParms)
 {
+    // ProcessEvent is called on the game thread, so this is where queued actions
+    // that mutate game state can run safely
+    if (cheat)
+        cheat->FlushGameThreadActions();
+
     if (cfg && cfg->bForceCharacterVisibility && g_fnOnRepBodyVisibilityFunc && pFunction == g_fnOnRepBodyVisibilityFunc)
     {
         // Force BodyVisibility = true before OnRep reads it, so the character appears visible

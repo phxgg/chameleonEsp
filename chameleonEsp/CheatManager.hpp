@@ -39,6 +39,12 @@ private:
 	void HandleKillAllSurvivors(const std::unordered_set<SDK::AActor*>& currentActors);
 	SDK::AActor* TeleportTarget = nullptr; // resolved by actor pointer, not list index, since PlayerInfos is rebuilt every frame
 	bool bKillAllSurvivorsRequested = false;
+
+	// Actions that mutate game state (teleport, kill, force-visibility, magnet, etc.)
+	// must run on the game thread, not here on the render thread (Init() runs in hkPresent).
+	// queue those actions and drain on the next ProcessEvent call
+	std::mutex GameThreadQueueMutex;
+	std::vector<std::function<void()>> GameThreadQueue;
 public:
 	struct PlayerInfo {
 		std::string Name;
@@ -53,4 +59,6 @@ public:
 	std::unordered_map<SDK::AActor*, std::string> playerNameCache; // last-known name per actor, so ESP survives PlayerState replication blips
 	void Init();
 	void DumpBones();
+	void QueueGameThreadAction(std::function<void()> action);
+	void FlushGameThreadActions();
 };
