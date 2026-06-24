@@ -102,17 +102,6 @@ void __fastcall hkProcessEvent(SDK::UObject* pObject, SDK::UFunction* pFunction,
         return;
     }
 
-	if (pFunction && pFunction->GetFullName().find("KillPlayer") != std::string::npos)
-	{
-		std::cout << "[ProcessEvent] Function called: " << pFunction->GetFullName() << std::endl;
-	}
-
-	// Log any other function call if its name includes "Kick"
-	if (pFunction && pFunction->GetFullName().find("Kick") != std::string::npos)
-	{
-		std::cout << "[ProcessEvent] Function called: " << pFunction->GetFullName() << std::endl;
-	}
-
     return oProcessEvent(pObject, pFunction, pParms);
 }
 
