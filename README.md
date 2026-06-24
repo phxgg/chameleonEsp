@@ -23,6 +23,7 @@ C++ Language Standard option: `/std:c++latest`
 - Anti Detection (Survivors)
 - Anti Server Kick
 - Magnet (Hunters) -> Press **G** to toggle on/off. This will magnetize survivors in front of the hunter.
+- Kill All Survivors (Hunters)
 - Fov Changer
 - Dump Bones (for debugging)
 
