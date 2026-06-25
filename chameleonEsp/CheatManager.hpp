@@ -34,56 +34,48 @@ public:
 	};
 
 private:
-	SDK::UWorld** _UWorld;
-	SDK::UWorld* gWorld;
-	SDK::APlayerController* PlayerController;
-	SDK::ULocalPlayer* LocalPlayer;
-	SDK::UGameInstance* OwningGameInstance;
-	SDK::UGameViewportClient* GameViewportClient;
-	SDK::AGameStateBase* GameState;
-	SDK::AActor* objActor;
-	SDK::UGameplayStatics* UGStatics;
-	SDK::UKismetSystemLibrary* KismetSystemLib;
-	SDK::APawn* MyPlayer;
-	SDK::ABP_FirstPersonCharacter_cLeon_Character_C* BaseClass; //change a class for each game
-	SDK::UKismetMathLibrary* MathLib;
-	int x, y = 0;
+	// Per-frame world/player context. Resolved once at the top of each scan (ResolveContext) into a
+	// local, then passed into the helpers below. Holding this as a local rather than as members means
+	// a scan owns every pointer it touches and cannot alias another scan's scratch state - see the
+	// single-threaded-ownership note on Init().
+	struct FrameContext {
+		SDK::UWorld* World = nullptr;
+		SDK::APlayerController* PlayerController = nullptr;
+		SDK::APawn* MyPlayer = nullptr;
+		SDK::UGameplayStatics* GStatics = nullptr;
+		int screenX = 0;
+		int screenY = 0;
+	};
 
-	// Resolve the world/player pointer chain into the members above. Returns false if any link is null.
-	bool ResolveContext();
-	// Per-player helpers, operating on the current `objActor`/`BaseClass` being iterated.
-	std::string ResolvePlayerName();
-	void UpdateForcedVisibility();
-	bool IsDead();
+	// Resolve the world/player pointer chain into ctx. Returns false if any link is null.
+	bool ResolveContext(FrameContext& ctx);
+	// Per-player helpers. The actor being processed (actor and its BaseClass cast) is passed in
+	// explicitly rather than stashed on the object, so nothing here depends on shared mutable state.
+	std::string ResolvePlayerName(SDK::AActor* actor, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass);
+	void UpdateForcedVisibility(SDK::AActor* actor, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass);
 	bool IsDead(SDK::AActor* actor);
-	bool IsSurvivor();
 	bool IsSurvivor(SDK::AActor* actor);
 	bool IsSurvivor(SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass);
-	bool IsHunter();
 	bool IsHunter(SDK::AActor* actor);
 	bool IsHunter(SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass);
-	bool IsEnemy();
+	bool IsEnemy(SDK::APawn* myPlayer, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass);
 
-	// Game-thread builders: project the current actor's world state into a render-ready EspEntry.
-	void BuildSkeletonLines(std::vector<std::pair<SDK::FVector2D, SDK::FVector2D>>& out);
-	bool ComputeBoundingBox(SDK::FVector2D& BoxMin, SDK::FVector2D& BoxMax);
-	void BuildEspEntry(EspEntry& entry, const std::string& PlayerName, SDK::FVector Location, SDK::FVector MyLocation, bool IsVisible);
+	// Game-thread builders: project the given actor's world state into a render-ready EspEntry.
+	void BuildSkeletonLines(SDK::APlayerController* pc, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass, std::vector<std::pair<SDK::FVector2D, SDK::FVector2D>>& out);
+	bool ComputeBoundingBox(SDK::APlayerController* pc, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass, SDK::FVector2D& BoxMin, SDK::FVector2D& BoxMax);
+	void BuildEspEntry(SDK::APlayerController* pc, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass, EspEntry& entry, const std::string& PlayerName, SDK::FVector Location, SDK::FVector MyLocation, bool IsVisible);
 	// Render-thread draw of a single prebuilt entry (ImGui only, no SDK/UObject access).
 	void DrawEntry(const EspEntry& entry);
 
-	void KillSurvivor(SDK::AActor* actor);
-	void HandleTeleport(const std::unordered_set<SDK::AActor*>& currentActors);
-	void HandleMagnet(const std::unordered_set<SDK::AActor*>& currentActors, const SDK::FVector& MyLocation, SDK::TArray<SDK::AActor*>& Players, EspSnapshot& snap);
-	void HandleKillTarget(const std::unordered_set<SDK::AActor*>& currentActors);
-	void HandleKillAllSurvivors(const std::unordered_set<SDK::AActor*>& currentActors);
+	void KillSurvivor(SDK::APawn* myPlayer, SDK::AActor* actor);
+	void HandleTeleport(SDK::APawn* myPlayer, const std::unordered_set<SDK::AActor*>& currentActors);
+	void HandleMagnet(SDK::APawn* myPlayer, SDK::AActor* selfActor, const std::unordered_set<SDK::AActor*>& currentActors, const SDK::FVector& MyLocation, SDK::TArray<SDK::AActor*>& Players, EspSnapshot& snap);
+	void HandleKillTarget(SDK::APawn* myPlayer, const std::unordered_set<SDK::AActor*>& currentActors);
+	void HandleKillAllSurvivors(SDK::APawn* myPlayer, const std::unordered_set<SDK::AActor*>& currentActors);
 	SDK::AActor* TeleportTarget = nullptr; // resolved by actor pointer, not list index, since the snapshot is rebuilt every frame
 	SDK::AActor* KillTarget = nullptr;     // single-player kill request, resolved by actor pointer like TeleportTarget
 	bool bKillAllSurvivorsRequested = false;
-
-	// Actions that mutate game state (teleport, kill, force-visibility, magnet, etc.)
-	// must run on the game thread; queue those actions and drain on the next ProcessEvent call.
-	std::mutex GameThreadQueueMutex;
-	std::vector<std::function<void()>> GameThreadQueue;
+	std::unordered_set<SDK::AActor*> killAllQueue; // pending "kill all" targets, drained one per frame so we never block the game thread
 
 	// pendingSnapshot is written by the game thread (Init) and read by the render thread (RenderEsp)
 	// under this mutex. drawSnapshot is the render thread's private working copy so it can draw
@@ -101,13 +93,10 @@ public:
 	std::unordered_map<SDK::AActor*, std::string> playerNameCache; // last-known name per actor, so ESP survives PlayerState replication blips
 	void Init();       // GAME THREAD: scan the world and publish a fresh snapshot
 	void RenderEsp();  // RENDER THREAD: draw the latest published snapshot
-	void DumpBones();
-	void QueueGameThreadAction(std::function<void()> action);
-	void FlushGameThreadActions();
+	void DumpBones(SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass);
 
-	// True if Obj is still the live object at its GObjects slot. Queued actions capture raw
-	// pointers on the render thread but only run later on the game thread (see
-	// QueueGameThreadAction), so the actor may have been destroyed/GC'd in between - calling
-	// into a freed UObject is exactly the null-pointer-deep-in-engine-code crash this guards.
+	// True if Obj is still the live object at its GObjects slot. The scan mutates game state inline on
+	// the game thread, but an SDK call earlier in the same scan can destroy/GC an actor - calling into
+	// a freed UObject is exactly the null-pointer-deep-in-engine-code crash this guards against.
 	static bool IsObjectValid(SDK::UObject* Obj);
 };

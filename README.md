@@ -2,6 +2,9 @@ Currently updated for Game Version: **1.9.0**
 
 Internal extension for Meccha Chameleon
 
+> [!IMPORTANT]
+> I will not be assisting with using this in a way that breaks other players' experiences.
+
 Credits to [Dumper7](https://github.com/Encryqed/Dumper-7), [Unreal-Internal-Base](https://github.com/GLX-ILLUSION/Unreal-Internal-Base) and [imgui](https://github.com/ocornut/imgui)
 
 Inject with your favorite injector, I use [Xenos](https://github.com/darthton/xenos)

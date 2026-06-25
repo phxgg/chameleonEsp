@@ -28,6 +28,12 @@ namespace Process {
     int WindowHeight;
 }
 
+static bool IsGameWindowFocused()
+{
+    const HWND fg = GetForegroundWindow();
+    return fg && Process::Hwnd && (fg == Process::Hwnd || IsChild(Process::Hwnd, fg));
+}
+
 namespace DirectX12Interface {
     ID3D12Device* Device = nullptr;
     ID3D12DescriptorHeap* DescriptorHeapBackBuffers;
@@ -74,11 +80,66 @@ LRESULT __stdcall WndProc(const HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
     return CallWindowProc(Process::WndProc, hWnd, uMsg, wParam, lParam);
 }
 
-// all SDK wrapper function call UObject::ProcessEvent internally
-// so anything we do in the render thread (CheatManager::Init()) re-enters hkProcessEvent 
-// FlushGameThreadActions must only run on the game thread,
-// so this is compared against the render thread ID captured in hkPresent
-static std::atomic<DWORD> g_RenderThreadId(0);
+// The world scan (CheatManager::Init) - which both reads the actor list and applies our game-state
+// mutations inline - must run ONLY on the engine's game thread. UE dispatches ProcessEvent from
+// worker/task threads too, so "not the render thread" is not a safe proxy for "the game thread";
+// using it let the scan race the real game thread's actor list and fault deep inside
+// GetAllActorsOfClass. We positively identify the game thread by the name UE gives it ("GameThread",
+// set during FEngineLoop::PreInit) and only run that work when the current TID matches - resolved
+// once in hkPresent via FindGameThreadId, then checked in hkProcessEvent.
+static std::atomic<DWORD> g_GameThreadId(0);
+
+// Find the engine's game thread by its UE-assigned name ("GameThread"). This is a positive lookup -
+// no racing to latch whichever non-render thread happens to dispatch the first ProcessEvent - so it
+// can't mis-identify a worker thread as the game thread. The game thread is created once at engine
+// boot and lives for the whole process, so the TID we return here stays valid for the session.
+// Returns 0 if it can't be found yet (not named, or GetThreadDescription unavailable); the caller
+// retries on a later frame.
+static DWORD FindGameThreadId()
+{
+    // GetThreadDescription is Win10 1607+. Resolve it dynamically so we link on any toolset/target.
+    typedef HRESULT(WINAPI* PFN_GetThreadDescription)(HANDLE, PWSTR*);
+    static PFN_GetThreadDescription pGetThreadDescription =
+        reinterpret_cast<PFN_GetThreadDescription>(
+            GetProcAddress(GetModuleHandleW(L"kernel32.dll"), "GetThreadDescription"));
+    if (!pGetThreadDescription)
+        return 0;
+
+    HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPTHREAD, 0);
+    if (snapshot == INVALID_HANDLE_VALUE)
+        return 0;
+
+    const DWORD pid = GetCurrentProcessId();
+    DWORD foundTid = 0;
+
+    THREADENTRY32 te{};
+    te.dwSize = sizeof(te);
+    if (Thread32First(snapshot, &te))
+    {
+        do
+        {
+            // Snapshot covers every process; keep only our own threads.
+            if (te.th32OwnerProcessID != pid)
+                continue;
+
+            HANDLE thread = OpenThread(THREAD_QUERY_LIMITED_INFORMATION, FALSE, te.th32ThreadID);
+            if (!thread)
+                continue;
+
+            PWSTR desc = nullptr;
+            if (SUCCEEDED(pGetThreadDescription(thread, &desc)) && desc)
+            {
+                if (wcscmp(desc, L"GameThread") == 0)
+                    foundTid = te.th32ThreadID;
+                LocalFree(desc);
+            }
+            CloseHandle(thread);
+        } while (foundTid == 0 && Thread32Next(snapshot, &te));
+    }
+
+    CloseHandle(snapshot);
+    return foundTid;
+}
 
 void __fastcall hkProcessEvent(SDK::UObject* pObject, SDK::UFunction* pFunction, void* pParms)
 {
@@ -87,15 +148,16 @@ void __fastcall hkProcessEvent(SDK::UObject* pObject, SDK::UFunction* pFunction,
     if (g_inGameThreadFlush)
         return oProcessEvent(pObject, pFunction, pParms);
 
-    // only flush on threads other than the render thread
-    if (cheat && GetCurrentThreadId() != g_RenderThreadId)
-        cheat->FlushGameThreadActions();
+    const DWORD tid = GetCurrentThreadId();
 
-    // The render thread requests a world scan once per frame (g_gatherRequested). Run it here on the
-    // game thread, where walking the actor list is safe. The guard flags us as inside our own
-    // game-thread work so the many nested SDK calls Init() makes pass straight through this hook (top
-    // of the function) instead of recursively re-entering the flush/scan logic.
-    if (cheat && GetCurrentThreadId() != g_RenderThreadId && g_gatherRequested.exchange(false))
+    // Game-thread work runs only on the positively-identified game thread (resolved by name in
+    // hkPresent). A non-match - render thread, any worker thread, or before resolution - skips it.
+    // The render thread requests a world scan once per frame (g_gatherRequested); we run it here on
+    // the game thread, where walking the actor list and mutating game state is safe. The guard flags
+    // us as inside our own game-thread work so the many nested SDK calls Init() makes (reads and the
+    // inline teleport/kill/magnet/etc. mutations) pass straight through this hook (top of the
+    // function) instead of recursively re-entering the scan logic.
+    if (cheat && tid == g_GameThreadId && g_gatherRequested.exchange(false))
     {
         struct GatherGuard {
             GatherGuard()  { g_inGameThreadFlush = true; }
@@ -186,7 +248,20 @@ static std::atomic<bool> bUnloaded(false);
 
 HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT Flags)
 {
-    g_RenderThreadId = GetCurrentThreadId();
+    // Resolve the game thread by name, retrying each frame until found (it's named by the time we're
+    // injected, so this normally succeeds on frame 1). Once-per-frame keeps the thread-snapshot scan
+    // off the hot ProcessEvent path. Latched for the rest of the session via compare_exchange.
+    if (g_GameThreadId == 0)
+    {
+        DWORD gameTid = FindGameThreadId();
+        std::cout << "[hkPresent] Game thread TID: " << gameTid << std::endl;
+        if (gameTid != 0)
+        {
+            DWORD expected = 0;
+            g_GameThreadId.compare_exchange_strong(expected, gameTid);
+        }
+    }
+
     if (!bRunning) return oPresent(pSwapChain, SyncInterval, Flags);
     if (!init) {
         if (SUCCEEDED(pSwapChain->GetDevice(__uuidof(ID3D12Device), (void**)&DirectX12Interface::Device))) {
@@ -338,14 +413,15 @@ HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT
         cheat->RenderEsp();
     }
 
-    if (GetAsyncKeyState(0x47) & 1) // G key
+    // ignore hotkeys if the game window isn't focused, or if the user is typing in a text input (chat, console, etc.)
+    if ((GetAsyncKeyState(0x47) & 1) && IsGameWindowFocused() && !ImGui::GetIO().WantTextInput) // G key
         cfg->bMagnetEnabled = !cfg->bMagnetEnabled;
 
     ImGui::End();
     ImGui::PopStyleColor();
     ImGui::PopStyleVar(2);
 
-    if (GetAsyncKeyState(VK_INSERT) & 1)
+    if ((GetAsyncKeyState(VK_INSERT) & 1) && IsGameWindowFocused())
         cfg->bMenuOpen = !cfg->bMenuOpen;
 
     ImGui::GetIO().MouseDrawCursor = cfg->bMenuOpen;
@@ -684,7 +760,7 @@ DWORD MainThread(HMODULE Module)
 	// poll for the END key to be pressed to unload the DLL
     while (bRunning)
     {
-        if (GetAsyncKeyState(VK_END) & 1)
+        if ((GetAsyncKeyState(VK_END) & 1) && IsGameWindowFocused())
             break;
         Sleep(50);
     }
