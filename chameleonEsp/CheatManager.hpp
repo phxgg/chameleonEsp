@@ -49,7 +49,7 @@ private:
 
 	// Resolve the world/player pointer chain into ctx. Returns false if any link is null.
 	bool ResolveContext(FrameContext& ctx);
-	// Per-player helpers. The actor being processed (objActor and its BaseClass cast) is passed in
+	// Per-player helpers. The actor being processed (actor and its BaseClass cast) is passed in
 	// explicitly rather than stashed on the object, so nothing here depends on shared mutable state.
 	std::string ResolvePlayerName(SDK::AActor* actor, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass);
 	void UpdateForcedVisibility(SDK::AActor* actor, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass);
