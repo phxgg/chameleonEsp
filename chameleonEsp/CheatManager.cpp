@@ -8,7 +8,7 @@
 // during round/level transitions and faulted deep inside the engine's GetAllActorsOfClass. The
 // render thread now only draws the snapshot we publish at the end (see RenderEsp).
 //
-// All scan state lives in locals (ctx, objActor/baseClass) threaded through the helpers, not in
+// All scan state lives in locals (ctx, actor/baseClass) threaded through the helpers, not in
 // members, so a single invocation owns everything it touches. The game-thread pinning in
 // hkProcessEvent guarantees only one thread ever runs this, and the GatherGuard there blocks
 // re-entry; the local-state design keeps that ownership explicit rather than relying on it.
@@ -46,22 +46,22 @@ void CheatManager::Init()
 	{
 		if (!Players.IsValidIndex(i)) continue;
 
-		SDK::AActor* objActor = Players[i];
-		if (!objActor || !IsObjectValid(objActor)) continue;
-		auto* baseClass = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_C*>(objActor);
+		SDK::AActor* actor = Players[i];
+		if (!actor || !IsObjectValid(actor)) continue;
+		auto* baseClass = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_C*>(actor);
 		if (!baseClass) continue;
 
-		currentActors.insert(objActor);
+		currentActors.insert(actor);
 
 		// Skip dead/ragdolled corpses (see IsDead for why the obvious flags don't work).
-		if (IsDead(objActor))
+		if (IsDead(actor))
 			continue;
 
 		const auto Location = baseClass->K2_GetActorLocation();
-		const std::string PlayerName = ResolvePlayerName(objActor, baseClass);
-		const bool IsVisible = ctx.PlayerController->LineOfSightTo(objActor, { 0,0,0 }, false); // visible check
+		const std::string PlayerName = ResolvePlayerName(actor, baseClass);
+		const bool IsVisible = ctx.PlayerController->LineOfSightTo(actor, { 0,0,0 }, false); // visible check
 
-		if (objActor == ctx.MyPlayer)
+		if (actor == ctx.MyPlayer)
 		{
 			// Hunter
 			if (IsHunter(baseClass))
@@ -75,7 +75,7 @@ void CheatManager::Init()
 					hunter->GunCoolTime = 0.0;
 
 				if (cfg->bMagnetEnabled)
-					HandleMagnet(ctx.MyPlayer, objActor, currentActors, MyLocation, Players, snap);
+					HandleMagnet(ctx.MyPlayer, actor, currentActors, MyLocation, Players, snap);
 			}
 			// Survivor
 			else if (IsSurvivor(baseClass))
@@ -91,9 +91,9 @@ void CheatManager::Init()
 			continue;
 		}
 
-		snap.players.push_back({ PlayerName, Location, objActor, IsSurvivor(baseClass) });
+		snap.players.push_back({ PlayerName, Location, actor, IsSurvivor(baseClass) });
 
-		UpdateForcedVisibility(objActor, baseClass);
+		UpdateForcedVisibility(actor, baseClass);
 
 		if (cfg->bDumpBones) {
 			DumpBones(baseClass);
