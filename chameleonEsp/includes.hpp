@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <Windows.h>
+#include <tlhelp32.h>
 #include <atomic>
 #include <iostream>
 #include <vector>
@@ -39,10 +40,10 @@
 #include "Settings.hpp"
 #include "Drawings.hpp"
 
-// Set while CheatManager::FlushGameThreadActions is executing queued actions. Those actions call
-// SDK functions that internally call UObject::ProcessEvent, which re-enters hkProcessEvent on this
-// same (game) thread. This flag lets the hook recognise those nested, self invoked calls and pass
-// them straight through to the engine.
+// Set by the GatherGuard in hkProcessEvent for the duration of CheatManager::Init(). Init's many SDK
+// calls - the world reads and the inline game-state mutations - internally call UObject::ProcessEvent,
+// which re-enters hkProcessEvent on this same (game) thread. This flag lets the hook recognise those
+// nested, self invoked calls and pass them straight through to the engine.
 inline std::atomic<bool> g_inGameThreadFlush{ false };
 
 // Set by the render thread (hkPresent) once per frame to ask the game thread to refresh the ESP

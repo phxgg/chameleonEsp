@@ -75,11 +75,7 @@ private:
 	SDK::AActor* TeleportTarget = nullptr; // resolved by actor pointer, not list index, since the snapshot is rebuilt every frame
 	SDK::AActor* KillTarget = nullptr;     // single-player kill request, resolved by actor pointer like TeleportTarget
 	bool bKillAllSurvivorsRequested = false;
-
-	// Actions that mutate game state (teleport, kill, force-visibility, magnet, etc.)
-	// must run on the game thread; queue those actions and drain on the next ProcessEvent call.
-	std::mutex GameThreadQueueMutex;
-	std::vector<std::function<void()>> GameThreadQueue;
+	std::unordered_set<SDK::AActor*> killAllQueue; // pending "kill all" targets, drained one per frame so we never block the game thread
 
 	// pendingSnapshot is written by the game thread (Init) and read by the render thread (RenderEsp)
 	// under this mutex. drawSnapshot is the render thread's private working copy so it can draw
@@ -98,12 +94,9 @@ public:
 	void Init();       // GAME THREAD: scan the world and publish a fresh snapshot
 	void RenderEsp();  // RENDER THREAD: draw the latest published snapshot
 	void DumpBones(SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass);
-	void QueueGameThreadAction(std::function<void()> action);
-	void FlushGameThreadActions();
 
-	// True if Obj is still the live object at its GObjects slot. Queued actions capture raw
-	// pointers on the render thread but only run later on the game thread (see
-	// QueueGameThreadAction), so the actor may have been destroyed/GC'd in between - calling
-	// into a freed UObject is exactly the null-pointer-deep-in-engine-code crash this guards.
+	// True if Obj is still the live object at its GObjects slot. The scan mutates game state inline on
+	// the game thread, but an SDK call earlier in the same scan can destroy/GC an actor - calling into
+	// a freed UObject is exactly the null-pointer-deep-in-engine-code crash this guards against.
 	static bool IsObjectValid(SDK::UObject* Obj);
 };

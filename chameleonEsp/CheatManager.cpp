@@ -70,15 +70,10 @@ void CheatManager::Init()
 
 				if (!hunter)
 					continue;
-				
-				if (cfg->bNoGunCooldown)
-				{
-					auto* hunterPtr = hunter;
-					QueueGameThreadAction([hunterPtr]() {
-						if (IsObjectValid(hunterPtr)) hunterPtr->GunCoolTime = 0.0;
-					});
-				}
-				
+
+				if (cfg->bNoGunCooldown && IsObjectValid(hunter))
+					hunter->GunCoolTime = 0.0;
+
 				if (cfg->bMagnetEnabled)
 					HandleMagnet(ctx.MyPlayer, objActor, currentActors, MyLocation, Players, snap);
 			}
@@ -90,13 +85,8 @@ void CheatManager::Init()
 				if (!survivor)
 					continue;
 
-				if (cfg->bAntiDetection)
-				{
-					auto* survivorPtr = survivor;
-					QueueGameThreadAction([survivorPtr]() {
-						if (IsObjectValid(survivorPtr)) survivorPtr->OverlapCheckCapsules.Clear();
-					});
-				}
+				if (cfg->bAntiDetection && IsObjectValid(survivor))
+					survivor->OverlapCheckCapsules.Clear();
 			}
 			continue;
 		}
@@ -244,28 +234,30 @@ void CheatManager::UpdateForcedVisibility(SDK::AActor* actor, SDK::ABP_FirstPers
 {
 	if (cfg->bForceCharacterVisibility && !baseClass->BodyVisibility)
 	{
-		auto* target = baseClass;
-		QueueGameThreadAction([target]() {
-			if (!IsObjectValid(target)) return;
+		if (IsObjectValid(baseClass))
+		{
 			// Resolve the function fresh from the object's current class at call time and invoke it
 			// directly, instead of the SDK wrapper's cached-once static which dangles after a round.
-			SDK::UFunction* fn = target->Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "OnRep_BodyVisibility");
-			if (!fn) return;
-			target->BodyVisibility = true;
-			target->ProcessEvent(fn, nullptr);
-		});
+			SDK::UFunction* fn = baseClass->Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "OnRep_BodyVisibility");
+			if (fn)
+			{
+				baseClass->BodyVisibility = true;
+				baseClass->ProcessEvent(fn, nullptr);
+			}
+		}
 		forcedVisibleActors.insert(actor);
 	}
 	else if (!cfg->bForceCharacterVisibility && forcedVisibleActors.count(actor))
 	{
-		auto* target = baseClass;
-		QueueGameThreadAction([target]() {
-			if (!IsObjectValid(target)) return;
-			SDK::UFunction* fn = target->Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "OnRep_BodyVisibility");
-			if (!fn) return;
-			target->BodyVisibility = false;
-			target->ProcessEvent(fn, nullptr);
-		});
+		if (IsObjectValid(baseClass))
+		{
+			SDK::UFunction* fn = baseClass->Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "OnRep_BodyVisibility");
+			if (fn)
+			{
+				baseClass->BodyVisibility = false;
+				baseClass->ProcessEvent(fn, nullptr);
+			}
+		}
 		forcedVisibleActors.erase(actor);
 	}
 }
@@ -468,12 +460,11 @@ void CheatManager::HandleTeleport(SDK::APawn* myPlayer, const std::unordered_set
 	if (TeleportTarget && currentActors.count(TeleportTarget) && myPlayer)
 	{
 		SDK::AActor* target = TeleportTarget;
-		SDK::APawn* player = myPlayer;
-		QueueGameThreadAction([player, target]() {
-			if (!IsObjectValid(player) || !IsObjectValid(target)) return;
-			SDK::FRotator CurrentRotation = player->K2_GetActorRotation();
-			player->K2_TeleportTo(target->K2_GetActorLocation(), CurrentRotation);
-		});
+		if (IsObjectValid(myPlayer) && IsObjectValid(target))
+		{
+			SDK::FRotator CurrentRotation = myPlayer->K2_GetActorRotation();
+			myPlayer->K2_TeleportTo(target->K2_GetActorLocation(), CurrentRotation);
+		}
 	}
 	TeleportTarget = nullptr;
 }
@@ -511,10 +502,8 @@ void CheatManager::HandleMagnet(SDK::APawn* myPlayer, SDK::AActor* selfActor, co
 		// Spread players in depth to prevent stacking
 		float depthSpread = depthIndex * 120.0f;
 		SDK::FVector targetPosition = MyLocation + ForwardDirection * (150.0f + depthSpread);
-		QueueGameThreadAction([otherBaseClass, targetPosition]() {
-			if (IsObjectValid(otherBaseClass))
-				otherBaseClass->K2_SetActorLocation(targetPosition, false, nullptr, true);
-		});
+		if (IsObjectValid(otherBaseClass))
+			otherBaseClass->K2_SetActorLocation(targetPosition, false, nullptr, true);
 		++depthIndex;
 	}
 }
@@ -526,24 +515,22 @@ void CheatManager::KillSurvivor(SDK::APawn* myPlayer, SDK::AActor* actor)
 
 	auto* hunter = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*>(myPlayer);
 	auto* survivor = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Survivor_C*>(actor);
-	QueueGameThreadAction([hunter, survivor]() {
-		if (!IsObjectValid(hunter) || !IsObjectValid(survivor))
-			return;
+	if (!IsObjectValid(hunter) || !IsObjectValid(survivor))
+		return;
 
-		// Resolve the function fresh from the hunter's current class at call time and invoke it
-		// directly, instead of the SDK wrapper's cached-once static UFunction* (see KillPlayer in
-		// the generated functions.cpp). The engine recreates BP-generated functions between rounds,
-		// so that static dangles after a round transition and ProcessEvent then walks a freed
-		// function's garbage parameter layout - faulting with a write AV deep inside the engine.
-		SDK::UFunction* fn = hunter->Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "KillPlayer");
-		if (!fn)
-			return;
+	// Resolve the function fresh from the hunter's current class at call time and invoke it
+	// directly, instead of the SDK wrapper's cached-once static UFunction* (see KillPlayer in
+	// the generated functions.cpp). The engine recreates BP-generated functions between rounds,
+	// so that static dangles after a round transition and ProcessEvent then walks a freed
+	// function's garbage parameter layout - faulting with a write AV deep inside the engine.
+	SDK::UFunction* fn = hunter->Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_Hunter_C", "KillPlayer");
+	if (!fn)
+		return;
 
-		SDK::Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_KillPlayer parms{};
-		parms.FirstpersonCharacter = survivor;
-		parms.SourcePlayerState = hunter->MyPlayerState;
-		hunter->ProcessEvent(fn, &parms);
-	});
+	SDK::Params::BP_FirstPersonCharacter_cLeon_Character_Hunter_C_KillPlayer parms{};
+	parms.FirstpersonCharacter = survivor;
+	parms.SourcePlayerState = hunter->MyPlayerState;
+	hunter->ProcessEvent(fn, &parms);
 }
 
 // Kill a single requested survivor. Like HandleTeleport, the target is resolved by actor pointer and
@@ -558,49 +545,37 @@ void CheatManager::HandleKillTarget(SDK::APawn* myPlayer, const std::unordered_s
 
 void CheatManager::HandleKillAllSurvivors(SDK::APawn* myPlayer, const std::unordered_set<SDK::AActor*>& currentActors)
 {
-	if (!bKillAllSurvivorsRequested)
+	// A fresh request seeds the pending set with everyone alive this frame. We then kill at most one
+	// per frame (below) instead of looping with Sleep() - a blocking loop here would stall the game
+	// thread for tens of ms per survivor, since this whole scan runs inside the engine's ProcessEvent.
+	if (bKillAllSurvivorsRequested)
+	{
+		bKillAllSurvivorsRequested = false;
+		killAllQueue = currentActors;
+	}
+
+	if (killAllQueue.empty())
 		return;
-	bKillAllSurvivorsRequested = false;
 
-	for (auto* actor : currentActors)
+	// Discard targets that no longer exist this frame, then kill the next one that's still present.
+	// KillSurvivor itself no-ops non-survivors / already-dead actors, so a stale pick is harmless.
+	for (auto it = killAllQueue.begin(); it != killAllQueue.end(); )
 	{
+		SDK::AActor* actor = *it;
+		if (!currentActors.count(actor))
+		{
+			it = killAllQueue.erase(it);
+			continue;
+		}
+
 		KillSurvivor(myPlayer, actor);
-		Sleep(50); // small delay to avoid overwhelming the server
+		killAllQueue.erase(it);
+		break; // one per frame paces the kills without blocking the game thread
 	}
 }
 
-// queue an action that touches game state so it runs on the game thread
-// instead of the render thread. see the GameThreadQueue comments
-void CheatManager::QueueGameThreadAction(std::function<void()> action)
-{
-	std::lock_guard<std::mutex> lock(GameThreadQueueMutex);
-	GameThreadQueue.push_back(std::move(action));
-}
-
-// called from hkProcessEvent, which UE only ever invokes from the game thread
-void CheatManager::FlushGameThreadActions()
-{
-	std::vector<std::function<void()>> actions;
-	{
-		std::lock_guard<std::mutex> lock(GameThreadQueueMutex);
-		if (GameThreadQueue.empty()) return;
-		actions.swap(GameThreadQueue);
-	}
-
-	// mark the nested ProcessEvent calls these actions trigger as self invoked,
-	// so we don't re-enter our hook logic in hkProcessEvent
-	struct FlushGuard {
-		FlushGuard()  { g_inGameThreadFlush = true; }
-		~FlushGuard() { g_inGameThreadFlush = false; }
-	} flushGuard;
-
-	for (auto& action : actions)
-		action();
-}
-
-// True if Obj is still a fully-live object. Queued actions capture raw pointers on the render
-// thread but only execute later on the game thread, so the actor may have been destroyed/GC'd
-// in the meantime - each queued lambda must re-check this right before touching its pointers.
+// True if Obj is still a fully-live object. The scan and its mutations run on the game thread, but an
+// SDK call earlier in the same scan can destroy/GC an actor, so re-check right before touching one.
 bool CheatManager::IsObjectValid(SDK::UObject* Obj)
 {
 	if (!Obj || Obj->Index < 0) return false;
