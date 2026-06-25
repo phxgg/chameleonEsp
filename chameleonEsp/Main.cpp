@@ -75,10 +75,16 @@ LRESULT __stdcall WndProc(const HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lPar
 }
 
 // all SDK wrapper function call UObject::ProcessEvent internally
-// so anything we do in the render thread (CheatManager::Init()) re-enters hkProcessEvent 
-// FlushGameThreadActions must only run on the game thread,
-// so this is compared against the render thread ID captured in hkPresent
+// so anything we do in the render thread (CheatManager::Init()) re-enters hkProcessEvent
+//
+// FlushGameThreadActions and the world scan must run ONLY on the engine's game thread. UE dispatches
+// ProcessEvent from worker/task threads too, so "not the render thread" is not a safe proxy for "the
+// game thread" - using it let the scan race the real game thread's actor list and fault deep inside
+// GetAllActorsOfClass. We positively pin the game thread instead (see hkProcessEvent): g_RenderThreadId
+// is captured in hkPresent, and g_GameThreadId is latched the first time a pending gather request is
+// observed off the render thread.
 static std::atomic<DWORD> g_RenderThreadId(0);
+static std::atomic<DWORD> g_GameThreadId(0);
 
 void __fastcall hkProcessEvent(SDK::UObject* pObject, SDK::UFunction* pFunction, void* pParms)
 {
@@ -87,21 +93,39 @@ void __fastcall hkProcessEvent(SDK::UObject* pObject, SDK::UFunction* pFunction,
     if (g_inGameThreadFlush)
         return oProcessEvent(pObject, pFunction, pParms);
 
-    // only flush on threads other than the render thread
-    if (cheat && GetCurrentThreadId() != g_RenderThreadId)
-        cheat->FlushGameThreadActions();
+    const DWORD tid = GetCurrentThreadId();
 
-    // The render thread requests a world scan once per frame (g_gatherRequested). Run it here on the
-    // game thread, where walking the actor list is safe. The guard flags us as inside our own
-    // game-thread work so the many nested SDK calls Init() makes pass straight through this hook (top
-    // of the function) instead of recursively re-entering the flush/scan logic.
-    if (cheat && GetCurrentThreadId() != g_RenderThreadId && g_gatherRequested.exchange(false))
+    // Never run our game-thread work on the render thread.
+    if (tid != g_RenderThreadId)
     {
-        struct GatherGuard {
-            GatherGuard()  { g_inGameThreadFlush = true; }
-            ~GatherGuard() { g_inGameThreadFlush = false; }
-        } gatherGuard;
-        cheat->Init();
+        // Pin the game thread the first time a gather request is pending. The render thread only sets
+        // g_gatherRequested once rendering is up, and the engine's game thread - which dispatches the
+        // vast majority of ProcessEvent calls every tick - is overwhelmingly the one to consume it
+        // first, so it wins this claim. Once latched, g_GameThreadId never changes.
+        if (g_gatherRequested)
+        {
+            DWORD expected = 0;
+            g_GameThreadId.compare_exchange_strong(expected, tid);
+        }
+
+        // Everything below touches game state / the actor list, so it runs only on the pinned thread.
+        if (cheat && tid == g_GameThreadId)
+        {
+            cheat->FlushGameThreadActions();
+
+            // The render thread requests a world scan once per frame (g_gatherRequested). Run it here
+            // on the game thread, where walking the actor list is safe. The guard flags us as inside
+            // our own game-thread work so the many nested SDK calls Init() makes pass straight through
+            // this hook (top of the function) instead of recursively re-entering the flush/scan logic.
+            if (g_gatherRequested.exchange(false))
+            {
+                struct GatherGuard {
+                    GatherGuard()  { g_inGameThreadFlush = true; }
+                    ~GatherGuard() { g_inGameThreadFlush = false; }
+                } gatherGuard;
+                cheat->Init();
+            }
+        }
     }
 
     // most likely we only need g_fnKickOnline, but let's hook all Kick funcs just to make sure

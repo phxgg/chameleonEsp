@@ -7,11 +7,17 @@
 // it on the render thread (the old behaviour, called straight from hkPresent) raced the game thread
 // during round/level transitions and faulted deep inside the engine's GetAllActorsOfClass. The
 // render thread now only draws the snapshot we publish at the end (see RenderEsp).
+//
+// All scan state lives in locals (ctx, objActor/baseClass) threaded through the helpers, not in
+// members, so a single invocation owns everything it touches. The game-thread pinning in
+// hkProcessEvent guarantees only one thread ever runs this, and the GatherGuard there blocks
+// re-entry; the local-state design keeps that ownership explicit rather than relying on it.
 void CheatManager::Init()
 {
 	EspSnapshot snap;
 
-	if (!ResolveContext())
+	FrameContext ctx;
+	if (!ResolveContext(ctx))
 	{
 		// Publish an empty snapshot so the overlay clears (rather than freezing on the last frame)
 		// while we have no valid world/player - main menu, loading screen, level transition.
@@ -20,16 +26,16 @@ void CheatManager::Init()
 		return;
 	}
 
-	snap.screenX = static_cast<float>(x);
-	snap.screenY = static_cast<float>(y);
+	snap.screenX = static_cast<float>(ctx.screenX);
+	snap.screenY = static_cast<float>(ctx.screenY);
 
-	const auto MyLocation = MyPlayer->K2_GetActorLocation();
+	const auto MyLocation = ctx.MyPlayer->K2_GetActorLocation();
 
-	PlayerController->FOV(cfg->bFovChanger ? cfg->fFovValue : 90); // fov changer
+	ctx.PlayerController->FOV(cfg->bFovChanger ? cfg->fFovValue : 90); // fov changer
 
 	// get players
 	SDK::TArray<SDK::AActor*> Players;
-	UGStatics->GetAllActorsOfClass(gWorld, SDK::ABP_FirstPersonCharacter_cLeon_Character_C::StaticClass(), &Players);
+	ctx.GStatics->GetAllActorsOfClass(ctx.World, SDK::ABP_FirstPersonCharacter_cLeon_Character_C::StaticClass(), &Players);
 
 	// Track which actors exist this frame so we can drop stale entries from the latched
 	// dead set below - otherwise a destroyed corpse's pointer could later be reused by a
@@ -40,27 +46,27 @@ void CheatManager::Init()
 	{
 		if (!Players.IsValidIndex(i)) continue;
 
-		objActor = Players[i];
+		SDK::AActor* objActor = Players[i];
 		if (!objActor || !IsObjectValid(objActor)) continue;
-		BaseClass = (SDK::ABP_FirstPersonCharacter_cLeon_Character_C*)objActor;
-		if (!BaseClass) continue;
+		auto* baseClass = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_C*>(objActor);
+		if (!baseClass) continue;
 
 		currentActors.insert(objActor);
 
 		// Skip dead/ragdolled corpses (see IsDead for why the obvious flags don't work).
-		if (IsDead())
+		if (IsDead(objActor))
 			continue;
 
-		const auto Location = BaseClass->K2_GetActorLocation();
-		const std::string PlayerName = ResolvePlayerName();
-		const bool IsVisible = PlayerController->LineOfSightTo(objActor, { 0,0,0 }, false); // visible check
+		const auto Location = baseClass->K2_GetActorLocation();
+		const std::string PlayerName = ResolvePlayerName(objActor, baseClass);
+		const bool IsVisible = ctx.PlayerController->LineOfSightTo(objActor, { 0,0,0 }, false); // visible check
 
-		if (objActor == MyPlayer)
+		if (objActor == ctx.MyPlayer)
 		{
 			// Hunter
-			if (IsHunter())
+			if (IsHunter(baseClass))
 			{
-				auto* hunter = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*>(BaseClass);
+				auto* hunter = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*>(baseClass);
 
 				if (!hunter)
 					continue;
@@ -74,12 +80,12 @@ void CheatManager::Init()
 				}
 				
 				if (cfg->bMagnetEnabled)
-					HandleMagnet(currentActors, MyLocation, Players, snap);
+					HandleMagnet(ctx.MyPlayer, objActor, currentActors, MyLocation, Players, snap);
 			}
 			// Survivor
-			else if (IsSurvivor())
+			else if (IsSurvivor(baseClass))
 			{
-				auto* survivor = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Survivor_C*>(BaseClass);
+				auto* survivor = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Survivor_C*>(baseClass);
 
 				if (!survivor)
 					continue;
@@ -95,20 +101,20 @@ void CheatManager::Init()
 			continue;
 		}
 
-		snap.players.push_back({ PlayerName, Location, objActor, IsSurvivor() });
+		snap.players.push_back({ PlayerName, Location, objActor, IsSurvivor(baseClass) });
 
-		UpdateForcedVisibility();
+		UpdateForcedVisibility(objActor, baseClass);
 
 		if (cfg->bDumpBones) {
-			DumpBones();
+			DumpBones(baseClass);
 			cfg->bDumpBones = false;
 		}
 
-		if (cfg->bEnemyOnly && !IsEnemy())
+		if (cfg->bEnemyOnly && !IsEnemy(ctx.MyPlayer, baseClass))
 			continue;
 
 		EspEntry entry;
-		BuildEspEntry(entry, PlayerName, Location, MyLocation, IsVisible);
+		BuildEspEntry(ctx.PlayerController, baseClass, entry, PlayerName, Location, MyLocation, IsVisible);
 		snap.entries.push_back(std::move(entry));
 	}
 
@@ -122,9 +128,9 @@ void CheatManager::Init()
 			it = deadActors.erase(it);
 	}
 
-	HandleTeleport(currentActors);
-	HandleKillTarget(currentActors);
-	HandleKillAllSurvivors(currentActors);
+	HandleTeleport(ctx.MyPlayer, currentActors);
+	HandleKillTarget(ctx.MyPlayer, currentActors);
+	HandleKillAllSurvivors(ctx.MyPlayer, currentActors);
 
 	// Publish the finished frame for the render thread to draw.
 	std::lock_guard<std::mutex> lock(snapshotMutex);
@@ -162,58 +168,63 @@ void CheatManager::RenderEsp()
 }
 
 // Walk the world -> game instance -> local player -> controller -> pawn chain, plus the
-// gameplay/math statics, caching each into the members. Any null link aborts the whole frame.
-bool CheatManager::ResolveContext()
+// gameplay statics, into ctx. Any null link aborts the whole frame.
+bool CheatManager::ResolveContext(FrameContext& ctx)
 {
-	gWorld = SDK::UWorld::GetWorld();
-	if (!gWorld) return false;
+	SDK::UWorld* world = SDK::UWorld::GetWorld();
+	if (!world) return false;
 
-	OwningGameInstance = gWorld->OwningGameInstance;
-	if (!OwningGameInstance) return false;
+	SDK::UGameInstance* gameInstance = world->OwningGameInstance;
+	if (!gameInstance) return false;
 
-	if (OwningGameInstance->LocalPlayers.Num() <= 0) return false;
-	LocalPlayer = OwningGameInstance->LocalPlayers[0];
-	if (!LocalPlayer) return false;
+	if (gameInstance->LocalPlayers.Num() <= 0) return false;
+	SDK::ULocalPlayer* localPlayer = gameInstance->LocalPlayers[0];
+	if (!localPlayer) return false;
 
-	GameViewportClient = LocalPlayer->ViewportClient;
-	if (!GameViewportClient) return false;
+	if (!localPlayer->ViewportClient) return false;
 
-	PlayerController = LocalPlayer->PlayerController;
-	if (!PlayerController) return false;
+	SDK::APlayerController* playerController = localPlayer->PlayerController;
+	if (!playerController) return false;
 
-	PlayerController->GetViewportSize(&x, &y);
+	playerController->GetViewportSize(&ctx.screenX, &ctx.screenY);
 
-	MyPlayer = PlayerController->K2_GetPawn();
-	if (!MyPlayer) return false;
+	SDK::APawn* myPlayer = playerController->K2_GetPawn();
+	if (!myPlayer) return false;
 
-	UGStatics = (SDK::UGameplayStatics*)SDK::UGameplayStatics::StaticClass();
-	if (!UGStatics) return false;
+	auto* gStatics = (SDK::UGameplayStatics*)SDK::UGameplayStatics::StaticClass();
+	if (!gStatics) return false;
 
-	MathLib = (SDK::UKismetMathLibrary*)SDK::UKismetMathLibrary::StaticClass();
-	if (!MathLib) return false;
+	// Resolved purely as a readiness guard - the scan doesn't use it, but a null here means the
+	// engine's kismet libraries aren't up yet, so we treat the world as not ready.
+	auto* mathLib = (SDK::UKismetMathLibrary*)SDK::UKismetMathLibrary::StaticClass();
+	if (!mathLib) return false;
 
+	ctx.World = world;
+	ctx.PlayerController = playerController;
+	ctx.MyPlayer = myPlayer;
+	ctx.GStatics = gStatics;
 	return true;
 }
 
 // Resolve the display name for the current actor, falling back to the last-known cached name.
-std::string CheatManager::ResolvePlayerName()
+std::string CheatManager::ResolvePlayerName(SDK::AActor* actor, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass)
 {
 	// PlayerState replicates as its own actor, independently of the pawn, so on clients its
 	// pointer routinely blips to null for a frame or two even while the pawn is fully valid.
 	// Don't drop the whole ESP over that - just fall back to the last name we saw for this actor.
-	if (!BaseClass->PlayerState)
+	if (!baseClass->PlayerState)
 	{
-		auto it = playerNameCache.find(objActor);
+		auto it = playerNameCache.find(actor);
 		return it != playerNameCache.end() ? it->second : "Unknown";
 	}
 
 	// Prefer the custom in-game name (CustomPlayerName) over the platform/Steam name
 	// (PlayerNamePrivate). Guard the cast with IsA in case a non-Online PlayerState shows up,
 	// and fall back to the Steam name if the custom name hasn't replicated in yet.
-	SDK::FString* Name = &BaseClass->PlayerState->PlayerNamePrivate;
-	if (BaseClass->PlayerState->IsA(SDK::ABP_FirstPersonPlayerState_Online_C::StaticClass()))
+	SDK::FString* Name = &baseClass->PlayerState->PlayerNamePrivate;
+	if (baseClass->PlayerState->IsA(SDK::ABP_FirstPersonPlayerState_Online_C::StaticClass()))
 	{
-		auto* ps = static_cast<SDK::ABP_FirstPersonPlayerState_Online_C*>(BaseClass->PlayerState);
+		auto* ps = static_cast<SDK::ABP_FirstPersonPlayerState_Online_C*>(baseClass->PlayerState);
 		if (ps->CustomPlayerName.IsValid())
 			Name = &ps->CustomPlayerName;
 	}
@@ -221,7 +232,7 @@ std::string CheatManager::ResolvePlayerName()
 	if (Name->IsValid())
 	{
 		std::string PlayerName = Name->ToString();
-		playerNameCache[objActor] = PlayerName; // remember it for the null windows
+		playerNameCache[actor] = PlayerName; // remember it for the null windows
 		return PlayerName;
 	}
 
@@ -229,11 +240,11 @@ std::string CheatManager::ResolvePlayerName()
 }
 
 // Force the current actor's body visibility on/off, tracking who we touched so they can be restored.
-void CheatManager::UpdateForcedVisibility()
+void CheatManager::UpdateForcedVisibility(SDK::AActor* actor, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass)
 {
-	if (cfg->bForceCharacterVisibility && !BaseClass->BodyVisibility)
+	if (cfg->bForceCharacterVisibility && !baseClass->BodyVisibility)
 	{
-		auto* target = BaseClass;
+		auto* target = baseClass;
 		QueueGameThreadAction([target]() {
 			if (!IsObjectValid(target)) return;
 			// Resolve the function fresh from the object's current class at call time and invoke it
@@ -243,11 +254,11 @@ void CheatManager::UpdateForcedVisibility()
 			target->BodyVisibility = true;
 			target->ProcessEvent(fn, nullptr);
 		});
-		forcedVisibleActors.insert(objActor);
+		forcedVisibleActors.insert(actor);
 	}
-	else if (!cfg->bForceCharacterVisibility && forcedVisibleActors.count(objActor))
+	else if (!cfg->bForceCharacterVisibility && forcedVisibleActors.count(actor))
 	{
-		auto* target = BaseClass;
+		auto* target = baseClass;
 		QueueGameThreadAction([target]() {
 			if (!IsObjectValid(target)) return;
 			SDK::UFunction* fn = target->Class->GetFunction("BP_FirstPersonCharacter_cLeon_Character_C", "OnRep_BodyVisibility");
@@ -255,7 +266,7 @@ void CheatManager::UpdateForcedVisibility()
 			target->BodyVisibility = false;
 			target->ProcessEvent(fn, nullptr);
 		});
-		forcedVisibleActors.erase(objActor);
+		forcedVisibleActors.erase(actor);
 	}
 }
 
@@ -272,13 +283,6 @@ void CheatManager::UpdateForcedVisibility()
 // the ragdoll, flipping it back to 0 while the player is still dead - so we latch it: once an actor
 // has ragdolled it stays dead for as long as it exists. The latch set is pruned to live actors back
 // in Init() to avoid stale-pointer reuse.
-bool CheatManager::IsDead()
-{
-	if (BaseClass->Mesh && IsObjectValid(BaseClass->Mesh) && BaseClass->Mesh->IsAnySimulatingPhysics())
-		deadActors.insert(objActor);
-	return deadActors.count(objActor) > 0;
-}
-
 bool CheatManager::IsDead(SDK::AActor* actor)
 {
 	if (!actor) return false;
@@ -288,11 +292,6 @@ bool CheatManager::IsDead(SDK::AActor* actor)
 	if (baseClass->Mesh && IsObjectValid(baseClass->Mesh) && baseClass->Mesh->IsAnySimulatingPhysics())
 		deadActors.insert(actor);
 	return deadActors.count(actor) > 0;
-}
-
-bool CheatManager::IsSurvivor()
-{
-	return IsSurvivor(BaseClass);
 }
 
 bool CheatManager::IsSurvivor(SDK::AActor* actor)
@@ -309,11 +308,6 @@ bool CheatManager::IsSurvivor(SDK::ABP_FirstPersonCharacter_cLeon_Character_C* b
 	return baseClass->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_Survivor_C::StaticClass());
 }
 
-bool CheatManager::IsHunter()
-{
-	return IsHunter(BaseClass);
-}
-
 bool CheatManager::IsHunter(SDK::AActor* actor)
 {
 	if (!actor) return false;
@@ -328,43 +322,43 @@ bool CheatManager::IsHunter(SDK::ABP_FirstPersonCharacter_cLeon_Character_C* bas
 	return baseClass->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C::StaticClass());
 }
 
-// True when the current actor is on the opposing team (survivor vs. hunter) from us.
-bool CheatManager::IsEnemy()
+// True when the given actor is on the opposing team (survivor vs. hunter) from us.
+bool CheatManager::IsEnemy(SDK::APawn* myPlayer, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass)
 {
-	if (!MyPlayer->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_C::StaticClass()))
+	if (!myPlayer->IsA(SDK::ABP_FirstPersonCharacter_cLeon_Character_C::StaticClass()))
 		return false;
-	auto* MyChar = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_C*>(MyPlayer);
-	return MyChar->IsHunter != BaseClass->IsHunter;
+	auto* MyChar = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_C*>(myPlayer);
+	return MyChar->IsHunter != baseClass->IsHunter;
 }
 
 // GAME THREAD: project the current actor's skeleton (bone-pair segments) into screen space for the
 // render thread to draw later. Each projection is an SDK call, so it has to happen here.
-void CheatManager::BuildSkeletonLines(std::vector<std::pair<SDK::FVector2D, SDK::FVector2D>>& out)
+void CheatManager::BuildSkeletonLines(SDK::APlayerController* pc, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass, std::vector<std::pair<SDK::FVector2D, SDK::FVector2D>>& out)
 {
-	if (!BaseClass || !BaseClass->Mesh || !IsObjectValid(BaseClass->Mesh))
+	if (!baseClass || !baseClass->Mesh || !IsObjectValid(baseClass->Mesh))
 		return;
 
 	SDK::FVector2D BoneScreen, PrevBoneScreen;
 	for (const std::pair<int, int>& Connection : skeleton::Connections)
 	{
-		const auto BoneLoc1 = BaseClass->Mesh->GetSocketLocation(BaseClass->Mesh->GetBoneName(Connection.first));
-		const auto BoneLoc2 = BaseClass->Mesh->GetSocketLocation(BaseClass->Mesh->GetBoneName(Connection.second));
-		if (PlayerController->ProjectWorldLocationToScreen(BoneLoc1, &BoneScreen, false) && PlayerController->ProjectWorldLocationToScreen(BoneLoc2, &PrevBoneScreen, false))
+		const auto BoneLoc1 = baseClass->Mesh->GetSocketLocation(baseClass->Mesh->GetBoneName(Connection.first));
+		const auto BoneLoc2 = baseClass->Mesh->GetSocketLocation(baseClass->Mesh->GetBoneName(Connection.second));
+		if (pc->ProjectWorldLocationToScreen(BoneLoc1, &BoneScreen, false) && pc->ProjectWorldLocationToScreen(BoneLoc2, &PrevBoneScreen, false))
 			out.emplace_back(BoneScreen, PrevBoneScreen);
 	}
 }
 
 // Build a 2D bounding box from every bone's screen position so it stays correct in any pose
 // (crouch, prone, etc.). Returns false when no bone projected on-screen.
-bool CheatManager::ComputeBoundingBox(SDK::FVector2D& BoxMin, SDK::FVector2D& BoxMax)
+bool CheatManager::ComputeBoundingBox(SDK::APlayerController* pc, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass, SDK::FVector2D& BoxMin, SDK::FVector2D& BoxMax)
 {
 	bool bHasBox = false;
 	for (int BoneIdx = skeleton::amm; BoneIdx < skeleton::None; BoneIdx++)
 	{
-		const auto BoneLoc = BaseClass->Mesh->GetSocketLocation(BaseClass->Mesh->GetBoneName(BoneIdx));
+		const auto BoneLoc = baseClass->Mesh->GetSocketLocation(baseClass->Mesh->GetBoneName(BoneIdx));
 
 		SDK::FVector2D BoneScreenPos;
-		if (!PlayerController->ProjectWorldLocationToScreen(BoneLoc, &BoneScreenPos, false))
+		if (!pc->ProjectWorldLocationToScreen(BoneLoc, &BoneScreenPos, false))
 			continue;
 
 		if (!bHasBox)
@@ -384,26 +378,26 @@ bool CheatManager::ComputeBoundingBox(SDK::FVector2D& BoxMin, SDK::FVector2D& Bo
 
 // GAME THREAD: project the current actor's world state (role, distance, skeleton, box, snapline)
 // into a render-ready EspEntry. All SDK/UObject access for one player's overlay lives here.
-void CheatManager::BuildEspEntry(EspEntry& entry, const std::string& PlayerName, SDK::FVector Location, SDK::FVector MyLocation, bool IsVisible)
+void CheatManager::BuildEspEntry(SDK::APlayerController* pc, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass, EspEntry& entry, const std::string& PlayerName, SDK::FVector Location, SDK::FVector MyLocation, bool IsVisible)
 {
 	entry.name = PlayerName;
 	entry.isVisible = IsVisible;
-	entry.role = IsHunter() ? 1 : (IsSurvivor() ? 2 : 0);
+	entry.role = IsHunter(baseClass) ? 1 : (IsSurvivor(baseClass) ? 2 : 0);
 	entry.distanceMeters = MyLocation.GetDistanceToInMeters(Location);
 
-	if (BaseClass && BaseClass->Mesh && IsObjectValid(BaseClass->Mesh))
+	if (baseClass && baseClass->Mesh && IsObjectValid(baseClass->Mesh))
 	{
 		if (cfg->bSkeleton)
-			BuildSkeletonLines(entry.skeletonLines);
+			BuildSkeletonLines(pc, baseClass, entry.skeletonLines);
 
-		entry.hasBox = ComputeBoundingBox(entry.boxMin, entry.boxMax);
+		entry.hasBox = ComputeBoundingBox(pc, baseClass, entry.boxMin, entry.boxMax);
 	}
 
 	// snapline target: the player's world location projected to screen
 	if (cfg->bLines)
 	{
 		SDK::FVector2D Screen;
-		if (PlayerController->ProjectWorldLocationToScreen(Location, &Screen, false))
+		if (pc->ProjectWorldLocationToScreen(Location, &Screen, false))
 		{
 			entry.hasSnapline = true;
 			entry.snaplineScreen = Screen;
@@ -469,12 +463,12 @@ void CheatManager::DrawEntry(const EspEntry& entry)
 // pointer rather than a PlayerInfos index, since that list (and the dead-player latch that filters
 // it) is rebuilt every frame and a captured index can drift to the wrong entry or go out of range
 // by the time this runs. currentActors confirms the actor still exists this frame before we use it.
-void CheatManager::HandleTeleport(const std::unordered_set<SDK::AActor*>& currentActors)
+void CheatManager::HandleTeleport(SDK::APawn* myPlayer, const std::unordered_set<SDK::AActor*>& currentActors)
 {
-	if (TeleportTarget && currentActors.count(TeleportTarget) && MyPlayer)
+	if (TeleportTarget && currentActors.count(TeleportTarget) && myPlayer)
 	{
 		SDK::AActor* target = TeleportTarget;
-		SDK::APawn* player = MyPlayer;
+		SDK::APawn* player = myPlayer;
 		QueueGameThreadAction([player, target]() {
 			if (!IsObjectValid(player) || !IsObjectValid(target)) return;
 			SDK::FRotator CurrentRotation = player->K2_GetActorRotation();
@@ -484,14 +478,14 @@ void CheatManager::HandleTeleport(const std::unordered_set<SDK::AActor*>& curren
 	TeleportTarget = nullptr;
 }
 
-void CheatManager::HandleMagnet(const std::unordered_set<SDK::AActor*>& currentActors, const SDK::FVector& MyLocation, SDK::TArray<SDK::AActor*>& Players, EspSnapshot& snap)
+void CheatManager::HandleMagnet(SDK::APawn* myPlayer, SDK::AActor* selfActor, const std::unordered_set<SDK::AActor*>& currentActors, const SDK::FVector& MyLocation, SDK::TArray<SDK::AActor*>& Players, EspSnapshot& snap)
 {
 	// Flag the overlay so the render thread draws the "MAGNET ACTIVE" banner (ImGui can't run here
 	// on the game thread).
 	snap.magnetActive = true;
 
 	// Get the player's forward direction from their rotation
-	SDK::FVector ForwardDirection = MyPlayer->GetActorForwardVector();
+	SDK::FVector ForwardDirection = myPlayer->GetActorForwardVector();
 	ForwardDirection.Normalize();
 
 	// Magnet effect: pull all other players in front of the local player's view
@@ -501,7 +495,7 @@ void CheatManager::HandleMagnet(const std::unordered_set<SDK::AActor*>& currentA
 		if (!Players.IsValidIndex(j)) continue;
 
 		SDK::AActor* otherActor = Players[j];
-		if (!otherActor || otherActor == objActor) continue;
+		if (!otherActor || otherActor == selfActor) continue;
 
 		SDK::ABP_FirstPersonCharacter_cLeon_Character_C* otherBaseClass = (SDK::ABP_FirstPersonCharacter_cLeon_Character_C*)otherActor;
 		if (!otherBaseClass) continue;
@@ -525,12 +519,12 @@ void CheatManager::HandleMagnet(const std::unordered_set<SDK::AActor*>& currentA
 	}
 }
 
-void CheatManager::KillSurvivor(SDK::AActor* actor)
+void CheatManager::KillSurvivor(SDK::APawn* myPlayer, SDK::AActor* actor)
 {
-	if (!MyPlayer || !actor || MyPlayer == actor || !IsHunter(MyPlayer) || !IsSurvivor(actor) || IsDead(actor))
+	if (!myPlayer || !actor || myPlayer == actor || !IsHunter(myPlayer) || !IsSurvivor(actor) || IsDead(actor))
 		return;
 
-	auto* hunter = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*>(MyPlayer);
+	auto* hunter = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*>(myPlayer);
 	auto* survivor = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Survivor_C*>(actor);
 	QueueGameThreadAction([hunter, survivor]() {
 		if (!IsObjectValid(hunter) || !IsObjectValid(survivor))
@@ -555,14 +549,14 @@ void CheatManager::KillSurvivor(SDK::AActor* actor)
 // Kill a single requested survivor. Like HandleTeleport, the target is resolved by actor pointer and
 // confirmed against currentActors before use, since the snapshot/dead-latch is rebuilt every frame.
 // KillSurvivor itself re-validates role/liveness, so a wrong pick (e.g. a hunter) is just a no-op.
-void CheatManager::HandleKillTarget(const std::unordered_set<SDK::AActor*>& currentActors)
+void CheatManager::HandleKillTarget(SDK::APawn* myPlayer, const std::unordered_set<SDK::AActor*>& currentActors)
 {
 	if (KillTarget && currentActors.count(KillTarget))
-		KillSurvivor(KillTarget);
+		KillSurvivor(myPlayer, KillTarget);
 	KillTarget = nullptr;
 }
 
-void CheatManager::HandleKillAllSurvivors(const std::unordered_set<SDK::AActor*>& currentActors)
+void CheatManager::HandleKillAllSurvivors(SDK::APawn* myPlayer, const std::unordered_set<SDK::AActor*>& currentActors)
 {
 	if (!bKillAllSurvivorsRequested)
 		return;
@@ -570,7 +564,7 @@ void CheatManager::HandleKillAllSurvivors(const std::unordered_set<SDK::AActor*>
 
 	for (auto* actor : currentActors)
 	{
-		KillSurvivor(actor);
+		KillSurvivor(myPlayer, actor);
 		Sleep(50); // small delay to avoid overwhelming the server
 	}
 }
@@ -614,19 +608,19 @@ bool CheatManager::IsObjectValid(SDK::UObject* Obj)
 	return true;
 }
 
-void CheatManager::DumpBones()
+void CheatManager::DumpBones(SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass)
 {
 	// Guard the whole pointer chain - any of these can be null on proxies/streaming actors.
-	if (!BaseClass || !BaseClass->Mesh || !BaseClass->Mesh->SkeletalMesh || !BaseClass->Mesh->SkeletalMesh->Skeleton)
+	if (!baseClass || !baseClass->Mesh || !baseClass->Mesh->SkeletalMesh || !baseClass->Mesh->SkeletalMesh->Skeleton)
 		return;
 
 	FILE* Log = fopen("C:\\bones.txt", "w");
 
 	if (Log) {
-		auto meshname = BaseClass->Mesh->SkeletalMesh->Name;
-		auto bonetree = BaseClass->Mesh->SkeletalMesh->Skeleton->BoneTree;
+		auto meshname = baseClass->Mesh->SkeletalMesh->Name;
+		auto bonetree = baseClass->Mesh->SkeletalMesh->Skeleton->BoneTree;
 		for (int i = 0; i < bonetree.Num(); i++) {
-			auto boneName = BaseClass->Mesh->GetBoneName(i);
+			auto boneName = baseClass->Mesh->GetBoneName(i);
 
 			fprintf(Log, "%s = %d,\n", boneName.GetRawString().c_str(), i);
 		}
