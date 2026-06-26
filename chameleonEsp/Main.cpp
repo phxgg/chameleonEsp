@@ -280,6 +280,10 @@ HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT
                 ImFontConfig cfg;
                 cfg.OversampleH = 1;
                 cfg.OversampleV = 1;
+                // imgui 1.92+ logs/asserts when a font file is missing instead of silently
+                // returning nullptr. These fonts are best-effort (e.g. CJK files may not exist),
+                // so suppress the load error and rely on the return-value checks below.
+                cfg.Flags |= ImFontFlags_NoLoadError;
 
                 if (io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\segoeui.ttf", 15.0f, &cfg, io.Fonts->GetGlyphRangesDefault()))
                 {
@@ -293,6 +297,14 @@ HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT
                     io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\malgun.ttf",  15.0f, &cfg, io.Fonts->GetGlyphRangesKorean());
                 }
             }
+
+            // Check if the font was loaded successfully
+            if (io.Fonts->Fonts.empty())
+            {
+                std::cout << "Failed to load fonts. Falling back to default font." << std::endl;
+                io.Fonts->AddFontDefault(); // Fallback to default font
+            }
+            io.Fonts->Build();
 
             DXGI_SWAP_CHAIN_DESC Desc;
             pSwapChain->GetDesc(&Desc);
