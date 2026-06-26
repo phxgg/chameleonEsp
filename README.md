@@ -3,6 +3,8 @@ Currently updated for Game Version: **1.9.0**
 Internal extension for Meccha Chameleon
 
 > [!IMPORTANT]
+> This is a for fun project. Read the disclaimer below.
+>
 > I will not be assisting with using this in a way that breaks other players' experiences.
 
 Credits to [Dumper7](https://github.com/Encryqed/Dumper-7), [Unreal-Internal-Base](https://github.com/GLX-ILLUSION/Unreal-Internal-Base) and [imgui](https://github.com/ocornut/imgui)
@@ -28,6 +30,7 @@ C++ Language Standard option: `/std:c++latest`
 - Anti Detection (Survivors)
 - Anti Server Kick
 - Magnet (Hunters) -> Press **G** to toggle on/off. This will magnetize survivors in front of the hunter.
+- Select Survivor to Kill (Hunters)
 - Kill All Survivors (Hunters)
 - Fov Changer
 - Dump Bones (for debugging)
