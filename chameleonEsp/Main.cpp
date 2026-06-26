@@ -264,6 +264,7 @@ HRESULT __stdcall hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT
     if (!bRunning) return oPresent(pSwapChain, SyncInterval, Flags);
     if (!init) {
         if (SUCCEEDED(pSwapChain->GetDevice(__uuidof(ID3D12Device), (void**)&DirectX12Interface::Device))) {
+            IMGUI_CHECKVERSION();
             ImGui::CreateContext();
 
             ImGuiIO& io = ImGui::GetIO(); (void)io;
