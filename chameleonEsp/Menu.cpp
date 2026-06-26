@@ -147,6 +147,48 @@ void Menu::Init()
 				cheat->RequestKillSurvivor(selectedKillActor);
 
 			ImGui::Separator();
+			ImGui::Text("Name Changer");
+
+			static SDK::AActor* selectedNameActor = nullptr;
+			const char* namePreview = "Select player";
+			std::string selectedName;
+			bool nameStillPresent = false;
+			for (const auto& p : cheat->PlayerInfos)
+			{
+				if (p.Actor == selectedNameActor)
+				{
+					namePreview = p.Name.c_str();
+					selectedName = p.Name;
+					nameStillPresent = true;
+				}
+			}
+			if (!nameStillPresent)
+				selectedNameActor = nullptr;
+			if (cheat->PlayerInfos.empty())
+				namePreview = "No players found";
+
+			const float nameBtnW = ImGui::CalcTextSize("Change").x + ImGui::GetStyle().FramePadding.x * 2.0f;
+			ImGui::SetNextItemWidth(ImGui::GetContentRegionAvail().x - nameBtnW - ImGui::GetStyle().ItemSpacing.x);
+			if (ImGui::BeginCombo("##name_target", namePreview))
+			{
+				for (int i = 0; i < (int)cheat->PlayerInfos.size(); i++)
+				{
+					ImGui::PushID(i);
+					const bool isSelected = (cheat->PlayerInfos[i].Actor == selectedNameActor);
+					if (ImGui::Selectable(cheat->PlayerInfos[i].Name.c_str(), isSelected))
+						selectedNameActor = cheat->PlayerInfos[i].Actor;
+					if (isSelected)
+						ImGui::SetItemDefaultFocus();
+					ImGui::PopID();
+				}
+				ImGui::EndCombo();
+			}
+
+			ImGui::SameLine();
+			if (ImGui::Button("Change", ImVec2(nameBtnW, 0)) && selectedNameActor && !selectedName.empty())
+				cheat->RequestChangeName(selectedName);
+
+			ImGui::Separator();
 
 			if (ImGui::Button("Dump Bones (Debugging)"))
 				cfg->bDumpBones = true;

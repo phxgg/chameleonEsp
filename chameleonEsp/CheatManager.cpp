@@ -121,6 +121,7 @@ void CheatManager::Init()
 	HandleTeleport(ctx.MyPlayer, currentActors);
 	HandleKillTarget(ctx.MyPlayer, currentActors);
 	HandleKillAllSurvivors(ctx.MyPlayer, currentActors);
+	HandleChangeName(ctx.MyPlayer);
 
 	// Publish the finished frame for the render thread to draw.
 	std::lock_guard<std::mutex> lock(snapshotMutex);
@@ -572,6 +573,49 @@ void CheatManager::HandleKillAllSurvivors(SDK::APawn* myPlayer, const std::unord
 		killAllQueue.erase(it);
 		break; // one per frame paces the kills without blocking the game thread
 	}
+}
+
+void CheatManager::HandleChangeName(SDK::APawn* myPlayer)
+{
+	if (!bChangeNameRequested)
+		return;
+	bChangeNameRequested = false;
+
+	std::string name = std::move(pendingChangeName);
+	pendingChangeName.clear();
+
+	if (name.empty() || !myPlayer || !IsObjectValid(myPlayer))
+		return;
+
+	auto* myChar = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_C*>(myPlayer);
+	if (!myChar)
+		return;
+
+	auto* playerState = myChar->PlayerState;
+	if (!playerState || !IsObjectValid(playerState))
+		return;
+
+	if (!playerState->IsA(SDK::ABP_FirstPersonPlayerState_Online_C::StaticClass()))
+		return;
+
+	auto* onlineState = static_cast<SDK::ABP_FirstPersonPlayerState_Online_C*>(playerState);
+
+	SDK::UFunction* fn = onlineState->Class->GetFunction("BP_FirstPersonPlayerState_Online_C", "SetName(Server)");
+	if (!fn)
+		return;
+
+	// Names come through as UTF-8 (FString::ToString); widen properly so non-ASCII names survive.
+	std::wstring wname;
+	int wlen = MultiByteToWideChar(CP_UTF8, 0, name.c_str(), -1, nullptr, 0);
+	if (wlen > 1)
+	{
+		wname.resize(wlen - 1); // drop the counted null terminator from the string's length
+		MultiByteToWideChar(CP_UTF8, 0, name.c_str(), -1, &wname[0], wlen);
+	}
+
+	SDK::Params::BP_FirstPersonPlayerState_Online_C_SetName_Server_ parms{};
+	parms.CustomPlayerName_0 = SDK::FString(wname.c_str());
+	onlineState->ProcessEvent(fn, &parms);
 }
 
 // True if Obj is still a fully-live object. The scan and its mutations run on the game thread, but an

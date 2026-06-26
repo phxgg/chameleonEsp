@@ -72,9 +72,12 @@ private:
 	void HandleMagnet(SDK::APawn* myPlayer, SDK::AActor* selfActor, const std::unordered_set<SDK::AActor*>& currentActors, const SDK::FVector& MyLocation, SDK::TArray<SDK::AActor*>& Players, EspSnapshot& snap);
 	void HandleKillTarget(SDK::APawn* myPlayer, const std::unordered_set<SDK::AActor*>& currentActors);
 	void HandleKillAllSurvivors(SDK::APawn* myPlayer, const std::unordered_set<SDK::AActor*>& currentActors);
+	void HandleChangeName(SDK::APawn* myPlayer);
 	SDK::AActor* TeleportTarget = nullptr; // resolved by actor pointer, not list index, since the snapshot is rebuilt every frame
 	SDK::AActor* KillTarget = nullptr;     // single-player kill request, resolved by actor pointer like TeleportTarget
 	bool bKillAllSurvivorsRequested = false;
+	bool bChangeNameRequested = false; // drained on the game thread in HandleChangeName
+	std::string pendingChangeName;     // the name to apply on the next scan when bChangeNameRequested is set
 	std::unordered_set<SDK::AActor*> killAllQueue; // pending "kill all" targets, drained one per frame so we never block the game thread
 
 	// pendingSnapshot is written by the game thread (Init) and read by the render thread (RenderEsp)
@@ -88,6 +91,10 @@ public:
 	void RequestTeleport(SDK::AActor* Actor) { TeleportTarget = Actor; }
 	void RequestKillSurvivor(SDK::AActor* Actor) { KillTarget = Actor; }
 	void RequestKillAllSurvivors() { bKillAllSurvivorsRequested = true; }
+	// Queue a name change for our own player (e.g. to impersonate another player's name). Applied on
+	// the game thread in HandleChangeName; storing the string copy means the menu never has to hold a
+	// live UObject.
+	void RequestChangeName(const std::string& Name) { pendingChangeName = Name; bChangeNameRequested = true; }
 	std::unordered_set<SDK::AActor*> forcedVisibleActors;
 	std::unordered_set<SDK::AActor*> deadActors; // actors seen ragdolling; latched so ESP stays off after the corpse stops simulating physics
 	std::unordered_map<SDK::AActor*, std::string> playerNameCache; // last-known name per actor, so ESP survives PlayerState replication blips
