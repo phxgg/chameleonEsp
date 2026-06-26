@@ -188,6 +188,15 @@ void Menu::Init()
 			if (ImGui::Button("Change", ImVec2(nameBtnW, 0)) && selectedNameActor && !selectedName.empty())
 				cheat->RequestChangeName(selectedName);
 
+			// Custom name: type anything and apply it to our own player.
+			static char customName[64] = "";
+			const float setBtnW = ImGui::CalcTextSize("Set").x + ImGui::GetStyle().FramePadding.x * 2.0f;
+			ImGui::SetNextItemWidth(ImGui::GetContentRegionAvail().x - setBtnW - ImGui::GetStyle().ItemSpacing.x);
+			const bool nameEntered = ImGui::InputText("##custom_name", customName, sizeof(customName), ImGuiInputTextFlags_EnterReturnsTrue);
+			ImGui::SameLine();
+			if ((ImGui::Button("Set", ImVec2(setBtnW, 0)) || nameEntered) && customName[0] != '\0')
+				cheat->RequestChangeName(customName);
+
 			ImGui::Separator();
 
 			if (ImGui::Button("Dump Bones (Debugging)"))
