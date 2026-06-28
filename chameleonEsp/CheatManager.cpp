@@ -1,5 +1,7 @@
 #include "includes.hpp"
 
+#pragma warning (disable: 4244)
+
 // GAME THREAD: scan the world and publish a render-ready snapshot.
 //
 // Everything that touches a live UObject - GetAllActorsOfClass, the per-actor reads, the screen

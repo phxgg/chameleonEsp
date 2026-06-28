@@ -30,11 +30,11 @@ public:
 	class ABP_FirstPersonCharacter_cLeon_Character_C* As_BP_First_Person_Character_C_Leon;           // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_PaintCursor(int32 EntryPoint);
-	void SetPickVisibility(bool Visibility);
 	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
-	void Construct();
+	void SetPickVisibility(bool Visibility);
 	void PreConstruct(bool IsDesignTime_PreConstruct);
+	void ExecuteUbergraph_WBP_PaintCursor(int32 EntryPoint);
+	void Construct();
 
 public:
 	static class UClass* StaticClass()

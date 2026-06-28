@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_DamageTool_Base_V2_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START

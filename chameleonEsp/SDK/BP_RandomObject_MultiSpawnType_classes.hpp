@@ -10,23 +10,22 @@
 
 #include "Basic.hpp"
 
-#include "BP_RandomObject_Base_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "BP_RandomObject_Base_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_RandomObject_MultiSpawnType.BP_RandomObject_MultiSpawnType_C
-// 0x0030 (0x02E8 - 0x02B8)
+// 0x0028 (0x02E0 - 0x02B8)
 class ABP_RandomObject_MultiSpawnType_C final : public ABP_RandomObject_Base_C
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_RandomObject_MultiSpawnType_C;   // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   Cube;                                              // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        SpawnProbability;                                  // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         TargetActors;                                      // 0x02D0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
-	struct FRandomStream                          Seed;                                              // 0x02E0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, NoDestructor)
+	double                                        SpawnProbability;                                  // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         TargetActors;                                      // 0x02C8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
+	struct FRandomStream                          Seed;                                              // 0x02D8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, RepNotify, NoDestructor)
 
 public:
 	void UserConstructionScript();

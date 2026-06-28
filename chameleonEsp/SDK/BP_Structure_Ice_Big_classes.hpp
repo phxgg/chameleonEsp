@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_Structure_Base_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_Structure_Base_classes.hpp"
 
 
 SDK_NAMESPACE_START

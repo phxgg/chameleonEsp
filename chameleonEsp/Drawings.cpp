@@ -1,5 +1,8 @@
 #include "includes.hpp"
 
+#pragma warning (disable: 4244)
+#pragma warning (disable: 4305)
+
 void Drawings::DrawBox(int X, int Y, int W, int H, const ImU32& color, int thickness)
 {
 	float lineW = (W / 1);

@@ -16,21 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_PaintCursor.WBP_PaintCursor_C.ExecuteUbergraph_WBP_PaintCursor
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_PaintCursor.WBP_PaintCursor_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGeometry&                 MyGeometry_Tick                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime_Tick                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PaintCursor_C::ExecuteUbergraph_WBP_PaintCursor(int32 EntryPoint)
+void UWBP_PaintCursor_C::Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintCursor_C", "ExecuteUbergraph_WBP_PaintCursor");
+		Func = Class->GetFunction("WBP_PaintCursor_C", "Tick");
 
-	Params::WBP_PaintCursor_C_ExecuteUbergraph_WBP_PaintCursor Parms{};
+	Params::WBP_PaintCursor_C_Tick Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.MyGeometry_Tick = std::move(MyGeometry_Tick);
+	Parms.InDeltaTime_Tick = InDeltaTime_Tick;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -56,42 +58,6 @@ void UWBP_PaintCursor_C::SetPickVisibility(bool Visibility)
 }
 
 
-// Function WBP_PaintCursor.WBP_PaintCursor_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry_Tick                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime_Tick                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PaintCursor_C::Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintCursor_C", "Tick");
-
-	Params::WBP_PaintCursor_C_Tick Parms{};
-
-	Parms.MyGeometry_Tick = std::move(MyGeometry_Tick);
-	Parms.InDeltaTime_Tick = InDeltaTime_Tick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PaintCursor.WBP_PaintCursor_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_PaintCursor_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PaintCursor_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_PaintCursor.WBP_PaintCursor_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -109,6 +75,40 @@ void UWBP_PaintCursor_C::PreConstruct(bool IsDesignTime_PreConstruct)
 	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PaintCursor.WBP_PaintCursor_C.ExecuteUbergraph_WBP_PaintCursor
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PaintCursor_C::ExecuteUbergraph_WBP_PaintCursor(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PaintCursor_C", "ExecuteUbergraph_WBP_PaintCursor");
+
+	Params::WBP_PaintCursor_C_ExecuteUbergraph_WBP_PaintCursor Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PaintCursor.WBP_PaintCursor_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_PaintCursor_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PaintCursor_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

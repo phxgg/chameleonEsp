@@ -11,22 +11,24 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "BP_RandomObject_Base_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_RandomObject_Base_classes.hpp"
 
 
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_RandomObject_RandomScale.BP_RandomObject_RandomScale_C
-// 0x0038 (0x02F0 - 0x02B8)
+// 0x00E0 (0x0398 - 0x02B8)
 class ABP_RandomObject_RandomScale_C final : public ABP_RandomObject_Base_C
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_RandomObject_RandomScale_C;      // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   Cube;                                              // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              ScaleRange;                                        // 0x02C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         TargetActors;                                      // 0x02D8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
-	struct FRandomStream                          Seed;                                              // 0x02E8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, RepNotify, NoDestructor)
+	struct FVector2D                              ScaleRange;                                        // 0x02C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              AddRandomYaw;                                      // 0x02D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         TargetActors;                                      // 0x02E0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
+	struct FRandomStream                          Seed;                                              // 0x02F0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, RepNotify, NoDestructor)
+	TMap<class AActor*, struct FRotator>          DefaultRotation;                                   // 0x02F8(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate)
+	TMap<class AActor*, struct FVector>           DefaultScale;                                      // 0x0348(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
 	void UserConstructionScript();
