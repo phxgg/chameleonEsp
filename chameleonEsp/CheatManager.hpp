@@ -19,6 +19,7 @@ public:
 		std::string name;
 		int role = 0; // 0 = none, 1 = hunter, 2 = survivor, 3 = decoy
 		float distanceMeters = 0.0f;
+		int ammo = -1; // hunter bullets remaining; -1 = unknown/not a hunter
 		bool hasSnapline = false;
 		SDK::FVector2D snaplineScreen{};
 		bool isVisible = false;

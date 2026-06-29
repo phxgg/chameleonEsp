@@ -23,7 +23,7 @@ C++ Language Standard option: `/std:c++latest`
 
 ### Features
 
-- ESP (Box, Skeleton, Lines, Distance, Name, Role)
+- ESP (Box, Skeleton, Lines, Distance, Name, Role, Decoys)
 - Teleport (works only if you are the host as far as I've tested)
 - Character Visibility (view other Survivors in Infection mode)
 - No Gun Cooldown (Hunters)

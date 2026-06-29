@@ -424,6 +424,9 @@ void CheatManager::BuildEspEntry(SDK::APlayerController* pc, SDK::ABP_FirstPerso
 	else entry.role = 0;
 	entry.distanceMeters = MyLocation.GetDistanceToInMeters(Location);
 
+	if (entry.role == 1 && IsObjectValid(baseClass))
+		entry.ammo = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_Hunter_C*>(baseClass)->CurrentBullet;
+
 	if (baseClass && baseClass->Mesh && IsObjectValid(baseClass->Mesh))
 	{
 		if (cfg->bSkeleton)
@@ -522,6 +525,17 @@ void CheatManager::DrawEntry(const EspEntry& entry)
 			const float TextX = (entry.boxMin.X + entry.boxMax.X) * 0.5f - TextSize.x * 0.5f;
 			ImGui::GetForegroundDrawList()->AddText(ImVec2(TextX, entry.boxMax.Y + 2), colEsp, DistanceText);
 		}
+
+		// if (cfg->bHunterAmmo && entry.ammo >= 0)
+		// {
+		// 	char AmmoText[32];
+		// 	snprintf(AmmoText, sizeof(AmmoText), "Ammo: %d", entry.ammo);
+
+		// 	const ImVec2 TextSize = ImGui::CalcTextSize(AmmoText);
+		// 	const float TextX = (entry.boxMin.X + entry.boxMax.X) * 0.5f - TextSize.x * 0.5f;
+		// 	const float TextY = entry.boxMax.Y + 2 + (cfg->bDistance ? ImGui::GetTextLineHeight() : 0.0f);
+		// 	ImGui::GetForegroundDrawList()->AddText(ImVec2(TextX, TextY), colWhite, AmmoText);
+		// }
 	}
 
 	// draw a snapline from the bottom-center of the screen to the player's world location

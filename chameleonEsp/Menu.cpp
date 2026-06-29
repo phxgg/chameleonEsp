@@ -27,6 +27,7 @@ void Menu::Init()
 			ImGui::Checkbox("Roles", &cfg->bRoles);
 			ImGui::Checkbox("Skeleton", &cfg->bSkeleton);
 			ImGui::Checkbox("Distance", &cfg->bDistance);
+			// ImGui::Checkbox("Hunter Ammo", &cfg->bHunterAmmo);
 			ImGui::Checkbox("Decoys", &cfg->bDecoys);
 
 			ImGui::Separator();

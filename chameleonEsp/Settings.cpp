@@ -14,6 +14,7 @@ void Settings::InitializeSettings()
 	this->bBox = false;
 	this->bSkeleton = false;
 	this->bDistance = false;
+	this->bHunterAmmo = false;
 	this->bDecoys = false;
 	this->bDumpBones = false;
 	this->bEnemyOnly = false;

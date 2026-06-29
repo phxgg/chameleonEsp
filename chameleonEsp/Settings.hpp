@@ -11,6 +11,7 @@ public:
 	bool bBox;
 	bool bSkeleton;
 	bool bDistance;
+	bool bHunterAmmo;
 	bool bDecoys;
 	bool bDumpBones;
 	bool bEnemyOnly;
