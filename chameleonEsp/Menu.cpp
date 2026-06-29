@@ -2,7 +2,7 @@
 
 void Menu::Init()
 {
-	ImGui::SetNextWindowSize({ 300, 420 }, ImGuiCond_Once);
+	ImGui::SetNextWindowSize({ 300, 480 }, ImGuiCond_Once);
 	ImGui::Begin("phxgg esp", nullptr, 0);
 
 	const float footerH = ImGui::GetStyle().ItemSpacing.y + ImGui::GetFrameHeightWithSpacing() + ImGui::GetStyle().WindowPadding.y;
