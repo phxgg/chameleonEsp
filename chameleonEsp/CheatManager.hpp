@@ -17,7 +17,7 @@ public:
 		SDK::FVector2D boxMax{};
 		std::vector<std::pair<SDK::FVector2D, SDK::FVector2D>> skeletonLines; // projected bone segments
 		std::string name;
-		int role = 0; // 0 = none, 1 = hunter, 2 = survivor
+		int role = 0; // 0 = none, 1 = hunter, 2 = survivor, 3 = decoy
 		float distanceMeters = 0.0f;
 		bool hasSnapline = false;
 		SDK::FVector2D snaplineScreen{};
@@ -61,9 +61,10 @@ private:
 	bool IsEnemy(SDK::APawn* myPlayer, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass);
 
 	// Game-thread builders: project the given actor's world state into a render-ready EspEntry.
-	void BuildSkeletonLines(SDK::APlayerController* pc, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass, std::vector<std::pair<SDK::FVector2D, SDK::FVector2D>>& out);
-	bool ComputeBoundingBox(SDK::APlayerController* pc, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass, SDK::FVector2D& BoxMin, SDK::FVector2D& BoxMax);
+	void BuildSkeletonLines(SDK::APlayerController* pc, SDK::USkinnedMeshComponent* mesh, std::vector<std::pair<SDK::FVector2D, SDK::FVector2D>>& out);
+	bool ComputeBoundingBox(SDK::APlayerController* pc, SDK::USkinnedMeshComponent* mesh, SDK::FVector2D& BoxMin, SDK::FVector2D& BoxMax);
 	void BuildEspEntry(SDK::APlayerController* pc, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass, EspEntry& entry, const std::string& PlayerName, SDK::FVector Location, SDK::FVector MyLocation, bool IsVisible);
+	void BuildDecoyEntry(SDK::APlayerController* pc, SDK::ABP_cLeonDecoy_Base_C* decoy, EspEntry& entry, SDK::FVector Location, SDK::FVector MyLocation);
 	// Render-thread draw of a single prebuilt entry (ImGui only, no SDK/UObject access).
 	void DrawEntry(const EspEntry& entry);
 

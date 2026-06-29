@@ -39,6 +39,33 @@ void CheatManager::Init()
 	SDK::TArray<SDK::AActor*> Players;
 	ctx.GStatics->GetAllActorsOfClass(ctx.World, SDK::ABP_FirstPersonCharacter_cLeon_Character_C::StaticClass(), &Players);
 
+	// Decoys ride the same entries/draw path as players (role 3). They have no team, so Enemy Only
+	// never hides them - the toggle is the only gate.
+	if (cfg->bDecoys)
+	{
+		SDK::TArray<SDK::AActor*> Decoys;
+		ctx.GStatics->GetAllActorsOfClass(ctx.World, SDK::ABP_cLeonDecoy_Base_C::StaticClass(), &Decoys);
+		for (int i = 0; i < Decoys.Num(); i++)
+		{
+			if (!Decoys.IsValidIndex(i)) continue;
+
+			SDK::AActor* actor = Decoys[i];
+			if (!actor || !IsObjectValid(actor)) continue;
+			auto* decoy = static_cast<SDK::ABP_cLeonDecoy_Base_C*>(actor);
+			if (!decoy) continue;
+
+			// Skip decoys whose body is hidden - the game toggles the PoseableMesh's visibility off
+			// when the decoy isn't actually showing, and an invisible decoy shouldn't draw in ESP.
+			if (!decoy->PoseableMesh || !IsObjectValid(decoy->PoseableMesh) || !decoy->PoseableMesh->bVisible)
+				continue;
+
+			const auto Location = decoy->K2_GetActorLocation();
+			EspEntry entry;
+			BuildDecoyEntry(ctx.PlayerController, decoy, entry, Location, MyLocation);
+			snap.entries.push_back(std::move(entry));
+		}
+	}
+
 	// Track which actors exist this frame so we can drop stale entries from the latched
 	// dead set below - otherwise a destroyed corpse's pointer could later be reused by a
 	// live actor and wrongly suppress its ESP.
@@ -92,6 +119,16 @@ void CheatManager::Init()
 
 				if (cfg->bAntiDetection && IsObjectValid(survivor))
 					survivor->OverlapCheckCapsules.Clear();
+
+				if (cfg->bNoDecoyCooldown && IsObjectValid(survivor))
+				{
+					for (int i = 0; i < survivor->DecoyCoolTimes.Num(); i++)
+					{
+						if (!survivor->DecoyCoolTimes.IsValidIndex(i)) continue;
+						survivor->DecoyCoolTimes[i] = 30.0;
+					}
+					survivor->DecoyCoolTimeDefault = 30.0;
+				}
 			}
 			continue;
 		}
@@ -331,16 +368,18 @@ bool CheatManager::IsEnemy(SDK::APawn* myPlayer, SDK::ABP_FirstPersonCharacter_c
 
 // GAME THREAD: project the current actor's skeleton (bone-pair segments) into screen space for the
 // render thread to draw later. Each projection is an SDK call, so it has to happen here.
-void CheatManager::BuildSkeletonLines(SDK::APlayerController* pc, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass, std::vector<std::pair<SDK::FVector2D, SDK::FVector2D>>& out)
+// mesh is the actor's skinned mesh (character's Mesh or a decoy's PoseableMesh) - both share the
+// Leon skeleton, so the same bone-pair connections and box bone range apply to either.
+void CheatManager::BuildSkeletonLines(SDK::APlayerController* pc, SDK::USkinnedMeshComponent* mesh, std::vector<std::pair<SDK::FVector2D, SDK::FVector2D>>& out)
 {
-	if (!baseClass || !baseClass->Mesh || !IsObjectValid(baseClass->Mesh))
+	if (!mesh || !IsObjectValid(mesh))
 		return;
 
 	SDK::FVector2D BoneScreen, PrevBoneScreen;
 	for (const std::pair<int, int>& Connection : skeleton::Connections)
 	{
-		const auto BoneLoc1 = baseClass->Mesh->GetSocketLocation(baseClass->Mesh->GetBoneName(Connection.first));
-		const auto BoneLoc2 = baseClass->Mesh->GetSocketLocation(baseClass->Mesh->GetBoneName(Connection.second));
+		const auto BoneLoc1 = mesh->GetSocketLocation(mesh->GetBoneName(Connection.first));
+		const auto BoneLoc2 = mesh->GetSocketLocation(mesh->GetBoneName(Connection.second));
 		if (pc->ProjectWorldLocationToScreen(BoneLoc1, &BoneScreen, false) && pc->ProjectWorldLocationToScreen(BoneLoc2, &PrevBoneScreen, false))
 			out.emplace_back(BoneScreen, PrevBoneScreen);
 	}
@@ -348,12 +387,12 @@ void CheatManager::BuildSkeletonLines(SDK::APlayerController* pc, SDK::ABP_First
 
 // Build a 2D bounding box from every bone's screen position so it stays correct in any pose
 // (crouch, prone, etc.). Returns false when no bone projected on-screen.
-bool CheatManager::ComputeBoundingBox(SDK::APlayerController* pc, SDK::ABP_FirstPersonCharacter_cLeon_Character_C* baseClass, SDK::FVector2D& BoxMin, SDK::FVector2D& BoxMax)
+bool CheatManager::ComputeBoundingBox(SDK::APlayerController* pc, SDK::USkinnedMeshComponent* mesh, SDK::FVector2D& BoxMin, SDK::FVector2D& BoxMax)
 {
 	bool bHasBox = false;
 	for (int BoneIdx = skeleton::amm; BoneIdx < skeleton::None; BoneIdx++)
 	{
-		const auto BoneLoc = baseClass->Mesh->GetSocketLocation(baseClass->Mesh->GetBoneName(BoneIdx));
+		const auto BoneLoc = mesh->GetSocketLocation(mesh->GetBoneName(BoneIdx));
 
 		SDK::FVector2D BoneScreenPos;
 		if (!pc->ProjectWorldLocationToScreen(BoneLoc, &BoneScreenPos, false))
@@ -380,18 +419,49 @@ void CheatManager::BuildEspEntry(SDK::APlayerController* pc, SDK::ABP_FirstPerso
 {
 	entry.name = PlayerName;
 	entry.isVisible = IsVisible;
-	entry.role = IsHunter(baseClass) ? 1 : (IsSurvivor(baseClass) ? 2 : 0);
+	if (IsHunter(baseClass)) entry.role = 1;
+	else if (IsSurvivor(baseClass)) entry.role = 2;
+	else entry.role = 0;
 	entry.distanceMeters = MyLocation.GetDistanceToInMeters(Location);
 
 	if (baseClass && baseClass->Mesh && IsObjectValid(baseClass->Mesh))
 	{
 		if (cfg->bSkeleton)
-			BuildSkeletonLines(pc, baseClass, entry.skeletonLines);
+			BuildSkeletonLines(pc, baseClass->Mesh, entry.skeletonLines);
 
-		entry.hasBox = ComputeBoundingBox(pc, baseClass, entry.boxMin, entry.boxMax);
+		entry.hasBox = ComputeBoundingBox(pc, baseClass->Mesh, entry.boxMin, entry.boxMax);
 	}
 
 	// snapline target: the player's world location projected to screen
+	if (cfg->bLines)
+	{
+		SDK::FVector2D Screen;
+		if (pc->ProjectWorldLocationToScreen(Location, &Screen, false))
+		{
+			entry.hasSnapline = true;
+			entry.snaplineScreen = Screen;
+		}
+	}
+}
+
+// GAME THREAD: like BuildEspEntry, but for a decoy. A decoy is a frozen PoseableMesh copy of the
+// Leon skeleton with no PlayerState/team - so no name lookup, role test or visibility; it's always
+// drawn in the "visible" colour and labelled "Decoy".
+void CheatManager::BuildDecoyEntry(SDK::APlayerController* pc, SDK::ABP_cLeonDecoy_Base_C* decoy, EspEntry& entry, SDK::FVector Location, SDK::FVector MyLocation)
+{
+	entry.name = "Decoy";
+	entry.isVisible = true;
+	entry.role = 3;
+	entry.distanceMeters = MyLocation.GetDistanceToInMeters(Location);
+
+	if (decoy->PoseableMesh && IsObjectValid(decoy->PoseableMesh))
+	{
+		if (cfg->bSkeleton)
+			BuildSkeletonLines(pc, decoy->PoseableMesh, entry.skeletonLines);
+
+		entry.hasBox = ComputeBoundingBox(pc, decoy->PoseableMesh, entry.boxMin, entry.boxMax);
+	}
+
 	if (cfg->bLines)
 	{
 		SDK::FVector2D Screen;
@@ -408,7 +478,7 @@ void CheatManager::BuildEspEntry(SDK::APlayerController* pc, SDK::ABP_FirstPerso
 // BuildEspEntry on the game thread).
 void CheatManager::DrawEntry(const EspEntry& entry)
 {
-	const ImU32 colEsp  = ImGui::ColorConvertFloat4ToU32(entry.isVisible ? *(ImVec4*)cfg->colVisible : *(ImVec4*)cfg->colNotVisible);
+	const ImU32 colEsp  = ImGui::ColorConvertFloat4ToU32(entry.role == 3 ? *(ImVec4*)cfg->colDecoy : entry.isVisible ? *(ImVec4*)cfg->colVisible : *(ImVec4*)cfg->colNotVisible);
 	const ImU32 colLine = ImGui::ColorConvertFloat4ToU32(*(ImVec4*)cfg->colLines);
 
 	// white color
@@ -426,7 +496,12 @@ void CheatManager::DrawEntry(const EspEntry& entry)
 
 		if (cfg->bRoles)
 		{
-			const char* roleText = entry.role == 1 ? "Hunter" : (entry.role == 2 ? "Survivor" : nullptr);
+			const char* roleText;
+			if (entry.role == 1) roleText = "Hunter";
+			else if (entry.role == 2) roleText = "Survivor";
+			else if (entry.role == 3) roleText = "Decoy";
+			else roleText = nullptr;
+
 			if (roleText)
 			{
 				const float nameWidth = cfg->bNames ? ImGui::CalcTextSize(entry.name.c_str()).x + 5 : 0.0f;

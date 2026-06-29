@@ -27,6 +27,7 @@ void Menu::Init()
 			ImGui::Checkbox("Roles", &cfg->bRoles);
 			ImGui::Checkbox("Skeleton", &cfg->bSkeleton);
 			ImGui::Checkbox("Distance", &cfg->bDistance);
+			ImGui::Checkbox("Decoys", &cfg->bDecoys);
 
 			ImGui::Separator();
 			ImGui::Text("Colors");
@@ -55,6 +56,15 @@ void Menu::Init()
 			if (ImGui::BeginPopup("popup_colLines"))
 			{
 				ImGui::ColorPicker4("##pick", cfg->colLines);
+				ImGui::EndPopup();
+			}
+
+			if (ImGui::ColorButton("##colDecoy", *(ImVec4*)cfg->colDecoy))
+				ImGui::OpenPopup("popup_colDecoy");
+			ImGui::SameLine(); ImGui::Text("Decoy");
+			if (ImGui::BeginPopup("popup_colDecoy"))
+			{
+				ImGui::ColorPicker4("##pick", cfg->colDecoy);
 				ImGui::EndPopup();
 			}
 
@@ -91,16 +101,22 @@ void Menu::Init()
 		{
 			ImGui::BeginChild("##tools_list", ImVec2(0, 0), false);
 
-			ImGui::Checkbox("Anti Detection (Survivors)", &cfg->bAntiDetection);
-			ImGui::Checkbox("No Gun Cooldown (Hunters)", &cfg->bNoGunCooldown);
-			ImGui::Checkbox("Infinite Bullets (Hunters)", &cfg->bInfiniteBullets);
-			ImGui::Checkbox("Anti Server Kick", &cfg->bPreventKick);
+			ImGui::Text("Survivors");
+			ImGui::Separator();
+			ImGui::Checkbox("Anti Detection", &cfg->bAntiDetection);
+			ImGui::Checkbox("No Decoy Cooldown", &cfg->bNoDecoyCooldown);
 
-			if (ImGui::Button("Kill All Survivors (Hunter)"))
+			ImGui::Separator();
+			ImGui::Text("Hunters");
+			ImGui::Separator();
+			ImGui::Checkbox("No Gun Cooldown", &cfg->bNoGunCooldown);
+			ImGui::Checkbox("Infinite Bullets", &cfg->bInfiniteBullets);
+
+			if (ImGui::Button("Kill All Survivors"))
 				cheat->RequestKillAllSurvivors();
 
 			ImGui::Separator();
-			ImGui::Text("Kill Specific Player (Hunter)");
+			ImGui::Text("Kill Specific Player");
 
 			// Track the pick by actor pointer, not list index - PlayerInfos is rebuilt every frame and
 			// indices can drift. Resolve the selected actor's current name for the combo preview, and
@@ -146,6 +162,11 @@ void Menu::Init()
 			ImGui::SameLine();
 			if (ImGui::Button("Kill", ImVec2(killBtnW, 0)) && selectedKillActor)
 				cheat->RequestKillSurvivor(selectedKillActor);
+
+			ImGui::Separator();
+			ImGui::Text("General");
+			ImGui::Separator();
+			ImGui::Checkbox("Anti Server Kick", &cfg->bPreventKick);
 
 			ImGui::Separator();
 			ImGui::Text("Name Changer");

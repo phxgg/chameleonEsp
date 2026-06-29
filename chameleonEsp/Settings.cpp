@@ -14,6 +14,7 @@ void Settings::InitializeSettings()
 	this->bBox = false;
 	this->bSkeleton = false;
 	this->bDistance = false;
+	this->bDecoys = false;
 	this->bDumpBones = false;
 	this->bEnemyOnly = false;
 	this->bForceCharacterVisibility = false;
@@ -22,12 +23,15 @@ void Settings::InitializeSettings()
 	this->bMagnetEnabled = false;
 	this->bPreventKick = false;
 	this->bInfiniteBullets = false;
+	this->bNoDecoyCooldown = false;
 	float colVisible[4]    = { 0.0f,  1.0f,  0.0f, 1.0f };
 	float colNotVisible[4] = { 0.706f, 0.392f, 1.0f, 1.0f };
 	float colLines[4]      = { 1.0f,  1.0f,  1.0f, 1.0f };
+	float colDecoy[4]      = { 1.0f,  0.6f,  0.0f, 1.0f };
 	memcpy(this->colVisible,    colVisible,    sizeof(colVisible));
 	memcpy(this->colNotVisible, colNotVisible, sizeof(colNotVisible));
 	memcpy(this->colLines,      colLines,      sizeof(colLines));
+	memcpy(this->colDecoy,      colDecoy,      sizeof(colDecoy));
 }
 
 void Settings::SaveSettings()
