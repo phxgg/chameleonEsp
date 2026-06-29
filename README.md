@@ -24,15 +24,20 @@ C++ Language Standard option: `/std:c++latest`
 ### Features
 
 - ESP (Box, Skeleton, Lines, Distance, Name, Role, Decoys)
-- Teleport (works only if you are the host as far as I've tested)
+- Teleport (works only if you are the host)
 - Character Visibility (view other Survivors in Infection mode)
-- No Gun Cooldown (Hunters)
-- Anti Detection (Survivors)
 - Anti Server Kick
-- Magnet (Hunters) -> Press **G** to toggle on/off. This will magnetize survivors in front of the hunter.
-- Select Survivor to Kill (Hunters)
-- Kill All Survivors (Hunters)
 - Fov Changer
+- Name Changer
+- Name Stealer
+- Survivors:
+- - Anti Detection
+- - No Decoy Cooldown
+- Hunters:
+- - No Gun Cooldown
+- - Magnet -> Press **G** to toggle on/off. This will magnetize survivors in front of the hunter.
+- - Select Survivor to Kill
+- - Kill All Survivors
 - Dump Bones (for debugging)
 
 Use **INSERT** to open the menu, and **END** to unload.
