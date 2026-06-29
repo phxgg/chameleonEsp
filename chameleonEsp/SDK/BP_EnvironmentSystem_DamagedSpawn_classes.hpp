@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_EnvironmentSystem_Base_classes.hpp"
+#include "Engine_structs.hpp"
 #include "EN_DamageType_structs.hpp"
 
 

@@ -12,9 +12,9 @@
 
 #include "ENUM_CameraMode_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "EN_StrafingDirection_structs.hpp"
-#include "ENUM_ActorType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ENUM_ActorType_structs.hpp"
+#include "EN_StrafingDirection_structs.hpp"
 
 
 SDK_NAMESPACE_START

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "EN_CinemaPlayMode_structs.hpp"
-#include "MovieScene_structs.hpp"
 #include "ST_EventValue_structs.hpp"
+#include "MovieScene_structs.hpp"
 
 
 SDK_NAMESPACE_START

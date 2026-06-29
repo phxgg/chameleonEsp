@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_ItemBindType_structs.hpp"
-#include "Engine_structs.hpp"
 #include "BP_CraftedObject_Base_classes.hpp"
+#include "Engine_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 
 
 SDK_NAMESPACE_START
