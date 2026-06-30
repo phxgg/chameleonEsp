@@ -35,6 +35,7 @@ C++ Language Standard option: `/std:c++latest`
 - - No Decoy Cooldown
 - Hunters:
 - - No Gun Cooldown
+- - Infinite Bullets
 - - Magnet -> Press **G** to toggle on/off. This will magnetize survivors in front of the hunter.
 - - Select Survivor to Kill
 - - Kill All Survivors
