@@ -700,7 +700,7 @@ void CheatManager::HandleMagnet(
 		if (!otherActor || otherActor == selfActor)
 			continue;
 
-		SDK::ABP_FirstPersonCharacter_cLeon_Character_C* otherBaseClass = ss(SDK::ABP_FirstPersonCharacter_cLeon_Character_C*)otherActor;
+		SDK::ABP_FirstPersonCharacter_cLeon_Character_C* otherBaseClass = (SDK::ABP_FirstPersonCharacter_cLeon_Character_C*)otherActor;
 		if (!otherBaseClass)
 			continue;
 
