@@ -48,22 +48,22 @@
 // calls - the world reads and the inline game-state mutations - internally call UObject::ProcessEvent,
 // which re-enters hkProcessEvent on this same (game) thread. This flag lets the hook recognise those
 // nested, self invoked calls and pass them straight through to the engine.
-inline std::atomic<bool> g_inGameThreadFlush{false};
+inline std::atomic<bool> g_inGameThreadFlush{ false };
 
 // Set by the render thread (hkPresent) once per frame to ask the game thread to refresh the ESP
 // snapshot. The game thread (hkProcessEvent) consumes it with exchange(false) and runs the world
 // scan there - never on the render thread, which would race the engine's actor list and fault.
-inline std::atomic<bool> g_gatherRequested{false};
+inline std::atomic<bool> g_gatherRequested{ false };
 
 // Main global variables
-inline CheatManager *cheat;
-inline Menu *gui;
-inline Settings *cfg;
-inline FILE *file;
-inline Drawings *draw;
+inline CheatManager* cheat;
+inline Menu* gui;
+inline Settings* cfg;
+inline FILE* file;
+inline Drawings* draw;
 
 // Function pointers for event handling
-inline SDK::UFunction *g_fnKickLINK = nullptr;
-inline SDK::UFunction *g_fnKickOnline = nullptr;
-inline SDK::UFunction *g_fnClientWasKicked = nullptr;
-inline SDK::UFunction *g_fnClientReturnToMainMenuWithTextReason = nullptr;
+inline SDK::UFunction* g_fnKickLINK = nullptr;
+inline SDK::UFunction* g_fnKickOnline = nullptr;
+inline SDK::UFunction* g_fnClientWasKicked = nullptr;
+inline SDK::UFunction* g_fnClientReturnToMainMenuWithTextReason = nullptr;

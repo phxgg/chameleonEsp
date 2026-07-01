@@ -3,11 +3,11 @@
 #pragma warning(disable : 4244)
 #pragma warning(disable : 4305)
 
-void Drawings::DrawBox(int X, int Y, int W, int H, const ImU32 &color, int thickness)
+void Drawings::DrawBox(int X, int Y, int W, int H, const ImU32& color, int thickness)
 {
 	float lineW = (W / 1);
 	float lineH = (H / 1);
-	ImDrawList *Drawlist = ImGui::GetForegroundDrawList();
+	ImDrawList* Drawlist = ImGui::GetForegroundDrawList();
 	// black outlines
 	Drawlist->AddLine(ImVec2(X, Y), ImVec2(X, Y + lineH), ImGui::ColorConvertFloat4ToU32(ImVec4(1 / 255.0, 1 / 255.0, 1 / 255.0, 255 / 255.0)), 3);
 	Drawlist->AddLine(ImVec2(X, Y), ImVec2(X + lineW, Y), ImGui::ColorConvertFloat4ToU32(ImVec4(1 / 255.0, 1 / 255.0, 1 / 255.0, 255 / 255.0)), 3);

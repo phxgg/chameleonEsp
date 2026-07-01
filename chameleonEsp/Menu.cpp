@@ -2,7 +2,7 @@
 
 void Menu::Init()
 {
-	ImGui::SetNextWindowSize({300, 480}, ImGuiCond_Once);
+	ImGui::SetNextWindowSize({ 300, 480 }, ImGuiCond_Once);
 	ImGui::Begin("phxgg esp", nullptr, 0);
 
 	const float footerH = ImGui::GetStyle().ItemSpacing.y + ImGui::GetFrameHeightWithSpacing() + ImGui::GetStyle().WindowPadding.y;
@@ -33,7 +33,7 @@ void Menu::Init()
 			ImGui::Separator();
 			ImGui::Text("Colors");
 
-			if (ImGui::ColorButton("##colVisible", *(ImVec4 *)cfg->colVisible))
+			if (ImGui::ColorButton("##colVisible", *(ImVec4*)cfg->colVisible))
 				ImGui::OpenPopup("popup_colVisible");
 			ImGui::SameLine();
 			ImGui::Text("Visible");
@@ -43,7 +43,7 @@ void Menu::Init()
 				ImGui::EndPopup();
 			}
 
-			if (ImGui::ColorButton("##colNotVisible", *(ImVec4 *)cfg->colNotVisible))
+			if (ImGui::ColorButton("##colNotVisible", *(ImVec4*)cfg->colNotVisible))
 				ImGui::OpenPopup("popup_colNotVisible");
 			ImGui::SameLine();
 			ImGui::Text("Not Visible");
@@ -53,7 +53,7 @@ void Menu::Init()
 				ImGui::EndPopup();
 			}
 
-			if (ImGui::ColorButton("##colLines", *(ImVec4 *)cfg->colLines))
+			if (ImGui::ColorButton("##colLines", *(ImVec4*)cfg->colLines))
 				ImGui::OpenPopup("popup_colLines");
 			ImGui::SameLine();
 			ImGui::Text("Lines");
@@ -63,7 +63,7 @@ void Menu::Init()
 				ImGui::EndPopup();
 			}
 
-			if (ImGui::ColorButton("##colDecoy", *(ImVec4 *)cfg->colDecoy))
+			if (ImGui::ColorButton("##colDecoy", *(ImVec4*)cfg->colDecoy))
 				ImGui::OpenPopup("popup_colDecoy");
 			ImGui::SameLine();
 			ImGui::Text("Decoy");
@@ -126,11 +126,11 @@ void Menu::Init()
 			// Track the pick by actor pointer, not list index - PlayerInfos is rebuilt every frame and
 			// indices can drift. Resolve the selected actor's current name for the combo preview, and
 			// drop the selection if that actor no longer exists this frame.
-			static SDK::AActor *selectedKillActor = nullptr;
-			const char *killPreview = "Select survivor";
+			static SDK::AActor* selectedKillActor = nullptr;
+			const char* killPreview = "Select survivor";
 			bool killStillPresent = false;
 			int survivorCount = 0;
-			for (const auto &p : cheat->PlayerInfos)
+			for (const auto& p : cheat->PlayerInfos)
 			{
 				if (!p.IsSurvivor)
 					continue; // only survivors can be killed
@@ -178,11 +178,11 @@ void Menu::Init()
 			ImGui::Separator();
 			ImGui::Text("Name Changer");
 
-			static SDK::AActor *selectedNameActor = nullptr;
-			const char *namePreview = "Select player";
+			static SDK::AActor* selectedNameActor = nullptr;
+			const char* namePreview = "Select player";
 			std::string selectedName;
 			bool nameStillPresent = false;
-			for (const auto &p : cheat->PlayerInfos)
+			for (const auto& p : cheat->PlayerInfos)
 			{
 				if (p.Actor == selectedNameActor)
 				{

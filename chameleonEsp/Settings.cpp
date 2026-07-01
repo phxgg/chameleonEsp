@@ -25,10 +25,10 @@ void Settings::InitializeSettings()
 	this->bPreventKick = false;
 	this->bInfiniteBullets = false;
 	this->bNoDecoyCooldown = false;
-	float colVisible[4] = {0.0f, 1.0f, 0.0f, 1.0f};
-	float colNotVisible[4] = {0.706f, 0.392f, 1.0f, 1.0f};
-	float colLines[4] = {1.0f, 1.0f, 1.0f, 1.0f};
-	float colDecoy[4] = {1.0f, 0.6f, 0.0f, 1.0f};
+	float colVisible[4] = { 0.0f, 1.0f, 0.0f, 1.0f };
+	float colNotVisible[4] = { 0.706f, 0.392f, 1.0f, 1.0f };
+	float colLines[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
+	float colDecoy[4] = { 1.0f, 0.6f, 0.0f, 1.0f };
 	memcpy(this->colVisible, colVisible, sizeof(colVisible));
 	memcpy(this->colNotVisible, colNotVisible, sizeof(colNotVisible));
 	memcpy(this->colLines, colLines, sizeof(colLines));
