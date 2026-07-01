@@ -38,7 +38,7 @@ C++ Language Standard option: `/std:c++latest`
 - Hunters:
 - - No Gun Cooldown
 - - Infinite Bullets
-- - Magnet -> Press **G** to toggle on/off. This will magnetize survivors in front of the hunter.
+- - Magnet -> Press **G** to toggle on/off (can be bound to a custom key). This will magnetize survivors in front of your POV.
 - - Select Survivor to Kill
 - - Kill All Survivors
 - Dump Bones (for debugging)
