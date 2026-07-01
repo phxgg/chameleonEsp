@@ -25,21 +25,22 @@ void Settings::InitializeSettings()
 	this->bPreventKick = false;
 	this->bInfiniteBullets = false;
 	this->bNoDecoyCooldown = false;
-	float colVisible[4]    = { 0.0f,  1.0f,  0.0f, 1.0f };
-	float colNotVisible[4] = { 0.706f, 0.392f, 1.0f, 1.0f };
-	float colLines[4]      = { 1.0f,  1.0f,  1.0f, 1.0f };
-	float colDecoy[4]      = { 1.0f,  0.6f,  0.0f, 1.0f };
-	memcpy(this->colVisible,    colVisible,    sizeof(colVisible));
+	float colVisible[4] = {0.0f, 1.0f, 0.0f, 1.0f};
+	float colNotVisible[4] = {0.706f, 0.392f, 1.0f, 1.0f};
+	float colLines[4] = {1.0f, 1.0f, 1.0f, 1.0f};
+	float colDecoy[4] = {1.0f, 0.6f, 0.0f, 1.0f};
+	memcpy(this->colVisible, colVisible, sizeof(colVisible));
 	memcpy(this->colNotVisible, colNotVisible, sizeof(colNotVisible));
-	memcpy(this->colLines,      colLines,      sizeof(colLines));
-	memcpy(this->colDecoy,      colDecoy,      sizeof(colDecoy));
+	memcpy(this->colLines, colLines, sizeof(colLines));
+	memcpy(this->colDecoy, colDecoy, sizeof(colDecoy));
 }
 
 void Settings::SaveSettings()
 {
 	_mkdir("C:\\chameleonEsp");
 	fopen_s(&file, ConfigFile, "wb");
-	if (file) {
+	if (file)
+	{
 		// bDumpBones is a transient runtime command, not a persisted setting - write it as
 		// its inert default so a saved config can't carry a pending bone dump.
 		Settings tmp = *this;
@@ -53,11 +54,13 @@ void Settings::SaveSettings()
 void Settings::LoadSettings()
 {
 	fopen_s(&file, ConfigFile, "rb");
-	if (file) {
+	if (file)
+	{
 		fseek(file, 0, SEEK_END);
 		auto size = ftell(file);
 
-		if (size == sizeof(*cfg)) {
+		if (size == sizeof(*cfg))
+		{
 			fseek(file, 0, SEEK_SET);
 			fread(cfg, sizeof(*cfg), 1, file);
 			fclose(file);

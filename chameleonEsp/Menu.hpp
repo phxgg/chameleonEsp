@@ -1,4 +1,5 @@
-class Menu {
+class Menu
+{
 public:
 	void Init();
 };
