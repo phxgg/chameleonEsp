@@ -18,7 +18,7 @@
 SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Spectate_cLeon.WBP_Spectate_cLeon_C
-// 0x0080 (0x03C0 - 0x0340)
+// 0x0090 (0x03D0 - 0x0340)
 class UWBP_Spectate_cLeon_C final : public UUserWidget
 {
 public:
@@ -38,6 +38,9 @@ public:
 	uint8                                         Pad_3A4[0x4];                                      // 0x03A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(class ABP_FirstPersonPlayerState_Online_cLeon_C* PlayerState, class APawn* Pawn)> OnSelectChangeController; // 0x03A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          IsBackType;                                        // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B9[0x7];                                      // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_FirstPersonCharacter_cLeon_Character_C* CurrentSpectateTarget;                         // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFreeCamera;                                      // 0x03C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UpdatePlayers();
@@ -46,6 +49,7 @@ public:
 	void PreConstruct(bool IsDesignTime_PreConstruct);
 	TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*> GetSpectateTarget(TArray<class APawn*>* ReturnPawn);
 	void ExecuteUbergraph_WBP_Spectate_cLeon(int32 EntryPoint);
+	void EmptyCheck();
 	void ConstructGameState();
 	void Construct();
 	void ChangeBackType(bool IsBackType);

@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "ST_cLeonMapData_structs.hpp"
 #include "SteamWorkshopMaps_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "EN_cLeonMainGamePhase_structs.hpp"
+#include "ST_cLeonMapData_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -123,6 +123,15 @@ public:
 };
 DUMPER7_ASSERTS_BP_GameState_cLeon_C_SetMaxTimerTime;
 
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SetCopyTarget
+// 0x0008 (0x0008 - 0x0000)
+struct BP_GameState_cLeon_C_SetCopyTarget final
+{
+public:
+	class ABP_ShowCopy_C*                         CallFunc_GetActorOfClass_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_cLeon_C_SetCopyTarget;
+
 // Function BP_GameState_cLeon.BP_GameState_cLeon_C.RankingWidgetUpdate
 // 0x0001 (0x0001 - 0x0000)
 struct BP_GameState_cLeon_C_RankingWidgetUpdate final
@@ -193,6 +202,26 @@ public:
 	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast; // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_GameState_cLeon_C_OnRep_Filter_Horror;
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_ChickenSearchTarget
+// 0x0040 (0x0040 - 0x0000)
+struct BP_GameState_cLeon_C_OnRep_ChickenSearchTarget final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class ABP_FirstPersonCharacter_cLeon_Character_Survivor_C*> CallFunc_GetAllActorsOfClass_OutActors; // 0x0010(0x0010)(ReferenceParm)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_FirstPersonCharacter_cLeon_Character_Survivor_C* CallFunc_Array_Get_Item;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_cLeon_C_OnRep_ChickenSearchTarget;
 
 // Function BP_GameState_cLeon.BP_GameState_cLeon_C.ModStateUpdate
 // 0x0080 (0x0080 - 0x0000)

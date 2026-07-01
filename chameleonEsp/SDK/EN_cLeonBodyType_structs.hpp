@@ -14,13 +14,14 @@
 SDK_NAMESPACE_START
 
 // UserDefinedEnum EN_cLeonBodyType.EN_cLeonBodyType
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class EN_cLeonBodyType : uint8
 {
 	NewEnumerator0                           = 0,
 	NewEnumerator1                           = 1,
 	NewEnumerator2                           = 2,
-	EN_MAX                                   = 3,
+	NewEnumerator3                           = 3,
+	EN_MAX                                   = 4,
 };
 
 SDK_NAMESPACE_END

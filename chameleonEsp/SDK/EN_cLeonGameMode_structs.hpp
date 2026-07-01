@@ -14,13 +14,14 @@
 SDK_NAMESPACE_START
 
 // UserDefinedEnum EN_cLeonGameMode.EN_cLeonGameMode
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class EN_cLeonGameMode : uint8
 {
 	NewEnumerator2                           = 0,
 	NewEnumerator0                           = 1,
 	NewEnumerator1                           = 2,
-	EN_MAX                                   = 3,
+	NewEnumerator3                           = 3,
+	EN_MAX                                   = 4,
 };
 
 SDK_NAMESPACE_END

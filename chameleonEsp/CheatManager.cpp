@@ -808,8 +808,7 @@ void CheatManager::HandleChangeName(SDK::APawn* myPlayer)
 	if (name.empty() || !myPlayer || !IsObjectValid(myPlayer))
 		return;
 
-	auto* myChar =
-		static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_C*>(myPlayer);
+	auto* myChar = static_cast<SDK::ABP_FirstPersonCharacter_cLeon_Character_C*>(myPlayer);
 	if (!myChar)
 		return;
 
@@ -820,11 +819,9 @@ void CheatManager::HandleChangeName(SDK::APawn* myPlayer)
 	if (!playerState->IsA(SDK::ABP_FirstPersonPlayerState_Online_C::StaticClass()))
 		return;
 
-	auto* onlineState =
-		static_cast<SDK::ABP_FirstPersonPlayerState_Online_C*>(playerState);
+	auto* onlineState = static_cast<SDK::ABP_FirstPersonPlayerState_Online_C*>(playerState);
 
-	SDK::UFunction* fn = onlineState->Class->GetFunction(
-		"BP_FirstPersonPlayerState_Online_C", "SetName(Server)");
+	SDK::UFunction* fn = onlineState->Class->GetFunction("BP_FirstPersonPlayerState_Online_C", "SetName(Server)");
 	if (!fn)
 		return;
 
@@ -834,8 +831,7 @@ void CheatManager::HandleChangeName(SDK::APawn* myPlayer)
 	int wlen = MultiByteToWideChar(CP_UTF8, 0, name.c_str(), -1, nullptr, 0);
 	if (wlen > 1)
 	{
-		wname.resize(
-			wlen - 1); // drop the counted null terminator from the string's length
+		wname.resize(wlen - 1); // drop the counted null terminator from the string's length
 		MultiByteToWideChar(CP_UTF8, 0, name.c_str(), -1, &wname[0], wlen);
 	}
 
@@ -861,8 +857,7 @@ void CheatManager::DumpBones(
 {
 	// Guard the whole pointer chain - any of these can be null on
 	// proxies/streaming actors.
-	if (!baseClass || !baseClass->Mesh || !baseClass->Mesh->SkeletalMesh ||
-		!baseClass->Mesh->SkeletalMesh->Skeleton)
+	if (!baseClass || !baseClass->Mesh || !baseClass->Mesh->SkeletalMesh || !baseClass->Mesh->SkeletalMesh->Skeleton)
 		return;
 
 	FILE* Log = fopen("C:\\bones.txt", "w");

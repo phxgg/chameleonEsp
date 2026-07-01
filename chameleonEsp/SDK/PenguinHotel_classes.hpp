@@ -921,6 +921,9 @@ public:
 	void RelaySpawnDecoyCopyToServer(class URuntimePaintableComponent* PaintComponent, const struct FGuid& CopyId, TSubclassOf<class AActor> DecoyActorClass, const struct FTransform& SpawnTransform, class FName DecoyMeshTag, bool bIncludePose, bool bApplyPoseToPoseableMesh, const struct FRuntimeDecoyCopyPoseSnapshot& SourcePoseSnapshot, int64 RequiredAppliedPaintSequence);
 	void RelayStrokeBatchToServer(class URuntimePaintableComponent* PaintComponent, const struct FPaintStrokeBatch& Batch);
 	void RelayTextureSyncToServer(class URuntimePaintableComponent* PaintComponent);
+	void ServerRelayCompactPaint(class URuntimePaintableComponent* PaintComponent, const struct FCompactPaintStroke& Stroke);
+	void ServerRelayCompactStrokeBatch(class URuntimePaintableComponent* PaintComponent, const struct FCompactPaintStrokeBatch& Batch);
+	void ServerRelayPackedStrokeBatch(class URuntimePaintableComponent* PaintComponent, const TArray<uint8>& PackedData, int32 StrokeCount);
 	void ServerRelayPaint(class URuntimePaintableComponent* PaintComponent, const struct FPaintStroke& Stroke);
 	void ServerRelaySpawnDecoyCopy(class URuntimePaintableComponent* PaintComponent, const struct FGuid& CopyId, TSubclassOf<class AActor> DecoyActorClass, const struct FTransform& SpawnTransform, class FName DecoyMeshTag, bool bIncludePose, bool bApplyPoseToPoseableMesh, const struct FRuntimeDecoyCopyPoseSnapshot& SourcePoseSnapshot, int64 RequiredAppliedPaintSequence);
 	void ServerRelayStrokeBatch(class URuntimePaintableComponent* PaintComponent, const struct FPaintStrokeBatch& Batch);
@@ -1180,8 +1183,9 @@ public:
 	TMulticastInlineDelegate<void(int32 OldCount, int32 NewCount)> OnDecoyActorCountChanged;         // 0x0198(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	int32                                         MaxDecoySpawnCount;                                // 0x01A8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAutoRecordStrokes;                                // 0x01AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoFlushStrokes;                                 // 0x01AD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1AE[0x2];                                      // 0x01AE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bUseCompactPaintReplication;                       // 0x01AD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseExperimentalPackedPaintReplication;            // 0x01AE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoFlushStrokes;                                 // 0x01AF(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AutoFlushThreshold;                                // 0x01B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxBatchSize;                                      // 0x01B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxNetworkBatchesPerTick;                          // 0x01B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1207,6 +1211,12 @@ public:
 	bool ImportChannelFromBytes(EPaintChannel Channel, const TArray<uint8>& Data);
 	bool InitializePaint(class UMeshComponent* MeshComponent);
 	void MulticastApplyDecoyCopyFromLocalView(const struct FGuid& CopyId, class AActor* DecoyActor, class FName DecoyMeshTag, bool bIncludePose, bool bApplyPoseToPoseableMesh, const struct FRuntimeDecoyCopyPoseSnapshot& SourcePoseSnapshot, int64 RequiredAppliedPaintSequence);
+	void MulticastCompactPaint(const struct FCompactPaintStroke& Stroke);
+	void MulticastCompactPaintBatch(const struct FCompactPaintStrokeBatch& Batch);
+	void MulticastCompactPaintBatchToOthers(const struct FCompactPaintStrokeBatch& Batch);
+	void MulticastCompactPaintToOthers(const struct FCompactPaintStroke& Stroke);
+	void MulticastPackedPaintBatch(const TArray<uint8>& PackedData, int32 StrokeCount);
+	void MulticastPackedPaintBatchToOthers(const TArray<uint8>& PackedData, int32 StrokeCount);
 	void MulticastPaint(const struct FPaintStroke& Stroke);
 	void MulticastPaintBatch(const struct FPaintStrokeBatch& Batch);
 	void MulticastPaintBatchToOthers(const struct FPaintStrokeBatch& Batch);
@@ -1228,6 +1238,9 @@ public:
 	void SendCustomStrokeBatchToServer(const struct FPaintStrokeBatch& Batch);
 	void SendPaintToServer(const struct FVector2D& Uv, const struct FPaintChannelData& ChannelData, EPaintChannel Channel);
 	void SendStrokeBatchToServer();
+	void ServerCompactPaint(const struct FCompactPaintStroke& Stroke);
+	void ServerCompactPaintBatch(const struct FCompactPaintStrokeBatch& Batch);
+	void ServerPackedPaintBatch(const TArray<uint8>& PackedData, int32 StrokeCount);
 	void ServerPaint(const struct FPaintStroke& Stroke);
 	void ServerPaintBatch(const struct FPaintStrokeBatch& Batch);
 	void ServerRequestTextureSync();

@@ -300,6 +300,20 @@ void ABP_GameState_cLeon_C::SetMaxTimerTime(int32 MaxTimerTime)
 }
 
 
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.SetCopyTarget
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::SetCopyTarget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "SetCopyTarget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_GameState_cLeon.BP_GameState_cLeon_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -511,6 +525,20 @@ void ABP_GameState_cLeon_C::OnRep_CurrentPreviewMapData()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_CurrentPreviewMapData");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_cLeon.BP_GameState_cLeon_C.OnRep_ChickenSearchTarget
+// (HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_cLeon_C::OnRep_ChickenSearchTarget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_cLeon_C", "OnRep_ChickenSearchTarget");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

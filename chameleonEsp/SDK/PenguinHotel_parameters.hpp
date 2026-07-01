@@ -1388,6 +1388,38 @@ public:
 };
 DUMPER7_ASSERTS_RuntimePaintRelayComponent_RelayTextureSyncToServer;
 
+// Function PenguinHotel.RuntimePaintRelayComponent.ServerRelayCompactPaint
+// 0x0040 (0x0040 - 0x0000)
+struct RuntimePaintRelayComponent_ServerRelayCompactPaint final
+{
+public:
+	class URuntimePaintableComponent*             PaintComponent;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCompactPaintStroke                    Stroke;                                            // 0x0008(0x0038)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RuntimePaintRelayComponent_ServerRelayCompactPaint;
+
+// Function PenguinHotel.RuntimePaintRelayComponent.ServerRelayCompactStrokeBatch
+// 0x0018 (0x0018 - 0x0000)
+struct RuntimePaintRelayComponent_ServerRelayCompactStrokeBatch final
+{
+public:
+	class URuntimePaintableComponent*             PaintComponent;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCompactPaintStrokeBatch               Batch;                                             // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RuntimePaintRelayComponent_ServerRelayCompactStrokeBatch;
+
+// Function PenguinHotel.RuntimePaintRelayComponent.ServerRelayPackedStrokeBatch
+// 0x0020 (0x0020 - 0x0000)
+struct RuntimePaintRelayComponent_ServerRelayPackedStrokeBatch final
+{
+public:
+	class URuntimePaintableComponent*             PaintComponent;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 PackedData;                                        // 0x0008(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         StrokeCount;                                       // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RuntimePaintRelayComponent_ServerRelayPackedStrokeBatch;
+
 // Function PenguinHotel.RuntimePaintRelayComponent.ServerRelayPaint
 // 0x00E8 (0x00E8 - 0x0000)
 struct RuntimePaintRelayComponent_ServerRelayPaint final
@@ -2025,6 +2057,64 @@ public:
 };
 DUMPER7_ASSERTS_RuntimePaintableComponent_MulticastApplyDecoyCopyFromLocalView;
 
+// Function PenguinHotel.RuntimePaintableComponent.MulticastCompactPaint
+// 0x0038 (0x0038 - 0x0000)
+struct RuntimePaintableComponent_MulticastCompactPaint final
+{
+public:
+	struct FCompactPaintStroke                    Stroke;                                            // 0x0000(0x0038)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RuntimePaintableComponent_MulticastCompactPaint;
+
+// Function PenguinHotel.RuntimePaintableComponent.MulticastCompactPaintBatch
+// 0x0010 (0x0010 - 0x0000)
+struct RuntimePaintableComponent_MulticastCompactPaintBatch final
+{
+public:
+	struct FCompactPaintStrokeBatch               Batch;                                             // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RuntimePaintableComponent_MulticastCompactPaintBatch;
+
+// Function PenguinHotel.RuntimePaintableComponent.MulticastCompactPaintBatchToOthers
+// 0x0010 (0x0010 - 0x0000)
+struct RuntimePaintableComponent_MulticastCompactPaintBatchToOthers final
+{
+public:
+	struct FCompactPaintStrokeBatch               Batch;                                             // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RuntimePaintableComponent_MulticastCompactPaintBatchToOthers;
+
+// Function PenguinHotel.RuntimePaintableComponent.MulticastCompactPaintToOthers
+// 0x0038 (0x0038 - 0x0000)
+struct RuntimePaintableComponent_MulticastCompactPaintToOthers final
+{
+public:
+	struct FCompactPaintStroke                    Stroke;                                            // 0x0000(0x0038)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RuntimePaintableComponent_MulticastCompactPaintToOthers;
+
+// Function PenguinHotel.RuntimePaintableComponent.MulticastPackedPaintBatch
+// 0x0018 (0x0018 - 0x0000)
+struct RuntimePaintableComponent_MulticastPackedPaintBatch final
+{
+public:
+	TArray<uint8>                                 PackedData;                                        // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         StrokeCount;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RuntimePaintableComponent_MulticastPackedPaintBatch;
+
+// Function PenguinHotel.RuntimePaintableComponent.MulticastPackedPaintBatchToOthers
+// 0x0018 (0x0018 - 0x0000)
+struct RuntimePaintableComponent_MulticastPackedPaintBatchToOthers final
+{
+public:
+	TArray<uint8>                                 PackedData;                                        // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         StrokeCount;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RuntimePaintableComponent_MulticastPackedPaintBatchToOthers;
+
 // Function PenguinHotel.RuntimePaintableComponent.MulticastPaint
 // 0x00E0 (0x00E0 - 0x0000)
 struct RuntimePaintableComponent_MulticastPaint final
@@ -2222,6 +2312,35 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_RuntimePaintableComponent_SendPaintToServer;
+
+// Function PenguinHotel.RuntimePaintableComponent.ServerCompactPaint
+// 0x0038 (0x0038 - 0x0000)
+struct RuntimePaintableComponent_ServerCompactPaint final
+{
+public:
+	struct FCompactPaintStroke                    Stroke;                                            // 0x0000(0x0038)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RuntimePaintableComponent_ServerCompactPaint;
+
+// Function PenguinHotel.RuntimePaintableComponent.ServerCompactPaintBatch
+// 0x0010 (0x0010 - 0x0000)
+struct RuntimePaintableComponent_ServerCompactPaintBatch final
+{
+public:
+	struct FCompactPaintStrokeBatch               Batch;                                             // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_RuntimePaintableComponent_ServerCompactPaintBatch;
+
+// Function PenguinHotel.RuntimePaintableComponent.ServerPackedPaintBatch
+// 0x0018 (0x0018 - 0x0000)
+struct RuntimePaintableComponent_ServerPackedPaintBatch final
+{
+public:
+	TArray<uint8>                                 PackedData;                                        // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         StrokeCount;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_RuntimePaintableComponent_ServerPackedPaintBatch;
 
 // Function PenguinHotel.RuntimePaintableComponent.ServerPaint
 // 0x00E0 (0x00E0 - 0x0000)

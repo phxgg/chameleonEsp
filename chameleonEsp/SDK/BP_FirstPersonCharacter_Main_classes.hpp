@@ -11,16 +11,16 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "EN_StanType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
 #include "PhysicsCore_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
 #include "Mover_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 #include "MoverExamples_classes.hpp"
 #include "EN_DamageType_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
 #include "DeathType_structs.hpp"
+#include "EN_StanType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -55,7 +55,7 @@ public:
 	class UBPC_LockOnSystem_C*                    BPC_LockOnSystem;                                  // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   LeftItemPositon_3;                                 // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   LeftItemPositon_2;                                 // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USpotLightComponent*                    spotlight;                                         // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    SpotLight;                                         // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   LeftItemPositon_1;                                 // 0x04B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   RightItemPositon;                                  // 0x04C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 FirstPersonMesh;                                   // 0x04C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -221,6 +221,7 @@ public:
 	bool                                          IsCrouching;                                       // 0x0B2C(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPossessed;                                       // 0x0B2D(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	bool                                          DontSendCameraPitch;                               // 0x0B2E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseYawRotation;                                    // 0x0B2F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_FirstPersonCharacter_Main(int32 EntryPoint);

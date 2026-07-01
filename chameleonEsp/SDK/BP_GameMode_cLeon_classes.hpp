@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_FirstPersonGameMode_V2_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_FirstPersonGameMode_V2_classes.hpp"
 #include "EN_cLeonBodyType_structs.hpp"
 #include "EN_cLeonGameMode_structs.hpp"
 
@@ -38,20 +38,24 @@ public:
 	int32                                         HunterWaitTime;                                    // 0x040C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CheckAnswersTimeDefault;                           // 0x0410(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CheckAnswersTime;                                  // 0x0414(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CurrentPhase;                                      // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         GameModeIndex;                                     // 0x0420(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanOpenOption;                                     // 0x0424(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_425[0x3];                                      // 0x0425(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        BodyChangeDelay;                                   // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TestInt;                                           // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentGameMapIndex;                               // 0x0434(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanModMap;                                         // 0x0438(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsModUse;                                          // 0x0439(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43A[0x6];                                      // 0x043A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 SurvivorClass;                                     // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         GameModeIndex;                                     // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanOpenOption;                                     // 0x041C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41D[0x3];                                      // 0x041D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BodyChangeDelay;                                   // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TestInt;                                           // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentGameMapIndex;                               // 0x042C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanModMap;                                         // 0x0430(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsModUse;                                          // 0x0431(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_432[0x6];                                      // 0x0432(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 SurvivorClass;                                     // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         ChickenHunterWait;                                 // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ChickenMainSearch;                                 // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void WinnerCheck();
+	void TimerMinusChickenPhase_3();
+	void TimerMinusChickenPhase_2();
+	void TimerMinusChickenPhase_1();
 	void TimerMinus();
 	void TeleportLobby();
 	void TeleportHunter();
@@ -79,6 +83,7 @@ public:
 	void K2_OnLogout(class AController* ExitingController_K2_OnLogout);
 	void IsEndGame();
 	void HunterWaitTimerMinus();
+	void GetRandomLiveSurvivor(class ABP_FirstPersonCharacter_cLeon_Character_Survivor_C** SearchTargetSurvivor);
 	void GetMaxHunterNum(int32* MaxHunterNum);
 	void GetMaxBulletNum(int32* MaxBulletValue);
 	void GetMapIndex(int32* SelectMapIndex, class UBP_cLeonMapData_C** SelectMapDatas, int32* GameMapIndex, class UBP_cLeonMapData_C** GameMapDatas);
@@ -86,6 +91,7 @@ public:
 	void GetGameTime(int32* TimerDefault);
 	void GetGameModeIndex(int32* GameModeIndex);
 	void GetDoubleWinnerPlayer(class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C** WinnerPlayerActor);
+	void GetChickenWinnerPlayer(class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C** WinnerPlayerActor);
 	void GetCheckAnswersTime(int32* CheckAnswersTime);
 	void GameTimerClear();
 	void GameStateCheck(bool* IsGameEnd, class FName* WinnerRole);
@@ -96,7 +102,11 @@ public:
 	void ExecuteUbergraph_BP_GameMode_cLeon(int32 EntryPoint);
 	void CountDownStart();
 	void ControllerArrayToPlayerState(TArray<class ABP_PlayerController_cLeon_C*>& PlayerController, TArray<class ABP_FirstPersonPlayerState_Online_cLeon_C*>* PlayerStateArray);
+	void ChickenTeleport_GotoMap();
+	void ChickenTeleport_BackHome();
+	void ChickenSearchStop();
 	void CheckAnswerTimeMinus();
+	void ChangeSpectateBodyAll(bool KeepBody);
 	void BodyChange(EN_cLeonBodyType TargetBody, class ABP_PlayerController_cLeon_C* TargetController, const struct FTransform& OverrideSpawnTransform, bool KeepBody, bool BodyVisibility, class ABP_FirstPersonCharacter_cLeon_Character_C** CreateCharacter);
 
 public:

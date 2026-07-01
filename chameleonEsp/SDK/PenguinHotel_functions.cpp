@@ -4117,6 +4117,89 @@ void URuntimePaintRelayComponent::RelayTextureSyncToServer(class URuntimePaintab
 }
 
 
+// Function PenguinHotel.RuntimePaintRelayComponent.ServerRelayCompactPaint
+// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// class URuntimePaintableComponent*       PaintComponent                                         (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FCompactPaintStroke&       Stroke                                                 (Parm, NoDestructor, NativeAccessSpecifierPublic)
+
+void URuntimePaintRelayComponent::ServerRelayCompactPaint(class URuntimePaintableComponent* PaintComponent, const struct FCompactPaintStroke& Stroke)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RuntimePaintRelayComponent", "ServerRelayCompactPaint");
+
+	Params::RuntimePaintRelayComponent_ServerRelayCompactPaint Parms{};
+
+	Parms.PaintComponent = PaintComponent;
+	Parms.Stroke = std::move(Stroke);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.RuntimePaintRelayComponent.ServerRelayCompactStrokeBatch
+// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// class URuntimePaintableComponent*       PaintComponent                                         (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FCompactPaintStrokeBatch&  Batch                                                  (Parm, NativeAccessSpecifierPublic)
+
+void URuntimePaintRelayComponent::ServerRelayCompactStrokeBatch(class URuntimePaintableComponent* PaintComponent, const struct FCompactPaintStrokeBatch& Batch)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RuntimePaintRelayComponent", "ServerRelayCompactStrokeBatch");
+
+	Params::RuntimePaintRelayComponent_ServerRelayCompactStrokeBatch Parms{};
+
+	Parms.PaintComponent = PaintComponent;
+	Parms.Batch = std::move(Batch);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.RuntimePaintRelayComponent.ServerRelayPackedStrokeBatch
+// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// class URuntimePaintableComponent*       PaintComponent                                         (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<uint8>&                    PackedData                                             (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   StrokeCount                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URuntimePaintRelayComponent::ServerRelayPackedStrokeBatch(class URuntimePaintableComponent* PaintComponent, const TArray<uint8>& PackedData, int32 StrokeCount)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RuntimePaintRelayComponent", "ServerRelayPackedStrokeBatch");
+
+	Params::RuntimePaintRelayComponent_ServerRelayPackedStrokeBatch Parms{};
+
+	Parms.PaintComponent = PaintComponent;
+	Parms.PackedData = std::move(PackedData);
+	Parms.StrokeCount = StrokeCount;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PenguinHotel.RuntimePaintRelayComponent.ServerRelayPaint
 // (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
@@ -6082,6 +6165,160 @@ void URuntimePaintableComponent::MulticastApplyDecoyCopyFromLocalView(const stru
 }
 
 
+// Function PenguinHotel.RuntimePaintableComponent.MulticastCompactPaint
+// (Net, NetReliable, Native, Event, NetMulticast, Protected)
+// Parameters:
+// const struct FCompactPaintStroke&       Stroke                                                 (Parm, NoDestructor, NativeAccessSpecifierPublic)
+
+void URuntimePaintableComponent::MulticastCompactPaint(const struct FCompactPaintStroke& Stroke)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RuntimePaintableComponent", "MulticastCompactPaint");
+
+	Params::RuntimePaintableComponent_MulticastCompactPaint Parms{};
+
+	Parms.Stroke = std::move(Stroke);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.RuntimePaintableComponent.MulticastCompactPaintBatch
+// (Net, NetReliable, Native, Event, NetMulticast, Protected)
+// Parameters:
+// const struct FCompactPaintStrokeBatch&  Batch                                                  (Parm, NativeAccessSpecifierPublic)
+
+void URuntimePaintableComponent::MulticastCompactPaintBatch(const struct FCompactPaintStrokeBatch& Batch)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RuntimePaintableComponent", "MulticastCompactPaintBatch");
+
+	Params::RuntimePaintableComponent_MulticastCompactPaintBatch Parms{};
+
+	Parms.Batch = std::move(Batch);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.RuntimePaintableComponent.MulticastCompactPaintBatchToOthers
+// (Net, NetReliable, Native, Event, NetMulticast, Protected)
+// Parameters:
+// const struct FCompactPaintStrokeBatch&  Batch                                                  (Parm, NativeAccessSpecifierPublic)
+
+void URuntimePaintableComponent::MulticastCompactPaintBatchToOthers(const struct FCompactPaintStrokeBatch& Batch)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RuntimePaintableComponent", "MulticastCompactPaintBatchToOthers");
+
+	Params::RuntimePaintableComponent_MulticastCompactPaintBatchToOthers Parms{};
+
+	Parms.Batch = std::move(Batch);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.RuntimePaintableComponent.MulticastCompactPaintToOthers
+// (Net, NetReliable, Native, Event, NetMulticast, Protected)
+// Parameters:
+// const struct FCompactPaintStroke&       Stroke                                                 (Parm, NoDestructor, NativeAccessSpecifierPublic)
+
+void URuntimePaintableComponent::MulticastCompactPaintToOthers(const struct FCompactPaintStroke& Stroke)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RuntimePaintableComponent", "MulticastCompactPaintToOthers");
+
+	Params::RuntimePaintableComponent_MulticastCompactPaintToOthers Parms{};
+
+	Parms.Stroke = std::move(Stroke);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.RuntimePaintableComponent.MulticastPackedPaintBatch
+// (Net, NetReliable, Native, Event, NetMulticast, Protected)
+// Parameters:
+// const TArray<uint8>&                    PackedData                                             (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   StrokeCount                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URuntimePaintableComponent::MulticastPackedPaintBatch(const TArray<uint8>& PackedData, int32 StrokeCount)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RuntimePaintableComponent", "MulticastPackedPaintBatch");
+
+	Params::RuntimePaintableComponent_MulticastPackedPaintBatch Parms{};
+
+	Parms.PackedData = std::move(PackedData);
+	Parms.StrokeCount = StrokeCount;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.RuntimePaintableComponent.MulticastPackedPaintBatchToOthers
+// (Net, NetReliable, Native, Event, NetMulticast, Protected)
+// Parameters:
+// const TArray<uint8>&                    PackedData                                             (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   StrokeCount                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URuntimePaintableComponent::MulticastPackedPaintBatchToOthers(const TArray<uint8>& PackedData, int32 StrokeCount)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RuntimePaintableComponent", "MulticastPackedPaintBatchToOthers");
+
+	Params::RuntimePaintableComponent_MulticastPackedPaintBatchToOthers Parms{};
+
+	Parms.PackedData = std::move(PackedData);
+	Parms.StrokeCount = StrokeCount;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PenguinHotel.RuntimePaintableComponent.MulticastPaint
 // (Net, NetReliable, Native, Event, NetMulticast, Protected)
 // Parameters:
@@ -6633,6 +6870,83 @@ void URuntimePaintableComponent::SendStrokeBatchToServer()
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.RuntimePaintableComponent.ServerCompactPaint
+// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// const struct FCompactPaintStroke&       Stroke                                                 (Parm, NoDestructor, NativeAccessSpecifierPublic)
+
+void URuntimePaintableComponent::ServerCompactPaint(const struct FCompactPaintStroke& Stroke)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RuntimePaintableComponent", "ServerCompactPaint");
+
+	Params::RuntimePaintableComponent_ServerCompactPaint Parms{};
+
+	Parms.Stroke = std::move(Stroke);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.RuntimePaintableComponent.ServerCompactPaintBatch
+// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// const struct FCompactPaintStrokeBatch&  Batch                                                  (Parm, NativeAccessSpecifierPublic)
+
+void URuntimePaintableComponent::ServerCompactPaintBatch(const struct FCompactPaintStrokeBatch& Batch)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RuntimePaintableComponent", "ServerCompactPaintBatch");
+
+	Params::RuntimePaintableComponent_ServerCompactPaintBatch Parms{};
+
+	Parms.Batch = std::move(Batch);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PenguinHotel.RuntimePaintableComponent.ServerPackedPaintBatch
+// (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
+// Parameters:
+// const TArray<uint8>&                    PackedData                                             (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   StrokeCount                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URuntimePaintableComponent::ServerPackedPaintBatch(const TArray<uint8>& PackedData, int32 StrokeCount)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RuntimePaintableComponent", "ServerPackedPaintBatch");
+
+	Params::RuntimePaintableComponent_ServerPackedPaintBatch Parms{};
+
+	Parms.PackedData = std::move(PackedData);
+	Parms.StrokeCount = StrokeCount;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }

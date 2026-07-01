@@ -49,6 +49,13 @@ enum class EMetaSoundBuilderResult : uint8
 	EMetaSoundBuilderResult_MAX              = 2,
 };
 
+// ScriptStruct MetasoundEngine.MetaSoundBuilderNodeInputHandle
+// 0x0000 (0x0020 - 0x0020)
+struct FMetaSoundBuilderNodeInputHandle final : public FMetasoundFrontendVertexHandle
+{
+};
+DUMPER7_ASSERTS_FMetaSoundBuilderNodeInputHandle;
+
 // ScriptStruct MetasoundEngine.MetaSoundOutput
 // 0x0008 (0x0010 - 0x0008)
 struct alignas(0x08) FMetaSoundOutput final : public FSoundGeneratorOutput
@@ -108,13 +115,6 @@ public:
 	uint8                                         Pad_10[0x20];                                      // 0x0010(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FMetaSoundAsyncAssetDependencies;
-
-// ScriptStruct MetasoundEngine.MetaSoundBuilderNodeInputHandle
-// 0x0000 (0x0020 - 0x0020)
-struct FMetaSoundBuilderNodeInputHandle final : public FMetasoundFrontendVertexHandle
-{
-};
-DUMPER7_ASSERTS_FMetaSoundBuilderNodeInputHandle;
 
 // ScriptStruct MetasoundEngine.MetaSoundBuilderNodeOutputHandle
 // 0x0000 (0x0020 - 0x0020)

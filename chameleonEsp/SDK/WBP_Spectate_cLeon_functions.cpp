@@ -134,6 +134,20 @@ void UWBP_Spectate_cLeon_C::ExecuteUbergraph_WBP_Spectate_cLeon(int32 EntryPoint
 }
 
 
+// Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.EmptyCheck
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Spectate_cLeon_C::EmptyCheck()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Spectate_cLeon_C", "EmptyCheck");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_Spectate_cLeon.WBP_Spectate_cLeon_C.ConstructGameState
 // (BlueprintCallable, BlueprintEvent)
 

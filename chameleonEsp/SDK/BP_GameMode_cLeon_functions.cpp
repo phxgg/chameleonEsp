@@ -30,6 +30,48 @@ void ABP_GameMode_cLeon_C::WinnerCheck()
 }
 
 
+// Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.TimerMinusChickenPhase_3
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameMode_cLeon_C::TimerMinusChickenPhase_3()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameMode_cLeon_C", "TimerMinusChickenPhase_3");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.TimerMinusChickenPhase_2
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameMode_cLeon_C::TimerMinusChickenPhase_2()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameMode_cLeon_C", "TimerMinusChickenPhase_2");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.TimerMinusChickenPhase_1
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameMode_cLeon_C::TimerMinusChickenPhase_1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameMode_cLeon_C", "TimerMinusChickenPhase_1");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.TimerMinus
 // (BlueprintCallable, BlueprintEvent)
 
@@ -496,6 +538,27 @@ void ABP_GameMode_cLeon_C::HunterWaitTimerMinus()
 }
 
 
+// Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.GetRandomLiveSurvivor
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonCharacter_cLeon_Character_Survivor_C**SearchTargetSurvivor                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameMode_cLeon_C::GetRandomLiveSurvivor(class ABP_FirstPersonCharacter_cLeon_Character_Survivor_C** SearchTargetSurvivor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameMode_cLeon_C", "GetRandomLiveSurvivor");
+
+	Params::BP_GameMode_cLeon_C_GetRandomLiveSurvivor Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (SearchTargetSurvivor != nullptr)
+		*SearchTargetSurvivor = Parms.SearchTargetSurvivor;
+}
+
+
 // Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.GetMaxHunterNum
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -647,6 +710,27 @@ void ABP_GameMode_cLeon_C::GetDoubleWinnerPlayer(class ABP_FirstPersonCharacter_
 		Func = Class->GetFunction("BP_GameMode_cLeon_C", "GetDoubleWinnerPlayer");
 
 	Params::BP_GameMode_cLeon_C_GetDoubleWinnerPlayer Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (WinnerPlayerActor != nullptr)
+		*WinnerPlayerActor = Parms.WinnerPlayerActor;
+}
+
+
+// Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.GetChickenWinnerPlayer
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C**WinnerPlayerActor                                      (Parm, OutParm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+
+void ABP_GameMode_cLeon_C::GetChickenWinnerPlayer(class ABP_FirstPersonCharacter_cLeon_Character_Hunter_C** WinnerPlayerActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameMode_cLeon_C", "GetChickenWinnerPlayer");
+
+	Params::BP_GameMode_cLeon_C_GetChickenWinnerPlayer Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -831,6 +915,48 @@ void ABP_GameMode_cLeon_C::ControllerArrayToPlayerState(TArray<class ABP_PlayerC
 }
 
 
+// Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.ChickenTeleport_GotoMap
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameMode_cLeon_C::ChickenTeleport_GotoMap()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameMode_cLeon_C", "ChickenTeleport_GotoMap");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.ChickenTeleport_BackHome
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameMode_cLeon_C::ChickenTeleport_BackHome()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameMode_cLeon_C", "ChickenTeleport_BackHome");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.ChickenSearchStop
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameMode_cLeon_C::ChickenSearchStop()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameMode_cLeon_C", "ChickenSearchStop");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.CheckAnswerTimeMinus
 // (BlueprintCallable, BlueprintEvent)
 
@@ -842,6 +968,26 @@ void ABP_GameMode_cLeon_C::CheckAnswerTimeMinus()
 		Func = Class->GetFunction("BP_GameMode_cLeon_C", "CheckAnswerTimeMinus");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameMode_cLeon.BP_GameMode_cLeon_C.ChangeSpectateBodyAll
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    KeepBody                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameMode_cLeon_C::ChangeSpectateBodyAll(bool KeepBody)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameMode_cLeon_C", "ChangeSpectateBodyAll");
+
+	Params::BP_GameMode_cLeon_C_ChangeSpectateBodyAll Parms{};
+
+	Parms.KeepBody = KeepBody;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

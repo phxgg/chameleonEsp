@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "PenguinHotel_structs.hpp"
-#include "EN_LINK_PlayerStateValueType_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "EN_LINK_PlayerStateValueType_structs.hpp"
 
 
 SDK_NAMESPACE_START
