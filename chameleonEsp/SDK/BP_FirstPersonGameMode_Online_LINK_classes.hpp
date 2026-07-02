@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "EN_LINK_GamePhase_structs.hpp"
 #include "BP_FirstPersonGameMode_V2_classes.hpp"
+#include "EN_LINK_GamePhase_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "AIModule_classes.hpp"
-#include "EN_StrafingDirection_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EN_StrafingDirection_structs.hpp"
+#include "AIModule_classes.hpp"
 
 
 SDK_NAMESPACE_START

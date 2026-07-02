@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "SteamWorkshopMaps_structs.hpp"
-#include "EN_cLeonMainGamePhase_structs.hpp"
 #include "ST_cLeonMapData_structs.hpp"
+#include "SteamWorkshopMaps_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EN_cLeonMainGamePhase_structs.hpp"
 
 
 SDK_NAMESPACE_START

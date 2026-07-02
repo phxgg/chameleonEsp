@@ -9,26 +9,32 @@
 // FORWARD DECLARATIONS
 
 
-namespace ABP_Bell { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace WBP_LockOn_0 { class UWBP_LockOn_C; }
+namespace ABP_MagicHand { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace GameplayAbilities { struct FServerAbilityRPCBatch; }
 
-namespace WBP_LockOn { class UWBP_LockOn_C; }
-
-namespace ABP_MagicHand { struct FAnimBlueprintGeneratedConstantData; }
+namespace WBP_LockOn_0 { class UWBP_LockOn_C; }
 
 namespace ABP_FPS_HandBone_Ver2_Skeletal { struct FAnimBlueprintGeneratedConstantData; }
 
+namespace ABP_Bell { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ABP_MainCharacter_PaintMan
+namespace WBP_LockOn { class UWBP_LockOn_C; }
+
+
+namespace ABP_BigPen
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_LINK_Penguin_V2
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
 }
 
-namespace ABP_LINK_Penguin_V2
+namespace ABP_MainCharacter_PaintMan
 {
 	struct FAnimBlueprintGeneratedMutableData;
 	struct FAnimBlueprintGeneratedConstantData;
@@ -36,14 +42,8 @@ namespace ABP_LINK_Penguin_V2
 
 namespace ABP_MiniPenguin
 {
-	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
-}
-
-namespace ABP_EnemyPenguin
-{
 	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
 }
 
 namespace ABP_Penguin
@@ -52,14 +52,14 @@ namespace ABP_Penguin
 	struct FAnimBlueprintGeneratedConstantData;
 }
 
-namespace ABP_BigPen
-{
-	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
-}
-
 namespace ABP_MainCharacter_PaintMan_low
 {
-	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_EnemyPenguin
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
 }
