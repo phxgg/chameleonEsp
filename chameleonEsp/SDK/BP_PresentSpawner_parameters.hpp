@@ -17,65 +17,23 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_PresentSpawner.BP_PresentSpawner_C.UpdateOverlapState
-// 0x00D0 (0x00D0 - 0x0000)
-struct BP_PresentSpawner_C_UpdateOverlapState final
-{
-public:
-	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     Temp_object_Variable;                              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     Temp_object_Variable_1;                            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         Temp_object_Variable_2;                            // 0x0018(0x0010)(ConstParm, ReferenceParm)
-	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x0028(0x0010)(ConstParm, ReferenceParm)
-	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0040(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         CallFunc_ComponentOverlapActors_OutActors;         // 0x00A0(0x0010)(ReferenceParm)
-	bool                                          CallFunc_ComponentOverlapActors_ReturnValue;       // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     K2Node_Select_Default;                             // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_PresentSpawner_C_UpdateOverlapState;
-
-// Function BP_PresentSpawner.BP_PresentSpawner_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_PresentSpawner_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_PresentSpawner_C_ReceiveTick;
-
-// Function BP_PresentSpawner.BP_PresentSpawner_C.IsHouseAllGoal
-// 0x0038 (0x0038 - 0x0000)
-struct BP_PresentSpawner_C_IsHouseAllGoal final
-{
-public:
-	bool                                          AllGoal;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class ABP_GoalHouse_C*>                CallFunc_GetAllActorsOfClass_OutActors;            // 0x0010(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_GoalHouse_C*                        CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_PresentSpawner_C_IsHouseAllGoal;
-
-// Function BP_PresentSpawner.BP_PresentSpawner_C.GoadGiftBox
+// Function BP_PresentSpawner.BP_PresentSpawner_C.AddQueue
 // 0x0008 (0x0008 - 0x0000)
-struct BP_PresentSpawner_C_GoadGiftBox final
+struct BP_PresentSpawner_C_AddQueue final
 {
 public:
-	class AActor*                                 GiftBox;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	const class ABP_GoalHouse_C*                  HouseActor;                                        // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_PresentSpawner_C_GoadGiftBox;
+DUMPER7_ASSERTS_BP_PresentSpawner_C_AddQueue;
+
+// Function BP_PresentSpawner.BP_PresentSpawner_C.DestroyActor
+// 0x0008 (0x0008 - 0x0000)
+struct BP_PresentSpawner_C_DestroyActor final
+{
+public:
+	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PresentSpawner_C_DestroyActor;
 
 // Function BP_PresentSpawner.BP_PresentSpawner_C.ExecuteUbergraph_BP_PresentSpawner
 // 0x01E0 (0x01E0 - 0x0000)
@@ -128,23 +86,65 @@ public:
 };
 DUMPER7_ASSERTS_BP_PresentSpawner_C_ExecuteUbergraph_BP_PresentSpawner;
 
-// Function BP_PresentSpawner.BP_PresentSpawner_C.DestroyActor
+// Function BP_PresentSpawner.BP_PresentSpawner_C.GoadGiftBox
 // 0x0008 (0x0008 - 0x0000)
-struct BP_PresentSpawner_C_DestroyActor final
+struct BP_PresentSpawner_C_GoadGiftBox final
 {
 public:
-	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 GiftBox;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_PresentSpawner_C_DestroyActor;
+DUMPER7_ASSERTS_BP_PresentSpawner_C_GoadGiftBox;
 
-// Function BP_PresentSpawner.BP_PresentSpawner_C.AddQueue
-// 0x0008 (0x0008 - 0x0000)
-struct BP_PresentSpawner_C_AddQueue final
+// Function BP_PresentSpawner.BP_PresentSpawner_C.IsHouseAllGoal
+// 0x0038 (0x0038 - 0x0000)
+struct BP_PresentSpawner_C_IsHouseAllGoal final
 {
 public:
-	const class ABP_GoalHouse_C*                  HouseActor;                                        // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+	bool                                          AllGoal;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class ABP_GoalHouse_C*>                CallFunc_GetAllActorsOfClass_OutActors;            // 0x0010(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_GoalHouse_C*                        CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_PresentSpawner_C_AddQueue;
+DUMPER7_ASSERTS_BP_PresentSpawner_C_IsHouseAllGoal;
+
+// Function BP_PresentSpawner.BP_PresentSpawner_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_PresentSpawner_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PresentSpawner_C_ReceiveTick;
+
+// Function BP_PresentSpawner.BP_PresentSpawner_C.UpdateOverlapState
+// 0x00D0 (0x00D0 - 0x0000)
+struct BP_PresentSpawner_C_UpdateOverlapState final
+{
+public:
+	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     Temp_object_Variable;                              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     Temp_object_Variable_1;                            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         Temp_object_Variable_2;                            // 0x0018(0x0010)(ConstParm, ReferenceParm)
+	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x0028(0x0010)(ConstParm, ReferenceParm)
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0040(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         CallFunc_ComponentOverlapActors_OutActors;         // 0x00A0(0x0010)(ReferenceParm)
+	bool                                          CallFunc_ComponentOverlapActors_ReturnValue;       // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     K2Node_Select_Default;                             // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PresentSpawner_C_UpdateOverlapState;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

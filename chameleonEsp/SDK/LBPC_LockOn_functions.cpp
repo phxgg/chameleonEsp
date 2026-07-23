@@ -16,17 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function LBPC_LockOn.LBPC_LockOn_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// Function LBPC_LockOn.LBPC_LockOn_C.ExecuteUbergraph_LBPC_LockOn
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULBPC_LockOn_C::ReceiveBeginPlay()
+void ULBPC_LockOn_C::ExecuteUbergraph_LBPC_LockOn(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_LockOn_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("LBPC_LockOn_C", "ExecuteUbergraph_LBPC_LockOn");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::LBPC_LockOn_C_ExecuteUbergraph_LBPC_LockOn Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -50,23 +56,17 @@ void ULBPC_LockOn_C::LockOnWidgetState(bool State)
 }
 
 
-// Function LBPC_LockOn.LBPC_LockOn_C.ExecuteUbergraph_LBPC_LockOn
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function LBPC_LockOn.LBPC_LockOn_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void ULBPC_LockOn_C::ExecuteUbergraph_LBPC_LockOn(int32 EntryPoint)
+void ULBPC_LockOn_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_LockOn_C", "ExecuteUbergraph_LBPC_LockOn");
+		Func = Class->GetFunction("LBPC_LockOn_C", "ReceiveBeginPlay");
 
-	Params::LBPC_LockOn_C_ExecuteUbergraph_LBPC_LockOn Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -19,12 +19,12 @@ SDK_NAMESPACE_START
 // Function ANT_AttackNotify.ANT_AttackNotify_C.Received_Notify
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class USkeletalMeshComponent*           MeshComp_Received_Notify                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UAnimSequenceBase*                Animation_Received_Notify                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FAnimNotifyEventReference& EventReference_Received_Notify                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// bool                                    ReturnValue_Received_Notify                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FAnimNotifyEventReference& EventReference                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UANT_AttackNotify_C::Received_Notify(class USkeletalMeshComponent* MeshComp_Received_Notify, class UAnimSequenceBase* Animation_Received_Notify, const struct FAnimNotifyEventReference& EventReference_Received_Notify) const
+bool UANT_AttackNotify_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -33,9 +33,9 @@ bool UANT_AttackNotify_C::Received_Notify(class USkeletalMeshComponent* MeshComp
 
 	Params::ANT_AttackNotify_C_Received_Notify Parms{};
 
-	Parms.MeshComp_Received_Notify = MeshComp_Received_Notify;
-	Parms.Animation_Received_Notify = Animation_Received_Notify;
-	Parms.EventReference_Received_Notify = std::move(EventReference_Received_Notify);
+	Parms.MeshComp = MeshComp;
+	Parms.Animation = Animation;
+	Parms.EventReference = std::move(EventReference);
 
 	UObject::ProcessEvent(Func, &Parms);
 

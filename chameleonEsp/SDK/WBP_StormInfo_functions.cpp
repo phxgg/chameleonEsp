@@ -16,22 +16,42 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_StormInfo.WBP_StormInfo_C.SetText
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_StormInfo.WBP_StormInfo_C.ExecuteUbergraph_WBP_StormInfo
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_StormInfo_C::SetText(const class FText& Text, int32 Index_0)
+void UWBP_StormInfo_C::ExecuteUbergraph_WBP_StormInfo(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_StormInfo_C", "SetText");
+		Func = Class->GetFunction("WBP_StormInfo_C", "ExecuteUbergraph_WBP_StormInfo");
 
-	Params::WBP_StormInfo_C_SetText Parms{};
+	Params::WBP_StormInfo_C_ExecuteUbergraph_WBP_StormInfo Parms{};
 
-	Parms.Text = std::move(Text);
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_StormInfo.WBP_StormInfo_C.PlayAnimationMessage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsForward                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_StormInfo_C::PlayAnimationMessage(bool IsForward, int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_StormInfo_C", "PlayAnimationMessage");
+
+	Params::WBP_StormInfo_C_PlayAnimationMessage Parms{};
+
+	Parms.IsForward = IsForward;
 	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -60,43 +80,23 @@ void UWBP_StormInfo_C::SetColor(const struct FLinearColor& Color, int32 Index_0)
 }
 
 
-// Function WBP_StormInfo.WBP_StormInfo_C.PlayAnimationMessage
+// Function WBP_StormInfo.WBP_StormInfo_C.SetText
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsForward                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
 // int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_StormInfo_C::PlayAnimationMessage(bool IsForward, int32 Index_0)
+void UWBP_StormInfo_C::SetText(const class FText& Text, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_StormInfo_C", "PlayAnimationMessage");
+		Func = Class->GetFunction("WBP_StormInfo_C", "SetText");
 
-	Params::WBP_StormInfo_C_PlayAnimationMessage Parms{};
+	Params::WBP_StormInfo_C_SetText Parms{};
 
-	Parms.IsForward = IsForward;
+	Parms.Text = std::move(Text);
 	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_StormInfo.WBP_StormInfo_C.ExecuteUbergraph_WBP_StormInfo
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_StormInfo_C::ExecuteUbergraph_WBP_StormInfo(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_StormInfo_C", "ExecuteUbergraph_WBP_StormInfo");
-
-	Params::WBP_StormInfo_C_ExecuteUbergraph_WBP_StormInfo Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -25,10 +25,10 @@ public:
 	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_GrowParts_Base(int32 EntryPoint);
-	void Generate(const struct FRandomStream& Seed, int32 DepthIndex);
-	void ReceiveBeginPlay();
 	void GenerateParts(const struct FRandomStream& Seed, int32 DepthIndex);
+	void ReceiveBeginPlay();
+	void Generate(const struct FRandomStream& Seed, int32 DepthIndex);
+	void ExecuteUbergraph_BP_GrowParts_Base(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

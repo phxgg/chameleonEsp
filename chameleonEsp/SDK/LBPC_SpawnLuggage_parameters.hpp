@@ -17,15 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function LBPC_SpawnLuggage.LBPC_SpawnLuggage_C.SpawnItem
-// 0x0010 (0x0010 - 0x0000)
-struct LBPC_SpawnLuggage_C_SpawnItem final
-{
-public:
-	struct FGuid                                  UniqueID;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LBPC_SpawnLuggage_C_SpawnItem;
-
 // Function LBPC_SpawnLuggage.LBPC_SpawnLuggage_C.ExecuteUbergraph_LBPC_SpawnLuggage
 // 0x0270 (0x0270 - 0x0000)
 struct LBPC_SpawnLuggage_C_ExecuteUbergraph_LBPC_SpawnLuggage final
@@ -62,6 +53,15 @@ public:
 	float                                         CallFunc_SetMassOverrideInKg_MassInKg_ImplicitCast_1; // 0x0264(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_LBPC_SpawnLuggage_C_ExecuteUbergraph_LBPC_SpawnLuggage;
+
+// Function LBPC_SpawnLuggage.LBPC_SpawnLuggage_C.SpawnItem
+// 0x0010 (0x0010 - 0x0000)
+struct LBPC_SpawnLuggage_C_SpawnItem final
+{
+public:
+	struct FGuid                                  UniqueID;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LBPC_SpawnLuggage_C_SpawnItem;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

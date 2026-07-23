@@ -753,7 +753,7 @@ DUMPER7_ASSERTS_IRedpointNotifyUniqueIdInterface;
 
 // Class RedpointEOSFramework.RedpointPartyMember
 // 0x0048 (0x02F0 - 0x02A8)
-class ARedpointPartyMember final : public AActor
+class ARedpointPartyMember : public AActor
 {
 public:
 	uint8                                         Pad_2A8[0x40];                                     // 0x02A8(0x0040)(Fixing Size After Last Property [ Dumper-7 ])

@@ -16,35 +16,15 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_ThrowTrailMesh.BP_ThrowTrailMesh_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_ThrowTrailMesh.BP_ThrowTrailMesh_C.CreateMesh
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_ThrowTrailMesh_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
+void ABP_ThrowTrailMesh_C::CreateMesh()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ThrowTrailMesh_C", "ReceiveTick");
-
-	Params::BP_ThrowTrailMesh_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ThrowTrailMesh.BP_ThrowTrailMesh_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_ThrowTrailMesh_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ThrowTrailMesh_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_ThrowTrailMesh_C", "CreateMesh");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,17 +50,37 @@ void ABP_ThrowTrailMesh_C::ExecuteUbergraph_BP_ThrowTrailMesh(int32 EntryPoint)
 }
 
 
-// Function BP_ThrowTrailMesh.BP_ThrowTrailMesh_C.CreateMesh
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_ThrowTrailMesh.BP_ThrowTrailMesh_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_ThrowTrailMesh_C::CreateMesh()
+void ABP_ThrowTrailMesh_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ThrowTrailMesh_C", "CreateMesh");
+		Func = Class->GetFunction("BP_ThrowTrailMesh_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ThrowTrailMesh.BP_ThrowTrailMesh_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ThrowTrailMesh_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ThrowTrailMesh_C", "ReceiveTick");
+
+	Params::BP_ThrowTrailMesh_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

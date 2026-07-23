@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BPI_PhotoActorSignal.BPI_PhotoActorSignal_C.DeleteActor
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_PhotoActorSignal_C::DeleteActor(class AActor* Actor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_PhotoActorSignal_C", "DeleteActor");
-
-	Params::BPI_PhotoActorSignal_C_DeleteActor Parms{};
-
-	Parms.Actor = Actor;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPI_PhotoActorSignal.BPI_PhotoActorSignal_C.AddActor
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -49,6 +29,26 @@ void IBPI_PhotoActorSignal_C::AddActor(class AActor* Actor)
 		Func = AsUObject()->Class->GetFunction("BPI_PhotoActorSignal_C", "AddActor");
 
 	Params::BPI_PhotoActorSignal_C_AddActor Parms{};
+
+	Parms.Actor = Actor;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_PhotoActorSignal.BPI_PhotoActorSignal_C.DeleteActor
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_PhotoActorSignal_C::DeleteActor(class AActor* Actor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_PhotoActorSignal_C", "DeleteActor");
+
+	Params::BPI_PhotoActorSignal_C_DeleteActor Parms{};
 
 	Parms.Actor = Actor;
 

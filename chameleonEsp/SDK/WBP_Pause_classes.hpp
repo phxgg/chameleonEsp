@@ -31,17 +31,17 @@ public:
 	TMulticastInlineDelegate<void()>              ReturnEvent;                                       // 0x0528(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void OnReturn();
-	void OnInitialized();
-	void OnDestroySessionComplete_E73CF3A14099BA1780F00197E2D8169E(class FName SessionName, bool bWasSuccessful);
-	void OnCallFailed_E73CF3A14099BA1780F00197E2D8169E(class FName SessionName, bool bWasSuccessful);
-	class UUINavComponent* GetInitialFocusComponent();
-	void ExecuteUbergraph_WBP_Pause(int32 EntryPoint);
-	void Construct();
-	void BndEvt__WBP_Pause_LongTapButton_VoiceChat_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
-	void BndEvt__WBP_Pause_LongTapButton_Settings_K2Node_ComponentBoundEvent_5_PushEnd__DelegateSignature();
-	void BndEvt__WBP_Pause_LongTapButton_BackToHome_K2Node_ComponentBoundEvent_4_PushEnd__DelegateSignature();
 	void BndEvt__WBP_Pause_LongTapButton_BackGame_K2Node_ComponentBoundEvent_3_PushEnd__DelegateSignature();
+	void BndEvt__WBP_Pause_LongTapButton_BackToHome_K2Node_ComponentBoundEvent_4_PushEnd__DelegateSignature();
+	void BndEvt__WBP_Pause_LongTapButton_Settings_K2Node_ComponentBoundEvent_5_PushEnd__DelegateSignature();
+	void BndEvt__WBP_Pause_LongTapButton_VoiceChat_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
+	void Construct();
+	void ExecuteUbergraph_WBP_Pause(int32 EntryPoint);
+	class UUINavComponent* GetInitialFocusComponent();
+	void OnCallFailed_E73CF3A14099BA1780F00197E2D8169E(class FName SessionName, bool bWasSuccessful);
+	void OnDestroySessionComplete_E73CF3A14099BA1780F00197E2D8169E(class FName SessionName, bool bWasSuccessful);
+	void OnInitialized();
+	void OnReturn();
 
 public:
 	static class UClass* StaticClass()

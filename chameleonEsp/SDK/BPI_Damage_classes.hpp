@@ -22,11 +22,11 @@ SDK_NAMESPACE_START
 class IBPI_Damage_C final
 {
 public:
-	void StanDamage(EN_StanType StanType);
-	void StaminaDamage(double Value);
-	void GetParryState(bool* State);
-	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
 	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
+	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
+	void GetParryState(bool* State);
+	void StaminaDamage(double Value);
+	void StanDamage(EN_StanType StanType);
 
 public:
 	static class UClass* StaticClass()

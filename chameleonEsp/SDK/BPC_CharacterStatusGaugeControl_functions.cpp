@@ -16,154 +16,139 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.UpdateMaxValue
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.AnimationState
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_CharacterStatusGaugeControl_C::UpdateMaxValue(double Value)
+void UBPC_CharacterStatusGaugeControl_C::AnimationState(bool State)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "UpdateMaxValue");
+		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "AnimationState");
 
-	Params::BPC_CharacterStatusGaugeControl_C_UpdateMaxValue Parms{};
+	Params::BPC_CharacterStatusGaugeControl_C_AnimationState Parms{};
 
-	Parms.Value = Value;
+	Parms.State = State;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.Update
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.AutoHeal
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  AddValuePerSec                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Rate_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_CharacterStatusGaugeControl_C::Update()
+void UBPC_CharacterStatusGaugeControl_C::AutoHeal(double AddValuePerSec, double Rate_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "Update");
+		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "AutoHeal");
+
+	Params::BPC_CharacterStatusGaugeControl_C_AutoHeal Parms{};
+
+	Parms.AddValuePerSec = AddValuePerSec;
+	Parms.Rate_0 = Rate_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.AutoHealDelay
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  AddValuePerSec                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Rate_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  WaitTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_CharacterStatusGaugeControl_C::AutoHealDelay(double AddValuePerSec, double Rate_0, double WaitTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "AutoHealDelay");
+
+	Params::BPC_CharacterStatusGaugeControl_C_AutoHealDelay Parms{};
+
+	Parms.AddValuePerSec = AddValuePerSec;
+	Parms.Rate_0 = Rate_0;
+	Parms.WaitTime = WaitTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.AutoHealStart
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_CharacterStatusGaugeControl_C::AutoHealStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "AutoHealStart");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.SnapValue
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.BlockAutoHeal
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_CharacterStatusGaugeControl_C::SnapValue(double Value)
+void UBPC_CharacterStatusGaugeControl_C::BlockAutoHeal()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "SnapValue");
-
-	Params::BPC_CharacterStatusGaugeControl_C_SnapValue Parms{};
-
-	Parms.Value = Value;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_CharacterStatusGaugeControl_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "ReceiveTick");
-
-	Params::BPC_CharacterStatusGaugeControl_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBPC_CharacterStatusGaugeControl_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "BlockAutoHeal");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.GetRowValue
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.ChangeValue
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double*                                 Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  AddValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  AnimationTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_CharacterStatusGaugeControl_C::GetRowValue(double* Value)
+void UBPC_CharacterStatusGaugeControl_C::ChangeValue(double AddValue, double AnimationTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "GetRowValue");
+		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "ChangeValue");
 
-	Params::BPC_CharacterStatusGaugeControl_C_GetRowValue Parms{};
+	Params::BPC_CharacterStatusGaugeControl_C_ChangeValue Parms{};
+
+	Parms.AddValue = AddValue;
+	Parms.AnimationTime = AnimationTime;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Value != nullptr)
-		*Value = Parms.Value;
 }
 
 
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.GetNormalizeValue
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.ExecuteUbergraph_BPC_CharacterStatusGaugeControl
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// double*                                 NormalizeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_CharacterStatusGaugeControl_C::GetNormalizeValue(double* NormalizeValue)
+void UBPC_CharacterStatusGaugeControl_C::ExecuteUbergraph_BPC_CharacterStatusGaugeControl(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "GetNormalizeValue");
+		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "ExecuteUbergraph_BPC_CharacterStatusGaugeControl");
 
-	Params::BPC_CharacterStatusGaugeControl_C_GetNormalizeValue Parms{};
+	Params::BPC_CharacterStatusGaugeControl_C_ExecuteUbergraph_BPC_CharacterStatusGaugeControl Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (NormalizeValue != nullptr)
-		*NormalizeValue = Parms.NormalizeValue;
-}
-
-
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.GetNormalizeAnimationValue
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// double*                                 NormalizeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_CharacterStatusGaugeControl_C::GetNormalizeAnimationValue(double* NormalizeValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "GetNormalizeAnimationValue");
-
-	Params::BPC_CharacterStatusGaugeControl_C_GetNormalizeAnimationValue Parms{};
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (NormalizeValue != nullptr)
-		*NormalizeValue = Parms.NormalizeValue;
 }
 
 
@@ -191,137 +176,152 @@ void UBPC_CharacterStatusGaugeControl_C::GetAnimationStartValue(bool Normalize, 
 }
 
 
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.ExecuteUbergraph_BPC_CharacterStatusGaugeControl
-// (Final, UbergraphFunction, HasDefaults)
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.GetNormalizeAnimationValue
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 NormalizeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_CharacterStatusGaugeControl_C::ExecuteUbergraph_BPC_CharacterStatusGaugeControl(int32 EntryPoint)
+void UBPC_CharacterStatusGaugeControl_C::GetNormalizeAnimationValue(double* NormalizeValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "ExecuteUbergraph_BPC_CharacterStatusGaugeControl");
+		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "GetNormalizeAnimationValue");
 
-	Params::BPC_CharacterStatusGaugeControl_C_ExecuteUbergraph_BPC_CharacterStatusGaugeControl Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::BPC_CharacterStatusGaugeControl_C_GetNormalizeAnimationValue Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (NormalizeValue != nullptr)
+		*NormalizeValue = Parms.NormalizeValue;
 }
 
 
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.ChangeValue
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.GetNormalizeValue
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// double                                  AddValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  AnimationTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 NormalizeValue                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_CharacterStatusGaugeControl_C::ChangeValue(double AddValue, double AnimationTime)
+void UBPC_CharacterStatusGaugeControl_C::GetNormalizeValue(double* NormalizeValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "ChangeValue");
+		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "GetNormalizeValue");
 
-	Params::BPC_CharacterStatusGaugeControl_C_ChangeValue Parms{};
-
-	Parms.AddValue = AddValue;
-	Parms.AnimationTime = AnimationTime;
+	Params::BPC_CharacterStatusGaugeControl_C_GetNormalizeValue Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (NormalizeValue != nullptr)
+		*NormalizeValue = Parms.NormalizeValue;
 }
 
 
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.BlockAutoHeal
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.GetRowValue
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double*                                 Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_CharacterStatusGaugeControl_C::BlockAutoHeal()
+void UBPC_CharacterStatusGaugeControl_C::GetRowValue(double* Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "BlockAutoHeal");
+		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "GetRowValue");
+
+	Params::BPC_CharacterStatusGaugeControl_C_GetRowValue Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Value != nullptr)
+		*Value = Parms.Value;
+}
+
+
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBPC_CharacterStatusGaugeControl_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.AutoHealStart
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_CharacterStatusGaugeControl_C::AutoHealStart()
+void UBPC_CharacterStatusGaugeControl_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "AutoHealStart");
+		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "ReceiveTick");
+
+	Params::BPC_CharacterStatusGaugeControl_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.SnapValue
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_CharacterStatusGaugeControl_C::SnapValue(double Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "SnapValue");
+
+	Params::BPC_CharacterStatusGaugeControl_C_SnapValue Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.Update
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_CharacterStatusGaugeControl_C::Update()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "Update");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.AutoHealDelay
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.UpdateMaxValue
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  AddValuePerSec                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Rate                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  WaitTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_CharacterStatusGaugeControl_C::AutoHealDelay(double AddValuePerSec, double Rate, double WaitTime)
+void UBPC_CharacterStatusGaugeControl_C::UpdateMaxValue(double Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "AutoHealDelay");
+		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "UpdateMaxValue");
 
-	Params::BPC_CharacterStatusGaugeControl_C_AutoHealDelay Parms{};
+	Params::BPC_CharacterStatusGaugeControl_C_UpdateMaxValue Parms{};
 
-	Parms.AddValuePerSec = AddValuePerSec;
-	Parms.Rate = Rate;
-	Parms.WaitTime = WaitTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.AutoHeal
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  AddValuePerSec                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Rate                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_CharacterStatusGaugeControl_C::AutoHeal(double AddValuePerSec, double Rate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "AutoHeal");
-
-	Params::BPC_CharacterStatusGaugeControl_C_AutoHeal Parms{};
-
-	Parms.AddValuePerSec = AddValuePerSec;
-	Parms.Rate = Rate;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.AnimationState
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_CharacterStatusGaugeControl_C::AnimationState(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CharacterStatusGaugeControl_C", "AnimationState");
-
-	Params::BPC_CharacterStatusGaugeControl_C_AnimationState Parms{};
-
-	Parms.State = State;
+	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

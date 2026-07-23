@@ -30,12 +30,12 @@ public:
 	double                                        AddAll;                                            // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateEvent();
-	void Update();
-	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
-	void OnFinished_8D1D7EE049CBA34DF01468BA7D7B3EE1(const struct FBandwidthProbeResult& Result);
-	void ExecuteUbergraph_WBP_Debug(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_WBP_Debug(int32 EntryPoint);
+	void OnFinished_8D1D7EE049CBA34DF01468BA7D7B3EE1(const struct FBandwidthProbeResult& Result);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void Update();
+	void UpdateEvent();
 
 public:
 	static class UClass* StaticClass()

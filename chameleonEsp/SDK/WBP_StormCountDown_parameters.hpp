@@ -16,15 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_StormCountDown.WBP_StormCountDown_C.SetTime
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_StormCountDown_C_SetTime final
-{
-public:
-	int32                                         Time;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_StormCountDown_C_SetTime;
-
 // Function WBP_StormCountDown.WBP_StormCountDown_C.ExecuteUbergraph_WBP_StormCountDown
 // 0x0058 (0x0058 - 0x0000)
 struct WBP_StormCountDown_C_ExecuteUbergraph_WBP_StormCountDown final
@@ -51,6 +42,15 @@ public:
 	float                                         CallFunc_PlaySound2D_VolumeMultiplier_ImplicitCast; // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_StormCountDown_C_ExecuteUbergraph_WBP_StormCountDown;
+
+// Function WBP_StormCountDown.WBP_StormCountDown_C.SetTime
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_StormCountDown_C_SetTime final
+{
+public:
+	int32                                         Time;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_StormCountDown_C_SetTime;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

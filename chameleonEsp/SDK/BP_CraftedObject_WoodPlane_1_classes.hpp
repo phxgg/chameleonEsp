@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_CraftedObject_Strage_Base_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -24,8 +24,8 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_CraftedObject_WoodPlane_1_C;     // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
 	void ExecuteUbergraph_BP_CraftedObject_WoodPlane_1(int32 EntryPoint);
+	void ReceiveTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()

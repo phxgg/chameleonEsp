@@ -16,21 +16,75 @@
 
 SDK_NAMESPACE_START
 
-// Function BPI_AI_Attack.BPI_AI_Attack_C.ThrowState
+// Function BPI_AI_Attack.BPI_AI_Attack_C.Attack
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EN_ThrowState                           ThrowState                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EAttackType                             AttackType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_AI_Attack_C::ThrowState(EN_ThrowState ThrowState)
+void IBPI_AI_Attack_C::Attack(EAttackType AttackType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AI_Attack_C", "ThrowState");
+		Func = AsUObject()->Class->GetFunction("BPI_AI_Attack_C", "Attack");
 
-	Params::BPI_AI_Attack_C_ThrowState Parms{};
+	Params::BPI_AI_Attack_C_Attack Parms{};
 
-	Parms.ThrowState = ThrowState;
+	Parms.AttackType = AttackType;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_AI_Attack.BPI_AI_Attack_C.AttackNotify
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   ID                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_AI_Attack_C::AttackNotify(int32 ID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AI_Attack_C", "AttackNotify");
+
+	Params::BPI_AI_Attack_C_AttackNotify Parms{};
+
+	Parms.ID = ID;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_AI_Attack.BPI_AI_Attack_C.AttackReset
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_AI_Attack_C::AttackReset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AI_Attack_C", "AttackReset");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_AI_Attack.BPI_AI_Attack_C.Avoid
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_AI_Attack_C::Avoid(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AI_Attack_C", "Avoid");
+
+	Params::BPI_AI_Attack_C_Avoid Parms{};
+
+	Parms.State = State;
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 }
@@ -56,75 +110,21 @@ void IBPI_AI_Attack_C::DamageState(bool Active)
 }
 
 
-// Function BPI_AI_Attack.BPI_AI_Attack_C.Avoid
+// Function BPI_AI_Attack.BPI_AI_Attack_C.ThrowState
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EN_ThrowState                           ThrowState_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_AI_Attack_C::Avoid(bool State)
+void IBPI_AI_Attack_C::ThrowState(EN_ThrowState ThrowState_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AI_Attack_C", "Avoid");
+		Func = AsUObject()->Class->GetFunction("BPI_AI_Attack_C", "ThrowState");
 
-	Params::BPI_AI_Attack_C_Avoid Parms{};
+	Params::BPI_AI_Attack_C_ThrowState Parms{};
 
-	Parms.State = State;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPI_AI_Attack.BPI_AI_Attack_C.AttackReset
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_AI_Attack_C::AttackReset()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AI_Attack_C", "AttackReset");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_AI_Attack.BPI_AI_Attack_C.AttackNotify
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   ID                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_AI_Attack_C::AttackNotify(int32 ID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AI_Attack_C", "AttackNotify");
-
-	Params::BPI_AI_Attack_C_AttackNotify Parms{};
-
-	Parms.ID = ID;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPI_AI_Attack.BPI_AI_Attack_C.Attack
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EAttackType                             AttackType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_AI_Attack_C::Attack(EAttackType AttackType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AI_Attack_C", "Attack");
-
-	Params::BPI_AI_Attack_C_Attack Parms{};
-
-	Parms.AttackType = AttackType;
+	Parms.ThrowState_0 = ThrowState_0;
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 }

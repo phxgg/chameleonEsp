@@ -14,15 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_Simple_VAT_Player_PBR.BP_Simple_VAT_Player_PBR_C.OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184
-// 0x0008 (0x0008 - 0x0000)
-struct BP_Simple_VAT_Player_PBR_C_OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184 final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Simple_VAT_Player_PBR_C_OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184;
-
 // Function BP_Simple_VAT_Player_PBR.BP_Simple_VAT_Player_PBR_C.ExecuteUbergraph_BP_Simple_VAT_Player_PBR
 // 0x0070 (0x0070 - 0x0000)
 struct BP_Simple_VAT_Player_PBR_C_ExecuteUbergraph_BP_Simple_VAT_Player_PBR final
@@ -48,6 +39,15 @@ public:
 	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_Simple_VAT_Player_PBR_C_ExecuteUbergraph_BP_Simple_VAT_Player_PBR;
+
+// Function BP_Simple_VAT_Player_PBR.BP_Simple_VAT_Player_PBR_C.OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Simple_VAT_Player_PBR_C_OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184 final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Simple_VAT_Player_PBR_C_OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

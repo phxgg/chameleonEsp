@@ -26,8 +26,8 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_ReplicateEventController(int32 EntryPoint);
 	void ApplyDamage(class UObject* ターゲット, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName);
+	void ExecuteUbergraph_BP_ReplicateEventController(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

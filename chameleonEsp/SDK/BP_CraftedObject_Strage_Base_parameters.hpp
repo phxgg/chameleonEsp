@@ -17,6 +17,41 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.IsChangeImage
+// 0x00A0 (0x00A0 - 0x0000)
+struct BP_CraftedObject_Strage_Base_C_IsChangeImage final
+{
+public:
+	bool                                          IsInteract;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   OverrideText;                                      // 0x0008(0x0010)(Parm, OutParm)
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0018(0x0010)()
+	float                                         CallFunc_GetMass_ReturnValue;                      // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FFloor_ReturnValue;                       // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0088(0x0010)()
+	double                                        CallFunc_FFloor_A_ImplicitCast;                    // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_CraftedObject_Strage_Base_C_IsChangeImage;
+
+// Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.SetWeight
+// 0x0098 (0x0098 - 0x0000)
+struct BP_CraftedObject_Strage_Base_C_SetWeight final
+{
+public:
+	double                                        float_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, struct FST_OptionObject>    UniqueOptions;                                     // 0x0008(0x0050)(Edit, BlueprintVisible)
+	class FName                                   Temp_name_Variable;                                // 0x0058(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_OptionObject                       K2Node_MakeStruct_ST_OptionObject;                 // 0x0060(0x0038)(ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_CraftedObject_Strage_Base_C_SetWeight;
+
 // Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.ExecuteUbergraph_BP_CraftedObject_Strage_Base
 // 0x00B8 (0x00B8 - 0x0000)
 struct BP_CraftedObject_Strage_Base_C_ExecuteUbergraph_BP_CraftedObject_Strage_Base final
@@ -47,41 +82,6 @@ public:
 	float                                         CallFunc_LinearColorLerp_Alpha_ImplicitCast;       // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_CraftedObject_Strage_Base_C_ExecuteUbergraph_BP_CraftedObject_Strage_Base;
-
-// Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.SetWeight
-// 0x0098 (0x0098 - 0x0000)
-struct BP_CraftedObject_Strage_Base_C_SetWeight final
-{
-public:
-	double                                        float_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, struct FST_OptionObject>    UniqueOptions;                                     // 0x0008(0x0050)(Edit, BlueprintVisible)
-	class FName                                   Temp_name_Variable;                                // 0x0058(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FST_OptionObject                       K2Node_MakeStruct_ST_OptionObject;                 // 0x0060(0x0038)(ZeroConstructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Strage_Base_C_SetWeight;
-
-// Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.IsChangeImage
-// 0x00A0 (0x00A0 - 0x0000)
-struct BP_CraftedObject_Strage_Base_C_IsChangeImage final
-{
-public:
-	bool                                          IsInteract;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   OverrideText;                                      // 0x0008(0x0010)(Parm, OutParm)
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0018(0x0010)()
-	float                                         CallFunc_GetMass_ReturnValue;                      // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FFloor_ReturnValue;                       // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0088(0x0010)()
-	double                                        CallFunc_FFloor_A_ImplicitCast;                    // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Strage_Base_C_IsChangeImage;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

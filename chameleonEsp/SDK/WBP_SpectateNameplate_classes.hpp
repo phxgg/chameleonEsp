@@ -27,11 +27,11 @@ public:
 	class FName                                   NewVar;                                            // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ViewChange(class ABP_FirstPersonCharacter_Main_C* SourcePlayer);
-	void SetupSpectateNameplate(class ABP_FirstPersonCharacter_Main_C* Character);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void GetCustomPlayerName(class FString* playerName);
 	void ExecuteUbergraph_WBP_SpectateNameplate(int32 EntryPoint);
+	void GetCustomPlayerName(class FString* playerName);
+	void PreConstruct(bool IsDesignTime);
+	void SetupSpectateNameplate(class ABP_FirstPersonCharacter_Main_C* Character);
+	void ViewChange(class ABP_FirstPersonCharacter_Main_C* SourcePlayer);
 
 public:
 	static class UClass* StaticClass()

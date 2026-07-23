@@ -16,29 +16,15 @@
 
 SDK_NAMESPACE_START
 
-// Function LBPC_ComponentDistanceVisualUpdate.LBPC_ComponentDistanceVisualUpdate_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void ULBPC_ComponentDistanceVisualUpdate_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_ComponentDistanceVisualUpdate_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function LBPC_ComponentDistanceVisualUpdate.LBPC_ComponentDistanceVisualUpdate_C.ForceUpdate
+// Function LBPC_ComponentDistanceVisualUpdate.LBPC_ComponentDistanceVisualUpdate_C.Check
 // (BlueprintCallable, BlueprintEvent)
 
-void ULBPC_ComponentDistanceVisualUpdate_C::ForceUpdate()
+void ULBPC_ComponentDistanceVisualUpdate_C::Check()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_ComponentDistanceVisualUpdate_C", "ForceUpdate");
+		Func = Class->GetFunction("LBPC_ComponentDistanceVisualUpdate_C", "Check");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,15 +50,29 @@ void ULBPC_ComponentDistanceVisualUpdate_C::ExecuteUbergraph_LBPC_ComponentDista
 }
 
 
-// Function LBPC_ComponentDistanceVisualUpdate.LBPC_ComponentDistanceVisualUpdate_C.Check
+// Function LBPC_ComponentDistanceVisualUpdate.LBPC_ComponentDistanceVisualUpdate_C.ForceUpdate
 // (BlueprintCallable, BlueprintEvent)
 
-void ULBPC_ComponentDistanceVisualUpdate_C::Check()
+void ULBPC_ComponentDistanceVisualUpdate_C::ForceUpdate()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_ComponentDistanceVisualUpdate_C", "Check");
+		Func = Class->GetFunction("LBPC_ComponentDistanceVisualUpdate_C", "ForceUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LBPC_ComponentDistanceVisualUpdate.LBPC_ComponentDistanceVisualUpdate_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void ULBPC_ComponentDistanceVisualUpdate_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LBPC_ComponentDistanceVisualUpdate_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

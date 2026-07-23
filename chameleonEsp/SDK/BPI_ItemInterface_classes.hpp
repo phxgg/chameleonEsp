@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_ItemBindType_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "ENUM_HandType_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -23,13 +23,13 @@ SDK_NAMESPACE_START
 class IBPI_ItemInterface_C final
 {
 public:
-	void UpdateCoreDatas(const struct FST_ItemCoreDatas& CoreDatas);
-	void SetMeshDatas(bool KeepScale);
-	void PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex);
-	void InteractItem();
-	void GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter);
-	void GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* ClassType, bool* NotPickUp, struct FRotator* HaveRotation, struct FVector* Add_Position, bool* IsBoneAttach, ENUM_ItemBindType* BindType, class FName* BoneName, struct FST_ItemCoreDatas* CoreDatas);
 	void DropItem(const struct FVector& Force_Vector, const struct FVector& CentorPosition);
+	void GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* ClassType, bool* NotPickUp, struct FRotator* HaveRotation, struct FVector* Add_Position, bool* IsBoneAttach, ENUM_ItemBindType* BindType, class FName* BoneName, struct FST_ItemCoreDatas* CoreDatas);
+	void GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter);
+	void InteractItem();
+	void PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex);
+	void SetMeshDatas(bool KeepScale);
+	void UpdateCoreDatas(const struct FST_ItemCoreDatas& CoreDatas);
 
 public:
 	static class UClass* StaticClass()

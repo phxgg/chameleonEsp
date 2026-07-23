@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_classes.hpp"
-#include "ENUM_CameraMode_structs.hpp"
 #include "ENUM_ActorType_structs.hpp"
+#include "ENUM_CameraMode_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -22,13 +22,13 @@ SDK_NAMESPACE_START
 class IBPI_InPhoto_C final
 {
 public:
-	void SetActorInfo(const struct FVector& ToPosition, class USceneComponent* Comp);
-	void Reverse(const struct FTransform& NewPosition, const struct FVector& HitNormal);
-	void InAngleOfView(bool InState, double DeltaTime, ENUM_CameraMode CameraMode);
-	void GetCopyClass(class UStaticMeshComponent* CentorComponent, class UClass** Class_0, double* Scale, struct FVector* DefaultScale);
-	void GetCentorPosition(TArray<struct FVector>* CentorPosition);
-	void GetActorInfo(struct FTransform* DefaultTransform, bool* Not_In_Shot, struct FVector* CentorPosition, bool* IsPenguin, ENUM_ActorType* ActorType, bool* NonInPhoto);
 	void Delete();
+	void GetActorInfo(struct FTransform* DefaultTransform, bool* Not_In_Shot, struct FVector* CentorPosition, bool* IsPenguin, ENUM_ActorType* ActorType, bool* NonInPhoto);
+	void GetCentorPosition(TArray<struct FVector>* CentorPosition);
+	void GetCopyClass(class UStaticMeshComponent* CentorComponent, class UClass** Class_0, double* Scale, struct FVector* DefaultScale);
+	void InAngleOfView(bool InState, double DeltaTime, ENUM_CameraMode CameraMode);
+	void Reverse(const struct FTransform& NewPosition, const struct FVector& HitNormal);
+	void SetActorInfo(const struct FVector& ToPosition, class USceneComponent* Comp);
 
 public:
 	static class UClass* StaticClass()

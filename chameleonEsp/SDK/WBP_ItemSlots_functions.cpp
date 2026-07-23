@@ -16,23 +16,82 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_ItemSlots.WBP_ItemSlots_C.UpdateSlotStackData
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_ItemSlots.WBP_ItemSlots_C.ExecuteUbergraph_WBP_ItemSlots
+// (Final, UbergraphFunction)
 // Parameters:
-// int32                                   TargetIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   StackCount                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ItemSlots_C::UpdateSlotStackData(int32 TargetIndex, int32 StackCount)
+void UWBP_ItemSlots_C::ExecuteUbergraph_WBP_ItemSlots(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemSlots_C", "UpdateSlotStackData");
+		Func = Class->GetFunction("WBP_ItemSlots_C", "ExecuteUbergraph_WBP_ItemSlots");
 
-	Params::WBP_ItemSlots_C_UpdateSlotStackData Parms{};
+	Params::WBP_ItemSlots_C_ExecuteUbergraph_WBP_ItemSlots Parms{};
 
-	Parms.TargetIndex = TargetIndex;
-	Parms.StackCount = StackCount;
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ItemSlots.WBP_ItemSlots_C.GetCurrentItemData
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FCPP_GameItemData*               ItemData                                               (Parm, OutParm)
+
+void UWBP_ItemSlots_C::GetCurrentItemData(struct FCPP_GameItemData* ItemData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ItemSlots_C", "GetCurrentItemData");
+
+	Params::WBP_ItemSlots_C_GetCurrentItemData Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ItemData != nullptr)
+		*ItemData = std::move(Parms.ItemData);
+}
+
+
+// Function WBP_ItemSlots.WBP_ItemSlots_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ItemSlots_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ItemSlots_C", "PreConstruct");
+
+	Params::WBP_ItemSlots_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ItemSlots.WBP_ItemSlots_C.UpdateSelectSlot
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const int32                             Index_0                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ItemSlots_C::UpdateSelectSlot(const int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ItemSlots_C", "UpdateSelectSlot");
+
+	Params::WBP_ItemSlots_C_UpdateSelectSlot Parms{};
+
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -60,82 +119,23 @@ void UWBP_ItemSlots_C::UpdateSlotData(int32 TargetIndex, const struct FCPP_GameI
 }
 
 
-// Function WBP_ItemSlots.WBP_ItemSlots_C.UpdateSelectSlot
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_ItemSlots.WBP_ItemSlots_C.UpdateSlotStackData
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const int32                             Index_0                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TargetIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   StackCount                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ItemSlots_C::UpdateSelectSlot(const int32 Index_0)
+void UWBP_ItemSlots_C::UpdateSlotStackData(int32 TargetIndex, int32 StackCount)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemSlots_C", "UpdateSelectSlot");
+		Func = Class->GetFunction("WBP_ItemSlots_C", "UpdateSlotStackData");
 
-	Params::WBP_ItemSlots_C_UpdateSelectSlot Parms{};
+	Params::WBP_ItemSlots_C_UpdateSlotStackData Parms{};
 
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_ItemSlots.WBP_ItemSlots_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_ItemSlots_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemSlots_C", "PreConstruct");
-
-	Params::WBP_ItemSlots_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_ItemSlots.WBP_ItemSlots_C.GetCurrentItemData
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FCPP_GameItemData*               ItemData                                               (Parm, OutParm)
-
-void UWBP_ItemSlots_C::GetCurrentItemData(struct FCPP_GameItemData* ItemData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemSlots_C", "GetCurrentItemData");
-
-	Params::WBP_ItemSlots_C_GetCurrentItemData Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ItemData != nullptr)
-		*ItemData = std::move(Parms.ItemData);
-}
-
-
-// Function WBP_ItemSlots.WBP_ItemSlots_C.ExecuteUbergraph_WBP_ItemSlots
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_ItemSlots_C::ExecuteUbergraph_WBP_ItemSlots(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ItemSlots_C", "ExecuteUbergraph_WBP_ItemSlots");
-
-	Params::WBP_ItemSlots_C_ExecuteUbergraph_WBP_ItemSlots Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.TargetIndex = TargetIndex;
+	Parms.StackCount = StackCount;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

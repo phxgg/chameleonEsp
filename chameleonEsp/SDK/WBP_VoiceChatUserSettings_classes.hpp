@@ -34,17 +34,17 @@ public:
 	class FString                                 UserNameString;                                    // 0x0380(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
-	void Report();
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void PingCheck();
-	void OnFinished_1657203944876F75161AA6986A7C9FD9(const struct FEOSPlayerReportResult& Result);
-	void ExecuteUbergraph_WBP_VoiceChatUserSettings(int32 EntryPoint);
-	void ConstructSetup(class ABP_FirstPersonPlayerState_Online_C* TargetPlayerState);
-	void Construct();
-	void BndEvt__WBP_VoiceChatUserSettings_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature();
-	void BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_Kick_1_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature();
 	void BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature();
+	void BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_Kick_1_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature();
+	void BndEvt__WBP_VoiceChatUserSettings_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature();
+	void Construct();
+	void ConstructSetup(class ABP_FirstPersonPlayerState_Online_C* TargetPlayerState);
+	void ExecuteUbergraph_WBP_VoiceChatUserSettings(int32 EntryPoint);
+	void OnFinished_1657203944876F75161AA6986A7C9FD9(const struct FEOSPlayerReportResult& Result);
+	void PingCheck();
+	void PreConstruct(bool IsDesignTime);
+	void Report();
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()

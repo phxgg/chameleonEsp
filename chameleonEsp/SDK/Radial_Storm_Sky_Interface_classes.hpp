@@ -20,8 +20,8 @@ SDK_NAMESPACE_START
 class IRadial_Storm_Sky_Interface_C final
 {
 public:
-	void Update_with_Sky_Mode_Change(bool* Successful);
 	void Get_Cloud_Coverage_Brush_Data(class AUltra_Dynamic_Sky_C* UDS, double* Soft_Fraction, struct FLinearColor* RGBA, struct FVector* World_Location, double* Size, double* UDS_Coverage_Level);
+	void Update_with_Sky_Mode_Change(bool* Successful);
 
 public:
 	static class UClass* StaticClass()

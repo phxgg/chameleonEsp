@@ -16,21 +16,112 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_EnvironmentSystem_Base.BP_EnvironmentSystem_Base_C.ExecuteUbergraph_BP_EnvironmentSystem_Base
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_EnvironmentSystem_Base.BP_EnvironmentSystem_Base_C.Damage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FFinishFilter*                   Finish                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EnvironmentSystem_Base_C::ExecuteUbergraph_BP_EnvironmentSystem_Base(int32 EntryPoint)
+void ABP_EnvironmentSystem_Base_C::Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Base_C", "ExecuteUbergraph_BP_EnvironmentSystem_Base");
+		Func = Class->GetFunction("BP_EnvironmentSystem_Base_C", "Damage");
 
-	Params::BP_EnvironmentSystem_Base_C_ExecuteUbergraph_BP_EnvironmentSystem_Base Parms{};
+	Params::BP_EnvironmentSystem_Base_C_Damage Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.DamageValue = DamageValue;
+	Parms.TeamIndex = TeamIndex;
+	Parms.DamageType = DamageType;
+	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
+	Parms.UnAvoidable = UnAvoidable;
+	Parms.DamageName = DamageName;
+	Parms.SourceActor = SourceActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Finish != nullptr)
+		*Finish = std::move(Parms.Finish);
+}
+
+
+// Function BP_EnvironmentSystem_Base.BP_EnvironmentSystem_Base_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_EnvironmentSystem_Base_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnvironmentSystem_Base_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EnvironmentSystem_Base.BP_EnvironmentSystem_Base_C.GetParryState
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   State                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EnvironmentSystem_Base_C::GetParryState(bool* State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnvironmentSystem_Base_C", "GetParryState");
+
+	Params::BP_EnvironmentSystem_Base_C_GetParryState Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (State != nullptr)
+		*State = Parms.State;
+}
+
+
+// Function BP_EnvironmentSystem_Base.BP_EnvironmentSystem_Base_C.StanDamage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EN_StanType                             StanType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EnvironmentSystem_Base_C::StanDamage(EN_StanType StanType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnvironmentSystem_Base_C", "StanDamage");
+
+	Params::BP_EnvironmentSystem_Base_C_StanDamage Parms{};
+
+	Parms.StanType = StanType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EnvironmentSystem_Base.BP_EnvironmentSystem_Base_C.StaminaDamage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EnvironmentSystem_Base_C::StaminaDamage(double Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnvironmentSystem_Base_C", "StaminaDamage");
+
+	Params::BP_EnvironmentSystem_Base_C_StaminaDamage Parms{};
+
+	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -72,114 +163,23 @@ void ABP_EnvironmentSystem_Base_C::DamageToPlayerController(class AActor* Target
 }
 
 
-// Function BP_EnvironmentSystem_Base.BP_EnvironmentSystem_Base_C.StaminaDamage
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_EnvironmentSystem_Base.BP_EnvironmentSystem_Base_C.ExecuteUbergraph_BP_EnvironmentSystem_Base
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EnvironmentSystem_Base_C::StaminaDamage(double Value)
+void ABP_EnvironmentSystem_Base_C::ExecuteUbergraph_BP_EnvironmentSystem_Base(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Base_C", "StaminaDamage");
+		Func = Class->GetFunction("BP_EnvironmentSystem_Base_C", "ExecuteUbergraph_BP_EnvironmentSystem_Base");
 
-	Params::BP_EnvironmentSystem_Base_C_StaminaDamage Parms{};
+	Params::BP_EnvironmentSystem_Base_C_ExecuteUbergraph_BP_EnvironmentSystem_Base Parms{};
 
-	Parms.Value = Value;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EnvironmentSystem_Base.BP_EnvironmentSystem_Base_C.StanDamage
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EN_StanType                             StanType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EnvironmentSystem_Base_C::StanDamage(EN_StanType StanType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Base_C", "StanDamage");
-
-	Params::BP_EnvironmentSystem_Base_C_StanDamage Parms{};
-
-	Parms.StanType = StanType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EnvironmentSystem_Base.BP_EnvironmentSystem_Base_C.GetParryState
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   State                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EnvironmentSystem_Base_C::GetParryState(bool* State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Base_C", "GetParryState");
-
-	Params::BP_EnvironmentSystem_Base_C_GetParryState Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (State != nullptr)
-		*State = Parms.State;
-}
-
-
-// Function BP_EnvironmentSystem_Base.BP_EnvironmentSystem_Base_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_EnvironmentSystem_Base_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Base_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EnvironmentSystem_Base.BP_EnvironmentSystem_Base_C.Damage
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FFinishFilter*                   Finish                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EnvironmentSystem_Base_C::Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Base_C", "Damage");
-
-	Params::BP_EnvironmentSystem_Base_C_Damage Parms{};
-
-	Parms.DamageValue = DamageValue;
-	Parms.TeamIndex = TeamIndex;
-	Parms.DamageType = DamageType;
-	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
-	Parms.UnAvoidable = UnAvoidable;
-	Parms.DamageName = DamageName;
-	Parms.SourceActor = SourceActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Finish != nullptr)
-		*Finish = std::move(Parms.Finish);
 }
 
 

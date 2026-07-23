@@ -16,24 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_Luggage_Base.BP_Luggage_Base_C.OnLoaded_061DDAA94BACAE0F7A327A8B0F5F6D91
-// 0x0008 (0x0008 - 0x0000)
-struct BP_Luggage_Base_C_OnLoaded_061DDAA94BACAE0F7A327A8B0F5F6D91 final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Luggage_Base_C_OnLoaded_061DDAA94BACAE0F7A327A8B0F5F6D91;
-
-// Function BP_Luggage_Base.BP_Luggage_Base_C.GetLuggageId
-// 0x0010 (0x0010 - 0x0000)
-struct BP_Luggage_Base_C_GetLuggageId final
-{
-public:
-	struct FGuid                                  ID;                                                // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Luggage_Base_C_GetLuggageId;
-
 // Function BP_Luggage_Base.BP_Luggage_Base_C.ExecuteUbergraph_BP_Luggage_Base
 // 0x0048 (0x0048 - 0x0000)
 struct BP_Luggage_Base_C_ExecuteUbergraph_BP_Luggage_Base final
@@ -54,6 +36,24 @@ public:
 	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_Luggage_Base_C_ExecuteUbergraph_BP_Luggage_Base;
+
+// Function BP_Luggage_Base.BP_Luggage_Base_C.GetLuggageId
+// 0x0010 (0x0010 - 0x0000)
+struct BP_Luggage_Base_C_GetLuggageId final
+{
+public:
+	struct FGuid                                  ID;                                                // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Luggage_Base_C_GetLuggageId;
+
+// Function BP_Luggage_Base.BP_Luggage_Base_C.OnLoaded_061DDAA94BACAE0F7A327A8B0F5F6D91
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Luggage_Base_C_OnLoaded_061DDAA94BACAE0F7A327A8B0F5F6D91 final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Luggage_Base_C_OnLoaded_061DDAA94BACAE0F7A327A8B0F5F6D91;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

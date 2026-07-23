@@ -28,10 +28,10 @@ public:
 	TArray<class AActor*>                         Generated_Actors;                                  // 0x0130(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
-	void ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox(int32 EntryPoint);
-	void GoalActor(class AActor* Actor);
-	void GeneratedActor(class AActor* GeneratedActor);
 	void TaskStart();
+	void GeneratedActor(class AActor* GeneratedActor_0);
+	void GoalActor(class AActor* Actor);
+	void ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

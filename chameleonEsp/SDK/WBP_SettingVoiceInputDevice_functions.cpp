@@ -16,15 +16,15 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_SettingVoiceInputDevice.WBP_SettingVoiceInputDevice_C.Get_ConfigItem_Text_1_Text_0
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function WBP_SettingVoiceInputDevice.WBP_SettingVoiceInputDevice_C.ApplySetting
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_SettingVoiceInputDevice_C::Get_ConfigItem_Text_1_Text_0()
+void UWBP_SettingVoiceInputDevice_C::ApplySetting()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SettingVoiceInputDevice_C", "Get_ConfigItem_Text_1_Text_0");
+		Func = Class->GetFunction("WBP_SettingVoiceInputDevice_C", "ApplySetting");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,15 +50,15 @@ void UWBP_SettingVoiceInputDevice_C::ExecuteUbergraph_WBP_SettingVoiceInputDevic
 }
 
 
-// Function WBP_SettingVoiceInputDevice.WBP_SettingVoiceInputDevice_C.ApplySetting
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_SettingVoiceInputDevice.WBP_SettingVoiceInputDevice_C.Get_ConfigItem_Text_1_Text_0
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void UWBP_SettingVoiceInputDevice_C::ApplySetting()
+void UWBP_SettingVoiceInputDevice_C::Get_ConfigItem_Text_1_Text_0()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SettingVoiceInputDevice_C", "ApplySetting");
+		Func = Class->GetFunction("WBP_SettingVoiceInputDevice_C", "Get_ConfigItem_Text_1_Text_0");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

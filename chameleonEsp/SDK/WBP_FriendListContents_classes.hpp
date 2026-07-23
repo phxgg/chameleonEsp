@@ -32,9 +32,9 @@ public:
 	class FString                                 playerName;                                        // 0x03A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_FriendListContents(int32 EntryPoint);
-	void Construct();
 	void BndEvt__WBP_FriendListContents_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
+	void Construct();
+	void ExecuteUbergraph_WBP_FriendListContents(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

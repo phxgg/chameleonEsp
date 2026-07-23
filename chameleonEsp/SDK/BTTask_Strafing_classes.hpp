@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "EN_StrafingDirection_structs.hpp"
+#include "Engine_structs.hpp"
 #include "AIModule_classes.hpp"
 
 
@@ -31,10 +31,10 @@ public:
 	double                                        MinTime;                                           // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Select_World_Direction(EN_StrafingDirection Strafing_Direction, class APawn* ControlePawn, struct FVector* World_Direction);
-	void ReceiveTickAI(class AAIController* OwnerController_ReceiveTickAI, class APawn* ControlledPawn_ReceiveTickAI, float DeltaSeconds_ReceiveTickAI);
-	void ReceiveExecuteAI(class AAIController* OwnerController_ReceiveExecuteAI, class APawn* ControlledPawn_ReceiveExecuteAI);
 	void ExecuteUbergraph_BTTask_Strafing(int32 EntryPoint);
+	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
+	void Select_World_Direction(EN_StrafingDirection Strafing_Direction_0, class APawn* ControlePawn, struct FVector* World_Direction);
 
 public:
 	static class UClass* StaticClass()

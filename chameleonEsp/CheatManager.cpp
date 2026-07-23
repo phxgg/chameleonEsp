@@ -219,7 +219,7 @@ void CheatManager::RenderEsp()
 		const float redColor[4] = { 1.0f, 0.0f, 0.0f, 1.0f };
 		const ImU32 colRed = ImGui::ColorConvertFloat4ToU32(*(ImVec4*)redColor);
 
-		const char* magnetText = "MAGNET ACTIVE";
+		const char* magnetText = "磁铁已激活";
 		const ImVec2 textSize = ImGui::CalcTextSize(magnetText);
 		const float textX = (drawSnapshot.screenX / 2.0f) - (textSize.x / 2.0f);
 		const float textY = drawSnapshot.screenY - 30.0f;

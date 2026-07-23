@@ -26,10 +26,10 @@ public:
 	TArray<class AActor*>                         DefaultActors;                                     // 0x02B8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 
 public:
-	void UserConstructionScript();
-	void RemoveOverlapType();
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_KeepArea(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void RemoveOverlapType();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

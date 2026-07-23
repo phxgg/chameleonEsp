@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_StormCountDown.WBP_StormCountDown_C.SetTime
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_StormCountDown_C::SetTime(int32 Time)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_StormCountDown_C", "SetTime");
-
-	Params::WBP_StormCountDown_C_SetTime Parms{};
-
-	Parms.Time = Time;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_StormCountDown.WBP_StormCountDown_C.ExecuteUbergraph_WBP_StormCountDown
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -51,6 +31,26 @@ void UWBP_StormCountDown_C::ExecuteUbergraph_WBP_StormCountDown(int32 EntryPoint
 	Params::WBP_StormCountDown_C_ExecuteUbergraph_WBP_StormCountDown Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_StormCountDown.WBP_StormCountDown_C.SetTime
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_StormCountDown_C::SetTime(int32 Time)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_StormCountDown_C", "SetTime");
+
+	Params::WBP_StormCountDown_C_SetTime Parms{};
+
+	Parms.Time = Time;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

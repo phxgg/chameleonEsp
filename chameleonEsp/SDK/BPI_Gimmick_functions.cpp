@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BPI_Gimmick.BPI_Gimmick_C.SetTimeStopState
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_Gimmick_C::SetTimeStopState(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_Gimmick_C", "SetTimeStopState");
-
-	Params::BPI_Gimmick_C_SetTimeStopState Parms{};
-
-	Parms.State = State;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPI_Gimmick.BPI_Gimmick_C.IsInPhoto
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -54,6 +34,26 @@ void IBPI_Gimmick_C::IsInPhoto(bool* Value)
 
 	if (Value != nullptr)
 		*Value = Parms.Value;
+}
+
+
+// Function BPI_Gimmick.BPI_Gimmick_C.SetTimeStopState
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_Gimmick_C::SetTimeStopState(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_Gimmick_C", "SetTimeStopState");
+
+	Params::BPI_Gimmick_C_SetTimeStopState Parms{};
+
+	Parms.State = State;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
 

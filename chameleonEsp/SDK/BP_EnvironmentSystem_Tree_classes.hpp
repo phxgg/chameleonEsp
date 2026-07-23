@@ -25,11 +25,11 @@ public:
 	bool                                          LogState;                                          // 0x0368(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UserConstructionScript();
-	void SpawnMaterial();
-	void ReplicateEvent();
-	void ReceiveDestroyed();
 	void ExecuteUbergraph_BP_EnvironmentSystem_Tree(int32 EntryPoint);
+	void ReceiveDestroyed();
+	void ReplicateEvent();
+	void SpawnMaterial();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

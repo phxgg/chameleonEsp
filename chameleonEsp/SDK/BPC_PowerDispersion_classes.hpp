@@ -26,9 +26,9 @@ public:
 	TArray<class ABP_Glue_CustomPhysics_C*>       AdjacentGlues;                                     // 0x00C8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 
 public:
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BPC_PowerDispersion(int32 EntryPoint);
 	void Dispersion(const struct FVector& PowerPosition, double power, class AActor* SourceActor);
+	void ExecuteUbergraph_BPC_PowerDispersion(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

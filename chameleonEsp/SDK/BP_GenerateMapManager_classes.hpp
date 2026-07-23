@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "ST_PriorityGenerateComonents_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ST_GenerateBoxLocation_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ST_PriorityGenerateComonents_structs.hpp"
-#include "ST_GenerateBoxLocation_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -58,21 +58,21 @@ public:
 	TArray<struct FST_GenerateBoxLocation>        AddGenerateBox_Wall_Local;                         // 0x0430(0x0010)(Edit, BlueprintVisible, Net, ExposeOnSpawn)
 
 public:
-	void UserConstructionScript();
-	void ResetGoalPoint();
-	void RegisterPriorityGenerateComponet(int32 Key, class ULBPC_PriorityGenerateControl_C* Value);
-	void ReceiveDestroyed();
-	void ReceiveBeginPlay();
-	void NewGetClass(class UClass** Class_0);
-	void GetSpawnTransformAndRadius(struct FTransform* Transform, double* Radius);
-	void GetGenerateRandomBoxDatas(struct FTransform* SpawnerTransform, struct FVector* HarfSize, struct FRotator* Rotation);
-	void GetClass(class UClass** Class_0);
-	void GenerateHouse();
-	void GenerateBoxLocation_Wall(int32 SpawnNum, class UClass* SpawnTargetClass, const struct FVector& TraceBoundSize, double FloorCheckDistance, int32 MaxGenerateCharange, bool IsInfinity, const struct FVector2D& ScaleRange, const struct FVector2D& HeightRange, const struct FRandomStream& Seed);
-	void GenerateBoxLocation(int32 SpawnNum, class UClass* SpawnTargetClass, const struct FVector& TraceBoundSize, double FloorCheckDistance, int32 MaxGenerateCharange, bool IsInfinity, const struct FVector2D& ScaleRange, const struct FRandomStream& Seed);
-	void GenerateBell(class UClass* SpawnTargetClass, const struct FRandomStream& Seed);
-	void ExecuteUbergraph_BP_GenerateMapManager(int32 EntryPoint);
 	void EnableSpawnArray(int32 TileCount, int32 Count, struct FRandomStream& Seed, TArray<int32>* ReturnArray);
+	void ExecuteUbergraph_BP_GenerateMapManager(int32 EntryPoint);
+	void GenerateBell(class UClass* SpawnTargetClass, const struct FRandomStream& Seed);
+	void GenerateBoxLocation(int32 SpawnNum, class UClass* SpawnTargetClass, const struct FVector& TraceBoundSize, double FloorCheckDistance, int32 MaxGenerateCharange, bool IsInfinity, const struct FVector2D& ScaleRange, const struct FRandomStream& Seed);
+	void GenerateBoxLocation_Wall(int32 SpawnNum, class UClass* SpawnTargetClass, const struct FVector& TraceBoundSize, double FloorCheckDistance, int32 MaxGenerateCharange, bool IsInfinity, const struct FVector2D& ScaleRange, const struct FVector2D& HeightRange, const struct FRandomStream& Seed);
+	void GenerateHouse();
+	void GetClass(class UClass** Class_0);
+	void GetGenerateRandomBoxDatas(struct FTransform* SpawnerTransform, struct FVector* HarfSize, struct FRotator* Rotation);
+	void GetSpawnTransformAndRadius(struct FTransform* Transform, double* Radius);
+	void NewGetClass(class UClass** Class_0);
+	void ReceiveBeginPlay();
+	void ReceiveDestroyed();
+	void RegisterPriorityGenerateComponet(int32 Key, class ULBPC_PriorityGenerateControl_C* Value);
+	void ResetGoalPoint();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

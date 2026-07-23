@@ -12163,23 +12163,23 @@ public:
 };
 DUMPER7_ASSERTS_LevelInstanceInterface_IsLoaded;
 
-// Function Engine.spotlight.SetInnerConeAngle
+// Function Engine.SpotLight.SetInnerConeAngle
 // 0x0004 (0x0004 - 0x0000)
-struct spotlight_SetInnerConeAngle final
+struct SpotLight_SetInnerConeAngle final
 {
 public:
 	float                                         NewInnerConeAngle;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_spotlight_SetInnerConeAngle;
+DUMPER7_ASSERTS_SpotLight_SetInnerConeAngle;
 
-// Function Engine.spotlight.SetOuterConeAngle
+// Function Engine.SpotLight.SetOuterConeAngle
 // 0x0004 (0x0004 - 0x0000)
-struct spotlight_SetOuterConeAngle final
+struct SpotLight_SetOuterConeAngle final
 {
 public:
 	float                                         NewOuterConeAngle;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_spotlight_SetOuterConeAngle;
+DUMPER7_ASSERTS_SpotLight_SetOuterConeAngle;
 
 // Function Engine.AnimNotifyMirrorInspectionLibrary.GetMirrorDataTable
 // 0x0038 (0x0038 - 0x0000)
@@ -37935,8 +37935,8 @@ DUMPER7_ASSERTS_KismetMathLibrary_LinearColor_Desaturated;
 struct KismetMathLibrary_LinearColor_Distance final
 {
 public:
-	struct FLinearColor                           c1;                                                // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           c2;                                                // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           C1;                                                // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           C2;                                                // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KismetMathLibrary_LinearColor_Distance;

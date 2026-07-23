@@ -16,20 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_BigPenController.BP_BigPenController_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_BigPenController_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BigPenController_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_BigPenController.BP_BigPenController_C.ExecuteUbergraph_BP_BigPenController
 // (Final, UbergraphFunction)
 // Parameters:
@@ -47,6 +33,20 @@ void ABP_BigPenController_C::ExecuteUbergraph_BP_BigPenController(int32 EntryPoi
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BigPenController.BP_BigPenController_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_BigPenController_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BigPenController_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

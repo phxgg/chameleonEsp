@@ -16,37 +16,31 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Simple_VAT_Player_PBR.BP_Simple_VAT_Player_PBR_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_Simple_VAT_Player_PBR.BP_Simple_VAT_Player_PBR_C.BaseTime__FinishedFunc
+// (BlueprintEvent)
 
-void ABP_Simple_VAT_Player_PBR_C::ReceiveBeginPlay()
+void ABP_Simple_VAT_Player_PBR_C::BaseTime__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Simple_VAT_Player_PBR_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_Simple_VAT_Player_PBR_C", "BaseTime__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_Simple_VAT_Player_PBR.BP_Simple_VAT_Player_PBR_C.OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function BP_Simple_VAT_Player_PBR.BP_Simple_VAT_Player_PBR_C.BaseTime__UpdateFunc
+// (BlueprintEvent)
 
-void ABP_Simple_VAT_Player_PBR_C::OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184(class UObject* Loaded)
+void ABP_Simple_VAT_Player_PBR_C::BaseTime__UpdateFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Simple_VAT_Player_PBR_C", "OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184");
+		Func = Class->GetFunction("BP_Simple_VAT_Player_PBR_C", "BaseTime__UpdateFunc");
 
-	Params::BP_Simple_VAT_Player_PBR_C_OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184 Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -70,29 +64,35 @@ void ABP_Simple_VAT_Player_PBR_C::ExecuteUbergraph_BP_Simple_VAT_Player_PBR(int3
 }
 
 
-// Function BP_Simple_VAT_Player_PBR.BP_Simple_VAT_Player_PBR_C.BaseTime__UpdateFunc
-// (BlueprintEvent)
+// Function BP_Simple_VAT_Player_PBR.BP_Simple_VAT_Player_PBR_C.OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Simple_VAT_Player_PBR_C::BaseTime__UpdateFunc()
+void ABP_Simple_VAT_Player_PBR_C::OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184(class UObject* Loaded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Simple_VAT_Player_PBR_C", "BaseTime__UpdateFunc");
+		Func = Class->GetFunction("BP_Simple_VAT_Player_PBR_C", "OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_Simple_VAT_Player_PBR_C_OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184 Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_Simple_VAT_Player_PBR.BP_Simple_VAT_Player_PBR_C.BaseTime__FinishedFunc
-// (BlueprintEvent)
+// Function BP_Simple_VAT_Player_PBR.BP_Simple_VAT_Player_PBR_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_Simple_VAT_Player_PBR_C::BaseTime__FinishedFunc()
+void ABP_Simple_VAT_Player_PBR_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Simple_VAT_Player_PBR_C", "BaseTime__FinishedFunc");
+		Func = Class->GetFunction("BP_Simple_VAT_Player_PBR_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

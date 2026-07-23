@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_ClassType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "BP_CraftedObject_Base_classes.hpp"
 #include "ENUM_ItemBindType_structs.hpp"
+#include "BP_CraftedObject_Base_classes.hpp"
 #include "ENUM_HandType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -27,11 +27,11 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_CraftedObject_Container_Base_C;  // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ExecuteUbergraph_BP_CraftedObject_Container_Base(int32 EntryPoint);
-	void ReceiveActorBeginOverlap(class AActor* OtherActor);
-	void ReceiveBeginPlay();
-	void GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* ClassType, bool* NotPickUp, struct FRotator* HaveRotation, struct FVector* Add_Position, bool* IsBoneAttach, ENUM_ItemBindType* BindType, class FName* BoneName, struct FST_ItemCoreDatas* CoreDatas);
 	void IsChangeImage(bool* IsInteract, class FText* OverrideText);
+	void GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* ClassType, bool* NotPickUp, struct FRotator* HaveRotation, struct FVector* Add_Position, bool* IsBoneAttach, ENUM_ItemBindType* BindType, class FName* BoneName, struct FST_ItemCoreDatas* CoreDatas);
+	void ReceiveBeginPlay();
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void ExecuteUbergraph_BP_CraftedObject_Container_Base(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

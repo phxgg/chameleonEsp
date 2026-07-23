@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_ClassType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "PenguinHotel_classes.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -37,29 +37,29 @@ public:
 	TMulticastInlineDelegate<void(int32 Current, int32 max_0)> MaxPlayerChange;                      // 0x03B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UpdateSpawnedControllers();
-	void UpdateSessionPlayerNum();
-	void UpdateJoinState(bool JoinState);
-	void UpdateGamePhaseSession(const class FString& GamePhaseName);
-	void Spawn(class AController* Controller);
-	void SetupVoiceChatPlayer(class AActor* Owner_0);
-	void ReceiveBeginPlay();
-	void OnUpdateSessionComplete_DE97626F47E9317836E9DF84671CB5B8(class FName SessionName, bool bWasSuccessful);
-	void OnUpdateSessionComplete_4C3FEC454ACE9E1456DA7DAD80AB4E11(class FName SessionName, bool bWasSuccessful);
-	void OnUpdateSessionComplete_0B8BFF2042E91A2A39DAD2BE5940BD84(class FName SessionName, bool bWasSuccessful);
-	void OnCallFailed_DE97626F47E9317836E9DF84671CB5B8(class FName SessionName, bool bWasSuccessful);
-	void OnCallFailed_4C3FEC454ACE9E1456DA7DAD80AB4E11(class FName SessionName, bool bWasSuccessful);
-	void OnCallFailed_0B8BFF2042E91A2A39DAD2BE5940BD84(class FName SessionName, bool bWasSuccessful);
-	void NumUpdateDelay();
-	void MakeUpdateGamePhaseSettings(const class FString& GamePhaseName, struct FOnlineSessionSettingsBP* StructOut);
-	void MakeUpdateCanJoinSettings(bool JoinState, struct FOnlineSessionSettingsBP* StructOut);
-	void MakeUpdaeNumPlayerSettings(int32 NewConnectionNum, struct FOnlineSessionSettingsBP* StructOut);
-	void K2_PostLogin(class APlayerController* NewPlayer_K2_PostLogin);
-	void K2_OnLogout(class AController* ExitingController_K2_OnLogout);
-	void JoinFillterCheck();
-	void ExecuteUbergraph_BP_FirstPersonGameMode_V2(int32 EntryPoint);
-	void DelayUpdate();
 	void CheckBindItem(class ABP_FirstPersonCharacter_Main_C* Character, class AActor* Actor);
+	void DelayUpdate();
+	void ExecuteUbergraph_BP_FirstPersonGameMode_V2(int32 EntryPoint);
+	void JoinFillterCheck();
+	void K2_OnLogout(class AController* ExitingController);
+	void K2_PostLogin(class APlayerController* NewPlayer);
+	void MakeUpdaeNumPlayerSettings(int32 NewConnectionNum, struct FOnlineSessionSettingsBP* StructOut);
+	void MakeUpdateCanJoinSettings(bool JoinState, struct FOnlineSessionSettingsBP* StructOut);
+	void MakeUpdateGamePhaseSettings(const class FString& GamePhaseName, struct FOnlineSessionSettingsBP* StructOut);
+	void NumUpdateDelay();
+	void OnCallFailed_0B8BFF2042E91A2A39DAD2BE5940BD84(class FName SessionName, bool bWasSuccessful);
+	void OnCallFailed_4C3FEC454ACE9E1456DA7DAD80AB4E11(class FName SessionName, bool bWasSuccessful);
+	void OnCallFailed_DE97626F47E9317836E9DF84671CB5B8(class FName SessionName, bool bWasSuccessful);
+	void OnUpdateSessionComplete_0B8BFF2042E91A2A39DAD2BE5940BD84(class FName SessionName, bool bWasSuccessful);
+	void OnUpdateSessionComplete_4C3FEC454ACE9E1456DA7DAD80AB4E11(class FName SessionName, bool bWasSuccessful);
+	void OnUpdateSessionComplete_DE97626F47E9317836E9DF84671CB5B8(class FName SessionName, bool bWasSuccessful);
+	void ReceiveBeginPlay();
+	void SetupVoiceChatPlayer(class AActor* Owner_0);
+	void Spawn(class AController* Controller);
+	void UpdateGamePhaseSession(const class FString& GamePhaseName);
+	void UpdateJoinState(bool JoinState);
+	void UpdateSessionPlayerNum();
+	void UpdateSpawnedControllers();
 
 public:
 	static class UClass* StaticClass()

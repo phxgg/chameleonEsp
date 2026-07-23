@@ -28,10 +28,10 @@ public:
 	class AActor*                                 TargetActor;                                       // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_3DInteract(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_WBP_3DInteract(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()

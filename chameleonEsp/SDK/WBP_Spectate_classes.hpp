@@ -30,11 +30,11 @@ public:
 	int32                                         MaxSectionCount;                                   // 0x0378(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void InpActEvt_IA_Spectate_Right_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_Spectate_Left_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void ExecuteUbergraph_WBP_Spectate(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_WBP_Spectate(int32 EntryPoint);
+	void InpActEvt_IA_Spectate_Left_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Spectate_Right_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()

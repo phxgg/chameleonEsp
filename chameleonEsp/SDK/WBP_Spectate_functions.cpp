@@ -16,47 +16,35 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_Spectate.WBP_Spectate_C.PreConstruct
+// Function WBP_Spectate.WBP_Spectate_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Spectate_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_Spectate_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Spectate_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_Spectate_C", "Construct");
 
-	Params::WBP_Spectate_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Spectate.WBP_Spectate_C.InpActEvt_IA_Spectate_Right_K2Node_EnhancedInputActionEvent_0
-// (BlueprintEvent)
+// Function WBP_Spectate.WBP_Spectate_C.ExecuteUbergraph_WBP_Spectate
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Spectate_C::InpActEvt_IA_Spectate_Right_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
+void UWBP_Spectate_C::ExecuteUbergraph_WBP_Spectate(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Spectate_C", "InpActEvt_IA_Spectate_Right_K2Node_EnhancedInputActionEvent_0");
+		Func = Class->GetFunction("WBP_Spectate_C", "ExecuteUbergraph_WBP_Spectate");
 
-	Params::WBP_Spectate_C_InpActEvt_IA_Spectate_Right_K2Node_EnhancedInputActionEvent_0 Parms{};
+	Params::WBP_Spectate_C_ExecuteUbergraph_WBP_Spectate Parms{};
 
-	Parms.ActionValue = std::move(ActionValue);
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.TriggeredTime = TriggeredTime;
-	Parms.SourceAction = SourceAction;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -88,37 +76,49 @@ void UWBP_Spectate_C::InpActEvt_IA_Spectate_Left_K2Node_EnhancedInputActionEvent
 }
 
 
-// Function WBP_Spectate.WBP_Spectate_C.ExecuteUbergraph_WBP_Spectate
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_Spectate.WBP_Spectate_C.InpActEvt_IA_Spectate_Right_K2Node_EnhancedInputActionEvent_0
+// (BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FInputActionValue&         ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UInputAction*               SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Spectate_C::ExecuteUbergraph_WBP_Spectate(int32 EntryPoint)
+void UWBP_Spectate_C::InpActEvt_IA_Spectate_Right_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Spectate_C", "ExecuteUbergraph_WBP_Spectate");
+		Func = Class->GetFunction("WBP_Spectate_C", "InpActEvt_IA_Spectate_Right_K2Node_EnhancedInputActionEvent_0");
 
-	Params::WBP_Spectate_C_ExecuteUbergraph_WBP_Spectate Parms{};
+	Params::WBP_Spectate_C_InpActEvt_IA_Spectate_Right_K2Node_EnhancedInputActionEvent_0 Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Spectate.WBP_Spectate_C.Construct
+// Function WBP_Spectate.WBP_Spectate_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Spectate_C::Construct()
+void UWBP_Spectate_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Spectate_C", "Construct");
+		Func = Class->GetFunction("WBP_Spectate_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_Spectate_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

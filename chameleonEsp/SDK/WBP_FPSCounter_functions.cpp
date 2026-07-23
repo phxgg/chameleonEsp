@@ -16,48 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_FPSCounter.WBP_FPSCounter_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry_Tick                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime_Tick                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_FPSCounter_C::Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FPSCounter_C", "Tick");
-
-	Params::WBP_FPSCounter_C_Tick Parms{};
-
-	Parms.MyGeometry_Tick = std::move(MyGeometry_Tick);
-	Parms.InDeltaTime_Tick = InDeltaTime_Tick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_FPSCounter.WBP_FPSCounter_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_FPSCounter_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FPSCounter_C", "PreConstruct");
-
-	Params::WBP_FPSCounter_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_FPSCounter.WBP_FPSCounter_C.ExecuteUbergraph_WBP_FPSCounter
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -78,25 +36,45 @@ void UWBP_FPSCounter_C::ExecuteUbergraph_WBP_FPSCounter(int32 EntryPoint)
 }
 
 
-// Function WBP_FPSCounter.WBP_FPSCounter_C.OnPaint
-// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Function WBP_FPSCounter.WBP_FPSCounter_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FPaintContext&                   Context_OnPaint                                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_FPSCounter_C::OnPaint(struct FPaintContext& Context_OnPaint) const
+void UWBP_FPSCounter_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FPSCounter_C", "OnPaint");
+		Func = Class->GetFunction("WBP_FPSCounter_C", "PreConstruct");
 
-	Params::WBP_FPSCounter_C_OnPaint Parms{};
+	Params::WBP_FPSCounter_C_PreConstruct Parms{};
 
-	Parms.Context_OnPaint = std::move(Context_OnPaint);
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	Context_OnPaint = std::move(Parms.Context_OnPaint);
+
+// Function WBP_FPSCounter.WBP_FPSCounter_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_FPSCounter_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FPSCounter_C", "Tick");
+
+	Params::WBP_FPSCounter_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -118,6 +96,28 @@ void UWBP_FPSCounter_C::CreatePaints(TArray<struct FVector2D>* Points) const
 
 	if (Points != nullptr)
 		*Points = std::move(Parms.Points);
+}
+
+
+// Function WBP_FPSCounter.WBP_FPSCounter_C.OnPaint
+// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// struct FPaintContext&                   Context                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+
+void UWBP_FPSCounter_C::OnPaint(struct FPaintContext& Context) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FPSCounter_C", "OnPaint");
+
+	Params::WBP_FPSCounter_C_OnPaint Parms{};
+
+	Parms.Context = std::move(Context);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Context = std::move(Parms.Context);
 }
 
 

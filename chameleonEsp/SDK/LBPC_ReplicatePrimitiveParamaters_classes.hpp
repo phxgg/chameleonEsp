@@ -36,17 +36,17 @@ public:
 	TMulticastInlineDelegate<void(class FName ParamaterName)> ResetBindEvent;                        // 0x0290(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void SetMass_Server_(double Mass, bool IsStack);
-	void SetLinearDamping_Server_(double Mass, bool IsStack);
-	void SetAngularDamping_Server_(double Mass, bool IsStack);
-	void RestMass_Server_();
-	void ResetLinearDamping_Server_();
-	void ResetAngularDamping_Reset_();
-	void ReceiveBeginPlay();
-	void OnRep_Mass();
-	void OnRep_LinearDamping();
-	void OnRep_AngularDamping();
 	void ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters(int32 EntryPoint);
+	void OnRep_AngularDamping();
+	void OnRep_LinearDamping();
+	void OnRep_Mass();
+	void ReceiveBeginPlay();
+	void ResetAngularDamping_Reset_();
+	void ResetLinearDamping_Server_();
+	void RestMass_Server_();
+	void SetAngularDamping_Server_(double Mass_0, bool IsStack);
+	void SetLinearDamping_Server_(double Mass_0, bool IsStack);
+	void SetMass_Server_(double Mass_0, bool IsStack);
 
 public:
 	static class UClass* StaticClass()

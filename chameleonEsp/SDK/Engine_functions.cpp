@@ -33770,19 +33770,19 @@ bool ILevelInstanceInterface::IsLoaded() const
 }
 
 
-// Function Engine.spotlight.SetInnerConeAngle
+// Function Engine.SpotLight.SetInnerConeAngle
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   NewInnerConeAngle                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void Aspotlight::SetInnerConeAngle(float NewInnerConeAngle)
+void ASpotLight::SetInnerConeAngle(float NewInnerConeAngle)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("spotlight", "SetInnerConeAngle");
+		Func = Class->GetFunction("SpotLight", "SetInnerConeAngle");
 
-	Params::spotlight_SetInnerConeAngle Parms{};
+	Params::SpotLight_SetInnerConeAngle Parms{};
 
 	Parms.NewInnerConeAngle = NewInnerConeAngle;
 
@@ -33795,19 +33795,19 @@ void Aspotlight::SetInnerConeAngle(float NewInnerConeAngle)
 }
 
 
-// Function Engine.spotlight.SetOuterConeAngle
+// Function Engine.SpotLight.SetOuterConeAngle
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   NewOuterConeAngle                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void Aspotlight::SetOuterConeAngle(float NewOuterConeAngle)
+void ASpotLight::SetOuterConeAngle(float NewOuterConeAngle)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("spotlight", "SetOuterConeAngle");
+		Func = Class->GetFunction("SpotLight", "SetOuterConeAngle");
 
-	Params::spotlight_SetOuterConeAngle Parms{};
+	Params::SpotLight_SetOuterConeAngle Parms{};
 
 	Parms.NewOuterConeAngle = NewOuterConeAngle;
 
@@ -104386,11 +104386,11 @@ struct FLinearColor UKismetMathLibrary::LinearColor_Desaturated(const struct FLi
 // Function Engine.KismetMathLibrary.LinearColor_Distance
 // (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// const struct FLinearColor&              c1                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FLinearColor&              c2                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FLinearColor&              C1                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FLinearColor&              C2                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-float UKismetMathLibrary::LinearColor_Distance(const struct FLinearColor& c1, const struct FLinearColor& c2)
+float UKismetMathLibrary::LinearColor_Distance(const struct FLinearColor& C1, const struct FLinearColor& C2)
 {
 	static class UFunction* Func = nullptr;
 
@@ -104399,8 +104399,8 @@ float UKismetMathLibrary::LinearColor_Distance(const struct FLinearColor& c1, co
 
 	Params::KismetMathLibrary_LinearColor_Distance Parms{};
 
-	Parms.c1 = std::move(c1);
-	Parms.c2 = std::move(c2);
+	Parms.C1 = std::move(C1);
+	Parms.C2 = std::move(C2);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

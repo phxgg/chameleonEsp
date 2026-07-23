@@ -17,6 +17,190 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_Food_Base.BP_Food_Base_C.IsChangeImage
+// 0x0020 (0x0020 - 0x0000)
+struct BP_Food_Base_C_IsChangeImage final
+{
+public:
+	bool                                          IsInteract;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   OverrideText;                                      // 0x0008(0x0010)(Parm, OutParm)
+	bool                                          CallFunc_IsSimulatingPhysics_ReturnValue;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_IsChangeImage;
+
+// Function BP_Food_Base.BP_Food_Base_C.ApplyDamage
+// 0x0120 (0x0120 - 0x0000)
+struct BP_Food_Base_C_ApplyDamage final
+{
+public:
+	class UObject*                                OtherActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             Sweep_Result;                                      // 0x0008(0x0100)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	TScriptInterface<class IBPI_Damage_C>         K2Node_DynamicCast_AsBPI_Damage;                   // 0x0108(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFinishFilter                          CallFunc_Damage_Finish;                            // 0x0119(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_ApplyDamage;
+
+// Function BP_Food_Base.BP_Food_Base_C.OnNotifyEnd_1EE8139B44BEF7533BB7DA8825C05C72
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Food_Base_C_OnNotifyEnd_1EE8139B44BEF7533BB7DA8825C05C72 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_OnNotifyEnd_1EE8139B44BEF7533BB7DA8825C05C72;
+
+// Function BP_Food_Base.BP_Food_Base_C.OnNotifyBegin_1EE8139B44BEF7533BB7DA8825C05C72
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Food_Base_C_OnNotifyBegin_1EE8139B44BEF7533BB7DA8825C05C72 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_OnNotifyBegin_1EE8139B44BEF7533BB7DA8825C05C72;
+
+// Function BP_Food_Base.BP_Food_Base_C.OnInterrupted_1EE8139B44BEF7533BB7DA8825C05C72
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Food_Base_C_OnInterrupted_1EE8139B44BEF7533BB7DA8825C05C72 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_OnInterrupted_1EE8139B44BEF7533BB7DA8825C05C72;
+
+// Function BP_Food_Base.BP_Food_Base_C.OnBlendOut_1EE8139B44BEF7533BB7DA8825C05C72
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Food_Base_C_OnBlendOut_1EE8139B44BEF7533BB7DA8825C05C72 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_OnBlendOut_1EE8139B44BEF7533BB7DA8825C05C72;
+
+// Function BP_Food_Base.BP_Food_Base_C.OnCompleted_1EE8139B44BEF7533BB7DA8825C05C72
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Food_Base_C_OnCompleted_1EE8139B44BEF7533BB7DA8825C05C72 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_OnCompleted_1EE8139B44BEF7533BB7DA8825C05C72;
+
+// Function BP_Food_Base.BP_Food_Base_C.OnNotifyEnd_AB8CFA264FD7DA0BDDFF52A4E41377D1
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Food_Base_C_OnNotifyEnd_AB8CFA264FD7DA0BDDFF52A4E41377D1 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_OnNotifyEnd_AB8CFA264FD7DA0BDDFF52A4E41377D1;
+
+// Function BP_Food_Base.BP_Food_Base_C.OnNotifyBegin_AB8CFA264FD7DA0BDDFF52A4E41377D1
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Food_Base_C_OnNotifyBegin_AB8CFA264FD7DA0BDDFF52A4E41377D1 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_OnNotifyBegin_AB8CFA264FD7DA0BDDFF52A4E41377D1;
+
+// Function BP_Food_Base.BP_Food_Base_C.OnInterrupted_AB8CFA264FD7DA0BDDFF52A4E41377D1
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Food_Base_C_OnInterrupted_AB8CFA264FD7DA0BDDFF52A4E41377D1 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_OnInterrupted_AB8CFA264FD7DA0BDDFF52A4E41377D1;
+
+// Function BP_Food_Base.BP_Food_Base_C.OnBlendOut_AB8CFA264FD7DA0BDDFF52A4E41377D1
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Food_Base_C_OnBlendOut_AB8CFA264FD7DA0BDDFF52A4E41377D1 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_OnBlendOut_AB8CFA264FD7DA0BDDFF52A4E41377D1;
+
+// Function BP_Food_Base.BP_Food_Base_C.OnCompleted_AB8CFA264FD7DA0BDDFF52A4E41377D1
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Food_Base_C_OnCompleted_AB8CFA264FD7DA0BDDFF52A4E41377D1 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_OnCompleted_AB8CFA264FD7DA0BDDFF52A4E41377D1;
+
+// Function BP_Food_Base.BP_Food_Base_C.Attack_AC
+// 0x0028 (0x0028 - 0x0000)
+struct BP_Food_Base_C_Attack_AC final
+{
+public:
+	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   AttackName;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageMultiply;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          MutipleHitPossible;                                // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        StanMultiply;                                      // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_Attack_AC;
+
+// Function BP_Food_Base.BP_Food_Base_C.Combo
+// 0x0010 (0x0010 - 0x0000)
+struct BP_Food_Base_C_Combo final
+{
+public:
+	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ComboName;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_Combo;
+
+// Function BP_Food_Base.BP_Food_Base_C.Attack_AC_Remote
+// 0x0020 (0x0020 - 0x0000)
+struct BP_Food_Base_C_Attack_AC_Remote final
+{
+public:
+	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ComponentName;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageMultiply;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        StanMultiply;                                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_Attack_AC_Remote;
+
+// Function BP_Food_Base.BP_Food_Base_C.Shot
+// 0x0018 (0x0018 - 0x0000)
+struct BP_Food_Base_C_Shot final
+{
+public:
+	bool                                          PressState;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        PushTime;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonCharacter_Main_C*        SourcePlayer;                                      // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_Shot;
+
+// Function BP_Food_Base.BP_Food_Base_C.SetMeshDatas
+// 0x0001 (0x0001 - 0x0000)
+struct BP_Food_Base_C_SetMeshDatas final
+{
+public:
+	bool                                          KeepScale;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_SetMeshDatas;
+
+// Function BP_Food_Base.BP_Food_Base_C.PickState
+// 0x0018 (0x0018 - 0x0000)
+struct BP_Food_Base_C_PickState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         SlotIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Food_Base_C_PickState;
+
 // Function BP_Food_Base.BP_Food_Base_C.ExecuteUbergraph_BP_Food_Base
 // 0x0210 (0x0210 - 0x0000)
 struct BP_Food_Base_C_ExecuteUbergraph_BP_Food_Base final
@@ -100,190 +284,6 @@ public:
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0208(0x0008)(NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_Food_Base_C_ExecuteUbergraph_BP_Food_Base;
-
-// Function BP_Food_Base.BP_Food_Base_C.PickState
-// 0x0018 (0x0018 - 0x0000)
-struct BP_Food_Base_C_PickState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         SlotIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_PickState;
-
-// Function BP_Food_Base.BP_Food_Base_C.SetMeshDatas
-// 0x0001 (0x0001 - 0x0000)
-struct BP_Food_Base_C_SetMeshDatas final
-{
-public:
-	bool                                          KeepScale;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_SetMeshDatas;
-
-// Function BP_Food_Base.BP_Food_Base_C.Shot
-// 0x0018 (0x0018 - 0x0000)
-struct BP_Food_Base_C_Shot final
-{
-public:
-	bool                                          PressState;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        PushTime;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonCharacter_Main_C*        SourcePlayer;                                      // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_Shot;
-
-// Function BP_Food_Base.BP_Food_Base_C.Attack_AC_Remote
-// 0x0020 (0x0020 - 0x0000)
-struct BP_Food_Base_C_Attack_AC_Remote final
-{
-public:
-	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ComponentName;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DamageMultiply;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        StanMultiply;                                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_Attack_AC_Remote;
-
-// Function BP_Food_Base.BP_Food_Base_C.Combo
-// 0x0010 (0x0010 - 0x0000)
-struct BP_Food_Base_C_Combo final
-{
-public:
-	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ComboName;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_Combo;
-
-// Function BP_Food_Base.BP_Food_Base_C.Attack_AC
-// 0x0028 (0x0028 - 0x0000)
-struct BP_Food_Base_C_Attack_AC final
-{
-public:
-	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   AttackName;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DamageMultiply;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          MutipleHitPossible;                                // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        StanMultiply;                                      // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_Attack_AC;
-
-// Function BP_Food_Base.BP_Food_Base_C.OnCompleted_AB8CFA264FD7DA0BDDFF52A4E41377D1
-// 0x0008 (0x0008 - 0x0000)
-struct BP_Food_Base_C_OnCompleted_AB8CFA264FD7DA0BDDFF52A4E41377D1 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_OnCompleted_AB8CFA264FD7DA0BDDFF52A4E41377D1;
-
-// Function BP_Food_Base.BP_Food_Base_C.OnBlendOut_AB8CFA264FD7DA0BDDFF52A4E41377D1
-// 0x0008 (0x0008 - 0x0000)
-struct BP_Food_Base_C_OnBlendOut_AB8CFA264FD7DA0BDDFF52A4E41377D1 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_OnBlendOut_AB8CFA264FD7DA0BDDFF52A4E41377D1;
-
-// Function BP_Food_Base.BP_Food_Base_C.OnInterrupted_AB8CFA264FD7DA0BDDFF52A4E41377D1
-// 0x0008 (0x0008 - 0x0000)
-struct BP_Food_Base_C_OnInterrupted_AB8CFA264FD7DA0BDDFF52A4E41377D1 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_OnInterrupted_AB8CFA264FD7DA0BDDFF52A4E41377D1;
-
-// Function BP_Food_Base.BP_Food_Base_C.OnNotifyBegin_AB8CFA264FD7DA0BDDFF52A4E41377D1
-// 0x0008 (0x0008 - 0x0000)
-struct BP_Food_Base_C_OnNotifyBegin_AB8CFA264FD7DA0BDDFF52A4E41377D1 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_OnNotifyBegin_AB8CFA264FD7DA0BDDFF52A4E41377D1;
-
-// Function BP_Food_Base.BP_Food_Base_C.OnNotifyEnd_AB8CFA264FD7DA0BDDFF52A4E41377D1
-// 0x0008 (0x0008 - 0x0000)
-struct BP_Food_Base_C_OnNotifyEnd_AB8CFA264FD7DA0BDDFF52A4E41377D1 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_OnNotifyEnd_AB8CFA264FD7DA0BDDFF52A4E41377D1;
-
-// Function BP_Food_Base.BP_Food_Base_C.OnCompleted_1EE8139B44BEF7533BB7DA8825C05C72
-// 0x0008 (0x0008 - 0x0000)
-struct BP_Food_Base_C_OnCompleted_1EE8139B44BEF7533BB7DA8825C05C72 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_OnCompleted_1EE8139B44BEF7533BB7DA8825C05C72;
-
-// Function BP_Food_Base.BP_Food_Base_C.OnBlendOut_1EE8139B44BEF7533BB7DA8825C05C72
-// 0x0008 (0x0008 - 0x0000)
-struct BP_Food_Base_C_OnBlendOut_1EE8139B44BEF7533BB7DA8825C05C72 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_OnBlendOut_1EE8139B44BEF7533BB7DA8825C05C72;
-
-// Function BP_Food_Base.BP_Food_Base_C.OnInterrupted_1EE8139B44BEF7533BB7DA8825C05C72
-// 0x0008 (0x0008 - 0x0000)
-struct BP_Food_Base_C_OnInterrupted_1EE8139B44BEF7533BB7DA8825C05C72 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_OnInterrupted_1EE8139B44BEF7533BB7DA8825C05C72;
-
-// Function BP_Food_Base.BP_Food_Base_C.OnNotifyBegin_1EE8139B44BEF7533BB7DA8825C05C72
-// 0x0008 (0x0008 - 0x0000)
-struct BP_Food_Base_C_OnNotifyBegin_1EE8139B44BEF7533BB7DA8825C05C72 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_OnNotifyBegin_1EE8139B44BEF7533BB7DA8825C05C72;
-
-// Function BP_Food_Base.BP_Food_Base_C.OnNotifyEnd_1EE8139B44BEF7533BB7DA8825C05C72
-// 0x0008 (0x0008 - 0x0000)
-struct BP_Food_Base_C_OnNotifyEnd_1EE8139B44BEF7533BB7DA8825C05C72 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_OnNotifyEnd_1EE8139B44BEF7533BB7DA8825C05C72;
-
-// Function BP_Food_Base.BP_Food_Base_C.ApplyDamage
-// 0x0120 (0x0120 - 0x0000)
-struct BP_Food_Base_C_ApplyDamage final
-{
-public:
-	class UObject*                                OtherActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             Sweep_Result;                                      // 0x0008(0x0100)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	TScriptInterface<class IBPI_Damage_C>         K2Node_DynamicCast_AsBPI_Damage;                   // 0x0108(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFinishFilter                          CallFunc_Damage_Finish;                            // 0x0119(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_ApplyDamage;
-
-// Function BP_Food_Base.BP_Food_Base_C.IsChangeImage
-// 0x0020 (0x0020 - 0x0000)
-struct BP_Food_Base_C_IsChangeImage final
-{
-public:
-	bool                                          IsInteract;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   OverrideText;                                      // 0x0008(0x0010)(Parm, OutParm)
-	bool                                          CallFunc_IsSimulatingPhysics_ReturnValue;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Food_Base_C_IsChangeImage;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

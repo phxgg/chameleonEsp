@@ -31,11 +31,11 @@ public:
 	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SleepMode();
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_LINK_ElectricFan(int32 EntryPoint);
 	void BndEvt__BP_LINK_ElectricFan_Capsule_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void ExecuteUbergraph_BP_LINK_ElectricFan(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void SleepMode();
 
 public:
 	static class UClass* StaticClass()

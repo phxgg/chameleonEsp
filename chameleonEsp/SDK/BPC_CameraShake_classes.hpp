@@ -25,9 +25,9 @@ public:
 	TSubclassOf<class UCameraShakeBase>           ShakeClass;                                        // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
 public:
-	void ShakeStart(double Duration, double Scale);
-	void ShakeEnd();
 	void ExecuteUbergraph_BPC_CameraShake(int32 EntryPoint);
+	void ShakeEnd();
+	void ShakeStart(double Duration, double Scale);
 
 public:
 	static class UClass* StaticClass()

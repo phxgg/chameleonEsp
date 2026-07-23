@@ -16,31 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_LinkPoint.BP_LinkPoint_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_LinkPoint.BP_LinkPoint_C.ExecuteUbergraph_BP_LinkPoint
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_LinkPoint_C::UserConstructionScript()
+void ABP_LinkPoint_C::ExecuteUbergraph_BP_LinkPoint(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LinkPoint_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_LinkPoint_C", "ExecuteUbergraph_BP_LinkPoint");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::BP_LinkPoint_C_ExecuteUbergraph_BP_LinkPoint Parms{};
 
+	Parms.EntryPoint = EntryPoint;
 
-// Function BP_LinkPoint.BP_LinkPoint_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_LinkPoint_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LinkPoint_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -64,23 +56,31 @@ void ABP_LinkPoint_C::MakePole(class UInstancedStaticMeshComponent* InstancedSta
 }
 
 
-// Function BP_LinkPoint.BP_LinkPoint_C.ExecuteUbergraph_BP_LinkPoint
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_LinkPoint.BP_LinkPoint_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_LinkPoint_C::ExecuteUbergraph_BP_LinkPoint(int32 EntryPoint)
+void ABP_LinkPoint_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LinkPoint_C", "ExecuteUbergraph_BP_LinkPoint");
+		Func = Class->GetFunction("BP_LinkPoint_C", "ReceiveBeginPlay");
 
-	Params::BP_LinkPoint_C_ExecuteUbergraph_BP_LinkPoint Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function BP_LinkPoint.BP_LinkPoint_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_LinkPoint_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LinkPoint_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

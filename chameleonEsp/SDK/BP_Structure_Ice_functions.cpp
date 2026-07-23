@@ -16,34 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Structure_Ice.BP_Structure_Ice_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_Structure_Ice_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Structure_Ice_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Structure_Ice.BP_Structure_Ice_C.Generate
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Structure_Ice_C::Generate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Structure_Ice_C", "Generate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_Structure_Ice.BP_Structure_Ice_C.ExecuteUbergraph_BP_Structure_Ice
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -61,6 +33,34 @@ void ABP_Structure_Ice_C::ExecuteUbergraph_BP_Structure_Ice(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Structure_Ice.BP_Structure_Ice_C.Generate
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Structure_Ice_C::Generate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Structure_Ice_C", "Generate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Structure_Ice.BP_Structure_Ice_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_Structure_Ice_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Structure_Ice_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

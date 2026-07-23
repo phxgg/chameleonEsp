@@ -16,24 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_ItemUsedLoal_Wine.BPC_ItemUsedLoal_Wine_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_ItemUsedLoal_Wine_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemUsedLoal_Wine_C_ReceiveTick;
-
-// Function BPC_ItemUsedLoal_Wine.BPC_ItemUsedLoal_Wine_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_ItemUsedLoal_Wine_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason_ReceiveEndPlay;                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemUsedLoal_Wine_C_ReceiveEndPlay;
-
 // Function BPC_ItemUsedLoal_Wine.BPC_ItemUsedLoal_Wine_C.ExecuteUbergraph_BPC_ItemUsedLoal_Wine
 // 0x0138 (0x0138 - 0x0000)
 struct BPC_ItemUsedLoal_Wine_C_ExecuteUbergraph_BPC_ItemUsedLoal_Wine final
@@ -94,6 +76,24 @@ public:
 	float                                         CallFunc_AddControllerYawInput_Val_ImplicitCast;   // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_ItemUsedLoal_Wine_C_ExecuteUbergraph_BPC_ItemUsedLoal_Wine;
+
+// Function BPC_ItemUsedLoal_Wine.BPC_ItemUsedLoal_Wine_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_ItemUsedLoal_Wine_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemUsedLoal_Wine_C_ReceiveEndPlay;
+
+// Function BPC_ItemUsedLoal_Wine.BPC_ItemUsedLoal_Wine_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_ItemUsedLoal_Wine_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemUsedLoal_Wine_C_ReceiveTick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -11,43 +11,13 @@
 #include "Basic.hpp"
 
 #include "Niagara_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "FinishFilter_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
-
-// Function LBPC_DamageEffect.LBPC_DamageEffect_C.SpawnStateChange
-// 0x0001 (0x0001 - 0x0000)
-struct LBPC_DamageEffect_C_SpawnStateChange final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LBPC_DamageEffect_C_SpawnStateChange;
-
-// Function LBPC_DamageEffect.LBPC_DamageEffect_C.SetDamage
-// 0x0010 (0x0010 - 0x0000)
-struct LBPC_DamageEffect_C_SetDamage final
-{
-public:
-	double                                        Multiply;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LBPC_DamageEffect_C_SetDamage;
-
-// Function LBPC_DamageEffect.LBPC_DamageEffect_C.ReceiveParticleData
-// 0x0030 (0x0030 - 0x0000)
-struct LBPC_DamageEffect_C_ReceiveParticleData final
-{
-public:
-	TArray<struct FBasicParticleData>             Data;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	class UNiagaraSystem*                         NiagaraSystem;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                SimulationPositionOffset;                          // 0x0018(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LBPC_DamageEffect_C_ReceiveParticleData;
 
 // Function LBPC_DamageEffect.LBPC_DamageEffect_C.ExecuteUbergraph_LBPC_DamageEffect
 // 0x0190 (0x0190 - 0x0000)
@@ -94,6 +64,36 @@ public:
 	class FString                                 CallFunc_Conv_BoolToString_ReturnValue;            // 0x0180(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_LBPC_DamageEffect_C_ExecuteUbergraph_LBPC_DamageEffect;
+
+// Function LBPC_DamageEffect.LBPC_DamageEffect_C.ReceiveParticleData
+// 0x0030 (0x0030 - 0x0000)
+struct LBPC_DamageEffect_C_ReceiveParticleData final
+{
+public:
+	TArray<struct FBasicParticleData>             Data;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class UNiagaraSystem*                         NiagaraSystem_0;                                   // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                SimulationPositionOffset;                          // 0x0018(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LBPC_DamageEffect_C_ReceiveParticleData;
+
+// Function LBPC_DamageEffect.LBPC_DamageEffect_C.SetDamage
+// 0x0010 (0x0010 - 0x0000)
+struct LBPC_DamageEffect_C_SetDamage final
+{
+public:
+	double                                        Multiply;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LBPC_DamageEffect_C_SetDamage;
+
+// Function LBPC_DamageEffect.LBPC_DamageEffect_C.SpawnStateChange
+// 0x0001 (0x0001 - 0x0000)
+struct LBPC_DamageEffect_C_SpawnStateChange final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LBPC_DamageEffect_C_SpawnStateChange;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

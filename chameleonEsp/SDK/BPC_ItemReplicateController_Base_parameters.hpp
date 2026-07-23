@@ -16,6 +16,51 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_ItemReplicateController_Base_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_Base_C_ReceiveTick;
+
+// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.UseItem(Local)
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_ItemReplicateController_Base_C_UseItem_Local_ final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_Base_C_UseItem_Local_;
+
+// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.UseItem(Replicate)
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_ItemReplicateController_Base_C_UseItem_Replicate_ final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_Base_C_UseItem_Replicate_;
+
+// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.UseItem(Server)
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_ItemReplicateController_Base_C_UseItem_Server_ final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_Base_C_UseItem_Server_;
+
+// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.DestroySelf
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_ItemReplicateController_Base_C_DestroySelf final
+{
+public:
+	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_Base_C_DestroySelf;
+
 // Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.ExecuteUbergraph_BPC_ItemReplicateController_Base
 // 0x0060 (0x0060 - 0x0000)
 struct BPC_ItemReplicateController_Base_C_ExecuteUbergraph_BPC_ItemReplicateController_Base final
@@ -46,51 +91,6 @@ public:
 	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_ItemReplicateController_Base_C_ExecuteUbergraph_BPC_ItemReplicateController_Base;
-
-// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.DestroySelf
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_ItemReplicateController_Base_C_DestroySelf final
-{
-public:
-	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_Base_C_DestroySelf;
-
-// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.UseItem(Server)
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_ItemReplicateController_Base_C_UseItem_Server_ final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_Base_C_UseItem_Server_;
-
-// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.UseItem(Replicate)
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_ItemReplicateController_Base_C_UseItem_Replicate_ final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_Base_C_UseItem_Replicate_;
-
-// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.UseItem(Local)
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_ItemReplicateController_Base_C_UseItem_Local_ final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_Base_C_UseItem_Local_;
-
-// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_ItemReplicateController_Base_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_Base_C_ReceiveTick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

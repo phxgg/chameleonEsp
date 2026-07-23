@@ -26,9 +26,9 @@ public:
 	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveDestroyed();
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_SnowBall_Under(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveDestroyed();
 
 public:
 	static class UClass* StaticClass()

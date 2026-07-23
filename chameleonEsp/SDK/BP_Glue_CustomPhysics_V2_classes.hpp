@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "EN_StanType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "PenguinHotel_classes.hpp"
 #include "EN_DamageType_structs.hpp"
+#include "EN_StanType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -59,26 +59,26 @@ public:
 	int32                                         DynamicColorIndex;                                 // 0x03D8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void UpdateGlueVisual();
-	void StanDamage(EN_StanType StanType);
-	void StaminaDamage(double Value);
-	void SnapGlue(const struct FVector& WorldPosition, const TArray<class UPrimitiveComponent*>& TargetPrimitives);
-	void SetGlueColor();
-	void ScaleAnim__UpdateFunc();
-	void ScaleAnim__FinishedFunc();
-	void ReceiveDestroyed();
-	void ReceiveBeginPlay();
-	void OnRep_DynamicColorIndex();
-	void GlueViewDistanceCheck();
-	void GetParryState(bool* State);
-	void ExecuteUbergraph_BP_Glue_CustomPhysics_V2(int32 EntryPoint);
-	void DebugVisualize__UpdateFunc();
-	void DebugVisualize__FinishedFunc();
-	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
-	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
-	void AddPower(double power, class AActor* SourceActor);
-	void AddCustomRevicePower(float PowerAmount_AddCustomRevicePower);
 	void AddCustomForce(double AddValue);
+	void AddCustomRevicePower(float PowerAmount);
+	void AddPower(double power, class AActor* SourceActor);
+	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
+	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
+	void DebugVisualize__FinishedFunc();
+	void DebugVisualize__UpdateFunc();
+	void ExecuteUbergraph_BP_Glue_CustomPhysics_V2(int32 EntryPoint);
+	void GetParryState(bool* State);
+	void GlueViewDistanceCheck();
+	void OnRep_DynamicColorIndex();
+	void ReceiveBeginPlay();
+	void ReceiveDestroyed();
+	void ScaleAnim__FinishedFunc();
+	void ScaleAnim__UpdateFunc();
+	void SetGlueColor();
+	void SnapGlue(const struct FVector& WorldPosition, const TArray<class UPrimitiveComponent*>& TargetPrimitives);
+	void StaminaDamage(double Value);
+	void StanDamage(EN_StanType StanType);
+	void UpdateGlueVisual();
 
 public:
 	static class UClass* StaticClass()

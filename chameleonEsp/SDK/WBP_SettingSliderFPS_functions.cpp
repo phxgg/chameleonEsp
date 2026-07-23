@@ -16,35 +16,29 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_SettingSliderFPS.WBP_SettingSliderFPS_C.ExecuteUbergraph_WBP_SettingSliderFPS
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_SettingSliderFPS.WBP_SettingSliderFPS_C.ApplySetting
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_SettingSliderFPS_C::ExecuteUbergraph_WBP_SettingSliderFPS(int32 EntryPoint)
+void UWBP_SettingSliderFPS_C::ApplySetting()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SettingSliderFPS_C", "ExecuteUbergraph_WBP_SettingSliderFPS");
+		Func = Class->GetFunction("WBP_SettingSliderFPS_C", "ApplySetting");
 
-	Params::WBP_SettingSliderFPS_C_ExecuteUbergraph_WBP_SettingSliderFPS Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_SettingSliderFPS.WBP_SettingSliderFPS_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_SettingSliderFPS.WBP_SettingSliderFPS_C.BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_SettingSliderFPS_C::Construct()
+void UWBP_SettingSliderFPS_C::BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SettingSliderFPS_C", "Construct");
+		Func = Class->GetFunction("WBP_SettingSliderFPS_C", "BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,31 +64,37 @@ void UWBP_SettingSliderFPS_C::BndEvt__WBP_SettingSliderFPS_WBP_NavSlider_Penguin
 }
 
 
-// Function WBP_SettingSliderFPS.WBP_SettingSliderFPS_C.BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_SettingSliderFPS.WBP_SettingSliderFPS_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_SettingSliderFPS_C::BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature()
+void UWBP_SettingSliderFPS_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SettingSliderFPS_C", "BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature");
+		Func = Class->GetFunction("WBP_SettingSliderFPS_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_SettingSliderFPS.WBP_SettingSliderFPS_C.ApplySetting
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_SettingSliderFPS.WBP_SettingSliderFPS_C.ExecuteUbergraph_WBP_SettingSliderFPS
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_SettingSliderFPS_C::ApplySetting()
+void UWBP_SettingSliderFPS_C::ExecuteUbergraph_WBP_SettingSliderFPS(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SettingSliderFPS_C", "ApplySetting");
+		Func = Class->GetFunction("WBP_SettingSliderFPS_C", "ExecuteUbergraph_WBP_SettingSliderFPS");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_SettingSliderFPS_C_ExecuteUbergraph_WBP_SettingSliderFPS Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

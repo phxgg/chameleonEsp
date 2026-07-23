@@ -16,29 +16,20 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_GoalHouse.BP_GoalHouse_C.SetHouseState(Replicate)
-// 0x0001 (0x0001 - 0x0000)
-struct BP_GoalHouse_C_SetHouseState_Replicate_ final
+// Function BP_GoalHouse.BP_GoalHouse_C.BndEvt__BP_GoalHouse_ChimneyLocation_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
+// 0x0120 (0x0120 - 0x0000)
+struct BP_GoalHouse_C_BndEvt__BP_GoalHouse_ChimneyLocation_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature final
 {
 public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_BP_GoalHouse_C_SetHouseState_Replicate_;
-
-// Function BP_GoalHouse.BP_GoalHouse_C.SetHouseActiveState
-// 0x0020 (0x0020 - 0x0000)
-struct BP_GoalHouse_C_SetHouseActiveState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     Temp_object_Variable;                              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     Temp_object_Variable_1;                            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     K2Node_Select_Default;                             // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GoalHouse_C_SetHouseActiveState;
+DUMPER7_ASSERTS_BP_GoalHouse_C_BndEvt__BP_GoalHouse_ChimneyLocation_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature;
 
 // Function BP_GoalHouse.BP_GoalHouse_C.ExecuteUbergraph_BP_GoalHouse
 // 0x0170 (0x0170 - 0x0000)
@@ -75,20 +66,29 @@ public:
 };
 DUMPER7_ASSERTS_BP_GoalHouse_C_ExecuteUbergraph_BP_GoalHouse;
 
-// Function BP_GoalHouse.BP_GoalHouse_C.BndEvt__BP_GoalHouse_ChimneyLocation_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// 0x0120 (0x0120 - 0x0000)
-struct BP_GoalHouse_C_BndEvt__BP_GoalHouse_ChimneyLocation_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature final
+// Function BP_GoalHouse.BP_GoalHouse_C.SetHouseActiveState
+// 0x0020 (0x0020 - 0x0000)
+struct BP_GoalHouse_C_SetHouseActiveState final
 {
 public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     Temp_object_Variable;                              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     Temp_object_Variable_1;                            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     K2Node_Select_Default;                             // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_GoalHouse_C_BndEvt__BP_GoalHouse_ChimneyLocation_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature;
+DUMPER7_ASSERTS_BP_GoalHouse_C_SetHouseActiveState;
+
+// Function BP_GoalHouse.BP_GoalHouse_C.SetHouseState(Replicate)
+// 0x0001 (0x0001 - 0x0000)
+struct BP_GoalHouse_C_SetHouseState_Replicate_ final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GoalHouse_C_SetHouseState_Replicate_;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

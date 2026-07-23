@@ -16,77 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_KeyImage.WBP_KeyImage_C.UpdateInputDeviceAll
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EInputType                              InputType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_KeyImage.WBP_KeyImage_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_KeyImage_C::UpdateInputDeviceAll(EInputType InputType)
+void UWBP_KeyImage_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_KeyImage_C", "UpdateInputDeviceAll");
-
-	Params::WBP_KeyImage_C_UpdateInputDeviceAll Parms{};
-
-	Parms.InputType = InputType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_KeyImage.WBP_KeyImage_C.UpdateImage
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_KeyImage_C::UpdateImage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_KeyImage_C", "UpdateImage");
+		Func = Class->GetFunction("WBP_KeyImage_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_KeyImage.WBP_KeyImage_C.SetIsController
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsController                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_KeyImage_C::SetIsController(bool IsController)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_KeyImage_C", "SetIsController");
-
-	Params::WBP_KeyImage_C_SetIsController Parms{};
-
-	Parms.IsController = IsController;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_KeyImage.WBP_KeyImage_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_KeyImage_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_KeyImage_C", "PreConstruct");
-
-	Params::WBP_KeyImage_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -110,17 +50,77 @@ void UWBP_KeyImage_C::ExecuteUbergraph_WBP_KeyImage(int32 EntryPoint)
 }
 
 
-// Function WBP_KeyImage.WBP_KeyImage_C.Construct
+// Function WBP_KeyImage.WBP_KeyImage_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_KeyImage_C::Construct()
+void UWBP_KeyImage_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_KeyImage_C", "Construct");
+		Func = Class->GetFunction("WBP_KeyImage_C", "PreConstruct");
+
+	Params::WBP_KeyImage_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_KeyImage.WBP_KeyImage_C.SetIsController
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsController_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_KeyImage_C::SetIsController(bool IsController_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_KeyImage_C", "SetIsController");
+
+	Params::WBP_KeyImage_C_SetIsController Parms{};
+
+	Parms.IsController_0 = IsController_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_KeyImage.WBP_KeyImage_C.UpdateImage
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_KeyImage_C::UpdateImage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_KeyImage_C", "UpdateImage");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_KeyImage.WBP_KeyImage_C.UpdateInputDeviceAll
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EInputType                              InputType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_KeyImage_C::UpdateInputDeviceAll(EInputType InputType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_KeyImage_C", "UpdateInputDeviceAll");
+
+	Params::WBP_KeyImage_C_UpdateInputDeviceAll Parms{};
+
+	Parms.InputType = InputType;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

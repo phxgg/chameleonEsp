@@ -14,63 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.SetMass(Server)
-// 0x0010 (0x0010 - 0x0000)
-struct LBPC_ReplicatePrimitiveParamaters_C_SetMass_Server_ final
-{
-public:
-	double                                        Mass;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsStack;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LBPC_ReplicatePrimitiveParamaters_C_SetMass_Server_;
-
-// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.SetLinearDamping(Server)
-// 0x0010 (0x0010 - 0x0000)
-struct LBPC_ReplicatePrimitiveParamaters_C_SetLinearDamping_Server_ final
-{
-public:
-	double                                        Mass;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsStack;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LBPC_ReplicatePrimitiveParamaters_C_SetLinearDamping_Server_;
-
-// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.SetAngularDamping(Server)
-// 0x0010 (0x0010 - 0x0000)
-struct LBPC_ReplicatePrimitiveParamaters_C_SetAngularDamping_Server_ final
-{
-public:
-	double                                        Mass;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsStack;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LBPC_ReplicatePrimitiveParamaters_C_SetAngularDamping_Server_;
-
-// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.OnRep_Mass
-// 0x0004 (0x0004 - 0x0000)
-struct LBPC_ReplicatePrimitiveParamaters_C_OnRep_Mass final
-{
-public:
-	float                                         CallFunc_SetMassOverrideInKg_MassInKg_ImplicitCast; // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LBPC_ReplicatePrimitiveParamaters_C_OnRep_Mass;
-
-// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.OnRep_LinearDamping
-// 0x0004 (0x0004 - 0x0000)
-struct LBPC_ReplicatePrimitiveParamaters_C_OnRep_LinearDamping final
-{
-public:
-	float                                         CallFunc_SetLinearDamping_InDamping_ImplicitCast;  // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LBPC_ReplicatePrimitiveParamaters_C_OnRep_LinearDamping;
-
-// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.OnRep_AngularDamping
-// 0x0004 (0x0004 - 0x0000)
-struct LBPC_ReplicatePrimitiveParamaters_C_OnRep_AngularDamping final
-{
-public:
-	float                                         CallFunc_SetAngularDamping_InDamping_ImplicitCast; // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LBPC_ReplicatePrimitiveParamaters_C_OnRep_AngularDamping;
-
 // Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters
 // 0x00E8 (0x00E8 - 0x0000)
 struct LBPC_ReplicatePrimitiveParamaters_C_ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters final
@@ -124,6 +67,63 @@ public:
 	double                                        K2Node_VariableSet_DefaultMass_ImplicitCast;       // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_LBPC_ReplicatePrimitiveParamaters_C_ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters;
+
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.OnRep_AngularDamping
+// 0x0004 (0x0004 - 0x0000)
+struct LBPC_ReplicatePrimitiveParamaters_C_OnRep_AngularDamping final
+{
+public:
+	float                                         CallFunc_SetAngularDamping_InDamping_ImplicitCast; // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LBPC_ReplicatePrimitiveParamaters_C_OnRep_AngularDamping;
+
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.OnRep_LinearDamping
+// 0x0004 (0x0004 - 0x0000)
+struct LBPC_ReplicatePrimitiveParamaters_C_OnRep_LinearDamping final
+{
+public:
+	float                                         CallFunc_SetLinearDamping_InDamping_ImplicitCast;  // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LBPC_ReplicatePrimitiveParamaters_C_OnRep_LinearDamping;
+
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.OnRep_Mass
+// 0x0004 (0x0004 - 0x0000)
+struct LBPC_ReplicatePrimitiveParamaters_C_OnRep_Mass final
+{
+public:
+	float                                         CallFunc_SetMassOverrideInKg_MassInKg_ImplicitCast; // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LBPC_ReplicatePrimitiveParamaters_C_OnRep_Mass;
+
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.SetAngularDamping(Server)
+// 0x0010 (0x0010 - 0x0000)
+struct LBPC_ReplicatePrimitiveParamaters_C_SetAngularDamping_Server_ final
+{
+public:
+	double                                        Mass_0;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsStack;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LBPC_ReplicatePrimitiveParamaters_C_SetAngularDamping_Server_;
+
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.SetLinearDamping(Server)
+// 0x0010 (0x0010 - 0x0000)
+struct LBPC_ReplicatePrimitiveParamaters_C_SetLinearDamping_Server_ final
+{
+public:
+	double                                        Mass_0;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsStack;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LBPC_ReplicatePrimitiveParamaters_C_SetLinearDamping_Server_;
+
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.SetMass(Server)
+// 0x0010 (0x0010 - 0x0000)
+struct LBPC_ReplicatePrimitiveParamaters_C_SetMass_Server_ final
+{
+public:
+	double                                        Mass_0;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsStack;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LBPC_ReplicatePrimitiveParamaters_C_SetMass_Server_;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

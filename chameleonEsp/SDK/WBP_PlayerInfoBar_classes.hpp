@@ -42,10 +42,10 @@ public:
 	class UMaterialInstanceDynamic*               BarMaterial;                                       // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetValue(double Value);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_PlayerInfoBar(int32 EntryPoint);
 	void Add_Event();
+	void ExecuteUbergraph_WBP_PlayerInfoBar(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SetValue(double Value);
 
 public:
 	static class UClass* StaticClass()

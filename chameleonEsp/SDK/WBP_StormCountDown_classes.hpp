@@ -27,8 +27,8 @@ public:
 	class UImage*                                 Image_39;                                          // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetTime(int32 Time);
 	void ExecuteUbergraph_WBP_StormCountDown(int32 EntryPoint);
+	void SetTime(int32 Time);
 
 public:
 	static class UClass* StaticClass()

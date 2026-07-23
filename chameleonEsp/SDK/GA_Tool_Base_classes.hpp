@@ -26,15 +26,15 @@ public:
 	bool                                          IsFirstAttack;                                     // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Send_To_Server();
-	void OnInterrupted_9E7A34EE47C91FC2089049BA43913140();
-	void OnCompleted_9E7A34EE47C91FC2089049BA43913140();
-	void OnCancelled_9E7A34EE47C91FC2089049BA43913140();
-	void OnBlendOut_9E7A34EE47C91FC2089049BA43913140();
-	void OnBlendedIn_9E7A34EE47C91FC2089049BA43913140();
-	void K2_ActivateAbility();
-	void ExecuteUbergraph_GA_Tool_Base(int32 EntryPoint);
 	void EventReceived_1C4DAC504023E166C4A361AD9FA20411(const struct FGameplayEventData& Payload);
+	void ExecuteUbergraph_GA_Tool_Base(int32 EntryPoint);
+	void K2_ActivateAbility();
+	void OnBlendedIn_9E7A34EE47C91FC2089049BA43913140();
+	void OnBlendOut_9E7A34EE47C91FC2089049BA43913140();
+	void OnCancelled_9E7A34EE47C91FC2089049BA43913140();
+	void OnCompleted_9E7A34EE47C91FC2089049BA43913140();
+	void OnInterrupted_9E7A34EE47C91FC2089049BA43913140();
+	void Send_To_Server();
 
 public:
 	static class UClass* StaticClass()

@@ -20,9 +20,9 @@ SDK_NAMESPACE_START
 class IBPI_Spectate_C final
 {
 public:
-	void ViewChange(class ABP_FirstPersonCharacter_Main_C* SourcePlayer);
-	void SetupSpectateNameplate(class ABP_FirstPersonCharacter_Main_C* Character);
 	void GetCustomPlayerName(class FString* playerName);
+	void SetupSpectateNameplate(class ABP_FirstPersonCharacter_Main_C* Character);
+	void ViewChange(class ABP_FirstPersonCharacter_Main_C* SourcePlayer);
 
 public:
 	static class UClass* StaticClass()

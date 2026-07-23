@@ -20,10 +20,10 @@ SDK_NAMESPACE_START
 class IUDS_Utility_Opener_Interface_C final
 {
 public:
-	void Show_Editor_Warning_Window(const class FString& title, const class FString& Message);
-	void Open_Weather_Mask_Brush_Painter();
-	void Open_UDS_Readme_Entry_Set(const TArray<class FName>& Entries);
 	void Open_UDS_Readme(const class FString& Entry_Row, int32 Category_Index);
+	void Open_UDS_Readme_Entry_Set(const TArray<class FName>& Entries);
+	void Open_Weather_Mask_Brush_Painter();
+	void Show_Editor_Warning_Window(const class FString& title, const class FString& Message);
 
 public:
 	static class UClass* StaticClass()

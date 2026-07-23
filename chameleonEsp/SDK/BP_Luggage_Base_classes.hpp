@@ -29,10 +29,10 @@ public:
 	struct FGuid                                  UniqueID;                                          // 0x02E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void OnLoaded_061DDAA94BACAE0F7A327A8B0F5F6D91(class UObject* Loaded);
-	void GetLuggageId(struct FGuid* ID);
 	void ExecuteUbergraph_BP_Luggage_Base(int32 EntryPoint);
+	void GetLuggageId(struct FGuid* ID);
+	void OnLoaded_061DDAA94BACAE0F7A327A8B0F5F6D91(class UObject* Loaded);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

@@ -16,31 +16,37 @@
 
 SDK_NAMESPACE_START
 
-// Function UDS_Occlusion_Volume.UDS_Occlusion_Volume_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function UDS_Occlusion_Volume.UDS_Occlusion_Volume_C.Configure Weather Particle Blocking
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void AUDS_Occlusion_Volume_C::UserConstructionScript()
+void AUDS_Occlusion_Volume_C::Configure_Weather_Particle_Blocking()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_Occlusion_Volume_C", "UserConstructionScript");
+		Func = Class->GetFunction("UDS_Occlusion_Volume_C", "Configure Weather Particle Blocking");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function UDS_Occlusion_Volume.UDS_Occlusion_Volume_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function UDS_Occlusion_Volume.UDS_Occlusion_Volume_C.ExecuteUbergraph_UDS_Occlusion_Volume
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AUDS_Occlusion_Volume_C::ReceiveBeginPlay()
+void AUDS_Occlusion_Volume_C::ExecuteUbergraph_UDS_Occlusion_Volume(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_Occlusion_Volume_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("UDS_Occlusion_Volume_C", "ExecuteUbergraph_UDS_Occlusion_Volume");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::UDS_Occlusion_Volume_C_ExecuteUbergraph_UDS_Occlusion_Volume Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -68,35 +74,29 @@ void AUDS_Occlusion_Volume_C::Query_Occlusion_Multiplier(const struct FVector& L
 }
 
 
-// Function UDS_Occlusion_Volume.UDS_Occlusion_Volume_C.ExecuteUbergraph_UDS_Occlusion_Volume
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function UDS_Occlusion_Volume.UDS_Occlusion_Volume_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AUDS_Occlusion_Volume_C::ExecuteUbergraph_UDS_Occlusion_Volume(int32 EntryPoint)
+void AUDS_Occlusion_Volume_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_Occlusion_Volume_C", "ExecuteUbergraph_UDS_Occlusion_Volume");
+		Func = Class->GetFunction("UDS_Occlusion_Volume_C", "ReceiveBeginPlay");
 
-	Params::UDS_Occlusion_Volume_C_ExecuteUbergraph_UDS_Occlusion_Volume Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function UDS_Occlusion_Volume.UDS_Occlusion_Volume_C.Configure Weather Particle Blocking
-// (Protected, BlueprintCallable, BlueprintEvent)
+// Function UDS_Occlusion_Volume.UDS_Occlusion_Volume_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void AUDS_Occlusion_Volume_C::Configure_Weather_Particle_Blocking()
+void AUDS_Occlusion_Volume_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_Occlusion_Volume_C", "Configure Weather Particle Blocking");
+		Func = Class->GetFunction("UDS_Occlusion_Volume_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

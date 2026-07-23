@@ -35,13 +35,13 @@ public:
 	TMulticastInlineDelegate<void(class AActor* GiftBox)> GoalGiftBox;                               // 0x02F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UserConstructionScript();
-	void TargetActivate();
-	void SetHouseState_Replicate_(bool State);
-	void SetHouseActiveState(bool State);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_GoalHouse(int32 EntryPoint);
 	void BndEvt__BP_GoalHouse_ChimneyLocation_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void ExecuteUbergraph_BP_GoalHouse(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void SetHouseActiveState(bool State);
+	void SetHouseState_Replicate_(bool State);
+	void TargetActivate();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

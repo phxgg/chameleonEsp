@@ -16,20 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_LINK_Manequin.BP_LINK_Manequin_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_LINK_Manequin_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LINK_Manequin_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_LINK_Manequin.BP_LINK_Manequin_C.ExecuteUbergraph_BP_LINK_Manequin
 // (Final, UbergraphFunction)
 // Parameters:
@@ -47,6 +33,20 @@ void ABP_LINK_Manequin_C::ExecuteUbergraph_BP_LINK_Manequin(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_LINK_Manequin.BP_LINK_Manequin_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_LINK_Manequin_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LINK_Manequin_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

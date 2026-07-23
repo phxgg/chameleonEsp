@@ -16,15 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_ThrowTrailMesh.BP_ThrowTrailMesh_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_ThrowTrailMesh_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_ThrowTrailMesh_C_ReceiveTick;
-
 // Function BP_ThrowTrailMesh.BP_ThrowTrailMesh_C.ExecuteUbergraph_BP_ThrowTrailMesh
 // 0x00C0 (0x00C0 - 0x0000)
 struct BP_ThrowTrailMesh_C_ExecuteUbergraph_BP_ThrowTrailMesh final
@@ -48,6 +39,15 @@ public:
 	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_ThrowTrailMesh_C_ExecuteUbergraph_BP_ThrowTrailMesh;
+
+// Function BP_ThrowTrailMesh.BP_ThrowTrailMesh_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_ThrowTrailMesh_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_ThrowTrailMesh_C_ReceiveTick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

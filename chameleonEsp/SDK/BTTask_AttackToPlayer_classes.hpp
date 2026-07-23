@@ -24,8 +24,8 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BTTask_AttackToPlayer_C;            // 0x00B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
+	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
 	void ExecuteUbergraph_BTTask_AttackToPlayer(int32 EntryPoint);
-	void ReceiveExecuteAI(class AAIController* OwnerController_ReceiveExecuteAI, class APawn* ControlledPawn_ReceiveExecuteAI);
 
 public:
 	static class UClass* StaticClass()

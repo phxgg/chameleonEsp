@@ -17,24 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_CentorCharge.WBP_CentorCharge_C.SetValue
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_CentorCharge_C_SetValue final
-{
-public:
-	float                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_CentorCharge_C_SetValue;
-
-// Function WBP_CentorCharge.WBP_CentorCharge_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_CentorCharge_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_CentorCharge_C_PreConstruct;
-
 // Function WBP_CentorCharge.WBP_CentorCharge_C.ExecuteUbergraph_WBP_CentorCharge
 // 0x0048 (0x0048 - 0x0000)
 struct WBP_CentorCharge_C_ExecuteUbergraph_WBP_CentorCharge final
@@ -59,6 +41,24 @@ public:
 	float                                         CallFunc_SetValue_Value_ImplicitCast;              // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_CentorCharge_C_ExecuteUbergraph_WBP_CentorCharge;
+
+// Function WBP_CentorCharge.WBP_CentorCharge_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_CentorCharge_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_CentorCharge_C_PreConstruct;
+
+// Function WBP_CentorCharge.WBP_CentorCharge_C.SetValue
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_CentorCharge_C_SetValue final
+{
+public:
+	float                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_CentorCharge_C_SetValue;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -51,26 +51,26 @@ public:
 	int32                                         MinIndex;                                          // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateVSyncState(int32 LimitIndex);
-	void UpdateVisualEffectQuality(int32 LimitIndex);
-	void UpdateTextureQuality(int32 LimitIndex);
-	void UpdateShadowQuality(int32 LimitIndex);
-	void UpdateShadingQuality(int32 LimitIndex);
-	void UpdateReflectionQuality(int32 LimitIndex);
-	void UpdatePost_Processing_Quality(int32 LimitIndex);
-	void UpdateOverall_Scalability_Level(int32 LimitIndex);
-	void UpdateGlobal_Illumination(int32 LimitIndex);
-	void UpdateFrameRate(int32 LimitIndex);
-	void UpdateConfigValue();
-	void UpdateAudio_Quality_Level(int32 LimitIndex);
-	void UpdateAntiAliasingQuality(int32 LimitIndex);
-	void Update_Config_Item();
-	void SetVarValue(int32 inInt);
-	void RemoveMin(const class FText& SourceText, class FText* ReturnText);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_ConfigItem(int32 EntryPoint);
-	void BndEvt__WBP_ConfigItem_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature();
 	void ApplySetting();
+	void BndEvt__WBP_ConfigItem_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature();
+	void ExecuteUbergraph_WBP_ConfigItem(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void RemoveMin(const class FText& SourceText, class FText* ReturnText);
+	void SetVarValue(int32 inInt);
+	void Update_Config_Item();
+	void UpdateAntiAliasingQuality(int32 LimitIndex);
+	void UpdateAudio_Quality_Level(int32 LimitIndex);
+	void UpdateConfigValue();
+	void UpdateFrameRate(int32 LimitIndex);
+	void UpdateGlobal_Illumination(int32 LimitIndex);
+	void UpdateOverall_Scalability_Level(int32 LimitIndex);
+	void UpdatePost_Processing_Quality(int32 LimitIndex);
+	void UpdateReflectionQuality(int32 LimitIndex);
+	void UpdateShadingQuality(int32 LimitIndex);
+	void UpdateShadowQuality(int32 LimitIndex);
+	void UpdateTextureQuality(int32 LimitIndex);
+	void UpdateVisualEffectQuality(int32 LimitIndex);
+	void UpdateVSyncState(int32 LimitIndex);
 
 public:
 	static class UClass* StaticClass()

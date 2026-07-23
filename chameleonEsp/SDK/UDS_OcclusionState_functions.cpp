@@ -16,62 +16,22 @@
 
 SDK_NAMESPACE_START
 
-// Function UDS_OcclusionState.UDS_OcclusionState_C.Save Unchanging Values
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UUDS_OcclusionState_C::Save_Unchanging_Values()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_OcclusionState_C", "Save Unchanging Values");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function UDS_OcclusionState.UDS_OcclusionState_C.Directional Vector Mask
+// Function UDS_OcclusionState.UDS_OcclusionState_C.Current Facing Direction
 // (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// const struct FVector&                   Direction                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FLinearColor*                    Mask                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Step                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUDS_OcclusionState_C::Directional_Vector_Mask(const struct FVector& Direction, struct FLinearColor* Mask)
+struct FVector UUDS_OcclusionState_C::Current_Facing_Direction(int32 Step)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_OcclusionState_C", "Directional Vector Mask");
+		Func = Class->GetFunction("UDS_OcclusionState_C", "Current Facing Direction");
 
-	Params::UDS_OcclusionState_C_Directional_Vector_Mask Parms{};
+	Params::UDS_OcclusionState_C_Current_Facing_Direction Parms{};
 
-	Parms.Direction = std::move(Direction);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Mask != nullptr)
-		*Mask = std::move(Parms.Mask);
-}
-
-
-// Function UDS_OcclusionState.UDS_OcclusionState_C.Directional Mask Value
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const struct FVector&                   Direction                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   Compare                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-double UUDS_OcclusionState_C::Directional_Mask_Value(const struct FVector& Direction, const struct FVector& Compare)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_OcclusionState_C", "Directional Mask Value");
-
-	Params::UDS_OcclusionState_C_Directional_Mask_Value Parms{};
-
-	Parms.Direction = std::move(Direction);
-	Parms.Compare = std::move(Compare);
+	Parms.Step = Step;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -104,26 +64,66 @@ struct FVector UUDS_OcclusionState_C::Current_Trace_Direction(const struct FVect
 }
 
 
-// Function UDS_OcclusionState.UDS_OcclusionState_C.Current Facing Direction
+// Function UDS_OcclusionState.UDS_OcclusionState_C.Directional Mask Value
 // (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   Step                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Direction                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Compare                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-struct FVector UUDS_OcclusionState_C::Current_Facing_Direction(int32 Step)
+double UUDS_OcclusionState_C::Directional_Mask_Value(const struct FVector& Direction, const struct FVector& Compare)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_OcclusionState_C", "Current Facing Direction");
+		Func = Class->GetFunction("UDS_OcclusionState_C", "Directional Mask Value");
 
-	Params::UDS_OcclusionState_C_Current_Facing_Direction Parms{};
+	Params::UDS_OcclusionState_C_Directional_Mask_Value Parms{};
 
-	Parms.Step = Step;
+	Parms.Direction = std::move(Direction);
+	Parms.Compare = std::move(Compare);
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function UDS_OcclusionState.UDS_OcclusionState_C.Directional Vector Mask
+// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const struct FVector&                   Direction                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor*                    Mask                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUDS_OcclusionState_C::Directional_Vector_Mask(const struct FVector& Direction, struct FLinearColor* Mask)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UDS_OcclusionState_C", "Directional Vector Mask");
+
+	Params::UDS_OcclusionState_C_Directional_Vector_Mask Parms{};
+
+	Parms.Direction = std::move(Direction);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Mask != nullptr)
+		*Mask = std::move(Parms.Mask);
+}
+
+
+// Function UDS_OcclusionState.UDS_OcclusionState_C.Save Unchanging Values
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UUDS_OcclusionState_C::Save_Unchanging_Values()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UDS_OcclusionState_C", "Save Unchanging Values");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

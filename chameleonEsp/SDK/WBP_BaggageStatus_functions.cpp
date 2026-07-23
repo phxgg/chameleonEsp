@@ -16,21 +16,41 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_BaggageStatus.WBP_BaggageStatus_C.SetWeight
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_BaggageStatus.WBP_BaggageStatus_C.ExecuteUbergraph_WBP_BaggageStatus
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_BaggageStatus_C::SetWeight(double Value)
+void UWBP_BaggageStatus_C::ExecuteUbergraph_WBP_BaggageStatus(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BaggageStatus_C", "SetWeight");
+		Func = Class->GetFunction("WBP_BaggageStatus_C", "ExecuteUbergraph_WBP_BaggageStatus");
 
-	Params::WBP_BaggageStatus_C_SetWeight Parms{};
+	Params::WBP_BaggageStatus_C_ExecuteUbergraph_WBP_BaggageStatus Parms{};
 
-	Parms.Value = Value;
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_BaggageStatus.WBP_BaggageStatus_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_BaggageStatus_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_BaggageStatus_C", "PreConstruct");
+
+	Params::WBP_BaggageStatus_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -50,41 +70,21 @@ void UWBP_BaggageStatus_C::SetValue()
 }
 
 
-// Function WBP_BaggageStatus.WBP_BaggageStatus_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_BaggageStatus.WBP_BaggageStatus_C.SetWeight
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_BaggageStatus_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_BaggageStatus_C::SetWeight(double Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BaggageStatus_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_BaggageStatus_C", "SetWeight");
 
-	Params::WBP_BaggageStatus_C_PreConstruct Parms{};
+	Params::WBP_BaggageStatus_C_SetWeight Parms{};
 
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_BaggageStatus.WBP_BaggageStatus_C.ExecuteUbergraph_WBP_BaggageStatus
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_BaggageStatus_C::ExecuteUbergraph_WBP_BaggageStatus(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_BaggageStatus_C", "ExecuteUbergraph_WBP_BaggageStatus");
-
-	Params::WBP_BaggageStatus_C_ExecuteUbergraph_WBP_BaggageStatus Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

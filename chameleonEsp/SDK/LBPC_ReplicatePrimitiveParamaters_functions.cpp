@@ -16,137 +16,35 @@
 
 SDK_NAMESPACE_START
 
-// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.SetMass(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters
+// (Final, UbergraphFunction)
 // Parameters:
-// double                                  Mass                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsStack                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULBPC_ReplicatePrimitiveParamaters_C::SetMass_Server_(double Mass, bool IsStack)
+void ULBPC_ReplicatePrimitiveParamaters_C::ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "SetMass(Server)");
+		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters");
 
-	Params::LBPC_ReplicatePrimitiveParamaters_C_SetMass_Server_ Parms{};
+	Params::LBPC_ReplicatePrimitiveParamaters_C_ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters Parms{};
 
-	Parms.Mass = Mass;
-	Parms.IsStack = IsStack;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.SetLinearDamping(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Mass                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsStack                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULBPC_ReplicatePrimitiveParamaters_C::SetLinearDamping_Server_(double Mass, bool IsStack)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "SetLinearDamping(Server)");
-
-	Params::LBPC_ReplicatePrimitiveParamaters_C_SetLinearDamping_Server_ Parms{};
-
-	Parms.Mass = Mass;
-	Parms.IsStack = IsStack;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.SetAngularDamping(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Mass                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsStack                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULBPC_ReplicatePrimitiveParamaters_C::SetAngularDamping_Server_(double Mass, bool IsStack)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "SetAngularDamping(Server)");
-
-	Params::LBPC_ReplicatePrimitiveParamaters_C_SetAngularDamping_Server_ Parms{};
-
-	Parms.Mass = Mass;
-	Parms.IsStack = IsStack;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.RestMass(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-
-void ULBPC_ReplicatePrimitiveParamaters_C::RestMass_Server_()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "RestMass(Server)");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.ResetLinearDamping(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-
-void ULBPC_ReplicatePrimitiveParamaters_C::ResetLinearDamping_Server_()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "ResetLinearDamping(Server)");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.ResetAngularDamping(Reset)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-
-void ULBPC_ReplicatePrimitiveParamaters_C::ResetAngularDamping_Reset_()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "ResetAngularDamping(Reset)");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void ULBPC_ReplicatePrimitiveParamaters_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.OnRep_Mass
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.OnRep_AngularDamping
 // (BlueprintCallable, BlueprintEvent)
 
-void ULBPC_ReplicatePrimitiveParamaters_C::OnRep_Mass()
+void ULBPC_ReplicatePrimitiveParamaters_C::OnRep_AngularDamping()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "OnRep_Mass");
+		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "OnRep_AngularDamping");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -166,35 +64,137 @@ void ULBPC_ReplicatePrimitiveParamaters_C::OnRep_LinearDamping()
 }
 
 
-// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.OnRep_AngularDamping
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.OnRep_Mass
 // (BlueprintCallable, BlueprintEvent)
 
-void ULBPC_ReplicatePrimitiveParamaters_C::OnRep_AngularDamping()
+void ULBPC_ReplicatePrimitiveParamaters_C::OnRep_Mass()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "OnRep_AngularDamping");
+		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "OnRep_Mass");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void ULBPC_ReplicatePrimitiveParamaters_C::ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters(int32 EntryPoint)
+void ULBPC_ReplicatePrimitiveParamaters_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters");
+		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "ReceiveBeginPlay");
 
-	Params::LBPC_ReplicatePrimitiveParamaters_C_ExecuteUbergraph_LBPC_ReplicatePrimitiveParamaters Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.ResetAngularDamping(Reset)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+
+void ULBPC_ReplicatePrimitiveParamaters_C::ResetAngularDamping_Reset_()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "ResetAngularDamping(Reset)");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.ResetLinearDamping(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+
+void ULBPC_ReplicatePrimitiveParamaters_C::ResetLinearDamping_Server_()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "ResetLinearDamping(Server)");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.RestMass(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+
+void ULBPC_ReplicatePrimitiveParamaters_C::RestMass_Server_()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "RestMass(Server)");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.SetAngularDamping(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Mass_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsStack                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULBPC_ReplicatePrimitiveParamaters_C::SetAngularDamping_Server_(double Mass_0, bool IsStack)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "SetAngularDamping(Server)");
+
+	Params::LBPC_ReplicatePrimitiveParamaters_C_SetAngularDamping_Server_ Parms{};
+
+	Parms.Mass_0 = Mass_0;
+	Parms.IsStack = IsStack;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.SetLinearDamping(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Mass_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsStack                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULBPC_ReplicatePrimitiveParamaters_C::SetLinearDamping_Server_(double Mass_0, bool IsStack)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "SetLinearDamping(Server)");
+
+	Params::LBPC_ReplicatePrimitiveParamaters_C_SetLinearDamping_Server_ Parms{};
+
+	Parms.Mass_0 = Mass_0;
+	Parms.IsStack = IsStack;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LBPC_ReplicatePrimitiveParamaters.LBPC_ReplicatePrimitiveParamaters_C.SetMass(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Mass_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsStack                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULBPC_ReplicatePrimitiveParamaters_C::SetMass_Server_(double Mass_0, bool IsStack)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LBPC_ReplicatePrimitiveParamaters_C", "SetMass(Server)");
+
+	Params::LBPC_ReplicatePrimitiveParamaters_C_SetMass_Server_ Parms{};
+
+	Parms.Mass_0 = Mass_0;
+	Parms.IsStack = IsStack;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

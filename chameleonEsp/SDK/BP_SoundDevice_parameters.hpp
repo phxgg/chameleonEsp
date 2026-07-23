@@ -16,6 +16,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_SoundDevice.BP_SoundDevice_C.BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature
+// 0x0028 (0x0028 - 0x0000)
+struct BP_SoundDevice_C_BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature final
+{
+public:
+	struct FST_EventValue                         SignalValue;                                       // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_SoundDevice_C_BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature;
+
 // Function BP_SoundDevice.BP_SoundDevice_C.ExecuteUbergraph_BP_SoundDevice
 // 0x0068 (0x0068 - 0x0000)
 struct BP_SoundDevice_C_ExecuteUbergraph_BP_SoundDevice final
@@ -32,15 +41,6 @@ public:
 	float                                         CallFunc_FadeIn_FadeInDuration_ImplicitCast;       // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_SoundDevice_C_ExecuteUbergraph_BP_SoundDevice;
-
-// Function BP_SoundDevice.BP_SoundDevice_C.BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature
-// 0x0028 (0x0028 - 0x0000)
-struct BP_SoundDevice_C_BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature final
-{
-public:
-	struct FST_EventValue                         SignalValue;                                       // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_SoundDevice_C_BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

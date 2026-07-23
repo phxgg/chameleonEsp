@@ -17,6 +17,16 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_AIController.BP_AIController_C.BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature
+// 0x0060 (0x0060 - 0x0000)
+struct BP_AIController_C_BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FAIStimulus                            Stimulus;                                          // 0x0008(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_AIController_C_BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature;
+
 // Function BP_AIController.BP_AIController_C.ExecuteUbergraph_BP_AIController
 // 0x00D8 (0x00D8 - 0x0000)
 struct BP_AIController_C_ExecuteUbergraph_BP_AIController final
@@ -41,16 +51,6 @@ public:
 	bool                                          CallFunc_GetActorsPerception_ReturnValue;          // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_AIController_C_ExecuteUbergraph_BP_AIController;
-
-// Function BP_AIController.BP_AIController_C.BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature
-// 0x0060 (0x0060 - 0x0000)
-struct BP_AIController_C_BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FAIStimulus                            Stimulus;                                          // 0x0008(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_AIController_C_BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

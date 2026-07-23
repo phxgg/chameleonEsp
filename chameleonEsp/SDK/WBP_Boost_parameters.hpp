@@ -16,15 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_Boost.WBP_Boost_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Boost_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Boost_C_PreConstruct;
-
 // Function WBP_Boost.WBP_Boost_C.ExecuteUbergraph_WBP_Boost
 // 0x0028 (0x0028 - 0x0000)
 struct WBP_Boost_C_ExecuteUbergraph_WBP_Boost final
@@ -37,6 +28,15 @@ public:
 	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x0018(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Boost_C_ExecuteUbergraph_WBP_Boost;
+
+// Function WBP_Boost.WBP_Boost_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Boost_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Boost_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,35 +16,15 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_TextChatTextBox.WBP_TextChatTextBox_C.PreConstruct
+// Function WBP_TextChatTextBox.WBP_TextChatTextBox_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_TextChatTextBox_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_TextChatTextBox_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TextChatTextBox_C", "PreConstruct");
-
-	Params::WBP_TextChatTextBox_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_TextChatTextBox.WBP_TextChatTextBox_C.Finish
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_TextChatTextBox_C::Finish()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TextChatTextBox_C", "Finish");
+		Func = Class->GetFunction("WBP_TextChatTextBox_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -70,17 +50,37 @@ void UWBP_TextChatTextBox_C::ExecuteUbergraph_WBP_TextChatTextBox(int32 EntryPoi
 }
 
 
-// Function WBP_TextChatTextBox.WBP_TextChatTextBox_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_TextChatTextBox.WBP_TextChatTextBox_C.Finish
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_TextChatTextBox_C::Construct()
+void UWBP_TextChatTextBox_C::Finish()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TextChatTextBox_C", "Construct");
+		Func = Class->GetFunction("WBP_TextChatTextBox_C", "Finish");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_TextChatTextBox.WBP_TextChatTextBox_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TextChatTextBox_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TextChatTextBox_C", "PreConstruct");
+
+	Params::WBP_TextChatTextBox_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

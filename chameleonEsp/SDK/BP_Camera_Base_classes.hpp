@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_ClassType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "ENUM_CameraMode_structs.hpp"
-#include "BP_ItemBase_classes.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
 #include "ENUM_ActorType_structs.hpp"
+#include "BP_ItemBase_classes.hpp"
+#include "ENUM_CameraMode_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -65,33 +65,33 @@ public:
 	double                                        Is_in_View_Check_Late;                             // 0x0540(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void View_In_Out_Function(int32 Stencil_Value_View_In_Out_Function);
-	void UserConstructionScript();
-	void ToggleFlash();
-	void ShotEvent();
-	void Shot(bool PressState_Shot, double PushTime_Shot, class ABP_FirstPersonCharacter_Main_C* SourcePlayer_Shot);
-	void Reset();
-	void ReceiveBeginPlay();
-	bool RayToCamera(class UObject* Actor, const struct FVector& RayPosition);
-	void PhotoShot(const TArray<class AActor*>& ShotInActors);
-	bool MS_IsInView(class AActor* Actor_MS_IsInView);
-	void IsChangeImage(bool* IsInteract_IsChangeImage, class FText* OverrideText_IsChangeImage);
-	void Is_In_View_Gimmick(class AActor* Actor, bool* Retrun_Value);
-	void Is_In_View(class AActor* Actor, bool* Retrun_Value);
-	void GetItemInfo(ENUM_HandType* HandType_GetItemInfo, ENUM_ClassType* ClassType_GetItemInfo, bool* NotPickUp_GetItemInfo, struct FRotator* HaveRotation_GetItemInfo, struct FVector* Add_Position_GetItemInfo, bool* IsBoneAttach_GetItemInfo, ENUM_ItemBindType* BindType_GetItemInfo, class FName* BoneName_GetItemInfo, struct FST_ItemCoreDatas* CoreDatas_GetItemInfo);
-	void GetCentorPosition(struct FVector* World_Position);
-	void FlashTimeline__UpdateFunc();
-	void FlashTimeline__FinishedFunc();
-	void FinishTasks(class AActor* Target, bool* Finish);
-	void Finisher(class AActor* self2);
-	bool FinishCheck(const struct FFinishFilter& FinishFilter);
-	void ExportSignal(class ABP_PhotoAnimation_C* self2);
-	void ExecuteUbergraph_BP_Camera_Base(int32 EntryPoint);
-	void ChargeState(bool IsCharge);
-	void ChangeMode();
-	void Change();
-	void Aim(bool PressState_Aim);
 	void ActorCheckLoop();
+	void Aim(bool PressState);
+	void Change();
+	void ChangeMode();
+	void ChargeState(bool IsCharge);
+	void ExecuteUbergraph_BP_Camera_Base(int32 EntryPoint);
+	void ExportSignal(class ABP_PhotoAnimation_C* self2);
+	bool FinishCheck(const struct FFinishFilter& FinishFilter);
+	void Finisher(class AActor* self2);
+	void FinishTasks(class AActor* Target, bool* Finish);
+	void FlashTimeline__FinishedFunc();
+	void FlashTimeline__UpdateFunc();
+	void GetCentorPosition(struct FVector* World_Position);
+	void GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* ClassType, bool* NotPickUp, struct FRotator* HaveRotation_0, struct FVector* Add_Position_0, bool* IsBoneAttach, ENUM_ItemBindType* BindType, class FName* BoneName, struct FST_ItemCoreDatas* CoreDatas);
+	void Is_In_View(class AActor* Actor, bool* Retrun_Value);
+	void Is_In_View_Gimmick(class AActor* Actor, bool* Retrun_Value);
+	void IsChangeImage(bool* IsInteract, class FText* OverrideText);
+	bool MS_IsInView(class AActor* Actor);
+	void PhotoShot(const TArray<class AActor*>& ShotInActors);
+	bool RayToCamera(class UObject* Actor, const struct FVector& RayPosition);
+	void ReceiveBeginPlay();
+	void Reset();
+	void Shot(bool PressState, double PushTime, class ABP_FirstPersonCharacter_Main_C* SourcePlayer);
+	void ShotEvent();
+	void ToggleFlash();
+	void UserConstructionScript();
+	void View_In_Out_Function(int32 Stencil_Value);
 
 public:
 	static class UClass* StaticClass()

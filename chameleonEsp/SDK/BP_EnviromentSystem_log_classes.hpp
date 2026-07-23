@@ -27,9 +27,9 @@ public:
 	class UBillboardComponent*                    SpawnPosition1;                                    // 0x0378(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SpawnMaterial();
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_EnviromentSystem_log(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void SpawnMaterial();
 
 public:
 	static class UClass* StaticClass()

@@ -32,11 +32,11 @@ public:
 	TArray<class UWBP_ReportTypeButton_C*>        ReportButtons;                                     // 0x03A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void OnPushButton(class UWBP_ReportTypeButton_C* SelfObject);
-	void OnFinished_8BE5134246B81962AB20AC90BBF1E4BD(const struct FEOSPlayerReportResult& Result);
-	void ExecuteUbergraph_WBP_ReportContent(int32 EntryPoint);
 	void BndEvt__WBP_ReportContent_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
+	void ExecuteUbergraph_WBP_ReportContent(int32 EntryPoint);
+	void OnFinished_8BE5134246B81962AB20AC90BBF1E4BD(const struct FEOSPlayerReportResult& Result);
+	void OnPushButton(class UWBP_ReportTypeButton_C* SelfObject);
+	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()

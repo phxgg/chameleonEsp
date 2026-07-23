@@ -29,14 +29,14 @@ public:
 	class UBPGI_Main_C*                           BPGI_Main;                                         // 0x0768(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void SendToText(const class FString& MainText, int32 Index_0);
-	void AddMainWidgets();
-	void OnRootWidgetAdded();
-	void OnRootWidgetRemoved();
-	void SetAllWidgetVisibility(bool IsShow);
-	void ExecuteUbergraph_BP_FirstPersonPlayerController(int32 EntryPoint);
 	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_FirstPersonPlayerController(int32 EntryPoint);
+	void SetAllWidgetVisibility(bool IsShow);
+	void OnRootWidgetRemoved();
+	void OnRootWidgetAdded();
+	void AddMainWidgets();
+	void SendToText(const class FString& MainText, int32 Index_0);
+	void ReceiveTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()

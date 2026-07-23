@@ -12,9 +12,9 @@
 
 #include "LinkMergePoint_structs.hpp"
 #include "Engine_structs.hpp"
-#include "LinkMergeTargetPrimitives_structs.hpp"
 #include "ReferencedGlues_structs.hpp"
 #include "PrimitiveGlues_structs.hpp"
+#include "LinkMergeTargetPrimitives_structs.hpp"
 #include "PenguinHotel_structs.hpp"
 #include "PenguinHotel_classes.hpp"
 
@@ -36,21 +36,21 @@ public:
 	struct FCPP_GlueRefGroup                      NewVar;                                            // 0x09C0(0x0120)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
-	void SetPrimitiveReference(const class UPrimitiveComponent*& PrimitiveComp, const class ABP_LinkBranchData_C*& LinkBranchData);
-	void SetGlueReferences(TArray<class UPrimitiveComponent*>& Primitives, class ABP_Glue_CustomPhysics_C* Glue, bool State);
-	void ReferencedGlueGroupAppend(TArray<struct FReferencedGlueGroup>& GlueGroups, TArray<class ABP_Glue_CustomPhysics_C*>* Glues);
-	void ReceiveBeginPlay();
-	void GetStaticLinkBranchs();
-	void GetReferencedGlueGroups(class UPrimitiveComponent* SourcePrimitive, TArray<struct FReferencedGlueGroup>* Groups);
-	void GetPrimitiveReference(class UPrimitiveComponent* TargetPrimitive, bool IncludeStatic, bool* IsFound, class ABP_LinkBranchData_C** Branch, int32* Index_0);
-	void GetMergeEndPoint(const class ABP_LinkBranchData_C*& LinkBranch, const class UPrimitiveComponent*& Primitive, TArray<class UPrimitiveComponent*>* Targets);
-	void GetGlueReferences(const class UPrimitiveComponent*& Primitive, TArray<class ABP_Glue_CustomPhysics_C*>* ForceTarget);
-	void FindPrimitiveGlues(TArray<struct FReferencedGlueGroup>& Glues, class UPrimitiveComponent* Primitive, int32* FoundIndex, TArray<class ABP_Glue_CustomPhysics_C*>* FoundGlues);
-	void FilterReferencedGlues(class UPrimitiveComponent* Primitive, TArray<class ABP_Glue_CustomPhysics_C*>& Glues, TArray<class ABP_Glue_CustomPhysics_C*>* ReturnGlueActors);
-	void FilterOtherBranchPrimitive(class UPrimitiveComponent* SourcePrimitive, TArray<class ABP_Glue_CustomPhysics_C*>& Glues, TArray<class UPrimitiveComponent*>* Primitives);
-	void ExecuteUbergraph_BP_LinkDataBank(int32 EntryPoint);
-	void BranchDataMergeCheck(TArray<class UPrimitiveComponent*>& Primitives);
 	void AddReferencedGlueGroups(class UPrimitiveComponent* SourcePrimitive, class ABP_Glue_CustomPhysics_C* Glues);
+	void BranchDataMergeCheck(TArray<class UPrimitiveComponent*>& Primitives);
+	void ExecuteUbergraph_BP_LinkDataBank(int32 EntryPoint);
+	void FilterOtherBranchPrimitive(class UPrimitiveComponent* SourcePrimitive, TArray<class ABP_Glue_CustomPhysics_C*>& Glues, TArray<class UPrimitiveComponent*>* Primitives);
+	void FilterReferencedGlues(class UPrimitiveComponent* Primitive, TArray<class ABP_Glue_CustomPhysics_C*>& Glues, TArray<class ABP_Glue_CustomPhysics_C*>* ReturnGlueActors);
+	void FindPrimitiveGlues(TArray<struct FReferencedGlueGroup>& Glues, class UPrimitiveComponent* Primitive, int32* FoundIndex, TArray<class ABP_Glue_CustomPhysics_C*>* FoundGlues);
+	void GetGlueReferences(const class UPrimitiveComponent*& Primitive, TArray<class ABP_Glue_CustomPhysics_C*>* ForceTarget);
+	void GetMergeEndPoint(const class ABP_LinkBranchData_C*& LinkBranch, const class UPrimitiveComponent*& Primitive, TArray<class UPrimitiveComponent*>* Targets);
+	void GetPrimitiveReference(class UPrimitiveComponent* TargetPrimitive, bool IncludeStatic, bool* IsFound, class ABP_LinkBranchData_C** Branch, int32* Index_0);
+	void GetReferencedGlueGroups(class UPrimitiveComponent* SourcePrimitive, TArray<struct FReferencedGlueGroup>* Groups);
+	void GetStaticLinkBranchs();
+	void ReceiveBeginPlay();
+	void ReferencedGlueGroupAppend(TArray<struct FReferencedGlueGroup>& GlueGroups, TArray<class ABP_Glue_CustomPhysics_C*>* Glues);
+	void SetGlueReferences(TArray<class UPrimitiveComponent*>& Primitives, class ABP_Glue_CustomPhysics_C* Glue, bool State);
+	void SetPrimitiveReference(const class UPrimitiveComponent*& PrimitiveComp, const class ABP_LinkBranchData_C*& LinkBranchData);
 
 public:
 	static class UClass* StaticClass()

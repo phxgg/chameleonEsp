@@ -26,10 +26,10 @@ public:
 	class UImage*                                 Image_39;                                          // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetText(const class FText& Text, int32 Index_0);
-	void SetColor(const struct FLinearColor& Color, int32 Index_0);
-	void PlayAnimationMessage(bool IsForward, int32 Index_0);
 	void ExecuteUbergraph_WBP_StormInfo(int32 EntryPoint);
+	void PlayAnimationMessage(bool IsForward, int32 Index_0);
+	void SetColor(const struct FLinearColor& Color, int32 Index_0);
+	void SetText(const class FText& Text, int32 Index_0);
 
 public:
 	static class UClass* StaticClass()

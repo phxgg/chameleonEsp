@@ -17,25 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_TreeGenerater.BP_TreeGenerater_C.GenerateTree
-// 0x0008 (0x0008 - 0x0000)
-struct BP_TreeGenerater_C_GenerateTree final
-{
-public:
-	struct FRandomStream                          Seed;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_TreeGenerater_C_GenerateTree;
-
-// Function BP_TreeGenerater.BP_TreeGenerater_C.Generate
-// 0x000C (0x000C - 0x0000)
-struct BP_TreeGenerater_C_Generate final
-{
-public:
-	struct FRandomStream                          Seed;                                              // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
-	int32                                         DepthIndex;                                        // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_TreeGenerater_C_Generate;
-
 // Function BP_TreeGenerater.BP_TreeGenerater_C.ExecuteUbergraph_BP_TreeGenerater
 // 0x0330 (0x0330 - 0x0000)
 struct BP_TreeGenerater_C_ExecuteUbergraph_BP_TreeGenerater final
@@ -95,6 +76,25 @@ public:
 	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x032C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_TreeGenerater_C_ExecuteUbergraph_BP_TreeGenerater;
+
+// Function BP_TreeGenerater.BP_TreeGenerater_C.Generate
+// 0x000C (0x000C - 0x0000)
+struct BP_TreeGenerater_C_Generate final
+{
+public:
+	struct FRandomStream                          Seed;                                              // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+	int32                                         DepthIndex;                                        // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_TreeGenerater_C_Generate;
+
+// Function BP_TreeGenerater.BP_TreeGenerater_C.GenerateTree
+// 0x0008 (0x0008 - 0x0000)
+struct BP_TreeGenerater_C_GenerateTree final
+{
+public:
+	struct FRandomStream                          Seed;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_TreeGenerater_C_GenerateTree;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

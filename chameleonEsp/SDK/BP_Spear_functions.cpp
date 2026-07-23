@@ -16,25 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Spear.BP_Spear_C.Shot
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_Spear.BP_Spear_C.BndEvt__BP_Spear_BPC_LongInputControl_K2Node_ComponentBoundEvent_0_InputEnd__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// bool                                    PressState_Shot                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  PushTime_Shot                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonCharacter_Main_C*  SourcePlayer_Shot                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  PushTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Spear_C::Shot(bool PressState_Shot, double PushTime_Shot, class ABP_FirstPersonCharacter_Main_C* SourcePlayer_Shot)
+void ABP_Spear_C::BndEvt__BP_Spear_BPC_LongInputControl_K2Node_ComponentBoundEvent_0_InputEnd__DelegateSignature(double PushTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Spear_C", "Shot");
+		Func = Class->GetFunction("BP_Spear_C", "BndEvt__BP_Spear_BPC_LongInputControl_K2Node_ComponentBoundEvent_0_InputEnd__DelegateSignature");
 
-	Params::BP_Spear_C_Shot Parms{};
+	Params::BP_Spear_C_BndEvt__BP_Spear_BPC_LongInputControl_K2Node_ComponentBoundEvent_0_InputEnd__DelegateSignature Parms{};
 
-	Parms.PressState_Shot = PressState_Shot;
-	Parms.PushTime_Shot = PushTime_Shot;
-	Parms.SourcePlayer_Shot = SourcePlayer_Shot;
+	Parms.PushTime = PushTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -60,21 +56,25 @@ void ABP_Spear_C::ExecuteUbergraph_BP_Spear(int32 EntryPoint)
 }
 
 
-// Function BP_Spear.BP_Spear_C.BndEvt__BP_Spear_BPC_LongInputControl_K2Node_ComponentBoundEvent_0_InputEnd__DelegateSignature
-// (BlueprintEvent)
+// Function BP_Spear.BP_Spear_C.Shot
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// bool                                    PressState                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  PushTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C*  SourcePlayer                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Spear_C::BndEvt__BP_Spear_BPC_LongInputControl_K2Node_ComponentBoundEvent_0_InputEnd__DelegateSignature(double PushTime)
+void ABP_Spear_C::Shot(bool PressState, double PushTime, class ABP_FirstPersonCharacter_Main_C* SourcePlayer)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Spear_C", "BndEvt__BP_Spear_BPC_LongInputControl_K2Node_ComponentBoundEvent_0_InputEnd__DelegateSignature");
+		Func = Class->GetFunction("BP_Spear_C", "Shot");
 
-	Params::BP_Spear_C_BndEvt__BP_Spear_BPC_LongInputControl_K2Node_ComponentBoundEvent_0_InputEnd__DelegateSignature Parms{};
+	Params::BP_Spear_C_Shot Parms{};
 
+	Parms.PressState = PressState;
 	Parms.PushTime = PushTime;
+	Parms.SourcePlayer = SourcePlayer;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -18,25 +18,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_3DInteract.WBP_3DInteract_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WBP_3DInteract_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry_Tick;                                   // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime_Tick;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_3DInteract_C_Tick;
-
-// Function WBP_3DInteract.WBP_3DInteract_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_3DInteract_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_3DInteract_C_PreConstruct;
-
 // Function WBP_3DInteract.WBP_3DInteract_C.ExecuteUbergraph_WBP_3DInteract
 // 0x00A0 (0x00A0 - 0x0000)
 struct WBP_3DInteract_C_ExecuteUbergraph_WBP_3DInteract final
@@ -59,6 +40,25 @@ public:
 	float                                         CallFunc_SetRenderOpacity_InOpacity_ImplicitCast;  // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_3DInteract_C_ExecuteUbergraph_WBP_3DInteract;
+
+// Function WBP_3DInteract.WBP_3DInteract_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_3DInteract_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_3DInteract_C_PreConstruct;
+
+// Function WBP_3DInteract.WBP_3DInteract_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WBP_3DInteract_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_3DInteract_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

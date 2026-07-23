@@ -28,11 +28,11 @@ public:
 	TMulticastInlineDelegate<void()>              DeleteUI;                                          // 0x0360(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void ReceiveBeginPlay();
-	void InteractSignal(class ABP_FirstPersonCharacter_Main_C* Character, class AActor* Actor);
-	void InpActEvt_Tab_K2Node_InputDebugKeyEvent_0(const struct FKey& Key, const struct FInputActionValue& ActionValue);
-	void InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void ExecuteUbergraph_BP_FirstPersonGameMode(int32 EntryPoint);
+	void InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_Tab_K2Node_InputDebugKeyEvent_0(const struct FKey& Key, const struct FInputActionValue& ActionValue);
+	void InteractSignal(class ABP_FirstPersonCharacter_Main_C* Character, class AActor* Actor);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

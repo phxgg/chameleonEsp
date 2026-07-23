@@ -16,382 +16,520 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.WriteWeeklyRezult
+// Function BP_GameState_LINK.BP_GameState_LINK_C.AddCoin
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_LINK_C::AddCoin(int32 Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "AddCoin");
+
+	Params::BP_GameState_LINK_C_AddCoin Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.AddTaskUI
+// (Net, NetReliable, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   TaskIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   SumProgress                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Key                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
+
+void ABP_GameState_LINK_C::AddTaskUI(int32 TaskIndex, int32 SumProgress, const class FString& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "AddTaskUI");
+
+	Params::BP_GameState_LINK_C_AddTaskUI Parms{};
+
+	Parms.TaskIndex = TaskIndex;
+	Parms.SumProgress = SumProgress;
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.AddWidget(Global)
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FDateTime&                 StartTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FDateTime&                 EndTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           WidgetClass                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::WriteWeeklyRezult(const struct FDateTime& StartTime, const struct FDateTime& EndTime)
+void ABP_GameState_LINK_C::AddWidget_Global_(class UClass* WidgetClass)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "WriteWeeklyRezult");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "AddWidget(Global)");
 
-	Params::BP_GameState_LINK_C_WriteWeeklyRezult Parms{};
+	Params::BP_GameState_LINK_C_AddWidget_Global_ Parms{};
 
-	Parms.StartTime = std::move(StartTime);
-	Parms.EndTime = std::move(EndTime);
+	Parms.WidgetClass = WidgetClass;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.UseCoin
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.CinemaManequinAttach
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   UseValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   Rezult                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TArray<class AController*>&       Controllers                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void ABP_GameState_LINK_C::UseCoin(int32 UseValue, bool* Rezult)
+void ABP_GameState_LINK_C::CinemaManequinAttach(const TArray<class AController*>& Controllers)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "UseCoin");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "CinemaManequinAttach");
 
-	Params::BP_GameState_LINK_C_UseCoin Parms{};
+	Params::BP_GameState_LINK_C_CinemaManequinAttach Parms{};
 
-	Parms.UseValue = UseValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Rezult != nullptr)
-		*Rezult = Parms.Rezult;
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.UpdateSortieWieget
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   AppendPreset                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void ABP_GameState_LINK_C::UpdateSortieWieget(int32 AppendPreset, const class FText& Text)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "UpdateSortieWieget");
-
-	Params::BP_GameState_LINK_C_UpdateSortieWieget Parms{};
-
-	Parms.AppendPreset = AppendPreset;
-	Parms.Text = std::move(Text);
+	Parms.Controllers = std::move(Controllers);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.UpdateSessionSettings
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_LINK_C::UpdateSessionSettings(int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "UpdateSessionSettings");
-
-	Params::BP_GameState_LINK_C_UpdateSessionSettings Parms{};
-
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.UpdateMapSettings
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FString&                    OverrideText                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void ABP_GameState_LINK_C::UpdateMapSettings(int32 Index_0, const class FString& OverrideText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "UpdateMapSettings");
-
-	Params::BP_GameState_LINK_C_UpdateMapSettings Parms{};
-
-	Parms.Index_0 = Index_0;
-	Parms.OverrideText = std::move(OverrideText);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.UpdateExitShopUI
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   AppendPreset                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void ABP_GameState_LINK_C::UpdateExitShopUI(int32 AppendPreset, const class FText& Text)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "UpdateExitShopUI");
-
-	Params::BP_GameState_LINK_C_UpdateExitShopUI Parms{};
-
-	Parms.AppendPreset = AppendPreset;
-	Parms.Text = std::move(Text);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.TimerPopup
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   TextIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   AddTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FString&                    CustomString                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void ABP_GameState_LINK_C::TimerPopup(int32 TextIndex, int32 AddTime, const class FString& CustomString)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "TimerPopup");
-
-	Params::BP_GameState_LINK_C_TimerPopup Parms{};
-
-	Parms.TextIndex = TextIndex;
-	Parms.AddTime = AddTime;
-	Parms.CustomString = std::move(CustomString);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.StormTextUpdate
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   TextIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   TextNumber                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_LINK_C::StormTextUpdate(int32 TextIndex, int32 TextNumber)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "StormTextUpdate");
-
-	Params::BP_GameState_LINK_C_StormTextUpdate Parms{};
-
-	Parms.TextIndex = TextIndex;
-	Parms.TextNumber = TextNumber;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.StopAllBGM
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NextTarget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_LINK_C::StopAllBGM(class FName NextTarget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "StopAllBGM");
-
-	Params::BP_GameState_LINK_C_StopAllBGM Parms{};
-
-	Parms.NextTarget = NextTarget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ShowKingPopup(Server)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.CloseAnnounce
 // (BlueprintCallable, BlueprintEvent)
 
-void ABP_GameState_LINK_C::ShowKingPopup_Server_()
+void ABP_GameState_LINK_C::CloseAnnounce()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "ShowKingPopup(Server)");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "CloseAnnounce");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ShowKingPopup(Replicate)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.DeathAnnounce(Client)
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    TargetName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    playerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::ShowKingPopup_Replicate_(const class FString& TargetName)
+void ABP_GameState_LINK_C::DeathAnnounce_Client_(const class FString& playerName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "ShowKingPopup(Replicate)");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "DeathAnnounce(Client)");
 
-	Params::BP_GameState_LINK_C_ShowKingPopup_Replicate_ Parms{};
+	Params::BP_GameState_LINK_C_DeathAnnounce_Client_ Parms{};
 
-	Parms.TargetName = std::move(TargetName);
+	Parms.playerName = std::move(playerName);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ShowAnnounceLocal
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.DeathAnnounce(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   Duration                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   TypeIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   ReplaceValue                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonCharacter_LINK_C*  LinkCharacter                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonPlayerState_LINK_C*SourcePlayerStete                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::ShowAnnounceLocal(float Duration, int32 TypeIndex, int32 ReplaceValue, class ABP_FirstPersonCharacter_LINK_C* LinkCharacter)
+void ABP_GameState_LINK_C::DeathAnnounce_Server_(class ABP_FirstPersonPlayerState_LINK_C* SourcePlayerStete)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "ShowAnnounceLocal");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "DeathAnnounce(Server)");
 
-	Params::BP_GameState_LINK_C_ShowAnnounceLocal Parms{};
+	Params::BP_GameState_LINK_C_DeathAnnounce_Server_ Parms{};
 
-	Parms.Duration = Duration;
-	Parms.TypeIndex = TypeIndex;
-	Parms.ReplaceValue = ReplaceValue;
-	Parms.LinkCharacter = LinkCharacter;
+	Parms.SourcePlayerStete = SourcePlayerStete;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ShowAnnounce
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ExecuteUbergraph_BP_GameState_LINK
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// float                                   Duration                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   TypeIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::ShowAnnounce(const class FText& Text, float Duration, int32 TypeIndex)
+void ABP_GameState_LINK_C::ExecuteUbergraph_BP_GameState_LINK(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "ShowAnnounce");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "ExecuteUbergraph_BP_GameState_LINK");
 
-	Params::BP_GameState_LINK_C_ShowAnnounce Parms{};
+	Params::BP_GameState_LINK_C_ExecuteUbergraph_BP_GameState_LINK Parms{};
 
-	Parms.Text = std::move(Text);
-	Parms.Duration = Duration;
-	Parms.TypeIndex = TypeIndex;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ShopLoadingUI
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ExitShopAreaUpdate
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_LINK_C::ExitShopAreaUpdate(class AActor* Actor, bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "ExitShopAreaUpdate");
+
+	Params::BP_GameState_LINK_C_ExitShopAreaUpdate Parms{};
+
+	Parms.Actor = Actor;
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.GameClear
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_LINK_C::GameClear()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "GameClear");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.GameClerUI
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_LINK_C::GameClerUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "GameClerUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.GameOver
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_LINK_C::GameOver()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "GameOver");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.GoalAfter
+// (Net, NetReliable, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<class ABP_FirstPersonCharacter_LINK_C*>&GoalMiniPenguinOwners                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void ABP_GameState_LINK_C::GoalAfter(const TArray<class ABP_FirstPersonCharacter_LINK_C*>& GoalMiniPenguinOwners)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "GoalAfter");
+
+	Params::BP_GameState_LINK_C_GoalAfter Parms{};
+
+	Parms.GoalMiniPenguinOwners = std::move(GoalMiniPenguinOwners);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.GoToShopUI
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_LINK_C::GoToShopUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "GoToShopUI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.OnRep_CurrentStormLevel
+// (HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_LINK_C::OnRep_CurrentStormLevel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "OnRep_CurrentStormLevel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.OnRep_GameMode
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_LINK_C::OnRep_GameMode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "OnRep_GameMode");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.OnRep_GlobalCoin
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_LINK_C::OnRep_GlobalCoin()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "OnRep_GlobalCoin");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.OnRep_WeightState
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_LINK_C::OnRep_WeightState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "OnRep_WeightState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.PhaseTextUpdate
 // (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Phase                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsOverTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::ShopLoadingUI(bool State)
+void ABP_GameState_LINK_C::PhaseTextUpdate(int32 Phase, int32 Time, bool IsOverTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "ShopLoadingUI");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "PhaseTextUpdate");
 
-	Params::BP_GameState_LINK_C_ShopLoadingUI Parms{};
+	Params::BP_GameState_LINK_C_PhaseTextUpdate Parms{};
 
-	Parms.State = State;
+	Parms.Phase = Phase;
+	Parms.Time = Time;
+	Parms.IsOverTime = IsOverTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.SetTimePhase
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsNight                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_LINK_C::SetTimePhase(bool IsNight)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "SetTimePhase");
-
-	Params::BP_GameState_LINK_C_SetTimePhase Parms{};
-
-	Parms.IsNight = IsNight;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.SetStormLevel
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   StormLevel                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_LINK_C::SetStormLevel(int32 StormLevel)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "SetStormLevel");
-
-	Params::BP_GameState_LINK_C_SetStormLevel Parms{};
-
-	Parms.StormLevel = StormLevel;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.SetSortieCounterVisibility
+// Function BP_GameState_LINK.BP_GameState_LINK_C.PlayIslandTeleportMovie
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Day                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::SetSortieCounterVisibility(bool State)
+void ABP_GameState_LINK_C::PlayIslandTeleportMovie(int32 Day)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "SetSortieCounterVisibility");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "PlayIslandTeleportMovie");
 
-	Params::BP_GameState_LINK_C_SetSortieCounterVisibility Parms{};
+	Params::BP_GameState_LINK_C_PlayIslandTeleportMovie Parms{};
 
-	Parms.State = State;
+	Parms.Day = Day;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.SendToText(Server)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.PlayStartCinema
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_LINK_C::PlayStartCinema()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "PlayStartCinema");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ProgressAdd
+// (Net, NetReliable, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   AddValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Key                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
+
+void ABP_GameState_LINK_C::ProgressAdd(int32 AddValue, const class FString& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "ProgressAdd");
+
+	Params::BP_GameState_LINK_C_ProgressAdd Parms{};
+
+	Parms.AddValue = AddValue;
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_GameState_LINK_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.RemoveTaskWidget
+// (Net, NetReliable, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Key                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
+
+void ABP_GameState_LINK_C::RemoveTaskWidget(const class FString& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "RemoveTaskWidget");
+
+	Params::BP_GameState_LINK_C_RemoveTaskWidget Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.RemoveWidget(Global)
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_LINK_C::RemoveWidget_Global_()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "RemoveWidget(Global)");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ReplicateSound
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USoundBase*                       Sound                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_LINK_C::ReplicateSound(class USoundBase* Sound)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "ReplicateSound");
+
+	Params::BP_GameState_LINK_C_ReplicateSound Parms{};
+
+	Parms.Sound = Sound;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.RevivalAnnounce(Client)
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    playerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void ABP_GameState_LINK_C::RevivalAnnounce_Client_(const class FString& playerName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "RevivalAnnounce(Client)");
+
+	Params::BP_GameState_LINK_C_RevivalAnnounce_Client_ Parms{};
+
+	Parms.playerName = std::move(playerName);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.RevivalAnnounce(Server)
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonPlayerState_LINK_C*SourcePlayerStete                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_LINK_C::RevivalAnnounce_Server_(class ABP_FirstPersonPlayerState_LINK_C* SourcePlayerStete)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "RevivalAnnounce(Server)");
+
+	Params::BP_GameState_LINK_C_RevivalAnnounce_Server_ Parms{};
+
+	Parms.SourcePlayerStete = SourcePlayerStete;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.SendToText(Client)
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // int32                                   MessageType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::SendToText_Server_(const class FString& Text, int32 MessageType)
+void ABP_GameState_LINK_C::SendToText_Client_(const class FString& Text, int32 MessageType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "SendToText(Server)");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "SendToText(Client)");
 
-	Params::BP_GameState_LINK_C_SendToText_Server_ Parms{};
+	Params::BP_GameState_LINK_C_SendToText_Client_ Parms{};
 
 	Parms.Text = std::move(Text);
 	Parms.MessageType = MessageType;
@@ -422,20 +560,20 @@ void ABP_GameState_LINK_C::SendToText_Local_(const class FString& Text, int32 Me
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.SendToText(Client)
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.SendToText(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // int32                                   MessageType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::SendToText_Client_(const class FString& Text, int32 MessageType)
+void ABP_GameState_LINK_C::SendToText_Server_(const class FString& Text, int32 MessageType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "SendToText(Client)");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "SendToText(Server)");
 
-	Params::BP_GameState_LINK_C_SendToText_Client_ Parms{};
+	Params::BP_GameState_LINK_C_SendToText_Server_ Parms{};
 
 	Parms.Text = std::move(Text);
 	Parms.MessageType = MessageType;
@@ -444,501 +582,363 @@ void ABP_GameState_LINK_C::SendToText_Client_(const class FString& Text, int32 M
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.RevivalAnnounce(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_FirstPersonPlayerState_LINK_C*SourcePlayerStete                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_LINK_C::RevivalAnnounce_Server_(class ABP_FirstPersonPlayerState_LINK_C* SourcePlayerStete)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "RevivalAnnounce(Server)");
-
-	Params::BP_GameState_LINK_C_RevivalAnnounce_Server_ Parms{};
-
-	Parms.SourcePlayerStete = SourcePlayerStete;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.RevivalAnnounce(Client)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.SetSortieCounterVisibility
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    playerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void ABP_GameState_LINK_C::RevivalAnnounce_Client_(const class FString& playerName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "RevivalAnnounce(Client)");
-
-	Params::BP_GameState_LINK_C_RevivalAnnounce_Client_ Parms{};
-
-	Parms.playerName = std::move(playerName);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ReplicateSound
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class USoundBase*                       Sound                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_LINK_C::ReplicateSound(class USoundBase* Sound)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "ReplicateSound");
-
-	Params::BP_GameState_LINK_C_ReplicateSound Parms{};
-
-	Parms.Sound = Sound;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.RemoveWidget(Global)
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_LINK_C::RemoveWidget_Global_()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "RemoveWidget(Global)");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.RemoveTaskWidget
-// (Net, NetReliable, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    Key                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
-
-void ABP_GameState_LINK_C::RemoveTaskWidget(const class FString& Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "RemoveTaskWidget");
-
-	Params::BP_GameState_LINK_C_RemoveTaskWidget Parms{};
-
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_GameState_LINK_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ProgressAdd
-// (Net, NetReliable, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   AddValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FString&                    Key                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
-
-void ABP_GameState_LINK_C::ProgressAdd(int32 AddValue, const class FString& Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "ProgressAdd");
-
-	Params::BP_GameState_LINK_C_ProgressAdd Parms{};
-
-	Parms.AddValue = AddValue;
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.PlayStartCinema
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_LINK_C::PlayStartCinema()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "PlayStartCinema");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.PlayIslandTeleportMovie
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Day                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_LINK_C::PlayIslandTeleportMovie(int32 Day)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "PlayIslandTeleportMovie");
-
-	Params::BP_GameState_LINK_C_PlayIslandTeleportMovie Parms{};
-
-	Parms.Day = Day;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.PhaseTextUpdate
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Phase                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsOverTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GameState_LINK_C::PhaseTextUpdate(int32 Phase, int32 Time, bool IsOverTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "PhaseTextUpdate");
-
-	Params::BP_GameState_LINK_C_PhaseTextUpdate Parms{};
-
-	Parms.Phase = Phase;
-	Parms.Time = Time;
-	Parms.IsOverTime = IsOverTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.OnRep_WeightState
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_LINK_C::OnRep_WeightState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "OnRep_WeightState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.OnRep_GlobalCoin
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_LINK_C::OnRep_GlobalCoin()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "OnRep_GlobalCoin");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.OnRep_GameMode
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_LINK_C::OnRep_GameMode()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "OnRep_GameMode");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.OnRep_CurrentStormLevel
-// (HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_LINK_C::OnRep_CurrentStormLevel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "OnRep_CurrentStormLevel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.GoToShopUI
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_LINK_C::GoToShopUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "GoToShopUI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.GoalAfter
-// (Net, NetReliable, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<class ABP_FirstPersonCharacter_LINK_C*>&GoalMiniPenguinOwners                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void ABP_GameState_LINK_C::GoalAfter(const TArray<class ABP_FirstPersonCharacter_LINK_C*>& GoalMiniPenguinOwners)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "GoalAfter");
-
-	Params::BP_GameState_LINK_C_GoalAfter Parms{};
-
-	Parms.GoalMiniPenguinOwners = std::move(GoalMiniPenguinOwners);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.GameOver
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_LINK_C::GameOver()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "GameOver");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.GameClerUI
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_LINK_C::GameClerUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "GameClerUI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.GameClear
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_GameState_LINK_C::GameClear()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "GameClear");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ExitShopAreaUpdate
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::ExitShopAreaUpdate(class AActor* Actor, bool State)
+void ABP_GameState_LINK_C::SetSortieCounterVisibility(bool State)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "ExitShopAreaUpdate");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "SetSortieCounterVisibility");
 
-	Params::BP_GameState_LINK_C_ExitShopAreaUpdate Parms{};
+	Params::BP_GameState_LINK_C_SetSortieCounterVisibility Parms{};
 
-	Parms.Actor = Actor;
 	Parms.State = State;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ExecuteUbergraph_BP_GameState_LINK
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.SetStormLevel
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   StormLevel                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::ExecuteUbergraph_BP_GameState_LINK(int32 EntryPoint)
+void ABP_GameState_LINK_C::SetStormLevel(int32 StormLevel)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "ExecuteUbergraph_BP_GameState_LINK");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "SetStormLevel");
 
-	Params::BP_GameState_LINK_C_ExecuteUbergraph_BP_GameState_LINK Parms{};
+	Params::BP_GameState_LINK_C_SetStormLevel Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.StormLevel = StormLevel;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.DeathAnnounce(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.SetTimePhase
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_FirstPersonPlayerState_LINK_C*SourcePlayerStete                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsNight                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::DeathAnnounce_Server_(class ABP_FirstPersonPlayerState_LINK_C* SourcePlayerStete)
+void ABP_GameState_LINK_C::SetTimePhase(bool IsNight)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "DeathAnnounce(Server)");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "SetTimePhase");
 
-	Params::BP_GameState_LINK_C_DeathAnnounce_Server_ Parms{};
+	Params::BP_GameState_LINK_C_SetTimePhase Parms{};
 
-	Parms.SourcePlayerStete = SourcePlayerStete;
+	Parms.IsNight = IsNight;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.DeathAnnounce(Client)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ShopLoadingUI
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_LINK_C::ShopLoadingUI(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "ShopLoadingUI");
+
+	Params::BP_GameState_LINK_C_ShopLoadingUI Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ShowAnnounce
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    playerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// float                                   Duration                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TypeIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::DeathAnnounce_Client_(const class FString& playerName)
+void ABP_GameState_LINK_C::ShowAnnounce(const class FText& Text, float Duration, int32 TypeIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "DeathAnnounce(Client)");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "ShowAnnounce");
 
-	Params::BP_GameState_LINK_C_DeathAnnounce_Client_ Parms{};
+	Params::BP_GameState_LINK_C_ShowAnnounce Parms{};
 
-	Parms.playerName = std::move(playerName);
+	Parms.Text = std::move(Text);
+	Parms.Duration = Duration;
+	Parms.TypeIndex = TypeIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.CloseAnnounce
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ShowAnnounceLocal
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Duration                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TypeIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReplaceValue                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_LINK_C*  LinkCharacter_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::CloseAnnounce()
+void ABP_GameState_LINK_C::ShowAnnounceLocal(float Duration, int32 TypeIndex, int32 ReplaceValue, class ABP_FirstPersonCharacter_LINK_C* LinkCharacter_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "CloseAnnounce");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "ShowAnnounceLocal");
+
+	Params::BP_GameState_LINK_C_ShowAnnounceLocal Parms{};
+
+	Parms.Duration = Duration;
+	Parms.TypeIndex = TypeIndex;
+	Parms.ReplaceValue = ReplaceValue;
+	Parms.LinkCharacter_0 = LinkCharacter_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ShowKingPopup(Replicate)
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    TargetName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void ABP_GameState_LINK_C::ShowKingPopup_Replicate_(const class FString& TargetName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "ShowKingPopup(Replicate)");
+
+	Params::BP_GameState_LINK_C_ShowKingPopup_Replicate_ Parms{};
+
+	Parms.TargetName = std::move(TargetName);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ShowKingPopup(Server)
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GameState_LINK_C::ShowKingPopup_Server_()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "ShowKingPopup(Server)");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.CinemaManequinAttach
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<class AController*>&       Controllers                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void ABP_GameState_LINK_C::CinemaManequinAttach(const TArray<class AController*>& Controllers)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "CinemaManequinAttach");
-
-	Params::BP_GameState_LINK_C_CinemaManequinAttach Parms{};
-
-	Parms.Controllers = std::move(Controllers);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.AddWidget(Global)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.StopAllBGM
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                           WidgetClass                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FName                             NextTarget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::AddWidget_Global_(class UClass* WidgetClass)
+void ABP_GameState_LINK_C::StopAllBGM(class FName NextTarget)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "AddWidget(Global)");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "StopAllBGM");
 
-	Params::BP_GameState_LINK_C_AddWidget_Global_ Parms{};
+	Params::BP_GameState_LINK_C_StopAllBGM Parms{};
 
-	Parms.WidgetClass = WidgetClass;
+	Parms.NextTarget = NextTarget;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.AddTaskUI
-// (Net, NetReliable, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.StormTextUpdate
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   TaskIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   SumProgress                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FString&                    Key                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
+// int32                                   TextIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TextNumber                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::AddTaskUI(int32 TaskIndex, int32 SumProgress, const class FString& Key)
+void ABP_GameState_LINK_C::StormTextUpdate(int32 TextIndex, int32 TextNumber)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "AddTaskUI");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "StormTextUpdate");
 
-	Params::BP_GameState_LINK_C_AddTaskUI Parms{};
+	Params::BP_GameState_LINK_C_StormTextUpdate Parms{};
 
-	Parms.TaskIndex = TaskIndex;
-	Parms.SumProgress = SumProgress;
-	Parms.Key = std::move(Key);
+	Parms.TextIndex = TextIndex;
+	Parms.TextNumber = TextNumber;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.AddCoin
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.TimerPopup
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TextIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   AddTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    CustomString                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void ABP_GameState_LINK_C::AddCoin(int32 Value)
+void ABP_GameState_LINK_C::TimerPopup(int32 TextIndex, int32 AddTime, const class FString& CustomString)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GameState_LINK_C", "AddCoin");
+		Func = Class->GetFunction("BP_GameState_LINK_C", "TimerPopup");
 
-	Params::BP_GameState_LINK_C_AddCoin Parms{};
+	Params::BP_GameState_LINK_C_TimerPopup Parms{};
 
-	Parms.Value = Value;
+	Parms.TextIndex = TextIndex;
+	Parms.AddTime = AddTime;
+	Parms.CustomString = std::move(CustomString);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.UpdateExitShopUI
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   AppendPreset                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ABP_GameState_LINK_C::UpdateExitShopUI(int32 AppendPreset, const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "UpdateExitShopUI");
+
+	Params::BP_GameState_LINK_C_UpdateExitShopUI Parms{};
+
+	Parms.AppendPreset = AppendPreset;
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.UpdateMapSettings
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    OverrideText                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void ABP_GameState_LINK_C::UpdateMapSettings(int32 Index_0, const class FString& OverrideText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "UpdateMapSettings");
+
+	Params::BP_GameState_LINK_C_UpdateMapSettings Parms{};
+
+	Parms.Index_0 = Index_0;
+	Parms.OverrideText = std::move(OverrideText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.UpdateSessionSettings
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_LINK_C::UpdateSessionSettings(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "UpdateSessionSettings");
+
+	Params::BP_GameState_LINK_C_UpdateSessionSettings Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.UpdateSortieWieget
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   AppendPreset                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ABP_GameState_LINK_C::UpdateSortieWieget(int32 AppendPreset, const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "UpdateSortieWieget");
+
+	Params::BP_GameState_LINK_C_UpdateSortieWieget Parms{};
+
+	Parms.AppendPreset = AppendPreset;
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.UseCoin
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   UseValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Rezult                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_LINK_C::UseCoin(int32 UseValue, bool* Rezult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "UseCoin");
+
+	Params::BP_GameState_LINK_C_UseCoin Parms{};
+
+	Parms.UseValue = UseValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Rezult != nullptr)
+		*Rezult = Parms.Rezult;
+}
+
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.WriteWeeklyRezult
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FDateTime&                 StartTime_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FDateTime&                 EndTime                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GameState_LINK_C::WriteWeeklyRezult(const struct FDateTime& StartTime_0, const struct FDateTime& EndTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GameState_LINK_C", "WriteWeeklyRezult");
+
+	Params::BP_GameState_LINK_C_WriteWeeklyRezult Parms{};
+
+	Parms.StartTime_0 = std::move(StartTime_0);
+	Parms.EndTime = std::move(EndTime);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

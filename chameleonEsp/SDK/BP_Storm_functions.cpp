@@ -16,253 +16,49 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Storm.BP_Storm_C.TeleportStorm
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Function BP_Storm.BP_Storm_C.ExecuteUbergraph_BP_Storm
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Storm_C::TeleportStorm(const struct FVector& Location)
+void ABP_Storm_C::ExecuteUbergraph_BP_Storm(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "TeleportStorm");
+		Func = Class->GetFunction("BP_Storm_C", "ExecuteUbergraph_BP_Storm");
 
-	Params::BP_Storm_C_TeleportStorm Parms{};
+	Params::BP_Storm_C_ExecuteUbergraph_BP_Storm Parms{};
 
-	Parms.Location = std::move(Location);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_Storm.BP_Storm_C.StormVisual__UpdateFunc
-// (BlueprintEvent)
+// Function BP_Storm.BP_Storm_C.ForceStateCheck
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Storm_C::StormVisual__UpdateFunc()
+void ABP_Storm_C::ForceStateCheck()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "StormVisual__UpdateFunc");
+		Func = Class->GetFunction("BP_Storm_C", "ForceStateCheck");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_Storm.BP_Storm_C.StormVisual__FinishedFunc
-// (BlueprintEvent)
-
-void ABP_Storm_C::StormVisual__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "StormVisual__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Storm.BP_Storm_C.StormErrorPlayerCheck
+// Function BP_Storm.BP_Storm_C.MinusTime
 // (BlueprintCallable, BlueprintEvent)
 
-void ABP_Storm_C::StormErrorPlayerCheck()
+void ABP_Storm_C::MinusTime()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "StormErrorPlayerCheck");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Storm.BP_Storm_C.SpeedUpdate
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Storm_C::SpeedUpdate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "SpeedUpdate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Storm.BP_Storm_C.ShowStormReplicate
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_Storm_C::ShowStormReplicate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "ShowStormReplicate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Storm.BP_Storm_C.SetStormVisibleState
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    VisualState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Storm_C::SetStormVisibleState(bool VisualState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "SetStormVisibleState");
-
-	Params::BP_Storm_C_SetStormVisibleState Parms{};
-
-	Parms.VisualState = VisualState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Storm.BP_Storm_C.SetStormMoveState
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Storm_C::SetStormMoveState(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "SetStormMoveState");
-
-	Params::BP_Storm_C_SetStormMoveState Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Storm.BP_Storm_C.SetStormLevel
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Level                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Storm_C::SetStormLevel(int32 Level)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "SetStormLevel");
-
-	Params::BP_Storm_C_SetStormLevel Parms{};
-
-	Parms.Level = Level;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Storm.BP_Storm_C.ResetPosition
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_Storm_C::ResetPosition()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "ResetPosition");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Storm.BP_Storm_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Storm_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "ReceiveTick");
-
-	Params::BP_Storm_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Storm.BP_Storm_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_Storm_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Storm.BP_Storm_C.PositionUpdate
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   StartLocation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Storm_C::PositionUpdate(const struct FVector& StartLocation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "PositionUpdate");
-
-	Params::BP_Storm_C_PositionUpdate Parms{};
-
-	Parms.StartLocation = std::move(StartLocation);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Storm.BP_Storm_C.MoveToCheckPoint
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Storm_C::MoveToCheckPoint(class FName Tag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "MoveToCheckPoint");
-
-	Params::BP_Storm_C_MoveToCheckPoint Parms{};
-
-	Parms.Tag = Tag;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Storm.BP_Storm_C.MoveSignal
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Storm_C::MoveSignal()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "MoveSignal");
+		Func = Class->GetFunction("BP_Storm_C", "MinusTime");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -290,49 +86,253 @@ void ABP_Storm_C::MoveCountDownStart(int32 CountDownTime, class FName StopperNam
 }
 
 
-// Function BP_Storm.BP_Storm_C.MinusTime
+// Function BP_Storm.BP_Storm_C.MoveSignal
 // (BlueprintCallable, BlueprintEvent)
 
-void ABP_Storm_C::MinusTime()
+void ABP_Storm_C::MoveSignal()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "MinusTime");
+		Func = Class->GetFunction("BP_Storm_C", "MoveSignal");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_Storm.BP_Storm_C.ForceStateCheck
+// Function BP_Storm.BP_Storm_C.MoveToCheckPoint
 // (BlueprintCallable, BlueprintEvent)
-
-void ABP_Storm_C::ForceStateCheck()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "ForceStateCheck");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Storm.BP_Storm_C.ExecuteUbergraph_BP_Storm
-// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Storm_C::ExecuteUbergraph_BP_Storm(int32 EntryPoint)
+void ABP_Storm_C::MoveToCheckPoint(class FName Tag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Storm_C", "ExecuteUbergraph_BP_Storm");
+		Func = Class->GetFunction("BP_Storm_C", "MoveToCheckPoint");
 
-	Params::BP_Storm_C_ExecuteUbergraph_BP_Storm Parms{};
+	Params::BP_Storm_C_MoveToCheckPoint Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Tag = Tag;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Storm.BP_Storm_C.PositionUpdate
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   StartLocation_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Storm_C::PositionUpdate(const struct FVector& StartLocation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Storm_C", "PositionUpdate");
+
+	Params::BP_Storm_C_PositionUpdate Parms{};
+
+	Parms.StartLocation_0 = std::move(StartLocation_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Storm.BP_Storm_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_Storm_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Storm_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Storm.BP_Storm_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Storm_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Storm_C", "ReceiveTick");
+
+	Params::BP_Storm_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Storm.BP_Storm_C.ResetPosition
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_Storm_C::ResetPosition()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Storm_C", "ResetPosition");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Storm.BP_Storm_C.SetStormLevel
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Level                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Storm_C::SetStormLevel(int32 Level)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Storm_C", "SetStormLevel");
+
+	Params::BP_Storm_C_SetStormLevel Parms{};
+
+	Parms.Level = Level;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Storm.BP_Storm_C.SetStormMoveState
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Storm_C::SetStormMoveState(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Storm_C", "SetStormMoveState");
+
+	Params::BP_Storm_C_SetStormMoveState Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Storm.BP_Storm_C.SetStormVisibleState
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    VisualState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Storm_C::SetStormVisibleState(bool VisualState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Storm_C", "SetStormVisibleState");
+
+	Params::BP_Storm_C_SetStormVisibleState Parms{};
+
+	Parms.VisualState = VisualState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Storm.BP_Storm_C.ShowStormReplicate
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_Storm_C::ShowStormReplicate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Storm_C", "ShowStormReplicate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Storm.BP_Storm_C.SpeedUpdate
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Storm_C::SpeedUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Storm_C", "SpeedUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Storm.BP_Storm_C.StormErrorPlayerCheck
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Storm_C::StormErrorPlayerCheck()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Storm_C", "StormErrorPlayerCheck");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Storm.BP_Storm_C.StormVisual__FinishedFunc
+// (BlueprintEvent)
+
+void ABP_Storm_C::StormVisual__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Storm_C", "StormVisual__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Storm.BP_Storm_C.StormVisual__UpdateFunc
+// (BlueprintEvent)
+
+void ABP_Storm_C::StormVisual__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Storm_C", "StormVisual__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Storm.BP_Storm_C.TeleportStorm
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Storm_C::TeleportStorm(const struct FVector& Location)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Storm_C", "TeleportStorm");
+
+	Params::BP_Storm_C_TeleportStorm Parms{};
+
+	Parms.Location = std::move(Location);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

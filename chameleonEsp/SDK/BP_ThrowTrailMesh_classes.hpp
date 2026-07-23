@@ -30,10 +30,10 @@ public:
 	struct FVector                                Scale;                                             // 0x02E8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_ThrowTrailMesh(int32 EntryPoint);
 	void CreateMesh();
+	void ExecuteUbergraph_BP_ThrowTrailMesh(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()

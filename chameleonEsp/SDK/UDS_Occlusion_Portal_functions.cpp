@@ -16,20 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function UDS_Occlusion_Portal.UDS_Occlusion_Portal_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UUDS_Occlusion_Portal_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_Occlusion_Portal_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function UDS_Occlusion_Portal.UDS_Occlusion_Portal_C.ExecuteUbergraph_UDS_Occlusion_Portal
 // (Final, UbergraphFunction)
 // Parameters:
@@ -47,6 +33,20 @@ void UUDS_Occlusion_Portal_C::ExecuteUbergraph_UDS_Occlusion_Portal(int32 EntryP
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UDS_Occlusion_Portal.UDS_Occlusion_Portal_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UUDS_Occlusion_Portal_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UDS_Occlusion_Portal_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -10,19 +10,177 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
+#include "EN_DamageType_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
 #include "EN_StanType_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
-#include "EN_DamageType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
 #include "FinishFilter_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 #include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.IsChangeImage
+// 0x0018 (0x0018 - 0x0000)
+struct BP_CraftedObject_Base_C_IsChangeImage final
+{
+public:
+	bool                                          IsInteract;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   OverrideText;                                      // 0x0008(0x0010)(Parm, OutParm)
+};
+DUMPER7_ASSERTS_BP_CraftedObject_Base_C_IsChangeImage;
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.GetItemInfo
+// 0x00C0 (0x00C0 - 0x0000)
+struct BP_CraftedObject_Base_C_GetItemInfo final
+{
+public:
+	ENUM_HandType                                 HandType;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_ClassType                                ClassType;                                         // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NotPickUp;                                         // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               HaveRotation;                                      // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                Add_Position;                                      // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsBoneAttach;                                      // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_ItemBindType                             BindType;                                          // 0x0039(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   BoneName;                                          // 0x003C(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_ItemCoreDatas                      CoreDatas;                                         // 0x0048(0x0070)(Parm, OutParm, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_CraftedObject_Base_C_GetItemInfo;
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.GetParentCharacter
+// 0x0008 (0x0008 - 0x0000)
+struct BP_CraftedObject_Base_C_GetParentCharacter final
+{
+public:
+	class ABP_FirstPersonCharacter_Main_C*        FirstpersonCharacter;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_CraftedObject_Base_C_GetParentCharacter;
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.Damage
+// 0x0090 (0x0090 - 0x0000)
+struct BP_CraftedObject_Base_C_Damage final
+{
+public:
+	double                                        DamageValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TeamIndex;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_DamageType                                 DamageType;                                        // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             SourceAgentPoint;                                  // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UnAvoidable;                                       // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   DamageName;                                        // 0x0074(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 SourceActor;                                       // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FFinishFilter                          Finish;                                            // 0x0088(0x0002)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x008B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_CraftedObject_Base_C_Damage;
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.GetParryState
+// 0x0001 (0x0001 - 0x0000)
+struct BP_CraftedObject_Base_C_GetParryState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_CraftedObject_Base_C_GetParryState;
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.DropItem
+// 0x0030 (0x0030 - 0x0000)
+struct BP_CraftedObject_Base_C_DropItem final
+{
+public:
+	struct FVector                                Force_Vector;                                      // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CentorPosition;                                    // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_CraftedObject_Base_C_DropItem;
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.SetMeshDatas
+// 0x0001 (0x0001 - 0x0000)
+struct BP_CraftedObject_Base_C_SetMeshDatas final
+{
+public:
+	bool                                          KeepScale;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_CraftedObject_Base_C_SetMeshDatas;
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.PickState
+// 0x0018 (0x0018 - 0x0000)
+struct BP_CraftedObject_Base_C_PickState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         SlotIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_CraftedObject_Base_C_PickState;
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.UpdateCoreDatas
+// 0x0070 (0x0070 - 0x0000)
+struct BP_CraftedObject_Base_C_UpdateCoreDatas final
+{
+public:
+	struct FST_ItemCoreDatas                      CoreDatas;                                         // 0x0000(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_CraftedObject_Base_C_UpdateCoreDatas;
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.StanDamage
+// 0x0001 (0x0001 - 0x0000)
+struct BP_CraftedObject_Base_C_StanDamage final
+{
+public:
+	EN_StanType                                   StanType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_CraftedObject_Base_C_StanDamage;
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.StaminaDamage
+// 0x0008 (0x0008 - 0x0000)
+struct BP_CraftedObject_Base_C_StaminaDamage final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_CraftedObject_Base_C_StaminaDamage;
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.DamageToPlayerController
+// 0x01A0 (0x01A0 - 0x0000)
+struct BP_CraftedObject_Base_C_DamageToPlayerController final
+{
+public:
+	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageValue;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TeamIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_DamageType                                 DamageType;                                        // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15[0xB];                                       // 0x0015(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             SourceAgentPoint;                                  // 0x0020(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UnAvoidable;                                       // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   DamageName;                                        // 0x0084(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             HitRezult;                                         // 0x0090(0x0100)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AActor*                                 SourceActor;                                       // 0x0190(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_CraftedObject_Base_C_DamageToPlayerController;
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.SetForceGrabTarget
+// 0x0008 (0x0008 - 0x0000)
+struct BP_CraftedObject_Base_C_SetForceGrabTarget final
+{
+public:
+	class ABP_FirstPersonCharacter_LINK_C*        ForceGrabTarget_0;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_CraftedObject_Base_C_SetForceGrabTarget;
 
 // Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.ExecuteUbergraph_BP_CraftedObject_Base
 // 0x0340 (0x0340 - 0x0000)
@@ -70,164 +228,6 @@ public:
 	class UNiagaraComponent*                      CallFunc_SpawnSystemAtLocation_ReturnValue;        // 0x0338(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_CraftedObject_Base_C_ExecuteUbergraph_BP_CraftedObject_Base;
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.SetForceGrabTarget
-// 0x0008 (0x0008 - 0x0000)
-struct BP_CraftedObject_Base_C_SetForceGrabTarget final
-{
-public:
-	class ABP_FirstPersonCharacter_LINK_C*        ForceGrabTarget_0;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Base_C_SetForceGrabTarget;
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.DamageToPlayerController
-// 0x01A0 (0x01A0 - 0x0000)
-struct BP_CraftedObject_Base_C_DamageToPlayerController final
-{
-public:
-	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        DamageValue;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TeamIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_DamageType                                 DamageType;                                        // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15[0xB];                                       // 0x0015(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             SourceAgentPoint;                                  // 0x0020(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UnAvoidable;                                       // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   DamageName;                                        // 0x0084(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             HitRezult;                                         // 0x0090(0x0100)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AActor*                                 SourceActor;                                       // 0x0190(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Base_C_DamageToPlayerController;
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.StaminaDamage
-// 0x0008 (0x0008 - 0x0000)
-struct BP_CraftedObject_Base_C_StaminaDamage final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Base_C_StaminaDamage;
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.StanDamage
-// 0x0001 (0x0001 - 0x0000)
-struct BP_CraftedObject_Base_C_StanDamage final
-{
-public:
-	EN_StanType                                   StanType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Base_C_StanDamage;
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.UpdateCoreDatas
-// 0x0070 (0x0070 - 0x0000)
-struct BP_CraftedObject_Base_C_UpdateCoreDatas final
-{
-public:
-	struct FST_ItemCoreDatas                      CoreDatas;                                         // 0x0000(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Base_C_UpdateCoreDatas;
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.PickState
-// 0x0018 (0x0018 - 0x0000)
-struct BP_CraftedObject_Base_C_PickState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         SlotIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Base_C_PickState;
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.SetMeshDatas
-// 0x0001 (0x0001 - 0x0000)
-struct BP_CraftedObject_Base_C_SetMeshDatas final
-{
-public:
-	bool                                          KeepScale;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Base_C_SetMeshDatas;
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.DropItem
-// 0x0030 (0x0030 - 0x0000)
-struct BP_CraftedObject_Base_C_DropItem final
-{
-public:
-	struct FVector                                Force_Vector;                                      // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CentorPosition;                                    // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Base_C_DropItem;
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.GetParryState
-// 0x0001 (0x0001 - 0x0000)
-struct BP_CraftedObject_Base_C_GetParryState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Base_C_GetParryState;
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.Damage
-// 0x0090 (0x0090 - 0x0000)
-struct BP_CraftedObject_Base_C_Damage final
-{
-public:
-	double                                        DamageValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TeamIndex;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_DamageType                                 DamageType;                                        // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             SourceAgentPoint;                                  // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UnAvoidable;                                       // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   DamageName;                                        // 0x0074(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 SourceActor;                                       // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFinishFilter                          Finish;                                            // 0x0088(0x0002)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x008B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Base_C_Damage;
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.GetParentCharacter
-// 0x0008 (0x0008 - 0x0000)
-struct BP_CraftedObject_Base_C_GetParentCharacter final
-{
-public:
-	class ABP_FirstPersonCharacter_Main_C*        FirstpersonCharacter;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Base_C_GetParentCharacter;
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.GetItemInfo
-// 0x00C0 (0x00C0 - 0x0000)
-struct BP_CraftedObject_Base_C_GetItemInfo final
-{
-public:
-	ENUM_HandType                                 HandType;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_ClassType                                ClassType;                                         // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NotPickUp;                                         // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               HaveRotation;                                      // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                Add_Position;                                      // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsBoneAttach;                                      // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_ItemBindType                             BindType;                                          // 0x0039(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   BoneName;                                          // 0x003C(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_ItemCoreDatas                      CoreDatas;                                         // 0x0048(0x0070)(Parm, OutParm, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Base_C_GetItemInfo;
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.IsChangeImage
-// 0x0018 (0x0018 - 0x0000)
-struct BP_CraftedObject_Base_C_IsChangeImage final
-{
-public:
-	bool                                          IsInteract;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   OverrideText;                                      // 0x0008(0x0010)(Parm, OutParm)
-};
-DUMPER7_ASSERTS_BP_CraftedObject_Base_C_IsChangeImage;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

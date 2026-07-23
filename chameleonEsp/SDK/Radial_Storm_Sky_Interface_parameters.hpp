@@ -16,15 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function Radial_Storm_Sky_Interface.Radial_Storm_Sky_Interface_C.Update with Sky Mode Change
-// 0x0001 (0x0001 - 0x0000)
-struct Radial_Storm_Sky_Interface_C_Update_with_Sky_Mode_Change final
-{
-public:
-	bool                                          Successful;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Radial_Storm_Sky_Interface_C_Update_with_Sky_Mode_Change;
-
 // Function Radial_Storm_Sky_Interface.Radial_Storm_Sky_Interface_C.Get Cloud Coverage Brush Data
 // 0x0048 (0x0048 - 0x0000)
 struct Radial_Storm_Sky_Interface_C_Get_Cloud_Coverage_Brush_Data final
@@ -38,6 +29,15 @@ public:
 	double                                        UDS_Coverage_Level;                                // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_Radial_Storm_Sky_Interface_C_Get_Cloud_Coverage_Brush_Data;
+
+// Function Radial_Storm_Sky_Interface.Radial_Storm_Sky_Interface_C.Update with Sky Mode Change
+// 0x0001 (0x0001 - 0x0000)
+struct Radial_Storm_Sky_Interface_C_Update_with_Sky_Mode_Change final
+{
+public:
+	bool                                          Successful;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Radial_Storm_Sky_Interface_C_Update_with_Sky_Mode_Change;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

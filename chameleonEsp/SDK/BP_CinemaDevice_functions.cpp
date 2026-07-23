@@ -16,51 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_CinemaDevice.BP_CinemaDevice_C.SequenceEnd
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_CinemaDevice_C::SequenceEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CinemaDevice_C", "SequenceEnd");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CinemaDevice.BP_CinemaDevice_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_CinemaDevice_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CinemaDevice_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CinemaDevice.BP_CinemaDevice_C.PlayDeviceSequence
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_CinemaDevice.BP_CinemaDevice_C.BndEvt__BP_CinemaDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// class UMovieSceneSequencePlayer*        LevelSequence                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// EN_CinemaPlayMode                       PlayMode                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FST_EventValue&            SignalValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void ABP_CinemaDevice_C::PlayDeviceSequence(class UMovieSceneSequencePlayer* LevelSequence, EN_CinemaPlayMode PlayMode)
+void ABP_CinemaDevice_C::BndEvt__BP_CinemaDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature(const struct FST_EventValue& SignalValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CinemaDevice_C", "PlayDeviceSequence");
+		Func = Class->GetFunction("BP_CinemaDevice_C", "BndEvt__BP_CinemaDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature");
 
-	Params::BP_CinemaDevice_C_PlayDeviceSequence Parms{};
+	Params::BP_CinemaDevice_C_BndEvt__BP_CinemaDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature Parms{};
 
-	Parms.LevelSequence = LevelSequence;
-	Parms.PlayMode = PlayMode;
+	Parms.SignalValue = std::move(SignalValue);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -86,23 +56,53 @@ void ABP_CinemaDevice_C::ExecuteUbergraph_BP_CinemaDevice(int32 EntryPoint)
 }
 
 
-// Function BP_CinemaDevice.BP_CinemaDevice_C.BndEvt__BP_CinemaDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature
-// (BlueprintEvent)
+// Function BP_CinemaDevice.BP_CinemaDevice_C.PlayDeviceSequence
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FST_EventValue&            SignalValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UMovieSceneSequencePlayer*        LevelSequence                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// EN_CinemaPlayMode                       PlayMode_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CinemaDevice_C::BndEvt__BP_CinemaDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature(const struct FST_EventValue& SignalValue)
+void ABP_CinemaDevice_C::PlayDeviceSequence(class UMovieSceneSequencePlayer* LevelSequence, EN_CinemaPlayMode PlayMode_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CinemaDevice_C", "BndEvt__BP_CinemaDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature");
+		Func = Class->GetFunction("BP_CinemaDevice_C", "PlayDeviceSequence");
 
-	Params::BP_CinemaDevice_C_BndEvt__BP_CinemaDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature Parms{};
+	Params::BP_CinemaDevice_C_PlayDeviceSequence Parms{};
 
-	Parms.SignalValue = std::move(SignalValue);
+	Parms.LevelSequence = LevelSequence;
+	Parms.PlayMode_0 = PlayMode_0;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CinemaDevice.BP_CinemaDevice_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_CinemaDevice_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CinemaDevice_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CinemaDevice.BP_CinemaDevice_C.SequenceEnd
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_CinemaDevice_C::SequenceEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CinemaDevice_C", "SequenceEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -20,8 +20,8 @@ SDK_NAMESPACE_START
 class IUDS_Editor_Tick_Interface_C final
 {
 public:
-	void Start_Tick_Timer(class AUltra_Dynamic_Sky_C* UDS);
 	void Constructed_Handler();
+	void Start_Tick_Timer(class AUltra_Dynamic_Sky_C* UDS);
 
 public:
 	static class UClass* StaticClass()

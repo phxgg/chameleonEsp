@@ -16,17 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_GetRayPointControl.BPC_GetRayPointControl_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// Function BPC_GetRayPointControl.BPC_GetRayPointControl_C.ExecuteUbergraph_BPC_GetRayPointControl
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GetRayPointControl_C::ReceiveBeginPlay()
+void UBPC_GetRayPointControl_C::ExecuteUbergraph_BPC_GetRayPointControl(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetRayPointControl_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BPC_GetRayPointControl_C", "ExecuteUbergraph_BPC_GetRayPointControl");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_GetRayPointControl_C_ExecuteUbergraph_BPC_GetRayPointControl Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -51,23 +57,17 @@ void UBPC_GetRayPointControl_C::GetRayPoints(TArray<struct FVector>* Vectors)
 }
 
 
-// Function BPC_GetRayPointControl.BPC_GetRayPointControl_C.ExecuteUbergraph_BPC_GetRayPointControl
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_GetRayPointControl.BPC_GetRayPointControl_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void UBPC_GetRayPointControl_C::ExecuteUbergraph_BPC_GetRayPointControl(int32 EntryPoint)
+void UBPC_GetRayPointControl_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GetRayPointControl_C", "ExecuteUbergraph_BPC_GetRayPointControl");
+		Func = Class->GetFunction("BPC_GetRayPointControl_C", "ReceiveBeginPlay");
 
-	Params::BPC_GetRayPointControl_C_ExecuteUbergraph_BPC_GetRayPointControl Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

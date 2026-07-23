@@ -16,34 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_SnowBall_Under.BP_SnowBall_Under_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void ABP_SnowBall_Under_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SnowBall_Under_C", "ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SnowBall_Under.BP_SnowBall_Under_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_SnowBall_Under_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SnowBall_Under_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_SnowBall_Under.BP_SnowBall_Under_C.ExecuteUbergraph_BP_SnowBall_Under
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -61,6 +33,34 @@ void ABP_SnowBall_Under_C::ExecuteUbergraph_BP_SnowBall_Under(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SnowBall_Under.BP_SnowBall_Under_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_SnowBall_Under_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SnowBall_Under_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SnowBall_Under.BP_SnowBall_Under_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_SnowBall_Under_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SnowBall_Under_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

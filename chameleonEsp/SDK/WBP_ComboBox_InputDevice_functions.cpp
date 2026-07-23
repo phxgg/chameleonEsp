@@ -16,37 +16,45 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_ComboBox_InputDevice.WBP_ComboBox_InputDevice_C.Update Config Item
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_ComboBox_InputDevice.WBP_ComboBox_InputDevice_C.ApplySetting
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_ComboBox_InputDevice_C::Update_Config_Item()
+void UWBP_ComboBox_InputDevice_C::ApplySetting()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_InputDevice_C", "Update Config Item");
+		Func = Class->GetFunction("WBP_ComboBox_InputDevice_C", "ApplySetting");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_ComboBox_InputDevice.WBP_ComboBox_InputDevice_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_ComboBox_InputDevice.WBP_ComboBox_InputDevice_C.BndEvt__WBP_ComboBox_InputDevice_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_ComboBox_InputDevice_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_ComboBox_InputDevice_C::BndEvt__WBP_ComboBox_InputDevice_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_InputDevice_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_ComboBox_InputDevice_C", "BndEvt__WBP_ComboBox_InputDevice_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature");
 
-	Params::WBP_ComboBox_InputDevice_C_PreConstruct Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function WBP_ComboBox_InputDevice.WBP_ComboBox_InputDevice_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_ComboBox_InputDevice_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ComboBox_InputDevice_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -70,43 +78,35 @@ void UWBP_ComboBox_InputDevice_C::ExecuteUbergraph_WBP_ComboBox_InputDevice(int3
 }
 
 
-// Function WBP_ComboBox_InputDevice.WBP_ComboBox_InputDevice_C.Construct
+// Function WBP_ComboBox_InputDevice.WBP_ComboBox_InputDevice_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ComboBox_InputDevice_C::Construct()
+void UWBP_ComboBox_InputDevice_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_InputDevice_C", "Construct");
+		Func = Class->GetFunction("WBP_ComboBox_InputDevice_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_ComboBox_InputDevice_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_ComboBox_InputDevice.WBP_ComboBox_InputDevice_C.BndEvt__WBP_ComboBox_InputDevice_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_ComboBox_InputDevice.WBP_ComboBox_InputDevice_C.Update Config Item
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_ComboBox_InputDevice_C::BndEvt__WBP_ComboBox_InputDevice_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature()
+void UWBP_ComboBox_InputDevice_C::Update_Config_Item()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_InputDevice_C", "BndEvt__WBP_ComboBox_InputDevice_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_ComboBox_InputDevice.WBP_ComboBox_InputDevice_C.ApplySetting
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_ComboBox_InputDevice_C::ApplySetting()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_InputDevice_C", "ApplySetting");
+		Func = Class->GetFunction("WBP_ComboBox_InputDevice_C", "Update Config Item");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

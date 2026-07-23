@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "EN_StanType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "MoverExamples_classes.hpp"
-#include "EN_DamageType_structs.hpp"
 #include "AIModule_structs.hpp"
+#include "EN_DamageType_structs.hpp"
+#include "EN_StanType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -45,24 +45,24 @@ public:
 	class ABP_FirstPersonCharacter_LINK_C*        OwnerCharacter;                                    // 0x0478(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void StopMove();
-	void StanDamage(EN_StanType StanType);
-	void StaminaDamage(double Value);
-	void SetWeight(double Weight);
-	void Respawn(const struct FVector& Location);
-	void ReceiveBeginPlay();
-	void OnSuccess_2E03163741D00CB8BA20B8B51BD49E43(EPathFollowingResult MovementResult);
-	void OnRep_CurrentWeight();
-	void OnFail_2E03163741D00CB8BA20B8B51BD49E43(EPathFollowingResult MovementResult);
-	void NavigateEndEvent();
-	void JumpLoop();
-	void Jump(const struct FVector& Destination);
-	void IsJumpCheck(bool* Rezult);
-	void GoToPosition(const struct FVector& Destination);
-	void GetParryState(bool* State);
-	void ExecuteUbergraph_BP_MiniPenguin(int32 EntryPoint);
-	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
 	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
+	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
+	void ExecuteUbergraph_BP_MiniPenguin(int32 EntryPoint);
+	void GetParryState(bool* State);
+	void GoToPosition(const struct FVector& Destination);
+	void IsJumpCheck(bool* Rezult);
+	void Jump(const struct FVector& Destination);
+	void JumpLoop();
+	void NavigateEndEvent();
+	void OnFail_2E03163741D00CB8BA20B8B51BD49E43(EPathFollowingResult MovementResult);
+	void OnRep_CurrentWeight();
+	void OnSuccess_2E03163741D00CB8BA20B8B51BD49E43(EPathFollowingResult MovementResult);
+	void ReceiveBeginPlay();
+	void Respawn(const struct FVector& Location);
+	void SetWeight(double Weight_0);
+	void StaminaDamage(double Value);
+	void StanDamage(EN_StanType StanType);
+	void StopMove();
 
 public:
 	static class UClass* StaticClass()

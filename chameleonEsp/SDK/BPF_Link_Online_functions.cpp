@@ -16,87 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BPF_Link_Online.BPF_Link_Online_C.MakeOptionMap
-// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FST_SessionOptionString>& SessionOptions                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TMap<class FName, struct FSessionSearchParamBP>*SearchParams                                           (Parm, OutParm)
-
-void UBPF_Link_Online_C::MakeOptionMap(TArray<struct FST_SessionOptionString>& SessionOptions, class UObject* __WorldContext, TMap<class FName, struct FSessionSearchParamBP>* SearchParams)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPF_Link_Online_C", "MakeOptionMap");
-
-	Params::BPF_Link_Online_C_MakeOptionMap Parms{};
-
-	Parms.SessionOptions = std::move(SessionOptions);
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	SessionOptions = std::move(Parms.SessionOptions);
-
-	if (SearchParams != nullptr)
-		*SearchParams = std::move(Parms.SearchParams);
-}
-
-
-// Function BPF_Link_Online.BPF_Link_Online_C.HashStringPure
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const class FString&                    Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-
-class FString UBPF_Link_Online_C::HashStringPure(const class FString& Source, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPF_Link_Online_C", "HashStringPure");
-
-	Params::BPF_Link_Online_C_HashStringPure Parms{};
-
-	Parms.Source = std::move(Source);
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BPF_Link_Online.BPF_Link_Online_C.AddImpulseForce
-// (Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   Velocity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    VelChange                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CanForceLocal                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBPF_Link_Online_C::AddImpulseForce(const struct FVector& Velocity, class AActor* TargetActor, bool VelChange, bool CanForceLocal, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPF_Link_Online_C", "AddImpulseForce");
-
-	Params::BPF_Link_Online_C_AddImpulseForce Parms{};
-
-	Parms.Velocity = std::move(Velocity);
-	Parms.TargetActor = TargetActor;
-	Parms.VelChange = VelChange;
-	Parms.CanForceLocal = CanForceLocal;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPF_Link_Online.BPF_Link_Online_C.GetSphereDamageInfo
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -132,6 +51,87 @@ void UBPF_Link_Online_C::GetSphereDamageInfo(class AActor* HitActor, const struc
 
 	if (Velocity != nullptr)
 		*Velocity = std::move(Parms.Velocity);
+}
+
+
+// Function BPF_Link_Online.BPF_Link_Online_C.AddImpulseForce
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   Velocity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    VelChange                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CanForceLocal                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPF_Link_Online_C::AddImpulseForce(const struct FVector& Velocity, class AActor* TargetActor, bool VelChange, bool CanForceLocal, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPF_Link_Online_C", "AddImpulseForce");
+
+	Params::BPF_Link_Online_C_AddImpulseForce Parms{};
+
+	Parms.Velocity = std::move(Velocity);
+	Parms.TargetActor = TargetActor;
+	Parms.VelChange = VelChange;
+	Parms.CanForceLocal = CanForceLocal;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPF_Link_Online.BPF_Link_Online_C.HashStringPure
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const class FString&                    Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString UBPF_Link_Online_C::HashStringPure(const class FString& Source, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPF_Link_Online_C", "HashStringPure");
+
+	Params::BPF_Link_Online_C_HashStringPure Parms{};
+
+	Parms.Source = std::move(Source);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BPF_Link_Online.BPF_Link_Online_C.MakeOptionMap
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FST_SessionOptionString>& SessionOptions                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// TMap<class FName, struct FSessionSearchParamBP>*SearchParams                                           (Parm, OutParm)
+
+void UBPF_Link_Online_C::MakeOptionMap(TArray<struct FST_SessionOptionString>& SessionOptions, class UObject* __WorldContext, TMap<class FName, struct FSessionSearchParamBP>* SearchParams)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPF_Link_Online_C", "MakeOptionMap");
+
+	Params::BPF_Link_Online_C_MakeOptionMap Parms{};
+
+	Parms.SessionOptions = std::move(SessionOptions);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	SessionOptions = std::move(Parms.SessionOptions);
+
+	if (SearchParams != nullptr)
+		*SearchParams = std::move(Parms.SearchParams);
 }
 
 

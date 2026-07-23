@@ -21,10 +21,10 @@ SDK_NAMESPACE_START
 class UBPF_Link_Online_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void MakeOptionMap(TArray<struct FST_SessionOptionString>& SessionOptions, class UObject* __WorldContext, TMap<class FName, struct FSessionSearchParamBP>* SearchParams);
-	static class FString HashStringPure(const class FString& Source, class UObject* __WorldContext);
-	static void AddImpulseForce(const struct FVector& Velocity, class AActor* TargetActor, bool VelChange, bool CanForceLocal, class UObject* __WorldContext);
 	static void GetSphereDamageInfo(class AActor* HitActor, const struct FVector& hitpoint, class USphereComponent* SphereCollision, class UObject* __WorldContext, double* NormalizedDistanceValue, bool* LineTraceRezult, struct FVector* Velocity);
+	static void AddImpulseForce(const struct FVector& Velocity, class AActor* TargetActor, bool VelChange, bool CanForceLocal, class UObject* __WorldContext);
+	static class FString HashStringPure(const class FString& Source, class UObject* __WorldContext);
+	static void MakeOptionMap(TArray<struct FST_SessionOptionString>& SessionOptions, class UObject* __WorldContext, TMap<class FName, struct FSessionSearchParamBP>* SearchParams);
 
 public:
 	static class UClass* StaticClass()

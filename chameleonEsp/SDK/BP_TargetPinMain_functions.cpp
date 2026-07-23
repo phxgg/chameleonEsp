@@ -16,15 +16,35 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_TargetPinMain.BP_TargetPinMain_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_TargetPinMain.BP_TargetPinMain_C.ExecuteUbergraph_BP_TargetPinMain
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_TargetPinMain_C::ReceiveBeginPlay()
+void ABP_TargetPinMain_C::ExecuteUbergraph_BP_TargetPinMain(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TargetPinMain_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_TargetPinMain_C", "ExecuteUbergraph_BP_TargetPinMain");
+
+	Params::BP_TargetPinMain_C_ExecuteUbergraph_BP_TargetPinMain Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TargetPinMain.BP_TargetPinMain_C.PinAnimation__FinishedFunc
+// (BlueprintEvent)
+
+void ABP_TargetPinMain_C::PinAnimation__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TargetPinMain_C", "PinAnimation__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -44,37 +64,17 @@ void ABP_TargetPinMain_C::PinAnimation__UpdateFunc()
 }
 
 
-// Function BP_TargetPinMain.BP_TargetPinMain_C.PinAnimation__FinishedFunc
-// (BlueprintEvent)
+// Function BP_TargetPinMain.BP_TargetPinMain_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_TargetPinMain_C::PinAnimation__FinishedFunc()
+void ABP_TargetPinMain_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TargetPinMain_C", "PinAnimation__FinishedFunc");
+		Func = Class->GetFunction("BP_TargetPinMain_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TargetPinMain.BP_TargetPinMain_C.ExecuteUbergraph_BP_TargetPinMain
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_TargetPinMain_C::ExecuteUbergraph_BP_TargetPinMain(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TargetPinMain_C", "ExecuteUbergraph_BP_TargetPinMain");
-
-	Params::BP_TargetPinMain_C_ExecuteUbergraph_BP_TargetPinMain Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

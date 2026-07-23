@@ -33,10 +33,10 @@ public:
 	bool                                          TaskClearState;                                    // 0x0108(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BPC_TaskObject_Base(int32 EntryPoint);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void ReceiveBeginPlay();
 	void TaskStart();
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ExecuteUbergraph_BPC_TaskObject_Base(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

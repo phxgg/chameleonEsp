@@ -27,9 +27,9 @@ public:
 	double                                        ImpluseScale;                                      // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_ExplotionSphere_Base(int32 EntryPoint);
 	void BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature(class UNiagaraComponent* PSystem);
+	void ExecuteUbergraph_BP_ExplotionSphere_Base(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

@@ -16,89 +16,15 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_SettingSlider.WBP_SettingSlider_C.Update Config Item
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_SettingSlider.WBP_SettingSlider_C.ApplySetting
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_SettingSlider_C::Update_Config_Item()
+void UWBP_SettingSlider_C::ApplySetting()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SettingSlider_C", "Update Config Item");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_SettingSlider.WBP_SettingSlider_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SettingSlider_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SettingSlider_C", "PreConstruct");
-
-	Params::WBP_SettingSlider_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_SettingSlider.WBP_SettingSlider_C.Get_ConfigItem_Text_1_Text_0
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
-
-class FText UWBP_SettingSlider_C::Get_ConfigItem_Text_1_Text_0()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SettingSlider_C", "Get_ConfigItem_Text_1_Text_0");
-
-	Params::WBP_SettingSlider_C_Get_ConfigItem_Text_1_Text_0 Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WBP_SettingSlider.WBP_SettingSlider_C.ExecuteUbergraph_WBP_SettingSlider
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SettingSlider_C::ExecuteUbergraph_WBP_SettingSlider(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SettingSlider_C", "ExecuteUbergraph_WBP_SettingSlider");
-
-	Params::WBP_SettingSlider_C_ExecuteUbergraph_WBP_SettingSlider Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_SettingSlider.WBP_SettingSlider_C.BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_SettingSlider_C::BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SettingSlider_C", "BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature");
+		Func = Class->GetFunction("WBP_SettingSlider_C", "ApplySetting");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -124,15 +50,89 @@ void UWBP_SettingSlider_C::BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Nod
 }
 
 
-// Function WBP_SettingSlider.WBP_SettingSlider_C.ApplySetting
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_SettingSlider.WBP_SettingSlider_C.BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_SettingSlider_C::ApplySetting()
+void UWBP_SettingSlider_C::BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SettingSlider_C", "ApplySetting");
+		Func = Class->GetFunction("WBP_SettingSlider_C", "BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_SettingSlider.WBP_SettingSlider_C.ExecuteUbergraph_WBP_SettingSlider
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SettingSlider_C::ExecuteUbergraph_WBP_SettingSlider(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SettingSlider_C", "ExecuteUbergraph_WBP_SettingSlider");
+
+	Params::WBP_SettingSlider_C_ExecuteUbergraph_WBP_SettingSlider Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_SettingSlider.WBP_SettingSlider_C.Get_ConfigItem_Text_1_Text_0
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+class FText UWBP_SettingSlider_C::Get_ConfigItem_Text_1_Text_0()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SettingSlider_C", "Get_ConfigItem_Text_1_Text_0");
+
+	Params::WBP_SettingSlider_C_Get_ConfigItem_Text_1_Text_0 Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_SettingSlider.WBP_SettingSlider_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SettingSlider_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SettingSlider_C", "PreConstruct");
+
+	Params::WBP_SettingSlider_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_SettingSlider.WBP_SettingSlider_C.Update Config Item
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_SettingSlider_C::Update_Config_Item()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SettingSlider_C", "Update Config Item");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

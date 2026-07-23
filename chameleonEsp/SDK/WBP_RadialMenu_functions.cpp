@@ -16,103 +16,31 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_RadialMenu.WBP_RadialMenu_C.ExecuteUbergraph_WBP_RadialMenu
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_RadialMenu.WBP_RadialMenu_C.GetSlideValue
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InputValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   SplitSize                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  SlideValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  Rezult                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_RadialMenu_C::ExecuteUbergraph_WBP_RadialMenu(int32 EntryPoint)
+void UWBP_RadialMenu_C::GetSlideValue(double InputValue, int32 SplitSize, double SlideValue, int32* Rezult)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RadialMenu_C", "ExecuteUbergraph_WBP_RadialMenu");
+		Func = Class->GetFunction("WBP_RadialMenu_C", "GetSlideValue");
 
-	Params::WBP_RadialMenu_C_ExecuteUbergraph_WBP_RadialMenu Parms{};
+	Params::WBP_RadialMenu_C_GetSlideValue Parms{};
 
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_RadialMenu.WBP_RadialMenu_C.SetItemDatasImageOnly
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<struct FST_ItemCoreDatas>& CoreDatas                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UWBP_RadialMenu_C::SetItemDatasImageOnly(const TArray<struct FST_ItemCoreDatas>& CoreDatas)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RadialMenu_C", "SetItemDatasImageOnly");
-
-	Params::WBP_RadialMenu_C_SetItemDatasImageOnly Parms{};
-
-	Parms.CoreDatas = std::move(CoreDatas);
+	Parms.InputValue = InputValue;
+	Parms.SplitSize = SplitSize;
+	Parms.SlideValue = SlideValue;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function WBP_RadialMenu.WBP_RadialMenu_C.SetItemDatas
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<struct FST_ItemCoreDatas>& CoreDatas                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UWBP_RadialMenu_C::SetItemDatas(const TArray<struct FST_ItemCoreDatas>& CoreDatas)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RadialMenu_C", "SetItemDatas");
-
-	Params::WBP_RadialMenu_C_SetItemDatas Parms{};
-
-	Parms.CoreDatas = std::move(CoreDatas);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_RadialMenu.WBP_RadialMenu_C.CurrentSelectionVelocity
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector2D&                 MouseVelocity                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_RadialMenu_C::CurrentSelectionVelocity(const struct FVector2D& MouseVelocity)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RadialMenu_C", "CurrentSelectionVelocity");
-
-	Params::WBP_RadialMenu_C_CurrentSelectionVelocity Parms{};
-
-	Parms.MouseVelocity = std::move(MouseVelocity);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_RadialMenu.WBP_RadialMenu_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_RadialMenu_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RadialMenu_C", "PreConstruct");
-
-	Params::WBP_RadialMenu_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
+	if (Rezult != nullptr)
+		*Rezult = Parms.Rezult;
 }
 
 
@@ -139,31 +67,103 @@ int32 UWBP_RadialMenu_C::GetRezultIndex(const struct FVector2D& InVec)
 }
 
 
-// Function WBP_RadialMenu.WBP_RadialMenu_C.GetSlideValue
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function WBP_RadialMenu.WBP_RadialMenu_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// double                                  InputValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   SplitSize                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  SlideValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32*                                  Rezult                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_RadialMenu_C::GetSlideValue(double InputValue, int32 SplitSize, double SlideValue, int32* Rezult)
+void UWBP_RadialMenu_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RadialMenu_C", "GetSlideValue");
+		Func = Class->GetFunction("WBP_RadialMenu_C", "PreConstruct");
 
-	Params::WBP_RadialMenu_C_GetSlideValue Parms{};
+	Params::WBP_RadialMenu_C_PreConstruct Parms{};
 
-	Parms.InputValue = InputValue;
-	Parms.SplitSize = SplitSize;
-	Parms.SlideValue = SlideValue;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	if (Rezult != nullptr)
-		*Rezult = Parms.Rezult;
+
+// Function WBP_RadialMenu.WBP_RadialMenu_C.CurrentSelectionVelocity
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector2D&                 MouseVelocity                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_RadialMenu_C::CurrentSelectionVelocity(const struct FVector2D& MouseVelocity)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_RadialMenu_C", "CurrentSelectionVelocity");
+
+	Params::WBP_RadialMenu_C_CurrentSelectionVelocity Parms{};
+
+	Parms.MouseVelocity = std::move(MouseVelocity);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_RadialMenu.WBP_RadialMenu_C.SetItemDatas
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<struct FST_ItemCoreDatas>& CoreDatas                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWBP_RadialMenu_C::SetItemDatas(const TArray<struct FST_ItemCoreDatas>& CoreDatas)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_RadialMenu_C", "SetItemDatas");
+
+	Params::WBP_RadialMenu_C_SetItemDatas Parms{};
+
+	Parms.CoreDatas = std::move(CoreDatas);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_RadialMenu.WBP_RadialMenu_C.SetItemDatasImageOnly
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<struct FST_ItemCoreDatas>& CoreDatas                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWBP_RadialMenu_C::SetItemDatasImageOnly(const TArray<struct FST_ItemCoreDatas>& CoreDatas)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_RadialMenu_C", "SetItemDatasImageOnly");
+
+	Params::WBP_RadialMenu_C_SetItemDatasImageOnly Parms{};
+
+	Parms.CoreDatas = std::move(CoreDatas);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_RadialMenu.WBP_RadialMenu_C.ExecuteUbergraph_WBP_RadialMenu
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_RadialMenu_C::ExecuteUbergraph_WBP_RadialMenu(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_RadialMenu_C", "ExecuteUbergraph_WBP_RadialMenu");
+
+	Params::WBP_RadialMenu_C_ExecuteUbergraph_WBP_RadialMenu Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

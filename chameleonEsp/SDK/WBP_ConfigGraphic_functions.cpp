@@ -16,51 +16,87 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.UpdateScreenEvent
+// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.ApplySettings
 // (BlueprintCallable, BlueprintEvent)
 
-void UWBP_ConfigGraphic_C::UpdateScreenEvent()
+void UWBP_ConfigGraphic_C::ApplySettings()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigGraphic_C", "UpdateScreenEvent");
+		Func = Class->GetFunction("WBP_ConfigGraphic_C", "ApplySettings");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.ScreenTypeSettingsUpdate
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.BndEvt__WBP_ConfigGraphic_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_ConfigGraphic_C::ScreenTypeSettingsUpdate()
+void UWBP_ConfigGraphic_C::BndEvt__WBP_ConfigGraphic_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigGraphic_C", "ScreenTypeSettingsUpdate");
+		Func = Class->GetFunction("WBP_ConfigGraphic_C", "BndEvt__WBP_ConfigGraphic_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.PreConstruct
+// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.BndEvt__WBP_ConfigGraphic_WBP_Brightness_K2Node_ComponentBoundEvent_1_UpdateSettingValue__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_ConfigGraphic_C::BndEvt__WBP_ConfigGraphic_WBP_Brightness_K2Node_ComponentBoundEvent_1_UpdateSettingValue__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigGraphic_C", "BndEvt__WBP_ConfigGraphic_WBP_Brightness_K2Node_ComponentBoundEvent_1_UpdateSettingValue__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.BndEvt__WBP_ConfigGraphic_WBP_MotionBlur_K2Node_ComponentBoundEvent_2_UpdateSettingValue__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_ConfigGraphic_C::BndEvt__WBP_ConfigGraphic_WBP_MotionBlur_K2Node_ComponentBoundEvent_2_UpdateSettingValue__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigGraphic_C", "BndEvt__WBP_ConfigGraphic_WBP_MotionBlur_K2Node_ComponentBoundEvent_2_UpdateSettingValue__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ConfigGraphic_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_ConfigGraphic_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigGraphic_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_ConfigGraphic_C", "Construct");
 
-	Params::WBP_ConfigGraphic_C_PreConstruct Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.DeleteConfigWidget
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_ConfigGraphic_C::DeleteConfigWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigGraphic_C", "DeleteConfigWidget");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -84,85 +120,49 @@ void UWBP_ConfigGraphic_C::ExecuteUbergraph_WBP_ConfigGraphic(int32 EntryPoint)
 }
 
 
-// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.DeleteConfigWidget
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_ConfigGraphic_C::DeleteConfigWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigGraphic_C", "DeleteConfigWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.Construct
+// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ConfigGraphic_C::Construct()
+void UWBP_ConfigGraphic_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigGraphic_C", "Construct");
+		Func = Class->GetFunction("WBP_ConfigGraphic_C", "PreConstruct");
+
+	Params::WBP_ConfigGraphic_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.ScreenTypeSettingsUpdate
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_ConfigGraphic_C::ScreenTypeSettingsUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigGraphic_C", "ScreenTypeSettingsUpdate");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.BndEvt__WBP_ConfigGraphic_WBP_MotionBlur_K2Node_ComponentBoundEvent_2_UpdateSettingValue__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_ConfigGraphic_C::BndEvt__WBP_ConfigGraphic_WBP_MotionBlur_K2Node_ComponentBoundEvent_2_UpdateSettingValue__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigGraphic_C", "BndEvt__WBP_ConfigGraphic_WBP_MotionBlur_K2Node_ComponentBoundEvent_2_UpdateSettingValue__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.BndEvt__WBP_ConfigGraphic_WBP_Brightness_K2Node_ComponentBoundEvent_1_UpdateSettingValue__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_ConfigGraphic_C::BndEvt__WBP_ConfigGraphic_WBP_Brightness_K2Node_ComponentBoundEvent_1_UpdateSettingValue__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigGraphic_C", "BndEvt__WBP_ConfigGraphic_WBP_Brightness_K2Node_ComponentBoundEvent_1_UpdateSettingValue__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.BndEvt__WBP_ConfigGraphic_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_ConfigGraphic_C::BndEvt__WBP_ConfigGraphic_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigGraphic_C", "BndEvt__WBP_ConfigGraphic_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.ApplySettings
+// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.UpdateScreenEvent
 // (BlueprintCallable, BlueprintEvent)
 
-void UWBP_ConfigGraphic_C::ApplySettings()
+void UWBP_ConfigGraphic_C::UpdateScreenEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigGraphic_C", "ApplySettings");
+		Func = Class->GetFunction("WBP_ConfigGraphic_C", "UpdateScreenEvent");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -16,20 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function UI_config.UI_config_C.Show config
-// (BlueprintCallable, BlueprintEvent)
-
-void UUI_config_C::Show_config()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_config_C", "Show config");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function UI_config.UI_config_C.ExecuteUbergraph_UI_config
 // (Final, UbergraphFunction)
 // Parameters:
@@ -47,6 +33,20 @@ void UUI_config_C::ExecuteUbergraph_UI_config(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_config.UI_config_C.Show config
+// (BlueprintCallable, BlueprintEvent)
+
+void UUI_config_C::Show_config()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_config_C", "Show config");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

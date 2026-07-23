@@ -16,23 +16,31 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_TaskObject_Base.BPC_TaskObject_Base_C.ExecuteUbergraph_BPC_TaskObject_Base
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_TaskObject_Base.BPC_TaskObject_Base_C.TaskStart
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_TaskObject_Base_C::ExecuteUbergraph_BPC_TaskObject_Base(int32 EntryPoint)
+void UBPC_TaskObject_Base_C::TaskStart()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_TaskObject_Base_C", "ExecuteUbergraph_BPC_TaskObject_Base");
+		Func = Class->GetFunction("BPC_TaskObject_Base_C", "TaskStart");
 
-	Params::BPC_TaskObject_Base_C_ExecuteUbergraph_BPC_TaskObject_Base Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function BPC_TaskObject_Base.BPC_TaskObject_Base_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBPC_TaskObject_Base_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_TaskObject_Base_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -56,31 +64,23 @@ void UBPC_TaskObject_Base_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 }
 
 
-// Function BPC_TaskObject_Base.BPC_TaskObject_Base_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// Function BPC_TaskObject_Base.BPC_TaskObject_Base_C.ExecuteUbergraph_BPC_TaskObject_Base
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_TaskObject_Base_C::ReceiveBeginPlay()
+void UBPC_TaskObject_Base_C::ExecuteUbergraph_BPC_TaskObject_Base(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_TaskObject_Base_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BPC_TaskObject_Base_C", "ExecuteUbergraph_BPC_TaskObject_Base");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::BPC_TaskObject_Base_C_ExecuteUbergraph_BPC_TaskObject_Base Parms{};
 
+	Parms.EntryPoint = EntryPoint;
 
-// Function BPC_TaskObject_Base.BPC_TaskObject_Base_C.TaskStart
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_TaskObject_Base_C::TaskStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_TaskObject_Base_C", "TaskStart");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

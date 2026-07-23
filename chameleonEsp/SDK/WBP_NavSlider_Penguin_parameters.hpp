@@ -16,23 +16,14 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_NavSlider_Penguin.WBP_NavSlider_Penguin_C.SetValueText
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_NavSlider_Penguin_C_SetValueText final
+// Function WBP_NavSlider_Penguin.WBP_NavSlider_Penguin_C.BndEvt__WBP_NavSlider_Slider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_NavSlider_Penguin_C_BndEvt__WBP_NavSlider_Slider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature final
 {
 public:
-	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	float                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_NavSlider_Penguin_C_SetValueText;
-
-// Function WBP_NavSlider_Penguin.WBP_NavSlider_Penguin_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_NavSlider_Penguin_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_NavSlider_Penguin_C_PreConstruct;
+DUMPER7_ASSERTS_WBP_NavSlider_Penguin_C_BndEvt__WBP_NavSlider_Slider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature;
 
 // Function WBP_NavSlider_Penguin.WBP_NavSlider_Penguin_C.ExecuteUbergraph_WBP_NavSlider_Penguin
 // 0x0078 (0x0078 - 0x0000)
@@ -63,14 +54,23 @@ public:
 };
 DUMPER7_ASSERTS_WBP_NavSlider_Penguin_C_ExecuteUbergraph_WBP_NavSlider_Penguin;
 
-// Function WBP_NavSlider_Penguin.WBP_NavSlider_Penguin_C.BndEvt__WBP_NavSlider_Slider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_NavSlider_Penguin_C_BndEvt__WBP_NavSlider_Slider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature final
+// Function WBP_NavSlider_Penguin.WBP_NavSlider_Penguin_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_NavSlider_Penguin_C_PreConstruct final
 {
 public:
-	float                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_NavSlider_Penguin_C_BndEvt__WBP_NavSlider_Slider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature;
+DUMPER7_ASSERTS_WBP_NavSlider_Penguin_C_PreConstruct;
+
+// Function WBP_NavSlider_Penguin.WBP_NavSlider_Penguin_C.SetValueText
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_NavSlider_Penguin_C_SetValueText final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_WBP_NavSlider_Penguin_C_SetValueText;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

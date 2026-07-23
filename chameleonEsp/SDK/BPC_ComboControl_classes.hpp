@@ -34,18 +34,18 @@ public:
 	TMulticastInlineDelegate<void(class FName EventName)> OnUniqueEvent;                             // 0x0118(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void StateChange(class FName NewState);
-	void Setup(class APawn* TargetCharacter);
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void OnNotifyEnd_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName);
-	void OnNotifyBegin_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName);
-	void OnInterrupted_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName);
-	void OnCompleted_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName);
-	void OnBlendOut_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName);
-	void LoopInput(bool bEnabled);
-	void ExecuteUbergraph_BPC_ComboControl(int32 EntryPoint);
+	void CanCombo(bool* CanCombo_0);
 	void ComboStart();
-	void CanCombo(bool* CanCombo);
+	void ExecuteUbergraph_BPC_ComboControl(int32 EntryPoint);
+	void LoopInput(bool bEnabled);
+	void OnBlendOut_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName);
+	void OnCompleted_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName);
+	void OnInterrupted_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName);
+	void OnNotifyBegin_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName);
+	void OnNotifyEnd_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName);
+	void ReceiveTick(float DeltaSeconds);
+	void Setup(class APawn* TargetCharacter);
+	void StateChange(class FName NewState);
 
 public:
 	static class UClass* StaticClass()

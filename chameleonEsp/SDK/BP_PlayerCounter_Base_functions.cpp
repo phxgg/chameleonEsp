@@ -16,41 +16,35 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_PlayerCounter_Base.BP_PlayerCounter_Base_C.ResetEvent
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_PlayerCounter_Base.BP_PlayerCounter_Base_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_PlayerCounter_Base_C::ResetEvent()
+void ABP_PlayerCounter_Base_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerCounter_Base_C", "ResetEvent");
+		Func = Class->GetFunction("BP_PlayerCounter_Base_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_PlayerCounter_Base.BP_PlayerCounter_Base_C.EndOverlap
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_PlayerCounter_Base.BP_PlayerCounter_Base_C.ExecuteUbergraph_BP_PlayerCounter_Base
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlayerCounter_Base_C::EndOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+void ABP_PlayerCounter_Base_C::ExecuteUbergraph_BP_PlayerCounter_Base(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerCounter_Base_C", "EndOverlap");
+		Func = Class->GetFunction("BP_PlayerCounter_Base_C", "ExecuteUbergraph_BP_PlayerCounter_Base");
 
-	Params::BP_PlayerCounter_Base_C_EndOverlap Parms{};
+	Params::BP_PlayerCounter_Base_C_ExecuteUbergraph_BP_PlayerCounter_Base Parms{};
 
-	Parms.OverlappedComponent = OverlappedComponent;
-	Parms.OtherActor = OtherActor;
-	Parms.OtherComp = OtherComp;
-	Parms.OtherBodyIndex = OtherBodyIndex;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -86,35 +80,41 @@ void ABP_PlayerCounter_Base_C::BeginOverlap(class UPrimitiveComponent* Overlappe
 }
 
 
-// Function BP_PlayerCounter_Base.BP_PlayerCounter_Base_C.ExecuteUbergraph_BP_PlayerCounter_Base
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_PlayerCounter_Base.BP_PlayerCounter_Base_C.EndOverlap
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PlayerCounter_Base_C::ExecuteUbergraph_BP_PlayerCounter_Base(int32 EntryPoint)
+void ABP_PlayerCounter_Base_C::EndOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerCounter_Base_C", "ExecuteUbergraph_BP_PlayerCounter_Base");
+		Func = Class->GetFunction("BP_PlayerCounter_Base_C", "EndOverlap");
 
-	Params::BP_PlayerCounter_Base_C_ExecuteUbergraph_BP_PlayerCounter_Base Parms{};
+	Params::BP_PlayerCounter_Base_C_EndOverlap Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.OverlappedComponent = OverlappedComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.OtherBodyIndex = OtherBodyIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_PlayerCounter_Base.BP_PlayerCounter_Base_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_PlayerCounter_Base.BP_PlayerCounter_Base_C.ResetEvent
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_PlayerCounter_Base_C::ReceiveBeginPlay()
+void ABP_PlayerCounter_Base_C::ResetEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerCounter_Base_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_PlayerCounter_Base_C", "ResetEvent");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

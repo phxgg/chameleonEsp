@@ -26,9 +26,9 @@ public:
 	class USceneComponent*                        RootPointComponent;                                // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void GetRayPoints(TArray<struct FVector>* Vectors);
 	void ExecuteUbergraph_BPC_GetRayPointControl(int32 EntryPoint);
+	void GetRayPoints(TArray<struct FVector>* Vectors);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

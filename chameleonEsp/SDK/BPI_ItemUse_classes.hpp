@@ -20,12 +20,12 @@ SDK_NAMESPACE_START
 class IBPI_ItemUse_C final
 {
 public:
-	void Shot(bool PressState, double PushTime, class ABP_FirstPersonCharacter_Main_C* SourcePlayer);
-	void Reset();
-	void Reload(bool PressState);
-	bool MS_IsInView(class AActor* Actor);
-	void Change();
 	void Aim(bool PressState);
+	void Change();
+	bool MS_IsInView(class AActor* Actor);
+	void Reload(bool PressState);
+	void Reset();
+	void Shot(bool PressState, double PushTime, class ABP_FirstPersonCharacter_Main_C* SourcePlayer);
 
 public:
 	static class UClass* StaticClass()

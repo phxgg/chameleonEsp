@@ -24,13 +24,13 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void OnInterrupted_795C47B248738638E80CD9A84449D35B();
-	void OnCompleted_795C47B248738638E80CD9A84449D35B();
-	void OnCancelled_795C47B248738638E80CD9A84449D35B();
-	void OnBlendOut_795C47B248738638E80CD9A84449D35B();
-	void OnBlendedIn_795C47B248738638E80CD9A84449D35B();
-	void K2_ActivateAbility();
 	void ExecuteUbergraph_GA_MontageClear(int32 EntryPoint);
+	void K2_ActivateAbility();
+	void OnBlendedIn_795C47B248738638E80CD9A84449D35B();
+	void OnBlendOut_795C47B248738638E80CD9A84449D35B();
+	void OnCancelled_795C47B248738638E80CD9A84449D35B();
+	void OnCompleted_795C47B248738638E80CD9A84449D35B();
+	void OnInterrupted_795C47B248738638E80CD9A84449D35B();
 
 public:
 	static class UClass* StaticClass()

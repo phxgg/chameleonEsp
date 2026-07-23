@@ -16,44 +16,42 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_SortieCount.WBP_SortieCount_C.SetUIText
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_SortieCount.WBP_SortieCount_C.ExecuteUbergraph_WBP_SortieCount
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// int32                                   AppendPreset                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_SortieCount_C::SetUIText(int32 AppendPreset, const class FText& Text)
+void UWBP_SortieCount_C::ExecuteUbergraph_WBP_SortieCount(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SortieCount_C", "SetUIText");
+		Func = Class->GetFunction("WBP_SortieCount_C", "ExecuteUbergraph_WBP_SortieCount");
 
-	Params::WBP_SortieCount_C_SetUIText Parms{};
+	Params::WBP_SortieCount_C_ExecuteUbergraph_WBP_SortieCount Parms{};
 
-	Parms.AppendPreset = AppendPreset;
-	Parms.Text = std::move(Text);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_SortieCount.WBP_SortieCount_C.SetText
+// Function WBP_SortieCount.WBP_SortieCount_C.PlayAnimationMessage
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool                                    IsForward                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_SortieCount_C::SetText(const class FText& Text, int32 Index_0)
+void UWBP_SortieCount_C::PlayAnimationMessage(bool IsForward, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SortieCount_C", "SetText");
+		Func = Class->GetFunction("WBP_SortieCount_C", "PlayAnimationMessage");
 
-	Params::WBP_SortieCount_C_SetText Parms{};
+	Params::WBP_SortieCount_C_PlayAnimationMessage Parms{};
 
-	Parms.Text = std::move(Text);
+	Parms.IsForward = IsForward;
 	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -82,43 +80,45 @@ void UWBP_SortieCount_C::SetColor(const struct FLinearColor& Color, int32 Index_
 }
 
 
-// Function WBP_SortieCount.WBP_SortieCount_C.PlayAnimationMessage
+// Function WBP_SortieCount.WBP_SortieCount_C.SetText
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsForward                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
 // int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_SortieCount_C::PlayAnimationMessage(bool IsForward, int32 Index_0)
+void UWBP_SortieCount_C::SetText(const class FText& Text, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SortieCount_C", "PlayAnimationMessage");
+		Func = Class->GetFunction("WBP_SortieCount_C", "SetText");
 
-	Params::WBP_SortieCount_C_PlayAnimationMessage Parms{};
+	Params::WBP_SortieCount_C_SetText Parms{};
 
-	Parms.IsForward = IsForward;
+	Parms.Text = std::move(Text);
 	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_SortieCount.WBP_SortieCount_C.ExecuteUbergraph_WBP_SortieCount
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_SortieCount.WBP_SortieCount_C.SetUIText
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   AppendPreset                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWBP_SortieCount_C::ExecuteUbergraph_WBP_SortieCount(int32 EntryPoint)
+void UWBP_SortieCount_C::SetUIText(int32 AppendPreset, const class FText& Text)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SortieCount_C", "ExecuteUbergraph_WBP_SortieCount");
+		Func = Class->GetFunction("WBP_SortieCount_C", "SetUIText");
 
-	Params::WBP_SortieCount_C_ExecuteUbergraph_WBP_SortieCount Parms{};
+	Params::WBP_SortieCount_C_SetUIText Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.AppendPreset = AppendPreset;
+	Parms.Text = std::move(Text);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -31,10 +31,10 @@ public:
 	double                                        LerpValue;                                         // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetWeight(double Value);
-	void SetValue();
-	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void ExecuteUbergraph_WBP_CurrentWeight(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SetValue();
+	void SetWeight(double Value);
 
 public:
 	static class UClass* StaticClass()

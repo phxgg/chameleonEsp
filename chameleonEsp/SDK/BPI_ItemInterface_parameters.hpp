@@ -11,53 +11,24 @@
 #include "Basic.hpp"
 
 #include "ST_ItemCoreDatas_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
 #include "ENUM_ClassType_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPI_ItemInterface.BPI_ItemInterface_C.UpdateCoreDatas
-// 0x0070 (0x0070 - 0x0000)
-struct BPI_ItemInterface_C_UpdateCoreDatas final
+// Function BPI_ItemInterface.BPI_ItemInterface_C.DropItem
+// 0x0030 (0x0030 - 0x0000)
+struct BPI_ItemInterface_C_DropItem final
 {
 public:
-	struct FST_ItemCoreDatas                      CoreDatas;                                         // 0x0000(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FVector                                Force_Vector;                                      // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CentorPosition;                                    // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPI_ItemInterface_C_UpdateCoreDatas;
-
-// Function BPI_ItemInterface.BPI_ItemInterface_C.SetMeshDatas
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_ItemInterface_C_SetMeshDatas final
-{
-public:
-	bool                                          KeepScale;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPI_ItemInterface_C_SetMeshDatas;
-
-// Function BPI_ItemInterface.BPI_ItemInterface_C.PickState
-// 0x0018 (0x0018 - 0x0000)
-struct BPI_ItemInterface_C_PickState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         SlotIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPI_ItemInterface_C_PickState;
-
-// Function BPI_ItemInterface.BPI_ItemInterface_C.GetParentCharacter
-// 0x0008 (0x0008 - 0x0000)
-struct BPI_ItemInterface_C_GetParentCharacter final
-{
-public:
-	class ABP_FirstPersonCharacter_Main_C*        FirstpersonCharacter;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPI_ItemInterface_C_GetParentCharacter;
+DUMPER7_ASSERTS_BPI_ItemInterface_C_DropItem;
 
 // Function BPI_ItemInterface.BPI_ItemInterface_C.GetItemInfo
 // 0x00B8 (0x00B8 - 0x0000)
@@ -79,15 +50,44 @@ public:
 };
 DUMPER7_ASSERTS_BPI_ItemInterface_C_GetItemInfo;
 
-// Function BPI_ItemInterface.BPI_ItemInterface_C.DropItem
-// 0x0030 (0x0030 - 0x0000)
-struct BPI_ItemInterface_C_DropItem final
+// Function BPI_ItemInterface.BPI_ItemInterface_C.GetParentCharacter
+// 0x0008 (0x0008 - 0x0000)
+struct BPI_ItemInterface_C_GetParentCharacter final
 {
 public:
-	struct FVector                                Force_Vector;                                      // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CentorPosition;                                    // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonCharacter_Main_C*        FirstpersonCharacter;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPI_ItemInterface_C_DropItem;
+DUMPER7_ASSERTS_BPI_ItemInterface_C_GetParentCharacter;
+
+// Function BPI_ItemInterface.BPI_ItemInterface_C.PickState
+// 0x0018 (0x0018 - 0x0000)
+struct BPI_ItemInterface_C_PickState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         SlotIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPI_ItemInterface_C_PickState;
+
+// Function BPI_ItemInterface.BPI_ItemInterface_C.SetMeshDatas
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_ItemInterface_C_SetMeshDatas final
+{
+public:
+	bool                                          KeepScale;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPI_ItemInterface_C_SetMeshDatas;
+
+// Function BPI_ItemInterface.BPI_ItemInterface_C.UpdateCoreDatas
+// 0x0070 (0x0070 - 0x0000)
+struct BPI_ItemInterface_C_UpdateCoreDatas final
+{
+public:
+	struct FST_ItemCoreDatas                      CoreDatas;                                         // 0x0000(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPI_ItemInterface_C_UpdateCoreDatas;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

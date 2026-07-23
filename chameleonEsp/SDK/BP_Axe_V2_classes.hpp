@@ -24,8 +24,8 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Axe_V2_C;                        // 0x04F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ExecuteUbergraph_BP_Axe_V2(int32 EntryPoint);
 	void BndEvt__BP_Axe_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_0_OnUniqueEvent__DelegateSignature(class FName EventName);
+	void ExecuteUbergraph_BP_Axe_V2(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -27,11 +27,11 @@ public:
 	class FText                                   PresetText;                                        // 0x0358(0x0010)(Edit, BlueprintVisible)
 
 public:
-	void SetUIText(int32 AppendPreset, const class FText& Text);
-	void SetText(const class FText& Text, int32 Index_0);
-	void SetColor(const struct FLinearColor& Color, int32 Index_0);
-	void PlayAnimationMessage(bool IsForward, int32 Index_0);
 	void ExecuteUbergraph_WBP_SortieCount(int32 EntryPoint);
+	void PlayAnimationMessage(bool IsForward, int32 Index_0);
+	void SetColor(const struct FLinearColor& Color, int32 Index_0);
+	void SetText(const class FText& Text, int32 Index_0);
+	void SetUIText(int32 AppendPreset, const class FText& Text);
 
 public:
 	static class UClass* StaticClass()

@@ -16,41 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_CentorCharge.WBP_CentorCharge_C.SetValue
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_CentorCharge.WBP_CentorCharge_C.ExecuteUbergraph_WBP_CentorCharge
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_CentorCharge_C::SetValue(float Value)
+void UWBP_CentorCharge_C::ExecuteUbergraph_WBP_CentorCharge(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CentorCharge_C", "SetValue");
+		Func = Class->GetFunction("WBP_CentorCharge_C", "ExecuteUbergraph_WBP_CentorCharge");
 
-	Params::WBP_CentorCharge_C_SetValue Parms{};
+	Params::WBP_CentorCharge_C_ExecuteUbergraph_WBP_CentorCharge Parms{};
 
-	Parms.Value = Value;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_CentorCharge.WBP_CentorCharge_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CentorCharge_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CentorCharge_C", "PreConstruct");
-
-	Params::WBP_CentorCharge_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -70,21 +50,41 @@ void UWBP_CentorCharge_C::PlayChargeSound()
 }
 
 
-// Function WBP_CentorCharge.WBP_CentorCharge_C.ExecuteUbergraph_WBP_CentorCharge
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_CentorCharge.WBP_CentorCharge_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_CentorCharge_C::ExecuteUbergraph_WBP_CentorCharge(int32 EntryPoint)
+void UWBP_CentorCharge_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CentorCharge_C", "ExecuteUbergraph_WBP_CentorCharge");
+		Func = Class->GetFunction("WBP_CentorCharge_C", "PreConstruct");
 
-	Params::WBP_CentorCharge_C_ExecuteUbergraph_WBP_CentorCharge Parms{};
+	Params::WBP_CentorCharge_C_PreConstruct Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CentorCharge.WBP_CentorCharge_C.SetValue
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CentorCharge_C::SetValue(float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CentorCharge_C", "SetValue");
+
+	Params::WBP_CentorCharge_C_SetValue Parms{};
+
+	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

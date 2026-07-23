@@ -24,9 +24,9 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay);
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BPC_FreezeActor(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 
 public:
 	static class UClass* StaticClass()

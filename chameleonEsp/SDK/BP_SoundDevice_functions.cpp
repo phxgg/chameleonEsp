@@ -16,31 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_SoundDevice.BP_SoundDevice_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_SoundDevice.BP_SoundDevice_C.BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const struct FST_EventValue&            SignalValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void ABP_SoundDevice_C::UserConstructionScript()
+void ABP_SoundDevice_C::BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature(const struct FST_EventValue& SignalValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundDevice_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_SoundDevice_C", "BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::BP_SoundDevice_C_BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature Parms{};
 
+	Parms.SignalValue = std::move(SignalValue);
 
-// Function BP_SoundDevice.BP_SoundDevice_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_SoundDevice_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundDevice_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -64,23 +56,31 @@ void ABP_SoundDevice_C::ExecuteUbergraph_BP_SoundDevice(int32 EntryPoint)
 }
 
 
-// Function BP_SoundDevice.BP_SoundDevice_C.BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const struct FST_EventValue&            SignalValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// Function BP_SoundDevice.BP_SoundDevice_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_SoundDevice_C::BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature(const struct FST_EventValue& SignalValue)
+void ABP_SoundDevice_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundDevice_C", "BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature");
+		Func = Class->GetFunction("BP_SoundDevice_C", "ReceiveBeginPlay");
 
-	Params::BP_SoundDevice_C_BndEvt__BP_SoundDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.SignalValue = std::move(SignalValue);
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function BP_SoundDevice.BP_SoundDevice_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_SoundDevice_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SoundDevice_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

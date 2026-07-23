@@ -69,24 +69,24 @@ public:
 	class UBPGI_Main_C*                           As_BPGI_Main;                                      // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateSlotStackData(int32 TargetIndex, int32 StackCount);
-	void UpdateSlotData(int32 TargetIndex, const struct FCPP_GameItemData& ItemData);
-	void SlotTextUpdate(const struct FCPP_GameItemData& CPP_GameItemData);
-	void SetStaminaValue(double NewValue);
-	void SetPhaseText(int32 Phase, int32 Time, bool IsOverTime);
-	void SetNormalizeRevivalValue(double Value);
-	void SetCurrentWeight(double WeightValue);
-	void SetCoinValue(int32 Value);
-	void SetBarValue(EN_LINK_PlayerStateValueType ValueName, double Value);
-	void SelectSlotUpdate(int32 Index_0);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_LINK_MainUI(int32 EntryPoint);
-	void Construct();
-	void ChangeSpectateUI(bool IsSpectate);
-	void AddTimerPopup(int32 TextIndex, int32 AddTime, const class FString& CustomString);
-	void AddTaskBlock(const class FText& TaskText, int32 SumProgress, class UWBP_TaskBlock_C** CreatedWidget);
-	void AddPlayerRevivalUI(const class FString& playerName);
 	void AddPlayerDeathUI(const class FString& playerName);
+	void AddPlayerRevivalUI(const class FString& playerName);
+	void AddTaskBlock(const class FText& TaskText, int32 SumProgress, class UWBP_TaskBlock_C** CreatedWidget);
+	void AddTimerPopup(int32 TextIndex, int32 AddTime, const class FString& CustomString);
+	void ChangeSpectateUI(bool IsSpectate);
+	void Construct();
+	void ExecuteUbergraph_WBP_LINK_MainUI(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SelectSlotUpdate(int32 Index_0);
+	void SetBarValue(EN_LINK_PlayerStateValueType ValueName, double Value);
+	void SetCoinValue(int32 Value);
+	void SetCurrentWeight(double WeightValue);
+	void SetNormalizeRevivalValue(double Value);
+	void SetPhaseText(int32 Phase, int32 Time, bool IsOverTime);
+	void SetStaminaValue(double NewValue);
+	void SlotTextUpdate(const struct FCPP_GameItemData& CPP_GameItemData);
+	void UpdateSlotData(int32 TargetIndex, const struct FCPP_GameItemData& ItemData);
+	void UpdateSlotStackData(int32 TargetIndex, int32 StackCount);
 
 public:
 	static class UClass* StaticClass()

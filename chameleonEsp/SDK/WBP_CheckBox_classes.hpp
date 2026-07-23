@@ -26,9 +26,9 @@ public:
 	bool                                          CheckState;                                        // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetCheckState(bool State);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void ExecuteUbergraph_WBP_CheckBox(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SetCheckState(bool State);
 
 public:
 	static class UClass* StaticClass()

@@ -16,17 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_GlobalTimeControl.BPC_GlobalTimeControl_C.SlowTime
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_GlobalTimeControl_C_SlowTime final
-{
-public:
-	double                                        Drutaion;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Multiply;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ControlPitch;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GlobalTimeControl_C_SlowTime;
-
 // Function BPC_GlobalTimeControl.BPC_GlobalTimeControl_C.ExecuteUbergraph_BPC_GlobalTimeControl
 // 0x0050 (0x0050 - 0x0000)
 struct BPC_GlobalTimeControl_C_ExecuteUbergraph_BPC_GlobalTimeControl final
@@ -46,6 +35,17 @@ public:
 	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GlobalTimeControl_C_ExecuteUbergraph_BPC_GlobalTimeControl;
+
+// Function BPC_GlobalTimeControl.BPC_GlobalTimeControl_C.SlowTime
+// 0x0018 (0x0018 - 0x0000)
+struct BPC_GlobalTimeControl_C_SlowTime final
+{
+public:
+	double                                        Drutaion;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Multiply;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ControlPitch;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_GlobalTimeControl_C_SlowTime;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,24 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_LongInputControl.BPC_LongInputControl_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_LongInputControl_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_LongInputControl_C_ReceiveTick;
-
-// Function BPC_LongInputControl.BPC_LongInputControl_C.PushState
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_LongInputControl_C_PushState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_LongInputControl_C_PushState;
-
 // Function BPC_LongInputControl.BPC_LongInputControl_C.ExecuteUbergraph_BPC_LongInputControl
 // 0x0050 (0x0050 - 0x0000)
 struct BPC_LongInputControl_C_ExecuteUbergraph_BPC_LongInputControl final
@@ -56,6 +38,24 @@ public:
 	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_LongInputControl_C_ExecuteUbergraph_BPC_LongInputControl;
+
+// Function BPC_LongInputControl.BPC_LongInputControl_C.PushState
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_LongInputControl_C_PushState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_LongInputControl_C_PushState;
+
+// Function BPC_LongInputControl.BPC_LongInputControl_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_LongInputControl_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_LongInputControl_C_ReceiveTick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

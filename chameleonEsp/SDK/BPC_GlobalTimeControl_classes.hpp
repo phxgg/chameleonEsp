@@ -24,9 +24,9 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void TimeReset();
-	void SlowTime(double Drutaion, double Multiply, bool ControlPitch);
 	void ExecuteUbergraph_BPC_GlobalTimeControl(int32 EntryPoint);
+	void SlowTime(double Drutaion, double Multiply, bool ControlPitch);
+	void TimeReset();
 
 public:
 	static class UClass* StaticClass()

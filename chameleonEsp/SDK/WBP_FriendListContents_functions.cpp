@@ -16,23 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_FriendListContents.WBP_FriendListContents_C.ExecuteUbergraph_WBP_FriendListContents
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_FriendListContents.WBP_FriendListContents_C.BndEvt__WBP_FriendListContents_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_FriendListContents_C::ExecuteUbergraph_WBP_FriendListContents(int32 EntryPoint)
+void UWBP_FriendListContents_C::BndEvt__WBP_FriendListContents_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FriendListContents_C", "ExecuteUbergraph_WBP_FriendListContents");
+		Func = Class->GetFunction("WBP_FriendListContents_C", "BndEvt__WBP_FriendListContents_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature");
 
-	Params::WBP_FriendListContents_C_ExecuteUbergraph_WBP_FriendListContents Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -50,17 +44,23 @@ void UWBP_FriendListContents_C::Construct()
 }
 
 
-// Function WBP_FriendListContents.WBP_FriendListContents_C.BndEvt__WBP_FriendListContents_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_FriendListContents.WBP_FriendListContents_C.ExecuteUbergraph_WBP_FriendListContents
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_FriendListContents_C::BndEvt__WBP_FriendListContents_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature()
+void UWBP_FriendListContents_C::ExecuteUbergraph_WBP_FriendListContents(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FriendListContents_C", "BndEvt__WBP_FriendListContents_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature");
+		Func = Class->GetFunction("WBP_FriendListContents_C", "ExecuteUbergraph_WBP_FriendListContents");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_FriendListContents_C_ExecuteUbergraph_WBP_FriendListContents Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

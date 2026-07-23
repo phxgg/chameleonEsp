@@ -33,12 +33,12 @@ public:
 	EN_InputJudgementType                         InputJType;                                        // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Update_Config_Item();
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_ComboBox_InputDevice(int32 EntryPoint);
-	void Construct();
-	void BndEvt__WBP_ComboBox_InputDevice_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature();
 	void ApplySetting();
+	void BndEvt__WBP_ComboBox_InputDevice_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature();
+	void Construct();
+	void ExecuteUbergraph_WBP_ComboBox_InputDevice(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void Update_Config_Item();
 
 public:
 	static class UClass* StaticClass()

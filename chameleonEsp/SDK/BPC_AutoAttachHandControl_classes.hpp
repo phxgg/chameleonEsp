@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ST_HandControlDatas_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ST_HandControlDatas_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -26,11 +26,11 @@ public:
 	struct FST_HandControlDatas                   ReplicateData;                                     // 0x00C0(0x0060)(Edit, BlueprintVisible, Net, ZeroConstructor, RepNotify, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void OnRep_ReplicateData();
-	void Grab();
-	void ExecuteUbergraph_BPC_AutoAttachHandControl(int32 EntryPoint);
 	void DestroySelf();
+	void ExecuteUbergraph_BPC_AutoAttachHandControl(int32 EntryPoint);
+	void Grab();
+	void OnRep_ReplicateData();
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

@@ -31,18 +31,18 @@ public:
 	TMulticastInlineDelegate<void()>              BlockCollision;                                    // 0x0108(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UnBindComponents();
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void OnComponentBeginOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void ExecuteUbergraph_BPC_AttackCollisionControl(int32 EntryPoint);
-	void EffectStop();
-	void EffectSpawnEvent(double ActiveTime, class FName TargetTag);
-	void Combo(double TimeRange, class FName ComboName);
-	void CollisionReset();
-	bool CheckBlockOverlap(TArray<class UPrimitiveComponent*>& OverlapedPrimitives);
-	void BindComponents(const TArray<class UPrimitiveComponent*>& PrimitiveComponent, double ActiveTime, bool MultipyHitPossible, class FName TargetTag);
-	void Attack_AC_Remote(double TimeRange, class FName ComponentName, double DamageMultiply, double StanMultiply);
 	void Attack_AC(double TimeRange, class FName AttackName, double DamageMultiply, bool MutipleHitPossible, double StanMultiply);
+	void Attack_AC_Remote(double TimeRange, class FName ComponentName, double DamageMultiply, double StanMultiply);
+	void BindComponents(const TArray<class UPrimitiveComponent*>& PrimitiveComponent, double ActiveTime, bool MultipyHitPossible, class FName TargetTag);
+	bool CheckBlockOverlap(TArray<class UPrimitiveComponent*>& OverlapedPrimitives);
+	void CollisionReset();
+	void Combo(double TimeRange, class FName ComboName);
+	void EffectSpawnEvent(double ActiveTime, class FName TargetTag);
+	void EffectStop();
+	void ExecuteUbergraph_BPC_AttackCollisionControl(int32 EntryPoint);
+	void OnComponentBeginOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void ReceiveTick(float DeltaSeconds);
+	void UnBindComponents();
 
 public:
 	static class UClass* StaticClass()

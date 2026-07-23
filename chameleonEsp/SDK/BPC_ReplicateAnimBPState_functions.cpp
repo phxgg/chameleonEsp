@@ -16,37 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_ReplicateAnimBPState.BPC_ReplicateAnimBPState_C.SetMaxSpeed
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_ReplicateAnimBPState.BPC_ReplicateAnimBPState_C.ExecuteUbergraph_BPC_ReplicateAnimBPState
+// (Final, UbergraphFunction)
 // Parameters:
-// double                                  Speed                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_ReplicateAnimBPState_C::SetMaxSpeed(double Speed)
+void UBPC_ReplicateAnimBPState_C::ExecuteUbergraph_BPC_ReplicateAnimBPState(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ReplicateAnimBPState_C", "SetMaxSpeed");
+		Func = Class->GetFunction("BPC_ReplicateAnimBPState_C", "ExecuteUbergraph_BPC_ReplicateAnimBPState");
 
-	Params::BPC_ReplicateAnimBPState_C_SetMaxSpeed Parms{};
+	Params::BPC_ReplicateAnimBPState_C_ExecuteUbergraph_BPC_ReplicateAnimBPState Parms{};
 
-	Parms.Speed = Speed;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ReplicateAnimBPState.BPC_ReplicateAnimBPState_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBPC_ReplicateAnimBPState_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ReplicateAnimBPState_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -64,21 +50,35 @@ void UBPC_ReplicateAnimBPState_C::OnRep_MaxWalkSpeed()
 }
 
 
-// Function BPC_ReplicateAnimBPState.BPC_ReplicateAnimBPState_C.ExecuteUbergraph_BPC_ReplicateAnimBPState
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_ReplicateAnimBPState.BPC_ReplicateAnimBPState_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void UBPC_ReplicateAnimBPState_C::ExecuteUbergraph_BPC_ReplicateAnimBPState(int32 EntryPoint)
+void UBPC_ReplicateAnimBPState_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ReplicateAnimBPState_C", "ExecuteUbergraph_BPC_ReplicateAnimBPState");
+		Func = Class->GetFunction("BPC_ReplicateAnimBPState_C", "ReceiveBeginPlay");
 
-	Params::BPC_ReplicateAnimBPState_C_ExecuteUbergraph_BPC_ReplicateAnimBPState Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function BPC_ReplicateAnimBPState.BPC_ReplicateAnimBPState_C.SetMaxSpeed
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Speed                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ReplicateAnimBPState_C::SetMaxSpeed(double Speed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ReplicateAnimBPState_C", "SetMaxSpeed");
+
+	Params::BPC_ReplicateAnimBPState_C_SetMaxSpeed Parms{};
+
+	Parms.Speed = Speed;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

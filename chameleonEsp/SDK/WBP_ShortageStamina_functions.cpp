@@ -16,20 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_ShortageStamina.WBP_ShortageStamina_C.ShakePlay
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_ShortageStamina_C::ShakePlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ShortageStamina_C", "ShakePlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_ShortageStamina.WBP_ShortageStamina_C.ExecuteUbergraph_WBP_ShortageStamina
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -47,6 +33,20 @@ void UWBP_ShortageStamina_C::ExecuteUbergraph_WBP_ShortageStamina(int32 EntryPoi
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ShortageStamina.WBP_ShortageStamina_C.ShakePlay
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_ShortageStamina_C::ShakePlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ShortageStamina_C", "ShakePlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

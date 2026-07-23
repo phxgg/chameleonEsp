@@ -33,13 +33,13 @@ public:
 	class UBPC_TextChatControl_C*                 TextChatControl;                                   // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateBorderState();
-	void ReciveText(const class FString& MainString, int32 Index_0);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void InpActEvt_IA_TextChat_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void ExecuteUbergraph_WBP_TextChatVisualBox(int32 EntryPoint);
-	void BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
 	void AddText(const class FString& TargetText, int32 MessageType);
+	void BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
+	void ExecuteUbergraph_WBP_TextChatVisualBox(int32 EntryPoint);
+	void InpActEvt_IA_TextChat_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void PreConstruct(bool IsDesignTime);
+	void ReciveText(const class FString& MainString, int32 Index_0);
+	void UpdateBorderState();
 
 public:
 	static class UClass* StaticClass()

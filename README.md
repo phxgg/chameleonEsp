@@ -1,4 +1,4 @@
-Currently updated for Game Version: **2.7.0**
+Currently updated for Game Version: **3.0.0** Chinese
 
 Internal extension for Meccha Chameleon
 
@@ -17,7 +17,7 @@ For **DirectX 12**.
 
 Build with these settings in Visual Studio:
 
-Platform Toolset: `v145 for Microsoft C++ Build Tools`
+Platform Toolset: `v143 for Microsoft C++ Build Tools`
 
 Window SDK Version: `Windows 10.0 SDK (latest)`
 

@@ -26,9 +26,9 @@ public:
 	class UWidgetAnimation*                       Damaged;                                           // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_HealOutLine(int32 EntryPoint);
-	void Construct();
 	void AnimationEnd();
+	void Construct();
+	void ExecuteUbergraph_WBP_HealOutLine(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

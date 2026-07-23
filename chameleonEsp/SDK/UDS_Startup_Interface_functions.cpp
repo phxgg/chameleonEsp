@@ -16,6 +16,20 @@
 
 SDK_NAMESPACE_START
 
+// Function UDS_Startup_Interface.UDS_Startup_Interface_C.UDS Ending Play
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IUDS_Startup_Interface_C::UDS_Ending_Play()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("UDS_Startup_Interface_C", "UDS Ending Play");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
 // Function UDS_Startup_Interface.UDS_Startup_Interface_C.UDS Starting Up
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -33,20 +47,6 @@ void IUDS_Startup_Interface_C::UDS_Starting_Up(class AUltra_Dynamic_Sky_C* UDS)
 	Parms.UDS = UDS;
 
 	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function UDS_Startup_Interface.UDS_Startup_Interface_C.UDS Ending Play
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IUDS_Startup_Interface_C::UDS_Ending_Play()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("UDS_Startup_Interface_C", "UDS Ending Play");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
 }
 
 

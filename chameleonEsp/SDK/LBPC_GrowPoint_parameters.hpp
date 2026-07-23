@@ -16,16 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function LBPC_GrowPoint.LBPC_GrowPoint_C.Generate
-// 0x000C (0x000C - 0x0000)
-struct LBPC_GrowPoint_C_Generate final
-{
-public:
-	struct FRandomStream                          Seed;                                              // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
-	int32                                         DepthIndex;                                        // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LBPC_GrowPoint_C_Generate;
-
 // Function LBPC_GrowPoint.LBPC_GrowPoint_C.ExecuteUbergraph_LBPC_GrowPoint
 // 0x0440 (0x0440 - 0x0000)
 struct LBPC_GrowPoint_C_ExecuteUbergraph_LBPC_GrowPoint final
@@ -144,6 +134,16 @@ public:
 	double                                        CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast_3; // 0x0438(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_LBPC_GrowPoint_C_ExecuteUbergraph_LBPC_GrowPoint;
+
+// Function LBPC_GrowPoint.LBPC_GrowPoint_C.Generate
+// 0x000C (0x000C - 0x0000)
+struct LBPC_GrowPoint_C_Generate final
+{
+public:
+	struct FRandomStream                          Seed;                                              // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+	int32                                         DepthIndex;                                        // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LBPC_GrowPoint_C_Generate;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

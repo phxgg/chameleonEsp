@@ -16,41 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_CustomFocus.BPC_CustomFocus_C.SetFocus
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BPC_CustomFocus.BPC_CustomFocus_C.ExecuteUbergraph_BPC_CustomFocus
+// (Final, UbergraphFunction)
 // Parameters:
-// class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_CustomFocus_C::SetFocus(class AActor* TargetActor)
+void UBPC_CustomFocus_C::ExecuteUbergraph_BPC_CustomFocus(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CustomFocus_C", "SetFocus");
+		Func = Class->GetFunction("BPC_CustomFocus_C", "ExecuteUbergraph_BPC_CustomFocus");
 
-	Params::BPC_CustomFocus_C_SetFocus Parms{};
+	Params::BPC_CustomFocus_C_ExecuteUbergraph_BPC_CustomFocus Parms{};
 
-	Parms.TargetActor = TargetActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_CustomFocus.BPC_CustomFocus_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_CustomFocus_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CustomFocus_C", "ReceiveTick");
-
-	Params::BPC_CustomFocus_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -70,21 +50,41 @@ void UBPC_CustomFocus_C::ReceiveBeginPlay()
 }
 
 
-// Function BPC_CustomFocus.BPC_CustomFocus_C.ExecuteUbergraph_BPC_CustomFocus
-// (Final, UbergraphFunction)
+// Function BPC_CustomFocus.BPC_CustomFocus_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_CustomFocus_C::ExecuteUbergraph_BPC_CustomFocus(int32 EntryPoint)
+void UBPC_CustomFocus_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CustomFocus_C", "ExecuteUbergraph_BPC_CustomFocus");
+		Func = Class->GetFunction("BPC_CustomFocus_C", "ReceiveTick");
 
-	Params::BPC_CustomFocus_C_ExecuteUbergraph_BPC_CustomFocus Parms{};
+	Params::BPC_CustomFocus_C_ReceiveTick Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_CustomFocus.BPC_CustomFocus_C.SetFocus
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           TargetActor_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_CustomFocus_C::SetFocus(class AActor* TargetActor_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_CustomFocus_C", "SetFocus");
+
+	Params::BPC_CustomFocus_C_SetFocus Parms{};
+
+	Parms.TargetActor_0 = TargetActor_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

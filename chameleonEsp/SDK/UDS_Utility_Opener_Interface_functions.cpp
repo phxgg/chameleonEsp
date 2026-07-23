@@ -16,39 +16,25 @@
 
 SDK_NAMESPACE_START
 
-// Function UDS_Utility_Opener_Interface.UDS_Utility_Opener_Interface_C.Show Editor Warning Window
+// Function UDS_Utility_Opener_Interface.UDS_Utility_Opener_Interface_C.Open UDS Readme
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    title                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const class FString&                    Message                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    Entry_Row                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int32                                   Category_Index                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IUDS_Utility_Opener_Interface_C::Show_Editor_Warning_Window(const class FString& title, const class FString& Message)
+void IUDS_Utility_Opener_Interface_C::Open_UDS_Readme(const class FString& Entry_Row, int32 Category_Index)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("UDS_Utility_Opener_Interface_C", "Show Editor Warning Window");
+		Func = AsUObject()->Class->GetFunction("UDS_Utility_Opener_Interface_C", "Open UDS Readme");
 
-	Params::UDS_Utility_Opener_Interface_C_Show_Editor_Warning_Window Parms{};
+	Params::UDS_Utility_Opener_Interface_C_Open_UDS_Readme Parms{};
 
-	Parms.title = std::move(title);
-	Parms.Message = std::move(Message);
+	Parms.Entry_Row = std::move(Entry_Row);
+	Parms.Category_Index = Category_Index;
 
 	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function UDS_Utility_Opener_Interface.UDS_Utility_Opener_Interface_C.Open Weather Mask Brush Painter
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IUDS_Utility_Opener_Interface_C::Open_Weather_Mask_Brush_Painter()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("UDS_Utility_Opener_Interface_C", "Open Weather Mask Brush Painter");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
 }
 
 
@@ -72,23 +58,37 @@ void IUDS_Utility_Opener_Interface_C::Open_UDS_Readme_Entry_Set(const TArray<cla
 }
 
 
-// Function UDS_Utility_Opener_Interface.UDS_Utility_Opener_Interface_C.Open UDS Readme
+// Function UDS_Utility_Opener_Interface.UDS_Utility_Opener_Interface_C.Open Weather Mask Brush Painter
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    Entry_Row                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int32                                   Category_Index                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IUDS_Utility_Opener_Interface_C::Open_UDS_Readme(const class FString& Entry_Row, int32 Category_Index)
+void IUDS_Utility_Opener_Interface_C::Open_Weather_Mask_Brush_Painter()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("UDS_Utility_Opener_Interface_C", "Open UDS Readme");
+		Func = AsUObject()->Class->GetFunction("UDS_Utility_Opener_Interface_C", "Open Weather Mask Brush Painter");
 
-	Params::UDS_Utility_Opener_Interface_C_Open_UDS_Readme Parms{};
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
 
-	Parms.Entry_Row = std::move(Entry_Row);
-	Parms.Category_Index = Category_Index;
+
+// Function UDS_Utility_Opener_Interface.UDS_Utility_Opener_Interface_C.Show Editor Warning Window
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    title                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    Message                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void IUDS_Utility_Opener_Interface_C::Show_Editor_Warning_Window(const class FString& title, const class FString& Message)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("UDS_Utility_Opener_Interface_C", "Show Editor Warning Window");
+
+	Params::UDS_Utility_Opener_Interface_C_Show_Editor_Warning_Window Parms{};
+
+	Parms.title = std::move(title);
+	Parms.Message = std::move(Message);
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 }

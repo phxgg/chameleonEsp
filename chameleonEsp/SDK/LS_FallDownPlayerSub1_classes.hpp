@@ -24,19 +24,19 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0048(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void SequenceEvent__ENTRYPOINTLS_FallDownPlayerSub1_DirectorBP_2(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter);
-	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTLS_FallDownPlayerSub1_DirectorBP_1();
-	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTLS_FallDownPlayerSub1_DirectorBP_0();
-	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTLS_FallDownPlayerSub1_DirectorBP();
-	struct FMovieSceneDynamicBindingResolveResult RightPos_DynamicBinding_0();
-	struct FMovieSceneDynamicBindingResolveResult RightPos_DynamicBinding();
-	struct FMovieSceneDynamicBindingResolveResult LeftPos_DynamicBinding();
-	struct FMovieSceneDynamicBindingResolveResult HeadPosition_DynamicBinding();
-	void ExecuteUbergraph_LS_FallDownPlayerSub1_DirectorBP(int32 EntryPoint);
-	struct FMovieSceneDynamicBindingResolveResult CameraActor_DynamicBinding();
-	void BP_FirstPersonCharacter_Event(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter);
-	struct FMovieSceneDynamicBindingResolveResult BP_FirstPersonCharacter_DynamicBinding_0(int32 PlayerControllerIndex);
 	struct FMovieSceneDynamicBindingResolveResult BP_FirstPersonCharacter_DynamicBinding();
+	struct FMovieSceneDynamicBindingResolveResult BP_FirstPersonCharacter_DynamicBinding_0(int32 PlayerControllerIndex);
+	void BP_FirstPersonCharacter_Event(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter);
+	struct FMovieSceneDynamicBindingResolveResult CameraActor_DynamicBinding();
+	void ExecuteUbergraph_LS_FallDownPlayerSub1_DirectorBP(int32 EntryPoint);
+	struct FMovieSceneDynamicBindingResolveResult HeadPosition_DynamicBinding();
+	struct FMovieSceneDynamicBindingResolveResult LeftPos_DynamicBinding();
+	struct FMovieSceneDynamicBindingResolveResult RightPos_DynamicBinding();
+	struct FMovieSceneDynamicBindingResolveResult RightPos_DynamicBinding_0();
+	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTLS_FallDownPlayerSub1_DirectorBP();
+	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTLS_FallDownPlayerSub1_DirectorBP_0();
+	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTLS_FallDownPlayerSub1_DirectorBP_1();
+	void SequenceEvent__ENTRYPOINTLS_FallDownPlayerSub1_DirectorBP_2(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter);
 
 public:
 	static class UClass* StaticClass()

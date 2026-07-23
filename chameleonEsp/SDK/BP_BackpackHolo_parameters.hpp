@@ -17,15 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_BackpackHolo.BP_BackpackHolo_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_BackpackHolo_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_BackpackHolo_C_ReceiveTick;
-
 // Function BP_BackpackHolo.BP_BackpackHolo_C.ExecuteUbergraph_BP_BackpackHolo
 // 0x0270 (0x0270 - 0x0000)
 struct BP_BackpackHolo_C_ExecuteUbergraph_BP_BackpackHolo final
@@ -69,6 +60,15 @@ public:
 	class UMaterialInterface*                     K2Node_Select_Default;                             // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_BackpackHolo_C_ExecuteUbergraph_BP_BackpackHolo;
+
+// Function BP_BackpackHolo.BP_BackpackHolo_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_BackpackHolo_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_BackpackHolo_C_ReceiveTick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

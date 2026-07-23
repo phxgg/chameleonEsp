@@ -16,6 +16,20 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BPC_GetRayPointControl.BPC_GetRayPointControl_C.ExecuteUbergraph_BPC_GetRayPointControl
+// 0x0038 (0x0038 - 0x0000)
+struct BPC_GetRayPointControl_C_ExecuteUbergraph_BPC_GetRayPointControl final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class USceneComponent*>                CallFunc_GetComponentsByTag_ReturnValue;           // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
+	TArray<class USceneComponent*>                CallFunc_GetComponentsByTag_ReturnValue_1;         // 0x0020(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class USceneComponent*                        CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_GetRayPointControl_C_ExecuteUbergraph_BPC_GetRayPointControl;
+
 // Function BPC_GetRayPointControl.BPC_GetRayPointControl_C.GetRayPoints
 // 0x0080 (0x0080 - 0x0000)
 struct BPC_GetRayPointControl_C_GetRayPoints final
@@ -37,20 +51,6 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_GetRayPointControl_C_GetRayPoints;
-
-// Function BPC_GetRayPointControl.BPC_GetRayPointControl_C.ExecuteUbergraph_BPC_GetRayPointControl
-// 0x0038 (0x0038 - 0x0000)
-struct BPC_GetRayPointControl_C_ExecuteUbergraph_BPC_GetRayPointControl final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class USceneComponent*>                CallFunc_GetComponentsByTag_ReturnValue;           // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
-	TArray<class USceneComponent*>                CallFunc_GetComponentsByTag_ReturnValue_1;         // 0x0020(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class USceneComponent*                        CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_GetRayPointControl_C_ExecuteUbergraph_BPC_GetRayPointControl;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

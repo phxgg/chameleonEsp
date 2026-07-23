@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "EN_StanType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "EN_DamageType_structs.hpp"
+#include "EN_StanType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -29,15 +29,15 @@ public:
 	class UBPC_PhysicsNetDormancyControl_C*       BPC_PhysicsNetDormancyControl;                     // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void StanDamage(EN_StanType StanType);
-	void StaminaDamage(double Value);
-	void ReceiveBeginPlay();
-	void GetParryState(bool* State);
-	void ExecuteUbergraph_BP_CannonBanana(int32 EntryPoint);
-	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
-	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
-	void BndEvt__BP_CannonBanana_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentSleepSignature__DelegateSignature(class UPrimitiveComponent* SleepingComponent, class FName BoneName);
 	void BndEvt__BP_CannonBanana_BananaCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__BP_CannonBanana_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentSleepSignature__DelegateSignature(class UPrimitiveComponent* SleepingComponent, class FName BoneName);
+	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
+	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
+	void ExecuteUbergraph_BP_CannonBanana(int32 EntryPoint);
+	void GetParryState(bool* State);
+	void ReceiveBeginPlay();
+	void StaminaDamage(double Value);
+	void StanDamage(EN_StanType StanType);
 
 public:
 	static class UClass* StaticClass()

@@ -14,161 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.Stop(Server)
-// 0x0010 (0x0010 - 0x0000)
-struct BPC_PlayMontageOnline_C_Stop_Server_ final
-{
-public:
-	class USkeletalMeshComponent*                 Mesh;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           Montage;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_Stop_Server_;
-
-// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.Stop(Replicate)
-// 0x0010 (0x0010 - 0x0000)
-struct BPC_PlayMontageOnline_C_Stop_Replicate_ final
-{
-public:
-	class USkeletalMeshComponent*                 Mesh;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           Montage;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_Stop_Replicate_;
-
-// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.Stop
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_PlayMontageOnline_C_Stop final
-{
-public:
-	class USkeletalMeshComponent*                 Mesh;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           Montage;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsLocalStop;                                       // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_Stop;
-
-// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.Play(Server)
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_PlayMontageOnline_C_Play_Server_ final
-{
-public:
-	class USkeletalMeshComponent*                 InSkeletalMeshComponent;                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           MontageToPlay;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          bShouldStopAllMontages;                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_Play_Server_;
-
-// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.Play(Replicate)
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_PlayMontageOnline_C_Play_Replicate_ final
-{
-public:
-	class USkeletalMeshComponent*                 InSkeletalMeshComponent;                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           MontageToPlay;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          bShouldStopAllMontages;                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_Play_Replicate_;
-
-// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.Play
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_PlayMontageOnline_C_Play final
-{
-public:
-	class USkeletalMeshComponent*                 Mesh;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           Montage;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          bShouldStopAllMontages;                            // 0x0010(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsLocalPlay;                                       // 0x0011(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_Play;
-
-// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnNotifyEnd_543B92A3498408DB071366B74B7FF37D
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_PlayMontageOnline_C_OnNotifyEnd_543B92A3498408DB071366B74B7FF37D final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnNotifyEnd_543B92A3498408DB071366B74B7FF37D;
-
-// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnNotifyEnd_4737952740FB816E45A974B1BF8C0A0A
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_PlayMontageOnline_C_OnNotifyEnd_4737952740FB816E45A974B1BF8C0A0A final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnNotifyEnd_4737952740FB816E45A974B1BF8C0A0A;
-
-// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnNotifyBegin_543B92A3498408DB071366B74B7FF37D
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_PlayMontageOnline_C_OnNotifyBegin_543B92A3498408DB071366B74B7FF37D final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnNotifyBegin_543B92A3498408DB071366B74B7FF37D;
-
-// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnNotifyBegin_4737952740FB816E45A974B1BF8C0A0A
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_PlayMontageOnline_C_OnNotifyBegin_4737952740FB816E45A974B1BF8C0A0A final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnNotifyBegin_4737952740FB816E45A974B1BF8C0A0A;
-
-// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnInterrupted_543B92A3498408DB071366B74B7FF37D
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_PlayMontageOnline_C_OnInterrupted_543B92A3498408DB071366B74B7FF37D final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnInterrupted_543B92A3498408DB071366B74B7FF37D;
-
-// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnInterrupted_4737952740FB816E45A974B1BF8C0A0A
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_PlayMontageOnline_C_OnInterrupted_4737952740FB816E45A974B1BF8C0A0A final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnInterrupted_4737952740FB816E45A974B1BF8C0A0A;
-
-// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnCompleted_543B92A3498408DB071366B74B7FF37D
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_PlayMontageOnline_C_OnCompleted_543B92A3498408DB071366B74B7FF37D final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnCompleted_543B92A3498408DB071366B74B7FF37D;
-
-// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnCompleted_4737952740FB816E45A974B1BF8C0A0A
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_PlayMontageOnline_C_OnCompleted_4737952740FB816E45A974B1BF8C0A0A final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnCompleted_4737952740FB816E45A974B1BF8C0A0A;
-
-// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnBlendOut_543B92A3498408DB071366B74B7FF37D
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_PlayMontageOnline_C_OnBlendOut_543B92A3498408DB071366B74B7FF37D final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnBlendOut_543B92A3498408DB071366B74B7FF37D;
-
-// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnBlendOut_4737952740FB816E45A974B1BF8C0A0A
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_PlayMontageOnline_C_OnBlendOut_4737952740FB816E45A974B1BF8C0A0A final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnBlendOut_4737952740FB816E45A974B1BF8C0A0A;
-
 // Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.ExecuteUbergraph_BPC_PlayMontageOnline
 // 0x01C0 (0x01C0 - 0x0000)
 struct BPC_PlayMontageOnline_C_ExecuteUbergraph_BPC_PlayMontageOnline final
@@ -237,6 +82,161 @@ public:
 	class UAnimMontage*                           K2Node_CustomEvent_Montage_1;                      // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_ExecuteUbergraph_BPC_PlayMontageOnline;
+
+// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnBlendOut_4737952740FB816E45A974B1BF8C0A0A
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_PlayMontageOnline_C_OnBlendOut_4737952740FB816E45A974B1BF8C0A0A final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnBlendOut_4737952740FB816E45A974B1BF8C0A0A;
+
+// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnBlendOut_543B92A3498408DB071366B74B7FF37D
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_PlayMontageOnline_C_OnBlendOut_543B92A3498408DB071366B74B7FF37D final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnBlendOut_543B92A3498408DB071366B74B7FF37D;
+
+// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnCompleted_4737952740FB816E45A974B1BF8C0A0A
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_PlayMontageOnline_C_OnCompleted_4737952740FB816E45A974B1BF8C0A0A final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnCompleted_4737952740FB816E45A974B1BF8C0A0A;
+
+// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnCompleted_543B92A3498408DB071366B74B7FF37D
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_PlayMontageOnline_C_OnCompleted_543B92A3498408DB071366B74B7FF37D final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnCompleted_543B92A3498408DB071366B74B7FF37D;
+
+// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnInterrupted_4737952740FB816E45A974B1BF8C0A0A
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_PlayMontageOnline_C_OnInterrupted_4737952740FB816E45A974B1BF8C0A0A final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnInterrupted_4737952740FB816E45A974B1BF8C0A0A;
+
+// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnInterrupted_543B92A3498408DB071366B74B7FF37D
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_PlayMontageOnline_C_OnInterrupted_543B92A3498408DB071366B74B7FF37D final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnInterrupted_543B92A3498408DB071366B74B7FF37D;
+
+// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnNotifyBegin_4737952740FB816E45A974B1BF8C0A0A
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_PlayMontageOnline_C_OnNotifyBegin_4737952740FB816E45A974B1BF8C0A0A final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnNotifyBegin_4737952740FB816E45A974B1BF8C0A0A;
+
+// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnNotifyBegin_543B92A3498408DB071366B74B7FF37D
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_PlayMontageOnline_C_OnNotifyBegin_543B92A3498408DB071366B74B7FF37D final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnNotifyBegin_543B92A3498408DB071366B74B7FF37D;
+
+// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnNotifyEnd_4737952740FB816E45A974B1BF8C0A0A
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_PlayMontageOnline_C_OnNotifyEnd_4737952740FB816E45A974B1BF8C0A0A final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnNotifyEnd_4737952740FB816E45A974B1BF8C0A0A;
+
+// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.OnNotifyEnd_543B92A3498408DB071366B74B7FF37D
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_PlayMontageOnline_C_OnNotifyEnd_543B92A3498408DB071366B74B7FF37D final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_OnNotifyEnd_543B92A3498408DB071366B74B7FF37D;
+
+// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.Play
+// 0x0018 (0x0018 - 0x0000)
+struct BPC_PlayMontageOnline_C_Play final
+{
+public:
+	class USkeletalMeshComponent*                 Mesh;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           Montage;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShouldStopAllMontages;                            // 0x0010(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsLocalPlay;                                       // 0x0011(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_Play;
+
+// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.Play(Replicate)
+// 0x0018 (0x0018 - 0x0000)
+struct BPC_PlayMontageOnline_C_Play_Replicate_ final
+{
+public:
+	class USkeletalMeshComponent*                 InSkeletalMeshComponent;                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           MontageToPlay;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShouldStopAllMontages;                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_Play_Replicate_;
+
+// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.Play(Server)
+// 0x0018 (0x0018 - 0x0000)
+struct BPC_PlayMontageOnline_C_Play_Server_ final
+{
+public:
+	class USkeletalMeshComponent*                 InSkeletalMeshComponent;                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           MontageToPlay;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShouldStopAllMontages;                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_Play_Server_;
+
+// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.Stop
+// 0x0018 (0x0018 - 0x0000)
+struct BPC_PlayMontageOnline_C_Stop final
+{
+public:
+	class USkeletalMeshComponent*                 Mesh;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           Montage;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsLocalStop;                                       // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_Stop;
+
+// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.Stop(Replicate)
+// 0x0010 (0x0010 - 0x0000)
+struct BPC_PlayMontageOnline_C_Stop_Replicate_ final
+{
+public:
+	class USkeletalMeshComponent*                 Mesh;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           Montage;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_Stop_Replicate_;
+
+// Function BPC_PlayMontageOnline.BPC_PlayMontageOnline_C.Stop(Server)
+// 0x0010 (0x0010 - 0x0000)
+struct BPC_PlayMontageOnline_C_Stop_Server_ final
+{
+public:
+	class USkeletalMeshComponent*                 Mesh;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           Montage;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PlayMontageOnline_C_Stop_Server_;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,17 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Cactus.BP_Cactus_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_Cactus.BP_Cactus_C.BndEvt__BP_Cactus_BPC_DamageCollision_K2Node_ComponentBoundEvent_1_HitDamage__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// const struct FHitResult&                Hit                                                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
-void ABP_Cactus_C::ReceiveBeginPlay()
+void ABP_Cactus_C::BndEvt__BP_Cactus_BPC_DamageCollision_K2Node_ComponentBoundEvent_1_HitDamage__DelegateSignature(const struct FHitResult& Hit)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Cactus_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_Cactus_C", "BndEvt__BP_Cactus_BPC_DamageCollision_K2Node_ComponentBoundEvent_1_HitDamage__DelegateSignature");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_Cactus_C_BndEvt__BP_Cactus_BPC_DamageCollision_K2Node_ComponentBoundEvent_1_HitDamage__DelegateSignature Parms{};
+
+	Parms.Hit = std::move(Hit);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -50,23 +56,17 @@ void ABP_Cactus_C::ExecuteUbergraph_BP_Cactus(int32 EntryPoint)
 }
 
 
-// Function BP_Cactus.BP_Cactus_C.BndEvt__BP_Cactus_BPC_DamageCollision_K2Node_ComponentBoundEvent_1_HitDamage__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// const struct FHitResult&                Hit                                                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// Function BP_Cactus.BP_Cactus_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_Cactus_C::BndEvt__BP_Cactus_BPC_DamageCollision_K2Node_ComponentBoundEvent_1_HitDamage__DelegateSignature(const struct FHitResult& Hit)
+void ABP_Cactus_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Cactus_C", "BndEvt__BP_Cactus_BPC_DamageCollision_K2Node_ComponentBoundEvent_1_HitDamage__DelegateSignature");
+		Func = Class->GetFunction("BP_Cactus_C", "ReceiveBeginPlay");
 
-	Params::BP_Cactus_C_BndEvt__BP_Cactus_BPC_DamageCollision_K2Node_ComponentBoundEvent_1_HitDamage__DelegateSignature Parms{};
-
-	Parms.Hit = std::move(Hit);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

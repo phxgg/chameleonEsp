@@ -14,23 +14,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_FirstPersonPlayerState.BP_FirstPersonPlayerState_C.ReceiveCopyProperties
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonPlayerState_C_ReceiveCopyProperties final
+// Function BP_FirstPersonPlayerState.BP_FirstPersonPlayerState_C.ChangeParamater(flaot)
+// 0x0010 (0x0010 - 0x0000)
+struct BP_FirstPersonPlayerState_C_ChangeParamater_flaot_ final
 {
 public:
-	class APlayerState*                           NewPlayerState;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonPlayerState_C_ReceiveCopyProperties;
-
-// Function BP_FirstPersonPlayerState.BP_FirstPersonPlayerState_C.Initialization
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonPlayerState_C_Initialization final
-{
-public:
-	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonPlayerState_C_Initialization;
+DUMPER7_ASSERTS_BP_FirstPersonPlayerState_C_ChangeParamater_flaot_;
 
 // Function BP_FirstPersonPlayerState.BP_FirstPersonPlayerState_C.ExecuteUbergraph_BP_FirstPersonPlayerState
 // 0x0058 (0x0058 - 0x0000)
@@ -56,15 +48,23 @@ public:
 };
 DUMPER7_ASSERTS_BP_FirstPersonPlayerState_C_ExecuteUbergraph_BP_FirstPersonPlayerState;
 
-// Function BP_FirstPersonPlayerState.BP_FirstPersonPlayerState_C.ChangeParamater(flaot)
-// 0x0010 (0x0010 - 0x0000)
-struct BP_FirstPersonPlayerState_C_ChangeParamater_flaot_ final
+// Function BP_FirstPersonPlayerState.BP_FirstPersonPlayerState_C.Initialization
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonPlayerState_C_Initialization final
 {
 public:
-	class FName                                   Name_0;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Value;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonPlayerState_C_ChangeParamater_flaot_;
+DUMPER7_ASSERTS_BP_FirstPersonPlayerState_C_Initialization;
+
+// Function BP_FirstPersonPlayerState.BP_FirstPersonPlayerState_C.ReceiveCopyProperties
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonPlayerState_C_ReceiveCopyProperties final
+{
+public:
+	class APlayerState*                           NewPlayerState;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonPlayerState_C_ReceiveCopyProperties;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

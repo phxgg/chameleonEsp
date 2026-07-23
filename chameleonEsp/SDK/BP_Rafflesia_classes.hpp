@@ -27,10 +27,10 @@ public:
 	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveDestroyed();
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_Rafflesia(int32 EntryPoint);
 	void BndEvt__BP_Rafflesia_ExplotionSensor_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void ExecuteUbergraph_BP_Rafflesia(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveDestroyed();
 
 public:
 	static class UClass* StaticClass()

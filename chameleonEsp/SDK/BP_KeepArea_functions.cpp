@@ -16,15 +16,35 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_KeepArea.BP_KeepArea_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_KeepArea.BP_KeepArea_C.ExecuteUbergraph_BP_KeepArea
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_KeepArea_C::UserConstructionScript()
+void ABP_KeepArea_C::ExecuteUbergraph_BP_KeepArea(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_KeepArea_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_KeepArea_C", "ExecuteUbergraph_BP_KeepArea");
+
+	Params::BP_KeepArea_C_ExecuteUbergraph_BP_KeepArea Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_KeepArea.BP_KeepArea_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_KeepArea_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_KeepArea_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -44,37 +64,17 @@ void ABP_KeepArea_C::RemoveOverlapType()
 }
 
 
-// Function BP_KeepArea.BP_KeepArea_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_KeepArea.BP_KeepArea_C.UserConstructionScript
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_KeepArea_C::ReceiveBeginPlay()
+void ABP_KeepArea_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_KeepArea_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_KeepArea_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_KeepArea.BP_KeepArea_C.ExecuteUbergraph_BP_KeepArea
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_KeepArea_C::ExecuteUbergraph_BP_KeepArea(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_KeepArea_C", "ExecuteUbergraph_BP_KeepArea");
-
-	Params::BP_KeepArea_C_ExecuteUbergraph_BP_KeepArea Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

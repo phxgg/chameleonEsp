@@ -37,10 +37,10 @@ public:
 	class UCurveFloat*                            Curve;                                             // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveBeginPlay();
+	void AnimationStart(double Front_0, double Right_0, double Time);
 	void ExecuteUbergraph_BPC_CameraMoveAnimation(int32 EntryPoint);
-	void AnimationStart(double Front, double Right, double Time);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()

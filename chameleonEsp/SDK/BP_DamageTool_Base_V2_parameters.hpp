@@ -17,6 +17,199 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.IsChangeImage
+// 0x0020 (0x0020 - 0x0000)
+struct BP_DamageTool_Base_V2_C_IsChangeImage final
+{
+public:
+	bool                                          IsInteract;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   OverrideText;                                      // 0x0008(0x0010)(Parm, OutParm)
+	bool                                          CallFunc_IsSimulatingPhysics_ReturnValue;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_IsChangeImage;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.ApplyDamage
+// 0x0120 (0x0120 - 0x0000)
+struct BP_DamageTool_Base_V2_C_ApplyDamage final
+{
+public:
+	class UObject*                                OtherActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             Sweep_Result;                                      // 0x0008(0x0100)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	TScriptInterface<class IBPI_Damage_C>         K2Node_DynamicCast_AsBPI_Damage;                   // 0x0108(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFinishFilter                          CallFunc_Damage_Finish;                            // 0x0119(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_ApplyDamage;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnNotifyEnd_09216A5F450F81DD4AA575987ACD9FD6
+// 0x0008 (0x0008 - 0x0000)
+struct BP_DamageTool_Base_V2_C_OnNotifyEnd_09216A5F450F81DD4AA575987ACD9FD6 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnNotifyEnd_09216A5F450F81DD4AA575987ACD9FD6;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnNotifyBegin_09216A5F450F81DD4AA575987ACD9FD6
+// 0x0008 (0x0008 - 0x0000)
+struct BP_DamageTool_Base_V2_C_OnNotifyBegin_09216A5F450F81DD4AA575987ACD9FD6 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnNotifyBegin_09216A5F450F81DD4AA575987ACD9FD6;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnInterrupted_09216A5F450F81DD4AA575987ACD9FD6
+// 0x0008 (0x0008 - 0x0000)
+struct BP_DamageTool_Base_V2_C_OnInterrupted_09216A5F450F81DD4AA575987ACD9FD6 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnInterrupted_09216A5F450F81DD4AA575987ACD9FD6;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnBlendOut_09216A5F450F81DD4AA575987ACD9FD6
+// 0x0008 (0x0008 - 0x0000)
+struct BP_DamageTool_Base_V2_C_OnBlendOut_09216A5F450F81DD4AA575987ACD9FD6 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnBlendOut_09216A5F450F81DD4AA575987ACD9FD6;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnCompleted_09216A5F450F81DD4AA575987ACD9FD6
+// 0x0008 (0x0008 - 0x0000)
+struct BP_DamageTool_Base_V2_C_OnCompleted_09216A5F450F81DD4AA575987ACD9FD6 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnCompleted_09216A5F450F81DD4AA575987ACD9FD6;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnNotifyEnd_F05B6598419A998A4627419382E250E0
+// 0x0008 (0x0008 - 0x0000)
+struct BP_DamageTool_Base_V2_C_OnNotifyEnd_F05B6598419A998A4627419382E250E0 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnNotifyEnd_F05B6598419A998A4627419382E250E0;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnNotifyBegin_F05B6598419A998A4627419382E250E0
+// 0x0008 (0x0008 - 0x0000)
+struct BP_DamageTool_Base_V2_C_OnNotifyBegin_F05B6598419A998A4627419382E250E0 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnNotifyBegin_F05B6598419A998A4627419382E250E0;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnInterrupted_F05B6598419A998A4627419382E250E0
+// 0x0008 (0x0008 - 0x0000)
+struct BP_DamageTool_Base_V2_C_OnInterrupted_F05B6598419A998A4627419382E250E0 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnInterrupted_F05B6598419A998A4627419382E250E0;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnBlendOut_F05B6598419A998A4627419382E250E0
+// 0x0008 (0x0008 - 0x0000)
+struct BP_DamageTool_Base_V2_C_OnBlendOut_F05B6598419A998A4627419382E250E0 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnBlendOut_F05B6598419A998A4627419382E250E0;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnCompleted_F05B6598419A998A4627419382E250E0
+// 0x0008 (0x0008 - 0x0000)
+struct BP_DamageTool_Base_V2_C_OnCompleted_F05B6598419A998A4627419382E250E0 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnCompleted_F05B6598419A998A4627419382E250E0;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.Attack_AC
+// 0x0028 (0x0028 - 0x0000)
+struct BP_DamageTool_Base_V2_C_Attack_AC final
+{
+public:
+	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   AttackName;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageMultiply;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          MutipleHitPossible;                                // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        StanMultiply;                                      // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_Attack_AC;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.Combo
+// 0x0010 (0x0010 - 0x0000)
+struct BP_DamageTool_Base_V2_C_Combo final
+{
+public:
+	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ComboName;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_Combo;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.Attack_AC_Remote
+// 0x0020 (0x0020 - 0x0000)
+struct BP_DamageTool_Base_V2_C_Attack_AC_Remote final
+{
+public:
+	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ComponentName;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageMultiply;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        StanMultiply;                                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_Attack_AC_Remote;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.Shot
+// 0x0018 (0x0018 - 0x0000)
+struct BP_DamageTool_Base_V2_C_Shot final
+{
+public:
+	bool                                          PressState;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        PushTime;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonCharacter_Main_C*        SourcePlayer;                                      // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_Shot;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.SetMeshDatas
+// 0x0001 (0x0001 - 0x0000)
+struct BP_DamageTool_Base_V2_C_SetMeshDatas final
+{
+public:
+	bool                                          KeepScale;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_SetMeshDatas;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.PickState
+// 0x0018 (0x0018 - 0x0000)
+struct BP_DamageTool_Base_V2_C_PickState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         SlotIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_PickState;
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.BndEvt__BP_DamageTool_Base_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_1_OnUniqueEvent__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct BP_DamageTool_Base_V2_C_BndEvt__BP_DamageTool_Base_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_1_OnUniqueEvent__DelegateSignature final
+{
+public:
+	class FName                                   EventName;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_BndEvt__BP_DamageTool_Base_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_1_OnUniqueEvent__DelegateSignature;
+
 // Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.ExecuteUbergraph_BP_DamageTool_Base_V2
 // 0x01E8 (0x01E8 - 0x0000)
 struct BP_DamageTool_Base_V2_C_ExecuteUbergraph_BP_DamageTool_Base_V2 final
@@ -86,199 +279,6 @@ public:
 	class ABP_ReplicateEventController_C*         CallFunc_GetActorOfClass_ReturnValue;              // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_ExecuteUbergraph_BP_DamageTool_Base_V2;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.BndEvt__BP_DamageTool_Base_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_1_OnUniqueEvent__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct BP_DamageTool_Base_V2_C_BndEvt__BP_DamageTool_Base_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_1_OnUniqueEvent__DelegateSignature final
-{
-public:
-	class FName                                   EventName;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_BndEvt__BP_DamageTool_Base_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_1_OnUniqueEvent__DelegateSignature;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.PickState
-// 0x0018 (0x0018 - 0x0000)
-struct BP_DamageTool_Base_V2_C_PickState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         SlotIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_PickState;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.SetMeshDatas
-// 0x0001 (0x0001 - 0x0000)
-struct BP_DamageTool_Base_V2_C_SetMeshDatas final
-{
-public:
-	bool                                          KeepScale;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_SetMeshDatas;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.Shot
-// 0x0018 (0x0018 - 0x0000)
-struct BP_DamageTool_Base_V2_C_Shot final
-{
-public:
-	bool                                          PressState_Shot;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        PushTime_Shot;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonCharacter_Main_C*        SourcePlayer_Shot;                                 // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_Shot;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.Attack_AC_Remote
-// 0x0020 (0x0020 - 0x0000)
-struct BP_DamageTool_Base_V2_C_Attack_AC_Remote final
-{
-public:
-	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ComponentName;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DamageMultiply;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        StanMultiply;                                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_Attack_AC_Remote;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.Combo
-// 0x0010 (0x0010 - 0x0000)
-struct BP_DamageTool_Base_V2_C_Combo final
-{
-public:
-	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ComboName;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_Combo;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.Attack_AC
-// 0x0028 (0x0028 - 0x0000)
-struct BP_DamageTool_Base_V2_C_Attack_AC final
-{
-public:
-	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   AttackName;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DamageMultiply;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          MutipleHitPossible;                                // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        StanMultiply;                                      // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_Attack_AC;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnCompleted_F05B6598419A998A4627419382E250E0
-// 0x0008 (0x0008 - 0x0000)
-struct BP_DamageTool_Base_V2_C_OnCompleted_F05B6598419A998A4627419382E250E0 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnCompleted_F05B6598419A998A4627419382E250E0;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnBlendOut_F05B6598419A998A4627419382E250E0
-// 0x0008 (0x0008 - 0x0000)
-struct BP_DamageTool_Base_V2_C_OnBlendOut_F05B6598419A998A4627419382E250E0 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnBlendOut_F05B6598419A998A4627419382E250E0;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnInterrupted_F05B6598419A998A4627419382E250E0
-// 0x0008 (0x0008 - 0x0000)
-struct BP_DamageTool_Base_V2_C_OnInterrupted_F05B6598419A998A4627419382E250E0 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnInterrupted_F05B6598419A998A4627419382E250E0;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnNotifyBegin_F05B6598419A998A4627419382E250E0
-// 0x0008 (0x0008 - 0x0000)
-struct BP_DamageTool_Base_V2_C_OnNotifyBegin_F05B6598419A998A4627419382E250E0 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnNotifyBegin_F05B6598419A998A4627419382E250E0;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnNotifyEnd_F05B6598419A998A4627419382E250E0
-// 0x0008 (0x0008 - 0x0000)
-struct BP_DamageTool_Base_V2_C_OnNotifyEnd_F05B6598419A998A4627419382E250E0 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnNotifyEnd_F05B6598419A998A4627419382E250E0;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnCompleted_09216A5F450F81DD4AA575987ACD9FD6
-// 0x0008 (0x0008 - 0x0000)
-struct BP_DamageTool_Base_V2_C_OnCompleted_09216A5F450F81DD4AA575987ACD9FD6 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnCompleted_09216A5F450F81DD4AA575987ACD9FD6;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnBlendOut_09216A5F450F81DD4AA575987ACD9FD6
-// 0x0008 (0x0008 - 0x0000)
-struct BP_DamageTool_Base_V2_C_OnBlendOut_09216A5F450F81DD4AA575987ACD9FD6 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnBlendOut_09216A5F450F81DD4AA575987ACD9FD6;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnInterrupted_09216A5F450F81DD4AA575987ACD9FD6
-// 0x0008 (0x0008 - 0x0000)
-struct BP_DamageTool_Base_V2_C_OnInterrupted_09216A5F450F81DD4AA575987ACD9FD6 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnInterrupted_09216A5F450F81DD4AA575987ACD9FD6;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnNotifyBegin_09216A5F450F81DD4AA575987ACD9FD6
-// 0x0008 (0x0008 - 0x0000)
-struct BP_DamageTool_Base_V2_C_OnNotifyBegin_09216A5F450F81DD4AA575987ACD9FD6 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnNotifyBegin_09216A5F450F81DD4AA575987ACD9FD6;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnNotifyEnd_09216A5F450F81DD4AA575987ACD9FD6
-// 0x0008 (0x0008 - 0x0000)
-struct BP_DamageTool_Base_V2_C_OnNotifyEnd_09216A5F450F81DD4AA575987ACD9FD6 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_OnNotifyEnd_09216A5F450F81DD4AA575987ACD9FD6;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.ApplyDamage
-// 0x0120 (0x0120 - 0x0000)
-struct BP_DamageTool_Base_V2_C_ApplyDamage final
-{
-public:
-	class UObject*                                OtherActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             Sweep_Result;                                      // 0x0008(0x0100)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	TScriptInterface<class IBPI_Damage_C>         K2Node_DynamicCast_AsBPI_Damage;                   // 0x0108(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFinishFilter                          CallFunc_Damage_Finish;                            // 0x0119(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_ApplyDamage;
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.IsChangeImage
-// 0x0020 (0x0020 - 0x0000)
-struct BP_DamageTool_Base_V2_C_IsChangeImage final
-{
-public:
-	bool                                          IsInteract;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   OverrideText;                                      // 0x0008(0x0010)(Parm, OutParm)
-	bool                                          CallFunc_IsSimulatingPhysics_ReturnValue;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_DamageTool_Base_V2_C_IsChangeImage;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

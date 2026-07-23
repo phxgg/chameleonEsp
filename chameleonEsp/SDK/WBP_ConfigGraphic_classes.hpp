@@ -43,16 +43,16 @@ public:
 	class UBPGI_Main_C*                           As_BPGI_Main;                                      // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateScreenEvent();
-	void ScreenTypeSettingsUpdate();
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_ConfigGraphic(int32 EntryPoint);
-	void DeleteConfigWidget();
-	void Construct();
-	void BndEvt__WBP_ConfigGraphic_WBP_MotionBlur_K2Node_ComponentBoundEvent_2_UpdateSettingValue__DelegateSignature();
-	void BndEvt__WBP_ConfigGraphic_WBP_Brightness_K2Node_ComponentBoundEvent_1_UpdateSettingValue__DelegateSignature();
-	void BndEvt__WBP_ConfigGraphic_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
 	void ApplySettings();
+	void BndEvt__WBP_ConfigGraphic_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
+	void BndEvt__WBP_ConfigGraphic_WBP_Brightness_K2Node_ComponentBoundEvent_1_UpdateSettingValue__DelegateSignature();
+	void BndEvt__WBP_ConfigGraphic_WBP_MotionBlur_K2Node_ComponentBoundEvent_2_UpdateSettingValue__DelegateSignature();
+	void Construct();
+	void DeleteConfigWidget();
+	void ExecuteUbergraph_WBP_ConfigGraphic(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void ScreenTypeSettingsUpdate();
+	void UpdateScreenEvent();
 
 public:
 	static class UClass* StaticClass()

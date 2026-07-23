@@ -16,6 +16,24 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BPC_TaskObject_FindAndTakeHomeGiftBox.BPC_TaskObject_FindAndTakeHomeGiftBox_C.GeneratedActor
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_TaskObject_FindAndTakeHomeGiftBox_C_GeneratedActor final
+{
+public:
+	class AActor*                                 GeneratedActor_0;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_TaskObject_FindAndTakeHomeGiftBox_C_GeneratedActor;
+
+// Function BPC_TaskObject_FindAndTakeHomeGiftBox.BPC_TaskObject_FindAndTakeHomeGiftBox_C.GoalActor
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_TaskObject_FindAndTakeHomeGiftBox_C_GoalActor final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_TaskObject_FindAndTakeHomeGiftBox_C_GoalActor;
+
 // Function BPC_TaskObject_FindAndTakeHomeGiftBox.BPC_TaskObject_FindAndTakeHomeGiftBox_C.ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox
 // 0x01B0 (0x01B0 - 0x0000)
 struct BPC_TaskObject_FindAndTakeHomeGiftBox_C_ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox final
@@ -27,7 +45,7 @@ public:
 	class ABP_FirstPersonGameMode_Online_LINK_C*  K2Node_DynamicCast_AsBP_First_Person_Game_Mode_Online_LINK; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class AActor* GeneratedActor)> K2Node_CreateDelegate_OutputDelegate;              // 0x001C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class AActor* GeneratedActor_0)> K2Node_CreateDelegate_OutputDelegate;            // 0x001C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Temp_name_Variable;                                // 0x002C(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Multiply_IntInt_ReturnValue;              // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -71,24 +89,6 @@ public:
 	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_TaskObject_FindAndTakeHomeGiftBox_C_ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox;
-
-// Function BPC_TaskObject_FindAndTakeHomeGiftBox.BPC_TaskObject_FindAndTakeHomeGiftBox_C.GoalActor
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_TaskObject_FindAndTakeHomeGiftBox_C_GoalActor final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_TaskObject_FindAndTakeHomeGiftBox_C_GoalActor;
-
-// Function BPC_TaskObject_FindAndTakeHomeGiftBox.BPC_TaskObject_FindAndTakeHomeGiftBox_C.GeneratedActor
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_TaskObject_FindAndTakeHomeGiftBox_C_GeneratedActor final
-{
-public:
-	class AActor*                                 GeneratedActor;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_TaskObject_FindAndTakeHomeGiftBox_C_GeneratedActor;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

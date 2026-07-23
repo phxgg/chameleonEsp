@@ -26,10 +26,10 @@ public:
 	class UTextBlock*                             MainTextBlock;                                     // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void UpdateBarWidth();
-	void SetText(const class FText& InText);
-	void SetBarWidth(double Desired_Size_X);
 	void ExecuteUbergraph_WBP_GlueValueText(int32 EntryPoint);
+	void SetBarWidth(double Desired_Size_X);
+	void SetText(const class FText& InText);
+	void UpdateBarWidth();
 
 public:
 	static class UClass* StaticClass()

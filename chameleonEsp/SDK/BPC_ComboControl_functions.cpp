@@ -16,119 +16,94 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_ComboControl.BPC_ComboControl_C.StateChange
+// Function BPC_ComboControl.BPC_ComboControl_C.CanCombo
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   CanCombo_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ComboControl_C::CanCombo(bool* CanCombo_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ComboControl_C", "CanCombo");
+
+	Params::BPC_ComboControl_C_CanCombo Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (CanCombo_0 != nullptr)
+		*CanCombo_0 = Parms.CanCombo_0;
+}
+
+
+// Function BPC_ComboControl.BPC_ComboControl_C.ComboStart
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_ComboControl_C::ComboStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ComboControl_C", "ComboStart");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_ComboControl.BPC_ComboControl_C.ExecuteUbergraph_BPC_ComboControl
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ComboControl_C::ExecuteUbergraph_BPC_ComboControl(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ComboControl_C", "ExecuteUbergraph_BPC_ComboControl");
+
+	Params::BPC_ComboControl_C_ExecuteUbergraph_BPC_ComboControl Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_ComboControl.BPC_ComboControl_C.LoopInput
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             NewState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bEnabled                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_ComboControl_C::StateChange(class FName NewState)
+void UBPC_ComboControl_C::LoopInput(bool bEnabled)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ComboControl_C", "StateChange");
+		Func = Class->GetFunction("BPC_ComboControl_C", "LoopInput");
 
-	Params::BPC_ComboControl_C_StateChange Parms{};
+	Params::BPC_ComboControl_C_LoopInput Parms{};
 
-	Parms.NewState = NewState;
+	Parms.bEnabled = bEnabled;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_ComboControl.BPC_ComboControl_C.Setup
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class APawn*                            TargetCharacter                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ComboControl_C::Setup(class APawn* TargetCharacter)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ComboControl_C", "Setup");
-
-	Params::BPC_ComboControl_C_Setup Parms{};
-
-	Parms.TargetCharacter = TargetCharacter;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ComboControl.BPC_ComboControl_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ComboControl_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ComboControl_C", "ReceiveTick");
-
-	Params::BPC_ComboControl_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ComboControl.BPC_ComboControl_C.OnNotifyEnd_160FEEFC429FDD0964C81A82DBE63440
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ComboControl_C::OnNotifyEnd_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ComboControl_C", "OnNotifyEnd_160FEEFC429FDD0964C81A82DBE63440");
-
-	Params::BPC_ComboControl_C_OnNotifyEnd_160FEEFC429FDD0964C81A82DBE63440 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ComboControl.BPC_ComboControl_C.OnNotifyBegin_160FEEFC429FDD0964C81A82DBE63440
+// Function BPC_ComboControl.BPC_ComboControl_C.OnBlendOut_160FEEFC429FDD0964C81A82DBE63440
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_ComboControl_C::OnNotifyBegin_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName)
+void UBPC_ComboControl_C::OnBlendOut_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ComboControl_C", "OnNotifyBegin_160FEEFC429FDD0964C81A82DBE63440");
+		Func = Class->GetFunction("BPC_ComboControl_C", "OnBlendOut_160FEEFC429FDD0964C81A82DBE63440");
 
-	Params::BPC_ComboControl_C_OnNotifyBegin_160FEEFC429FDD0964C81A82DBE63440 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ComboControl.BPC_ComboControl_C.OnInterrupted_160FEEFC429FDD0964C81A82DBE63440
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ComboControl_C::OnInterrupted_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ComboControl_C", "OnInterrupted_160FEEFC429FDD0964C81A82DBE63440");
-
-	Params::BPC_ComboControl_C_OnInterrupted_160FEEFC429FDD0964C81A82DBE63440 Parms{};
+	Params::BPC_ComboControl_C_OnBlendOut_160FEEFC429FDD0964C81A82DBE63440 Parms{};
 
 	Parms.NotifyName = NotifyName;
 
@@ -156,19 +131,19 @@ void UBPC_ComboControl_C::OnCompleted_160FEEFC429FDD0964C81A82DBE63440(class FNa
 }
 
 
-// Function BPC_ComboControl.BPC_ComboControl_C.OnBlendOut_160FEEFC429FDD0964C81A82DBE63440
+// Function BPC_ComboControl.BPC_ComboControl_C.OnInterrupted_160FEEFC429FDD0964C81A82DBE63440
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_ComboControl_C::OnBlendOut_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName)
+void UBPC_ComboControl_C::OnInterrupted_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ComboControl_C", "OnBlendOut_160FEEFC429FDD0964C81A82DBE63440");
+		Func = Class->GetFunction("BPC_ComboControl_C", "OnInterrupted_160FEEFC429FDD0964C81A82DBE63440");
 
-	Params::BPC_ComboControl_C_OnBlendOut_160FEEFC429FDD0964C81A82DBE63440 Parms{};
+	Params::BPC_ComboControl_C_OnInterrupted_160FEEFC429FDD0964C81A82DBE63440 Parms{};
 
 	Parms.NotifyName = NotifyName;
 
@@ -176,78 +151,103 @@ void UBPC_ComboControl_C::OnBlendOut_160FEEFC429FDD0964C81A82DBE63440(class FNam
 }
 
 
-// Function BPC_ComboControl.BPC_ComboControl_C.LoopInput
+// Function BPC_ComboControl.BPC_ComboControl_C.OnNotifyBegin_160FEEFC429FDD0964C81A82DBE63440
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bEnabled                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_ComboControl_C::LoopInput(bool bEnabled)
+void UBPC_ComboControl_C::OnNotifyBegin_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ComboControl_C", "LoopInput");
+		Func = Class->GetFunction("BPC_ComboControl_C", "OnNotifyBegin_160FEEFC429FDD0964C81A82DBE63440");
 
-	Params::BPC_ComboControl_C_LoopInput Parms{};
+	Params::BPC_ComboControl_C_OnNotifyBegin_160FEEFC429FDD0964C81A82DBE63440 Parms{};
 
-	Parms.bEnabled = bEnabled;
+	Parms.NotifyName = NotifyName;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_ComboControl.BPC_ComboControl_C.ExecuteUbergraph_BPC_ComboControl
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ComboControl_C::ExecuteUbergraph_BPC_ComboControl(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ComboControl_C", "ExecuteUbergraph_BPC_ComboControl");
-
-	Params::BPC_ComboControl_C_ExecuteUbergraph_BPC_ComboControl Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ComboControl.BPC_ComboControl_C.ComboStart
+// Function BPC_ComboControl.BPC_ComboControl_C.OnNotifyEnd_160FEEFC429FDD0964C81A82DBE63440
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_ComboControl_C::ComboStart()
+void UBPC_ComboControl_C::OnNotifyEnd_160FEEFC429FDD0964C81A82DBE63440(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ComboControl_C", "ComboStart");
+		Func = Class->GetFunction("BPC_ComboControl_C", "OnNotifyEnd_160FEEFC429FDD0964C81A82DBE63440");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_ComboControl_C_OnNotifyEnd_160FEEFC429FDD0964C81A82DBE63440 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_ComboControl.BPC_ComboControl_C.CanCombo
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BPC_ComboControl.BPC_ComboControl_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// bool*                                   CanCombo                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_ComboControl_C::CanCombo(bool* CanCombo)
+void UBPC_ComboControl_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ComboControl_C", "CanCombo");
+		Func = Class->GetFunction("BPC_ComboControl_C", "ReceiveTick");
 
-	Params::BPC_ComboControl_C_CanCombo Parms{};
+	Params::BPC_ComboControl_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	if (CanCombo != nullptr)
-		*CanCombo = Parms.CanCombo;
+
+// Function BPC_ComboControl.BPC_ComboControl_C.Setup
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APawn*                            TargetCharacter                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ComboControl_C::Setup(class APawn* TargetCharacter)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ComboControl_C", "Setup");
+
+	Params::BPC_ComboControl_C_Setup Parms{};
+
+	Parms.TargetCharacter = TargetCharacter;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_ComboControl.BPC_ComboControl_C.StateChange
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NewState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ComboControl_C::StateChange(class FName NewState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ComboControl_C", "StateChange");
+
+	Params::BPC_ComboControl_C_StateChange Parms{};
+
+	Parms.NewState = NewState;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

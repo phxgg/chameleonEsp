@@ -16,45 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_3DInteract.WBP_3DInteract_C.Tick
+// Function WBP_3DInteract.WBP_3DInteract_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry_Tick                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime_Tick                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_3DInteract_C::Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick)
+void UWBP_3DInteract_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_3DInteract_C", "Tick");
+		Func = Class->GetFunction("WBP_3DInteract_C", "Construct");
 
-	Params::WBP_3DInteract_C_Tick Parms{};
-
-	Parms.MyGeometry_Tick = std::move(MyGeometry_Tick);
-	Parms.InDeltaTime_Tick = InDeltaTime_Tick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_3DInteract.WBP_3DInteract_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_3DInteract_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_3DInteract_C", "PreConstruct");
-
-	Params::WBP_3DInteract_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -78,17 +50,45 @@ void UWBP_3DInteract_C::ExecuteUbergraph_WBP_3DInteract(int32 EntryPoint)
 }
 
 
-// Function WBP_3DInteract.WBP_3DInteract_C.Construct
+// Function WBP_3DInteract.WBP_3DInteract_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_3DInteract_C::Construct()
+void UWBP_3DInteract_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_3DInteract_C", "Construct");
+		Func = Class->GetFunction("WBP_3DInteract_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_3DInteract_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_3DInteract.WBP_3DInteract_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_3DInteract_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_3DInteract_C", "Tick");
+
+	Params::WBP_3DInteract_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

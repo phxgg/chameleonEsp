@@ -14,15 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_ConfigGraphic_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigGraphic_C_PreConstruct;
-
 // Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.ExecuteUbergraph_WBP_ConfigGraphic
 // 0x0148 (0x0148 - 0x0000)
 struct WBP_ConfigGraphic_C_ExecuteUbergraph_WBP_ConfigGraphic final
@@ -87,6 +78,15 @@ public:
 	float                                         K2Node_SetFieldsInStruct_MotionBlurAmount_ImplicitCast; // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ConfigGraphic_C_ExecuteUbergraph_WBP_ConfigGraphic;
+
+// Function WBP_ConfigGraphic.WBP_ConfigGraphic_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_ConfigGraphic_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigGraphic_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

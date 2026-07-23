@@ -19,33 +19,14 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WBP_VoiceChatUserSettings_C_Tick final
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.ConstructSetup
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_VoiceChatUserSettings_C_ConstructSetup final
 {
 public:
-	struct FGeometry                              MyGeometry_Tick;                                   // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime_Tick;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonPlayerState_Online_C*    TargetPlayerState;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_VoiceChatUserSettings_C_Tick;
-
-// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_VoiceChatUserSettings_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_VoiceChatUserSettings_C_PreConstruct;
-
-// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.OnFinished_1657203944876F75161AA6986A7C9FD9
-// 0x0028 (0x0028 - 0x0000)
-struct WBP_VoiceChatUserSettings_C_OnFinished_1657203944876F75161AA6986A7C9FD9 final
-{
-public:
-	struct FEOSPlayerReportResult                 Result;                                            // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_WBP_VoiceChatUserSettings_C_OnFinished_1657203944876F75161AA6986A7C9FD9;
+DUMPER7_ASSERTS_WBP_VoiceChatUserSettings_C_ConstructSetup;
 
 // Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.ExecuteUbergraph_WBP_VoiceChatUserSettings
 // 0x02C0 (0x02C0 - 0x0000)
@@ -140,14 +121,33 @@ public:
 };
 DUMPER7_ASSERTS_WBP_VoiceChatUserSettings_C_ExecuteUbergraph_WBP_VoiceChatUserSettings;
 
-// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.ConstructSetup
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_VoiceChatUserSettings_C_ConstructSetup final
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.OnFinished_1657203944876F75161AA6986A7C9FD9
+// 0x0028 (0x0028 - 0x0000)
+struct WBP_VoiceChatUserSettings_C_OnFinished_1657203944876F75161AA6986A7C9FD9 final
 {
 public:
-	class ABP_FirstPersonPlayerState_Online_C*    TargetPlayerState;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FEOSPlayerReportResult                 Result;                                            // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_WBP_VoiceChatUserSettings_C_ConstructSetup;
+DUMPER7_ASSERTS_WBP_VoiceChatUserSettings_C_OnFinished_1657203944876F75161AA6986A7C9FD9;
+
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_VoiceChatUserSettings_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_VoiceChatUserSettings_C_PreConstruct;
+
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WBP_VoiceChatUserSettings_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_VoiceChatUserSettings_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

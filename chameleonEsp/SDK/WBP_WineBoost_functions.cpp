@@ -16,23 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_WineBoost.WBP_WineBoost_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_WineBoost.WBP_WineBoost_C.EndEvent
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_WineBoost_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_WineBoost_C::EndEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_WineBoost_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_WineBoost_C", "EndEvent");
 
-	Params::WBP_WineBoost_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -56,17 +50,23 @@ void UWBP_WineBoost_C::ExecuteUbergraph_WBP_WineBoost(int32 EntryPoint)
 }
 
 
-// Function WBP_WineBoost.WBP_WineBoost_C.EndEvent
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_WineBoost.WBP_WineBoost_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_WineBoost_C::EndEvent()
+void UWBP_WineBoost_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_WineBoost_C", "EndEvent");
+		Func = Class->GetFunction("WBP_WineBoost_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_WineBoost_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

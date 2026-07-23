@@ -16,34 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_MainEnemyAIController.BP_MainEnemyAIController_C.Run
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_MainEnemyAIController_C::Run()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MainEnemyAIController_C", "Run");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MainEnemyAIController.BP_MainEnemyAIController_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_MainEnemyAIController_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MainEnemyAIController_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_MainEnemyAIController.BP_MainEnemyAIController_C.ExecuteUbergraph_BP_MainEnemyAIController
 // (Final, UbergraphFunction)
 // Parameters:
@@ -61,6 +33,34 @@ void ABP_MainEnemyAIController_C::ExecuteUbergraph_BP_MainEnemyAIController(int3
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainEnemyAIController.BP_MainEnemyAIController_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_MainEnemyAIController_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainEnemyAIController_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MainEnemyAIController.BP_MainEnemyAIController_C.Run
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_MainEnemyAIController_C::Run()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainEnemyAIController_C", "Run");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

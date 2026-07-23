@@ -30,11 +30,11 @@ public:
 	bool                                          CanPause;                                          // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Return();
-	void ReceiveBeginPlay();
-	void InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void ExecuteUbergraph_BP_Online_SelfControler(int32 EntryPoint);
 	void CloseSettings();
+	void ExecuteUbergraph_BP_Online_SelfControler(int32 EntryPoint);
+	void InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void ReceiveBeginPlay();
+	void Return();
 
 public:
 	static class UClass* StaticClass()

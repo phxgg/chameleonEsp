@@ -16,19 +16,19 @@
 
 SDK_NAMESPACE_START
 
-// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_2
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.BP_FirstPersonCharacter_Event
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_FirstPersonCharacter_Main_C*  BP_FirstPersonCharacter                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UTouch_bigpen_DirectorBP_C::SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_2(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter)
+void UTouch_bigpen_DirectorBP_C::BP_FirstPersonCharacter_Event(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_2");
+		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "BP_FirstPersonCharacter_Event");
 
-	Params::Touch_bigpen_DirectorBP_C_SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_2 Parms{};
+	Params::Touch_bigpen_DirectorBP_C_BP_FirstPersonCharacter_Event Parms{};
 
 	Parms.BP_FirstPersonCharacter = BP_FirstPersonCharacter;
 
@@ -36,79 +36,39 @@ void UTouch_bigpen_DirectorBP_C::SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorB
 }
 
 
-// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_1
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.ExecuteUbergraph_Touch_bigpen_DirectorBP
+// (Final, UbergraphFunction)
 // Parameters:
-// struct FMovieSceneDynamicBindingResolveResultReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-struct FMovieSceneDynamicBindingResolveResult UTouch_bigpen_DirectorBP_C::SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_1()
+void UTouch_bigpen_DirectorBP_C::ExecuteUbergraph_Touch_bigpen_DirectorBP(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_1");
+		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "ExecuteUbergraph_Touch_bigpen_DirectorBP");
 
-	Params::Touch_bigpen_DirectorBP_C_SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_1 Parms{};
+	Params::Touch_bigpen_DirectorBP_C_ExecuteUbergraph_Touch_bigpen_DirectorBP Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
-// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_0
+// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.HeadPosition_DynamicBinding
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FMovieSceneDynamicBindingResolveResultReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor)
 
-struct FMovieSceneDynamicBindingResolveResult UTouch_bigpen_DirectorBP_C::SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_0()
+struct FMovieSceneDynamicBindingResolveResult UTouch_bigpen_DirectorBP_C::HeadPosition_DynamicBinding()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_0");
+		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "HeadPosition_DynamicBinding");
 
-	Params::Touch_bigpen_DirectorBP_C_SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_0 Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FMovieSceneDynamicBindingResolveResultReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor)
-
-struct FMovieSceneDynamicBindingResolveResult UTouch_bigpen_DirectorBP_C::SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP");
-
-	Params::Touch_bigpen_DirectorBP_C_SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.RightPos_DynamicBinding
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FMovieSceneDynamicBindingResolveResultReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor)
-
-struct FMovieSceneDynamicBindingResolveResult UTouch_bigpen_DirectorBP_C::RightPos_DynamicBinding()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "RightPos_DynamicBinding");
-
-	Params::Touch_bigpen_DirectorBP_C_RightPos_DynamicBinding Parms{};
+	Params::Touch_bigpen_DirectorBP_C_HeadPosition_DynamicBinding Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -136,19 +96,19 @@ struct FMovieSceneDynamicBindingResolveResult UTouch_bigpen_DirectorBP_C::LeftPo
 }
 
 
-// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.HeadPosition_DynamicBinding
+// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.RightPos_DynamicBinding
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FMovieSceneDynamicBindingResolveResultReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor)
 
-struct FMovieSceneDynamicBindingResolveResult UTouch_bigpen_DirectorBP_C::HeadPosition_DynamicBinding()
+struct FMovieSceneDynamicBindingResolveResult UTouch_bigpen_DirectorBP_C::RightPos_DynamicBinding()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "HeadPosition_DynamicBinding");
+		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "RightPos_DynamicBinding");
 
-	Params::Touch_bigpen_DirectorBP_C_HeadPosition_DynamicBinding Parms{};
+	Params::Touch_bigpen_DirectorBP_C_RightPos_DynamicBinding Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -156,39 +116,79 @@ struct FMovieSceneDynamicBindingResolveResult UTouch_bigpen_DirectorBP_C::HeadPo
 }
 
 
-// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.ExecuteUbergraph_Touch_bigpen_DirectorBP
-// (Final, UbergraphFunction)
+// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FMovieSceneDynamicBindingResolveResultReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor)
 
-void UTouch_bigpen_DirectorBP_C::ExecuteUbergraph_Touch_bigpen_DirectorBP(int32 EntryPoint)
+struct FMovieSceneDynamicBindingResolveResult UTouch_bigpen_DirectorBP_C::SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "ExecuteUbergraph_Touch_bigpen_DirectorBP");
+		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP");
 
-	Params::Touch_bigpen_DirectorBP_C_ExecuteUbergraph_Touch_bigpen_DirectorBP Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::Touch_bigpen_DirectorBP_C_SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
-// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.BP_FirstPersonCharacter_Event
-// (BlueprintCallable, BlueprintEvent)
+// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_0
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_FirstPersonCharacter_Main_C*  BP_FirstPersonCharacter                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FMovieSceneDynamicBindingResolveResultReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor)
 
-void UTouch_bigpen_DirectorBP_C::BP_FirstPersonCharacter_Event(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter)
+struct FMovieSceneDynamicBindingResolveResult UTouch_bigpen_DirectorBP_C::SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_0()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "BP_FirstPersonCharacter_Event");
+		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_0");
 
-	Params::Touch_bigpen_DirectorBP_C_BP_FirstPersonCharacter_Event Parms{};
+	Params::Touch_bigpen_DirectorBP_C_SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_0 Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_1
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FMovieSceneDynamicBindingResolveResultReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor)
+
+struct FMovieSceneDynamicBindingResolveResult UTouch_bigpen_DirectorBP_C::SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_1");
+
+	Params::Touch_bigpen_DirectorBP_C_SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_1 Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Touch_bigpen.Touch_bigpen_DirectorBP_C.SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_2
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonCharacter_Main_C*  BP_FirstPersonCharacter                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UTouch_bigpen_DirectorBP_C::SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_2(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Touch_bigpen_DirectorBP_C", "SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_2");
+
+	Params::Touch_bigpen_DirectorBP_C_SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_2 Parms{};
 
 	Parms.BP_FirstPersonCharacter = BP_FirstPersonCharacter;
 

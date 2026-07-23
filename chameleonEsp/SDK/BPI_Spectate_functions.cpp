@@ -16,23 +16,24 @@
 
 SDK_NAMESPACE_START
 
-// Function BPI_Spectate.BPI_Spectate_C.ViewChange
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BPI_Spectate.BPI_Spectate_C.GetCustomPlayerName
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_FirstPersonCharacter_Main_C*  SourcePlayer                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FString*                          playerName                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void IBPI_Spectate_C::ViewChange(class ABP_FirstPersonCharacter_Main_C* SourcePlayer)
+void IBPI_Spectate_C::GetCustomPlayerName(class FString* playerName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_Spectate_C", "ViewChange");
+		Func = AsUObject()->Class->GetFunction("BPI_Spectate_C", "GetCustomPlayerName");
 
-	Params::BPI_Spectate_C_ViewChange Parms{};
-
-	Parms.SourcePlayer = SourcePlayer;
+	Params::BPI_Spectate_C_GetCustomPlayerName Parms{};
 
 	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (playerName != nullptr)
+		*playerName = std::move(Parms.playerName);
 }
 
 
@@ -56,24 +57,23 @@ void IBPI_Spectate_C::SetupSpectateNameplate(class ABP_FirstPersonCharacter_Main
 }
 
 
-// Function BPI_Spectate.BPI_Spectate_C.GetCustomPlayerName
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BPI_Spectate.BPI_Spectate_C.ViewChange
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString*                          playerName                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C*  SourcePlayer                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_Spectate_C::GetCustomPlayerName(class FString* playerName)
+void IBPI_Spectate_C::ViewChange(class ABP_FirstPersonCharacter_Main_C* SourcePlayer)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_Spectate_C", "GetCustomPlayerName");
+		Func = AsUObject()->Class->GetFunction("BPI_Spectate_C", "ViewChange");
 
-	Params::BPI_Spectate_C_GetCustomPlayerName Parms{};
+	Params::BPI_Spectate_C_ViewChange Parms{};
+
+	Parms.SourcePlayer = SourcePlayer;
 
 	AsUObject()->ProcessEvent(Func, &Parms);
-
-	if (playerName != nullptr)
-		*playerName = std::move(Parms.playerName);
 }
 
 

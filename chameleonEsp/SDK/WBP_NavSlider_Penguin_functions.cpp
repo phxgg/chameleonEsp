@@ -16,43 +16,37 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_NavSlider_Penguin.WBP_NavSlider_Penguin_C.SetValueText
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_NavSlider_Penguin.WBP_NavSlider_Penguin_C.BndEvt__WBP_NavSlider_Slider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_NavSlider_Penguin_C::SetValueText(const class FText& InText)
+void UWBP_NavSlider_Penguin_C::BndEvt__WBP_NavSlider_Slider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(float Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavSlider_Penguin_C", "SetValueText");
+		Func = Class->GetFunction("WBP_NavSlider_Penguin_C", "BndEvt__WBP_NavSlider_Slider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature");
 
-	Params::WBP_NavSlider_Penguin_C_SetValueText Parms{};
+	Params::WBP_NavSlider_Penguin_C_BndEvt__WBP_NavSlider_Slider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature Parms{};
 
-	Parms.InText = std::move(InText);
+	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_NavSlider_Penguin.WBP_NavSlider_Penguin_C.PreConstruct
+// Function WBP_NavSlider_Penguin.WBP_NavSlider_Penguin_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_NavSlider_Penguin_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_NavSlider_Penguin_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavSlider_Penguin_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_NavSlider_Penguin_C", "Construct");
 
-	Params::WBP_NavSlider_Penguin_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -76,35 +70,41 @@ void UWBP_NavSlider_Penguin_C::ExecuteUbergraph_WBP_NavSlider_Penguin(int32 Entr
 }
 
 
-// Function WBP_NavSlider_Penguin.WBP_NavSlider_Penguin_C.Construct
+// Function WBP_NavSlider_Penguin.WBP_NavSlider_Penguin_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_NavSlider_Penguin_C::Construct()
+void UWBP_NavSlider_Penguin_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavSlider_Penguin_C", "Construct");
+		Func = Class->GetFunction("WBP_NavSlider_Penguin_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_NavSlider_Penguin_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_NavSlider_Penguin.WBP_NavSlider_Penguin_C.BndEvt__WBP_NavSlider_Slider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_NavSlider_Penguin.WBP_NavSlider_Penguin_C.SetValueText
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWBP_NavSlider_Penguin_C::BndEvt__WBP_NavSlider_Slider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(float Value)
+void UWBP_NavSlider_Penguin_C::SetValueText(const class FText& InText)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavSlider_Penguin_C", "BndEvt__WBP_NavSlider_Slider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature");
+		Func = Class->GetFunction("WBP_NavSlider_Penguin_C", "SetValueText");
 
-	Params::WBP_NavSlider_Penguin_C_BndEvt__WBP_NavSlider_Slider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature Parms{};
+	Params::WBP_NavSlider_Penguin_C_SetValueText Parms{};
 
-	Parms.Value = Value;
+	Parms.InText = std::move(InText);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

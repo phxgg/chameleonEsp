@@ -22,12 +22,12 @@ SDK_NAMESPACE_START
 class IBPI_AI_Attack_C final
 {
 public:
-	void ThrowState(EN_ThrowState ThrowState);
-	void DamageState(bool Active);
-	void Avoid(bool State);
-	void AttackReset();
-	void AttackNotify(int32 ID);
 	void Attack(EAttackType AttackType);
+	void AttackNotify(int32 ID);
+	void AttackReset();
+	void Avoid(bool State);
+	void DamageState(bool Active);
+	void ThrowState(EN_ThrowState ThrowState_0);
 
 public:
 	static class UClass* StaticClass()

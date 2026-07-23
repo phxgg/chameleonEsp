@@ -10,52 +10,98 @@
 
 #include "Basic.hpp"
 
-#include "EN_DamageType_structs.hpp"
 #include "FinishFilter_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "EN_StanType_structs.hpp"
+#include "EN_DamageType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EN_StanType_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.StanDamage
-// 0x0001 (0x0001 - 0x0000)
-struct BP_Glue_CustomPhysics_V2_C_StanDamage final
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.AddCustomForce
+// 0x0018 (0x0018 - 0x0000)
+struct BP_Glue_CustomPhysics_V2_C_AddCustomForce final
 {
 public:
-	EN_StanType                                   StanType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AddValue;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_PlusEqual_Variable_ImplicitCast;          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_StanDamage;
+DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_AddCustomForce;
 
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.StaminaDamage
-// 0x0008 (0x0008 - 0x0000)
-struct BP_Glue_CustomPhysics_V2_C_StaminaDamage final
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.AddCustomRevicePower
+// 0x0004 (0x0004 - 0x0000)
+struct BP_Glue_CustomPhysics_V2_C_AddCustomRevicePower final
 {
 public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         PowerAmount;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_StaminaDamage;
+DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_AddCustomRevicePower;
 
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.SnapGlue
-// 0x0028 (0x0028 - 0x0000)
-struct BP_Glue_CustomPhysics_V2_C_SnapGlue final
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.AddPower
+// 0x0010 (0x0010 - 0x0000)
+struct BP_Glue_CustomPhysics_V2_C_AddPower final
 {
 public:
-	struct FVector                                WorldPosition;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UPrimitiveComponent*>            TargetPrimitives;                                  // 0x0018(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+	double                                        power;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 SourceActor;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_SnapGlue;
+DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_AddPower;
 
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.GetParryState
-// 0x0001 (0x0001 - 0x0000)
-struct BP_Glue_CustomPhysics_V2_C_GetParryState final
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.Damage
+// 0x00E0 (0x00E0 - 0x0000)
+struct BP_Glue_CustomPhysics_V2_C_Damage final
 {
 public:
-	bool                                          State;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TeamIndex;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_DamageType                                 DamageType;                                        // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             SourceAgentPoint;                                  // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UnAvoidable;                                       // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   DamageName;                                        // 0x0074(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 SourceActor;                                       // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FFinishFilter                          Finish;                                            // 0x0088(0x0002)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8B[0x5];                                       // 0x008B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACPP_LinkDataBank*                      CallFunc_GetActorOfClass_ReturnValue;              // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class ACPP_Glue*>                      K2Node_MakeArray_Array;                            // 0x0098(0x0010)(ReferenceParm)
+	bool                                          CallFunc_IsBreakCheck_ReturnValue;                 // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_RecivedPower_ImplicitCast;      // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast_1;        // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_RecivedPower_ImplicitCast_1;    // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_GetParryState;
+DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_Damage;
+
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.DamageToPlayerController
+// 0x01A0 (0x01A0 - 0x0000)
+struct BP_Glue_CustomPhysics_V2_C_DamageToPlayerController final
+{
+public:
+	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageValue;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TeamIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_DamageType                                 DamageType;                                        // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15[0xB];                                       // 0x0015(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             SourceAgentPoint;                                  // 0x0020(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UnAvoidable;                                       // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   DamageName;                                        // 0x0084(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             HitRezult;                                         // 0x0090(0x0100)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AActor*                                 SourceActor;                                       // 0x0190(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_DamageToPlayerController;
 
 // Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.ExecuteUbergraph_BP_Glue_CustomPhysics_V2
 // 0x0B90 (0x0B90 - 0x0000)
@@ -266,88 +312,42 @@ public:
 };
 DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_ExecuteUbergraph_BP_Glue_CustomPhysics_V2;
 
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.DamageToPlayerController
-// 0x01A0 (0x01A0 - 0x0000)
-struct BP_Glue_CustomPhysics_V2_C_DamageToPlayerController final
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.GetParryState
+// 0x0001 (0x0001 - 0x0000)
+struct BP_Glue_CustomPhysics_V2_C_GetParryState final
 {
 public:
-	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        DamageValue;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TeamIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_DamageType                                 DamageType;                                        // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15[0xB];                                       // 0x0015(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             SourceAgentPoint;                                  // 0x0020(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UnAvoidable;                                       // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   DamageName;                                        // 0x0084(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             HitRezult;                                         // 0x0090(0x0100)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AActor*                                 SourceActor;                                       // 0x0190(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          State;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_DamageToPlayerController;
+DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_GetParryState;
 
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.Damage
-// 0x00E0 (0x00E0 - 0x0000)
-struct BP_Glue_CustomPhysics_V2_C_Damage final
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.SnapGlue
+// 0x0028 (0x0028 - 0x0000)
+struct BP_Glue_CustomPhysics_V2_C_SnapGlue final
 {
 public:
-	double                                        DamageValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TeamIndex;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_DamageType                                 DamageType;                                        // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             SourceAgentPoint;                                  // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UnAvoidable;                                       // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   DamageName;                                        // 0x0074(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 SourceActor;                                       // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFinishFilter                          Finish;                                            // 0x0088(0x0002)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8B[0x5];                                       // 0x008B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACPP_LinkDataBank*                      CallFunc_GetActorOfClass_ReturnValue;              // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class ACPP_Glue*>                      K2Node_MakeArray_Array;                            // 0x0098(0x0010)(ReferenceParm)
-	bool                                          CallFunc_IsBreakCheck_ReturnValue;                 // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_VariableSet_RecivedPower_ImplicitCast;      // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast_1;        // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_VariableSet_RecivedPower_ImplicitCast_1;    // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                WorldPosition;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UPrimitiveComponent*>            TargetPrimitives;                                  // 0x0018(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_Damage;
+DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_SnapGlue;
 
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.AddPower
-// 0x0010 (0x0010 - 0x0000)
-struct BP_Glue_CustomPhysics_V2_C_AddPower final
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.StaminaDamage
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Glue_CustomPhysics_V2_C_StaminaDamage final
 {
 public:
-	double                                        power;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 SourceActor;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_AddPower;
+DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_StaminaDamage;
 
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.AddCustomRevicePower
-// 0x0004 (0x0004 - 0x0000)
-struct BP_Glue_CustomPhysics_V2_C_AddCustomRevicePower final
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.StanDamage
+// 0x0001 (0x0001 - 0x0000)
+struct BP_Glue_CustomPhysics_V2_C_StanDamage final
 {
 public:
-	float                                         PowerAmount_AddCustomRevicePower;                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_StanType                                   StanType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_AddCustomRevicePower;
-
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.AddCustomForce
-// 0x0018 (0x0018 - 0x0000)
-struct BP_Glue_CustomPhysics_V2_C_AddCustomForce final
-{
-public:
-	double                                        AddValue;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_PlusEqual_Variable_ImplicitCast;          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_AddCustomForce;
+DUMPER7_ASSERTS_BP_Glue_CustomPhysics_V2_C_StanDamage;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

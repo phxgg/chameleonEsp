@@ -16,79 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_CannonBarrel.BP_CannonBarrel_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void ABP_CannonBarrel_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CannonBarrel_C", "ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CannonBarrel.BP_CannonBarrel_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_CannonBarrel_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CannonBarrel_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CannonBarrel.BP_CannonBarrel_C.IsChangeImage
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   IsInteract_IsChangeImage                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText*                            OverrideText_IsChangeImage                             (Parm, OutParm)
-
-void ABP_CannonBarrel_C::IsChangeImage(bool* IsInteract_IsChangeImage, class FText* OverrideText_IsChangeImage)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CannonBarrel_C", "IsChangeImage");
-
-	Params::BP_CannonBarrel_C_IsChangeImage Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsInteract_IsChangeImage != nullptr)
-		*IsInteract_IsChangeImage = Parms.IsInteract_IsChangeImage;
-
-	if (OverrideText_IsChangeImage != nullptr)
-		*OverrideText_IsChangeImage = std::move(Parms.OverrideText_IsChangeImage);
-}
-
-
-// Function BP_CannonBarrel.BP_CannonBarrel_C.ExecuteUbergraph_BP_CannonBarrel
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CannonBarrel_C::ExecuteUbergraph_BP_CannonBarrel(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CannonBarrel_C", "ExecuteUbergraph_BP_CannonBarrel");
-
-	Params::BP_CannonBarrel_C_ExecuteUbergraph_BP_CannonBarrel Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_CannonBarrel.BP_CannonBarrel_C.BndEvt__BP_CannonBullet_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature
 // (HasOutParams, BlueprintEvent)
 // Parameters:
@@ -114,6 +41,79 @@ void ABP_CannonBarrel_C::BndEvt__BP_CannonBullet_StaticMesh_K2Node_ComponentBoun
 	Parms.Hit = std::move(Hit);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CannonBarrel.BP_CannonBarrel_C.ExecuteUbergraph_BP_CannonBarrel
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CannonBarrel_C::ExecuteUbergraph_BP_CannonBarrel(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CannonBarrel_C", "ExecuteUbergraph_BP_CannonBarrel");
+
+	Params::BP_CannonBarrel_C_ExecuteUbergraph_BP_CannonBarrel Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CannonBarrel.BP_CannonBarrel_C.IsChangeImage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   IsInteract                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText*                            OverrideText                                           (Parm, OutParm)
+
+void ABP_CannonBarrel_C::IsChangeImage(bool* IsInteract, class FText* OverrideText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CannonBarrel_C", "IsChangeImage");
+
+	Params::BP_CannonBarrel_C_IsChangeImage Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsInteract != nullptr)
+		*IsInteract = Parms.IsInteract;
+
+	if (OverrideText != nullptr)
+		*OverrideText = std::move(Parms.OverrideText);
+}
+
+
+// Function BP_CannonBarrel.BP_CannonBarrel_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_CannonBarrel_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CannonBarrel_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CannonBarrel.BP_CannonBarrel_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_CannonBarrel_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CannonBarrel_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

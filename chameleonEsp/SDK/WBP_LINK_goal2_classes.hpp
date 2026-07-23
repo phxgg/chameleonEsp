@@ -27,11 +27,11 @@ public:
 	class UWidgetAnimation*                       OutMovie;                                          // 0x0358(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetText(const class FText& Text, int32 Index_0);
-	void SetColor(const struct FLinearColor& Color, int32 Index_0);
-	void PlayAnimationMessage(bool IsForward, int32 Index_0);
-	void FinishEvent();
 	void ExecuteUbergraph_WBP_LINK_goal2(int32 EntryPoint);
+	void FinishEvent();
+	void PlayAnimationMessage(bool IsForward, int32 Index_0);
+	void SetColor(const struct FLinearColor& Color, int32 Index_0);
+	void SetText(const class FText& Text, int32 Index_0);
 
 public:
 	static class UClass* StaticClass()

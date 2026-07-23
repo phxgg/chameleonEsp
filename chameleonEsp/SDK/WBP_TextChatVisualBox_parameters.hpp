@@ -19,36 +19,25 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.ReciveText
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.AddText
 // 0x0018 (0x0018 - 0x0000)
-struct WBP_TextChatVisualBox_C_ReciveText final
+struct WBP_TextChatVisualBox_C_AddText final
 {
 public:
-	class FString                                 MainString;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 TargetText;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         MessageType;                                       // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_TextChatVisualBox_C_ReciveText;
+DUMPER7_ASSERTS_WBP_TextChatVisualBox_C_AddText;
 
-// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_TextChatVisualBox_C_PreConstruct final
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_TextChatVisualBox_C_BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature final
 {
 public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_TextChatVisualBox_C_PreConstruct;
-
-// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.InpActEvt_IA_TextChat_K2Node_EnhancedInputActionEvent_0
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_TextChatVisualBox_C_InpActEvt_IA_TextChat_K2Node_EnhancedInputActionEvent_0 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_TextChatVisualBox_C_InpActEvt_IA_TextChat_K2Node_EnhancedInputActionEvent_0;
+DUMPER7_ASSERTS_WBP_TextChatVisualBox_C_BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature;
 
 // Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.ExecuteUbergraph_WBP_TextChatVisualBox
 // 0x02A8 (0x02A8 - 0x0000)
@@ -153,25 +142,36 @@ public:
 };
 DUMPER7_ASSERTS_WBP_TextChatVisualBox_C_ExecuteUbergraph_WBP_TextChatVisualBox;
 
-// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_TextChatVisualBox_C_BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature final
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.InpActEvt_IA_TextChat_K2Node_EnhancedInputActionEvent_0
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_TextChatVisualBox_C_InpActEvt_IA_TextChat_K2Node_EnhancedInputActionEvent_0 final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_TextChatVisualBox_C_BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature;
+DUMPER7_ASSERTS_WBP_TextChatVisualBox_C_InpActEvt_IA_TextChat_K2Node_EnhancedInputActionEvent_0;
 
-// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.AddText
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_TextChatVisualBox_C_AddText final
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_TextChatVisualBox_C_PreConstruct final
 {
 public:
-	class FString                                 TargetText;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         MessageType;                                       // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_TextChatVisualBox_C_AddText;
+DUMPER7_ASSERTS_WBP_TextChatVisualBox_C_PreConstruct;
+
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.ReciveText
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_TextChatVisualBox_C_ReciveText final
+{
+public:
+	class FString                                 MainString;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_TextChatVisualBox_C_ReciveText;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

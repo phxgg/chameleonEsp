@@ -35,10 +35,10 @@ public:
 	class ABP_FirstPersonCharacter_Main_C*        SourcePawn;                                        // 0x02F0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void PinAnimation__UpdateFunc();
-	void PinAnimation__FinishedFunc();
 	void ExecuteUbergraph_BP_TargetPinMain(int32 EntryPoint);
+	void PinAnimation__FinishedFunc();
+	void PinAnimation__UpdateFunc();
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

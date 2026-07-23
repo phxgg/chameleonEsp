@@ -16,17 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_CollisionSound.BPC_CollisionSound_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// Function BPC_CollisionSound.BPC_CollisionSound_C.ExecuteUbergraph_BPC_CollisionSound
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_CollisionSound_C::ReceiveBeginPlay()
+void UBPC_CollisionSound_C::ExecuteUbergraph_BPC_CollisionSound(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CollisionSound_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BPC_CollisionSound_C", "ExecuteUbergraph_BPC_CollisionSound");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_CollisionSound_C_ExecuteUbergraph_BPC_CollisionSound Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -58,23 +64,17 @@ void UBPC_CollisionSound_C::HitEvent(class UPrimitiveComponent* HitComponent, cl
 }
 
 
-// Function BPC_CollisionSound.BPC_CollisionSound_C.ExecuteUbergraph_BPC_CollisionSound
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_CollisionSound.BPC_CollisionSound_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void UBPC_CollisionSound_C::ExecuteUbergraph_BPC_CollisionSound(int32 EntryPoint)
+void UBPC_CollisionSound_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CollisionSound_C", "ExecuteUbergraph_BPC_CollisionSound");
+		Func = Class->GetFunction("BPC_CollisionSound_C", "ReceiveBeginPlay");
 
-	Params::BPC_CollisionSound_C_ExecuteUbergraph_BPC_CollisionSound Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

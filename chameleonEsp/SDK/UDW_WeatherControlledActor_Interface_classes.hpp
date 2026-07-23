@@ -20,8 +20,8 @@ SDK_NAMESPACE_START
 class IUDW_WeatherControlledActor_Interface_C final
 {
 public:
-	void UDW_Instant_Update();
 	void UDW_Editor_Update();
+	void UDW_Instant_Update();
 
 public:
 	static class UClass* StaticClass()

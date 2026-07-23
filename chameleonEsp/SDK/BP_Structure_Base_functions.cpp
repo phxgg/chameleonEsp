@@ -16,20 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Structure_Base.BP_Structure_Base_C.Generate
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Structure_Base_C::Generate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Structure_Base_C", "Generate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_Structure_Base.BP_Structure_Base_C.ExecuteUbergraph_BP_Structure_Base
 // (Final, UbergraphFunction)
 // Parameters:
@@ -47,6 +33,20 @@ void ABP_Structure_Base_C::ExecuteUbergraph_BP_Structure_Base(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Structure_Base.BP_Structure_Base_C.Generate
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Structure_Base_C::Generate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Structure_Base_C", "Generate");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

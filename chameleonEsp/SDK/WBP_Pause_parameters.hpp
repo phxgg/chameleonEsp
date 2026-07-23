@@ -14,36 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_Pause.WBP_Pause_C.OnDestroySessionComplete_E73CF3A14099BA1780F00197E2D8169E
-// 0x000C (0x000C - 0x0000)
-struct WBP_Pause_C_OnDestroySessionComplete_E73CF3A14099BA1780F00197E2D8169E final
-{
-public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Pause_C_OnDestroySessionComplete_E73CF3A14099BA1780F00197E2D8169E;
-
-// Function WBP_Pause.WBP_Pause_C.OnCallFailed_E73CF3A14099BA1780F00197E2D8169E
-// 0x000C (0x000C - 0x0000)
-struct WBP_Pause_C_OnCallFailed_E73CF3A14099BA1780F00197E2D8169E final
-{
-public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Pause_C_OnCallFailed_E73CF3A14099BA1780F00197E2D8169E;
-
-// Function WBP_Pause.WBP_Pause_C.GetInitialFocusComponent
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_Pause_C_GetInitialFocusComponent final
-{
-public:
-	class UUINavComponent*                        ReturnValue_GetInitialFocusComponent;              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUINavComponent*                        CallFunc_GetInitialFocusComponent_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Pause_C_GetInitialFocusComponent;
-
 // Function WBP_Pause.WBP_Pause_C.ExecuteUbergraph_WBP_Pause
 // 0x00C0 (0x00C0 - 0x0000)
 struct WBP_Pause_C_ExecuteUbergraph_WBP_Pause final
@@ -85,6 +55,36 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Pause_C_ExecuteUbergraph_WBP_Pause;
+
+// Function WBP_Pause.WBP_Pause_C.GetInitialFocusComponent
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_Pause_C_GetInitialFocusComponent final
+{
+public:
+	class UUINavComponent*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUINavComponent*                        CallFunc_GetInitialFocusComponent_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Pause_C_GetInitialFocusComponent;
+
+// Function WBP_Pause.WBP_Pause_C.OnCallFailed_E73CF3A14099BA1780F00197E2D8169E
+// 0x000C (0x000C - 0x0000)
+struct WBP_Pause_C_OnCallFailed_E73CF3A14099BA1780F00197E2D8169E final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Pause_C_OnCallFailed_E73CF3A14099BA1780F00197E2D8169E;
+
+// Function WBP_Pause.WBP_Pause_C.OnDestroySessionComplete_E73CF3A14099BA1780F00197E2D8169E
+// 0x000C (0x000C - 0x0000)
+struct WBP_Pause_C_OnDestroySessionComplete_E73CF3A14099BA1780F00197E2D8169E final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Pause_C_OnDestroySessionComplete_E73CF3A14099BA1780F00197E2D8169E;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

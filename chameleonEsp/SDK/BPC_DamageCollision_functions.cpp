@@ -16,41 +16,43 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_DamageCollision.BPC_DamageCollision_C.ExecuteUbergraph_BPC_DamageCollision
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_DamageCollision.BPC_DamageCollision_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void UBPC_DamageCollision_C::ExecuteUbergraph_BPC_DamageCollision(int32 EntryPoint)
+void UBPC_DamageCollision_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DamageCollision_C", "ExecuteUbergraph_BPC_DamageCollision");
+		Func = Class->GetFunction("BPC_DamageCollision_C", "ReceiveBeginPlay");
 
-	Params::BPC_DamageCollision_C_ExecuteUbergraph_BPC_DamageCollision Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_DamageCollision.BPC_DamageCollision_C.PlayHitSound
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Function BPC_DamageCollision.BPC_DamageCollision_C.HitEvent
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              HitComponent                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   NormalImpulse                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
-void UBPC_DamageCollision_C::PlayHitSound(const struct FVector& Location)
+void UBPC_DamageCollision_C::HitEvent(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DamageCollision_C", "PlayHitSound");
+		Func = Class->GetFunction("BPC_DamageCollision_C", "HitEvent");
 
-	Params::BPC_DamageCollision_C_PlayHitSound Parms{};
+	Params::BPC_DamageCollision_C_HitEvent Parms{};
 
-	Parms.Location = std::move(Location);
+	Parms.HitComponent = HitComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.NormalImpulse = std::move(NormalImpulse);
+	Parms.Hit = std::move(Hit);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -86,45 +88,43 @@ void UBPC_DamageCollision_C::OverlapEvent(class UPrimitiveComponent* OverlappedC
 }
 
 
-// Function BPC_DamageCollision.BPC_DamageCollision_C.HitEvent
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BPC_DamageCollision.BPC_DamageCollision_C.PlayHitSound
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UPrimitiveComponent*              HitComponent                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   NormalImpulse                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_DamageCollision_C::HitEvent(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+void UBPC_DamageCollision_C::PlayHitSound(const struct FVector& Location)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DamageCollision_C", "HitEvent");
+		Func = Class->GetFunction("BPC_DamageCollision_C", "PlayHitSound");
 
-	Params::BPC_DamageCollision_C_HitEvent Parms{};
+	Params::BPC_DamageCollision_C_PlayHitSound Parms{};
 
-	Parms.HitComponent = HitComponent;
-	Parms.OtherActor = OtherActor;
-	Parms.OtherComp = OtherComp;
-	Parms.NormalImpulse = std::move(NormalImpulse);
-	Parms.Hit = std::move(Hit);
+	Parms.Location = std::move(Location);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_DamageCollision.BPC_DamageCollision_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// Function BPC_DamageCollision.BPC_DamageCollision_C.ExecuteUbergraph_BPC_DamageCollision
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_DamageCollision_C::ReceiveBeginPlay()
+void UBPC_DamageCollision_C::ExecuteUbergraph_BPC_DamageCollision(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DamageCollision_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BPC_DamageCollision_C", "ExecuteUbergraph_BPC_DamageCollision");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_DamageCollision_C_ExecuteUbergraph_BPC_DamageCollision Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

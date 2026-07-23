@@ -32,7 +32,7 @@ public:
 	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x04C0(0x00C8)()
 
 public:
-	void AnimGraph(struct FPoseLink* AnimGraph);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()

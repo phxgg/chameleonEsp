@@ -27,11 +27,11 @@ public:
 	class ABP_FirstPersonCharacter_Main_C*        TargetCharacter;                                   // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveCopyProperties(class APlayerState* NewPlayerState);
-	void ReceiveBeginPlay();
-	void Initialization(class ABP_FirstPersonCharacter_Main_C* Character);
-	void ExecuteUbergraph_BP_FirstPersonPlayerState(int32 EntryPoint);
 	void ChangeParamater_flaot_(class FName Name_0, double Value);
+	void ExecuteUbergraph_BP_FirstPersonPlayerState(int32 EntryPoint);
+	void Initialization(class ABP_FirstPersonCharacter_Main_C* Character);
+	void ReceiveBeginPlay();
+	void ReceiveCopyProperties(class APlayerState* NewPlayerState);
 
 public:
 	static class UClass* StaticClass()

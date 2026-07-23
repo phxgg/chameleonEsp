@@ -16,85 +16,37 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_HitOnConnect.BPC_HitOnConnect_C.SleepEvent
+// Function BPC_HitOnConnect.BPC_HitOnConnect_C.DestroySafe
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UPrimitiveComponent*              SleepingComponent                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class FName                             BoneName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_HitOnConnect_C::SleepEvent(class UPrimitiveComponent* SleepingComponent, class FName BoneName)
+void UBPC_HitOnConnect_C::DestroySafe()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_HitOnConnect_C", "SleepEvent");
-
-	Params::BPC_HitOnConnect_C_SleepEvent Parms{};
-
-	Parms.SleepingComponent = SleepingComponent;
-	Parms.BoneName = BoneName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_HitOnConnect.BPC_HitOnConnect_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// EEndPlayReason                          EndPlayReason_ReceiveEndPlay                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_HitOnConnect_C::ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_HitOnConnect_C", "ReceiveEndPlay");
-
-	Params::BPC_HitOnConnect_C_ReceiveEndPlay Parms{};
-
-	Parms.EndPlayReason_ReceiveEndPlay = EndPlayReason_ReceiveEndPlay;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_HitOnConnect.BPC_HitOnConnect_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBPC_HitOnConnect_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_HitOnConnect_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BPC_HitOnConnect_C", "DestroySafe");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_HitOnConnect.BPC_HitOnConnect_C.IsCanConnect
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BPC_HitOnConnect.BPC_HitOnConnect_C.ExecuteUbergraph_BPC_HitOnConnect
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class UPrimitiveComponent*              HitPrimitive                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonGameMode_Online_LINK_C*GameModeLINK                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool*                                   Rezult                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_HitOnConnect_C::IsCanConnect(class UPrimitiveComponent* HitPrimitive, class ABP_FirstPersonGameMode_Online_LINK_C* GameModeLINK, bool* Rezult)
+void UBPC_HitOnConnect_C::ExecuteUbergraph_BPC_HitOnConnect(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_HitOnConnect_C", "IsCanConnect");
+		Func = Class->GetFunction("BPC_HitOnConnect_C", "ExecuteUbergraph_BPC_HitOnConnect");
 
-	Params::BPC_HitOnConnect_C_IsCanConnect Parms{};
+	Params::BPC_HitOnConnect_C_ExecuteUbergraph_BPC_HitOnConnect Parms{};
 
-	Parms.HitPrimitive = HitPrimitive;
-	Parms.GameModeLINK = GameModeLINK;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Rezult != nullptr)
-		*Rezult = Parms.Rezult;
 }
 
 
@@ -126,37 +78,85 @@ void UBPC_HitOnConnect_C::HitEvent(class UPrimitiveComponent* HitComponent, clas
 }
 
 
-// Function BPC_HitOnConnect.BPC_HitOnConnect_C.ExecuteUbergraph_BPC_HitOnConnect
-// (Final, UbergraphFunction, HasDefaults)
+// Function BPC_HitOnConnect.BPC_HitOnConnect_C.IsCanConnect
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              HitPrimitive                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonGameMode_Online_LINK_C*GameModeLINK                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Rezult                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_HitOnConnect_C::ExecuteUbergraph_BPC_HitOnConnect(int32 EntryPoint)
+void UBPC_HitOnConnect_C::IsCanConnect(class UPrimitiveComponent* HitPrimitive, class ABP_FirstPersonGameMode_Online_LINK_C* GameModeLINK, bool* Rezult)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_HitOnConnect_C", "ExecuteUbergraph_BPC_HitOnConnect");
+		Func = Class->GetFunction("BPC_HitOnConnect_C", "IsCanConnect");
 
-	Params::BPC_HitOnConnect_C_ExecuteUbergraph_BPC_HitOnConnect Parms{};
+	Params::BPC_HitOnConnect_C_IsCanConnect Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.HitPrimitive = HitPrimitive;
+	Parms.GameModeLINK = GameModeLINK;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Rezult != nullptr)
+		*Rezult = Parms.Rezult;
+}
+
+
+// Function BPC_HitOnConnect.BPC_HitOnConnect_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBPC_HitOnConnect_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_HitOnConnect_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_HitOnConnect.BPC_HitOnConnect_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_HitOnConnect_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_HitOnConnect_C", "ReceiveEndPlay");
+
+	Params::BPC_HitOnConnect_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_HitOnConnect.BPC_HitOnConnect_C.DestroySafe
+// Function BPC_HitOnConnect.BPC_HitOnConnect_C.SleepEvent
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*              SleepingComponent                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class FName                             BoneName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_HitOnConnect_C::DestroySafe()
+void UBPC_HitOnConnect_C::SleepEvent(class UPrimitiveComponent* SleepingComponent, class FName BoneName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_HitOnConnect_C", "DestroySafe");
+		Func = Class->GetFunction("BPC_HitOnConnect_C", "SleepEvent");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_HitOnConnect_C_SleepEvent Parms{};
+
+	Parms.SleepingComponent = SleepingComponent;
+	Parms.BoneName = BoneName;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

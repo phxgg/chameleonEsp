@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_ClassType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 #include "BP_CraftedObject_Base_classes.hpp"
+#include "ENUM_HandType_structs.hpp"
 #include "EN_DamageType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -34,12 +34,12 @@ public:
 	int32                                         OverrideMass;                                      // 0x03D0(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void OnRep_OverrideMass();
-	void IsChangeImage(bool* IsInteract_IsChangeImage, class FText* OverrideText_IsChangeImage);
-	void GetItemInfo(ENUM_HandType* HandType_GetItemInfo, ENUM_ClassType* ClassType_GetItemInfo, bool* NotPickUp_GetItemInfo, struct FRotator* HaveRotation_GetItemInfo, struct FVector* Add_Position_GetItemInfo, bool* IsBoneAttach_GetItemInfo, ENUM_ItemBindType* BindType_GetItemInfo, class FName* BoneName_GetItemInfo, struct FST_ItemCoreDatas* CoreDatas_GetItemInfo);
+	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
 	void ExecuteUbergraph_BP_CraftedObject_GiftBox_2(int32 EntryPoint);
-	void Damage(double DamageValue_Damage, int32 TeamIndex_Damage, EN_DamageType DamageType_Damage, const struct FTransform& SourceAgentPoint_Damage, bool UnAvoidable_Damage, class FName DamageName_Damage, class AActor* SourceActor_Damage, struct FFinishFilter* Finish_Damage);
+	void GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* ClassType, bool* NotPickUp, struct FRotator* HaveRotation, struct FVector* Add_Position, bool* IsBoneAttach, ENUM_ItemBindType* BindType, class FName* BoneName, struct FST_ItemCoreDatas* CoreDatas);
+	void IsChangeImage(bool* IsInteract, class FText* OverrideText);
+	void OnRep_OverrideMass();
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

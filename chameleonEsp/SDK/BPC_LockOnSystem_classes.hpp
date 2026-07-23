@@ -27,12 +27,12 @@ public:
 	class UCameraComponent*                       First_Person_Camera;                               // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BPC_LockOnSystem(int32 EntryPoint);
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void LockOnCheck(const struct FTransform& OwnerViewTransform);
-	void LockOn(bool State);
-	void ReceiveBeginPlay();
 	void LockOnTargetFind(const struct FTransform& View_Transform, class AActor** RetrunActor, class ULBPC_LockOn_C** ReturnLockOnComponent);
+	void ReceiveBeginPlay();
+	void LockOn(bool State);
+	void LockOnCheck(const struct FTransform& OwnerViewTransform);
+	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_BPC_LockOnSystem(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

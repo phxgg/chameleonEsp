@@ -14,86 +14,21 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_ComboControl.BPC_ComboControl_C.StateChange
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_ComboControl_C_StateChange final
+// Function BPC_ComboControl.BPC_ComboControl_C.CanCombo
+// 0x0020 (0x0020 - 0x0000)
+struct BPC_ComboControl_C_CanCombo final
 {
 public:
-	class FName                                   NewState;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanCombo_0;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           CallFunc_GetCurrentActiveMontage_ReturnValue;      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPC_ComboControl_C_StateChange;
-
-// Function BPC_ComboControl.BPC_ComboControl_C.Setup
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_ComboControl_C_Setup final
-{
-public:
-	class APawn*                                  TargetCharacter;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ComboControl_C_Setup;
-
-// Function BPC_ComboControl.BPC_ComboControl_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_ComboControl_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ComboControl_C_ReceiveTick;
-
-// Function BPC_ComboControl.BPC_ComboControl_C.OnNotifyEnd_160FEEFC429FDD0964C81A82DBE63440
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_ComboControl_C_OnNotifyEnd_160FEEFC429FDD0964C81A82DBE63440 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ComboControl_C_OnNotifyEnd_160FEEFC429FDD0964C81A82DBE63440;
-
-// Function BPC_ComboControl.BPC_ComboControl_C.OnNotifyBegin_160FEEFC429FDD0964C81A82DBE63440
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_ComboControl_C_OnNotifyBegin_160FEEFC429FDD0964C81A82DBE63440 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ComboControl_C_OnNotifyBegin_160FEEFC429FDD0964C81A82DBE63440;
-
-// Function BPC_ComboControl.BPC_ComboControl_C.OnInterrupted_160FEEFC429FDD0964C81A82DBE63440
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_ComboControl_C_OnInterrupted_160FEEFC429FDD0964C81A82DBE63440 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ComboControl_C_OnInterrupted_160FEEFC429FDD0964C81A82DBE63440;
-
-// Function BPC_ComboControl.BPC_ComboControl_C.OnCompleted_160FEEFC429FDD0964C81A82DBE63440
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_ComboControl_C_OnCompleted_160FEEFC429FDD0964C81A82DBE63440 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ComboControl_C_OnCompleted_160FEEFC429FDD0964C81A82DBE63440;
-
-// Function BPC_ComboControl.BPC_ComboControl_C.OnBlendOut_160FEEFC429FDD0964C81A82DBE63440
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_ComboControl_C_OnBlendOut_160FEEFC429FDD0964C81A82DBE63440 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ComboControl_C_OnBlendOut_160FEEFC429FDD0964C81A82DBE63440;
-
-// Function BPC_ComboControl.BPC_ComboControl_C.LoopInput
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_ComboControl_C_LoopInput final
-{
-public:
-	bool                                          bEnabled;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ComboControl_C_LoopInput;
+DUMPER7_ASSERTS_BPC_ComboControl_C_CanCombo;
 
 // Function BPC_ComboControl.BPC_ComboControl_C.ExecuteUbergraph_BPC_ComboControl
 // 0x0100 (0x0100 - 0x0000)
@@ -144,21 +79,86 @@ public:
 };
 DUMPER7_ASSERTS_BPC_ComboControl_C_ExecuteUbergraph_BPC_ComboControl;
 
-// Function BPC_ComboControl.BPC_ComboControl_C.CanCombo
-// 0x0020 (0x0020 - 0x0000)
-struct BPC_ComboControl_C_CanCombo final
+// Function BPC_ComboControl.BPC_ComboControl_C.LoopInput
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_ComboControl_C_LoopInput final
 {
 public:
-	bool                                          CanCombo;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           CallFunc_GetCurrentActiveMontage_ReturnValue;      // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEnabled;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPC_ComboControl_C_CanCombo;
+DUMPER7_ASSERTS_BPC_ComboControl_C_LoopInput;
+
+// Function BPC_ComboControl.BPC_ComboControl_C.OnBlendOut_160FEEFC429FDD0964C81A82DBE63440
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_ComboControl_C_OnBlendOut_160FEEFC429FDD0964C81A82DBE63440 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ComboControl_C_OnBlendOut_160FEEFC429FDD0964C81A82DBE63440;
+
+// Function BPC_ComboControl.BPC_ComboControl_C.OnCompleted_160FEEFC429FDD0964C81A82DBE63440
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_ComboControl_C_OnCompleted_160FEEFC429FDD0964C81A82DBE63440 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ComboControl_C_OnCompleted_160FEEFC429FDD0964C81A82DBE63440;
+
+// Function BPC_ComboControl.BPC_ComboControl_C.OnInterrupted_160FEEFC429FDD0964C81A82DBE63440
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_ComboControl_C_OnInterrupted_160FEEFC429FDD0964C81A82DBE63440 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ComboControl_C_OnInterrupted_160FEEFC429FDD0964C81A82DBE63440;
+
+// Function BPC_ComboControl.BPC_ComboControl_C.OnNotifyBegin_160FEEFC429FDD0964C81A82DBE63440
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_ComboControl_C_OnNotifyBegin_160FEEFC429FDD0964C81A82DBE63440 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ComboControl_C_OnNotifyBegin_160FEEFC429FDD0964C81A82DBE63440;
+
+// Function BPC_ComboControl.BPC_ComboControl_C.OnNotifyEnd_160FEEFC429FDD0964C81A82DBE63440
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_ComboControl_C_OnNotifyEnd_160FEEFC429FDD0964C81A82DBE63440 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ComboControl_C_OnNotifyEnd_160FEEFC429FDD0964C81A82DBE63440;
+
+// Function BPC_ComboControl.BPC_ComboControl_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_ComboControl_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ComboControl_C_ReceiveTick;
+
+// Function BPC_ComboControl.BPC_ComboControl_C.Setup
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_ComboControl_C_Setup final
+{
+public:
+	class APawn*                                  TargetCharacter;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ComboControl_C_Setup;
+
+// Function BPC_ComboControl.BPC_ComboControl_C.StateChange
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_ComboControl_C_StateChange final
+{
+public:
+	class FName                                   NewState;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ComboControl_C_StateChange;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "EN_StanType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "EN_DamageType_structs.hpp"
+#include "EN_StanType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -34,18 +34,18 @@ public:
 	class ABP_SnowBall_Under_C*                   Bottom;                                            // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void StanDamage(EN_StanType StanType);
-	void StaminaDamage(double Value);
-	void SnowBallActivate();
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveDestroyed();
-	void ReceiveBeginPlay();
-	void GetParryState(bool* State);
-	void ExecuteUbergraph_BP_SnowBall_Top(int32 EntryPoint);
-	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
-	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
-	void BndEvt__BP_SnowBall_Top_StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
 	void BndEvt__BP_SnowBall_Top_SearchCharacter_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__BP_SnowBall_Top_StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
+	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
+	void ExecuteUbergraph_BP_SnowBall_Top(int32 EntryPoint);
+	void GetParryState(bool* State);
+	void ReceiveBeginPlay();
+	void ReceiveDestroyed();
+	void ReceiveTick(float DeltaSeconds);
+	void SnowBallActivate();
+	void StaminaDamage(double Value);
+	void StanDamage(EN_StanType StanType);
 
 public:
 	static class UClass* StaticClass()

@@ -27,12 +27,12 @@ public:
 	struct FIntVector2                            MassRange;                                         // 0x035C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_CraftedObject_Strage_Base(int32 EntryPoint);
-	void MassStateUpdate();
-	void ReceiveBeginPlay();
-	void OnRep_Mass();
-	void SetWeight(double float_0);
 	void IsChangeImage(bool* IsInteract, class FText* OverrideText);
+	void SetWeight(double float_0);
+	void OnRep_Mass();
+	void ReceiveBeginPlay();
+	void MassStateUpdate();
+	void ExecuteUbergraph_BP_CraftedObject_Strage_Base(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

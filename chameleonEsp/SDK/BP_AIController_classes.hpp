@@ -26,10 +26,10 @@ public:
 	struct FTimerHandle                           Timer;                                             // 0x03D8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void Forget_Target();
-	void ExecuteUbergraph_BP_AIController(int32 EntryPoint);
 	void BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor* Actor, const struct FAIStimulus& Stimulus);
+	void ExecuteUbergraph_BP_AIController(int32 EntryPoint);
+	void Forget_Target();
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

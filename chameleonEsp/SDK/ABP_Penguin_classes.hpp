@@ -61,10 +61,10 @@ public:
 	double                                        DefaultMaxSpeed;                                   // 0x0A88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_ABP_Penguin(int32 EntryPoint);
-	void BlueprintUpdateAnimation(float DeltaTimeX_BlueprintUpdateAnimation);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void BlueprintInitializeAnimation();
-	void AnimGraph(struct FPoseLink* AnimGraph);
+	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void ExecuteUbergraph_ABP_Penguin(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

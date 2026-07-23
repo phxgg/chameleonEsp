@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "EN_StanType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "EN_DamageType_structs.hpp"
+#include "EN_StanType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -33,17 +33,17 @@ public:
 	int32                                         BodyIndex;                                         // 0x02E0(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void UnZip();
-	void StanDamage(EN_StanType StanType);
-	void StaminaDamage(double Value);
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveDestroyed();
-	void ReceiveBeginPlay();
-	void Heat(double Value);
-	void GetParryState(bool* State);
-	void ExecuteUbergraph_BP_FreezeBodyIce(int32 EntryPoint);
-	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
 	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
+	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
+	void ExecuteUbergraph_BP_FreezeBodyIce(int32 EntryPoint);
+	void GetParryState(bool* State);
+	void Heat(double Value);
+	void ReceiveBeginPlay();
+	void ReceiveDestroyed();
+	void ReceiveTick(float DeltaSeconds);
+	void StaminaDamage(double Value);
+	void StanDamage(EN_StanType StanType);
+	void UnZip();
 
 public:
 	static class UClass* StaticClass()

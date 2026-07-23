@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ST_InputDeviceImage_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ST_InputDeviceImage_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 #include "UINavigation_structs.hpp"
@@ -41,12 +41,12 @@ public:
 	struct FST_InputDeviceImage                   OverrideImages;                                    // 0x03D0(0x0078)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
 
 public:
-	void UpdateInputDeviceAll(EInputType InputType);
-	void UpdateImage();
-	void SetIsController(bool IsController);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_KeyImage(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_WBP_KeyImage(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SetIsController(bool IsController_0);
+	void UpdateImage();
+	void UpdateInputDeviceAll(EInputType InputType);
 
 public:
 	static class UClass* StaticClass()

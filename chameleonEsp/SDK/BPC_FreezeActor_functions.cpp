@@ -16,21 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_FreezeActor.BPC_FreezeActor_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// Function BPC_FreezeActor.BPC_FreezeActor_C.ExecuteUbergraph_BPC_FreezeActor
+// (Final, UbergraphFunction)
 // Parameters:
-// EEndPlayReason                          EndPlayReason_ReceiveEndPlay                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_FreezeActor_C::ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay)
+void UBPC_FreezeActor_C::ExecuteUbergraph_BPC_FreezeActor(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FreezeActor_C", "ReceiveEndPlay");
+		Func = Class->GetFunction("BPC_FreezeActor_C", "ExecuteUbergraph_BPC_FreezeActor");
 
-	Params::BPC_FreezeActor_C_ReceiveEndPlay Parms{};
+	Params::BPC_FreezeActor_C_ExecuteUbergraph_BPC_FreezeActor Parms{};
 
-	Parms.EndPlayReason_ReceiveEndPlay = EndPlayReason_ReceiveEndPlay;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -50,21 +50,21 @@ void UBPC_FreezeActor_C::ReceiveBeginPlay()
 }
 
 
-// Function BPC_FreezeActor.BPC_FreezeActor_C.ExecuteUbergraph_BPC_FreezeActor
-// (Final, UbergraphFunction)
+// Function BPC_FreezeActor.BPC_FreezeActor_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_FreezeActor_C::ExecuteUbergraph_BPC_FreezeActor(int32 EntryPoint)
+void UBPC_FreezeActor_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_FreezeActor_C", "ExecuteUbergraph_BPC_FreezeActor");
+		Func = Class->GetFunction("BPC_FreezeActor_C", "ReceiveEndPlay");
 
-	Params::BPC_FreezeActor_C_ExecuteUbergraph_BPC_FreezeActor Parms{};
+	Params::BPC_FreezeActor_C_ReceiveEndPlay Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -16,74 +16,45 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.UpdateMaxValue
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_CharacterStatusGaugeControl_C_UpdateMaxValue final
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.AnimationState
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_CharacterStatusGaugeControl_C_AnimationState final
 {
 public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_UpdateMaxValue;
+DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_AnimationState;
 
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.SnapValue
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_CharacterStatusGaugeControl_C_SnapValue final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_SnapValue;
-
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_CharacterStatusGaugeControl_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_ReceiveTick;
-
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.GetRowValue
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_CharacterStatusGaugeControl_C_GetRowValue final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_GetRowValue;
-
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.GetNormalizeValue
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.AutoHeal
 // 0x0010 (0x0010 - 0x0000)
-struct BPC_CharacterStatusGaugeControl_C_GetNormalizeValue final
+struct BPC_CharacterStatusGaugeControl_C_AutoHeal final
 {
 public:
-	double                                        NormalizeValue;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AddValuePerSec;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Rate_0;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_GetNormalizeValue;
+DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_AutoHeal;
 
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.GetNormalizeAnimationValue
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.AutoHealDelay
+// 0x0018 (0x0018 - 0x0000)
+struct BPC_CharacterStatusGaugeControl_C_AutoHealDelay final
+{
+public:
+	double                                        AddValuePerSec;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Rate_0;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        WaitTime;                                          // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_AutoHealDelay;
+
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.ChangeValue
 // 0x0010 (0x0010 - 0x0000)
-struct BPC_CharacterStatusGaugeControl_C_GetNormalizeAnimationValue final
+struct BPC_CharacterStatusGaugeControl_C_ChangeValue final
 {
 public:
-	double                                        NormalizeValue;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AddValue;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AnimationTime;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_GetNormalizeAnimationValue;
-
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.GetAnimationStartValue
-// 0x0020 (0x0020 - 0x0000)
-struct BPC_CharacterStatusGaugeControl_C_GetAnimationStartValue final
-{
-public:
-	bool                                          Normalize;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        StartValue;                                        // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_GetAnimationStartValue;
+DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_ChangeValue;
 
 // Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.ExecuteUbergraph_BPC_CharacterStatusGaugeControl
 // 0x00F8 (0x00F8 - 0x0000)
@@ -132,45 +103,74 @@ public:
 };
 DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_ExecuteUbergraph_BPC_CharacterStatusGaugeControl;
 
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.ChangeValue
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.GetAnimationStartValue
+// 0x0020 (0x0020 - 0x0000)
+struct BPC_CharacterStatusGaugeControl_C_GetAnimationStartValue final
+{
+public:
+	bool                                          Normalize;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        StartValue;                                        // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_GetAnimationStartValue;
+
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.GetNormalizeAnimationValue
 // 0x0010 (0x0010 - 0x0000)
-struct BPC_CharacterStatusGaugeControl_C_ChangeValue final
+struct BPC_CharacterStatusGaugeControl_C_GetNormalizeAnimationValue final
 {
 public:
-	double                                        AddValue;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        AnimationTime;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        NormalizeValue;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_ChangeValue;
+DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_GetNormalizeAnimationValue;
 
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.AutoHealDelay
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_CharacterStatusGaugeControl_C_AutoHealDelay final
-{
-public:
-	double                                        AddValuePerSec;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Rate;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        WaitTime;                                          // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_AutoHealDelay;
-
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.AutoHeal
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.GetNormalizeValue
 // 0x0010 (0x0010 - 0x0000)
-struct BPC_CharacterStatusGaugeControl_C_AutoHeal final
+struct BPC_CharacterStatusGaugeControl_C_GetNormalizeValue final
 {
 public:
-	double                                        AddValuePerSec;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Rate;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        NormalizeValue;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_AutoHeal;
+DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_GetNormalizeValue;
 
-// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.AnimationState
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_CharacterStatusGaugeControl_C_AnimationState final
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.GetRowValue
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_CharacterStatusGaugeControl_C_GetRowValue final
 {
 public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_AnimationState;
+DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_GetRowValue;
+
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_CharacterStatusGaugeControl_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_ReceiveTick;
+
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.SnapValue
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_CharacterStatusGaugeControl_C_SnapValue final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_SnapValue;
+
+// Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.UpdateMaxValue
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_CharacterStatusGaugeControl_C_UpdateMaxValue final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_CharacterStatusGaugeControl_C_UpdateMaxValue;
 
 // Function BPC_CharacterStatusGaugeControl.BPC_CharacterStatusGaugeControl_C.GetLastDirection
 // 0x0004 (0x0004 - 0x0000)

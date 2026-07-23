@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_ClassType_structs.hpp"
-#include "Engine_structs.hpp"
 #include "BP_CraftedObject_Strage_Base_classes.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
+#include "Engine_structs.hpp"
 #include "ENUM_HandType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -29,12 +29,12 @@ public:
 	bool                                          NoGrab;                                            // 0x0374(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveBeginPlay();
-	void ReceiveActorBeginOverlap(class AActor* OtherActor_ReceiveActorBeginOverlap);
-	void IsChangeImage(bool* IsInteract_IsChangeImage, class FText* OverrideText_IsChangeImage);
-	void GetItemInfo(ENUM_HandType* HandType_GetItemInfo, ENUM_ClassType* ClassType_GetItemInfo, bool* NotPickUp_GetItemInfo, struct FRotator* HaveRotation_GetItemInfo, struct FVector* Add_Position_GetItemInfo, bool* IsBoneAttach_GetItemInfo, ENUM_ItemBindType* BindType_GetItemInfo, class FName* BoneName_GetItemInfo, struct FST_ItemCoreDatas* CoreDatas_GetItemInfo);
 	void ExecuteUbergraph_BP_CraftedObject_GluePlane(int32 EntryPoint);
+	void GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* ClassType, bool* NotPickUp, struct FRotator* HaveRotation, struct FVector* Add_Position, bool* IsBoneAttach, ENUM_ItemBindType* BindType, class FName* BoneName, struct FST_ItemCoreDatas* CoreDatas);
+	void IsChangeImage(bool* IsInteract, class FText* OverrideText);
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()

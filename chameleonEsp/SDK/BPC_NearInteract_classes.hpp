@@ -35,12 +35,12 @@ public:
 	class UWidgetComponent*                       WidgetComp;                                        // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetCheckState(bool State);
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay);
-	void ReceiveBeginPlay();
-	void GetSelectActor(class AActor** CurrentSelectActor);
 	void ExecuteUbergraph_BPC_NearInteract(int32 EntryPoint);
+	void GetSelectActor(class AActor** CurrentSelectActor_0);
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ReceiveTick(float DeltaSeconds);
+	void SetCheckState(bool State);
 
 public:
 	static class UClass* StaticClass()

@@ -16,129 +16,39 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.ExecuteUbergraph_BPC_ItemReplicateController_Base
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ItemReplicateController_Base_C::ExecuteUbergraph_BPC_ItemReplicateController_Base(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "ExecuteUbergraph_BPC_ItemReplicateController_Base");
-
-	Params::BPC_ItemReplicateController_Base_C_ExecuteUbergraph_BPC_ItemReplicateController_Base Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.CharacterReplicated
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_ItemReplicateController_Base_C::CharacterReplicated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "CharacterReplicated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.UpdateOwnerItem
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_ItemReplicateController_Base_C::UpdateOwnerItem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "UpdateOwnerItem");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.RightItemUpdate
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_ItemReplicateController_Base_C::RightItemUpdate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "RightItemUpdate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.DestroySelf
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           DestroyedActor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ItemReplicateController_Base_C::DestroySelf(class AActor* DestroyedActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "DestroySelf");
-
-	Params::BPC_ItemReplicateController_Base_C_DestroySelf Parms{};
-
-	Parms.DestroyedActor = DestroyedActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.ReceiveBeginPlay
+// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_ItemReplicateController_Base_C::ReceiveBeginPlay()
+void UBPC_ItemReplicateController_Base_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "ReceiveTick");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_ItemReplicateController_Base_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.OnRep_OwnerCharacter
+// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.UseItem(Local)
 // (BlueprintCallable, BlueprintEvent)
-
-void UBPC_ItemReplicateController_Base_C::OnRep_OwnerCharacter()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "OnRep_OwnerCharacter");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.UseItem(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_ItemReplicateController_Base_C::UseItem_Server_(bool State)
+void UBPC_ItemReplicateController_Base_C::UseItem_Local_(bool State)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "UseItem(Server)");
+		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "UseItem(Local)");
 
-	Params::BPC_ItemReplicateController_Base_C_UseItem_Server_ Parms{};
+	Params::BPC_ItemReplicateController_Base_C_UseItem_Local_ Parms{};
 
 	Parms.State = State;
 
@@ -166,19 +76,19 @@ void UBPC_ItemReplicateController_Base_C::UseItem_Replicate_(bool State)
 }
 
 
-// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.UseItem(Local)
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.UseItem(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_ItemReplicateController_Base_C::UseItem_Local_(bool State)
+void UBPC_ItemReplicateController_Base_C::UseItem_Server_(bool State)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "UseItem(Local)");
+		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "UseItem(Server)");
 
-	Params::BPC_ItemReplicateController_Base_C_UseItem_Local_ Parms{};
+	Params::BPC_ItemReplicateController_Base_C_UseItem_Server_ Parms{};
 
 	Parms.State = State;
 
@@ -186,21 +96,111 @@ void UBPC_ItemReplicateController_Base_C::UseItem_Local_(bool State)
 }
 
 
-// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.OnRep_OwnerCharacter
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_ItemReplicateController_Base_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
+void UBPC_ItemReplicateController_Base_C::OnRep_OwnerCharacter()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "ReceiveTick");
+		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "OnRep_OwnerCharacter");
 
-	Params::BPC_ItemReplicateController_Base_C_ReceiveTick Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
+
+// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBPC_ItemReplicateController_Base_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.DestroySelf
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           DestroyedActor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemReplicateController_Base_C::DestroySelf(class AActor* DestroyedActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "DestroySelf");
+
+	Params::BPC_ItemReplicateController_Base_C_DestroySelf Parms{};
+
+	Parms.DestroyedActor = DestroyedActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.RightItemUpdate
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_ItemReplicateController_Base_C::RightItemUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "RightItemUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.UpdateOwnerItem
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_ItemReplicateController_Base_C::UpdateOwnerItem()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "UpdateOwnerItem");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.CharacterReplicated
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_ItemReplicateController_Base_C::CharacterReplicated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "CharacterReplicated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_ItemReplicateController_Base.BPC_ItemReplicateController_Base_C.ExecuteUbergraph_BPC_ItemReplicateController_Base
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemReplicateController_Base_C::ExecuteUbergraph_BPC_ItemReplicateController_Base(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Base_C", "ExecuteUbergraph_BPC_ItemReplicateController_Base");
+
+	Params::BPC_ItemReplicateController_Base_C_ExecuteUbergraph_BPC_ItemReplicateController_Base Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

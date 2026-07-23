@@ -10,24 +10,22 @@
 
 #include "Basic.hpp"
 
-#include "ST_EventValue_structs.hpp"
 #include "EN_CinemaPlayMode_structs.hpp"
+#include "ST_EventValue_structs.hpp"
 #include "MovieScene_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_CinemaDevice.BP_CinemaDevice_C.PlayDeviceSequence
-// 0x0010 (0x0010 - 0x0000)
-struct BP_CinemaDevice_C_PlayDeviceSequence final
+// Function BP_CinemaDevice.BP_CinemaDevice_C.BndEvt__BP_CinemaDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature
+// 0x0028 (0x0028 - 0x0000)
+struct BP_CinemaDevice_C_BndEvt__BP_CinemaDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature final
 {
 public:
-	class UMovieSceneSequencePlayer*              LevelSequence;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EN_CinemaPlayMode                             PlayMode;                                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FST_EventValue                         SignalValue;                                       // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CinemaDevice_C_PlayDeviceSequence;
+DUMPER7_ASSERTS_BP_CinemaDevice_C_BndEvt__BP_CinemaDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature;
 
 // Function BP_CinemaDevice.BP_CinemaDevice_C.ExecuteUbergraph_BP_CinemaDevice
 // 0x0118 (0x0118 - 0x0000)
@@ -69,14 +67,16 @@ public:
 };
 DUMPER7_ASSERTS_BP_CinemaDevice_C_ExecuteUbergraph_BP_CinemaDevice;
 
-// Function BP_CinemaDevice.BP_CinemaDevice_C.BndEvt__BP_CinemaDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature
-// 0x0028 (0x0028 - 0x0000)
-struct BP_CinemaDevice_C_BndEvt__BP_CinemaDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature final
+// Function BP_CinemaDevice.BP_CinemaDevice_C.PlayDeviceSequence
+// 0x0010 (0x0010 - 0x0000)
+struct BP_CinemaDevice_C_PlayDeviceSequence final
 {
 public:
-	struct FST_EventValue                         SignalValue;                                       // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UMovieSceneSequencePlayer*              LevelSequence;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	EN_CinemaPlayMode                             PlayMode_0;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CinemaDevice_C_BndEvt__BP_CinemaDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature;
+DUMPER7_ASSERTS_BP_CinemaDevice_C_PlayDeviceSequence;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

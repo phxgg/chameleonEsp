@@ -27,9 +27,9 @@ public:
 	bool                                          Success;                                           // 0x00E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetToPosition(const struct FVector& Vector, const struct FVector& CharactorPosition, class APawn* SelfPawn);
-	void ReceiveExecuteAI(class AAIController* OwnerController_ReceiveExecuteAI, class APawn* ControlledPawn_ReceiveExecuteAI);
 	void ExecuteUbergraph_BTTask_Avoidance(int32 EntryPoint);
+	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void SetToPosition(const struct FVector& Vector, const struct FVector& CharactorPosition, class APawn* SelfPawn);
 
 public:
 	static class UClass* StaticClass()

@@ -16,43 +16,24 @@
 
 SDK_NAMESPACE_START
 
-// Function ABP_Penguin.ABP_Penguin_C.ExecuteUbergraph_ABP_Penguin
-// (Final, UbergraphFunction)
+// Function ABP_Penguin.ABP_Penguin_C.AnimGraph
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
-void UABP_Penguin_C::ExecuteUbergraph_ABP_Penguin(int32 EntryPoint)
+void UABP_Penguin_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Penguin_C", "ExecuteUbergraph_ABP_Penguin");
+		Func = Class->GetFunction("ABP_Penguin_C", "AnimGraph");
 
-	Params::ABP_Penguin_C_ExecuteUbergraph_ABP_Penguin Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::ABP_Penguin_C_AnimGraph Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function ABP_Penguin.ABP_Penguin_C.BlueprintUpdateAnimation
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaTimeX_BlueprintUpdateAnimation                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UABP_Penguin_C::BlueprintUpdateAnimation(float DeltaTimeX_BlueprintUpdateAnimation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Penguin_C", "BlueprintUpdateAnimation");
-
-	Params::ABP_Penguin_C_BlueprintUpdateAnimation Parms{};
-
-	Parms.DeltaTimeX_BlueprintUpdateAnimation = DeltaTimeX_BlueprintUpdateAnimation;
-
-	UObject::ProcessEvent(Func, &Parms);
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
 
@@ -70,24 +51,43 @@ void UABP_Penguin_C::BlueprintInitializeAnimation()
 }
 
 
-// Function ABP_Penguin.ABP_Penguin_C.AnimGraph
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function ABP_Penguin.ABP_Penguin_C.BlueprintUpdateAnimation
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FPoseLink*                       AnimGraph                                              (Parm, OutParm, NoDestructor)
+// float                                   DeltaTimeX                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UABP_Penguin_C::AnimGraph(struct FPoseLink* AnimGraph)
+void UABP_Penguin_C::BlueprintUpdateAnimation(float DeltaTimeX)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Penguin_C", "AnimGraph");
+		Func = Class->GetFunction("ABP_Penguin_C", "BlueprintUpdateAnimation");
 
-	Params::ABP_Penguin_C_AnimGraph Parms{};
+	Params::ABP_Penguin_C_BlueprintUpdateAnimation Parms{};
+
+	Parms.DeltaTimeX = DeltaTimeX;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	if (AnimGraph != nullptr)
-		*AnimGraph = std::move(Parms.AnimGraph);
+
+// Function ABP_Penguin.ABP_Penguin_C.ExecuteUbergraph_ABP_Penguin
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UABP_Penguin_C::ExecuteUbergraph_ABP_Penguin(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_Penguin_C", "ExecuteUbergraph_ABP_Penguin");
+
+	Params::ABP_Penguin_C_ExecuteUbergraph_ABP_Penguin Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

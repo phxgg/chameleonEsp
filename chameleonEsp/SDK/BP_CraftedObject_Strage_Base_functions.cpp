@@ -16,65 +16,28 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.ExecuteUbergraph_BP_CraftedObject_Strage_Base
-// (Final, UbergraphFunction)
+// Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.IsChangeImage
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   IsInteract                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText*                            OverrideText                                           (Parm, OutParm)
 
-void ABP_CraftedObject_Strage_Base_C::ExecuteUbergraph_BP_CraftedObject_Strage_Base(int32 EntryPoint)
+void ABP_CraftedObject_Strage_Base_C::IsChangeImage(bool* IsInteract, class FText* OverrideText)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Strage_Base_C", "ExecuteUbergraph_BP_CraftedObject_Strage_Base");
+		Func = Class->GetFunction("BP_CraftedObject_Strage_Base_C", "IsChangeImage");
 
-	Params::BP_CraftedObject_Strage_Base_C_ExecuteUbergraph_BP_CraftedObject_Strage_Base Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::BP_CraftedObject_Strage_Base_C_IsChangeImage Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
+	if (IsInteract != nullptr)
+		*IsInteract = Parms.IsInteract;
 
-// Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.MassStateUpdate
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_CraftedObject_Strage_Base_C::MassStateUpdate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Strage_Base_C", "MassStateUpdate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_CraftedObject_Strage_Base_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Strage_Base_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.OnRep_Mass
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_CraftedObject_Strage_Base_C::OnRep_Mass()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Strage_Base_C", "OnRep_Mass");
-
-	UObject::ProcessEvent(Func, nullptr);
+	if (OverrideText != nullptr)
+		*OverrideText = std::move(Parms.OverrideText);
 }
 
 
@@ -98,28 +61,65 @@ void ABP_CraftedObject_Strage_Base_C::SetWeight(double float_0)
 }
 
 
-// Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.IsChangeImage
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   IsInteract                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText*                            OverrideText                                           (Parm, OutParm)
+// Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.OnRep_Mass
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_CraftedObject_Strage_Base_C::IsChangeImage(bool* IsInteract, class FText* OverrideText)
+void ABP_CraftedObject_Strage_Base_C::OnRep_Mass()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Strage_Base_C", "IsChangeImage");
+		Func = Class->GetFunction("BP_CraftedObject_Strage_Base_C", "OnRep_Mass");
 
-	Params::BP_CraftedObject_Strage_Base_C_IsChangeImage Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_CraftedObject_Strage_Base_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Strage_Base_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.MassStateUpdate
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_CraftedObject_Strage_Base_C::MassStateUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Strage_Base_C", "MassStateUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CraftedObject_Strage_Base.BP_CraftedObject_Strage_Base_C.ExecuteUbergraph_BP_CraftedObject_Strage_Base
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CraftedObject_Strage_Base_C::ExecuteUbergraph_BP_CraftedObject_Strage_Base(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Strage_Base_C", "ExecuteUbergraph_BP_CraftedObject_Strage_Base");
+
+	Params::BP_CraftedObject_Strage_Base_C_ExecuteUbergraph_BP_CraftedObject_Strage_Base Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsInteract != nullptr)
-		*IsInteract = Parms.IsInteract;
-
-	if (OverrideText != nullptr)
-		*OverrideText = std::move(Parms.OverrideText);
 }
 
 

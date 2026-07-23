@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ABP_LINK_Penguin_V2_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ABP_LINK_Penguin_V2_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 #include "ControlRig_structs.hpp"
 #include "CoreUObject_structs.hpp"
@@ -121,15 +121,15 @@ public:
 	bool                                          NeckLock;                                          // 0x1EB1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_ABP_LINK_Penguin_V2(int32 EntryPoint);
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_F4E985C14164C1C0D1D5BE9BF725BAAC();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_D09CF7F745E1359D3516DFA5AAEC05A8();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_LookAt_EEAB3B4443037712C54AA598729B082D();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_LookAt_B097C67F4524F41CE62DB7B98FDF98FB();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_ControlRig_BCFB15F94A1A43167845238FB0435337();
-	void BlueprintUpdateAnimation(float DeltaTimeX_BlueprintUpdateAnimation);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void BlueprintInitializeAnimation();
-	void AnimGraph(struct FPoseLink* AnimGraph);
+	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_ControlRig_BCFB15F94A1A43167845238FB0435337();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_LookAt_B097C67F4524F41CE62DB7B98FDF98FB();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_LookAt_EEAB3B4443037712C54AA598729B082D();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_D09CF7F745E1359D3516DFA5AAEC05A8();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_F4E985C14164C1C0D1D5BE9BF725BAAC();
+	void ExecuteUbergraph_ABP_LINK_Penguin_V2(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

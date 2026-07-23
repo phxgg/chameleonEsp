@@ -28,17 +28,17 @@ public:
 	int32                                         SelfSlotIndex;                                     // 0x00D8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BPC_ItemReplicateController_Base(int32 EntryPoint);
-	void CharacterReplicated();
-	void UpdateOwnerItem();
-	void RightItemUpdate();
-	void DestroySelf(class AActor* DestroyedActor);
-	void ReceiveBeginPlay();
-	void OnRep_OwnerCharacter();
-	void UseItem_Server_(bool State);
-	void UseItem_Replicate_(bool State);
+	void ReceiveTick(float DeltaSeconds);
 	void UseItem_Local_(bool State);
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
+	void UseItem_Replicate_(bool State);
+	void UseItem_Server_(bool State);
+	void OnRep_OwnerCharacter();
+	void ReceiveBeginPlay();
+	void DestroySelf(class AActor* DestroyedActor);
+	void RightItemUpdate();
+	void UpdateOwnerItem();
+	void CharacterReplicated();
+	void ExecuteUbergraph_BPC_ItemReplicateController_Base(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

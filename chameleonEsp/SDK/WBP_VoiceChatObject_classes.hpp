@@ -27,8 +27,8 @@ public:
 	class FText                                   TargetText;                                        // 0x0358(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
-	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void ExecuteUbergraph_WBP_VoiceChatObject(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()

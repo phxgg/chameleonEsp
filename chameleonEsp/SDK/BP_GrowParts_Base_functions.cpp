@@ -16,23 +16,39 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_GrowParts_Base.BP_GrowParts_Base_C.ExecuteUbergraph_BP_GrowParts_Base
-// (Final, UbergraphFunction)
+// Function BP_GrowParts_Base.BP_GrowParts_Base_C.GenerateParts
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FRandomStream&             Seed                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor)
+// int32                                   DepthIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GrowParts_Base_C::ExecuteUbergraph_BP_GrowParts_Base(int32 EntryPoint)
+void ABP_GrowParts_Base_C::GenerateParts(const struct FRandomStream& Seed, int32 DepthIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GrowParts_Base_C", "ExecuteUbergraph_BP_GrowParts_Base");
+		Func = Class->GetFunction("BP_GrowParts_Base_C", "GenerateParts");
 
-	Params::BP_GrowParts_Base_C_ExecuteUbergraph_BP_GrowParts_Base Parms{};
+	Params::BP_GrowParts_Base_C_GenerateParts Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Seed = std::move(Seed);
+	Parms.DepthIndex = DepthIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GrowParts_Base.BP_GrowParts_Base_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_GrowParts_Base_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GrowParts_Base_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -58,37 +74,21 @@ void ABP_GrowParts_Base_C::Generate(const struct FRandomStream& Seed, int32 Dept
 }
 
 
-// Function BP_GrowParts_Base.BP_GrowParts_Base_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_GrowParts_Base_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GrowParts_Base_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GrowParts_Base.BP_GrowParts_Base_C.GenerateParts
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_GrowParts_Base.BP_GrowParts_Base_C.ExecuteUbergraph_BP_GrowParts_Base
+// (Final, UbergraphFunction)
 // Parameters:
-// const struct FRandomStream&             Seed                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor)
-// int32                                   DepthIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GrowParts_Base_C::GenerateParts(const struct FRandomStream& Seed, int32 DepthIndex)
+void ABP_GrowParts_Base_C::ExecuteUbergraph_BP_GrowParts_Base(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GrowParts_Base_C", "GenerateParts");
+		Func = Class->GetFunction("BP_GrowParts_Base_C", "ExecuteUbergraph_BP_GrowParts_Base");
 
-	Params::BP_GrowParts_Base_C_GenerateParts Parms{};
+	Params::BP_GrowParts_Base_C_ExecuteUbergraph_BP_GrowParts_Base Parms{};
 
-	Parms.Seed = std::move(Seed);
-	Parms.DepthIndex = DepthIndex;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -26,10 +26,10 @@ public:
 	bool                                          IsToClimb;                                         // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Trigger(const struct FSimulationTickParams& Params_Trigger);
 	void ExecuteUbergraph_BP_ClimbingCheck(int32 EntryPoint);
+	void Trigger(const struct FSimulationTickParams& Params_0);
 
-	struct FTransitionEvalResult Evaluate(const struct FSimulationTickParams& Params_Evaluate) const;
+	struct FTransitionEvalResult Evaluate(const struct FSimulationTickParams& Params_0) const;
 
 public:
 	static class UClass* StaticClass()

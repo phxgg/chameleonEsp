@@ -16,23 +16,99 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_FirstPersonPlayerController_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
+void ABP_FirstPersonPlayerController_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "ReceiveTick");
+		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "ReceiveBeginPlay");
 
-	Params::BP_FirstPersonPlayerController_C_ReceiveTick Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
+
+// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.ExecuteUbergraph_BP_FirstPersonPlayerController
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonPlayerController_C::ExecuteUbergraph_BP_FirstPersonPlayerController(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "ExecuteUbergraph_BP_FirstPersonPlayerController");
+
+	Params::BP_FirstPersonPlayerController_C_ExecuteUbergraph_BP_FirstPersonPlayerController Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.SetAllWidgetVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsShow                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonPlayerController_C::SetAllWidgetVisibility(bool IsShow)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "SetAllWidgetVisibility");
+
+	Params::BP_FirstPersonPlayerController_C_SetAllWidgetVisibility Parms{};
+
+	Parms.IsShow = IsShow;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.OnRootWidgetRemoved
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_FirstPersonPlayerController_C::OnRootWidgetRemoved()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "OnRootWidgetRemoved");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.OnRootWidgetAdded
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_FirstPersonPlayerController_C::OnRootWidgetAdded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "OnRootWidgetAdded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.AddMainWidgets
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_FirstPersonPlayerController_C::AddMainWidgets()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "AddMainWidgets");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -58,99 +134,23 @@ void ABP_FirstPersonPlayerController_C::SendToText(const class FString& MainText
 }
 
 
-// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.AddMainWidgets
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_FirstPersonPlayerController_C::AddMainWidgets()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "AddMainWidgets");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.OnRootWidgetAdded
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_FirstPersonPlayerController_C::OnRootWidgetAdded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "OnRootWidgetAdded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.OnRootWidgetRemoved
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_FirstPersonPlayerController_C::OnRootWidgetRemoved()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "OnRootWidgetRemoved");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.SetAllWidgetVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    IsShow                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonPlayerController_C::SetAllWidgetVisibility(bool IsShow)
+void ABP_FirstPersonPlayerController_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "SetAllWidgetVisibility");
+		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "ReceiveTick");
 
-	Params::BP_FirstPersonPlayerController_C_SetAllWidgetVisibility Parms{};
+	Params::BP_FirstPersonPlayerController_C_ReceiveTick Parms{};
 
-	Parms.IsShow = IsShow;
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.ExecuteUbergraph_BP_FirstPersonPlayerController
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonPlayerController_C::ExecuteUbergraph_BP_FirstPersonPlayerController(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "ExecuteUbergraph_BP_FirstPersonPlayerController");
-
-	Params::BP_FirstPersonPlayerController_C_ExecuteUbergraph_BP_FirstPersonPlayerController Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonPlayerController.BP_FirstPersonPlayerController_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_FirstPersonPlayerController_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerController_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

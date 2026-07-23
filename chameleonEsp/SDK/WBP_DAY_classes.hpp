@@ -31,9 +31,9 @@ public:
 	int32                                         PlayDayNumber;                                     // 0x0378(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_DAY(int32 EntryPoint);
 	void EndEvent();
+	void ExecuteUbergraph_WBP_DAY(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()

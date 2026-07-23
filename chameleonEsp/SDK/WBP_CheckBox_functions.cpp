@@ -16,46 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_CheckBox.WBP_CheckBox_C.SetCheckState
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CheckBox_C::SetCheckState(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CheckBox_C", "SetCheckState");
-
-	Params::WBP_CheckBox_C_SetCheckState Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_CheckBox.WBP_CheckBox_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CheckBox_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CheckBox_C", "PreConstruct");
-
-	Params::WBP_CheckBox_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_CheckBox.WBP_CheckBox_C.ExecuteUbergraph_WBP_CheckBox
 // (Final, UbergraphFunction)
 // Parameters:
@@ -71,6 +31,46 @@ void UWBP_CheckBox_C::ExecuteUbergraph_WBP_CheckBox(int32 EntryPoint)
 	Params::WBP_CheckBox_C_ExecuteUbergraph_WBP_CheckBox Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CheckBox.WBP_CheckBox_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CheckBox_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CheckBox_C", "PreConstruct");
+
+	Params::WBP_CheckBox_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CheckBox.WBP_CheckBox_C.SetCheckState
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CheckBox_C::SetCheckState(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CheckBox_C", "SetCheckState");
+
+	Params::WBP_CheckBox_C_SetCheckState Parms{};
+
+	Parms.State = State;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

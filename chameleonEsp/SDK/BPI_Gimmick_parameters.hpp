@@ -14,15 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPI_Gimmick.BPI_Gimmick_C.SetTimeStopState
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_Gimmick_C_SetTimeStopState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPI_Gimmick_C_SetTimeStopState;
-
 // Function BPI_Gimmick.BPI_Gimmick_C.IsInPhoto
 // 0x0001 (0x0001 - 0x0000)
 struct BPI_Gimmick_C_IsInPhoto final
@@ -31,6 +22,15 @@ public:
 	bool                                          Value;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPI_Gimmick_C_IsInPhoto;
+
+// Function BPI_Gimmick.BPI_Gimmick_C.SetTimeStopState
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_Gimmick_C_SetTimeStopState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPI_Gimmick_C_SetTimeStopState;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

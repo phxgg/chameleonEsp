@@ -25,8 +25,8 @@ public:
 	class UStaticMeshComponent*                   treeice;                                           // 0x0368(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveDestroyed();
 	void ExecuteUbergraph_BP_EnvironmentSystem_XmasMiniTree(int32 EntryPoint);
+	void ReceiveDestroyed();
 
 public:
 	static class UClass* StaticClass()

@@ -16,30 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Parasol.BP_Parasol_C.PickState
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State_PickState                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonCharacter_Main_C*  Character_PickState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   SlotIndex_PickState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Parasol_C::PickState(bool State_PickState, class ABP_FirstPersonCharacter_Main_C* Character_PickState, int32 SlotIndex_PickState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Parasol_C", "PickState");
-
-	Params::BP_Parasol_C_PickState Parms{};
-
-	Parms.State_PickState = State_PickState;
-	Parms.Character_PickState = Character_PickState;
-	Parms.SlotIndex_PickState = SlotIndex_PickState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_Parasol.BP_Parasol_C.ExecuteUbergraph_BP_Parasol
 // (Final, UbergraphFunction)
 // Parameters:
@@ -55,6 +31,30 @@ void ABP_Parasol_C::ExecuteUbergraph_BP_Parasol(int32 EntryPoint)
 	Params::BP_Parasol_C_ExecuteUbergraph_BP_Parasol Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Parasol.BP_Parasol_C.PickState
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C*  Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Parasol_C::PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Parasol_C", "PickState");
+
+	Params::BP_Parasol_C_PickState Parms{};
+
+	Parms.State = State;
+	Parms.Character = Character;
+	Parms.SlotIndex = SlotIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

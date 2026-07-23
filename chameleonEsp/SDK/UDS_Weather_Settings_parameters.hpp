@@ -14,18 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function UDS_Weather_Settings.UDS_Weather_Settings_C.Get State Sources
-// 0x00A8 (0x00A8 - 0x0000)
-struct UDS_Weather_Settings_C_Get_State_Sources final
-{
-public:
-	TMap<class UUDS_Weather_Settings_C*, double>  Sources;                                           // 0x0000(0x0050)(Parm, OutParm)
-	bool                                          CallFunc_Map_IsEmpty_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class UUDS_Weather_Settings_C*, double>  K2Node_MakeMap_Map;                                // 0x0058(0x0050)()
-};
-DUMPER7_ASSERTS_UDS_Weather_Settings_C_Get_State_Sources;
-
 // Function UDS_Weather_Settings.UDS_Weather_Settings_C.Custom Weather Behavior
 // 0x0030 (0x0030 - 0x0000)
 struct UDS_Weather_Settings_C_Custom_Weather_Behavior final
@@ -39,6 +27,18 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_UDS_Weather_Settings_C_Custom_Weather_Behavior;
+
+// Function UDS_Weather_Settings.UDS_Weather_Settings_C.Get State Sources
+// 0x00A8 (0x00A8 - 0x0000)
+struct UDS_Weather_Settings_C_Get_State_Sources final
+{
+public:
+	TMap<class UUDS_Weather_Settings_C*, double>  Sources;                                           // 0x0000(0x0050)(Parm, OutParm)
+	bool                                          CallFunc_Map_IsEmpty_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class UUDS_Weather_Settings_C*, double>  K2Node_MakeMap_Map;                                // 0x0058(0x0050)()
+};
+DUMPER7_ASSERTS_UDS_Weather_Settings_C_Get_State_Sources;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

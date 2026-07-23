@@ -16,39 +16,31 @@
 
 SDK_NAMESPACE_START
 
-// Function BPI_AttackControl.BPI_AttackControl_C.Combo
+// Function BPI_AttackControl.BPI_AttackControl_C.Attack_AC
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  TimeRange                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             ComboName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             AttackName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  DamageMultiply                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    MutipleHitPossible                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  StanMultiply                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_AttackControl_C::Combo(double TimeRange, class FName ComboName)
+void IBPI_AttackControl_C::Attack_AC(double TimeRange, class FName AttackName, double DamageMultiply, bool MutipleHitPossible, double StanMultiply)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AttackControl_C", "Combo");
+		Func = AsUObject()->Class->GetFunction("BPI_AttackControl_C", "Attack_AC");
 
-	Params::BPI_AttackControl_C_Combo Parms{};
+	Params::BPI_AttackControl_C_Attack_AC Parms{};
 
 	Parms.TimeRange = TimeRange;
-	Parms.ComboName = ComboName;
+	Parms.AttackName = AttackName;
+	Parms.DamageMultiply = DamageMultiply;
+	Parms.MutipleHitPossible = MutipleHitPossible;
+	Parms.StanMultiply = StanMultiply;
 
 	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPI_AttackControl.BPI_AttackControl_C.CollisionReset
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_AttackControl_C::CollisionReset()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AttackControl_C", "CollisionReset");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
 }
 
 
@@ -78,29 +70,37 @@ void IBPI_AttackControl_C::Attack_AC_Remote(double TimeRange, class FName Compon
 }
 
 
-// Function BPI_AttackControl.BPI_AttackControl_C.Attack_AC
+// Function BPI_AttackControl.BPI_AttackControl_C.CollisionReset
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  TimeRange                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             AttackName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  DamageMultiply                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    MutipleHitPossible                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  StanMultiply                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_AttackControl_C::Attack_AC(double TimeRange, class FName AttackName, double DamageMultiply, bool MutipleHitPossible, double StanMultiply)
+void IBPI_AttackControl_C::CollisionReset()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AttackControl_C", "Attack_AC");
+		Func = AsUObject()->Class->GetFunction("BPI_AttackControl_C", "CollisionReset");
 
-	Params::BPI_AttackControl_C_Attack_AC Parms{};
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_AttackControl.BPI_AttackControl_C.Combo
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  TimeRange                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             ComboName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_AttackControl_C::Combo(double TimeRange, class FName ComboName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AttackControl_C", "Combo");
+
+	Params::BPI_AttackControl_C_Combo Parms{};
 
 	Parms.TimeRange = TimeRange;
-	Parms.AttackName = AttackName;
-	Parms.DamageMultiply = DamageMultiply;
-	Parms.MutipleHitPossible = MutipleHitPossible;
-	Parms.StanMultiply = StanMultiply;
+	Parms.ComboName = ComboName;
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 }

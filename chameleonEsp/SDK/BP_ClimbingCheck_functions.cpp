@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_ClimbingCheck.BP_ClimbingCheck_C.Trigger
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FSimulationTickParams&     Params_Trigger                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-
-void UBP_ClimbingCheck_C::Trigger(const struct FSimulationTickParams& Params_Trigger)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ClimbingCheck_C", "Trigger");
-
-	Params::BP_ClimbingCheck_C_Trigger Parms{};
-
-	Parms.Params_Trigger = std::move(Params_Trigger);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_ClimbingCheck.BP_ClimbingCheck_C.ExecuteUbergraph_BP_ClimbingCheck
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -56,13 +36,33 @@ void UBP_ClimbingCheck_C::ExecuteUbergraph_BP_ClimbingCheck(int32 EntryPoint)
 }
 
 
+// Function BP_ClimbingCheck.BP_ClimbingCheck_C.Trigger
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FSimulationTickParams&     Params_0                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+
+void UBP_ClimbingCheck_C::Trigger(const struct FSimulationTickParams& Params_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ClimbingCheck_C", "Trigger");
+
+	Params::BP_ClimbingCheck_C_Trigger Parms{};
+
+	Parms.Params_0 = std::move(Params_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_ClimbingCheck.BP_ClimbingCheck_C.Evaluate
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// const struct FSimulationTickParams&     Params_Evaluate                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// struct FTransitionEvalResult            ReturnValue_Evaluate                                   (Parm, OutParm, ReturnParm, NoDestructor)
+// const struct FSimulationTickParams&     Params_0                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// struct FTransitionEvalResult            ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor)
 
-struct FTransitionEvalResult UBP_ClimbingCheck_C::Evaluate(const struct FSimulationTickParams& Params_Evaluate) const
+struct FTransitionEvalResult UBP_ClimbingCheck_C::Evaluate(const struct FSimulationTickParams& Params_0) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -71,7 +71,7 @@ struct FTransitionEvalResult UBP_ClimbingCheck_C::Evaluate(const struct FSimulat
 
 	Params::BP_ClimbingCheck_C_Evaluate Parms{};
 
-	Parms.Params_Evaluate = std::move(Params_Evaluate);
+	Parms.Params_0 = std::move(Params_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 

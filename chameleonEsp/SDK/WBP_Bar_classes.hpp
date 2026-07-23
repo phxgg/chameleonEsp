@@ -36,11 +36,11 @@ public:
 	bool                                          UseCurveColor;                                     // 0x03A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetSubBarValue(double Value);
-	void SetMainBarValue(double Value);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_Bar(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_WBP_Bar(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SetMainBarValue(double Value);
+	void SetSubBarValue(double Value);
 
 public:
 	static class UClass* StaticClass()

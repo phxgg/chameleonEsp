@@ -16,51 +16,35 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_Debug.WBP_Debug_C.UpdateEvent
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Debug_C::UpdateEvent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Debug_C", "UpdateEvent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Debug.WBP_Debug_C.Update
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Debug_C::Update()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Debug_C", "Update");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Debug.WBP_Debug_C.Tick
+// Function WBP_Debug.WBP_Debug_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry_Tick                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime_Tick                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Debug_C::Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick)
+void UWBP_Debug_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Debug_C", "Tick");
+		Func = Class->GetFunction("WBP_Debug_C", "Construct");
 
-	Params::WBP_Debug_C_Tick Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.MyGeometry_Tick = std::move(MyGeometry_Tick);
-	Parms.InDeltaTime_Tick = InDeltaTime_Tick;
+
+// Function WBP_Debug.WBP_Debug_C.ExecuteUbergraph_WBP_Debug
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Debug_C::ExecuteUbergraph_WBP_Debug(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Debug_C", "ExecuteUbergraph_WBP_Debug");
+
+	Params::WBP_Debug_C_ExecuteUbergraph_WBP_Debug Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -86,35 +70,51 @@ void UWBP_Debug_C::OnFinished_8D1D7EE049CBA34DF01468BA7D7B3EE1(const struct FBan
 }
 
 
-// Function WBP_Debug.WBP_Debug_C.ExecuteUbergraph_WBP_Debug
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_Debug.WBP_Debug_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Debug_C::ExecuteUbergraph_WBP_Debug(int32 EntryPoint)
+void UWBP_Debug_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Debug_C", "ExecuteUbergraph_WBP_Debug");
+		Func = Class->GetFunction("WBP_Debug_C", "Tick");
 
-	Params::WBP_Debug_C_ExecuteUbergraph_WBP_Debug Parms{};
+	Params::WBP_Debug_C_Tick Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Debug.WBP_Debug_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_Debug.WBP_Debug_C.Update
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_Debug_C::Construct()
+void UWBP_Debug_C::Update()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Debug_C", "Construct");
+		Func = Class->GetFunction("WBP_Debug_C", "Update");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Debug.WBP_Debug_C.UpdateEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Debug_C::UpdateEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Debug_C", "UpdateEvent");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

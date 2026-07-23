@@ -16,91 +16,77 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry_Tick                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime_Tick                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_VoiceChatUserSettings_C::Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick)
+void UWBP_VoiceChatUserSettings_C::BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "Tick");
-
-	Params::WBP_VoiceChatUserSettings_C_Tick Parms{};
-
-	Parms.MyGeometry_Tick = std::move(MyGeometry_Tick);
-	Parms.InDeltaTime_Tick = InDeltaTime_Tick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.Report
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_VoiceChatUserSettings_C::Report()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "Report");
+		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_Kick_1_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_VoiceChatUserSettings_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_VoiceChatUserSettings_C::BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_Kick_1_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "PreConstruct");
-
-	Params::WBP_VoiceChatUserSettings_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.PingCheck
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_VoiceChatUserSettings_C::PingCheck()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "PingCheck");
+		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_Kick_1_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.OnFinished_1657203944876F75161AA6986A7C9FD9
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FEOSPlayerReportResult&    Result                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.BndEvt__WBP_VoiceChatUserSettings_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_VoiceChatUserSettings_C::OnFinished_1657203944876F75161AA6986A7C9FD9(const struct FEOSPlayerReportResult& Result)
+void UWBP_VoiceChatUserSettings_C::BndEvt__WBP_VoiceChatUserSettings_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "OnFinished_1657203944876F75161AA6986A7C9FD9");
+		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "BndEvt__WBP_VoiceChatUserSettings_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature");
 
-	Params::WBP_VoiceChatUserSettings_C_OnFinished_1657203944876F75161AA6986A7C9FD9 Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Result = std::move(Result);
+
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_VoiceChatUserSettings_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.ConstructSetup
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonPlayerState_Online_C*TargetPlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_VoiceChatUserSettings_C::ConstructSetup(class ABP_FirstPersonPlayerState_Online_C* TargetPlayerState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "ConstructSetup");
+
+	Params::WBP_VoiceChatUserSettings_C_ConstructSetup Parms{};
+
+	Parms.TargetPlayerState = TargetPlayerState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -126,79 +112,93 @@ void UWBP_VoiceChatUserSettings_C::ExecuteUbergraph_WBP_VoiceChatUserSettings(in
 }
 
 
-// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.ConstructSetup
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.OnFinished_1657203944876F75161AA6986A7C9FD9
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_FirstPersonPlayerState_Online_C*TargetPlayerState                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FEOSPlayerReportResult&    Result                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UWBP_VoiceChatUserSettings_C::ConstructSetup(class ABP_FirstPersonPlayerState_Online_C* TargetPlayerState)
+void UWBP_VoiceChatUserSettings_C::OnFinished_1657203944876F75161AA6986A7C9FD9(const struct FEOSPlayerReportResult& Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "ConstructSetup");
+		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "OnFinished_1657203944876F75161AA6986A7C9FD9");
 
-	Params::WBP_VoiceChatUserSettings_C_ConstructSetup Parms{};
+	Params::WBP_VoiceChatUserSettings_C_OnFinished_1657203944876F75161AA6986A7C9FD9 Parms{};
 
-	Parms.TargetPlayerState = TargetPlayerState;
+	Parms.Result = std::move(Result);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.Construct
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.PingCheck
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_VoiceChatUserSettings_C::PingCheck()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "PingCheck");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_VoiceChatUserSettings_C::Construct()
+void UWBP_VoiceChatUserSettings_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "Construct");
+		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "PreConstruct");
+
+	Params::WBP_VoiceChatUserSettings_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.Report
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_VoiceChatUserSettings_C::Report()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "Report");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.BndEvt__WBP_VoiceChatUserSettings_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_VoiceChatUserSettings_C::BndEvt__WBP_VoiceChatUserSettings_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature()
+void UWBP_VoiceChatUserSettings_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "BndEvt__WBP_VoiceChatUserSettings_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature");
+		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "Tick");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::WBP_VoiceChatUserSettings_C_Tick Parms{};
 
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
 
-// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_Kick_1_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_VoiceChatUserSettings_C::BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_Kick_1_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_Kick_1_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_VoiceChatUserSettings.WBP_VoiceChatUserSettings_C.BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_VoiceChatUserSettings_C::BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatUserSettings_C", "BndEvt__WBP_VoiceChatUserSettings_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

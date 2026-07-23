@@ -26,9 +26,9 @@ public:
 	class UWidgetAnimation*                       PlayAnim;                                          // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_SuperStan(int32 EntryPoint);
-	void End();
 	void Construct();
+	void End();
+	void ExecuteUbergraph_WBP_SuperStan(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

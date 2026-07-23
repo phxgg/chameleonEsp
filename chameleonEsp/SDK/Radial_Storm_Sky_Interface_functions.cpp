@@ -16,27 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function Radial_Storm_Sky_Interface.Radial_Storm_Sky_Interface_C.Update with Sky Mode Change
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   Successful                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IRadial_Storm_Sky_Interface_C::Update_with_Sky_Mode_Change(bool* Successful)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("Radial_Storm_Sky_Interface_C", "Update with Sky Mode Change");
-
-	Params::Radial_Storm_Sky_Interface_C_Update_with_Sky_Mode_Change Parms{};
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	if (Successful != nullptr)
-		*Successful = Parms.Successful;
-}
-
-
 // Function Radial_Storm_Sky_Interface.Radial_Storm_Sky_Interface_C.Get Cloud Coverage Brush Data
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -74,6 +53,27 @@ void IRadial_Storm_Sky_Interface_C::Get_Cloud_Coverage_Brush_Data(class AUltra_D
 
 	if (UDS_Coverage_Level != nullptr)
 		*UDS_Coverage_Level = Parms.UDS_Coverage_Level;
+}
+
+
+// Function Radial_Storm_Sky_Interface.Radial_Storm_Sky_Interface_C.Update with Sky Mode Change
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   Successful                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IRadial_Storm_Sky_Interface_C::Update_with_Sky_Mode_Change(bool* Successful)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("Radial_Storm_Sky_Interface_C", "Update with Sky Mode Change");
+
+	Params::Radial_Storm_Sky_Interface_C_Update_with_Sky_Mode_Change Parms{};
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (Successful != nullptr)
+		*Successful = Parms.Successful;
 }
 
 

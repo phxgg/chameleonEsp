@@ -17,46 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_announcement.WBP_announcement_C.SetText
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_announcement_C_SetText final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_announcement_C_SetText;
-
-// Function WBP_announcement.WBP_announcement_C.SetColor
-// 0x0014 (0x0014 - 0x0000)
-struct WBP_announcement_C_SetColor final
-{
-public:
-	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_announcement_C_SetColor;
-
-// Function WBP_announcement.WBP_announcement_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_announcement_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_announcement_C_PreConstruct;
-
-// Function WBP_announcement.WBP_announcement_C.PlayAnimationMessage
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_announcement_C_PlayAnimationMessage final
-{
-public:
-	bool                                          IsForward;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Index_0;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_announcement_C_PlayAnimationMessage;
-
 // Function WBP_announcement.WBP_announcement_C.ExecuteUbergraph_WBP_announcement
 // 0x0070 (0x0070 - 0x0000)
 struct WBP_announcement_C_ExecuteUbergraph_WBP_announcement final
@@ -77,6 +37,46 @@ public:
 	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue_1;              // 0x005C(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_announcement_C_ExecuteUbergraph_WBP_announcement;
+
+// Function WBP_announcement.WBP_announcement_C.PlayAnimationMessage
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_announcement_C_PlayAnimationMessage final
+{
+public:
+	bool                                          IsForward;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_announcement_C_PlayAnimationMessage;
+
+// Function WBP_announcement.WBP_announcement_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_announcement_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_announcement_C_PreConstruct;
+
+// Function WBP_announcement.WBP_announcement_C.SetColor
+// 0x0014 (0x0014 - 0x0000)
+struct WBP_announcement_C_SetColor final
+{
+public:
+	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_announcement_C_SetColor;
+
+// Function WBP_announcement.WBP_announcement_C.SetText
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_announcement_C_SetText final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_announcement_C_SetText;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -25,24 +25,24 @@ public:
 	class APawn*                                  OwnerActor;                                        // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Stop_Server_(class USkeletalMeshComponent* Mesh, class UAnimMontage* Montage);
-	void Stop_Replicate_(class USkeletalMeshComponent* Mesh, class UAnimMontage* Montage);
-	void Stop(class USkeletalMeshComponent* Mesh, class UAnimMontage* Montage, bool IsLocalStop);
-	void ReceiveBeginPlay();
-	void Play_Server_(class USkeletalMeshComponent* InSkeletalMeshComponent, class UAnimMontage* MontageToPlay, bool bShouldStopAllMontages);
-	void Play_Replicate_(class USkeletalMeshComponent* InSkeletalMeshComponent, class UAnimMontage* MontageToPlay, bool bShouldStopAllMontages);
-	void Play(class USkeletalMeshComponent* Mesh, class UAnimMontage* Montage, const bool bShouldStopAllMontages, bool IsLocalPlay);
-	void OnNotifyEnd_543B92A3498408DB071366B74B7FF37D(class FName NotifyName);
-	void OnNotifyEnd_4737952740FB816E45A974B1BF8C0A0A(class FName NotifyName);
-	void OnNotifyBegin_543B92A3498408DB071366B74B7FF37D(class FName NotifyName);
-	void OnNotifyBegin_4737952740FB816E45A974B1BF8C0A0A(class FName NotifyName);
-	void OnInterrupted_543B92A3498408DB071366B74B7FF37D(class FName NotifyName);
-	void OnInterrupted_4737952740FB816E45A974B1BF8C0A0A(class FName NotifyName);
-	void OnCompleted_543B92A3498408DB071366B74B7FF37D(class FName NotifyName);
-	void OnCompleted_4737952740FB816E45A974B1BF8C0A0A(class FName NotifyName);
-	void OnBlendOut_543B92A3498408DB071366B74B7FF37D(class FName NotifyName);
-	void OnBlendOut_4737952740FB816E45A974B1BF8C0A0A(class FName NotifyName);
 	void ExecuteUbergraph_BPC_PlayMontageOnline(int32 EntryPoint);
+	void OnBlendOut_4737952740FB816E45A974B1BF8C0A0A(class FName NotifyName);
+	void OnBlendOut_543B92A3498408DB071366B74B7FF37D(class FName NotifyName);
+	void OnCompleted_4737952740FB816E45A974B1BF8C0A0A(class FName NotifyName);
+	void OnCompleted_543B92A3498408DB071366B74B7FF37D(class FName NotifyName);
+	void OnInterrupted_4737952740FB816E45A974B1BF8C0A0A(class FName NotifyName);
+	void OnInterrupted_543B92A3498408DB071366B74B7FF37D(class FName NotifyName);
+	void OnNotifyBegin_4737952740FB816E45A974B1BF8C0A0A(class FName NotifyName);
+	void OnNotifyBegin_543B92A3498408DB071366B74B7FF37D(class FName NotifyName);
+	void OnNotifyEnd_4737952740FB816E45A974B1BF8C0A0A(class FName NotifyName);
+	void OnNotifyEnd_543B92A3498408DB071366B74B7FF37D(class FName NotifyName);
+	void Play(class USkeletalMeshComponent* Mesh, class UAnimMontage* Montage, const bool bShouldStopAllMontages, bool IsLocalPlay);
+	void Play_Replicate_(class USkeletalMeshComponent* InSkeletalMeshComponent, class UAnimMontage* MontageToPlay, bool bShouldStopAllMontages);
+	void Play_Server_(class USkeletalMeshComponent* InSkeletalMeshComponent, class UAnimMontage* MontageToPlay, bool bShouldStopAllMontages);
+	void ReceiveBeginPlay();
+	void Stop(class USkeletalMeshComponent* Mesh, class UAnimMontage* Montage, bool IsLocalStop);
+	void Stop_Replicate_(class USkeletalMeshComponent* Mesh, class UAnimMontage* Montage);
+	void Stop_Server_(class USkeletalMeshComponent* Mesh, class UAnimMontage* Montage);
 
 public:
 	static class UClass* StaticClass()

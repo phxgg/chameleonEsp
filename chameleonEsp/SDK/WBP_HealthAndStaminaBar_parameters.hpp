@@ -17,82 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.VisibleState
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_HealthAndStaminaBar_C_VisibleState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_VisibleState;
-
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.StaminaBarUpdateSub
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_HealthAndStaminaBar_C_StaminaBarUpdateSub final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_StaminaBarUpdateSub;
-
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.StaminaBarUpdate
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_HealthAndStaminaBar_C_StaminaBarUpdate final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_StaminaBarUpdate;
-
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.SetText
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_HealthAndStaminaBar_C_SetText final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_SetText;
-
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.SetColor
-// 0x0014 (0x0014 - 0x0000)
-struct WBP_HealthAndStaminaBar_C_SetColor final
-{
-public:
-	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_SetColor;
-
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.PlayAnimationMessage
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_HealthAndStaminaBar_C_PlayAnimationMessage final
-{
-public:
-	bool                                          IsForward;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Index_0;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_PlayAnimationMessage;
-
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.HealthBarUpdateSub
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_HealthAndStaminaBar_C_HealthBarUpdateSub final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_HealthBarUpdateSub;
-
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.HealthBarUpdate
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_HealthAndStaminaBar_C_HealthBarUpdate final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_HealthBarUpdate;
-
 // Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.ExecuteUbergraph_WBP_HealthAndStaminaBar
 // 0x0068 (0x0068 - 0x0000)
 struct WBP_HealthAndStaminaBar_C_ExecuteUbergraph_WBP_HealthAndStaminaBar final
@@ -123,6 +47,82 @@ public:
 	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue_1;              // 0x0058(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_ExecuteUbergraph_WBP_HealthAndStaminaBar;
+
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.HealthBarUpdate
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_HealthAndStaminaBar_C_HealthBarUpdate final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_HealthBarUpdate;
+
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.HealthBarUpdateSub
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_HealthAndStaminaBar_C_HealthBarUpdateSub final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_HealthBarUpdateSub;
+
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.PlayAnimationMessage
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_HealthAndStaminaBar_C_PlayAnimationMessage final
+{
+public:
+	bool                                          IsForward;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_PlayAnimationMessage;
+
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.SetColor
+// 0x0014 (0x0014 - 0x0000)
+struct WBP_HealthAndStaminaBar_C_SetColor final
+{
+public:
+	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_SetColor;
+
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.SetText
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_HealthAndStaminaBar_C_SetText final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_SetText;
+
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.StaminaBarUpdate
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_HealthAndStaminaBar_C_StaminaBarUpdate final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_StaminaBarUpdate;
+
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.StaminaBarUpdateSub
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_HealthAndStaminaBar_C_StaminaBarUpdateSub final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_StaminaBarUpdateSub;
+
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.VisibleState
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_HealthAndStaminaBar_C_VisibleState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_HealthAndStaminaBar_C_VisibleState;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -11,220 +11,42 @@
 #include "Basic.hpp"
 
 #include "OnlineSubsystemBlueprints_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.UpdateSpawnedControllers
-// 0x0038 (0x0038 - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_UpdateSpawnedControllers final
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.CheckBindItem
+// 0x00E0 (0x00E0 - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_CheckBindItem final
 {
 public:
-	TArray<class AController*>                    LastSetArray;                                      // 0x0000(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E[0x2];                                       // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Actor;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_ItemInterface_C>  K2Node_DynamicCast_AsBPI_Item_Interface;           // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_HandType                                 CallFunc_GetItemInfo_HandType;                     // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_ClassType                                CallFunc_GetItemInfo_ClassType;                    // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetItemInfo_NotPickUp;                    // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_GetItemInfo_HaveRotation;                 // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_GetItemInfo_Add_Position;                 // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetItemInfo_IsBoneAttach;                 // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_ItemBindType                             CallFunc_GetItemInfo_BindType;                     // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5A[0x2];                                       // 0x005A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_GetItemInfo_BoneName;                     // 0x005C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_ItemCoreDatas                      CallFunc_GetItemInfo_CoreDatas;                    // 0x0068(0x0070)(HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_UpdateSpawnedControllers;
-
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.UpdateJoinState
-// 0x0001 (0x0001 - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_UpdateJoinState final
-{
-public:
-	bool                                          JoinState;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_UpdateJoinState;
-
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.UpdateGamePhaseSession
-// 0x0010 (0x0010 - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_UpdateGamePhaseSession final
-{
-public:
-	class FString                                 GamePhaseName;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_UpdateGamePhaseSession;
-
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.Spawn
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_Spawn final
-{
-public:
-	class AController*                            Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_Spawn;
-
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.SetupVoiceChatPlayer
-// 0x0080 (0x0080 - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_SetupVoiceChatPlayer final
-{
-public:
-	class AActor*                                 Owner_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_RandomInteger_ReturnValue;                // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerVoiceChatActor*                  CallFunc_FinishSpawningActor_ReturnValue;          // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_SetupVoiceChatPlayer;
-
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.OnUpdateSessionComplete_DE97626F47E9317836E9DF84671CB5B8
-// 0x000C (0x000C - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_OnUpdateSessionComplete_DE97626F47E9317836E9DF84671CB5B8 final
-{
-public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_OnUpdateSessionComplete_DE97626F47E9317836E9DF84671CB5B8;
-
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.OnUpdateSessionComplete_4C3FEC454ACE9E1456DA7DAD80AB4E11
-// 0x000C (0x000C - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_OnUpdateSessionComplete_4C3FEC454ACE9E1456DA7DAD80AB4E11 final
-{
-public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_OnUpdateSessionComplete_4C3FEC454ACE9E1456DA7DAD80AB4E11;
-
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.OnUpdateSessionComplete_0B8BFF2042E91A2A39DAD2BE5940BD84
-// 0x000C (0x000C - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_OnUpdateSessionComplete_0B8BFF2042E91A2A39DAD2BE5940BD84 final
-{
-public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_OnUpdateSessionComplete_0B8BFF2042E91A2A39DAD2BE5940BD84;
-
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.OnCallFailed_DE97626F47E9317836E9DF84671CB5B8
-// 0x000C (0x000C - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_OnCallFailed_DE97626F47E9317836E9DF84671CB5B8 final
-{
-public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_OnCallFailed_DE97626F47E9317836E9DF84671CB5B8;
-
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.OnCallFailed_4C3FEC454ACE9E1456DA7DAD80AB4E11
-// 0x000C (0x000C - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_OnCallFailed_4C3FEC454ACE9E1456DA7DAD80AB4E11 final
-{
-public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_OnCallFailed_4C3FEC454ACE9E1456DA7DAD80AB4E11;
-
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.OnCallFailed_0B8BFF2042E91A2A39DAD2BE5940BD84
-// 0x000C (0x000C - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_OnCallFailed_0B8BFF2042E91A2A39DAD2BE5940BD84 final
-{
-public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_OnCallFailed_0B8BFF2042E91A2A39DAD2BE5940BD84;
-
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.MakeUpdateGamePhaseSettings
-// 0x04D8 (0x04D8 - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_MakeUpdateGamePhaseSettings final
-{
-public:
-	class FString                                 GamePhaseName;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	struct FOnlineSessionSettingsBP               StructOut;                                         // 0x0010(0x0150)(Parm, OutParm)
-	struct FOnlineSessionSettingsBP               CurrentOnlineSessionSettings;                      // 0x0160(0x0150)(Edit, BlueprintVisible)
-	TMap<class FName, struct FOnlineSessionSettingBP> CurrentSettings;                               // 0x02B0(0x0050)(Edit, BlueprintVisible)
-	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0300(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVariantDataBP                         K2Node_MakeStruct_VariantDataBP;                   // 0x0308(0x0030)()
-	class UOnlineSessionSettings*                 CallFunc_GetSessionSettings_ReturnValue;           // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FOnlineSessionSettingBP                K2Node_MakeStruct_OnlineSessionSettingBP;          // 0x0340(0x0038)()
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_379[0x7];                                      // 0x0379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FOnlineSessionSettingsBP               CallFunc_GetValue_ReturnValue;                     // 0x0380(0x0150)()
-	class FName                                   Temp_name_Variable;                                // 0x04D0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_MakeUpdateGamePhaseSettings;
-
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.MakeUpdateCanJoinSettings
-// 0x04D0 (0x04D0 - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_MakeUpdateCanJoinSettings final
-{
-public:
-	bool                                          JoinState;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FOnlineSessionSettingsBP               StructOut;                                         // 0x0008(0x0150)(Parm, OutParm)
-	struct FOnlineSessionSettingsBP               CurrentOnlineSessionSettings;                      // 0x0158(0x0150)(Edit, BlueprintVisible)
-	TMap<class FName, struct FOnlineSessionSettingBP> CurrentSettings;                               // 0x02A8(0x0050)(Edit, BlueprintVisible)
-	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x02F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVariantDataBP                         K2Node_MakeStruct_VariantDataBP;                   // 0x0300(0x0030)()
-	class UOnlineSessionSettings*                 CallFunc_GetSessionSettings_ReturnValue;           // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FOnlineSessionSettingBP                K2Node_MakeStruct_OnlineSessionSettingBP;          // 0x0338(0x0038)()
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_371[0x7];                                      // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FOnlineSessionSettingsBP               CallFunc_GetValue_ReturnValue;                     // 0x0378(0x0150)()
-	class FName                                   Temp_name_Variable;                                // 0x04C8(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_MakeUpdateCanJoinSettings;
-
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.MakeUpdaeNumPlayerSettings
-// 0x0508 (0x0508 - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_MakeUpdaeNumPlayerSettings final
-{
-public:
-	int32                                         NewConnectionNum;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FOnlineSessionSettingsBP               StructOut;                                         // 0x0008(0x0150)(Parm, OutParm)
-	struct FOnlineSessionSettingsBP               CurrentOnlineSessionSettings;                      // 0x0158(0x0150)(Edit, BlueprintVisible)
-	TMap<class FName, struct FOnlineSessionSettingBP> CurrentSettings;                               // 0x02A8(0x0050)(Edit, BlueprintVisible)
-	class FName                                   Temp_name_Variable;                                // 0x02F8(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0300(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0318(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVariantDataBP                         K2Node_MakeStruct_VariantDataBP;                   // 0x0320(0x0030)()
-	class UOnlineSessionSettings*                 CallFunc_GetSessionSettings_ReturnValue;           // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FOnlineSessionSettingBP                K2Node_MakeStruct_OnlineSessionSettingBP;          // 0x0358(0x0038)()
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FOnlineSessionSettingsBP               CallFunc_GetValue_ReturnValue;                     // 0x0398(0x0150)()
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x04E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x04F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_MakeUpdaeNumPlayerSettings;
-
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.K2_PostLogin
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_K2_PostLogin final
-{
-public:
-	class APlayerController*                      NewPlayer_K2_PostLogin;                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_K2_PostLogin;
-
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.K2_OnLogout
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_K2_OnLogout final
-{
-public:
-	class AController*                            ExitingController_K2_OnLogout;                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_K2_OnLogout;
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_CheckBindItem;
 
 // Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.ExecuteUbergraph_BP_FirstPersonGameMode_V2
 // 0x09F0 (0x09F0 - 0x0000)
@@ -358,31 +180,209 @@ public:
 };
 DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_ExecuteUbergraph_BP_FirstPersonGameMode_V2;
 
-// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.CheckBindItem
-// 0x00E0 (0x00E0 - 0x0000)
-struct BP_FirstPersonGameMode_V2_C_CheckBindItem final
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.K2_OnLogout
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_K2_OnLogout final
 {
 public:
-	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Actor;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_ItemInterface_C>  K2Node_DynamicCast_AsBPI_Item_Interface;           // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_HandType                                 CallFunc_GetItemInfo_HandType;                     // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_ClassType                                CallFunc_GetItemInfo_ClassType;                    // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetItemInfo_NotPickUp;                    // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_GetItemInfo_HaveRotation;                 // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_GetItemInfo_Add_Position;                 // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetItemInfo_IsBoneAttach;                 // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_ItemBindType                             CallFunc_GetItemInfo_BindType;                     // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A[0x2];                                       // 0x005A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_GetItemInfo_BoneName;                     // 0x005C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_ItemCoreDatas                      CallFunc_GetItemInfo_CoreDatas;                    // 0x0068(0x0070)(HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AController*                            ExitingController;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_CheckBindItem;
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_K2_OnLogout;
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.K2_PostLogin
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_K2_PostLogin final
+{
+public:
+	class APlayerController*                      NewPlayer;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_K2_PostLogin;
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.MakeUpdaeNumPlayerSettings
+// 0x0508 (0x0508 - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_MakeUpdaeNumPlayerSettings final
+{
+public:
+	int32                                         NewConnectionNum;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FOnlineSessionSettingsBP               StructOut;                                         // 0x0008(0x0150)(Parm, OutParm)
+	struct FOnlineSessionSettingsBP               CurrentOnlineSessionSettings;                      // 0x0158(0x0150)(Edit, BlueprintVisible)
+	TMap<class FName, struct FOnlineSessionSettingBP> CurrentSettings;                               // 0x02A8(0x0050)(Edit, BlueprintVisible)
+	class FName                                   Temp_name_Variable;                                // 0x02F8(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0300(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int64                                         CallFunc_Conv_IntToInt64_ReturnValue;              // 0x0310(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0318(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVariantDataBP                         K2Node_MakeStruct_VariantDataBP;                   // 0x0320(0x0030)()
+	class UOnlineSessionSettings*                 CallFunc_GetSessionSettings_ReturnValue;           // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FOnlineSessionSettingBP                K2Node_MakeStruct_OnlineSessionSettingBP;          // 0x0358(0x0038)()
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FOnlineSessionSettingsBP               CallFunc_GetValue_ReturnValue;                     // 0x0398(0x0150)()
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x04E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x04F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_MakeUpdaeNumPlayerSettings;
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.MakeUpdateCanJoinSettings
+// 0x04D0 (0x04D0 - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_MakeUpdateCanJoinSettings final
+{
+public:
+	bool                                          JoinState;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FOnlineSessionSettingsBP               StructOut;                                         // 0x0008(0x0150)(Parm, OutParm)
+	struct FOnlineSessionSettingsBP               CurrentOnlineSessionSettings;                      // 0x0158(0x0150)(Edit, BlueprintVisible)
+	TMap<class FName, struct FOnlineSessionSettingBP> CurrentSettings;                               // 0x02A8(0x0050)(Edit, BlueprintVisible)
+	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x02F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVariantDataBP                         K2Node_MakeStruct_VariantDataBP;                   // 0x0300(0x0030)()
+	class UOnlineSessionSettings*                 CallFunc_GetSessionSettings_ReturnValue;           // 0x0330(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FOnlineSessionSettingBP                K2Node_MakeStruct_OnlineSessionSettingBP;          // 0x0338(0x0038)()
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_371[0x7];                                      // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FOnlineSessionSettingsBP               CallFunc_GetValue_ReturnValue;                     // 0x0378(0x0150)()
+	class FName                                   Temp_name_Variable;                                // 0x04C8(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_MakeUpdateCanJoinSettings;
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.MakeUpdateGamePhaseSettings
+// 0x04D8 (0x04D8 - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_MakeUpdateGamePhaseSettings final
+{
+public:
+	class FString                                 GamePhaseName;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	struct FOnlineSessionSettingsBP               StructOut;                                         // 0x0010(0x0150)(Parm, OutParm)
+	struct FOnlineSessionSettingsBP               CurrentOnlineSessionSettings;                      // 0x0160(0x0150)(Edit, BlueprintVisible)
+	TMap<class FName, struct FOnlineSessionSettingBP> CurrentSettings;                               // 0x02B0(0x0050)(Edit, BlueprintVisible)
+	class UOnlineSessionSubsystem*                CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0300(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVariantDataBP                         K2Node_MakeStruct_VariantDataBP;                   // 0x0308(0x0030)()
+	class UOnlineSessionSettings*                 CallFunc_GetSessionSettings_ReturnValue;           // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FOnlineSessionSettingBP                K2Node_MakeStruct_OnlineSessionSettingBP;          // 0x0340(0x0038)()
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_379[0x7];                                      // 0x0379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FOnlineSessionSettingsBP               CallFunc_GetValue_ReturnValue;                     // 0x0380(0x0150)()
+	class FName                                   Temp_name_Variable;                                // 0x04D0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_MakeUpdateGamePhaseSettings;
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.OnCallFailed_0B8BFF2042E91A2A39DAD2BE5940BD84
+// 0x000C (0x000C - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_OnCallFailed_0B8BFF2042E91A2A39DAD2BE5940BD84 final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_OnCallFailed_0B8BFF2042E91A2A39DAD2BE5940BD84;
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.OnCallFailed_4C3FEC454ACE9E1456DA7DAD80AB4E11
+// 0x000C (0x000C - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_OnCallFailed_4C3FEC454ACE9E1456DA7DAD80AB4E11 final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_OnCallFailed_4C3FEC454ACE9E1456DA7DAD80AB4E11;
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.OnCallFailed_DE97626F47E9317836E9DF84671CB5B8
+// 0x000C (0x000C - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_OnCallFailed_DE97626F47E9317836E9DF84671CB5B8 final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_OnCallFailed_DE97626F47E9317836E9DF84671CB5B8;
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.OnUpdateSessionComplete_0B8BFF2042E91A2A39DAD2BE5940BD84
+// 0x000C (0x000C - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_OnUpdateSessionComplete_0B8BFF2042E91A2A39DAD2BE5940BD84 final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_OnUpdateSessionComplete_0B8BFF2042E91A2A39DAD2BE5940BD84;
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.OnUpdateSessionComplete_4C3FEC454ACE9E1456DA7DAD80AB4E11
+// 0x000C (0x000C - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_OnUpdateSessionComplete_4C3FEC454ACE9E1456DA7DAD80AB4E11 final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_OnUpdateSessionComplete_4C3FEC454ACE9E1456DA7DAD80AB4E11;
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.OnUpdateSessionComplete_DE97626F47E9317836E9DF84671CB5B8
+// 0x000C (0x000C - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_OnUpdateSessionComplete_DE97626F47E9317836E9DF84671CB5B8 final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_OnUpdateSessionComplete_DE97626F47E9317836E9DF84671CB5B8;
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.SetupVoiceChatPlayer
+// 0x0080 (0x0080 - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_SetupVoiceChatPlayer final
+{
+public:
+	class AActor*                                 Owner_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_RandomInteger_ReturnValue;                // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0010(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerVoiceChatActor*                  CallFunc_FinishSpawningActor_ReturnValue;          // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_SetupVoiceChatPlayer;
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.Spawn
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_Spawn final
+{
+public:
+	class AController*                            Controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_Spawn;
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.UpdateGamePhaseSession
+// 0x0010 (0x0010 - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_UpdateGamePhaseSession final
+{
+public:
+	class FString                                 GamePhaseName;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_UpdateGamePhaseSession;
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.UpdateJoinState
+// 0x0001 (0x0001 - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_UpdateJoinState final
+{
+public:
+	bool                                          JoinState;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_UpdateJoinState;
+
+// Function BP_FirstPersonGameMode_V2.BP_FirstPersonGameMode_V2_C.UpdateSpawnedControllers
+// 0x0038 (0x0038 - 0x0000)
+struct BP_FirstPersonGameMode_V2_C_UpdateSpawnedControllers final
+{
+public:
+	TArray<class AController*>                    LastSetArray;                                      // 0x0000(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AController*                            CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E[0x2];                                       // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_V2_C_UpdateSpawnedControllers;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

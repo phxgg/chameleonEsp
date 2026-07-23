@@ -26,9 +26,9 @@ public:
 	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_Cactus(int32 EntryPoint);
 	void BndEvt__BP_Cactus_BPC_DamageCollision_K2Node_ComponentBoundEvent_1_HitDamage__DelegateSignature(const struct FHitResult& Hit);
+	void ExecuteUbergraph_BP_Cactus(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

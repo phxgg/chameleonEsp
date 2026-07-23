@@ -16,57 +16,35 @@
 
 SDK_NAMESPACE_START
 
-// Function GA_Hand.GA_Hand_C.OnInterrupted_D984D1104BE6D38FAE2461A31D0E051A
-// (BlueprintCallable, BlueprintEvent)
+// Function GA_Hand.GA_Hand_C.ExecuteUbergraph_GA_Hand
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Hand_C::OnInterrupted_D984D1104BE6D38FAE2461A31D0E051A()
+void UGA_Hand_C::ExecuteUbergraph_GA_Hand(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Hand_C", "OnInterrupted_D984D1104BE6D38FAE2461A31D0E051A");
+		Func = Class->GetFunction("GA_Hand_C", "ExecuteUbergraph_GA_Hand");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::GA_Hand_C_ExecuteUbergraph_GA_Hand Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GA_Hand.GA_Hand_C.OnCompleted_D984D1104BE6D38FAE2461A31D0E051A
-// (BlueprintCallable, BlueprintEvent)
+// Function GA_Hand.GA_Hand_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
 
-void UGA_Hand_C::OnCompleted_D984D1104BE6D38FAE2461A31D0E051A()
+void UGA_Hand_C::K2_ActivateAbility()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Hand_C", "OnCompleted_D984D1104BE6D38FAE2461A31D0E051A");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Hand.GA_Hand_C.OnCancelled_D984D1104BE6D38FAE2461A31D0E051A
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Hand_C::OnCancelled_D984D1104BE6D38FAE2461A31D0E051A()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Hand_C", "OnCancelled_D984D1104BE6D38FAE2461A31D0E051A");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Hand.GA_Hand_C.OnBlendOut_D984D1104BE6D38FAE2461A31D0E051A
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Hand_C::OnBlendOut_D984D1104BE6D38FAE2461A31D0E051A()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Hand_C", "OnBlendOut_D984D1104BE6D38FAE2461A31D0E051A");
+		Func = Class->GetFunction("GA_Hand_C", "K2_ActivateAbility");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -86,37 +64,59 @@ void UGA_Hand_C::OnBlendedIn_D984D1104BE6D38FAE2461A31D0E051A()
 }
 
 
-// Function GA_Hand.GA_Hand_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
+// Function GA_Hand.GA_Hand_C.OnBlendOut_D984D1104BE6D38FAE2461A31D0E051A
+// (BlueprintCallable, BlueprintEvent)
 
-void UGA_Hand_C::K2_ActivateAbility()
+void UGA_Hand_C::OnBlendOut_D984D1104BE6D38FAE2461A31D0E051A()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Hand_C", "K2_ActivateAbility");
+		Func = Class->GetFunction("GA_Hand_C", "OnBlendOut_D984D1104BE6D38FAE2461A31D0E051A");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GA_Hand.GA_Hand_C.ExecuteUbergraph_GA_Hand
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function GA_Hand.GA_Hand_C.OnCancelled_D984D1104BE6D38FAE2461A31D0E051A
+// (BlueprintCallable, BlueprintEvent)
 
-void UGA_Hand_C::ExecuteUbergraph_GA_Hand(int32 EntryPoint)
+void UGA_Hand_C::OnCancelled_D984D1104BE6D38FAE2461A31D0E051A()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Hand_C", "ExecuteUbergraph_GA_Hand");
+		Func = Class->GetFunction("GA_Hand_C", "OnCancelled_D984D1104BE6D38FAE2461A31D0E051A");
 
-	Params::GA_Hand_C_ExecuteUbergraph_GA_Hand Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function GA_Hand.GA_Hand_C.OnCompleted_D984D1104BE6D38FAE2461A31D0E051A
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Hand_C::OnCompleted_D984D1104BE6D38FAE2461A31D0E051A()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Hand_C", "OnCompleted_D984D1104BE6D38FAE2461A31D0E051A");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Hand.GA_Hand_C.OnInterrupted_D984D1104BE6D38FAE2461A31D0E051A
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Hand_C::OnInterrupted_D984D1104BE6D38FAE2461A31D0E051A()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Hand_C", "OnInterrupted_D984D1104BE6D38FAE2461A31D0E051A");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

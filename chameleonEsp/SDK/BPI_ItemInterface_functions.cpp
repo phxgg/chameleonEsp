@@ -16,102 +16,25 @@
 
 SDK_NAMESPACE_START
 
-// Function BPI_ItemInterface.BPI_ItemInterface_C.UpdateCoreDatas
+// Function BPI_ItemInterface.BPI_ItemInterface_C.DropItem
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FST_ItemCoreDatas&         CoreDatas                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FVector&                   Force_Vector                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   CentorPosition                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_ItemInterface_C::UpdateCoreDatas(const struct FST_ItemCoreDatas& CoreDatas)
+void IBPI_ItemInterface_C::DropItem(const struct FVector& Force_Vector, const struct FVector& CentorPosition)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_ItemInterface_C", "UpdateCoreDatas");
+		Func = AsUObject()->Class->GetFunction("BPI_ItemInterface_C", "DropItem");
 
-	Params::BPI_ItemInterface_C_UpdateCoreDatas Parms{};
+	Params::BPI_ItemInterface_C_DropItem Parms{};
 
-	Parms.CoreDatas = std::move(CoreDatas);
+	Parms.Force_Vector = std::move(Force_Vector);
+	Parms.CentorPosition = std::move(CentorPosition);
 
 	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPI_ItemInterface.BPI_ItemInterface_C.SetMeshDatas
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    KeepScale                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_ItemInterface_C::SetMeshDatas(bool KeepScale)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_ItemInterface_C", "SetMeshDatas");
-
-	Params::BPI_ItemInterface_C_SetMeshDatas Parms{};
-
-	Parms.KeepScale = KeepScale;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPI_ItemInterface.BPI_ItemInterface_C.PickState
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonCharacter_Main_C*  Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_ItemInterface_C::PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_ItemInterface_C", "PickState");
-
-	Params::BPI_ItemInterface_C_PickState Parms{};
-
-	Parms.State = State;
-	Parms.Character = Character;
-	Parms.SlotIndex = SlotIndex;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPI_ItemInterface.BPI_ItemInterface_C.InteractItem
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_ItemInterface_C::InteractItem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_ItemInterface_C", "InteractItem");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_ItemInterface.BPI_ItemInterface_C.GetParentCharacter
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_ItemInterface_C::GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_ItemInterface_C", "GetParentCharacter");
-
-	Params::BPI_ItemInterface_C_GetParentCharacter Parms{};
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	if (FirstpersonCharacter != nullptr)
-		*FirstpersonCharacter = Parms.FirstpersonCharacter;
 }
 
 
@@ -168,23 +91,100 @@ void IBPI_ItemInterface_C::GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* 
 }
 
 
-// Function BPI_ItemInterface.BPI_ItemInterface_C.DropItem
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BPI_ItemInterface.BPI_ItemInterface_C.GetParentCharacter
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FVector&                   Force_Vector                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   CentorPosition                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_ItemInterface_C::DropItem(const struct FVector& Force_Vector, const struct FVector& CentorPosition)
+void IBPI_ItemInterface_C::GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_ItemInterface_C", "DropItem");
+		Func = AsUObject()->Class->GetFunction("BPI_ItemInterface_C", "GetParentCharacter");
 
-	Params::BPI_ItemInterface_C_DropItem Parms{};
+	Params::BPI_ItemInterface_C_GetParentCharacter Parms{};
 
-	Parms.Force_Vector = std::move(Force_Vector);
-	Parms.CentorPosition = std::move(CentorPosition);
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (FirstpersonCharacter != nullptr)
+		*FirstpersonCharacter = Parms.FirstpersonCharacter;
+}
+
+
+// Function BPI_ItemInterface.BPI_ItemInterface_C.InteractItem
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_ItemInterface_C::InteractItem()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_ItemInterface_C", "InteractItem");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_ItemInterface.BPI_ItemInterface_C.PickState
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C*  Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_ItemInterface_C::PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_ItemInterface_C", "PickState");
+
+	Params::BPI_ItemInterface_C_PickState Parms{};
+
+	Parms.State = State;
+	Parms.Character = Character;
+	Parms.SlotIndex = SlotIndex;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_ItemInterface.BPI_ItemInterface_C.SetMeshDatas
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    KeepScale                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_ItemInterface_C::SetMeshDatas(bool KeepScale)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_ItemInterface_C", "SetMeshDatas");
+
+	Params::BPI_ItemInterface_C_SetMeshDatas Parms{};
+
+	Parms.KeepScale = KeepScale;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_ItemInterface.BPI_ItemInterface_C.UpdateCoreDatas
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FST_ItemCoreDatas&         CoreDatas                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void IBPI_ItemInterface_C::UpdateCoreDatas(const struct FST_ItemCoreDatas& CoreDatas)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_ItemInterface_C", "UpdateCoreDatas");
+
+	Params::BPI_ItemInterface_C_UpdateCoreDatas Parms{};
+
+	Parms.CoreDatas = std::move(CoreDatas);
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 }

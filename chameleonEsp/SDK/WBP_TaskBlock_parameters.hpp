@@ -14,24 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_TaskBlock.WBP_TaskBlock_C.ProgressAdd
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_TaskBlock_C_ProgressAdd final
-{
-public:
-	int32                                         AddValue;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_TaskBlock_C_ProgressAdd;
-
-// Function WBP_TaskBlock.WBP_TaskBlock_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_TaskBlock_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_TaskBlock_C_PreConstruct;
-
 // Function WBP_TaskBlock.WBP_TaskBlock_C.ExecuteUbergraph_WBP_TaskBlock
 // 0x0090 (0x0090 - 0x0000)
 struct WBP_TaskBlock_C_ExecuteUbergraph_WBP_TaskBlock final
@@ -55,6 +37,24 @@ public:
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0080(0x0010)()
 };
 DUMPER7_ASSERTS_WBP_TaskBlock_C_ExecuteUbergraph_WBP_TaskBlock;
+
+// Function WBP_TaskBlock.WBP_TaskBlock_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_TaskBlock_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_TaskBlock_C_PreConstruct;
+
+// Function WBP_TaskBlock.WBP_TaskBlock_C.ProgressAdd
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_TaskBlock_C_ProgressAdd final
+{
+public:
+	int32                                         AddValue;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_TaskBlock_C_ProgressAdd;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

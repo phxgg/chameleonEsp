@@ -30,11 +30,11 @@ public:
 	TMulticastInlineDelegate<void(double Value)>  OnValueChangeEvery;                                // 0x09D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void SetValueText(const class FText& InText);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_NavSlider_Penguin(int32 EntryPoint);
-	void Construct();
 	void BndEvt__WBP_NavSlider_Slider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(float Value);
+	void Construct();
+	void ExecuteUbergraph_WBP_NavSlider_Penguin(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SetValueText(const class FText& InText);
 
 public:
 	static class UClass* StaticClass()

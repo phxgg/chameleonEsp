@@ -28,8 +28,8 @@ public:
 	TMulticastInlineDelegate<void(const struct FRandomStream& Seed)> GenerateSignal;                 // 0x0250(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_LBPC_PriorityGenerateControl(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

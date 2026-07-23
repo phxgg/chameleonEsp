@@ -14,15 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_ComboBox_InputDevice.WBP_ComboBox_InputDevice_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_ComboBox_InputDevice_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ComboBox_InputDevice_C_PreConstruct;
-
 // Function WBP_ComboBox_InputDevice.WBP_ComboBox_InputDevice_C.ExecuteUbergraph_WBP_ComboBox_InputDevice
 // 0x0048 (0x0048 - 0x0000)
 struct WBP_ComboBox_InputDevice_C_ExecuteUbergraph_WBP_ComboBox_InputDevice final
@@ -49,6 +40,15 @@ public:
 	bool                                          CallFunc_SetOptionIndex_ReturnValue;               // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ComboBox_InputDevice_C_ExecuteUbergraph_WBP_ComboBox_InputDevice;
+
+// Function WBP_ComboBox_InputDevice.WBP_ComboBox_InputDevice_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_ComboBox_InputDevice_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ComboBox_InputDevice_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

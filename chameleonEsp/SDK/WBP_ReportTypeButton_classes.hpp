@@ -29,11 +29,11 @@ public:
 	TMulticastInlineDelegate<void(class UWBP_ReportTypeButton_C* SelfObject)> OnPushButton;          // 0x0930(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void SelectStateUpdate(bool State);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_ReportTypeButton(int32 EntryPoint);
-	void Construct();
 	void BndEvt__WBP_ReportTypeButton_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void Construct();
+	void ExecuteUbergraph_WBP_ReportTypeButton(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SelectStateUpdate(bool State);
 
 public:
 	static class UClass* StaticClass()

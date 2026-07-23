@@ -26,9 +26,9 @@ public:
 	TArray<class UStaticMesh*>                    RandomMesh;                                        // 0x02D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void ReceiveBeginPlay();
-	void Generate();
 	void ExecuteUbergraph_BP_Structure_Ice(int32 EntryPoint);
+	void Generate();
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

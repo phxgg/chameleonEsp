@@ -16,6 +16,17 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BPC_PowerDispersion.BPC_PowerDispersion_C.Dispersion
+// 0x0028 (0x0028 - 0x0000)
+struct BPC_PowerDispersion_C_Dispersion final
+{
+public:
+	struct FVector                                PowerPosition;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        power;                                             // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 SourceActor;                                       // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PowerDispersion_C_Dispersion;
+
 // Function BPC_PowerDispersion.BPC_PowerDispersion_C.ExecuteUbergraph_BPC_PowerDispersion
 // 0x0090 (0x0090 - 0x0000)
 struct BPC_PowerDispersion_C_ExecuteUbergraph_BPC_PowerDispersion final
@@ -43,17 +54,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_PowerDispersion_C_ExecuteUbergraph_BPC_PowerDispersion;
-
-// Function BPC_PowerDispersion.BPC_PowerDispersion_C.Dispersion
-// 0x0028 (0x0028 - 0x0000)
-struct BPC_PowerDispersion_C_Dispersion final
-{
-public:
-	struct FVector                                PowerPosition;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        power;                                             // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 SourceActor;                                       // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PowerDispersion_C_Dispersion;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

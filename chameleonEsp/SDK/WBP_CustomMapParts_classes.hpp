@@ -31,14 +31,14 @@ public:
 	bool                                          ShowSelectButton;                                  // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void SelectUpdate(bool State);
-	void Request(bool bSuccess, const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void OnSuccess_212C9A914520D8F7A114F290F6F7AA59(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
-	void OnFailure_212C9A914520D8F7A114F290F6F7AA59(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
-	void ExecuteUbergraph_WBP_CustomMapParts(int32 EntryPoint);
-	void Construct();
 	void BndEvt__WBP_CustomMapParts_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature();
+	void Construct();
+	void ExecuteUbergraph_WBP_CustomMapParts(int32 EntryPoint);
+	void OnFailure_212C9A914520D8F7A114F290F6F7AA59(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
+	void OnSuccess_212C9A914520D8F7A114F290F6F7AA59(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
+	void PreConstruct(bool IsDesignTime);
+	void Request(bool bSuccess, const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage);
+	void SelectUpdate(bool State);
 
 public:
 	static class UClass* StaticClass()

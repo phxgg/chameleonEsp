@@ -40,17 +40,17 @@ public:
 	class FText                                   EmptyDefaultText;                                  // 0x0978(0x0010)(Edit, BlueprintVisible)
 
 public:
-	void TextNumUpdate();
-	void SetInputText(const class FText& InText);
-	void SetEditableText(const class FText& InText);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	class FString GetNumerText(const class FText& InText);
-	void GetInputText(class FString* Text);
-	void ExecuteUbergraph_WBP_NavInputTextBlock(int32 EntryPoint);
-	void Construct();
-	void BndEvt__WBP_NavInputTextBlock_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text);
 	void BndEvt__WBP_NavInputTextBlock_EditableText_24_K2Node_ComponentBoundEvent_2_OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
+	void BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text);
+	void BndEvt__WBP_NavInputTextBlock_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void Construct();
+	void ExecuteUbergraph_WBP_NavInputTextBlock(int32 EntryPoint);
+	void GetInputText(class FString* Text);
+	class FString GetNumerText(const class FText& InText);
+	void PreConstruct(bool IsDesignTime);
+	void SetEditableText(const class FText& InText);
+	void SetInputText(const class FText& InText);
+	void TextNumUpdate();
 
 public:
 	static class UClass* StaticClass()

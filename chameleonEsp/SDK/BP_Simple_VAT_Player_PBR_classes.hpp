@@ -29,11 +29,11 @@ public:
 	TSoftObjectPtr<class UBP_RBD_VAT_DataAssets_C> VATDataAsset;                                     // 0x02D0(0x0028)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184(class UObject* Loaded);
-	void ExecuteUbergraph_BP_Simple_VAT_Player_PBR(int32 EntryPoint);
-	void BaseTime__UpdateFunc();
 	void BaseTime__FinishedFunc();
+	void BaseTime__UpdateFunc();
+	void ExecuteUbergraph_BP_Simple_VAT_Player_PBR(int32 EntryPoint);
+	void OnLoaded_F3F51E7A482D22D54F2E9A9B92C6E184(class UObject* Loaded);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

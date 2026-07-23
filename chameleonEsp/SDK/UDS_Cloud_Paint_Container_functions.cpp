@@ -16,21 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function UDS_Cloud_Paint_Container.UDS_Cloud_Paint_Container_C.ReceiveEndPlay
-// (Event, Protected, BlueprintEvent)
+// Function UDS_Cloud_Paint_Container.UDS_Cloud_Paint_Container_C.ExecuteUbergraph_UDS_Cloud_Paint_Container
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// EEndPlayReason                          EndPlayReason_ReceiveEndPlay                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AUDS_Cloud_Paint_Container_C::ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay)
+void AUDS_Cloud_Paint_Container_C::ExecuteUbergraph_UDS_Cloud_Paint_Container(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_Cloud_Paint_Container_C", "ReceiveEndPlay");
+		Func = Class->GetFunction("UDS_Cloud_Paint_Container_C", "ExecuteUbergraph_UDS_Cloud_Paint_Container");
 
-	Params::UDS_Cloud_Paint_Container_C_ReceiveEndPlay Parms{};
+	Params::UDS_Cloud_Paint_Container_C_ExecuteUbergraph_UDS_Cloud_Paint_Container Parms{};
 
-	Parms.EndPlayReason_ReceiveEndPlay = EndPlayReason_ReceiveEndPlay;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -50,21 +50,21 @@ void AUDS_Cloud_Paint_Container_C::ReceiveBeginPlay()
 }
 
 
-// Function UDS_Cloud_Paint_Container.UDS_Cloud_Paint_Container_C.ExecuteUbergraph_UDS_Cloud_Paint_Container
-// (Final, UbergraphFunction, HasDefaults)
+// Function UDS_Cloud_Paint_Container.UDS_Cloud_Paint_Container_C.ReceiveEndPlay
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AUDS_Cloud_Paint_Container_C::ExecuteUbergraph_UDS_Cloud_Paint_Container(int32 EntryPoint)
+void AUDS_Cloud_Paint_Container_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_Cloud_Paint_Container_C", "ExecuteUbergraph_UDS_Cloud_Paint_Container");
+		Func = Class->GetFunction("UDS_Cloud_Paint_Container_C", "ReceiveEndPlay");
 
-	Params::UDS_Cloud_Paint_Container_C_ExecuteUbergraph_UDS_Cloud_Paint_Container Parms{};
+	Params::UDS_Cloud_Paint_Container_C_ReceiveEndPlay Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

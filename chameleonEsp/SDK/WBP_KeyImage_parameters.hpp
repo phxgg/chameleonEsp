@@ -12,39 +12,12 @@
 
 #include "UINavigation_structs.hpp"
 #include "UMG_structs.hpp"
-#include "Engine_structs.hpp"
 #include "ST_InputDeviceImage_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
-
-// Function WBP_KeyImage.WBP_KeyImage_C.UpdateInputDeviceAll
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_KeyImage_C_UpdateInputDeviceAll final
-{
-public:
-	EInputType                                    InputType;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_KeyImage_C_UpdateInputDeviceAll;
-
-// Function WBP_KeyImage.WBP_KeyImage_C.SetIsController
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_KeyImage_C_SetIsController final
-{
-public:
-	bool                                          IsController;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_KeyImage_C_SetIsController;
-
-// Function WBP_KeyImage.WBP_KeyImage_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_KeyImage_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_KeyImage_C_PreConstruct;
 
 // Function WBP_KeyImage.WBP_KeyImage_C.ExecuteUbergraph_WBP_KeyImage
 // 0x01A8 (0x01A8 - 0x0000)
@@ -89,6 +62,33 @@ public:
 	struct FST_InputDeviceImage                   K2Node_Select_Default_1;                           // 0x0130(0x0078)(ConstParm, ContainsInstancedReference, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_KeyImage_C_ExecuteUbergraph_WBP_KeyImage;
+
+// Function WBP_KeyImage.WBP_KeyImage_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_KeyImage_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_KeyImage_C_PreConstruct;
+
+// Function WBP_KeyImage.WBP_KeyImage_C.SetIsController
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_KeyImage_C_SetIsController final
+{
+public:
+	bool                                          IsController_0;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_KeyImage_C_SetIsController;
+
+// Function WBP_KeyImage.WBP_KeyImage_C.UpdateInputDeviceAll
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_KeyImage_C_UpdateInputDeviceAll final
+{
+public:
+	EInputType                                    InputType;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_KeyImage_C_UpdateInputDeviceAll;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

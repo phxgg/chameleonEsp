@@ -17,6 +17,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_Axe_V2.BP_Axe_V2_C.BndEvt__BP_Axe_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_0_OnUniqueEvent__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Axe_V2_C_BndEvt__BP_Axe_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_0_OnUniqueEvent__DelegateSignature final
+{
+public:
+	class FName                                   EventName;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Axe_V2_C_BndEvt__BP_Axe_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_0_OnUniqueEvent__DelegateSignature;
+
 // Function BP_Axe_V2.BP_Axe_V2_C.ExecuteUbergraph_BP_Axe_V2
 // 0x01B0 (0x01B0 - 0x0000)
 struct BP_Axe_V2_C_ExecuteUbergraph_BP_Axe_V2 final
@@ -63,15 +72,6 @@ public:
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_Axe_V2_C_ExecuteUbergraph_BP_Axe_V2;
-
-// Function BP_Axe_V2.BP_Axe_V2_C.BndEvt__BP_Axe_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_0_OnUniqueEvent__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct BP_Axe_V2_C_BndEvt__BP_Axe_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_0_OnUniqueEvent__DelegateSignature final
-{
-public:
-	class FName                                   EventName;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Axe_V2_C_BndEvt__BP_Axe_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_0_OnUniqueEvent__DelegateSignature;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

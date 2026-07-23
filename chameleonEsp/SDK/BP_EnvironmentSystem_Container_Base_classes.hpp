@@ -27,11 +27,11 @@ public:
 	TSoftObjectPtr<class UBP_RBD_VAT_DataAssets_C> VATData_Asset;                                    // 0x0380(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_EnvironmentSystem_Container_Base(int32 EntryPoint);
-	void ReceiveDestroyed();
-	void ReplicateEvent();
-	void SpawnMaterial();
 	void UserConstructionScript();
+	void SpawnMaterial();
+	void ReplicateEvent();
+	void ReceiveDestroyed();
+	void ExecuteUbergraph_BP_EnvironmentSystem_Container_Base(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -11,322 +11,70 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "EN_LINK_GamePhase_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 #include "UMG_structs.hpp"
-#include "EN_LINK_GamePhase_structs.hpp"
 #include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.WriteWeeklyRezult
-// 0x0010 (0x0010 - 0x0000)
-struct BP_GameState_LINK_C_WriteWeeklyRezult final
-{
-public:
-	struct FDateTime                              StartTime;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FDateTime                              EndTime;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_WriteWeeklyRezult;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.UseCoin
-// 0x000C (0x000C - 0x0000)
-struct BP_GameState_LINK_C_UseCoin final
-{
-public:
-	int32                                         UseValue;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Rezult;                                            // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseRezult;                                         // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_UseCoin;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.UpdateSortieWieget
-// 0x0018 (0x0018 - 0x0000)
-struct BP_GameState_LINK_C_UpdateSortieWieget final
-{
-public:
-	int32                                         AppendPreset;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Text;                                              // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_UpdateSortieWieget;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.UpdateSessionSettings
+// Function BP_GameState_LINK.BP_GameState_LINK_C.AddCoin
 // 0x0004 (0x0004 - 0x0000)
-struct BP_GameState_LINK_C_UpdateSessionSettings final
+struct BP_GameState_LINK_C_AddCoin final
 {
 public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_GameState_LINK_C_UpdateSessionSettings;
+DUMPER7_ASSERTS_BP_GameState_LINK_C_AddCoin;
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.UpdateMapSettings
+// Function BP_GameState_LINK.BP_GameState_LINK_C.AddTaskUI
 // 0x0018 (0x0018 - 0x0000)
-struct BP_GameState_LINK_C_UpdateMapSettings final
+struct BP_GameState_LINK_C_AddTaskUI final
 {
 public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 OverrideText;                                      // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         TaskIndex;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         SumProgress;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Key;                                               // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_GameState_LINK_C_UpdateMapSettings;
+DUMPER7_ASSERTS_BP_GameState_LINK_C_AddTaskUI;
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.UpdateExitShopUI
-// 0x0018 (0x0018 - 0x0000)
-struct BP_GameState_LINK_C_UpdateExitShopUI final
-{
-public:
-	int32                                         AppendPreset;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Text;                                              // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_UpdateExitShopUI;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.TimerPopup
-// 0x0018 (0x0018 - 0x0000)
-struct BP_GameState_LINK_C_TimerPopup final
-{
-public:
-	int32                                         TextIndex;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         AddTime;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CustomString;                                      // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_TimerPopup;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.StormTextUpdate
+// Function BP_GameState_LINK.BP_GameState_LINK_C.AddWidget(Global)
 // 0x0008 (0x0008 - 0x0000)
-struct BP_GameState_LINK_C_StormTextUpdate final
+struct BP_GameState_LINK_C_AddWidget_Global_ final
 {
 public:
-	int32                                         TextIndex;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TextNumber;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 WidgetClass;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_GameState_LINK_C_StormTextUpdate;
+DUMPER7_ASSERTS_BP_GameState_LINK_C_AddWidget_Global_;
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.StopAllBGM
-// 0x0008 (0x0008 - 0x0000)
-struct BP_GameState_LINK_C_StopAllBGM final
-{
-public:
-	class FName                                   NextTarget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_StopAllBGM;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ShowKingPopup(Replicate)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.CinemaManequinAttach
 // 0x0010 (0x0010 - 0x0000)
-struct BP_GameState_LINK_C_ShowKingPopup_Replicate_ final
+struct BP_GameState_LINK_C_CinemaManequinAttach final
 {
 public:
-	class FString                                 TargetName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	TArray<class AController*>                    Controllers;                                       // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_GameState_LINK_C_ShowKingPopup_Replicate_;
+DUMPER7_ASSERTS_BP_GameState_LINK_C_CinemaManequinAttach;
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ShowAnnounceLocal
-// 0x0018 (0x0018 - 0x0000)
-struct BP_GameState_LINK_C_ShowAnnounceLocal final
-{
-public:
-	float                                         Duration;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TypeIndex;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ReplaceValue;                                      // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_FirstPersonCharacter_LINK_C*        LinkCharacter;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_ShowAnnounceLocal;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ShowAnnounce
-// 0x0018 (0x0018 - 0x0000)
-struct BP_GameState_LINK_C_ShowAnnounce final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	float                                         Duration;                                          // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TypeIndex;                                         // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_ShowAnnounce;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ShopLoadingUI
-// 0x0001 (0x0001 - 0x0000)
-struct BP_GameState_LINK_C_ShopLoadingUI final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_ShopLoadingUI;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.SetTimePhase
-// 0x0001 (0x0001 - 0x0000)
-struct BP_GameState_LINK_C_SetTimePhase final
-{
-public:
-	bool                                          IsNight;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_SetTimePhase;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.SetStormLevel
-// 0x0004 (0x0004 - 0x0000)
-struct BP_GameState_LINK_C_SetStormLevel final
-{
-public:
-	int32                                         StormLevel;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_SetStormLevel;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.SetSortieCounterVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct BP_GameState_LINK_C_SetSortieCounterVisibility final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_SetSortieCounterVisibility;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.SendToText(Server)
-// 0x0018 (0x0018 - 0x0000)
-struct BP_GameState_LINK_C_SendToText_Server_ final
-{
-public:
-	class FString                                 Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         MessageType;                                       // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_SendToText_Server_;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.SendToText(Local)
-// 0x0018 (0x0018 - 0x0000)
-struct BP_GameState_LINK_C_SendToText_Local_ final
-{
-public:
-	class FString                                 Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         MessageType;                                       // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_SendToText_Local_;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.SendToText(Client)
-// 0x0018 (0x0018 - 0x0000)
-struct BP_GameState_LINK_C_SendToText_Client_ final
-{
-public:
-	class FString                                 Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         MessageType;                                       // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_SendToText_Client_;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.RevivalAnnounce(Server)
-// 0x0008 (0x0008 - 0x0000)
-struct BP_GameState_LINK_C_RevivalAnnounce_Server_ final
-{
-public:
-	class ABP_FirstPersonPlayerState_LINK_C*      SourcePlayerStete;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_RevivalAnnounce_Server_;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.RevivalAnnounce(Client)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.DeathAnnounce(Client)
 // 0x0010 (0x0010 - 0x0000)
-struct BP_GameState_LINK_C_RevivalAnnounce_Client_ final
+struct BP_GameState_LINK_C_DeathAnnounce_Client_ final
 {
 public:
 	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_GameState_LINK_C_RevivalAnnounce_Client_;
+DUMPER7_ASSERTS_BP_GameState_LINK_C_DeathAnnounce_Client_;
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ReplicateSound
+// Function BP_GameState_LINK.BP_GameState_LINK_C.DeathAnnounce(Server)
 // 0x0008 (0x0008 - 0x0000)
-struct BP_GameState_LINK_C_ReplicateSound final
+struct BP_GameState_LINK_C_DeathAnnounce_Server_ final
 {
 public:
-	class USoundBase*                             Sound;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonPlayerState_LINK_C*      SourcePlayerStete;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_GameState_LINK_C_ReplicateSound;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.RemoveTaskWidget
-// 0x0010 (0x0010 - 0x0000)
-struct BP_GameState_LINK_C_RemoveTaskWidget final
-{
-public:
-	class FString                                 Key;                                               // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_RemoveTaskWidget;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ProgressAdd
-// 0x0018 (0x0018 - 0x0000)
-struct BP_GameState_LINK_C_ProgressAdd final
-{
-public:
-	int32                                         AddValue;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Key;                                               // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_ProgressAdd;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.PlayIslandTeleportMovie
-// 0x0004 (0x0004 - 0x0000)
-struct BP_GameState_LINK_C_PlayIslandTeleportMovie final
-{
-public:
-	int32                                         Day;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_PlayIslandTeleportMovie;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.PhaseTextUpdate
-// 0x000C (0x000C - 0x0000)
-struct BP_GameState_LINK_C_PhaseTextUpdate final
-{
-public:
-	int32                                         Phase;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Time;                                              // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsOverTime;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_PhaseTextUpdate;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.OnRep_GameMode
-// 0x0002 (0x0002 - 0x0000)
-struct BP_GameState_LINK_C_OnRep_GameMode final
-{
-public:
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_OnRep_GameMode;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.OnRep_CurrentStormLevel
-// 0x0090 (0x0090 - 0x0000)
-struct BP_GameState_LINK_C_OnRep_CurrentStormLevel final
-{
-public:
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0000(0x0010)()
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x0010(0x0010)()
-	TArray<class FString>                         CallFunc_SplitText_ReturnValue;                    // 0x0020(0x0010)(ReferenceParm)
-	TArray<class FString>                         CallFunc_SplitText_ReturnValue_1;                  // 0x0030(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_2;            // 0x0040(0x0010)()
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_OnRep_CurrentStormLevel;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.GoalAfter
-// 0x0010 (0x0010 - 0x0000)
-struct BP_GameState_LINK_C_GoalAfter final
-{
-public:
-	TArray<class ABP_FirstPersonCharacter_LINK_C*> GoalMiniPenguinOwners;                            // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_GoalAfter;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.ExitShopAreaUpdate
-// 0x0010 (0x0010 - 0x0000)
-struct BP_GameState_LINK_C_ExitShopAreaUpdate final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          State;                                             // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_ExitShopAreaUpdate;
+DUMPER7_ASSERTS_BP_GameState_LINK_C_DeathAnnounce_Server_;
 
 // Function BP_GameState_LINK.BP_GameState_LINK_C.ExecuteUbergraph_BP_GameState_LINK
 // 0x0990 (0x0990 - 0x0000)
@@ -664,61 +412,313 @@ public:
 };
 DUMPER7_ASSERTS_BP_GameState_LINK_C_ExecuteUbergraph_BP_GameState_LINK;
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.DeathAnnounce(Server)
-// 0x0008 (0x0008 - 0x0000)
-struct BP_GameState_LINK_C_DeathAnnounce_Server_ final
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ExitShopAreaUpdate
+// 0x0010 (0x0010 - 0x0000)
+struct BP_GameState_LINK_C_ExitShopAreaUpdate final
 {
 public:
-	class ABP_FirstPersonPlayerState_LINK_C*      SourcePlayerStete;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          State;                                             // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_GameState_LINK_C_DeathAnnounce_Server_;
+DUMPER7_ASSERTS_BP_GameState_LINK_C_ExitShopAreaUpdate;
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.DeathAnnounce(Client)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.GoalAfter
 // 0x0010 (0x0010 - 0x0000)
-struct BP_GameState_LINK_C_DeathAnnounce_Client_ final
+struct BP_GameState_LINK_C_GoalAfter final
+{
+public:
+	TArray<class ABP_FirstPersonCharacter_LINK_C*> GoalMiniPenguinOwners;                            // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_GoalAfter;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.OnRep_CurrentStormLevel
+// 0x0090 (0x0090 - 0x0000)
+struct BP_GameState_LINK_C_OnRep_CurrentStormLevel final
+{
+public:
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0000(0x0010)()
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x0010(0x0010)()
+	TArray<class FString>                         CallFunc_SplitText_ReturnValue;                    // 0x0020(0x0010)(ReferenceParm)
+	TArray<class FString>                         CallFunc_SplitText_ReturnValue_1;                  // 0x0030(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue_2;            // 0x0040(0x0010)()
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_OnRep_CurrentStormLevel;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.OnRep_GameMode
+// 0x0002 (0x0002 - 0x0000)
+struct BP_GameState_LINK_C_OnRep_GameMode final
+{
+public:
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_OnRep_GameMode;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.PhaseTextUpdate
+// 0x000C (0x000C - 0x0000)
+struct BP_GameState_LINK_C_PhaseTextUpdate final
+{
+public:
+	int32                                         Phase;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Time;                                              // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsOverTime;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_PhaseTextUpdate;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.PlayIslandTeleportMovie
+// 0x0004 (0x0004 - 0x0000)
+struct BP_GameState_LINK_C_PlayIslandTeleportMovie final
+{
+public:
+	int32                                         Day;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_PlayIslandTeleportMovie;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ProgressAdd
+// 0x0018 (0x0018 - 0x0000)
+struct BP_GameState_LINK_C_ProgressAdd final
+{
+public:
+	int32                                         AddValue;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Key;                                               // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_ProgressAdd;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.RemoveTaskWidget
+// 0x0010 (0x0010 - 0x0000)
+struct BP_GameState_LINK_C_RemoveTaskWidget final
+{
+public:
+	class FString                                 Key;                                               // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_RemoveTaskWidget;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ReplicateSound
+// 0x0008 (0x0008 - 0x0000)
+struct BP_GameState_LINK_C_ReplicateSound final
+{
+public:
+	class USoundBase*                             Sound;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_ReplicateSound;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.RevivalAnnounce(Client)
+// 0x0010 (0x0010 - 0x0000)
+struct BP_GameState_LINK_C_RevivalAnnounce_Client_ final
 {
 public:
 	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_GameState_LINK_C_DeathAnnounce_Client_;
+DUMPER7_ASSERTS_BP_GameState_LINK_C_RevivalAnnounce_Client_;
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.CinemaManequinAttach
-// 0x0010 (0x0010 - 0x0000)
-struct BP_GameState_LINK_C_CinemaManequinAttach final
-{
-public:
-	TArray<class AController*>                    Controllers;                                       // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_BP_GameState_LINK_C_CinemaManequinAttach;
-
-// Function BP_GameState_LINK.BP_GameState_LINK_C.AddWidget(Global)
+// Function BP_GameState_LINK.BP_GameState_LINK_C.RevivalAnnounce(Server)
 // 0x0008 (0x0008 - 0x0000)
-struct BP_GameState_LINK_C_AddWidget_Global_ final
+struct BP_GameState_LINK_C_RevivalAnnounce_Server_ final
 {
 public:
-	class UClass*                                 WidgetClass;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonPlayerState_LINK_C*      SourcePlayerStete;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_GameState_LINK_C_AddWidget_Global_;
+DUMPER7_ASSERTS_BP_GameState_LINK_C_RevivalAnnounce_Server_;
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.AddTaskUI
+// Function BP_GameState_LINK.BP_GameState_LINK_C.SendToText(Client)
 // 0x0018 (0x0018 - 0x0000)
-struct BP_GameState_LINK_C_AddTaskUI final
+struct BP_GameState_LINK_C_SendToText_Client_ final
 {
 public:
-	int32                                         TaskIndex;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         SumProgress;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Key;                                               // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
+	class FString                                 Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         MessageType;                                       // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_GameState_LINK_C_AddTaskUI;
+DUMPER7_ASSERTS_BP_GameState_LINK_C_SendToText_Client_;
 
-// Function BP_GameState_LINK.BP_GameState_LINK_C.AddCoin
-// 0x0004 (0x0004 - 0x0000)
-struct BP_GameState_LINK_C_AddCoin final
+// Function BP_GameState_LINK.BP_GameState_LINK_C.SendToText(Local)
+// 0x0018 (0x0018 - 0x0000)
+struct BP_GameState_LINK_C_SendToText_Local_ final
 {
 public:
-	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         MessageType;                                       // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_GameState_LINK_C_AddCoin;
+DUMPER7_ASSERTS_BP_GameState_LINK_C_SendToText_Local_;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.SendToText(Server)
+// 0x0018 (0x0018 - 0x0000)
+struct BP_GameState_LINK_C_SendToText_Server_ final
+{
+public:
+	class FString                                 Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         MessageType;                                       // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_SendToText_Server_;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.SetSortieCounterVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct BP_GameState_LINK_C_SetSortieCounterVisibility final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_SetSortieCounterVisibility;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.SetStormLevel
+// 0x0004 (0x0004 - 0x0000)
+struct BP_GameState_LINK_C_SetStormLevel final
+{
+public:
+	int32                                         StormLevel;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_SetStormLevel;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.SetTimePhase
+// 0x0001 (0x0001 - 0x0000)
+struct BP_GameState_LINK_C_SetTimePhase final
+{
+public:
+	bool                                          IsNight;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_SetTimePhase;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ShopLoadingUI
+// 0x0001 (0x0001 - 0x0000)
+struct BP_GameState_LINK_C_ShopLoadingUI final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_ShopLoadingUI;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ShowAnnounce
+// 0x0018 (0x0018 - 0x0000)
+struct BP_GameState_LINK_C_ShowAnnounce final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	float                                         Duration;                                          // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TypeIndex;                                         // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_ShowAnnounce;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ShowAnnounceLocal
+// 0x0018 (0x0018 - 0x0000)
+struct BP_GameState_LINK_C_ShowAnnounceLocal final
+{
+public:
+	float                                         Duration;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TypeIndex;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReplaceValue;                                      // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_FirstPersonCharacter_LINK_C*        LinkCharacter_0;                                   // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_ShowAnnounceLocal;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.ShowKingPopup(Replicate)
+// 0x0010 (0x0010 - 0x0000)
+struct BP_GameState_LINK_C_ShowKingPopup_Replicate_ final
+{
+public:
+	class FString                                 TargetName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_ShowKingPopup_Replicate_;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.StopAllBGM
+// 0x0008 (0x0008 - 0x0000)
+struct BP_GameState_LINK_C_StopAllBGM final
+{
+public:
+	class FName                                   NextTarget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_StopAllBGM;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.StormTextUpdate
+// 0x0008 (0x0008 - 0x0000)
+struct BP_GameState_LINK_C_StormTextUpdate final
+{
+public:
+	int32                                         TextIndex;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TextNumber;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_StormTextUpdate;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.TimerPopup
+// 0x0018 (0x0018 - 0x0000)
+struct BP_GameState_LINK_C_TimerPopup final
+{
+public:
+	int32                                         TextIndex;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         AddTime;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CustomString;                                      // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_TimerPopup;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.UpdateExitShopUI
+// 0x0018 (0x0018 - 0x0000)
+struct BP_GameState_LINK_C_UpdateExitShopUI final
+{
+public:
+	int32                                         AppendPreset;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Text;                                              // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_UpdateExitShopUI;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.UpdateMapSettings
+// 0x0018 (0x0018 - 0x0000)
+struct BP_GameState_LINK_C_UpdateMapSettings final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 OverrideText;                                      // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_UpdateMapSettings;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.UpdateSessionSettings
+// 0x0004 (0x0004 - 0x0000)
+struct BP_GameState_LINK_C_UpdateSessionSettings final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_UpdateSessionSettings;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.UpdateSortieWieget
+// 0x0018 (0x0018 - 0x0000)
+struct BP_GameState_LINK_C_UpdateSortieWieget final
+{
+public:
+	int32                                         AppendPreset;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Text;                                              // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_UpdateSortieWieget;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.UseCoin
+// 0x000C (0x000C - 0x0000)
+struct BP_GameState_LINK_C_UseCoin final
+{
+public:
+	int32                                         UseValue;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Rezult;                                            // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseRezult;                                         // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_UseCoin;
+
+// Function BP_GameState_LINK.BP_GameState_LINK_C.WriteWeeklyRezult
+// 0x0010 (0x0010 - 0x0000)
+struct BP_GameState_LINK_C_WriteWeeklyRezult final
+{
+public:
+	struct FDateTime                              StartTime_0;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FDateTime                              EndTime;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_GameState_LINK_C_WriteWeeklyRezult;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

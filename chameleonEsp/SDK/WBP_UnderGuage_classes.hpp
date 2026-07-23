@@ -27,9 +27,9 @@ public:
 	double                                        HealthValue;                                       // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetWidth(double Desired_Size_X);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void ExecuteUbergraph_WBP_UnderGuage(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SetWidth(double Desired_Size_X);
 
 public:
 	static class UClass* StaticClass()

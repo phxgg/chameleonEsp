@@ -34,16 +34,16 @@ public:
 	class ANiagaraActor*                          Fog;                                               // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UserConstructionScript();
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveBeginPlay();
-	void IsGoalMemberState(bool* IsGoal);
-	void FogDeactivate();
-	void FogActivate();
-	void ExecuteUbergraph_BP_CheckPointIgroo(int32 EntryPoint);
-	void CheckState(bool State);
-	void BndEvt__BP_CheckPointIgroo_Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BeaconVisualize(bool State);
+	void BndEvt__BP_CheckPointIgroo_Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void CheckState(bool State);
+	void ExecuteUbergraph_BP_CheckPointIgroo(int32 EntryPoint);
+	void FogActivate();
+	void FogDeactivate();
+	void IsGoalMemberState(bool* IsGoal);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

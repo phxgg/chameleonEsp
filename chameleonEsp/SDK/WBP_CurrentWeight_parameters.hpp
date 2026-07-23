@@ -16,24 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_CurrentWeight.WBP_CurrentWeight_C.SetWeight
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_CurrentWeight_C_SetWeight final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_CurrentWeight_C_SetWeight;
-
-// Function WBP_CurrentWeight.WBP_CurrentWeight_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_CurrentWeight_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_CurrentWeight_C_PreConstruct;
-
 // Function WBP_CurrentWeight.WBP_CurrentWeight_C.ExecuteUbergraph_WBP_CurrentWeight
 // 0x0050 (0x0050 - 0x0000)
 struct WBP_CurrentWeight_C_ExecuteUbergraph_WBP_CurrentWeight final
@@ -51,6 +33,24 @@ public:
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_CurrentWeight_C_ExecuteUbergraph_WBP_CurrentWeight;
+
+// Function WBP_CurrentWeight.WBP_CurrentWeight_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_CurrentWeight_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_CurrentWeight_C_PreConstruct;
+
+// Function WBP_CurrentWeight.WBP_CurrentWeight_C.SetWeight
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_CurrentWeight_C_SetWeight final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_CurrentWeight_C_SetWeight;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

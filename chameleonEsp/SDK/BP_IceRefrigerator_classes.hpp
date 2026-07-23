@@ -31,10 +31,10 @@ public:
 	bool                                          InstanceClear;                                     // 0x02E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveBeginPlay();
-	void OnRep_Out_Actors();
 	void ExecuteUbergraph_BP_IceRefrigerator(int32 EntryPoint);
+	void OnRep_Out_Actors();
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()

@@ -18,18 +18,19 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_CentorInteract.WBP_CentorInteract_C.SetTextAndImage
-// 0x0050 (0x0050 - 0x0000)
-struct WBP_CentorInteract_C_SetTextAndImage final
+// Function WBP_CentorInteract.WBP_CentorInteract_C.CentorTextState
+// 0x0048 (0x0048 - 0x0000)
+struct WBP_CentorInteract_C_CentorTextState final
 {
 public:
-	TSoftObjectPtr<class UTexture2D>              SoftTexture;                                       // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, UObjectWrapper, HasGetValueTypeHash)
-	class FString                                 InputText;                                         // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	bool                                          State;                                             // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              OverrideImageSize;                                 // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 InputDevice;                                       // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_LocalizeInputKey_ReturnText;              // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0038(0x0010)()
 };
-DUMPER7_ASSERTS_WBP_CentorInteract_C_SetTextAndImage;
+DUMPER7_ASSERTS_WBP_CentorInteract_C_CentorTextState;
 
 // Function WBP_CentorInteract.WBP_CentorInteract_C.ExecuteUbergraph_WBP_CentorInteract
 // 0x0120 (0x0120 - 0x0000)
@@ -76,19 +77,18 @@ public:
 };
 DUMPER7_ASSERTS_WBP_CentorInteract_C_ExecuteUbergraph_WBP_CentorInteract;
 
-// Function WBP_CentorInteract.WBP_CentorInteract_C.CentorTextState
-// 0x0048 (0x0048 - 0x0000)
-struct WBP_CentorInteract_C_CentorTextState final
+// Function WBP_CentorInteract.WBP_CentorInteract_C.SetTextAndImage
+// 0x0050 (0x0050 - 0x0000)
+struct WBP_CentorInteract_C_SetTextAndImage final
 {
 public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 InputDevice;                                       // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_LocalizeInputKey_ReturnText;              // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0038(0x0010)()
+	TSoftObjectPtr<class UTexture2D>              SoftTexture;                                       // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, UObjectWrapper, HasGetValueTypeHash)
+	class FString                                 InputText;                                         // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          State;                                             // 0x0038(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              OverrideImageSize;                                 // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_CentorInteract_C_CentorTextState;
+DUMPER7_ASSERTS_WBP_CentorInteract_C_SetTextAndImage;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

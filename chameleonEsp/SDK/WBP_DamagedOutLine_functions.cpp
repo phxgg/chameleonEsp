@@ -16,23 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_DamagedOutLine.WBP_DamagedOutLine_C.ExecuteUbergraph_WBP_DamagedOutLine
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_DamagedOutLine.WBP_DamagedOutLine_C.AnimationEnd
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_DamagedOutLine_C::ExecuteUbergraph_WBP_DamagedOutLine(int32 EntryPoint)
+void UWBP_DamagedOutLine_C::AnimationEnd()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DamagedOutLine_C", "ExecuteUbergraph_WBP_DamagedOutLine");
+		Func = Class->GetFunction("WBP_DamagedOutLine_C", "AnimationEnd");
 
-	Params::WBP_DamagedOutLine_C_ExecuteUbergraph_WBP_DamagedOutLine Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -50,17 +44,23 @@ void UWBP_DamagedOutLine_C::Construct()
 }
 
 
-// Function WBP_DamagedOutLine.WBP_DamagedOutLine_C.AnimationEnd
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_DamagedOutLine.WBP_DamagedOutLine_C.ExecuteUbergraph_WBP_DamagedOutLine
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_DamagedOutLine_C::AnimationEnd()
+void UWBP_DamagedOutLine_C::ExecuteUbergraph_WBP_DamagedOutLine(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DamagedOutLine_C", "AnimationEnd");
+		Func = Class->GetFunction("WBP_DamagedOutLine_C", "ExecuteUbergraph_WBP_DamagedOutLine");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_DamagedOutLine_C_ExecuteUbergraph_WBP_DamagedOutLine Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

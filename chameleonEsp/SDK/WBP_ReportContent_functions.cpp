@@ -16,41 +16,35 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_ReportContent.WBP_ReportContent_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_ReportContent.WBP_ReportContent_C.BndEvt__WBP_ReportContent_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_ReportContent_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_ReportContent_C::BndEvt__WBP_ReportContent_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ReportContent_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_ReportContent_C", "BndEvt__WBP_ReportContent_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature");
 
-	Params::WBP_ReportContent_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_ReportContent.WBP_ReportContent_C.OnPushButton
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_ReportContent.WBP_ReportContent_C.ExecuteUbergraph_WBP_ReportContent
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class UWBP_ReportTypeButton_C*          SelfObject                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ReportContent_C::OnPushButton(class UWBP_ReportTypeButton_C* SelfObject)
+void UWBP_ReportContent_C::ExecuteUbergraph_WBP_ReportContent(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ReportContent_C", "OnPushButton");
+		Func = Class->GetFunction("WBP_ReportContent_C", "ExecuteUbergraph_WBP_ReportContent");
 
-	Params::WBP_ReportContent_C_OnPushButton Parms{};
+	Params::WBP_ReportContent_C_ExecuteUbergraph_WBP_ReportContent Parms{};
 
-	Parms.SelfObject = SelfObject;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -76,37 +70,43 @@ void UWBP_ReportContent_C::OnFinished_8BE5134246B81962AB20AC90BBF1E4BD(const str
 }
 
 
-// Function WBP_ReportContent.WBP_ReportContent_C.ExecuteUbergraph_WBP_ReportContent
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_ReportContent.WBP_ReportContent_C.OnPushButton
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWBP_ReportTypeButton_C*          SelfObject                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ReportContent_C::ExecuteUbergraph_WBP_ReportContent(int32 EntryPoint)
+void UWBP_ReportContent_C::OnPushButton(class UWBP_ReportTypeButton_C* SelfObject)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ReportContent_C", "ExecuteUbergraph_WBP_ReportContent");
+		Func = Class->GetFunction("WBP_ReportContent_C", "OnPushButton");
 
-	Params::WBP_ReportContent_C_ExecuteUbergraph_WBP_ReportContent Parms{};
+	Params::WBP_ReportContent_C_OnPushButton Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.SelfObject = SelfObject;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_ReportContent.WBP_ReportContent_C.BndEvt__WBP_ReportContent_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_ReportContent.WBP_ReportContent_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ReportContent_C::BndEvt__WBP_ReportContent_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature()
+void UWBP_ReportContent_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ReportContent_C", "BndEvt__WBP_ReportContent_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature");
+		Func = Class->GetFunction("WBP_ReportContent_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_ReportContent_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

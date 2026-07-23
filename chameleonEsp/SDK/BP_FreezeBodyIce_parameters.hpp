@@ -10,60 +10,55 @@
 
 #include "Basic.hpp"
 
-#include "EN_StanType_structs.hpp"
-#include "Engine_structs.hpp"
-#include "EN_DamageType_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "FinishFilter_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "EN_DamageType_structs.hpp"
+#include "Engine_structs.hpp"
+#include "EN_StanType_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.StanDamage
-// 0x0001 (0x0001 - 0x0000)
-struct BP_FreezeBodyIce_C_StanDamage final
+// Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.Damage
+// 0x0090 (0x0090 - 0x0000)
+struct BP_FreezeBodyIce_C_Damage final
 {
 public:
-	EN_StanType                                   StanType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TeamIndex;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_DamageType                                 DamageType;                                        // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             SourceAgentPoint;                                  // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UnAvoidable;                                       // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   DamageName;                                        // 0x0074(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 SourceActor;                                       // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FFinishFilter                          Finish;                                            // 0x0088(0x0002)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FreezeBodyIce_C_StanDamage;
+DUMPER7_ASSERTS_BP_FreezeBodyIce_C_Damage;
 
-// Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.StaminaDamage
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FreezeBodyIce_C_StaminaDamage final
+// Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.DamageToPlayerController
+// 0x01A0 (0x01A0 - 0x0000)
+struct BP_FreezeBodyIce_C_DamageToPlayerController final
 {
 public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageValue;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TeamIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_DamageType                                 DamageType;                                        // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15[0xB];                                       // 0x0015(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             SourceAgentPoint;                                  // 0x0020(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UnAvoidable;                                       // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   DamageName;                                        // 0x0084(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             HitRezult;                                         // 0x0090(0x0100)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AActor*                                 SourceActor;                                       // 0x0190(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FreezeBodyIce_C_StaminaDamage;
-
-// Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_FreezeBodyIce_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FreezeBodyIce_C_ReceiveTick;
-
-// Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.Heat
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FreezeBodyIce_C_Heat final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FreezeBodyIce_C_Heat;
-
-// Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.GetParryState
-// 0x0001 (0x0001 - 0x0000)
-struct BP_FreezeBodyIce_C_GetParryState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FreezeBodyIce_C_GetParryState;
+DUMPER7_ASSERTS_BP_FreezeBodyIce_C_DamageToPlayerController;
 
 // Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.ExecuteUbergraph_BP_FreezeBodyIce
 // 0x01D0 (0x01D0 - 0x0000)
@@ -104,45 +99,50 @@ public:
 };
 DUMPER7_ASSERTS_BP_FreezeBodyIce_C_ExecuteUbergraph_BP_FreezeBodyIce;
 
-// Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.DamageToPlayerController
-// 0x01A0 (0x01A0 - 0x0000)
-struct BP_FreezeBodyIce_C_DamageToPlayerController final
+// Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.GetParryState
+// 0x0001 (0x0001 - 0x0000)
+struct BP_FreezeBodyIce_C_GetParryState final
 {
 public:
-	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        DamageValue;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TeamIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_DamageType                                 DamageType;                                        // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15[0xB];                                       // 0x0015(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             SourceAgentPoint;                                  // 0x0020(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UnAvoidable;                                       // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   DamageName;                                        // 0x0084(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             HitRezult;                                         // 0x0090(0x0100)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AActor*                                 SourceActor;                                       // 0x0190(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          State;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FreezeBodyIce_C_DamageToPlayerController;
+DUMPER7_ASSERTS_BP_FreezeBodyIce_C_GetParryState;
 
-// Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.Damage
-// 0x0090 (0x0090 - 0x0000)
-struct BP_FreezeBodyIce_C_Damage final
+// Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.Heat
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FreezeBodyIce_C_Heat final
 {
 public:
-	double                                        DamageValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TeamIndex;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_DamageType                                 DamageType;                                        // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             SourceAgentPoint;                                  // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UnAvoidable;                                       // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   DamageName;                                        // 0x0074(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 SourceActor;                                       // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFinishFilter                          Finish;                                            // 0x0088(0x0002)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FreezeBodyIce_C_Damage;
+DUMPER7_ASSERTS_BP_FreezeBodyIce_C_Heat;
+
+// Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_FreezeBodyIce_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FreezeBodyIce_C_ReceiveTick;
+
+// Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.StaminaDamage
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FreezeBodyIce_C_StaminaDamage final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FreezeBodyIce_C_StaminaDamage;
+
+// Function BP_FreezeBodyIce.BP_FreezeBodyIce_C.StanDamage
+// 0x0001 (0x0001 - 0x0000)
+struct BP_FreezeBodyIce_C_StanDamage final
+{
+public:
+	EN_StanType                                   StanType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FreezeBodyIce_C_StanDamage;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

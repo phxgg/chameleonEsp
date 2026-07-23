@@ -37,23 +37,23 @@ public:
 	int32                                         CurrentChannel;                                    // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateVisual();
-	void UpdateEvent();
-	bool SetMicrophoneVolume(float Volume);
-	void Reset();
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void PlayerStateGet();
-	void MovieChange(bool IsLocal);
-	void IsCinemaModeCheck();
-	void InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	void ExecuteUbergraph_WBP_VoiceChatState(int32 EntryPoint);
-	void Construct();
-	void ConnectEvent();
-	void ChannelCheck(int32 channelToCheck);
 	void ChannelChange(int32 NewChannel, const TArray<int32>& RemoveTarget);
+	void ChannelCheck(int32 channelToCheck);
+	void ConnectEvent();
+	void Construct();
+	void ExecuteUbergraph_WBP_VoiceChatState(int32 EntryPoint);
+	void InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_2(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_VoiceChatHearToggle_K2Node_EnhancedInputActionEvent_3(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_VoiceChatTalkToggle_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void IsCinemaModeCheck();
+	void MovieChange(bool IsLocal);
+	void PlayerStateGet();
+	void PreConstruct(bool IsDesignTime);
+	void Reset();
+	bool SetMicrophoneVolume(float Volume);
+	void UpdateEvent();
+	void UpdateVisual();
 
 public:
 	static class UClass* StaticClass()

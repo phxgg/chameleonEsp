@@ -25,8 +25,8 @@ public:
 	class UAudioComponent*                        Air;                                               // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void PickState(bool State_PickState, class ABP_FirstPersonCharacter_Main_C* Character_PickState, int32 SlotIndex_PickState);
 	void ExecuteUbergraph_BP_Parasol(int32 EntryPoint);
+	void PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex);
 
 public:
 	static class UClass* StaticClass()

@@ -36,18 +36,18 @@ public:
 	class UMaterialInstanceDynamic*               GhostMaterial;                                     // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateVisualHead();
-	void UpdateVisualBody();
-	void SetVisibility(bool Visibility);
-	void SetHeadAccessorieVisiblity(bool State);
-	void SetHeadAccessorieIndex_Server_(int32 Index_0);
-	void SetBodyColorIndex_Server_(int32 Index_0);
-	void ReceiveBeginPlay();
-	void OnRep_IsGhostMode();
-	void OnRep_HeadAccessorieIndex();
-	void OnRep_BodyColorIndex();
-	void Init(class UMaterialInstanceDynamic* OwnerDynamicMaterial);
 	void ExecuteUbergraph_BPC_LinkCharacterCustomControl(int32 EntryPoint);
+	void Init(class UMaterialInstanceDynamic* OwnerDynamicMaterial_0);
+	void OnRep_BodyColorIndex();
+	void OnRep_HeadAccessorieIndex();
+	void OnRep_IsGhostMode();
+	void ReceiveBeginPlay();
+	void SetBodyColorIndex_Server_(int32 Index_0);
+	void SetHeadAccessorieIndex_Server_(int32 Index_0);
+	void SetHeadAccessorieVisiblity(bool State);
+	void SetVisibility(bool Visibility);
+	void UpdateVisualBody();
+	void UpdateVisualHead();
 
 public:
 	static class UClass* StaticClass()

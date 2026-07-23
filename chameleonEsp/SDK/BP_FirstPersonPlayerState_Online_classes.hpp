@@ -27,16 +27,16 @@ public:
 	TMulticastInlineDelegate<void(int32 NewChannel, const TArray<int32>& RemoveTarget)> ChangeVoiceChatChannel; // 0x03A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void SetName_Server_(const class FString& CustomPlayerName_0);
-	void SetName_Replicate_();
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveDestroyed();
-	void ReceiveBeginPlay();
-	void OnRep_CustomPlayerName();
-	void OnDestroySessionComplete_003AED3545F20C424888CCAE2B80C441(class FName SessionName, bool bWasSuccessful);
-	void OnCallFailed_003AED3545F20C424888CCAE2B80C441(class FName SessionName, bool bWasSuccessful);
-	void Kick();
 	void ExecuteUbergraph_BP_FirstPersonPlayerState_Online(int32 EntryPoint);
+	void Kick();
+	void OnCallFailed_003AED3545F20C424888CCAE2B80C441(class FName SessionName, bool bWasSuccessful);
+	void OnDestroySessionComplete_003AED3545F20C424888CCAE2B80C441(class FName SessionName, bool bWasSuccessful);
+	void OnRep_CustomPlayerName();
+	void ReceiveBeginPlay();
+	void ReceiveDestroyed();
+	void ReceiveTick(float DeltaSeconds);
+	void SetName_Replicate_();
+	void SetName_Server_(const class FString& CustomPlayerName_0);
 
 public:
 	static class UClass* StaticClass()

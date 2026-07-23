@@ -16,64 +16,39 @@
 
 SDK_NAMESPACE_START
 
-// Function BPI_Damage.BPI_Damage_C.StanDamage
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EN_StanType                             StanType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_Damage_C::StanDamage(EN_StanType StanType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_Damage_C", "StanDamage");
-
-	Params::BPI_Damage_C_StanDamage Parms{};
-
-	Parms.StanType = StanType;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPI_Damage.BPI_Damage_C.StaminaDamage
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_Damage_C::StaminaDamage(double Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_Damage_C", "StaminaDamage");
-
-	Params::BPI_Damage_C_StaminaDamage Parms{};
-
-	Parms.Value = Value;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPI_Damage.BPI_Damage_C.GetParryState
+// Function BPI_Damage.BPI_Damage_C.Damage
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool*                                   State                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FFinishFilter*                   Finish                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_Damage_C::GetParryState(bool* State)
+void IBPI_Damage_C::Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_Damage_C", "GetParryState");
+		Func = AsUObject()->Class->GetFunction("BPI_Damage_C", "Damage");
 
-	Params::BPI_Damage_C_GetParryState Parms{};
+	Params::BPI_Damage_C_Damage Parms{};
+
+	Parms.DamageValue = DamageValue;
+	Parms.TeamIndex = TeamIndex;
+	Parms.DamageType = DamageType;
+	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
+	Parms.UnAvoidable = UnAvoidable;
+	Parms.DamageName = DamageName;
+	Parms.SourceActor = SourceActor;
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 
-	if (State != nullptr)
-		*State = Parms.State;
+	if (Finish != nullptr)
+		*Finish = std::move(Parms.Finish);
 }
 
 
@@ -113,39 +88,64 @@ void IBPI_Damage_C::DamageToPlayerController(class AActor* TargetActor, double D
 }
 
 
-// Function BPI_Damage.BPI_Damage_C.Damage
+// Function BPI_Damage.BPI_Damage_C.GetParryState
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FFinishFilter*                   Finish                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   State                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_Damage_C::Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish)
+void IBPI_Damage_C::GetParryState(bool* State)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_Damage_C", "Damage");
+		Func = AsUObject()->Class->GetFunction("BPI_Damage_C", "GetParryState");
 
-	Params::BPI_Damage_C_Damage Parms{};
-
-	Parms.DamageValue = DamageValue;
-	Parms.TeamIndex = TeamIndex;
-	Parms.DamageType = DamageType;
-	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
-	Parms.UnAvoidable = UnAvoidable;
-	Parms.DamageName = DamageName;
-	Parms.SourceActor = SourceActor;
+	Params::BPI_Damage_C_GetParryState Parms{};
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 
-	if (Finish != nullptr)
-		*Finish = std::move(Parms.Finish);
+	if (State != nullptr)
+		*State = Parms.State;
+}
+
+
+// Function BPI_Damage.BPI_Damage_C.StaminaDamage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_Damage_C::StaminaDamage(double Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_Damage_C", "StaminaDamage");
+
+	Params::BPI_Damage_C_StaminaDamage Parms{};
+
+	Parms.Value = Value;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_Damage.BPI_Damage_C.StanDamage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EN_StanType                             StanType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_Damage_C::StanDamage(EN_StanType StanType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_Damage_C", "StanDamage");
+
+	Params::BPI_Damage_C_StanDamage Parms{};
+
+	Parms.StanType = StanType;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
 

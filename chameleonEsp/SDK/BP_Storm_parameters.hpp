@@ -17,79 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_Storm.BP_Storm_C.TeleportStorm
-// 0x0018 (0x0018 - 0x0000)
-struct BP_Storm_C_TeleportStorm final
-{
-public:
-	struct FVector                                Location;                                          // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Storm_C_TeleportStorm;
-
-// Function BP_Storm.BP_Storm_C.SetStormVisibleState
-// 0x0001 (0x0001 - 0x0000)
-struct BP_Storm_C_SetStormVisibleState final
-{
-public:
-	bool                                          VisualState;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Storm_C_SetStormVisibleState;
-
-// Function BP_Storm.BP_Storm_C.SetStormMoveState
-// 0x0001 (0x0001 - 0x0000)
-struct BP_Storm_C_SetStormMoveState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Storm_C_SetStormMoveState;
-
-// Function BP_Storm.BP_Storm_C.SetStormLevel
-// 0x0004 (0x0004 - 0x0000)
-struct BP_Storm_C_SetStormLevel final
-{
-public:
-	int32                                         Level;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Storm_C_SetStormLevel;
-
-// Function BP_Storm.BP_Storm_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_Storm_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Storm_C_ReceiveTick;
-
-// Function BP_Storm.BP_Storm_C.PositionUpdate
-// 0x0018 (0x0018 - 0x0000)
-struct BP_Storm_C_PositionUpdate final
-{
-public:
-	struct FVector                                StartLocation;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Storm_C_PositionUpdate;
-
-// Function BP_Storm.BP_Storm_C.MoveToCheckPoint
-// 0x0008 (0x0008 - 0x0000)
-struct BP_Storm_C_MoveToCheckPoint final
-{
-public:
-	class FName                                   Tag;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Storm_C_MoveToCheckPoint;
-
-// Function BP_Storm.BP_Storm_C.MoveCountDownStart
-// 0x000C (0x000C - 0x0000)
-struct BP_Storm_C_MoveCountDownStart final
-{
-public:
-	int32                                         CountDownTime;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   StopperName;                                       // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Storm_C_MoveCountDownStart;
-
 // Function BP_Storm.BP_Storm_C.ExecuteUbergraph_BP_Storm
 // 0x0DC0 (0x0DC0 - 0x0000)
 struct BP_Storm_C_ExecuteUbergraph_BP_Storm final
@@ -295,6 +222,79 @@ public:
 	float                                         CallFunc_VLerp_Alpha_ImplicitCast;                 // 0x0DB8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_Storm_C_ExecuteUbergraph_BP_Storm;
+
+// Function BP_Storm.BP_Storm_C.MoveCountDownStart
+// 0x000C (0x000C - 0x0000)
+struct BP_Storm_C_MoveCountDownStart final
+{
+public:
+	int32                                         CountDownTime;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   StopperName;                                       // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Storm_C_MoveCountDownStart;
+
+// Function BP_Storm.BP_Storm_C.MoveToCheckPoint
+// 0x0008 (0x0008 - 0x0000)
+struct BP_Storm_C_MoveToCheckPoint final
+{
+public:
+	class FName                                   Tag;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Storm_C_MoveToCheckPoint;
+
+// Function BP_Storm.BP_Storm_C.PositionUpdate
+// 0x0018 (0x0018 - 0x0000)
+struct BP_Storm_C_PositionUpdate final
+{
+public:
+	struct FVector                                StartLocation_0;                                   // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Storm_C_PositionUpdate;
+
+// Function BP_Storm.BP_Storm_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_Storm_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Storm_C_ReceiveTick;
+
+// Function BP_Storm.BP_Storm_C.SetStormLevel
+// 0x0004 (0x0004 - 0x0000)
+struct BP_Storm_C_SetStormLevel final
+{
+public:
+	int32                                         Level;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Storm_C_SetStormLevel;
+
+// Function BP_Storm.BP_Storm_C.SetStormMoveState
+// 0x0001 (0x0001 - 0x0000)
+struct BP_Storm_C_SetStormMoveState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Storm_C_SetStormMoveState;
+
+// Function BP_Storm.BP_Storm_C.SetStormVisibleState
+// 0x0001 (0x0001 - 0x0000)
+struct BP_Storm_C_SetStormVisibleState final
+{
+public:
+	bool                                          VisualState;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Storm_C_SetStormVisibleState;
+
+// Function BP_Storm.BP_Storm_C.TeleportStorm
+// 0x0018 (0x0018 - 0x0000)
+struct BP_Storm_C_TeleportStorm final
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Storm_C_TeleportStorm;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

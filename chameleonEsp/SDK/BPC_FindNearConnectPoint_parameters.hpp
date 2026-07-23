@@ -17,81 +17,34 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.UserSet
-// 0x0010 (0x0010 - 0x0000)
-struct BPC_FindNearConnectPoint_C_UserSet final
-{
-public:
-	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          State;                                             // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Set_Remove_ReturnValue;                   // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_UserSet;
-
-// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.SpawnVisualizeActor
-// 0x0020 (0x0020 - 0x0000)
-struct BPC_FindNearConnectPoint_C_SpawnVisualizeActor final
-{
-public:
-	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                position;                                          // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_SpawnVisualizeActor;
-
-// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.SpawnOrTeleportVisualize
-// 0x01B0 (0x01B0 - 0x0000)
-struct BPC_FindNearConnectPoint_C_SpawnOrTeleportVisualize final
-{
-public:
-	struct FVector                                InLocation;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    Primitive;                                         // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_Conv_VectorToTransform_ReturnValue;       // 0x0020(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_Map_Find_Value;                           // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_FinishSpawningActor_ReturnValue;          // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetActorTransform_SweepHitResult;      // 0x00A0(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorTransform_ReturnValue;         // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_SpawnOrTeleportVisualize;
-
-// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.RemoveWeight
-// 0x0010 (0x0010 - 0x0000)
-struct BPC_FindNearConnectPoint_C_RemoveWeight final
+// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.AddWeight
+// 0x0018 (0x0018 - 0x0000)
+struct BPC_FindNearConnectPoint_C_AddWeight final
 {
 public:
 	const class ABP_FirstPersonCharacter_Main_C*  Key;                                               // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-	class UBPC_LINK_HandControl_C*                HandComponent;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBPC_LINK_HandControl_C*                HandComponent;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_RemoveWeight;
+DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_AddWeight;
 
-// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_FindNearConnectPoint_C_ReceiveTick final
+// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.ClearArray
+// 0x0070 (0x0070 - 0x0000)
+struct BPC_FindNearConnectPoint_C_ClearArray final
 {
 public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class UPrimitiveComponent*, class AActor*> CopySpawnVisualActors;                           // 0x0000(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference)
+	int32                                         Temp_int_Variable;                                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_Map_GetKeyValueByIndex_Key;               // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_Map_GetKeyValueByIndex_Value;             // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Map_Length_ReturnValue;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x006D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x006E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x006F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_ReceiveTick;
-
-// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_FindNearConnectPoint_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason_ReceiveEndPlay;                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_ReceiveEndPlay;
-
-// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.GetNearConnectDatas
-// 0x0050 (0x0050 - 0x0000)
-struct BPC_FindNearConnectPoint_C_GetNearConnectDatas final
-{
-public:
-	TMap<class UPrimitiveComponent*, struct FVector> NearPointDatas;                                 // 0x0000(0x0050)(Parm, OutParm, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_GetNearConnectDatas;
+DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_ClearArray;
 
 // Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.ExecuteUbergraph_BPC_FindNearConnectPoint
 // 0x04E8 (0x04E8 - 0x0000)
@@ -261,34 +214,81 @@ public:
 };
 DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_ExecuteUbergraph_BPC_FindNearConnectPoint;
 
-// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.ClearArray
-// 0x0070 (0x0070 - 0x0000)
-struct BPC_FindNearConnectPoint_C_ClearArray final
+// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.GetNearConnectDatas
+// 0x0050 (0x0050 - 0x0000)
+struct BPC_FindNearConnectPoint_C_GetNearConnectDatas final
 {
 public:
-	TMap<class UPrimitiveComponent*, class AActor*> CopySpawnVisualActors;                           // 0x0000(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference)
-	int32                                         Temp_int_Variable;                                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_Map_GetKeyValueByIndex_Key;               // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_Map_GetKeyValueByIndex_Value;             // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Map_Length_ReturnValue;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x006D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x006E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x006F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class UPrimitiveComponent*, struct FVector> NearPointDatas;                                 // 0x0000(0x0050)(Parm, OutParm, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_ClearArray;
+DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_GetNearConnectDatas;
 
-// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.AddWeight
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_FindNearConnectPoint_C_AddWeight final
+// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_FindNearConnectPoint_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_ReceiveEndPlay;
+
+// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_FindNearConnectPoint_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_ReceiveTick;
+
+// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.RemoveWeight
+// 0x0010 (0x0010 - 0x0000)
+struct BPC_FindNearConnectPoint_C_RemoveWeight final
 {
 public:
 	const class ABP_FirstPersonCharacter_Main_C*  Key;                                               // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-	double                                        Value;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBPC_LINK_HandControl_C*                HandComponent;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBPC_LINK_HandControl_C*                HandComponent;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_AddWeight;
+DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_RemoveWeight;
+
+// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.SpawnOrTeleportVisualize
+// 0x01B0 (0x01B0 - 0x0000)
+struct BPC_FindNearConnectPoint_C_SpawnOrTeleportVisualize final
+{
+public:
+	struct FVector                                InLocation;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    Primitive_0;                                       // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_Conv_VectorToTransform_ReturnValue;       // 0x0020(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_Map_Find_Value;                           // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_FinishSpawningActor_ReturnValue;          // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetActorTransform_SweepHitResult;      // 0x00A0(0x0100)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorTransform_ReturnValue;         // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_SpawnOrTeleportVisualize;
+
+// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.SpawnVisualizeActor
+// 0x0020 (0x0020 - 0x0000)
+struct BPC_FindNearConnectPoint_C_SpawnVisualizeActor final
+{
+public:
+	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                position;                                          // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_SpawnVisualizeActor;
+
+// Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.UserSet
+// 0x0010 (0x0010 - 0x0000)
+struct BPC_FindNearConnectPoint_C_UserSet final
+{
+public:
+	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          State;                                             // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Set_Remove_ReturnValue;                   // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_FindNearConnectPoint_C_UserSet;
 
 // Function BPC_FindNearConnectPoint.BPC_FindNearConnectPoint_C.GetAttachUserNum
 // 0x0008 (0x0008 - 0x0000)

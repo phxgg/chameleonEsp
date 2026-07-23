@@ -35,10 +35,10 @@ public:
 	struct FVector                                DefaultScale;                                      // 0x02F8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void VATAnimationTimeLine__UpdateFunc();
-	void VATAnimationTimeLine__FinishedFunc();
-	void ExecuteUbergraph_CopyVAT_Animation(int32 EntryPoint);
 	void AnimationStart(class UStaticMeshComponent* ToComponent, const struct FST_VAT_Datas& VAT_Datas);
+	void ExecuteUbergraph_CopyVAT_Animation(int32 EntryPoint);
+	void VATAnimationTimeLine__FinishedFunc();
+	void VATAnimationTimeLine__UpdateFunc();
 
 public:
 	static class UClass* StaticClass()

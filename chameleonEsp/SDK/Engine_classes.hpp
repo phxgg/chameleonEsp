@@ -12045,9 +12045,9 @@ public:
 };
 DUMPER7_ASSERTS_UMaterialExpressionDistance;
 
-// Class Engine.spotlight
+// Class Engine.SpotLight
 // 0x0008 (0x02C0 - 0x02B8)
-class Aspotlight : public ALight
+class ASpotLight : public ALight
 {
 public:
 	class USpotLightComponent*                    SpotLightComponent;                                // 0x02B8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
@@ -12059,22 +12059,22 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("spotlight")
+		STATIC_CLASS_IMPL("SpotLight")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"spotlight")
+		STATIC_NAME_IMPL(L"SpotLight")
 	}
-	static class Aspotlight* GetDefaultObj()
+	static class ASpotLight* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<Aspotlight>();
+		return GetDefaultObjImpl<ASpotLight>();
 	}
 };
-DUMPER7_ASSERTS_Aspotlight;
+DUMPER7_ASSERTS_ASpotLight;
 
 // Class Engine.GeneratedMeshAreaLight
 // 0x0000 (0x02C0 - 0x02C0)
-class AGeneratedMeshAreaLight final : public Aspotlight
+class AGeneratedMeshAreaLight final : public ASpotLight
 {
 public:
 	static class UClass* StaticClass()
@@ -36186,7 +36186,7 @@ public:
 	static struct FLinearColor LinearColor_Black();
 	static struct FLinearColor LinearColor_Blue();
 	static struct FLinearColor LinearColor_Desaturated(const struct FLinearColor& InColor, float InDesaturation);
-	static float LinearColor_Distance(const struct FLinearColor& c1, const struct FLinearColor& c2);
+	static float LinearColor_Distance(const struct FLinearColor& C1, const struct FLinearColor& C2);
 	static float LinearColor_GetLuminance(const struct FLinearColor& InColor);
 	static float LinearColor_GetMax(const struct FLinearColor& InColor);
 	static float LinearColor_GetMin(const struct FLinearColor& InColor);
@@ -37016,7 +37016,7 @@ DUMPER7_ASSERTS_ULevelInstanceSubsystem;
 
 // Class Engine.LevelScriptActor
 // 0x0008 (0x02B0 - 0x02A8)
-class ALevelScriptActor final : public AActor
+class ALevelScriptActor : public AActor
 {
 public:
 	uint8                                         bInputEnabled : 1;                                 // 0x02A8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
@@ -40376,7 +40376,7 @@ DUMPER7_ASSERTS_USoundfieldEndpointSubmix;
 
 // Class Engine.SpectatorPawn
 // 0x0000 (0x0350 - 0x0350)
-class ASpectatorPawn : public ADefaultPawn
+class ASpectatorPawn final : public ADefaultPawn
 {
 public:
 	static class UClass* StaticClass()

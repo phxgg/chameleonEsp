@@ -16,37 +16,29 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_GenerateRandomBoxLocation.BP_GenerateRandomBoxLocation_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_GenerateRandomBoxLocation_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GenerateRandomBoxLocation_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GenerateRandomBoxLocation.BP_GenerateRandomBoxLocation_C.ExecuteUbergraph_BP_GenerateRandomBoxLocation
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_GenerateRandomBoxLocation.BP_GenerateRandomBoxLocation_C.CheckSide
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  BoundSizeMultiply                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Rezult                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GenerateRandomBoxLocation_C::ExecuteUbergraph_BP_GenerateRandomBoxLocation(int32 EntryPoint)
+void ABP_GenerateRandomBoxLocation_C::CheckSide(const struct FVector& Location, double BoundSizeMultiply, bool* Rezult)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GenerateRandomBoxLocation_C", "ExecuteUbergraph_BP_GenerateRandomBoxLocation");
+		Func = Class->GetFunction("BP_GenerateRandomBoxLocation_C", "CheckSide");
 
-	Params::BP_GenerateRandomBoxLocation_C_ExecuteUbergraph_BP_GenerateRandomBoxLocation Parms{};
+	Params::BP_GenerateRandomBoxLocation_C_CheckSide Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Location = std::move(Location);
+	Parms.BoundSizeMultiply = BoundSizeMultiply;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Rezult != nullptr)
+		*Rezult = Parms.Rezult;
 }
 
 
@@ -71,29 +63,37 @@ void ABP_GenerateRandomBoxLocation_C::CreateRandomSeed(struct FRandomStream* See
 }
 
 
-// Function BP_GenerateRandomBoxLocation.BP_GenerateRandomBoxLocation_C.CheckSide
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BP_GenerateRandomBoxLocation.BP_GenerateRandomBoxLocation_C.ExecuteUbergraph_BP_GenerateRandomBoxLocation
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  BoundSizeMultiply                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   Rezult                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GenerateRandomBoxLocation_C::CheckSide(const struct FVector& Location, double BoundSizeMultiply, bool* Rezult)
+void ABP_GenerateRandomBoxLocation_C::ExecuteUbergraph_BP_GenerateRandomBoxLocation(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GenerateRandomBoxLocation_C", "CheckSide");
+		Func = Class->GetFunction("BP_GenerateRandomBoxLocation_C", "ExecuteUbergraph_BP_GenerateRandomBoxLocation");
 
-	Params::BP_GenerateRandomBoxLocation_C_CheckSide Parms{};
+	Params::BP_GenerateRandomBoxLocation_C_ExecuteUbergraph_BP_GenerateRandomBoxLocation Parms{};
 
-	Parms.Location = std::move(Location);
-	Parms.BoundSizeMultiply = BoundSizeMultiply;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	if (Rezult != nullptr)
-		*Rezult = Parms.Rezult;
+
+// Function BP_GenerateRandomBoxLocation.BP_GenerateRandomBoxLocation_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_GenerateRandomBoxLocation_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GenerateRandomBoxLocation_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -16,35 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Luggage_Base.BP_Luggage_Base_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_Luggage_Base_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Luggage_Base_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Luggage_Base.BP_Luggage_Base_C.OnLoaded_061DDAA94BACAE0F7A327A8B0F5F6D91
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_Luggage_Base.BP_Luggage_Base_C.ExecuteUbergraph_BP_Luggage_Base
+// (Final, UbergraphFunction)
 // Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Luggage_Base_C::OnLoaded_061DDAA94BACAE0F7A327A8B0F5F6D91(class UObject* Loaded)
+void ABP_Luggage_Base_C::ExecuteUbergraph_BP_Luggage_Base(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Luggage_Base_C", "OnLoaded_061DDAA94BACAE0F7A327A8B0F5F6D91");
+		Func = Class->GetFunction("BP_Luggage_Base_C", "ExecuteUbergraph_BP_Luggage_Base");
 
-	Params::BP_Luggage_Base_C_OnLoaded_061DDAA94BACAE0F7A327A8B0F5F6D91 Parms{};
+	Params::BP_Luggage_Base_C_ExecuteUbergraph_BP_Luggage_Base Parms{};
 
-	Parms.Loaded = Loaded;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -71,23 +57,37 @@ void ABP_Luggage_Base_C::GetLuggageId(struct FGuid* ID)
 }
 
 
-// Function BP_Luggage_Base.BP_Luggage_Base_C.ExecuteUbergraph_BP_Luggage_Base
-// (Final, UbergraphFunction)
+// Function BP_Luggage_Base.BP_Luggage_Base_C.OnLoaded_061DDAA94BACAE0F7A327A8B0F5F6D91
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Luggage_Base_C::ExecuteUbergraph_BP_Luggage_Base(int32 EntryPoint)
+void ABP_Luggage_Base_C::OnLoaded_061DDAA94BACAE0F7A327A8B0F5F6D91(class UObject* Loaded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Luggage_Base_C", "ExecuteUbergraph_BP_Luggage_Base");
+		Func = Class->GetFunction("BP_Luggage_Base_C", "OnLoaded_061DDAA94BACAE0F7A327A8B0F5F6D91");
 
-	Params::BP_Luggage_Base_C_ExecuteUbergraph_BP_Luggage_Base Parms{};
+	Params::BP_Luggage_Base_C_OnLoaded_061DDAA94BACAE0F7A327A8B0F5F6D91 Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Loaded = Loaded;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Luggage_Base.BP_Luggage_Base_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_Luggage_Base_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Luggage_Base_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

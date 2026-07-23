@@ -16,34 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_InstanceCreate_Base.BP_InstanceCreate_Base_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_InstanceCreate_Base_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InstanceCreate_Base_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_InstanceCreate_Base.BP_InstanceCreate_Base_C.InstancePack
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_InstanceCreate_Base_C::InstancePack()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InstanceCreate_Base_C", "InstancePack");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_InstanceCreate_Base.BP_InstanceCreate_Base_C.ExecuteUbergraph_BP_InstanceCreate_Base
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -61,6 +33,34 @@ void ABP_InstanceCreate_Base_C::ExecuteUbergraph_BP_InstanceCreate_Base(int32 En
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_InstanceCreate_Base.BP_InstanceCreate_Base_C.InstancePack
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_InstanceCreate_Base_C::InstancePack()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_InstanceCreate_Base_C", "InstancePack");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_InstanceCreate_Base.BP_InstanceCreate_Base_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_InstanceCreate_Base_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_InstanceCreate_Base_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

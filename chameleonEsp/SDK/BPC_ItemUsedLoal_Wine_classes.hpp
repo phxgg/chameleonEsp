@@ -30,10 +30,10 @@ public:
 	double                                        DrunkValue;                                        // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay);
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BPC_ItemUsedLoal_Wine(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ReceiveTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()

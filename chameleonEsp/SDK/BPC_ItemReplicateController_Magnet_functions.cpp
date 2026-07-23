@@ -16,106 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.UseItem(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State_UseItem_Server_                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ItemReplicateController_Magnet_C::UseItem_Server_(bool State_UseItem_Server_)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Magnet_C", "UseItem(Server)");
-
-	Params::BPC_ItemReplicateController_Magnet_C_UseItem_Server_ Parms{};
-
-	Parms.State_UseItem_Server_ = State_UseItem_Server_;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.UseItem(Replicate)
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State_UseItem_Replicate_                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ItemReplicateController_Magnet_C::UseItem_Replicate_(bool State_UseItem_Replicate_)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Magnet_C", "UseItem(Replicate)");
-
-	Params::BPC_ItemReplicateController_Magnet_C_UseItem_Replicate_ Parms{};
-
-	Parms.State_UseItem_Replicate_ = State_UseItem_Replicate_;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.UseItem(Local)
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State_UseItem_Local_                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ItemReplicateController_Magnet_C::UseItem_Local_(bool State_UseItem_Local_)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Magnet_C", "UseItem(Local)");
-
-	Params::BPC_ItemReplicateController_Magnet_C_UseItem_Local_ Parms{};
-
-	Parms.State_UseItem_Local_ = State_UseItem_Local_;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.SetForceTarget
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UPrimitiveComponent*              AddForceTarget                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ItemReplicateController_Magnet_C::SetForceTarget(class UPrimitiveComponent* AddForceTarget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Magnet_C", "SetForceTarget");
-
-	Params::BPC_ItemReplicateController_Magnet_C_SetForceTarget Parms{};
-
-	Parms.AddForceTarget = AddForceTarget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ItemReplicateController_Magnet_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Magnet_C", "ReceiveTick");
-
-	Params::BPC_ItemReplicateController_Magnet_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.ExecuteUbergraph_BPC_ItemReplicateController_Magnet
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -131,6 +31,106 @@ void UBPC_ItemReplicateController_Magnet_C::ExecuteUbergraph_BPC_ItemReplicateCo
 	Params::BPC_ItemReplicateController_Magnet_C_ExecuteUbergraph_BPC_ItemReplicateController_Magnet Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemReplicateController_Magnet_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Magnet_C", "ReceiveTick");
+
+	Params::BPC_ItemReplicateController_Magnet_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.SetForceTarget
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*              AddForceTarget_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemReplicateController_Magnet_C::SetForceTarget(class UPrimitiveComponent* AddForceTarget_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Magnet_C", "SetForceTarget");
+
+	Params::BPC_ItemReplicateController_Magnet_C_SetForceTarget Parms{};
+
+	Parms.AddForceTarget_0 = AddForceTarget_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.UseItem(Local)
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemReplicateController_Magnet_C::UseItem_Local_(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Magnet_C", "UseItem(Local)");
+
+	Params::BPC_ItemReplicateController_Magnet_C_UseItem_Local_ Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.UseItem(Replicate)
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemReplicateController_Magnet_C::UseItem_Replicate_(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Magnet_C", "UseItem(Replicate)");
+
+	Params::BPC_ItemReplicateController_Magnet_C_UseItem_Replicate_ Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.UseItem(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemReplicateController_Magnet_C::UseItem_Server_(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Magnet_C", "UseItem(Server)");
+
+	Params::BPC_ItemReplicateController_Magnet_C_UseItem_Server_ Parms{};
+
+	Parms.State = State;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

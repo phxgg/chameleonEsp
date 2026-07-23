@@ -29,12 +29,12 @@ public:
 	int32                                         CurrentSelectIndex;                                // 0x0368(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateSlotStackData(int32 TargetIndex, int32 StackCount);
-	void UpdateSlotData(int32 TargetIndex, const struct FCPP_GameItemData& ItemData);
-	void UpdateSelectSlot(const int32 Index_0);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void GetCurrentItemData(struct FCPP_GameItemData* ItemData);
 	void ExecuteUbergraph_WBP_ItemSlots(int32 EntryPoint);
+	void GetCurrentItemData(struct FCPP_GameItemData* ItemData);
+	void PreConstruct(bool IsDesignTime);
+	void UpdateSelectSlot(const int32 Index_0);
+	void UpdateSlotData(int32 TargetIndex, const struct FCPP_GameItemData& ItemData);
+	void UpdateSlotStackData(int32 TargetIndex, int32 StackCount);
 
 public:
 	static class UClass* StaticClass()

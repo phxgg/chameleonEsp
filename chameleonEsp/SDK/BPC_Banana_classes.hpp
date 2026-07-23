@@ -27,9 +27,9 @@ public:
 	struct FVector                                TargetVel;                                         // 0x00C8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BPC_Banana(int32 EntryPoint);
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
 	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_BPC_Banana(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

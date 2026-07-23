@@ -19,138 +19,57 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.UpdateSlotStackData
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_LINK_MainUI_C_UpdateSlotStackData final
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.AddPlayerDeathUI
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_LINK_MainUI_C_AddPlayerDeathUI final
 {
 public:
-	int32                                         TargetIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         StackCount;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_LINK_MainUI_C_UpdateSlotStackData;
+DUMPER7_ASSERTS_WBP_LINK_MainUI_C_AddPlayerDeathUI;
 
-// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.UpdateSlotData
-// 0x00B8 (0x00B8 - 0x0000)
-struct WBP_LINK_MainUI_C_UpdateSlotData final
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.AddPlayerRevivalUI
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_LINK_MainUI_C_AddPlayerRevivalUI final
 {
 public:
-	int32                                         TargetIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCPP_GameItemData                      ItemData;                                          // 0x0008(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FCPP_GameItemData                      CallFunc_GetCurrentItemData_ItemData;              // 0x0060(0x0058)()
+	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_LINK_MainUI_C_UpdateSlotData;
+DUMPER7_ASSERTS_WBP_LINK_MainUI_C_AddPlayerRevivalUI;
 
-// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.SlotTextUpdate
-// 0x00C8 (0x00C8 - 0x0000)
-struct WBP_LINK_MainUI_C_SlotTextUpdate final
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.AddTaskBlock
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_LINK_MainUI_C_AddTaskBlock final
 {
 public:
-	struct FCPP_GameItemData                      CPP_GameItemData;                                  // 0x0000(0x0058)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	class FText                                   Temp_text_Variable;                                // 0x0058(0x0010)(ConstParm)
-	TArray<class FString>                         CallFunc_SplitText_ReturnValue;                    // 0x0068(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_LocalizeInputKey_ReturnText;              // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0090(0x0010)()
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x00A8(0x0010)()
-	class FText                                   Temp_text_Variable_1;                              // 0x00B8(0x0010)(ConstParm)
+	class FText                                   TaskText;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         SumProgress;                                       // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_TaskBlock_C*                       CreatedWidget;                                     // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_TaskBlock_C*                       CallFunc_Create_ReturnValue;                       // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_LINK_MainUI_C_SlotTextUpdate;
+DUMPER7_ASSERTS_WBP_LINK_MainUI_C_AddTaskBlock;
 
-// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.SetStaminaValue
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_LINK_MainUI_C_SetStaminaValue final
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.AddTimerPopup
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_LINK_MainUI_C_AddTimerPopup final
 {
 public:
-	double                                        NewValue;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TextIndex;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         AddTime;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CustomString;                                      // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_LINK_MainUI_C_SetStaminaValue;
+DUMPER7_ASSERTS_WBP_LINK_MainUI_C_AddTimerPopup;
 
-// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.SetPhaseText
-// 0x000C (0x000C - 0x0000)
-struct WBP_LINK_MainUI_C_SetPhaseText final
-{
-public:
-	int32                                         Phase;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Time;                                              // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsOverTime;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_LINK_MainUI_C_SetPhaseText;
-
-// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.SetNormalizeRevivalValue
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_LINK_MainUI_C_SetNormalizeRevivalValue final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_LINK_MainUI_C_SetNormalizeRevivalValue;
-
-// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.SetCurrentWeight
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_LINK_MainUI_C_SetCurrentWeight final
-{
-public:
-	double                                        WeightValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_LINK_MainUI_C_SetCurrentWeight;
-
-// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.SetCoinValue
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_LINK_MainUI_C_SetCoinValue final
-{
-public:
-	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_LINK_MainUI_C_SetCoinValue;
-
-// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.SetBarValue
-// 0x0060 (0x0060 - 0x0000)
-struct WBP_LINK_MainUI_C_SetBarValue final
-{
-public:
-	EN_LINK_PlayerStateValueType                  ValueName;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Value;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_LINK_PlayerStateValueType                  Temp_byte_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue;            // 0x0018(0x0010)()
-	EN_LINK_PlayerStateValueType                  Temp_byte_Variable_1;                              // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetCurrentWeight_WeightPower;             // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonPlayerState_LINK_C*      K2Node_DynamicCast_AsBP_First_Person_Player_State_LINK; // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextBlock*                             K2Node_Select_Default;                             // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_PlayerInfoBar_C*                   K2Node_Select_Default_1;                           // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_LINK_MainUI_C_SetBarValue;
-
-// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.SelectSlotUpdate
-// 0x0060 (0x0060 - 0x0000)
-struct WBP_LINK_MainUI_C_SelectSlotUpdate final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCPP_GameItemData                      CallFunc_GetCurrentItemData_ItemData;              // 0x0008(0x0058)()
-};
-DUMPER7_ASSERTS_WBP_LINK_MainUI_C_SelectSlotUpdate;
-
-// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.PreConstruct
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.ChangeSpectateUI
 // 0x0001 (0x0001 - 0x0000)
-struct WBP_LINK_MainUI_C_PreConstruct final
+struct WBP_LINK_MainUI_C_ChangeSpectateUI final
 {
 public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsSpectate;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_LINK_MainUI_C_PreConstruct;
+DUMPER7_ASSERTS_WBP_LINK_MainUI_C_ChangeSpectateUI;
 
 // Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.ExecuteUbergraph_WBP_LINK_MainUI
 // 0x0308 (0x0308 - 0x0000)
@@ -254,57 +173,138 @@ public:
 };
 DUMPER7_ASSERTS_WBP_LINK_MainUI_C_ExecuteUbergraph_WBP_LINK_MainUI;
 
-// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.ChangeSpectateUI
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
-struct WBP_LINK_MainUI_C_ChangeSpectateUI final
+struct WBP_LINK_MainUI_C_PreConstruct final
 {
 public:
-	bool                                          IsSpectate;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_LINK_MainUI_C_ChangeSpectateUI;
+DUMPER7_ASSERTS_WBP_LINK_MainUI_C_PreConstruct;
 
-// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.AddTimerPopup
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_LINK_MainUI_C_AddTimerPopup final
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.SelectSlotUpdate
+// 0x0060 (0x0060 - 0x0000)
+struct WBP_LINK_MainUI_C_SelectSlotUpdate final
 {
 public:
-	int32                                         TextIndex;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         AddTime;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CustomString;                                      // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCPP_GameItemData                      CallFunc_GetCurrentItemData_ItemData;              // 0x0008(0x0058)()
 };
-DUMPER7_ASSERTS_WBP_LINK_MainUI_C_AddTimerPopup;
+DUMPER7_ASSERTS_WBP_LINK_MainUI_C_SelectSlotUpdate;
 
-// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.AddTaskBlock
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_LINK_MainUI_C_AddTaskBlock final
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.SetBarValue
+// 0x0060 (0x0060 - 0x0000)
+struct WBP_LINK_MainUI_C_SetBarValue final
 {
 public:
-	class FText                                   TaskText;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         SumProgress;                                       // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_TaskBlock_C*                       CreatedWidget;                                     // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_TaskBlock_C*                       CallFunc_Create_ReturnValue;                       // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	EN_LINK_PlayerStateValueType                  ValueName;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Value;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_LINK_PlayerStateValueType                  Temp_byte_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_DoubleToText_ReturnValue;            // 0x0018(0x0010)()
+	EN_LINK_PlayerStateValueType                  Temp_byte_Variable_1;                              // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetCurrentWeight_WeightPower;             // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonPlayerState_LINK_C*      K2Node_DynamicCast_AsBP_First_Person_Player_State_LINK; // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextBlock*                             K2Node_Select_Default;                             // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_PlayerInfoBar_C*                   K2Node_Select_Default_1;                           // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_LINK_MainUI_C_AddTaskBlock;
+DUMPER7_ASSERTS_WBP_LINK_MainUI_C_SetBarValue;
 
-// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.AddPlayerRevivalUI
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_LINK_MainUI_C_AddPlayerRevivalUI final
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.SetCoinValue
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_LINK_MainUI_C_SetCoinValue final
 {
 public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_LINK_MainUI_C_AddPlayerRevivalUI;
+DUMPER7_ASSERTS_WBP_LINK_MainUI_C_SetCoinValue;
 
-// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.AddPlayerDeathUI
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_LINK_MainUI_C_AddPlayerDeathUI final
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.SetCurrentWeight
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_LINK_MainUI_C_SetCurrentWeight final
 {
 public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	double                                        WeightValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_LINK_MainUI_C_AddPlayerDeathUI;
+DUMPER7_ASSERTS_WBP_LINK_MainUI_C_SetCurrentWeight;
+
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.SetNormalizeRevivalValue
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_LINK_MainUI_C_SetNormalizeRevivalValue final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_LINK_MainUI_C_SetNormalizeRevivalValue;
+
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.SetPhaseText
+// 0x000C (0x000C - 0x0000)
+struct WBP_LINK_MainUI_C_SetPhaseText final
+{
+public:
+	int32                                         Phase;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Time;                                              // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsOverTime;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_LINK_MainUI_C_SetPhaseText;
+
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.SetStaminaValue
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_LINK_MainUI_C_SetStaminaValue final
+{
+public:
+	double                                        NewValue;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_LINK_MainUI_C_SetStaminaValue;
+
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.SlotTextUpdate
+// 0x00C8 (0x00C8 - 0x0000)
+struct WBP_LINK_MainUI_C_SlotTextUpdate final
+{
+public:
+	struct FCPP_GameItemData                      CPP_GameItemData;                                  // 0x0000(0x0058)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class FText                                   Temp_text_Variable;                                // 0x0058(0x0010)(ConstParm)
+	TArray<class FString>                         CallFunc_SplitText_ReturnValue;                    // 0x0068(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_LocalizeInputKey_ReturnText;              // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0090(0x0010)()
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x00A8(0x0010)()
+	class FText                                   Temp_text_Variable_1;                              // 0x00B8(0x0010)(ConstParm)
+};
+DUMPER7_ASSERTS_WBP_LINK_MainUI_C_SlotTextUpdate;
+
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.UpdateSlotData
+// 0x00B8 (0x00B8 - 0x0000)
+struct WBP_LINK_MainUI_C_UpdateSlotData final
+{
+public:
+	int32                                         TargetIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCPP_GameItemData                      ItemData;                                          // 0x0008(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FCPP_GameItemData                      CallFunc_GetCurrentItemData_ItemData;              // 0x0060(0x0058)()
+};
+DUMPER7_ASSERTS_WBP_LINK_MainUI_C_UpdateSlotData;
+
+// Function WBP_LINK_MainUI.WBP_LINK_MainUI_C.UpdateSlotStackData
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_LINK_MainUI_C_UpdateSlotStackData final
+{
+public:
+	int32                                         TargetIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         StackCount;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_LINK_MainUI_C_UpdateSlotStackData;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

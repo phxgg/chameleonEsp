@@ -27,11 +27,11 @@ public:
 	class UCharacterMovementComponent*            CharacteMovementComp;                              // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Reset();
-	void ReceiveBeginPlay();
-	void MoveMentModeReset();
-	void ModeChange(EMovementMode ChangeMode, double Timer);
 	void ExecuteUbergraph_BPC_MovementModeControl(int32 EntryPoint);
+	void ModeChange(EMovementMode ChangeMode, double Timer);
+	void MoveMentModeReset();
+	void ReceiveBeginPlay();
+	void Reset();
 
 public:
 	static class UClass* StaticClass()

@@ -35,10 +35,10 @@ public:
 	class FString                                 BeforeText;                                        // 0x03B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
-	void SetTextAndImage(TSoftObjectPtr<class UTexture2D> SoftTexture, const class FString& InputText, bool State, const struct FVector2D& OverrideImageSize);
-	void ExecuteUbergraph_WBP_CentorInteract(int32 EntryPoint);
-	void Construct();
 	void CentorTextState(bool State, const class FString& InputDevice);
+	void Construct();
+	void ExecuteUbergraph_WBP_CentorInteract(int32 EntryPoint);
+	void SetTextAndImage(TSoftObjectPtr<class UTexture2D> SoftTexture, const class FString& InputText, bool State, const struct FVector2D& OverrideImageSize);
 
 public:
 	static class UClass* StaticClass()

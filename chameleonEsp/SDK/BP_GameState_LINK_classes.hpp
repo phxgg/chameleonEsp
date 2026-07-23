@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "EN_LINK_GamePhase_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "EN_LINK_GamePhase_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
 
@@ -52,54 +52,54 @@ public:
 	int32                                         ReplicateCurrentRound;                             // 0x03DC(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void WriteWeeklyRezult(const struct FDateTime& StartTime, const struct FDateTime& EndTime);
-	void UseCoin(int32 UseValue, bool* Rezult);
-	void UpdateSortieWieget(int32 AppendPreset, const class FText& Text);
-	void UpdateSessionSettings(int32 Index_0);
-	void UpdateMapSettings(int32 Index_0, const class FString& OverrideText);
-	void UpdateExitShopUI(int32 AppendPreset, const class FText& Text);
-	void TimerPopup(int32 TextIndex, int32 AddTime, const class FString& CustomString);
-	void StormTextUpdate(int32 TextIndex, int32 TextNumber);
-	void StopAllBGM(class FName NextTarget);
-	void ShowKingPopup_Server_();
-	void ShowKingPopup_Replicate_(const class FString& TargetName);
-	void ShowAnnounceLocal(float Duration, int32 TypeIndex, int32 ReplaceValue, class ABP_FirstPersonCharacter_LINK_C* LinkCharacter);
-	void ShowAnnounce(const class FText& Text, float Duration, int32 TypeIndex);
-	void ShopLoadingUI(bool State);
-	void SetTimePhase(bool IsNight);
-	void SetStormLevel(int32 StormLevel);
-	void SetSortieCounterVisibility(bool State);
-	void SendToText_Server_(const class FString& Text, int32 MessageType);
-	void SendToText_Local_(const class FString& Text, int32 MessageType);
-	void SendToText_Client_(const class FString& Text, int32 MessageType);
-	void RevivalAnnounce_Server_(class ABP_FirstPersonPlayerState_LINK_C* SourcePlayerStete);
-	void RevivalAnnounce_Client_(const class FString& playerName);
-	void ReplicateSound(class USoundBase* Sound);
-	void RemoveWidget_Global_();
-	void RemoveTaskWidget(const class FString& Key);
-	void ReceiveBeginPlay();
-	void ProgressAdd(int32 AddValue, const class FString& Key);
-	void PlayStartCinema();
-	void PlayIslandTeleportMovie(int32 Day);
-	void PhaseTextUpdate(int32 Phase, int32 Time, bool IsOverTime);
-	void OnRep_WeightState();
-	void OnRep_GlobalCoin();
-	void OnRep_GameMode();
-	void OnRep_CurrentStormLevel();
-	void GoToShopUI();
-	void GoalAfter(const TArray<class ABP_FirstPersonCharacter_LINK_C*>& GoalMiniPenguinOwners);
-	void GameOver();
-	void GameClerUI();
-	void GameClear();
-	void ExitShopAreaUpdate(class AActor* Actor, bool State);
-	void ExecuteUbergraph_BP_GameState_LINK(int32 EntryPoint);
-	void DeathAnnounce_Server_(class ABP_FirstPersonPlayerState_LINK_C* SourcePlayerStete);
-	void DeathAnnounce_Client_(const class FString& playerName);
-	void CloseAnnounce();
-	void CinemaManequinAttach(const TArray<class AController*>& Controllers);
-	void AddWidget_Global_(class UClass* WidgetClass);
-	void AddTaskUI(int32 TaskIndex, int32 SumProgress, const class FString& Key);
 	void AddCoin(int32 Value);
+	void AddTaskUI(int32 TaskIndex, int32 SumProgress, const class FString& Key);
+	void AddWidget_Global_(class UClass* WidgetClass);
+	void CinemaManequinAttach(const TArray<class AController*>& Controllers);
+	void CloseAnnounce();
+	void DeathAnnounce_Client_(const class FString& playerName);
+	void DeathAnnounce_Server_(class ABP_FirstPersonPlayerState_LINK_C* SourcePlayerStete);
+	void ExecuteUbergraph_BP_GameState_LINK(int32 EntryPoint);
+	void ExitShopAreaUpdate(class AActor* Actor, bool State);
+	void GameClear();
+	void GameClerUI();
+	void GameOver();
+	void GoalAfter(const TArray<class ABP_FirstPersonCharacter_LINK_C*>& GoalMiniPenguinOwners);
+	void GoToShopUI();
+	void OnRep_CurrentStormLevel();
+	void OnRep_GameMode();
+	void OnRep_GlobalCoin();
+	void OnRep_WeightState();
+	void PhaseTextUpdate(int32 Phase, int32 Time, bool IsOverTime);
+	void PlayIslandTeleportMovie(int32 Day);
+	void PlayStartCinema();
+	void ProgressAdd(int32 AddValue, const class FString& Key);
+	void ReceiveBeginPlay();
+	void RemoveTaskWidget(const class FString& Key);
+	void RemoveWidget_Global_();
+	void ReplicateSound(class USoundBase* Sound);
+	void RevivalAnnounce_Client_(const class FString& playerName);
+	void RevivalAnnounce_Server_(class ABP_FirstPersonPlayerState_LINK_C* SourcePlayerStete);
+	void SendToText_Client_(const class FString& Text, int32 MessageType);
+	void SendToText_Local_(const class FString& Text, int32 MessageType);
+	void SendToText_Server_(const class FString& Text, int32 MessageType);
+	void SetSortieCounterVisibility(bool State);
+	void SetStormLevel(int32 StormLevel);
+	void SetTimePhase(bool IsNight);
+	void ShopLoadingUI(bool State);
+	void ShowAnnounce(const class FText& Text, float Duration, int32 TypeIndex);
+	void ShowAnnounceLocal(float Duration, int32 TypeIndex, int32 ReplaceValue, class ABP_FirstPersonCharacter_LINK_C* LinkCharacter_0);
+	void ShowKingPopup_Replicate_(const class FString& TargetName);
+	void ShowKingPopup_Server_();
+	void StopAllBGM(class FName NextTarget);
+	void StormTextUpdate(int32 TextIndex, int32 TextNumber);
+	void TimerPopup(int32 TextIndex, int32 AddTime, const class FString& CustomString);
+	void UpdateExitShopUI(int32 AppendPreset, const class FText& Text);
+	void UpdateMapSettings(int32 Index_0, const class FString& OverrideText);
+	void UpdateSessionSettings(int32 Index_0);
+	void UpdateSortieWieget(int32 AppendPreset, const class FText& Text);
+	void UseCoin(int32 UseValue, bool* Rezult);
+	void WriteWeeklyRezult(const struct FDateTime& StartTime_0, const struct FDateTime& EndTime);
 
 public:
 	static class UClass* StaticClass()

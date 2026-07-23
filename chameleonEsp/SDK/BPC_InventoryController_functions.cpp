@@ -16,353 +16,206 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_InventoryController.BPC_InventoryController_C.ExecuteUbergraph_BPC_InventoryController
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_InventoryController_C::ExecuteUbergraph_BPC_InventoryController(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "ExecuteUbergraph_BPC_InventoryController");
-
-	Params::BPC_InventoryController_C_ExecuteUbergraph_BPC_InventoryController Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.DropCall(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ForceNoDrop                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_InventoryController_C::DropCall_Server_(int32 SlotIndex, bool ForceNoDrop)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "DropCall(Server)");
-
-	Params::BPC_InventoryController_C_DropCall_Server_ Parms{};
-
-	Parms.SlotIndex = SlotIndex;
-	Parms.ForceNoDrop = ForceNoDrop;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.DropCall(Local)
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ForceNoDrop                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_InventoryController_C::DropCall_Local_(bool ForceNoDrop)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "DropCall(Local)");
-
-	Params::BPC_InventoryController_C_DropCall_Local_ Parms{};
-
-	Parms.ForceNoDrop = ForceNoDrop;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.HaveItemSync(StackCount)
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_InventoryController_C::HaveItemSync_StackCount_()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "HaveItemSync(StackCount)");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.UpdateCurrentCoreData(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FST_ItemCoreDatas&         Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void UBPC_InventoryController_C::UpdateCurrentCoreData_Server_(const struct FST_ItemCoreDatas& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "UpdateCurrentCoreData(Server)");
-
-	Params::BPC_InventoryController_C_UpdateCurrentCoreData_Server_ Parms{};
-
-	Parms.Value = std::move(Value);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.HaveItemSync
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_InventoryController_C::HaveItemSync()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "HaveItemSync");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBPC_InventoryController_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.GetItemData
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             ItemName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   Rezult                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FCPP_GameItemData*               ItemData                                               (Parm, OutParm)
-
-void UBPC_InventoryController_C::GetItemData(class FName ItemName, bool* Rezult, struct FCPP_GameItemData* ItemData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "GetItemData");
-
-	Params::BPC_InventoryController_C_GetItemData Parms{};
-
-	Parms.ItemName = ItemName;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Rezult != nullptr)
-		*Rezult = Parms.Rezult;
-
-	if (ItemData != nullptr)
-		*ItemData = std::move(Parms.ItemData);
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.GetCurrentSlotItem
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName*                            ItemName                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FST_ItemCoreDatas*               CoreDatas                                              (Parm, OutParm, HasGetValueTypeHash)
-
-void UBPC_InventoryController_C::GetCurrentSlotItem(class FName* ItemName, struct FST_ItemCoreDatas* CoreDatas)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "GetCurrentSlotItem");
-
-	Params::BPC_InventoryController_C_GetCurrentSlotItem Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ItemName != nullptr)
-		*ItemName = Parms.ItemName;
-
-	if (CoreDatas != nullptr)
-		*CoreDatas = std::move(Parms.CoreDatas);
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.SlotUpdate
+// Function BPC_InventoryController.BPC_InventoryController_C.CleanCheckAllSlot
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBPC_InventoryController_C::SlotUpdate()
+void UBPC_InventoryController_C::CleanCheckAllSlot()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "SlotUpdate");
+		Func = Class->GetFunction("BPC_InventoryController_C", "CleanCheckAllSlot");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_InventoryController.BPC_InventoryController_C.SlotChange
+// Function BPC_InventoryController.BPC_InventoryController_C.AddCoreOption
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   MoveValue                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32*                                  CurrentIndex                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FName&                      Key                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_InventoryController_C::SlotChange(int32 MoveValue, int32* CurrentIndex)
+void UBPC_InventoryController_C::AddCoreOption(int32 Index_0, const class FName& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "SlotChange");
+		Func = Class->GetFunction("BPC_InventoryController_C", "AddCoreOption");
 
-	Params::BPC_InventoryController_C_SlotChange Parms{};
+	Params::BPC_InventoryController_C_AddCoreOption Parms{};
 
-	Parms.MoveValue = MoveValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (CurrentIndex != nullptr)
-		*CurrentIndex = Parms.CurrentIndex;
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.SetSlotValue
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   MoveValue                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_InventoryController_C::SetSlotValue(int32 MoveValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "SetSlotValue");
-
-	Params::BPC_InventoryController_C_SetSlotValue Parms{};
-
-	Parms.MoveValue = MoveValue;
+	Parms.Index_0 = Index_0;
+	Parms.Key = Key;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_InventoryController.BPC_InventoryController_C.OnRep_CurrentSlotIndex
+// Function BPC_InventoryController.BPC_InventoryController_C.OnRep_StackState
 // (BlueprintCallable, BlueprintEvent)
 
-void UBPC_InventoryController_C::OnRep_CurrentSlotIndex()
+void UBPC_InventoryController_C::OnRep_StackState()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "OnRep_CurrentSlotIndex");
+		Func = Class->GetFunction("BPC_InventoryController_C", "OnRep_StackState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_InventoryController.BPC_InventoryController_C.AddInventory
+// Function BPC_InventoryController.BPC_InventoryController_C.GetCanStackSlot
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FST_ItemCoreDatas&         CoreDatas                                              (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// bool*                                   Rezult                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FST_ItemCoreDatas&         ST_ItemCoreDatas                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// int32*                                  SlotIndex                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_InventoryController_C::AddInventory(int32 SlotIndex, const struct FST_ItemCoreDatas& CoreDatas, bool* Rezult)
+void UBPC_InventoryController_C::GetCanStackSlot(const struct FST_ItemCoreDatas& ST_ItemCoreDatas, int32* SlotIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "AddInventory");
+		Func = Class->GetFunction("BPC_InventoryController_C", "GetCanStackSlot");
 
-	Params::BPC_InventoryController_C_AddInventory Parms{};
+	Params::BPC_InventoryController_C_GetCanStackSlot Parms{};
 
-	Parms.SlotIndex = SlotIndex;
-	Parms.CoreDatas = std::move(CoreDatas);
+	Parms.ST_ItemCoreDatas = std::move(ST_ItemCoreDatas);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Rezult != nullptr)
-		*Rezult = Parms.Rezult;
+	if (SlotIndex != nullptr)
+		*SlotIndex = Parms.SlotIndex;
 }
 
 
-// Function BPC_InventoryController.BPC_InventoryController_C.GetKeyNames
+// Function BPC_InventoryController.BPC_InventoryController_C.SlotCanStack
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// TArray<class FName>*                    KeyNames                                               (Parm, OutParm)
+// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FST_ItemCoreDatas&         ST_ItemCoreDatas                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_InventoryController_C::GetKeyNames(TArray<class FName>* KeyNames)
+bool UBPC_InventoryController_C::SlotCanStack(int32 SlotIndex, const struct FST_ItemCoreDatas& ST_ItemCoreDatas)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "GetKeyNames");
+		Func = Class->GetFunction("BPC_InventoryController_C", "SlotCanStack");
 
-	Params::BPC_InventoryController_C_GetKeyNames Parms{};
+	Params::BPC_InventoryController_C_SlotCanStack Parms{};
+
+	Parms.SlotIndex = SlotIndex;
+	Parms.ST_ItemCoreDatas = std::move(ST_ItemCoreDatas);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (KeyNames != nullptr)
-		*KeyNames = std::move(Parms.KeyNames);
+	return Parms.ReturnValue;
 }
 
 
-// Function BPC_InventoryController.BPC_InventoryController_C.CopyVariable
+// Function BPC_InventoryController.BPC_InventoryController_C.ClearAllItems
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UBPC_InventoryController_C*       Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_InventoryController_C::CopyVariable(class UBPC_InventoryController_C* Source)
+void UBPC_InventoryController_C::ClearAllItems()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "CopyVariable");
-
-	Params::BPC_InventoryController_C_CopyVariable Parms{};
-
-	Parms.Source = Source;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.OnRep_ItemCoreDatas
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_InventoryController_C::OnRep_ItemCoreDatas()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "OnRep_ItemCoreDatas");
+		Func = Class->GetFunction("BPC_InventoryController_C", "ClearAllItems");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_InventoryController.BPC_InventoryController_C.UpdateCurrentCoreData
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BPC_InventoryController.BPC_InventoryController_C.ClearSlot
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FST_ItemCoreDatas&         Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_InventoryController_C::UpdateCurrentCoreData(const struct FST_ItemCoreDatas& Value)
+void UBPC_InventoryController_C::ClearSlot(int32 SlotIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "UpdateCurrentCoreData");
+		Func = Class->GetFunction("BPC_InventoryController_C", "ClearSlot");
 
-	Params::BPC_InventoryController_C_UpdateCurrentCoreData Parms{};
+	Params::BPC_InventoryController_C_ClearSlot Parms{};
 
-	Parms.Value = std::move(Value);
+	Parms.SlotIndex = SlotIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.RespawnItem
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UClass*                           ItemClass                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FST_ItemCoreDatas&         ItemCoreDatas_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FVector&                   OverrideDropLocation                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FRotator&                  Rotaiton                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UBPC_InventoryController_C::RespawnItem(class UClass* ItemClass, const struct FST_ItemCoreDatas& ItemCoreDatas_0, const struct FVector& OverrideDropLocation, const struct FRotator& Rotaiton)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "RespawnItem");
+
+	Params::BPC_InventoryController_C_RespawnItem Parms{};
+
+	Parms.ItemClass = ItemClass;
+	Parms.ItemCoreDatas_0 = std::move(ItemCoreDatas_0);
+	Parms.OverrideDropLocation = std::move(OverrideDropLocation);
+	Parms.Rotaiton = std::move(Rotaiton);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.SlotIsEmpty
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UBPC_InventoryController_C::SlotIsEmpty(int32 SlotIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "SlotIsEmpty");
+
+	Params::BPC_InventoryController_C_SlotIsEmpty Parms{};
+
+	Parms.SlotIndex = SlotIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.GetEmptySlot
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32*                                  SlotIndex                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_InventoryController_C::GetEmptySlot(int32* SlotIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "GetEmptySlot");
+
+	Params::BPC_InventoryController_C_GetEmptySlot Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (SlotIndex != nullptr)
+		*SlotIndex = Parms.SlotIndex;
 }
 
 
@@ -396,206 +249,353 @@ void UBPC_InventoryController_C::DropItem(int32 SlotIndex, const struct FVector&
 }
 
 
-// Function BPC_InventoryController.BPC_InventoryController_C.GetEmptySlot
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32*                                  SlotIndex                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_InventoryController_C::GetEmptySlot(int32* SlotIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "GetEmptySlot");
-
-	Params::BPC_InventoryController_C_GetEmptySlot Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (SlotIndex != nullptr)
-		*SlotIndex = Parms.SlotIndex;
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.SlotIsEmpty
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool UBPC_InventoryController_C::SlotIsEmpty(int32 SlotIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "SlotIsEmpty");
-
-	Params::BPC_InventoryController_C_SlotIsEmpty Parms{};
-
-	Parms.SlotIndex = SlotIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.RespawnItem
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UClass*                           ItemClass                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FST_ItemCoreDatas&         ItemCoreDatas                                          (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// const struct FVector&                   OverrideDropLocation                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FRotator&                  Rotaiton                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UBPC_InventoryController_C::RespawnItem(class UClass* ItemClass, const struct FST_ItemCoreDatas& ItemCoreDatas, const struct FVector& OverrideDropLocation, const struct FRotator& Rotaiton)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "RespawnItem");
-
-	Params::BPC_InventoryController_C_RespawnItem Parms{};
-
-	Parms.ItemClass = ItemClass;
-	Parms.ItemCoreDatas = std::move(ItemCoreDatas);
-	Parms.OverrideDropLocation = std::move(OverrideDropLocation);
-	Parms.Rotaiton = std::move(Rotaiton);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.ClearSlot
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_InventoryController_C::ClearSlot(int32 SlotIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "ClearSlot");
-
-	Params::BPC_InventoryController_C_ClearSlot Parms{};
-
-	Parms.SlotIndex = SlotIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.ClearAllItems
+// Function BPC_InventoryController.BPC_InventoryController_C.UpdateCurrentCoreData
 // (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_InventoryController_C::ClearAllItems()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "ClearAllItems");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.SlotCanStack
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FST_ItemCoreDatas&         ST_ItemCoreDatas                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FST_ItemCoreDatas&         Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-bool UBPC_InventoryController_C::SlotCanStack(int32 SlotIndex, const struct FST_ItemCoreDatas& ST_ItemCoreDatas)
+void UBPC_InventoryController_C::UpdateCurrentCoreData(const struct FST_ItemCoreDatas& Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "SlotCanStack");
+		Func = Class->GetFunction("BPC_InventoryController_C", "UpdateCurrentCoreData");
 
-	Params::BPC_InventoryController_C_SlotCanStack Parms{};
+	Params::BPC_InventoryController_C_UpdateCurrentCoreData Parms{};
 
-	Parms.SlotIndex = SlotIndex;
-	Parms.ST_ItemCoreDatas = std::move(ST_ItemCoreDatas);
+	Parms.Value = std::move(Value);
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
-// Function BPC_InventoryController.BPC_InventoryController_C.GetCanStackSlot
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FST_ItemCoreDatas&         ST_ItemCoreDatas                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-// int32*                                  SlotIndex                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_InventoryController_C::GetCanStackSlot(const struct FST_ItemCoreDatas& ST_ItemCoreDatas, int32* SlotIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "GetCanStackSlot");
-
-	Params::BPC_InventoryController_C_GetCanStackSlot Parms{};
-
-	Parms.ST_ItemCoreDatas = std::move(ST_ItemCoreDatas);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (SlotIndex != nullptr)
-		*SlotIndex = Parms.SlotIndex;
-}
-
-
-// Function BPC_InventoryController.BPC_InventoryController_C.OnRep_StackState
+// Function BPC_InventoryController.BPC_InventoryController_C.OnRep_ItemCoreDatas
 // (BlueprintCallable, BlueprintEvent)
 
-void UBPC_InventoryController_C::OnRep_StackState()
+void UBPC_InventoryController_C::OnRep_ItemCoreDatas()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "OnRep_StackState");
+		Func = Class->GetFunction("BPC_InventoryController_C", "OnRep_ItemCoreDatas");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_InventoryController.BPC_InventoryController_C.AddCoreOption
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BPC_InventoryController.BPC_InventoryController_C.CopyVariable
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FName&                      Key                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UBPC_InventoryController_C*       Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_InventoryController_C::AddCoreOption(int32 Index_0, const class FName& Key)
+void UBPC_InventoryController_C::CopyVariable(class UBPC_InventoryController_C* Source)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "AddCoreOption");
+		Func = Class->GetFunction("BPC_InventoryController_C", "CopyVariable");
 
-	Params::BPC_InventoryController_C_AddCoreOption Parms{};
+	Params::BPC_InventoryController_C_CopyVariable Parms{};
 
-	Parms.Index_0 = Index_0;
-	Parms.Key = Key;
+	Parms.Source = Source;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_InventoryController.BPC_InventoryController_C.CleanCheckAllSlot
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BPC_InventoryController.BPC_InventoryController_C.GetKeyNames
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<class FName>*                    KeyNames                                               (Parm, OutParm)
 
-void UBPC_InventoryController_C::CleanCheckAllSlot()
+void UBPC_InventoryController_C::GetKeyNames(TArray<class FName>* KeyNames)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_InventoryController_C", "CleanCheckAllSlot");
+		Func = Class->GetFunction("BPC_InventoryController_C", "GetKeyNames");
+
+	Params::BPC_InventoryController_C_GetKeyNames Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (KeyNames != nullptr)
+		*KeyNames = std::move(Parms.KeyNames);
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.AddInventory
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FST_ItemCoreDatas&         CoreDatas                                              (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// bool*                                   Rezult                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_InventoryController_C::AddInventory(int32 SlotIndex, const struct FST_ItemCoreDatas& CoreDatas, bool* Rezult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "AddInventory");
+
+	Params::BPC_InventoryController_C_AddInventory Parms{};
+
+	Parms.SlotIndex = SlotIndex;
+	Parms.CoreDatas = std::move(CoreDatas);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Rezult != nullptr)
+		*Rezult = Parms.Rezult;
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.OnRep_CurrentSlotIndex
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_InventoryController_C::OnRep_CurrentSlotIndex()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "OnRep_CurrentSlotIndex");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.SetSlotValue
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   MoveValue                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_InventoryController_C::SetSlotValue(int32 MoveValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "SetSlotValue");
+
+	Params::BPC_InventoryController_C_SetSlotValue Parms{};
+
+	Parms.MoveValue = MoveValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.SlotChange
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   MoveValue                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  CurrentIndex                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_InventoryController_C::SlotChange(int32 MoveValue, int32* CurrentIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "SlotChange");
+
+	Params::BPC_InventoryController_C_SlotChange Parms{};
+
+	Parms.MoveValue = MoveValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (CurrentIndex != nullptr)
+		*CurrentIndex = Parms.CurrentIndex;
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.SlotUpdate
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBPC_InventoryController_C::SlotUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "SlotUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.GetCurrentSlotItem
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName*                            ItemName                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FST_ItemCoreDatas*               CoreDatas                                              (Parm, OutParm, HasGetValueTypeHash)
+
+void UBPC_InventoryController_C::GetCurrentSlotItem(class FName* ItemName, struct FST_ItemCoreDatas* CoreDatas)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "GetCurrentSlotItem");
+
+	Params::BPC_InventoryController_C_GetCurrentSlotItem Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ItemName != nullptr)
+		*ItemName = Parms.ItemName;
+
+	if (CoreDatas != nullptr)
+		*CoreDatas = std::move(Parms.CoreDatas);
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.GetItemData
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             ItemName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Rezult                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FCPP_GameItemData*               ItemData                                               (Parm, OutParm)
+
+void UBPC_InventoryController_C::GetItemData(class FName ItemName, bool* Rezult, struct FCPP_GameItemData* ItemData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "GetItemData");
+
+	Params::BPC_InventoryController_C_GetItemData Parms{};
+
+	Parms.ItemName = ItemName;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Rezult != nullptr)
+		*Rezult = Parms.Rezult;
+
+	if (ItemData != nullptr)
+		*ItemData = std::move(Parms.ItemData);
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBPC_InventoryController_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.HaveItemSync
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_InventoryController_C::HaveItemSync()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "HaveItemSync");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.UpdateCurrentCoreData(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FST_ItemCoreDatas&         Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void UBPC_InventoryController_C::UpdateCurrentCoreData_Server_(const struct FST_ItemCoreDatas& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "UpdateCurrentCoreData(Server)");
+
+	Params::BPC_InventoryController_C_UpdateCurrentCoreData_Server_ Parms{};
+
+	Parms.Value = std::move(Value);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.HaveItemSync(StackCount)
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_InventoryController_C::HaveItemSync_StackCount_()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "HaveItemSync(StackCount)");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.DropCall(Local)
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ForceNoDrop                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_InventoryController_C::DropCall_Local_(bool ForceNoDrop)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "DropCall(Local)");
+
+	Params::BPC_InventoryController_C_DropCall_Local_ Parms{};
+
+	Parms.ForceNoDrop = ForceNoDrop;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.DropCall(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ForceNoDrop                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_InventoryController_C::DropCall_Server_(int32 SlotIndex, bool ForceNoDrop)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "DropCall(Server)");
+
+	Params::BPC_InventoryController_C_DropCall_Server_ Parms{};
+
+	Parms.SlotIndex = SlotIndex;
+	Parms.ForceNoDrop = ForceNoDrop;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_InventoryController.BPC_InventoryController_C.ExecuteUbergraph_BPC_InventoryController
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_InventoryController_C::ExecuteUbergraph_BPC_InventoryController(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_InventoryController_C", "ExecuteUbergraph_BPC_InventoryController");
+
+	Params::BPC_InventoryController_C_ExecuteUbergraph_BPC_InventoryController Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

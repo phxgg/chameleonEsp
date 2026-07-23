@@ -19,13 +19,13 @@ SDK_NAMESPACE_START
 // Function ANS_BrunchAttack.ANS_BrunchAttack_C.Received_NotifyTick
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class USkeletalMeshComponent*           MeshComp_Received_NotifyTick                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UAnimSequenceBase*                Animation_Received_NotifyTick                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// float                                   FrameDeltaTime_Received_NotifyTick                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FAnimNotifyEventReference& EventReference_Received_NotifyTick                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// bool                                    ReturnValue_Received_NotifyTick                        (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// float                                   FrameDeltaTime                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FAnimNotifyEventReference& EventReference                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UANS_BrunchAttack_C::Received_NotifyTick(class USkeletalMeshComponent* MeshComp_Received_NotifyTick, class UAnimSequenceBase* Animation_Received_NotifyTick, float FrameDeltaTime_Received_NotifyTick, const struct FAnimNotifyEventReference& EventReference_Received_NotifyTick) const
+bool UANS_BrunchAttack_C::Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime, const struct FAnimNotifyEventReference& EventReference) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -34,10 +34,10 @@ bool UANS_BrunchAttack_C::Received_NotifyTick(class USkeletalMeshComponent* Mesh
 
 	Params::ANS_BrunchAttack_C_Received_NotifyTick Parms{};
 
-	Parms.MeshComp_Received_NotifyTick = MeshComp_Received_NotifyTick;
-	Parms.Animation_Received_NotifyTick = Animation_Received_NotifyTick;
-	Parms.FrameDeltaTime_Received_NotifyTick = FrameDeltaTime_Received_NotifyTick;
-	Parms.EventReference_Received_NotifyTick = std::move(EventReference_Received_NotifyTick);
+	Parms.MeshComp = MeshComp;
+	Parms.Animation = Animation;
+	Parms.FrameDeltaTime = FrameDeltaTime;
+	Parms.EventReference = std::move(EventReference);
 
 	UObject::ProcessEvent(Func, &Parms);
 

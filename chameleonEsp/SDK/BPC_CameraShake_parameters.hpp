@@ -16,16 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_CameraShake.BPC_CameraShake_C.ShakeStart
-// 0x0010 (0x0010 - 0x0000)
-struct BPC_CameraShake_C_ShakeStart final
-{
-public:
-	double                                        Duration;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Scale;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_CameraShake_C_ShakeStart;
-
 // Function BPC_CameraShake.BPC_CameraShake_C.ExecuteUbergraph_BPC_CameraShake
 // 0x0040 (0x0040 - 0x0000)
 struct BPC_CameraShake_C_ExecuteUbergraph_BPC_CameraShake final
@@ -42,6 +32,16 @@ public:
 	float                                         CallFunc_ClientStartCameraShake_Scale_ImplicitCast; // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_CameraShake_C_ExecuteUbergraph_BPC_CameraShake;
+
+// Function BPC_CameraShake.BPC_CameraShake_C.ShakeStart
+// 0x0010 (0x0010 - 0x0000)
+struct BPC_CameraShake_C_ShakeStart final
+{
+public:
+	double                                        Duration;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Scale;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_CameraShake_C_ShakeStart;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

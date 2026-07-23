@@ -16,15 +16,35 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_EnvironmentSystem_Ruins.BP_EnvironmentSystem_Ruins_C.SpawnMaterial
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_EnvironmentSystem_Ruins.BP_EnvironmentSystem_Ruins_C.ExecuteUbergraph_BP_EnvironmentSystem_Ruins
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EnvironmentSystem_Ruins_C::SpawnMaterial()
+void ABP_EnvironmentSystem_Ruins_C::ExecuteUbergraph_BP_EnvironmentSystem_Ruins(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Ruins_C", "SpawnMaterial");
+		Func = Class->GetFunction("BP_EnvironmentSystem_Ruins_C", "ExecuteUbergraph_BP_EnvironmentSystem_Ruins");
+
+	Params::BP_EnvironmentSystem_Ruins_C_ExecuteUbergraph_BP_EnvironmentSystem_Ruins Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EnvironmentSystem_Ruins.BP_EnvironmentSystem_Ruins_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_EnvironmentSystem_Ruins_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnvironmentSystem_Ruins_C", "ReceiveDestroyed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -44,37 +64,17 @@ void ABP_EnvironmentSystem_Ruins_C::ReplicateEvent()
 }
 
 
-// Function BP_EnvironmentSystem_Ruins.BP_EnvironmentSystem_Ruins_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
+// Function BP_EnvironmentSystem_Ruins.BP_EnvironmentSystem_Ruins_C.SpawnMaterial
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_EnvironmentSystem_Ruins_C::ReceiveDestroyed()
+void ABP_EnvironmentSystem_Ruins_C::SpawnMaterial()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Ruins_C", "ReceiveDestroyed");
+		Func = Class->GetFunction("BP_EnvironmentSystem_Ruins_C", "SpawnMaterial");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EnvironmentSystem_Ruins.BP_EnvironmentSystem_Ruins_C.ExecuteUbergraph_BP_EnvironmentSystem_Ruins
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EnvironmentSystem_Ruins_C::ExecuteUbergraph_BP_EnvironmentSystem_Ruins(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Ruins_C", "ExecuteUbergraph_BP_EnvironmentSystem_Ruins");
-
-	Params::BP_EnvironmentSystem_Ruins_C_ExecuteUbergraph_BP_EnvironmentSystem_Ruins Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

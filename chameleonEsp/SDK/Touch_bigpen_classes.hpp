@@ -24,15 +24,15 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0048(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_2(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter);
-	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_1();
-	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_0();
-	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP();
-	struct FMovieSceneDynamicBindingResolveResult RightPos_DynamicBinding();
-	struct FMovieSceneDynamicBindingResolveResult LeftPos_DynamicBinding();
-	struct FMovieSceneDynamicBindingResolveResult HeadPosition_DynamicBinding();
-	void ExecuteUbergraph_Touch_bigpen_DirectorBP(int32 EntryPoint);
 	void BP_FirstPersonCharacter_Event(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter);
+	void ExecuteUbergraph_Touch_bigpen_DirectorBP(int32 EntryPoint);
+	struct FMovieSceneDynamicBindingResolveResult HeadPosition_DynamicBinding();
+	struct FMovieSceneDynamicBindingResolveResult LeftPos_DynamicBinding();
+	struct FMovieSceneDynamicBindingResolveResult RightPos_DynamicBinding();
+	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP();
+	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_0();
+	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_1();
+	void SequenceEvent__ENTRYPOINTTouch_bigpen_DirectorBP_2(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter);
 
 public:
 	static class UClass* StaticClass()

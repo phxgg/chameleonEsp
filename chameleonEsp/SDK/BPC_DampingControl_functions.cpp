@@ -16,20 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_DampingControl.BPC_DampingControl_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBPC_DampingControl_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_DampingControl_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BPC_DampingControl.BPC_DampingControl_C.ExecuteUbergraph_BPC_DampingControl
 // (Final, UbergraphFunction)
 // Parameters:
@@ -47,6 +33,20 @@ void UBPC_DampingControl_C::ExecuteUbergraph_BPC_DampingControl(int32 EntryPoint
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_DampingControl.BPC_DampingControl_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBPC_DampingControl_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_DampingControl_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -14,26 +14,14 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPI_ItemUse.BPI_ItemUse_C.Shot
-// 0x0018 (0x0018 - 0x0000)
-struct BPI_ItemUse_C_Shot final
-{
-public:
-	bool                                          PressState;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        PushTime;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_FirstPersonCharacter_Main_C*        SourcePlayer;                                      // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPI_ItemUse_C_Shot;
-
-// Function BPI_ItemUse.BPI_ItemUse_C.Reload
+// Function BPI_ItemUse.BPI_ItemUse_C.Aim
 // 0x0001 (0x0001 - 0x0000)
-struct BPI_ItemUse_C_Reload final
+struct BPI_ItemUse_C_Aim final
 {
 public:
 	bool                                          PressState;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPI_ItemUse_C_Reload;
+DUMPER7_ASSERTS_BPI_ItemUse_C_Aim;
 
 // Function BPI_ItemUse.BPI_ItemUse_C.MS_IsInView
 // 0x0010 (0x0010 - 0x0000)
@@ -45,14 +33,26 @@ public:
 };
 DUMPER7_ASSERTS_BPI_ItemUse_C_MS_IsInView;
 
-// Function BPI_ItemUse.BPI_ItemUse_C.Aim
+// Function BPI_ItemUse.BPI_ItemUse_C.Reload
 // 0x0001 (0x0001 - 0x0000)
-struct BPI_ItemUse_C_Aim final
+struct BPI_ItemUse_C_Reload final
 {
 public:
 	bool                                          PressState;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPI_ItemUse_C_Aim;
+DUMPER7_ASSERTS_BPI_ItemUse_C_Reload;
+
+// Function BPI_ItemUse.BPI_ItemUse_C.Shot
+// 0x0018 (0x0018 - 0x0000)
+struct BPI_ItemUse_C_Shot final
+{
+public:
+	bool                                          PressState;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        PushTime;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_FirstPersonCharacter_Main_C*        SourcePlayer;                                      // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPI_ItemUse_C_Shot;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,20 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_SortieArea.BP_SortieArea_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_SortieArea_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SortieArea_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_SortieArea.BP_SortieArea_C.ExecuteUbergraph_BP_SortieArea
 // (Final, UbergraphFunction)
 // Parameters:
@@ -47,6 +33,20 @@ void ABP_SortieArea_C::ExecuteUbergraph_BP_SortieArea(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SortieArea.BP_SortieArea_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_SortieArea_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SortieArea_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

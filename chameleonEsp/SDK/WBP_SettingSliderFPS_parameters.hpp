@@ -14,6 +14,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function WBP_SettingSliderFPS.WBP_SettingSliderFPS_C.BndEvt__WBP_SettingSliderFPS_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangeEvery__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_SettingSliderFPS_C_BndEvt__WBP_SettingSliderFPS_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangeEvery__DelegateSignature final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_SettingSliderFPS_C_BndEvt__WBP_SettingSliderFPS_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangeEvery__DelegateSignature;
+
 // Function WBP_SettingSliderFPS.WBP_SettingSliderFPS_C.ExecuteUbergraph_WBP_SettingSliderFPS
 // 0x0160 (0x0160 - 0x0000)
 struct WBP_SettingSliderFPS_C_ExecuteUbergraph_WBP_SettingSliderFPS final
@@ -66,15 +75,6 @@ public:
 	float                                         CallFunc_SetValueClamped_Value_ImplicitCast;       // 0x0158(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_SettingSliderFPS_C_ExecuteUbergraph_WBP_SettingSliderFPS;
-
-// Function WBP_SettingSliderFPS.WBP_SettingSliderFPS_C.BndEvt__WBP_SettingSliderFPS_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangeEvery__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_SettingSliderFPS_C_BndEvt__WBP_SettingSliderFPS_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangeEvery__DelegateSignature final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_SettingSliderFPS_C_BndEvt__WBP_SettingSliderFPS_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangeEvery__DelegateSignature;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

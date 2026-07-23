@@ -27,9 +27,9 @@ public:
 	class FText                                   In_Text;                                           // 0x0358(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_AnimationText_Task(int32 EntryPoint);
 	void AnimationEndEvent();
+	void ExecuteUbergraph_WBP_AnimationText_Task(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()

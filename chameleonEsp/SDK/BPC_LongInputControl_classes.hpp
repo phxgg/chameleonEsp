@@ -22,7 +22,7 @@ class UBPC_LongInputControl_C final : public UActorComponent
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TMulticastInlineDelegate<void(double PushTime)> InputEnd;                                        // 0x00C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(double PushTime_0)> InputEnd;                                      // 0x00C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	double                                        PushTime;                                          // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        TimeOutTime;                                       // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        SinglePushTime;                                    // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -31,11 +31,11 @@ public:
 	bool                                          CurrentInputState;                                 // 0x0108(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void PushState(bool State);
-	void LongPushStartEvent();
-	void ExecuteUbergraph_BPC_LongInputControl(int32 EntryPoint);
 	void ClearPushCountTimer();
+	void ExecuteUbergraph_BPC_LongInputControl(int32 EntryPoint);
+	void LongPushStartEvent();
+	void PushState(bool State);
+	void ReceiveTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()

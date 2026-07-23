@@ -17,33 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_ReportContent.WBP_ReportContent_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_ReportContent_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ReportContent_C_PreConstruct;
-
-// Function WBP_ReportContent.WBP_ReportContent_C.OnPushButton
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_ReportContent_C_OnPushButton final
-{
-public:
-	class UWBP_ReportTypeButton_C*                SelfObject;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ReportContent_C_OnPushButton;
-
-// Function WBP_ReportContent.WBP_ReportContent_C.OnFinished_8BE5134246B81962AB20AC90BBF1E4BD
-// 0x0028 (0x0028 - 0x0000)
-struct WBP_ReportContent_C_OnFinished_8BE5134246B81962AB20AC90BBF1E4BD final
-{
-public:
-	struct FEOSPlayerReportResult                 Result;                                            // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_WBP_ReportContent_C_OnFinished_8BE5134246B81962AB20AC90BBF1E4BD;
-
 // Function WBP_ReportContent.WBP_ReportContent_C.ExecuteUbergraph_WBP_ReportContent
 // 0x0198 (0x0198 - 0x0000)
 struct WBP_ReportContent_C_ExecuteUbergraph_WBP_ReportContent final
@@ -104,6 +77,33 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ReportContent_C_ExecuteUbergraph_WBP_ReportContent;
+
+// Function WBP_ReportContent.WBP_ReportContent_C.OnFinished_8BE5134246B81962AB20AC90BBF1E4BD
+// 0x0028 (0x0028 - 0x0000)
+struct WBP_ReportContent_C_OnFinished_8BE5134246B81962AB20AC90BBF1E4BD final
+{
+public:
+	struct FEOSPlayerReportResult                 Result;                                            // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_WBP_ReportContent_C_OnFinished_8BE5134246B81962AB20AC90BBF1E4BD;
+
+// Function WBP_ReportContent.WBP_ReportContent_C.OnPushButton
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_ReportContent_C_OnPushButton final
+{
+public:
+	class UWBP_ReportTypeButton_C*                SelfObject;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ReportContent_C_OnPushButton;
+
+// Function WBP_ReportContent.WBP_ReportContent_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_ReportContent_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ReportContent_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

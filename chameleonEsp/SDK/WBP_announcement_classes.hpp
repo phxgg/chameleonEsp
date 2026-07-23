@@ -29,12 +29,12 @@ public:
 	class UWidgetAnimation*                       Out;                                               // 0x0368(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetText(const class FText& Text, int32 Index_0);
-	void SetColor(const struct FLinearColor& Color, int32 Index_0);
-	void RemoveWidget();
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void PlayAnimationMessage(bool IsForward, int32 Index_0);
 	void ExecuteUbergraph_WBP_announcement(int32 EntryPoint);
+	void PlayAnimationMessage(bool IsForward, int32 Index_0);
+	void PreConstruct(bool IsDesignTime);
+	void RemoveWidget();
+	void SetColor(const struct FLinearColor& Color, int32 Index_0);
+	void SetText(const class FText& Text, int32 Index_0);
 
 public:
 	static class UClass* StaticClass()

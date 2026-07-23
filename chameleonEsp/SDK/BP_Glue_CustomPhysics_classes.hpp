@@ -42,20 +42,20 @@ public:
 	int32                                         MathCount;                                         // 0x0378(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetLinkComponent(class UActorComponent* Primitive, bool State);
-	void ResetCustomForce();
-	void ReceiveBeginPlay();
-	bool PrimitiveCheck(class AActor* Actor, const class UPrimitiveComponent*& PrimitiveComp);
-	void LINKCheckFunc(const struct FVector& StaticLocation, const class UPrimitiveComponent*& PrimitiveComp);
-	void LINK_Overlap(class UPrimitiveComponent* PrimitiveComponent);
-	void ExecuteUbergraph_BP_Glue_CustomPhysics(int32 EntryPoint);
-	void DebugVisualize__UpdateFunc();
-	void DebugVisualize__FinishedFunc();
-	void BndEvt__BP_Glue_CustomPhysics_GlueArea_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
-	void BndEvt__BP_Glue_CustomPhysics_GlueArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void AddPower(double power, class AActor* SourceActor);
-	void AddCustomRevicePower(float PowerAmount_AddCustomRevicePower);
 	void AddCustomForce(double AddValue);
+	void AddCustomRevicePower(float PowerAmount);
+	void AddPower(double power, class AActor* SourceActor);
+	void BndEvt__BP_Glue_CustomPhysics_GlueArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__BP_Glue_CustomPhysics_GlueArea_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+	void DebugVisualize__FinishedFunc();
+	void DebugVisualize__UpdateFunc();
+	void ExecuteUbergraph_BP_Glue_CustomPhysics(int32 EntryPoint);
+	void LINK_Overlap(class UPrimitiveComponent* PrimitiveComponent);
+	void LINKCheckFunc(const struct FVector& StaticLocation, const class UPrimitiveComponent*& PrimitiveComp);
+	bool PrimitiveCheck(class AActor* Actor, const class UPrimitiveComponent*& PrimitiveComp);
+	void ReceiveBeginPlay();
+	void ResetCustomForce();
+	void SetLinkComponent(class UActorComponent* Primitive, bool State);
 
 public:
 	static class UClass* StaticClass()

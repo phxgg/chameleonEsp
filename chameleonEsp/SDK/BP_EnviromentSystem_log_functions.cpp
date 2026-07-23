@@ -16,34 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_EnviromentSystem_log.BP_EnviromentSystem_log_C.SpawnMaterial
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_EnviromentSystem_log_C::SpawnMaterial()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnviromentSystem_log_C", "SpawnMaterial");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EnviromentSystem_log.BP_EnviromentSystem_log_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_EnviromentSystem_log_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnviromentSystem_log_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_EnviromentSystem_log.BP_EnviromentSystem_log_C.ExecuteUbergraph_BP_EnviromentSystem_log
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -61,6 +33,34 @@ void ABP_EnviromentSystem_log_C::ExecuteUbergraph_BP_EnviromentSystem_log(int32 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_EnviromentSystem_log.BP_EnviromentSystem_log_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_EnviromentSystem_log_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnviromentSystem_log_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EnviromentSystem_log.BP_EnviromentSystem_log_C.SpawnMaterial
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_EnviromentSystem_log_C::SpawnMaterial()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnviromentSystem_log_C", "SpawnMaterial");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

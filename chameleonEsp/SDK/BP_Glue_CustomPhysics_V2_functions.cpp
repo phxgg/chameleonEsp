@@ -16,279 +16,62 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.UpdateGlueVisual
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.AddCustomForce
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  AddValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Glue_CustomPhysics_V2_C::AddCustomForce(double AddValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "AddCustomForce");
+
+	Params::BP_Glue_CustomPhysics_V2_C_AddCustomForce Parms{};
+
+	Parms.AddValue = AddValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.AddCustomRevicePower
 // (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_Glue_CustomPhysics_V2_C::UpdateGlueVisual()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "UpdateGlueVisual");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.StanDamage
-// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EN_StanType                             StanType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   PowerAmount                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Glue_CustomPhysics_V2_C::StanDamage(EN_StanType StanType)
+void ABP_Glue_CustomPhysics_V2_C::AddCustomRevicePower(float PowerAmount)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "StanDamage");
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "AddCustomRevicePower");
 
-	Params::BP_Glue_CustomPhysics_V2_C_StanDamage Parms{};
+	Params::BP_Glue_CustomPhysics_V2_C_AddCustomRevicePower Parms{};
 
-	Parms.StanType = StanType;
+	Parms.PowerAmount = PowerAmount;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.StaminaDamage
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Glue_CustomPhysics_V2_C::StaminaDamage(double Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "StaminaDamage");
-
-	Params::BP_Glue_CustomPhysics_V2_C_StaminaDamage Parms{};
-
-	Parms.Value = Value;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.SnapGlue
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   WorldPosition                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const TArray<class UPrimitiveComponent*>&TargetPrimitives                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-
-void ABP_Glue_CustomPhysics_V2_C::SnapGlue(const struct FVector& WorldPosition, const TArray<class UPrimitiveComponent*>& TargetPrimitives)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "SnapGlue");
-
-	Params::BP_Glue_CustomPhysics_V2_C_SnapGlue Parms{};
-
-	Parms.WorldPosition = std::move(WorldPosition);
-	Parms.TargetPrimitives = std::move(TargetPrimitives);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.SetGlueColor
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.AddPower
 // (BlueprintCallable, BlueprintEvent)
-
-void ABP_Glue_CustomPhysics_V2_C::SetGlueColor()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "SetGlueColor");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.ScaleAnim__UpdateFunc
-// (BlueprintEvent)
-
-void ABP_Glue_CustomPhysics_V2_C::ScaleAnim__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "ScaleAnim__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.ScaleAnim__FinishedFunc
-// (BlueprintEvent)
-
-void ABP_Glue_CustomPhysics_V2_C::ScaleAnim__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "ScaleAnim__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void ABP_Glue_CustomPhysics_V2_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_Glue_CustomPhysics_V2_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.OnRep_DynamicColorIndex
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Glue_CustomPhysics_V2_C::OnRep_DynamicColorIndex()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "OnRep_DynamicColorIndex");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.GlueViewDistanceCheck
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Glue_CustomPhysics_V2_C::GlueViewDistanceCheck()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "GlueViewDistanceCheck");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.GetParryState
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool*                                   State                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Glue_CustomPhysics_V2_C::GetParryState(bool* State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "GetParryState");
-
-	Params::BP_Glue_CustomPhysics_V2_C_GetParryState Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (State != nullptr)
-		*State = Parms.State;
-}
-
-
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.ExecuteUbergraph_BP_Glue_CustomPhysics_V2
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Glue_CustomPhysics_V2_C::ExecuteUbergraph_BP_Glue_CustomPhysics_V2(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "ExecuteUbergraph_BP_Glue_CustomPhysics_V2");
-
-	Params::BP_Glue_CustomPhysics_V2_C_ExecuteUbergraph_BP_Glue_CustomPhysics_V2 Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.DebugVisualize__UpdateFunc
-// (BlueprintEvent)
-
-void ABP_Glue_CustomPhysics_V2_C::DebugVisualize__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "DebugVisualize__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.DebugVisualize__FinishedFunc
-// (BlueprintEvent)
-
-void ABP_Glue_CustomPhysics_V2_C::DebugVisualize__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "DebugVisualize__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.DamageToPlayerController
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                HitRezult                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// double                                  power                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Glue_CustomPhysics_V2_C::DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor)
+void ABP_Glue_CustomPhysics_V2_C::AddPower(double power, class AActor* SourceActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "DamageToPlayerController");
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "AddPower");
 
-	Params::BP_Glue_CustomPhysics_V2_C_DamageToPlayerController Parms{};
+	Params::BP_Glue_CustomPhysics_V2_C_AddPower Parms{};
 
-	Parms.TargetActor = TargetActor;
-	Parms.DamageValue = DamageValue;
-	Parms.TeamIndex = TeamIndex;
-	Parms.DamageType = DamageType;
-	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
-	Parms.UnAvoidable = UnAvoidable;
-	Parms.DamageName = DamageName;
-	Parms.HitRezult = std::move(HitRezult);
+	Parms.power = power;
 	Parms.SourceActor = SourceActor;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -331,65 +114,282 @@ void ABP_Glue_CustomPhysics_V2_C::Damage(double DamageValue, int32 TeamIndex, EN
 }
 
 
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.AddPower
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.DamageToPlayerController
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  power                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                HitRezult                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 // class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Glue_CustomPhysics_V2_C::AddPower(double power, class AActor* SourceActor)
+void ABP_Glue_CustomPhysics_V2_C::DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "AddPower");
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "DamageToPlayerController");
 
-	Params::BP_Glue_CustomPhysics_V2_C_AddPower Parms{};
+	Params::BP_Glue_CustomPhysics_V2_C_DamageToPlayerController Parms{};
 
-	Parms.power = power;
+	Parms.TargetActor = TargetActor;
+	Parms.DamageValue = DamageValue;
+	Parms.TeamIndex = TeamIndex;
+	Parms.DamageType = DamageType;
+	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
+	Parms.UnAvoidable = UnAvoidable;
+	Parms.DamageName = DamageName;
+	Parms.HitRezult = std::move(HitRezult);
 	Parms.SourceActor = SourceActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.AddCustomRevicePower
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   PowerAmount_AddCustomRevicePower                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.DebugVisualize__FinishedFunc
+// (BlueprintEvent)
 
-void ABP_Glue_CustomPhysics_V2_C::AddCustomRevicePower(float PowerAmount_AddCustomRevicePower)
+void ABP_Glue_CustomPhysics_V2_C::DebugVisualize__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "AddCustomRevicePower");
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "DebugVisualize__FinishedFunc");
 
-	Params::BP_Glue_CustomPhysics_V2_C_AddCustomRevicePower Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.PowerAmount_AddCustomRevicePower = PowerAmount_AddCustomRevicePower;
+
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.DebugVisualize__UpdateFunc
+// (BlueprintEvent)
+
+void ABP_Glue_CustomPhysics_V2_C::DebugVisualize__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "DebugVisualize__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.ExecuteUbergraph_BP_Glue_CustomPhysics_V2
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Glue_CustomPhysics_V2_C::ExecuteUbergraph_BP_Glue_CustomPhysics_V2(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "ExecuteUbergraph_BP_Glue_CustomPhysics_V2");
+
+	Params::BP_Glue_CustomPhysics_V2_C_ExecuteUbergraph_BP_Glue_CustomPhysics_V2 Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.AddCustomForce
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.GetParryState
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  AddValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   State                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Glue_CustomPhysics_V2_C::AddCustomForce(double AddValue)
+void ABP_Glue_CustomPhysics_V2_C::GetParryState(bool* State)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "AddCustomForce");
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "GetParryState");
 
-	Params::BP_Glue_CustomPhysics_V2_C_AddCustomForce Parms{};
-
-	Parms.AddValue = AddValue;
+	Params::BP_Glue_CustomPhysics_V2_C_GetParryState Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (State != nullptr)
+		*State = Parms.State;
+}
+
+
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.GlueViewDistanceCheck
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Glue_CustomPhysics_V2_C::GlueViewDistanceCheck()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "GlueViewDistanceCheck");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.OnRep_DynamicColorIndex
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Glue_CustomPhysics_V2_C::OnRep_DynamicColorIndex()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "OnRep_DynamicColorIndex");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_Glue_CustomPhysics_V2_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_Glue_CustomPhysics_V2_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.ScaleAnim__FinishedFunc
+// (BlueprintEvent)
+
+void ABP_Glue_CustomPhysics_V2_C::ScaleAnim__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "ScaleAnim__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.ScaleAnim__UpdateFunc
+// (BlueprintEvent)
+
+void ABP_Glue_CustomPhysics_V2_C::ScaleAnim__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "ScaleAnim__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.SetGlueColor
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Glue_CustomPhysics_V2_C::SetGlueColor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "SetGlueColor");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.SnapGlue
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   WorldPosition                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TArray<class UPrimitiveComponent*>&TargetPrimitives                                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+
+void ABP_Glue_CustomPhysics_V2_C::SnapGlue(const struct FVector& WorldPosition, const TArray<class UPrimitiveComponent*>& TargetPrimitives)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "SnapGlue");
+
+	Params::BP_Glue_CustomPhysics_V2_C_SnapGlue Parms{};
+
+	Parms.WorldPosition = std::move(WorldPosition);
+	Parms.TargetPrimitives = std::move(TargetPrimitives);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.StaminaDamage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Glue_CustomPhysics_V2_C::StaminaDamage(double Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "StaminaDamage");
+
+	Params::BP_Glue_CustomPhysics_V2_C_StaminaDamage Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.StanDamage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EN_StanType                             StanType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Glue_CustomPhysics_V2_C::StanDamage(EN_StanType StanType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "StanDamage");
+
+	Params::BP_Glue_CustomPhysics_V2_C_StanDamage Parms{};
+
+	Parms.StanType = StanType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Glue_CustomPhysics_V2.BP_Glue_CustomPhysics_V2_C.UpdateGlueVisual
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Glue_CustomPhysics_V2_C::UpdateGlueVisual()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Glue_CustomPhysics_V2_C", "UpdateGlueVisual");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

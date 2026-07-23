@@ -16,400 +16,121 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Camera_Base.BP_Camera_Base_C.View In Out Function
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Stencil_Value_View_In_Out_Function                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Camera_Base_C::View_In_Out_Function(int32 Stencil_Value_View_In_Out_Function)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "View In Out Function");
-
-	Params::BP_Camera_Base_C_View_In_Out_Function Parms{};
-
-	Parms.Stencil_Value_View_In_Out_Function = Stencil_Value_View_In_Out_Function;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Camera_Base.BP_Camera_Base_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_Camera_Base_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Camera_Base.BP_Camera_Base_C.ToggleFlash
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_Camera_Base_C::ToggleFlash()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "ToggleFlash");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Camera_Base.BP_Camera_Base_C.ShotEvent
+// Function BP_Camera_Base.BP_Camera_Base_C.ActorCheckLoop
 // (BlueprintCallable, BlueprintEvent)
 
-void ABP_Camera_Base_C::ShotEvent()
+void ABP_Camera_Base_C::ActorCheckLoop()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "ShotEvent");
+		Func = Class->GetFunction("BP_Camera_Base_C", "ActorCheckLoop");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_Camera_Base.BP_Camera_Base_C.Shot
+// Function BP_Camera_Base.BP_Camera_Base_C.Aim
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    PressState_Shot                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  PushTime_Shot                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonCharacter_Main_C*  SourcePlayer_Shot                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    PressState                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Camera_Base_C::Shot(bool PressState_Shot, double PushTime_Shot, class ABP_FirstPersonCharacter_Main_C* SourcePlayer_Shot)
+void ABP_Camera_Base_C::Aim(bool PressState)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "Shot");
+		Func = Class->GetFunction("BP_Camera_Base_C", "Aim");
 
-	Params::BP_Camera_Base_C_Shot Parms{};
+	Params::BP_Camera_Base_C_Aim Parms{};
 
-	Parms.PressState_Shot = PressState_Shot;
-	Parms.PushTime_Shot = PushTime_Shot;
-	Parms.SourcePlayer_Shot = SourcePlayer_Shot;
+	Parms.PressState = PressState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_Camera_Base.BP_Camera_Base_C.Reset
+// Function BP_Camera_Base.BP_Camera_Base_C.Change
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_Camera_Base_C::Reset()
+void ABP_Camera_Base_C::Change()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "Reset");
+		Func = Class->GetFunction("BP_Camera_Base_C", "Change");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_Camera_Base.BP_Camera_Base_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_Camera_Base.BP_Camera_Base_C.ChangeMode
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_Camera_Base_C::ReceiveBeginPlay()
+void ABP_Camera_Base_C::ChangeMode()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_Camera_Base_C", "ChangeMode");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_Camera_Base.BP_Camera_Base_C.RayToCamera
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   RayPosition                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool ABP_Camera_Base_C::RayToCamera(class UObject* Actor, const struct FVector& RayPosition)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "RayToCamera");
-
-	Params::BP_Camera_Base_C_RayToCamera Parms{};
-
-	Parms.Actor = Actor;
-	Parms.RayPosition = std::move(RayPosition);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BP_Camera_Base.BP_Camera_Base_C.PhotoShot
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<class AActor*>&            ShotInActors                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void ABP_Camera_Base_C::PhotoShot(const TArray<class AActor*>& ShotInActors)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "PhotoShot");
-
-	Params::BP_Camera_Base_C_PhotoShot Parms{};
-
-	Parms.ShotInActors = std::move(ShotInActors);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Camera_Base.BP_Camera_Base_C.MS_IsInView
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Actor_MS_IsInView                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue_MS_IsInView                                (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool ABP_Camera_Base_C::MS_IsInView(class AActor* Actor_MS_IsInView)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "MS_IsInView");
-
-	Params::BP_Camera_Base_C_MS_IsInView Parms{};
-
-	Parms.Actor_MS_IsInView = Actor_MS_IsInView;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BP_Camera_Base.BP_Camera_Base_C.IsChangeImage
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   IsInteract_IsChangeImage                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText*                            OverrideText_IsChangeImage                             (Parm, OutParm)
-
-void ABP_Camera_Base_C::IsChangeImage(bool* IsInteract_IsChangeImage, class FText* OverrideText_IsChangeImage)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "IsChangeImage");
-
-	Params::BP_Camera_Base_C_IsChangeImage Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsInteract_IsChangeImage != nullptr)
-		*IsInteract_IsChangeImage = Parms.IsInteract_IsChangeImage;
-
-	if (OverrideText_IsChangeImage != nullptr)
-		*OverrideText_IsChangeImage = std::move(Parms.OverrideText_IsChangeImage);
-}
-
-
-// Function BP_Camera_Base.BP_Camera_Base_C.Is In View Gimmick
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool*                                   Retrun_Value                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Camera_Base_C::Is_In_View_Gimmick(class AActor* Actor, bool* Retrun_Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "Is In View Gimmick");
-
-	Params::BP_Camera_Base_C_Is_In_View_Gimmick Parms{};
-
-	Parms.Actor = Actor;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Retrun_Value != nullptr)
-		*Retrun_Value = Parms.Retrun_Value;
-}
-
-
-// Function BP_Camera_Base.BP_Camera_Base_C.Is In View
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool*                                   Retrun_Value                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Camera_Base_C::Is_In_View(class AActor* Actor, bool* Retrun_Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "Is In View");
-
-	Params::BP_Camera_Base_C_Is_In_View Parms{};
-
-	Parms.Actor = Actor;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Retrun_Value != nullptr)
-		*Retrun_Value = Parms.Retrun_Value;
-}
-
-
-// Function BP_Camera_Base.BP_Camera_Base_C.GetItemInfo
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ENUM_HandType*                          HandType_GetItemInfo                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ENUM_ClassType*                         ClassType_GetItemInfo                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   NotPickUp_GetItemInfo                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FRotator*                        HaveRotation_GetItemInfo                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FVector*                         Add_Position_GetItemInfo                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   IsBoneAttach_GetItemInfo                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ENUM_ItemBindType*                      BindType_GetItemInfo                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName*                            BoneName_GetItemInfo                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FST_ItemCoreDatas*               CoreDatas_GetItemInfo                                  (Parm, OutParm, HasGetValueTypeHash)
-
-void ABP_Camera_Base_C::GetItemInfo(ENUM_HandType* HandType_GetItemInfo, ENUM_ClassType* ClassType_GetItemInfo, bool* NotPickUp_GetItemInfo, struct FRotator* HaveRotation_GetItemInfo, struct FVector* Add_Position_GetItemInfo, bool* IsBoneAttach_GetItemInfo, ENUM_ItemBindType* BindType_GetItemInfo, class FName* BoneName_GetItemInfo, struct FST_ItemCoreDatas* CoreDatas_GetItemInfo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "GetItemInfo");
-
-	Params::BP_Camera_Base_C_GetItemInfo Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (HandType_GetItemInfo != nullptr)
-		*HandType_GetItemInfo = Parms.HandType_GetItemInfo;
-
-	if (ClassType_GetItemInfo != nullptr)
-		*ClassType_GetItemInfo = Parms.ClassType_GetItemInfo;
-
-	if (NotPickUp_GetItemInfo != nullptr)
-		*NotPickUp_GetItemInfo = Parms.NotPickUp_GetItemInfo;
-
-	if (HaveRotation_GetItemInfo != nullptr)
-		*HaveRotation_GetItemInfo = std::move(Parms.HaveRotation_GetItemInfo);
-
-	if (Add_Position_GetItemInfo != nullptr)
-		*Add_Position_GetItemInfo = std::move(Parms.Add_Position_GetItemInfo);
-
-	if (IsBoneAttach_GetItemInfo != nullptr)
-		*IsBoneAttach_GetItemInfo = Parms.IsBoneAttach_GetItemInfo;
-
-	if (BindType_GetItemInfo != nullptr)
-		*BindType_GetItemInfo = Parms.BindType_GetItemInfo;
-
-	if (BoneName_GetItemInfo != nullptr)
-		*BoneName_GetItemInfo = Parms.BoneName_GetItemInfo;
-
-	if (CoreDatas_GetItemInfo != nullptr)
-		*CoreDatas_GetItemInfo = std::move(Parms.CoreDatas_GetItemInfo);
-}
-
-
-// Function BP_Camera_Base.BP_Camera_Base_C.GetCentorPosition
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FVector*                         World_Position                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Camera_Base_C::GetCentorPosition(struct FVector* World_Position)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "GetCentorPosition");
-
-	Params::BP_Camera_Base_C_GetCentorPosition Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (World_Position != nullptr)
-		*World_Position = std::move(Parms.World_Position);
-}
-
-
-// Function BP_Camera_Base.BP_Camera_Base_C.FlashTimeline__UpdateFunc
-// (BlueprintEvent)
-
-void ABP_Camera_Base_C::FlashTimeline__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "FlashTimeline__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Camera_Base.BP_Camera_Base_C.FlashTimeline__FinishedFunc
-// (BlueprintEvent)
-
-void ABP_Camera_Base_C::FlashTimeline__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "FlashTimeline__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Camera_Base.BP_Camera_Base_C.FinishTasks
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool*                                   Finish                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Camera_Base_C::FinishTasks(class AActor* Target, bool* Finish)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "FinishTasks");
-
-	Params::BP_Camera_Base_C_FinishTasks Parms{};
-
-	Parms.Target = Target;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Finish != nullptr)
-		*Finish = Parms.Finish;
-}
-
-
-// Function BP_Camera_Base.BP_Camera_Base_C.Finisher
+// Function BP_Camera_Base.BP_Camera_Base_C.ChargeState
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           self2                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsCharge                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Camera_Base_C::Finisher(class AActor* self2)
+void ABP_Camera_Base_C::ChargeState(bool IsCharge)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "Finisher");
+		Func = Class->GetFunction("BP_Camera_Base_C", "ChargeState");
 
-	Params::BP_Camera_Base_C_Finisher Parms{};
+	Params::BP_Camera_Base_C_ChargeState Parms{};
+
+	Parms.IsCharge = IsCharge;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Camera_Base.BP_Camera_Base_C.ExecuteUbergraph_BP_Camera_Base
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Camera_Base_C::ExecuteUbergraph_BP_Camera_Base(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Camera_Base_C", "ExecuteUbergraph_BP_Camera_Base");
+
+	Params::BP_Camera_Base_C_ExecuteUbergraph_BP_Camera_Base Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Camera_Base.BP_Camera_Base_C.ExportSignal
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_PhotoAnimation_C*             self2                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Camera_Base_C::ExportSignal(class ABP_PhotoAnimation_C* self2)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Camera_Base_C", "ExportSignal");
+
+	Params::BP_Camera_Base_C_ExportSignal Parms{};
 
 	Parms.self2 = self2;
 
@@ -440,19 +161,19 @@ bool ABP_Camera_Base_C::FinishCheck(const struct FFinishFilter& FinishFilter)
 }
 
 
-// Function BP_Camera_Base.BP_Camera_Base_C.ExportSignal
+// Function BP_Camera_Base.BP_Camera_Base_C.Finisher
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_PhotoAnimation_C*             self2                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           self2                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Camera_Base_C::ExportSignal(class ABP_PhotoAnimation_C* self2)
+void ABP_Camera_Base_C::Finisher(class AActor* self2)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "ExportSignal");
+		Func = Class->GetFunction("BP_Camera_Base_C", "Finisher");
 
-	Params::BP_Camera_Base_C_ExportSignal Parms{};
+	Params::BP_Camera_Base_C_Finisher Parms{};
 
 	Parms.self2 = self2;
 
@@ -460,105 +181,384 @@ void ABP_Camera_Base_C::ExportSignal(class ABP_PhotoAnimation_C* self2)
 }
 
 
-// Function BP_Camera_Base.BP_Camera_Base_C.ExecuteUbergraph_BP_Camera_Base
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_Camera_Base.BP_Camera_Base_C.FinishTasks
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Finish                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Camera_Base_C::ExecuteUbergraph_BP_Camera_Base(int32 EntryPoint)
+void ABP_Camera_Base_C::FinishTasks(class AActor* Target, bool* Finish)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "ExecuteUbergraph_BP_Camera_Base");
+		Func = Class->GetFunction("BP_Camera_Base_C", "FinishTasks");
 
-	Params::BP_Camera_Base_C_ExecuteUbergraph_BP_Camera_Base Parms{};
+	Params::BP_Camera_Base_C_FinishTasks Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Target = Target;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Finish != nullptr)
+		*Finish = Parms.Finish;
+}
+
+
+// Function BP_Camera_Base.BP_Camera_Base_C.FlashTimeline__FinishedFunc
+// (BlueprintEvent)
+
+void ABP_Camera_Base_C::FlashTimeline__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Camera_Base_C", "FlashTimeline__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Camera_Base.BP_Camera_Base_C.FlashTimeline__UpdateFunc
+// (BlueprintEvent)
+
+void ABP_Camera_Base_C::FlashTimeline__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Camera_Base_C", "FlashTimeline__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Camera_Base.BP_Camera_Base_C.GetCentorPosition
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FVector*                         World_Position                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Camera_Base_C::GetCentorPosition(struct FVector* World_Position)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Camera_Base_C", "GetCentorPosition");
+
+	Params::BP_Camera_Base_C_GetCentorPosition Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (World_Position != nullptr)
+		*World_Position = std::move(Parms.World_Position);
+}
+
+
+// Function BP_Camera_Base.BP_Camera_Base_C.GetItemInfo
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ENUM_HandType*                          HandType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ENUM_ClassType*                         ClassType                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   NotPickUp                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FRotator*                        HaveRotation_0                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FVector*                         Add_Position_0                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   IsBoneAttach                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ENUM_ItemBindType*                      BindType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName*                            BoneName                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FST_ItemCoreDatas*               CoreDatas                                              (Parm, OutParm, HasGetValueTypeHash)
+
+void ABP_Camera_Base_C::GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* ClassType, bool* NotPickUp, struct FRotator* HaveRotation_0, struct FVector* Add_Position_0, bool* IsBoneAttach, ENUM_ItemBindType* BindType, class FName* BoneName, struct FST_ItemCoreDatas* CoreDatas)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Camera_Base_C", "GetItemInfo");
+
+	Params::BP_Camera_Base_C_GetItemInfo Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (HandType != nullptr)
+		*HandType = Parms.HandType;
+
+	if (ClassType != nullptr)
+		*ClassType = Parms.ClassType;
+
+	if (NotPickUp != nullptr)
+		*NotPickUp = Parms.NotPickUp;
+
+	if (HaveRotation_0 != nullptr)
+		*HaveRotation_0 = std::move(Parms.HaveRotation_0);
+
+	if (Add_Position_0 != nullptr)
+		*Add_Position_0 = std::move(Parms.Add_Position_0);
+
+	if (IsBoneAttach != nullptr)
+		*IsBoneAttach = Parms.IsBoneAttach;
+
+	if (BindType != nullptr)
+		*BindType = Parms.BindType;
+
+	if (BoneName != nullptr)
+		*BoneName = Parms.BoneName;
+
+	if (CoreDatas != nullptr)
+		*CoreDatas = std::move(Parms.CoreDatas);
+}
+
+
+// Function BP_Camera_Base.BP_Camera_Base_C.Is In View
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Retrun_Value                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Camera_Base_C::Is_In_View(class AActor* Actor, bool* Retrun_Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Camera_Base_C", "Is In View");
+
+	Params::BP_Camera_Base_C_Is_In_View Parms{};
+
+	Parms.Actor = Actor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Retrun_Value != nullptr)
+		*Retrun_Value = Parms.Retrun_Value;
+}
+
+
+// Function BP_Camera_Base.BP_Camera_Base_C.Is In View Gimmick
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Retrun_Value                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Camera_Base_C::Is_In_View_Gimmick(class AActor* Actor, bool* Retrun_Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Camera_Base_C", "Is In View Gimmick");
+
+	Params::BP_Camera_Base_C_Is_In_View_Gimmick Parms{};
+
+	Parms.Actor = Actor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Retrun_Value != nullptr)
+		*Retrun_Value = Parms.Retrun_Value;
+}
+
+
+// Function BP_Camera_Base.BP_Camera_Base_C.IsChangeImage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   IsInteract                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText*                            OverrideText                                           (Parm, OutParm)
+
+void ABP_Camera_Base_C::IsChangeImage(bool* IsInteract, class FText* OverrideText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Camera_Base_C", "IsChangeImage");
+
+	Params::BP_Camera_Base_C_IsChangeImage Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsInteract != nullptr)
+		*IsInteract = Parms.IsInteract;
+
+	if (OverrideText != nullptr)
+		*OverrideText = std::move(Parms.OverrideText);
+}
+
+
+// Function BP_Camera_Base.BP_Camera_Base_C.MS_IsInView
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_Camera_Base_C::MS_IsInView(class AActor* Actor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Camera_Base_C", "MS_IsInView");
+
+	Params::BP_Camera_Base_C_MS_IsInView Parms{};
+
+	Parms.Actor = Actor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_Camera_Base.BP_Camera_Base_C.PhotoShot
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<class AActor*>&            ShotInActors                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void ABP_Camera_Base_C::PhotoShot(const TArray<class AActor*>& ShotInActors)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Camera_Base_C", "PhotoShot");
+
+	Params::BP_Camera_Base_C_PhotoShot Parms{};
+
+	Parms.ShotInActors = std::move(ShotInActors);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_Camera_Base.BP_Camera_Base_C.ChargeState
+// Function BP_Camera_Base.BP_Camera_Base_C.RayToCamera
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   RayPosition                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool ABP_Camera_Base_C::RayToCamera(class UObject* Actor, const struct FVector& RayPosition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Camera_Base_C", "RayToCamera");
+
+	Params::BP_Camera_Base_C_RayToCamera Parms{};
+
+	Parms.Actor = Actor;
+	Parms.RayPosition = std::move(RayPosition);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_Camera_Base.BP_Camera_Base_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_Camera_Base_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Camera_Base_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Camera_Base.BP_Camera_Base_C.Reset
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Camera_Base_C::Reset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Camera_Base_C", "Reset");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Camera_Base.BP_Camera_Base_C.Shot
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsCharge                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    PressState                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  PushTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C*  SourcePlayer                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Camera_Base_C::ChargeState(bool IsCharge)
+void ABP_Camera_Base_C::Shot(bool PressState, double PushTime, class ABP_FirstPersonCharacter_Main_C* SourcePlayer)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "ChargeState");
+		Func = Class->GetFunction("BP_Camera_Base_C", "Shot");
 
-	Params::BP_Camera_Base_C_ChargeState Parms{};
+	Params::BP_Camera_Base_C_Shot Parms{};
 
-	Parms.IsCharge = IsCharge;
+	Parms.PressState = PressState;
+	Parms.PushTime = PushTime;
+	Parms.SourcePlayer = SourcePlayer;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_Camera_Base.BP_Camera_Base_C.ChangeMode
+// Function BP_Camera_Base.BP_Camera_Base_C.ShotEvent
 // (BlueprintCallable, BlueprintEvent)
 
-void ABP_Camera_Base_C::ChangeMode()
+void ABP_Camera_Base_C::ShotEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "ChangeMode");
+		Func = Class->GetFunction("BP_Camera_Base_C", "ShotEvent");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_Camera_Base.BP_Camera_Base_C.Change
+// Function BP_Camera_Base.BP_Camera_Base_C.ToggleFlash
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_Camera_Base_C::Change()
+void ABP_Camera_Base_C::ToggleFlash()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "Change");
+		Func = Class->GetFunction("BP_Camera_Base_C", "ToggleFlash");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_Camera_Base.BP_Camera_Base_C.Aim
+// Function BP_Camera_Base.BP_Camera_Base_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Camera_Base_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Camera_Base_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Camera_Base.BP_Camera_Base_C.View In Out Function
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    PressState_Aim                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Stencil_Value                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Camera_Base_C::Aim(bool PressState_Aim)
+void ABP_Camera_Base_C::View_In_Out_Function(int32 Stencil_Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "Aim");
+		Func = Class->GetFunction("BP_Camera_Base_C", "View In Out Function");
 
-	Params::BP_Camera_Base_C_Aim Parms{};
+	Params::BP_Camera_Base_C_View_In_Out_Function Parms{};
 
-	Parms.PressState_Aim = PressState_Aim;
+	Parms.Stencil_Value = Stencil_Value;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Camera_Base.BP_Camera_Base_C.ActorCheckLoop
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Camera_Base_C::ActorCheckLoop()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Camera_Base_C", "ActorCheckLoop");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

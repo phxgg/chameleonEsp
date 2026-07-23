@@ -16,43 +16,15 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_AutoAttachHandControl.BPC_AutoAttachHandControl_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBPC_AutoAttachHandControl_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AutoAttachHandControl_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_AutoAttachHandControl.BPC_AutoAttachHandControl_C.OnRep_ReplicateData
+// Function BPC_AutoAttachHandControl.BPC_AutoAttachHandControl_C.DestroySelf
 // (BlueprintCallable, BlueprintEvent)
 
-void UBPC_AutoAttachHandControl_C::OnRep_ReplicateData()
+void UBPC_AutoAttachHandControl_C::DestroySelf()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AutoAttachHandControl_C", "OnRep_ReplicateData");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_AutoAttachHandControl.BPC_AutoAttachHandControl_C.Grab
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBPC_AutoAttachHandControl_C::Grab()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AutoAttachHandControl_C", "Grab");
+		Func = Class->GetFunction("BPC_AutoAttachHandControl_C", "DestroySelf");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,15 +50,43 @@ void UBPC_AutoAttachHandControl_C::ExecuteUbergraph_BPC_AutoAttachHandControl(in
 }
 
 
-// Function BPC_AutoAttachHandControl.BPC_AutoAttachHandControl_C.DestroySelf
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_AutoAttachHandControl.BPC_AutoAttachHandControl_C.Grab
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBPC_AutoAttachHandControl_C::DestroySelf()
+void UBPC_AutoAttachHandControl_C::Grab()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_AutoAttachHandControl_C", "DestroySelf");
+		Func = Class->GetFunction("BPC_AutoAttachHandControl_C", "Grab");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_AutoAttachHandControl.BPC_AutoAttachHandControl_C.OnRep_ReplicateData
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_AutoAttachHandControl_C::OnRep_ReplicateData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_AutoAttachHandControl_C", "OnRep_ReplicateData");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_AutoAttachHandControl.BPC_AutoAttachHandControl_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBPC_AutoAttachHandControl_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_AutoAttachHandControl_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

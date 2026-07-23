@@ -25,9 +25,9 @@ public:
 	class UBPC_DampingControl_C*                  BPC_DampingControl;                                // 0x0500(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Shot(bool PressState_Shot, double PushTime_Shot, class ABP_FirstPersonCharacter_Main_C* SourcePlayer_Shot);
-	void ExecuteUbergraph_BP_Spear(int32 EntryPoint);
 	void BndEvt__BP_Spear_BPC_LongInputControl_K2Node_ComponentBoundEvent_0_InputEnd__DelegateSignature(double PushTime);
+	void ExecuteUbergraph_BP_Spear(int32 EntryPoint);
+	void Shot(bool PressState, double PushTime, class ABP_FirstPersonCharacter_Main_C* SourcePlayer);
 
 public:
 	static class UClass* StaticClass()

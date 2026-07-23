@@ -34,9 +34,9 @@ public:
 	class USoundBase*                             OverrideSound;                                     // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void HitEvent(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
 	void ExecuteUbergraph_BPC_CollisionSound(int32 EntryPoint);
+	void HitEvent(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

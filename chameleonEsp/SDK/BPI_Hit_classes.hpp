@@ -20,9 +20,9 @@ SDK_NAMESPACE_START
 class IBPI_Hit_C final
 {
 public:
-	void BPI_InteractStart_Server_(class ABP_FirstPersonCharacter_Main_C* First_Person);
-	void BPI_InteractStart_Local_(class ABP_FirstPersonCharacter_Main_C* First_Person);
 	void BPI_InteractEnd();
+	void BPI_InteractStart_Local_(class ABP_FirstPersonCharacter_Main_C* First_Person);
+	void BPI_InteractStart_Server_(class ABP_FirstPersonCharacter_Main_C* First_Person);
 
 public:
 	static class UClass* StaticClass()

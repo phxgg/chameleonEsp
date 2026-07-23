@@ -14,18 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_Parasol.BP_Parasol_C.PickState
-// 0x0018 (0x0018 - 0x0000)
-struct BP_Parasol_C_PickState final
-{
-public:
-	bool                                          State_PickState;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_FirstPersonCharacter_Main_C*        Character_PickState;                               // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         SlotIndex_PickState;                               // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Parasol_C_PickState;
-
 // Function BP_Parasol.BP_Parasol_C.ExecuteUbergraph_BP_Parasol
 // 0x0018 (0x0018 - 0x0000)
 struct BP_Parasol_C_ExecuteUbergraph_BP_Parasol final
@@ -40,6 +28,18 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_Parasol_C_ExecuteUbergraph_BP_Parasol;
+
+// Function BP_Parasol.BP_Parasol_C.PickState
+// 0x0018 (0x0018 - 0x0000)
+struct BP_Parasol_C_PickState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         SlotIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Parasol_C_PickState;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

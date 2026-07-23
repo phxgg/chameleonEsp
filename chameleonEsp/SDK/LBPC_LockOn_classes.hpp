@@ -27,9 +27,9 @@ public:
 	bool                                          EnableLockOn;                                      // 0x0251(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void LockOnWidgetState(bool State);
 	void ExecuteUbergraph_LBPC_LockOn(int32 EntryPoint);
+	void LockOnWidgetState(bool State);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

@@ -16,25 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function BTTask_AttackEnemy.BTTask_AttackEnemy_C.ReceiveExecuteAI
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AAIController*                    OwnerController_ReceiveExecuteAI                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            ControlledPawn_ReceiveExecuteAI                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function BTTask_AttackEnemy.BTTask_AttackEnemy_C.EndTask
+// (BlueprintCallable, BlueprintEvent)
 
-void UBTTask_AttackEnemy_C::ReceiveExecuteAI(class AAIController* OwnerController_ReceiveExecuteAI, class APawn* ControlledPawn_ReceiveExecuteAI)
+void UBTTask_AttackEnemy_C::EndTask()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BTTask_AttackEnemy_C", "ReceiveExecuteAI");
+		Func = Class->GetFunction("BTTask_AttackEnemy_C", "EndTask");
 
-	Params::BTTask_AttackEnemy_C_ReceiveExecuteAI Parms{};
-
-	Parms.OwnerController_ReceiveExecuteAI = OwnerController_ReceiveExecuteAI;
-	Parms.ControlledPawn_ReceiveExecuteAI = ControlledPawn_ReceiveExecuteAI;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -58,17 +50,25 @@ void UBTTask_AttackEnemy_C::ExecuteUbergraph_BTTask_AttackEnemy(int32 EntryPoint
 }
 
 
-// Function BTTask_AttackEnemy.BTTask_AttackEnemy_C.EndTask
-// (BlueprintCallable, BlueprintEvent)
+// Function BTTask_AttackEnemy.BTTask_AttackEnemy_C.ReceiveExecuteAI
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AAIController*                    OwnerController                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            ControlledPawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBTTask_AttackEnemy_C::EndTask()
+void UBTTask_AttackEnemy_C::ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BTTask_AttackEnemy_C", "EndTask");
+		Func = Class->GetFunction("BTTask_AttackEnemy_C", "ReceiveExecuteAI");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BTTask_AttackEnemy_C_ReceiveExecuteAI Parms{};
+
+	Parms.OwnerController = OwnerController;
+	Parms.ControlledPawn = ControlledPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -30,9 +30,9 @@ public:
 	int32                                         CurrentProgress;                                   // 0x0374(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ProgressAdd(int32 AddValue);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void ExecuteUbergraph_WBP_TaskBlock(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void ProgressAdd(int32 AddValue);
 
 public:
 	static class UClass* StaticClass()

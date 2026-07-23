@@ -17,21 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_KeepArea.BP_KeepArea_C.UserConstructionScript
-// 0x0058 (0x0058 - 0x0000)
-struct BP_KeepArea_C_UserConstructionScript final
-{
-public:
-	TArray<class AActor*>                         Temp_object_Variable;                              // 0x0000(0x0010)(ConstParm, ReferenceParm)
-	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x0010(0x0010)(ConstParm, ReferenceParm)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScaledSphereRadius_ReturnValue;        // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         CallFunc_SphereOverlapActors_OutActors;            // 0x0040(0x0010)(ReferenceParm)
-	bool                                          CallFunc_SphereOverlapActors_ReturnValue;          // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_KeepArea_C_UserConstructionScript;
-
 // Function BP_KeepArea.BP_KeepArea_C.ExecuteUbergraph_BP_KeepArea
 // 0x00C8 (0x00C8 - 0x0000)
 struct BP_KeepArea_C_ExecuteUbergraph_BP_KeepArea final
@@ -65,6 +50,21 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_KeepArea_C_ExecuteUbergraph_BP_KeepArea;
+
+// Function BP_KeepArea.BP_KeepArea_C.UserConstructionScript
+// 0x0058 (0x0058 - 0x0000)
+struct BP_KeepArea_C_UserConstructionScript final
+{
+public:
+	TArray<class AActor*>                         Temp_object_Variable;                              // 0x0000(0x0010)(ConstParm, ReferenceParm)
+	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x0010(0x0010)(ConstParm, ReferenceParm)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScaledSphereRadius_ReturnValue;        // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         CallFunc_SphereOverlapActors_OutActors;            // 0x0040(0x0010)(ReferenceParm)
+	bool                                          CallFunc_SphereOverlapActors_ReturnValue;          // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_KeepArea_C_UserConstructionScript;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

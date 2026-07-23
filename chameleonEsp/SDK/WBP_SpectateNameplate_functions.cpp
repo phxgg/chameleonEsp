@@ -16,61 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.ViewChange
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.ExecuteUbergraph_WBP_SpectateNameplate
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class ABP_FirstPersonCharacter_Main_C*  SourcePlayer                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_SpectateNameplate_C::ViewChange(class ABP_FirstPersonCharacter_Main_C* SourcePlayer)
+void UWBP_SpectateNameplate_C::ExecuteUbergraph_WBP_SpectateNameplate(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SpectateNameplate_C", "ViewChange");
+		Func = Class->GetFunction("WBP_SpectateNameplate_C", "ExecuteUbergraph_WBP_SpectateNameplate");
 
-	Params::WBP_SpectateNameplate_C_ViewChange Parms{};
+	Params::WBP_SpectateNameplate_C_ExecuteUbergraph_WBP_SpectateNameplate Parms{};
 
-	Parms.SourcePlayer = SourcePlayer;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.SetupSpectateNameplate
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_FirstPersonCharacter_Main_C*  Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SpectateNameplate_C::SetupSpectateNameplate(class ABP_FirstPersonCharacter_Main_C* Character)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SpectateNameplate_C", "SetupSpectateNameplate");
-
-	Params::WBP_SpectateNameplate_C_SetupSpectateNameplate Parms{};
-
-	Parms.Character = Character;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SpectateNameplate_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SpectateNameplate_C", "PreConstruct");
-
-	Params::WBP_SpectateNameplate_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -97,21 +57,61 @@ void UWBP_SpectateNameplate_C::GetCustomPlayerName(class FString* playerName)
 }
 
 
-// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.ExecuteUbergraph_WBP_SpectateNameplate
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_SpectateNameplate_C::ExecuteUbergraph_WBP_SpectateNameplate(int32 EntryPoint)
+void UWBP_SpectateNameplate_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SpectateNameplate_C", "ExecuteUbergraph_WBP_SpectateNameplate");
+		Func = Class->GetFunction("WBP_SpectateNameplate_C", "PreConstruct");
 
-	Params::WBP_SpectateNameplate_C_ExecuteUbergraph_WBP_SpectateNameplate Parms{};
+	Params::WBP_SpectateNameplate_C_PreConstruct Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.SetupSpectateNameplate
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonCharacter_Main_C*  Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SpectateNameplate_C::SetupSpectateNameplate(class ABP_FirstPersonCharacter_Main_C* Character)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SpectateNameplate_C", "SetupSpectateNameplate");
+
+	Params::WBP_SpectateNameplate_C_SetupSpectateNameplate Parms{};
+
+	Parms.Character = Character;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.ViewChange
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonCharacter_Main_C*  SourcePlayer                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SpectateNameplate_C::ViewChange(class ABP_FirstPersonCharacter_Main_C* SourcePlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SpectateNameplate_C", "ViewChange");
+
+	Params::WBP_SpectateNameplate_C_ViewChange Parms{};
+
+	Parms.SourcePlayer = SourcePlayer;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

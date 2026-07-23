@@ -31,9 +31,9 @@ public:
 	TMap<struct FIntPoint, class UTextureRenderTarget2D*> Cell_Render_Targets;                       // 0x0318(0x0050)(Edit, BlueprintVisible)
 
 public:
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay);
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_UDS_Cloud_Paint_Container(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 
 public:
 	static class UClass* StaticClass()

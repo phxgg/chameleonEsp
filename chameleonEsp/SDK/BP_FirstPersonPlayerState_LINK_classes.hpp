@@ -29,38 +29,38 @@ public:
 	double                                        LiftPower;                                         // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CustomPlayerName;                                  // 0x03F0(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	TMap<EN_LINK_PlayerStateValueType, double>    PlayerStateValue_Replicate;                        // 0x0400(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMulticastInlineDelegate<void(EN_LINK_PlayerStateValueType PlayerStateValue, double Value)> OnValueChange; // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(EN_LINK_PlayerStateValueType PlayerStateValue_0, double Value)> OnValueChange; // 0x0450(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	int32                                         HaveCoin;                                          // 0x0460(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	int32                                         HoveCoin_Old;                                      // 0x0464(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMulticastInlineDelegate<void(double BackpackWeight)> OnBackPackValueChange;                     // 0x0468(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	double                                        CurrentBackpackWeight;                             // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ViewChange(class ABP_FirstPersonCharacter_Main_C* SourcePlayer);
-	void UseCoin(int32 CoinValue, bool* Rezult);
-	void StateValueSync_Server_(const EN_LINK_PlayerStateValueType& Key, const double& Value);
-	void StateValueSync_Client_(const EN_LINK_PlayerStateValueType& Key, const double& Value);
-	void SetupSpectateNameplate(class ABP_FirstPersonCharacter_Main_C* Character);
-	void SetStateValue(EN_LINK_PlayerStateValueType Key, double Value);
-	void SetName(const class FString& CustomPlayerName);
-	void SetCoin(int32 SetValue);
-	void SetBackPackMenuState(bool State);
-	void SendToText(const class FString& Text, int32 MessageType);
-	void RespawnItem_Server_(int32 ItemIndex, const struct FTransform& CameraTransform, bool CanSpawn);
-	void ReceiveDestroyed();
-	void ReceiveCopyProperties(class APlayerState* NewPlayerState_ReceiveCopyProperties);
-	void ReceiveBeginPlay();
-	void OnRep_HaveCoin();
-	void NameUpdate();
-	void Initialization(class ABP_FirstPersonCharacter_Main_C* Character_Initialization);
-	void GetStateValue(EN_LINK_PlayerStateValueType& Key, double* Value, double* ReplicateValue);
-	void GetCustomPlayerName(class FString* playerName);
-	void GetCurrentWeight(double* WeightPower);
-	void ExecuteUbergraph_BP_FirstPersonPlayerState_LINK(int32 EntryPoint);
-	void BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_1_ChangeWeight__DelegateSignature(double Weight);
-	void BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_0_ItemSelect__DelegateSignature(int32 Index_0, bool CanSpawn);
-	void AddStateValue(EN_LINK_PlayerStateValueType ValueName, double Value, const struct FVector2D& ClampValue);
 	void AddCoin(int32 AddValue);
+	void AddStateValue(EN_LINK_PlayerStateValueType ValueName, double Value, const struct FVector2D& ClampValue);
+	void BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_0_ItemSelect__DelegateSignature(int32 Index_0, bool CanSpawn);
+	void BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_1_ChangeWeight__DelegateSignature(double Weight);
+	void ExecuteUbergraph_BP_FirstPersonPlayerState_LINK(int32 EntryPoint);
+	void GetCurrentWeight(double* WeightPower);
+	void GetCustomPlayerName(class FString* playerName);
+	void GetStateValue(EN_LINK_PlayerStateValueType& Key, double* Value, double* ReplicateValue);
+	void Initialization(class ABP_FirstPersonCharacter_Main_C* Character);
+	void NameUpdate();
+	void OnRep_HaveCoin();
+	void ReceiveBeginPlay();
+	void ReceiveCopyProperties(class APlayerState* NewPlayerState);
+	void ReceiveDestroyed();
+	void RespawnItem_Server_(int32 ItemIndex, const struct FTransform& CameraTransform, bool CanSpawn);
+	void SendToText(const class FString& Text, int32 MessageType);
+	void SetBackPackMenuState(bool State);
+	void SetCoin(int32 SetValue);
+	void SetName(const class FString& CustomPlayerName_0);
+	void SetStateValue(EN_LINK_PlayerStateValueType Key, double Value);
+	void SetupSpectateNameplate(class ABP_FirstPersonCharacter_Main_C* Character);
+	void StateValueSync_Client_(const EN_LINK_PlayerStateValueType& Key, const double& Value);
+	void StateValueSync_Server_(const EN_LINK_PlayerStateValueType& Key, const double& Value);
+	void UseCoin(int32 CoinValue, bool* Rezult);
+	void ViewChange(class ABP_FirstPersonCharacter_Main_C* SourcePlayer);
 
 public:
 	static class UClass* StaticClass()

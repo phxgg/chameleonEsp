@@ -16,63 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_Item.WBP_Item_C.SetStackData
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WBP_Item.WBP_Item_C.ExecuteUbergraph_WBP_Item
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// int32                                   StackCount                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Item_C::SetStackData(int32 StackCount)
+void UWBP_Item_C::ExecuteUbergraph_WBP_Item(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Item_C", "SetStackData");
+		Func = Class->GetFunction("WBP_Item_C", "ExecuteUbergraph_WBP_Item");
 
-	Params::WBP_Item_C_SetStackData Parms{};
+	Params::WBP_Item_C_ExecuteUbergraph_WBP_Item Parms{};
 
-	Parms.StackCount = StackCount;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Item.WBP_Item_C.SetData
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FCPP_GameItemData&         ItemData                                               (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   StackCount                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Item_C::SetData(const struct FCPP_GameItemData& ItemData, int32 StackCount)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Item_C", "SetData");
-
-	Params::WBP_Item_C_SetData Parms{};
-
-	Parms.ItemData = std::move(ItemData);
-	Parms.StackCount = StackCount;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Item.WBP_Item_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Item_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Item_C", "PreConstruct");
-
-	Params::WBP_Item_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -98,21 +56,63 @@ void UWBP_Item_C::PlaySlotAnim(bool IsSelect)
 }
 
 
-// Function WBP_Item.WBP_Item_C.ExecuteUbergraph_WBP_Item
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_Item.WBP_Item_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Item_C::ExecuteUbergraph_WBP_Item(int32 EntryPoint)
+void UWBP_Item_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Item_C", "ExecuteUbergraph_WBP_Item");
+		Func = Class->GetFunction("WBP_Item_C", "PreConstruct");
 
-	Params::WBP_Item_C_ExecuteUbergraph_WBP_Item Parms{};
+	Params::WBP_Item_C_PreConstruct Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Item.WBP_Item_C.SetData
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FCPP_GameItemData&         ItemData                                               (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   StackCount_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Item_C::SetData(const struct FCPP_GameItemData& ItemData, int32 StackCount_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Item_C", "SetData");
+
+	Params::WBP_Item_C_SetData Parms{};
+
+	Parms.ItemData = std::move(ItemData);
+	Parms.StackCount_0 = StackCount_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Item.WBP_Item_C.SetStackData
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   StackCount_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Item_C::SetStackData(int32 StackCount_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Item_C", "SetStackData");
+
+	Params::WBP_Item_C_SetStackData Parms{};
+
+	Parms.StackCount_0 = StackCount_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

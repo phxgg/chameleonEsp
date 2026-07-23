@@ -28,8 +28,8 @@ public:
 	class ABP_FirstPersonGameMode_Online_LINK_C*  As_BP_First_Person_Game_Mode_Online_LINK_0;        // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_ExitShopArea(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

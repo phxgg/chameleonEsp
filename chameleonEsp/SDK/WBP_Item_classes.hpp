@@ -35,11 +35,11 @@ public:
 	class FName                                   KeyName;                                           // 0x03CC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void SetStackData(int32 StackCount);
-	void SetData(const struct FCPP_GameItemData& ItemData, int32 StackCount);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void PlaySlotAnim(bool IsSelect);
 	void ExecuteUbergraph_WBP_Item(int32 EntryPoint);
+	void PlaySlotAnim(bool IsSelect);
+	void PreConstruct(bool IsDesignTime);
+	void SetData(const struct FCPP_GameItemData& ItemData, int32 StackCount_0);
+	void SetStackData(int32 StackCount_0);
 
 public:
 	static class UClass* StaticClass()

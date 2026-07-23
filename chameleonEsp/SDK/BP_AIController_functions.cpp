@@ -16,31 +16,25 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_AIController.BP_AIController_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_AIController.BP_AIController_C.BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FAIStimulus&               Stimulus                                               (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
-void ABP_AIController_C::ReceiveBeginPlay()
+void ABP_AIController_C::BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor* Actor, const struct FAIStimulus& Stimulus)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AIController_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_AIController_C", "BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::BP_AIController_C_BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature Parms{};
 
+	Parms.Actor = Actor;
+	Parms.Stimulus = std::move(Stimulus);
 
-// Function BP_AIController.BP_AIController_C.Forget Target
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_AIController_C::Forget_Target()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AIController_C", "Forget Target");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -64,25 +58,31 @@ void ABP_AIController_C::ExecuteUbergraph_BP_AIController(int32 EntryPoint)
 }
 
 
-// Function BP_AIController.BP_AIController_C.BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FAIStimulus&               Stimulus                                               (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// Function BP_AIController.BP_AIController_C.Forget Target
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_AIController_C::BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature(class AActor* Actor, const struct FAIStimulus& Stimulus)
+void ABP_AIController_C::Forget_Target()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AIController_C", "BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature");
+		Func = Class->GetFunction("BP_AIController_C", "Forget Target");
 
-	Params::BP_AIController_C_BndEvt__BP_AIController_AIPerception_K2Node_ComponentBoundEvent_1_ActorPerceptionUpdatedDelegate__DelegateSignature Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Actor = Actor;
-	Parms.Stimulus = std::move(Stimulus);
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function BP_AIController.BP_AIController_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_AIController_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AIController_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

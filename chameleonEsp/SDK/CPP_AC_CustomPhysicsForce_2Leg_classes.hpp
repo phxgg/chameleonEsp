@@ -27,12 +27,12 @@ public:
 	class UPhysicalMaterial*                      HitPhysMat;                                        // 0x0260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SweepCheck();
-	void SetTouchPointDatas();
-	TMap<class UPrimitiveComponent*, struct FVector> ResetHitPointDatas();
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_CPP_AC_CustomPhysicsForce_2Leg(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	TMap<class UPrimitiveComponent*, struct FVector> ResetHitPointDatas();
+	void SetTouchPointDatas();
+	void SweepCheck();
 
 public:
 	static class UClass* StaticClass()

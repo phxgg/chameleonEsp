@@ -16,17 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_TaskObject_ReDeliveryGiftBox.BPC_TaskObject_ReDeliveryGiftBox_C.TaskStart
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_TaskObject_ReDeliveryGiftBox.BPC_TaskObject_ReDeliveryGiftBox_C.ExecuteUbergraph_BPC_TaskObject_ReDeliveryGiftBox
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_TaskObject_ReDeliveryGiftBox_C::TaskStart()
+void UBPC_TaskObject_ReDeliveryGiftBox_C::ExecuteUbergraph_BPC_TaskObject_ReDeliveryGiftBox(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_TaskObject_ReDeliveryGiftBox_C", "TaskStart");
+		Func = Class->GetFunction("BPC_TaskObject_ReDeliveryGiftBox_C", "ExecuteUbergraph_BPC_TaskObject_ReDeliveryGiftBox");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_TaskObject_ReDeliveryGiftBox_C_ExecuteUbergraph_BPC_TaskObject_ReDeliveryGiftBox Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -50,23 +56,17 @@ void UBPC_TaskObject_ReDeliveryGiftBox_C::GoalGiftBox(class AActor* GiftBox)
 }
 
 
-// Function BPC_TaskObject_ReDeliveryGiftBox.BPC_TaskObject_ReDeliveryGiftBox_C.ExecuteUbergraph_BPC_TaskObject_ReDeliveryGiftBox
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_TaskObject_ReDeliveryGiftBox.BPC_TaskObject_ReDeliveryGiftBox_C.TaskStart
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_TaskObject_ReDeliveryGiftBox_C::ExecuteUbergraph_BPC_TaskObject_ReDeliveryGiftBox(int32 EntryPoint)
+void UBPC_TaskObject_ReDeliveryGiftBox_C::TaskStart()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_TaskObject_ReDeliveryGiftBox_C", "ExecuteUbergraph_BPC_TaskObject_ReDeliveryGiftBox");
+		Func = Class->GetFunction("BPC_TaskObject_ReDeliveryGiftBox_C", "TaskStart");
 
-	Params::BPC_TaskObject_ReDeliveryGiftBox_C_ExecuteUbergraph_BPC_TaskObject_ReDeliveryGiftBox Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

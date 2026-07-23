@@ -20,8 +20,8 @@ SDK_NAMESPACE_START
 class IBPI_Gimmick_C final
 {
 public:
-	void SetTimeStopState(bool State);
 	void IsInPhoto(bool* Value);
+	void SetTimeStopState(bool State);
 
 public:
 	static class UClass* StaticClass()

@@ -29,16 +29,16 @@ public:
 	class UWidgetAnimation*                       VisibleAnimation;                                  // 0x0360(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void VisibleState(bool State);
-	void StaminaBarUpdateSub(double Value);
-	void StaminaBarUpdate(double Value);
-	void SetText(const class FText& Text, int32 Index_0);
-	void SetColor(const struct FLinearColor& Color, int32 Index_0);
-	void PlayAnimationMessage(bool IsForward, int32 Index_0);
-	void HealthBarUpdateSub(double Value);
-	void HealthBarUpdate(double Value);
-	void ExecuteUbergraph_WBP_HealthAndStaminaBar(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_WBP_HealthAndStaminaBar(int32 EntryPoint);
+	void HealthBarUpdate(double Value);
+	void HealthBarUpdateSub(double Value);
+	void PlayAnimationMessage(bool IsForward, int32 Index_0);
+	void SetColor(const struct FLinearColor& Color, int32 Index_0);
+	void SetText(const class FText& Text, int32 Index_0);
+	void StaminaBarUpdate(double Value);
+	void StaminaBarUpdateSub(double Value);
+	void VisibleState(bool State);
 
 public:
 	static class UClass* StaticClass()

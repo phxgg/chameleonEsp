@@ -48,9 +48,9 @@ public:
 	TArray<class FString>                         Device_Ids;                                        // 0x0408(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void Get_ConfigItem_Text_1_Text_0();
-	void ExecuteUbergraph_WBP_SettingVoiceInputDevice(int32 EntryPoint);
 	void ApplySetting();
+	void ExecuteUbergraph_WBP_SettingVoiceInputDevice(int32 EntryPoint);
+	void Get_ConfigItem_Text_1_Text_0();
 
 public:
 	static class UClass* StaticClass()

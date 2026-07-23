@@ -22,7 +22,7 @@ static const char* KeyName(int vk)
 void Menu::Init()
 {
 	ImGui::SetNextWindowSize({ 300, 480 }, ImGuiCond_Once);
-	ImGui::Begin("phxgg esp", nullptr, 0);
+	ImGui::Begin("phxgg ESP", nullptr, 0);
 
 	const float footerH = ImGui::GetStyle().ItemSpacing.y + ImGui::GetFrameHeightWithSpacing() + ImGui::GetStyle().WindowPadding.y;
 
@@ -30,32 +30,32 @@ void Menu::Init()
 
 	if (ImGui::BeginTabBar("##tabs"))
 	{
-		if (ImGui::BeginTabItem("ESP"))
+		if (ImGui::BeginTabItem("透视"))
 		{
 			ImGui::BeginChild("##esp_list", ImVec2(0, 0), false);
 
-			ImGui::Checkbox("Fov Changer", &cfg->bFovChanger);
+			ImGui::Checkbox("视野修改", &cfg->bFovChanger);
 			if (cfg->bFovChanger)
-				ImGui::SliderFloat("Fov Value", &cfg->fFovValue, 50.0f, 180.0f);
+				ImGui::SliderFloat("视野值", &cfg->fFovValue, 50.0f, 180.0f);
 
-			ImGui::Checkbox("Enemy Only", &cfg->bEnemyOnly);
-			ImGui::Checkbox("Character Visibility (Infection Mode)", &cfg->bForceCharacterVisibility);
-			ImGui::Checkbox("Box", &cfg->bBox);
-			ImGui::Checkbox("Lines", &cfg->bLines);
-			ImGui::Checkbox("Name", &cfg->bNames);
-			ImGui::Checkbox("Roles", &cfg->bRoles);
-			ImGui::Checkbox("Skeleton", &cfg->bSkeleton);
-			ImGui::Checkbox("Distance", &cfg->bDistance);
-			// ImGui::Checkbox("Hunter Ammo", &cfg->bHunterAmmo);
-			ImGui::Checkbox("Decoys", &cfg->bDecoys);
+			ImGui::Checkbox("仅敌方", &cfg->bEnemyOnly);
+			ImGui::Checkbox("角色可见性（感染模式）", &cfg->bForceCharacterVisibility);
+			ImGui::Checkbox("方框", &cfg->bBox);
+			ImGui::Checkbox("连线", &cfg->bLines);
+			ImGui::Checkbox("姓名", &cfg->bNames);
+			ImGui::Checkbox("角色", &cfg->bRoles);
+			ImGui::Checkbox("骨骼", &cfg->bSkeleton);
+			ImGui::Checkbox("距离", &cfg->bDistance);
+			// ImGui::Checkbox("猎人弹药", &cfg->bHunterAmmo);
+			ImGui::Checkbox("诱饵", &cfg->bDecoys);
 
 			ImGui::Separator();
-			ImGui::Text("Colors");
+			ImGui::Text("颜色");
 
 			if (ImGui::ColorButton("##colVisible", *(ImVec4*)cfg->colVisible))
 				ImGui::OpenPopup("popup_colVisible");
 			ImGui::SameLine();
-			ImGui::Text("Visible");
+			ImGui::Text("可见");
 			if (ImGui::BeginPopup("popup_colVisible"))
 			{
 				ImGui::ColorPicker4("##pick", cfg->colVisible);
@@ -65,7 +65,7 @@ void Menu::Init()
 			if (ImGui::ColorButton("##colNotVisible", *(ImVec4*)cfg->colNotVisible))
 				ImGui::OpenPopup("popup_colNotVisible");
 			ImGui::SameLine();
-			ImGui::Text("Not Visible");
+			ImGui::Text("不可见");
 			if (ImGui::BeginPopup("popup_colNotVisible"))
 			{
 				ImGui::ColorPicker4("##pick", cfg->colNotVisible);
@@ -75,7 +75,7 @@ void Menu::Init()
 			if (ImGui::ColorButton("##colLines", *(ImVec4*)cfg->colLines))
 				ImGui::OpenPopup("popup_colLines");
 			ImGui::SameLine();
-			ImGui::Text("Lines");
+			ImGui::Text("连线");
 			if (ImGui::BeginPopup("popup_colLines"))
 			{
 				ImGui::ColorPicker4("##pick", cfg->colLines);
@@ -85,7 +85,7 @@ void Menu::Init()
 			if (ImGui::ColorButton("##colDecoy", *(ImVec4*)cfg->colDecoy))
 				ImGui::OpenPopup("popup_colDecoy");
 			ImGui::SameLine();
-			ImGui::Text("Decoy");
+			ImGui::Text("诱饵");
 			if (ImGui::BeginPopup("popup_colDecoy"))
 			{
 				ImGui::ColorPicker4("##pick", cfg->colDecoy);
@@ -96,13 +96,13 @@ void Menu::Init()
 			ImGui::EndTabItem();
 		}
 
-		if (ImGui::BeginTabItem("Teleport"))
+		if (ImGui::BeginTabItem("传送"))
 		{
 			ImGui::BeginChild("##tp_list", ImVec2(0, 0), false);
 
 			if (cheat->PlayerInfos.empty())
 			{
-				ImGui::TextDisabled("No players found");
+				ImGui::TextDisabled("未找到玩家");
 			}
 			else
 			{
@@ -121,26 +121,26 @@ void Menu::Init()
 			ImGui::EndTabItem();
 		}
 
-		if (ImGui::BeginTabItem("Tools"))
+		if (ImGui::BeginTabItem("工具"))
 		{
 			ImGui::BeginChild("##tools_list", ImVec2(0, 0), false);
 
-			ImGui::Text("Survivors");
+			ImGui::Text("求生者");
 			ImGui::Separator();
-			ImGui::Checkbox("Anti Detection", &cfg->bAntiDetection);
-			ImGui::Checkbox("No Decoy Cooldown", &cfg->bNoDecoyCooldown);
+			ImGui::Checkbox("反检测", &cfg->bAntiDetection);
+			ImGui::Checkbox("诱饵无冷却", &cfg->bNoDecoyCooldown);
 
 			ImGui::Separator();
-			ImGui::Text("Hunters");
+			ImGui::Text("猎人");
 			ImGui::Separator();
-			ImGui::Checkbox("No Gun Cooldown", &cfg->bNoGunCooldown);
-			ImGui::Checkbox("Infinite Bullets", &cfg->bInfiniteBullets);
+			ImGui::Checkbox("枪械无冷却", &cfg->bNoGunCooldown);
+			ImGui::Checkbox("无限子弹", &cfg->bInfiniteBullets);
 
 			// Magnet toggle key rebind: click the button, then press any key (ESC cancels).
 			static bool bindingMagnet = false;
-			ImGui::Text("Magnet Key:");
+			ImGui::Text("磁铁按键:");
 			ImGui::SameLine();
-			if (ImGui::Button(bindingMagnet ? "Press a key..." : KeyName(cfg->iMagnetKey)))
+			if (ImGui::Button(bindingMagnet ? "按下任意键..." : KeyName(cfg->iMagnetKey)))
 				bindingMagnet = true;
 			if (bindingMagnet)
 			{
@@ -159,17 +159,17 @@ void Menu::Init()
 				}
 			}
 
-			if (ImGui::Button("Kill All Survivors"))
+			if (ImGui::Button("击杀所有求生者"))
 				cheat->RequestKillAllSurvivors();
 
 			ImGui::Separator();
-			ImGui::Text("Kill Specific Player");
+			ImGui::Text("击杀指定玩家");
 
 			// Track the pick by actor pointer, not list index - PlayerInfos is rebuilt every frame and
 			// indices can drift. Resolve the selected actor's current name for the combo preview, and
 			// drop the selection if that actor no longer exists this frame.
 			static SDK::AActor* selectedKillActor = nullptr;
-			const char* killPreview = "Select survivor";
+			const char* killPreview = "选择求生者";
 			bool killStillPresent = false;
 			int survivorCount = 0;
 			for (const auto& p : cheat->PlayerInfos)
@@ -186,10 +186,10 @@ void Menu::Init()
 			if (!killStillPresent)
 				selectedKillActor = nullptr;
 			if (survivorCount == 0)
-				killPreview = "No survivors found";
+				killPreview = "未找到求生者";
 
 			// Combo on the left filling the row, fixed-width "Kill" button on the right.
-			const float killBtnW = ImGui::CalcTextSize("Kill").x + ImGui::GetStyle().FramePadding.x * 2.0f;
+			const float killBtnW = ImGui::CalcTextSize("击杀").x + ImGui::GetStyle().FramePadding.x * 2.0f;
 			ImGui::SetNextItemWidth(ImGui::GetContentRegionAvail().x - killBtnW - ImGui::GetStyle().ItemSpacing.x);
 			if (ImGui::BeginCombo("##kill_target", killPreview))
 			{
@@ -209,29 +209,29 @@ void Menu::Init()
 			}
 
 			ImGui::SameLine();
-			if (ImGui::Button("Kill", ImVec2(killBtnW, 0)) && selectedKillActor)
+			if (ImGui::Button("击杀", ImVec2(killBtnW, 0)) && selectedKillActor)
 				cheat->RequestKillSurvivor(selectedKillActor);
 
 			ImGui::Separator();
-			ImGui::Text("General");
+			ImGui::Text("通用");
 			ImGui::Separator();
-			ImGui::Checkbox("Anti Server Kick", &cfg->bPreventKick);
+			ImGui::Checkbox("反服务器踢出", &cfg->bPreventKick);
 
 			ImGui::Separator();
 
-			if (ImGui::Button("Dump Bones (Debugging)"))
+			if (ImGui::Button("导出骨骼（调试）"))
 				cfg->bDumpBones = true;
 
 			ImGui::EndChild();
 			ImGui::EndTabItem();
 		}
 
-		if (ImGui::BeginTabItem("Name Changer"))
+		if (ImGui::BeginTabItem("改名"))
 		{
 			ImGui::BeginChild("##name_list", ImVec2(0, 0), false);
 
 			static SDK::AActor* selectedNameActor = nullptr;
-			const char* namePreview = "Select player";
+			const char* namePreview = "选择玩家";
 			std::string selectedName;
 			bool nameStillPresent = false;
 			for (const auto& p : cheat->PlayerInfos)
@@ -246,9 +246,9 @@ void Menu::Init()
 			if (!nameStillPresent)
 				selectedNameActor = nullptr;
 			if (cheat->PlayerInfos.empty())
-				namePreview = "No players found";
+				namePreview = "未找到玩家";
 
-			const float nameBtnW = ImGui::CalcTextSize("Change").x + ImGui::GetStyle().FramePadding.x * 2.0f;
+			const float nameBtnW = ImGui::CalcTextSize("更改").x + ImGui::GetStyle().FramePadding.x * 2.0f;
 			ImGui::SetNextItemWidth(ImGui::GetContentRegionAvail().x - nameBtnW - ImGui::GetStyle().ItemSpacing.x);
 			if (ImGui::BeginCombo("##name_target", namePreview))
 			{
@@ -266,16 +266,16 @@ void Menu::Init()
 			}
 
 			ImGui::SameLine();
-			if (ImGui::Button("Change", ImVec2(nameBtnW, 0)) && selectedNameActor && !selectedName.empty())
+			if (ImGui::Button("更改", ImVec2(nameBtnW, 0)) && selectedNameActor && !selectedName.empty())
 				cheat->RequestChangeName(selectedName);
 
 			// Custom name: type anything and apply it to our own player.
 			static char customName[64] = "";
-			const float setBtnW = ImGui::CalcTextSize("Set").x + ImGui::GetStyle().FramePadding.x * 2.0f;
+			const float setBtnW = ImGui::CalcTextSize("设置").x + ImGui::GetStyle().FramePadding.x * 2.0f;
 			ImGui::SetNextItemWidth(ImGui::GetContentRegionAvail().x - setBtnW - ImGui::GetStyle().ItemSpacing.x);
 			const bool nameEntered = ImGui::InputText("##custom_name", customName, sizeof(customName), ImGuiInputTextFlags_EnterReturnsTrue);
 			ImGui::SameLine();
-			if ((ImGui::Button("Set", ImVec2(setBtnW, 0)) || nameEntered) && customName[0] != '\0')
+			if ((ImGui::Button("设置", ImVec2(setBtnW, 0)) || nameEntered) && customName[0] != '\0')
 				cheat->RequestChangeName(customName);
 
 			ImGui::EndChild();
@@ -290,16 +290,16 @@ void Menu::Init()
 	ImGui::Separator();
 
 	float buttonW = 55.0f;
-	if (ImGui::Button("Save", ImVec2(buttonW, 0)))
+	if (ImGui::Button("保存", ImVec2(buttonW, 0)))
 		cfg->SaveSettings();
 	ImGui::SameLine();
-	if (ImGui::Button("Load", ImVec2(buttonW, 0)))
+	if (ImGui::Button("加载", ImVec2(buttonW, 0)))
 		cfg->LoadSettings();
 
 	ImGui::SameLine();
-	float checkboxW = ImGui::CalcTextSize("Enable").x + ImGui::GetFrameHeight() + ImGui::GetStyle().ItemInnerSpacing.x;
+	float checkboxW = ImGui::CalcTextSize("启用").x + ImGui::GetFrameHeight() + ImGui::GetStyle().ItemInnerSpacing.x;
 	ImGui::SetCursorPosX(ImGui::GetWindowWidth() - checkboxW - ImGui::GetStyle().WindowPadding.x);
-	ImGui::Checkbox("Enable", &cfg->bInitHooks);
+	ImGui::Checkbox("启用", &cfg->bInitHooks);
 
 	ImGui::End();
 }

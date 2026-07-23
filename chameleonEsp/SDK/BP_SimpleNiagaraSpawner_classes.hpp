@@ -26,8 +26,8 @@ public:
 	class UNiagaraSystem*                         System_Template;                                   // 0x02B8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_SimpleNiagaraSpawner(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

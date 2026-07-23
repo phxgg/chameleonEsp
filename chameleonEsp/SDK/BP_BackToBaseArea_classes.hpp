@@ -26,8 +26,8 @@ public:
 	TMulticastInlineDelegate<void(class AActor* Actor)> GoalActor;                                   // 0x02B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void ExecuteUbergraph_BP_BackToBaseArea(int32 EntryPoint);
 	void BndEvt__BP_BackToBaseArea_Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void ExecuteUbergraph_BP_BackToBaseArea(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

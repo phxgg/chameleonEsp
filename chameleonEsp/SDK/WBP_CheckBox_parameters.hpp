@@ -14,24 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_CheckBox.WBP_CheckBox_C.SetCheckState
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_CheckBox_C_SetCheckState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_CheckBox_C_SetCheckState;
-
-// Function WBP_CheckBox.WBP_CheckBox_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_CheckBox_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_CheckBox_C_PreConstruct;
-
 // Function WBP_CheckBox.WBP_CheckBox_C.ExecuteUbergraph_WBP_CheckBox
 // 0x0028 (0x0028 - 0x0000)
 struct WBP_CheckBox_C_ExecuteUbergraph_WBP_CheckBox final
@@ -48,6 +30,24 @@ public:
 	class UTexture2D*                             K2Node_Select_Default;                             // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_CheckBox_C_ExecuteUbergraph_WBP_CheckBox;
+
+// Function WBP_CheckBox.WBP_CheckBox_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_CheckBox_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_CheckBox_C_PreConstruct;
+
+// Function WBP_CheckBox.WBP_CheckBox_C.SetCheckState
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_CheckBox_C_SetCheckState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_CheckBox_C_SetCheckState;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

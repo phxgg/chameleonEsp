@@ -26,8 +26,8 @@ public:
 	struct FBlackboardKeySelector                 Key;                                               // 0x00A0(0x0028)(Edit, BlueprintVisible)
 
 public:
-	void ReceiveTickAI(class AAIController* OwnerController_ReceiveTickAI, class APawn* ControlledPawn_ReceiveTickAI, float DeltaSeconds_ReceiveTickAI);
 	void ExecuteUbergraph_BTS_NearAttack(int32 EntryPoint);
+	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()

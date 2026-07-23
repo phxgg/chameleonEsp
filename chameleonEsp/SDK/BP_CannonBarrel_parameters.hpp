@@ -17,16 +17,18 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_CannonBarrel.BP_CannonBarrel_C.IsChangeImage
-// 0x0018 (0x0018 - 0x0000)
-struct BP_CannonBarrel_C_IsChangeImage final
+// Function BP_CannonBarrel.BP_CannonBarrel_C.BndEvt__BP_CannonBullet_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature
+// 0x0130 (0x0130 - 0x0000)
+struct BP_CannonBarrel_C_BndEvt__BP_CannonBullet_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature final
 {
 public:
-	bool                                          IsInteract_IsChangeImage;                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   OverrideText_IsChangeImage;                        // 0x0008(0x0010)(Parm, OutParm)
+	class UPrimitiveComponent*                    HitComponent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                NormalImpulse;                                     // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             Hit;                                               // 0x0030(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_BP_CannonBarrel_C_IsChangeImage;
+DUMPER7_ASSERTS_BP_CannonBarrel_C_BndEvt__BP_CannonBullet_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature;
 
 // Function BP_CannonBarrel.BP_CannonBarrel_C.ExecuteUbergraph_BP_CannonBarrel
 // 0x03B0 (0x03B0 - 0x0000)
@@ -83,18 +85,16 @@ public:
 };
 DUMPER7_ASSERTS_BP_CannonBarrel_C_ExecuteUbergraph_BP_CannonBarrel;
 
-// Function BP_CannonBarrel.BP_CannonBarrel_C.BndEvt__BP_CannonBullet_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature
-// 0x0130 (0x0130 - 0x0000)
-struct BP_CannonBarrel_C_BndEvt__BP_CannonBullet_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature final
+// Function BP_CannonBarrel.BP_CannonBarrel_C.IsChangeImage
+// 0x0018 (0x0018 - 0x0000)
+struct BP_CannonBarrel_C_IsChangeImage final
 {
 public:
-	class UPrimitiveComponent*                    HitComponent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                NormalImpulse;                                     // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             Hit;                                               // 0x0030(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          IsInteract;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   OverrideText;                                      // 0x0008(0x0010)(Parm, OutParm)
 };
-DUMPER7_ASSERTS_BP_CannonBarrel_C_BndEvt__BP_CannonBullet_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature;
+DUMPER7_ASSERTS_BP_CannonBarrel_C_IsChangeImage;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

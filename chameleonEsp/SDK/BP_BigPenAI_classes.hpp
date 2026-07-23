@@ -32,24 +32,24 @@ public:
 	struct FTimerHandle                           Timer;                                             // 0x0680(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SoptAI();
-	void sakebi();
-	void ReceiveBeginPlay();
-	void OnNotifyEnd_E4FD70D84BF2E0A98592B193EDD6DC19(class FName NotifyName);
-	void OnNotifyEnd_2DAE96654F8D533E451CEB8E88B79A47(class FName NotifyName);
-	void OnNotifyBegin_E4FD70D84BF2E0A98592B193EDD6DC19(class FName NotifyName);
-	void OnNotifyBegin_2DAE96654F8D533E451CEB8E88B79A47(class FName NotifyName);
-	void OnInterrupted_E4FD70D84BF2E0A98592B193EDD6DC19(class FName NotifyName);
-	void OnInterrupted_2DAE96654F8D533E451CEB8E88B79A47(class FName NotifyName);
-	void OnCompleted_E4FD70D84BF2E0A98592B193EDD6DC19(class FName NotifyName);
-	void OnCompleted_2DAE96654F8D533E451CEB8E88B79A47(class FName NotifyName);
-	void OnBlendOut_E4FD70D84BF2E0A98592B193EDD6DC19(class FName NotifyName);
-	void OnBlendOut_2DAE96654F8D533E451CEB8E88B79A47(class FName NotifyName);
-	void ExecuteUbergraph_BP_BigPenAI(int32 EntryPoint);
-	void DistanceCheck();
-	void BndEvt__BP_BigPenAI_DestroyZone_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void BndEvt__BP_BigPenAI_AttackPenguinZone_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BigPenStart();
+	void BndEvt__BP_BigPenAI_AttackPenguinZone_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__BP_BigPenAI_DestroyZone_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void DistanceCheck();
+	void ExecuteUbergraph_BP_BigPenAI(int32 EntryPoint);
+	void OnBlendOut_2DAE96654F8D533E451CEB8E88B79A47(class FName NotifyName);
+	void OnBlendOut_E4FD70D84BF2E0A98592B193EDD6DC19(class FName NotifyName);
+	void OnCompleted_2DAE96654F8D533E451CEB8E88B79A47(class FName NotifyName);
+	void OnCompleted_E4FD70D84BF2E0A98592B193EDD6DC19(class FName NotifyName);
+	void OnInterrupted_2DAE96654F8D533E451CEB8E88B79A47(class FName NotifyName);
+	void OnInterrupted_E4FD70D84BF2E0A98592B193EDD6DC19(class FName NotifyName);
+	void OnNotifyBegin_2DAE96654F8D533E451CEB8E88B79A47(class FName NotifyName);
+	void OnNotifyBegin_E4FD70D84BF2E0A98592B193EDD6DC19(class FName NotifyName);
+	void OnNotifyEnd_2DAE96654F8D533E451CEB8E88B79A47(class FName NotifyName);
+	void OnNotifyEnd_E4FD70D84BF2E0A98592B193EDD6DC19(class FName NotifyName);
+	void ReceiveBeginPlay();
+	void sakebi();
+	void SoptAI();
 
 public:
 	static class UClass* StaticClass()

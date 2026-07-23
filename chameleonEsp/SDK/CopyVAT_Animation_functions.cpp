@@ -16,31 +16,25 @@
 
 SDK_NAMESPACE_START
 
-// Function CopyVAT_Animation.CopyVAT_Animation_C.VATAnimationTimeLine__UpdateFunc
-// (BlueprintEvent)
+// Function CopyVAT_Animation.CopyVAT_Animation_C.AnimationStart
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UStaticMeshComponent*             ToComponent                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const struct FST_VAT_Datas&             VAT_Datas                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ACopyVAT_Animation_C::VATAnimationTimeLine__UpdateFunc()
+void ACopyVAT_Animation_C::AnimationStart(class UStaticMeshComponent* ToComponent, const struct FST_VAT_Datas& VAT_Datas)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CopyVAT_Animation_C", "VATAnimationTimeLine__UpdateFunc");
+		Func = Class->GetFunction("CopyVAT_Animation_C", "AnimationStart");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::CopyVAT_Animation_C_AnimationStart Parms{};
 
+	Parms.ToComponent = ToComponent;
+	Parms.VAT_Datas = std::move(VAT_Datas);
 
-// Function CopyVAT_Animation.CopyVAT_Animation_C.VATAnimationTimeLine__FinishedFunc
-// (BlueprintEvent)
-
-void ACopyVAT_Animation_C::VATAnimationTimeLine__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CopyVAT_Animation_C", "VATAnimationTimeLine__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -64,25 +58,31 @@ void ACopyVAT_Animation_C::ExecuteUbergraph_CopyVAT_Animation(int32 EntryPoint)
 }
 
 
-// Function CopyVAT_Animation.CopyVAT_Animation_C.AnimationStart
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UStaticMeshComponent*             ToComponent                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// const struct FST_VAT_Datas&             VAT_Datas                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function CopyVAT_Animation.CopyVAT_Animation_C.VATAnimationTimeLine__FinishedFunc
+// (BlueprintEvent)
 
-void ACopyVAT_Animation_C::AnimationStart(class UStaticMeshComponent* ToComponent, const struct FST_VAT_Datas& VAT_Datas)
+void ACopyVAT_Animation_C::VATAnimationTimeLine__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CopyVAT_Animation_C", "AnimationStart");
+		Func = Class->GetFunction("CopyVAT_Animation_C", "VATAnimationTimeLine__FinishedFunc");
 
-	Params::CopyVAT_Animation_C_AnimationStart Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.ToComponent = ToComponent;
-	Parms.VAT_Datas = std::move(VAT_Datas);
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function CopyVAT_Animation.CopyVAT_Animation_C.VATAnimationTimeLine__UpdateFunc
+// (BlueprintEvent)
+
+void ACopyVAT_Animation_C::VATAnimationTimeLine__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CopyVAT_Animation_C", "VATAnimationTimeLine__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

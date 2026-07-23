@@ -27,10 +27,10 @@ public:
 	double                                        RotationSpeed;                                     // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetFocus(class AActor* TargetActor);
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BPC_CustomFocus(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void SetFocus(class AActor* TargetActor_0);
 
 public:
 	static class UClass* StaticClass()

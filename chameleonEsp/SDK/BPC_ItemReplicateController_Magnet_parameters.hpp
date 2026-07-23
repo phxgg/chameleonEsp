@@ -18,51 +18,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.UseItem(Server)
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_ItemReplicateController_Magnet_C_UseItem_Server_ final
-{
-public:
-	bool                                          State_UseItem_Server_;                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_Magnet_C_UseItem_Server_;
-
-// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.UseItem(Replicate)
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_ItemReplicateController_Magnet_C_UseItem_Replicate_ final
-{
-public:
-	bool                                          State_UseItem_Replicate_;                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_Magnet_C_UseItem_Replicate_;
-
-// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.UseItem(Local)
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_ItemReplicateController_Magnet_C_UseItem_Local_ final
-{
-public:
-	bool                                          State_UseItem_Local_;                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_Magnet_C_UseItem_Local_;
-
-// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.SetForceTarget
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_ItemReplicateController_Magnet_C_SetForceTarget final
-{
-public:
-	class UPrimitiveComponent*                    AddForceTarget;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_Magnet_C_SetForceTarget;
-
-// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_ItemReplicateController_Magnet_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_Magnet_C_ReceiveTick;
-
 // Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.ExecuteUbergraph_BPC_ItemReplicateController_Magnet
 // 0x06E0 (0x06E0 - 0x0000)
 struct BPC_ItemReplicateController_Magnet_C_ExecuteUbergraph_BPC_ItemReplicateController_Magnet final
@@ -175,6 +130,51 @@ public:
 	float                                         CallFunc_SetVariableFloat_InValue_ImplicitCast;    // 0x06D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_ItemReplicateController_Magnet_C_ExecuteUbergraph_BPC_ItemReplicateController_Magnet;
+
+// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_ItemReplicateController_Magnet_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_Magnet_C_ReceiveTick;
+
+// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.SetForceTarget
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_ItemReplicateController_Magnet_C_SetForceTarget final
+{
+public:
+	class UPrimitiveComponent*                    AddForceTarget_0;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_Magnet_C_SetForceTarget;
+
+// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.UseItem(Local)
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_ItemReplicateController_Magnet_C_UseItem_Local_ final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_Magnet_C_UseItem_Local_;
+
+// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.UseItem(Replicate)
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_ItemReplicateController_Magnet_C_UseItem_Replicate_ final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_Magnet_C_UseItem_Replicate_;
+
+// Function BPC_ItemReplicateController_Magnet.BPC_ItemReplicateController_Magnet_C.UseItem(Server)
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_ItemReplicateController_Magnet_C_UseItem_Server_ final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_Magnet_C_UseItem_Server_;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

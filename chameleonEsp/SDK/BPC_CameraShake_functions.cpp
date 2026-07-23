@@ -16,23 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_CameraShake.BPC_CameraShake_C.ShakeStart
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_CameraShake.BPC_CameraShake_C.ExecuteUbergraph_BPC_CameraShake
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// double                                  Duration                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Scale                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_CameraShake_C::ShakeStart(double Duration, double Scale)
+void UBPC_CameraShake_C::ExecuteUbergraph_BPC_CameraShake(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CameraShake_C", "ShakeStart");
+		Func = Class->GetFunction("BPC_CameraShake_C", "ExecuteUbergraph_BPC_CameraShake");
 
-	Params::BPC_CameraShake_C_ShakeStart Parms{};
+	Params::BPC_CameraShake_C_ExecuteUbergraph_BPC_CameraShake Parms{};
 
-	Parms.Duration = Duration;
-	Parms.Scale = Scale;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -52,21 +50,23 @@ void UBPC_CameraShake_C::ShakeEnd()
 }
 
 
-// Function BPC_CameraShake.BPC_CameraShake_C.ExecuteUbergraph_BPC_CameraShake
-// (Final, UbergraphFunction, HasDefaults)
+// Function BPC_CameraShake.BPC_CameraShake_C.ShakeStart
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Duration                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Scale                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_CameraShake_C::ExecuteUbergraph_BPC_CameraShake(int32 EntryPoint)
+void UBPC_CameraShake_C::ShakeStart(double Duration, double Scale)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CameraShake_C", "ExecuteUbergraph_BPC_CameraShake");
+		Func = Class->GetFunction("BPC_CameraShake_C", "ShakeStart");
 
-	Params::BPC_CameraShake_C_ExecuteUbergraph_BPC_CameraShake Parms{};
+	Params::BPC_CameraShake_C_ShakeStart Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Duration = Duration;
+	Parms.Scale = Scale;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

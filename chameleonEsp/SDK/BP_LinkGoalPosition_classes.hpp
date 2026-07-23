@@ -33,7 +33,7 @@ public:
 	class UBoxComponent*                          Box;                                               // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   LinkFlagOverlapZone;                               // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   ring;                                              // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Ring;                                              // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UGeometryCacheComponent*                LiNK_flag;                                         // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   Pole;                                              // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
@@ -58,30 +58,30 @@ public:
 	TMulticastInlineDelegate<void()>              LastGoal;                                          // 0x0508(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UserConstructionScript();
-	void ToBlueFlag();
-	void SetUsedPoint(bool IsUsed);
-	void RespawnCall(class ABP_MiniPenguin_C* Target);
-	void ResetGoalEevent();
-	void RegisterLinkPoint(const struct FGuid& ID, class ABP_LinkPoint_C* LinkPoint);
-	void ReceiveBeginPlay();
-	void MakePole(class UInstancedStaticMeshComponent* InstancedStaticMeshComp);
-	void LINK_FragReActivate(bool IsLastLink);
-	void LastTargetActivate(bool ActivateState);
-	void LastLink();
-	void IsChangeImage(bool* IsInteract, class FText* OverrideText);
-	void InteractSignal();
-	void GoalEvent();
-	void GetDuplicateValues(TArray<struct FGuid>* DuplicateValues);
-	void FragVisualUpdate(bool IsUsed);
-	void ExecuteUbergraph_BP_LinkGoalPosition(int32 EntryPoint);
-	bool CanInteract();
-	void BPI_InteractStart_Server_(class ABP_FirstPersonCharacter_Main_C* First_Person);
-	void BPI_InteractStart_Local_(class ABP_FirstPersonCharacter_Main_C* First_Person);
-	void BPI_InteractStart(class ABP_FirstPersonCharacter_Main_C* First_Person);
-	void BPI_InteractEnd();
-	void BndEvt__BP_LinkGoalPosition_LinkFlagOverlapZone_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 	void BndEvt__BP_LinkGoalPosition_LinkFlagOverlapZone_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__BP_LinkGoalPosition_LinkFlagOverlapZone_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	void BPI_InteractEnd();
+	void BPI_InteractStart(class ABP_FirstPersonCharacter_Main_C* First_Person);
+	void BPI_InteractStart_Local_(class ABP_FirstPersonCharacter_Main_C* First_Person);
+	void BPI_InteractStart_Server_(class ABP_FirstPersonCharacter_Main_C* First_Person);
+	bool CanInteract();
+	void ExecuteUbergraph_BP_LinkGoalPosition(int32 EntryPoint);
+	void FragVisualUpdate(bool IsUsed);
+	void GetDuplicateValues(TArray<struct FGuid>* DuplicateValues);
+	void GoalEvent();
+	void InteractSignal();
+	void IsChangeImage(bool* IsInteract, class FText* OverrideText);
+	void LastLink();
+	void LastTargetActivate(bool ActivateState);
+	void LINK_FragReActivate(bool IsLastLink);
+	void MakePole(class UInstancedStaticMeshComponent* InstancedStaticMeshComp);
+	void ReceiveBeginPlay();
+	void RegisterLinkPoint(const struct FGuid& ID, class ABP_LinkPoint_C* LinkPoint_0);
+	void ResetGoalEevent();
+	void RespawnCall(class ABP_MiniPenguin_C* Target);
+	void SetUsedPoint(bool IsUsed);
+	void ToBlueFlag();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

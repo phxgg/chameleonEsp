@@ -16,63 +16,70 @@
 
 SDK_NAMESPACE_START
 
-// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.ExecuteUbergraph_ABP_LINK_Penguin_V2
-// (Final, UbergraphFunction, HasDefaults)
+// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.AnimGraph
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
-void UABP_LINK_Penguin_V2_C::ExecuteUbergraph_ABP_LINK_Penguin_V2(int32 EntryPoint)
+void UABP_LINK_Penguin_V2_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "ExecuteUbergraph_ABP_LINK_Penguin_V2");
+		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "AnimGraph");
 
-	Params::ABP_LINK_Penguin_V2_C_ExecuteUbergraph_ABP_LINK_Penguin_V2 Parms{};
+	Params::ABP_LINK_Penguin_V2_C_AnimGraph Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
+}
+
+
+// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.BlueprintInitializeAnimation
+// (Event, Public, BlueprintEvent)
+
+void UABP_LINK_Penguin_V2_C::BlueprintInitializeAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "BlueprintInitializeAnimation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.BlueprintUpdateAnimation
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTimeX                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UABP_LINK_Penguin_V2_C::BlueprintUpdateAnimation(float DeltaTimeX)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "BlueprintUpdateAnimation");
+
+	Params::ABP_LINK_Penguin_V2_C_BlueprintUpdateAnimation Parms{};
+
+	Parms.DeltaTimeX = DeltaTimeX;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_F4E985C14164C1C0D1D5BE9BF725BAAC
+// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_ControlRig_BCFB15F94A1A43167845238FB0435337
 // (BlueprintEvent)
 
-void UABP_LINK_Penguin_V2_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_F4E985C14164C1C0D1D5BE9BF725BAAC()
+void UABP_LINK_Penguin_V2_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_ControlRig_BCFB15F94A1A43167845238FB0435337()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_F4E985C14164C1C0D1D5BE9BF725BAAC");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_D09CF7F745E1359D3516DFA5AAEC05A8
-// (BlueprintEvent)
-
-void UABP_LINK_Penguin_V2_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_D09CF7F745E1359D3516DFA5AAEC05A8()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_D09CF7F745E1359D3516DFA5AAEC05A8");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_LookAt_EEAB3B4443037712C54AA598729B082D
-// (BlueprintEvent)
-
-void UABP_LINK_Penguin_V2_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_LookAt_EEAB3B4443037712C54AA598729B082D()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_LookAt_EEAB3B4443037712C54AA598729B082D");
+		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_ControlRig_BCFB15F94A1A43167845238FB0435337");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -92,72 +99,65 @@ void UABP_LINK_Penguin_V2_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LIN
 }
 
 
-// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_ControlRig_BCFB15F94A1A43167845238FB0435337
+// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_LookAt_EEAB3B4443037712C54AA598729B082D
 // (BlueprintEvent)
 
-void UABP_LINK_Penguin_V2_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_ControlRig_BCFB15F94A1A43167845238FB0435337()
+void UABP_LINK_Penguin_V2_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_LookAt_EEAB3B4443037712C54AA598729B082D()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_ControlRig_BCFB15F94A1A43167845238FB0435337");
+		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_LookAt_EEAB3B4443037712C54AA598729B082D");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.BlueprintUpdateAnimation
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaTimeX_BlueprintUpdateAnimation                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_D09CF7F745E1359D3516DFA5AAEC05A8
+// (BlueprintEvent)
 
-void UABP_LINK_Penguin_V2_C::BlueprintUpdateAnimation(float DeltaTimeX_BlueprintUpdateAnimation)
+void UABP_LINK_Penguin_V2_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_D09CF7F745E1359D3516DFA5AAEC05A8()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "BlueprintUpdateAnimation");
-
-	Params::ABP_LINK_Penguin_V2_C_BlueprintUpdateAnimation Parms{};
-
-	Parms.DeltaTimeX_BlueprintUpdateAnimation = DeltaTimeX_BlueprintUpdateAnimation;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.BlueprintInitializeAnimation
-// (Event, Public, BlueprintEvent)
-
-void UABP_LINK_Penguin_V2_C::BlueprintInitializeAnimation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "BlueprintInitializeAnimation");
+		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_D09CF7F745E1359D3516DFA5AAEC05A8");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.AnimGraph
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FPoseLink*                       AnimGraph                                              (Parm, OutParm, NoDestructor)
+// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_F4E985C14164C1C0D1D5BE9BF725BAAC
+// (BlueprintEvent)
 
-void UABP_LINK_Penguin_V2_C::AnimGraph(struct FPoseLink* AnimGraph)
+void UABP_LINK_Penguin_V2_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_F4E985C14164C1C0D1D5BE9BF725BAAC()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "AnimGraph");
+		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LINK_Penguin_V2_AnimGraphNode_TransitionResult_F4E985C14164C1C0D1D5BE9BF725BAAC");
 
-	Params::ABP_LINK_Penguin_V2_C_AnimGraph Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABP_LINK_Penguin_V2.ABP_LINK_Penguin_V2_C.ExecuteUbergraph_ABP_LINK_Penguin_V2
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UABP_LINK_Penguin_V2_C::ExecuteUbergraph_ABP_LINK_Penguin_V2(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_LINK_Penguin_V2_C", "ExecuteUbergraph_ABP_LINK_Penguin_V2");
+
+	Params::ABP_LINK_Penguin_V2_C_ExecuteUbergraph_ABP_LINK_Penguin_V2 Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (AnimGraph != nullptr)
-		*AnimGraph = std::move(Parms.AnimGraph);
 }
 
 

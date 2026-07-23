@@ -23,7 +23,7 @@ public:
 	bool                                          IsActivate;                                        // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	bool Received_NotifyTick(class USkeletalMeshComponent* MeshComp_Received_NotifyTick, class UAnimSequenceBase* Animation_Received_NotifyTick, float FrameDeltaTime_Received_NotifyTick, const struct FAnimNotifyEventReference& EventReference_Received_NotifyTick) const;
+	bool Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime, const struct FAnimNotifyEventReference& EventReference) const;
 
 public:
 	static class UClass* StaticClass()

@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function LBPC_SpawnLuggage.LBPC_SpawnLuggage_C.SpawnItem
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGuid&                     UniqueID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULBPC_SpawnLuggage_C::SpawnItem(const struct FGuid& UniqueID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_SpawnLuggage_C", "SpawnItem");
-
-	Params::LBPC_SpawnLuggage_C_SpawnItem Parms{};
-
-	Parms.UniqueID = std::move(UniqueID);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function LBPC_SpawnLuggage.LBPC_SpawnLuggage_C.ExecuteUbergraph_LBPC_SpawnLuggage
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -51,6 +31,26 @@ void ULBPC_SpawnLuggage_C::ExecuteUbergraph_LBPC_SpawnLuggage(int32 EntryPoint)
 	Params::LBPC_SpawnLuggage_C_ExecuteUbergraph_LBPC_SpawnLuggage Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LBPC_SpawnLuggage.LBPC_SpawnLuggage_C.SpawnItem
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGuid&                     UniqueID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULBPC_SpawnLuggage_C::SpawnItem(const struct FGuid& UniqueID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LBPC_SpawnLuggage_C", "SpawnItem");
+
+	Params::LBPC_SpawnLuggage_C_SpawnItem Parms{};
+
+	Parms.UniqueID = std::move(UniqueID);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

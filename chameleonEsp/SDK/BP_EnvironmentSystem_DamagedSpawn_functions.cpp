@@ -16,68 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_EnvironmentSystem_DamagedSpawn.BP_EnvironmentSystem_DamagedSpawn_C.ExecuteUbergraph_BP_EnvironmentSystem_DamagedSpawn
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_EnvironmentSystem_DamagedSpawn_C::ExecuteUbergraph_BP_EnvironmentSystem_DamagedSpawn(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_DamagedSpawn_C", "ExecuteUbergraph_BP_EnvironmentSystem_DamagedSpawn");
-
-	Params::BP_EnvironmentSystem_DamagedSpawn_C_ExecuteUbergraph_BP_EnvironmentSystem_DamagedSpawn Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EnvironmentSystem_DamagedSpawn.BP_EnvironmentSystem_DamagedSpawn_C.ReplicateEvent
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_EnvironmentSystem_DamagedSpawn_C::ReplicateEvent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_DamagedSpawn_C", "ReplicateEvent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EnvironmentSystem_DamagedSpawn.BP_EnvironmentSystem_DamagedSpawn_C.SpawnMaterial
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_EnvironmentSystem_DamagedSpawn_C::SpawnMaterial()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_DamagedSpawn_C", "SpawnMaterial");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EnvironmentSystem_DamagedSpawn.BP_EnvironmentSystem_DamagedSpawn_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_EnvironmentSystem_DamagedSpawn_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_DamagedSpawn_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_EnvironmentSystem_DamagedSpawn.BP_EnvironmentSystem_DamagedSpawn_C.Damage
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -111,6 +49,68 @@ void ABP_EnvironmentSystem_DamagedSpawn_C::Damage(double DamageValue, int32 Team
 
 	if (Finish != nullptr)
 		*Finish = std::move(Parms.Finish);
+}
+
+
+// Function BP_EnvironmentSystem_DamagedSpawn.BP_EnvironmentSystem_DamagedSpawn_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_EnvironmentSystem_DamagedSpawn_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnvironmentSystem_DamagedSpawn_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EnvironmentSystem_DamagedSpawn.BP_EnvironmentSystem_DamagedSpawn_C.SpawnMaterial
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_EnvironmentSystem_DamagedSpawn_C::SpawnMaterial()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnvironmentSystem_DamagedSpawn_C", "SpawnMaterial");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EnvironmentSystem_DamagedSpawn.BP_EnvironmentSystem_DamagedSpawn_C.ReplicateEvent
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_EnvironmentSystem_DamagedSpawn_C::ReplicateEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnvironmentSystem_DamagedSpawn_C", "ReplicateEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EnvironmentSystem_DamagedSpawn.BP_EnvironmentSystem_DamagedSpawn_C.ExecuteUbergraph_BP_EnvironmentSystem_DamagedSpawn
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EnvironmentSystem_DamagedSpawn_C::ExecuteUbergraph_BP_EnvironmentSystem_DamagedSpawn(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnvironmentSystem_DamagedSpawn_C", "ExecuteUbergraph_BP_EnvironmentSystem_DamagedSpawn");
+
+	Params::BP_EnvironmentSystem_DamagedSpawn_C_ExecuteUbergraph_BP_EnvironmentSystem_DamagedSpawn Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

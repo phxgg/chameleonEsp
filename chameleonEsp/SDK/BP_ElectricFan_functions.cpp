@@ -16,81 +16,75 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_ElectricFan.BP_ElectricFan_C.SetWindTrailSize
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_ElectricFan.BP_ElectricFan_C.BehindCheck
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  Distance                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   B                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   IsBehind                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_ElectricFan_C::SetWindTrailSize(double Distance)
+void ABP_ElectricFan_C::BehindCheck(const struct FVector& B, bool* IsBehind)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ElectricFan_C", "SetWindTrailSize");
+		Func = Class->GetFunction("BP_ElectricFan_C", "BehindCheck");
 
-	Params::BP_ElectricFan_C_SetWindTrailSize Parms{};
+	Params::BP_ElectricFan_C_BehindCheck Parms{};
 
-	Parms.Distance = Distance;
+	Parms.B = std::move(B);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsBehind != nullptr)
+		*IsBehind = Parms.IsBehind;
 }
 
 
-// Function BP_ElectricFan.BP_ElectricFan_C.SetTimeStopState
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State_SetTimeStopState                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_ElectricFan.BP_ElectricFan_C.Check
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_ElectricFan_C::SetTimeStopState(bool State_SetTimeStopState)
+void ABP_ElectricFan_C::Check()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ElectricFan_C", "SetTimeStopState");
-
-	Params::BP_ElectricFan_C_SetTimeStopState Parms{};
-
-	Parms.State_SetTimeStopState = State_SetTimeStopState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ElectricFan.BP_ElectricFan_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_ElectricFan_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ElectricFan_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_ElectricFan_C", "Check");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_ElectricFan.BP_ElectricFan_C.MaxSpeedControl
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double*                                 MultiplyPower                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_ElectricFan.BP_ElectricFan_C.DestroyVAT
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_ElectricFan_C::MaxSpeedControl(class AActor* TargetActor, double* MultiplyPower)
+void ABP_ElectricFan_C::DestroyVAT()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ElectricFan_C", "MaxSpeedControl");
+		Func = Class->GetFunction("BP_ElectricFan_C", "DestroyVAT");
 
-	Params::BP_ElectricFan_C_MaxSpeedControl Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.TargetActor = TargetActor;
+
+// Function BP_ElectricFan.BP_ElectricFan_C.ExecuteUbergraph_BP_ElectricFan
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ElectricFan_C::ExecuteUbergraph_BP_ElectricFan(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ElectricFan_C", "ExecuteUbergraph_BP_ElectricFan");
+
+	Params::BP_ElectricFan_C_ExecuteUbergraph_BP_ElectricFan Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (MultiplyPower != nullptr)
-		*MultiplyPower = Parms.MultiplyPower;
 }
 
 
@@ -119,75 +113,81 @@ double ABP_ElectricFan_C::GetAttenuation(const struct FVector& v1, double power)
 }
 
 
-// Function BP_ElectricFan.BP_ElectricFan_C.ExecuteUbergraph_BP_ElectricFan
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ElectricFan_C::ExecuteUbergraph_BP_ElectricFan(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ElectricFan_C", "ExecuteUbergraph_BP_ElectricFan");
-
-	Params::BP_ElectricFan_C_ExecuteUbergraph_BP_ElectricFan Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ElectricFan.BP_ElectricFan_C.DestroyVAT
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_ElectricFan_C::DestroyVAT()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ElectricFan_C", "DestroyVAT");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ElectricFan.BP_ElectricFan_C.Check
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_ElectricFan_C::Check()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ElectricFan_C", "Check");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ElectricFan.BP_ElectricFan_C.BehindCheck
+// Function BP_ElectricFan.BP_ElectricFan_C.MaxSpeedControl
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FVector&                   B                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   IsBehind                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double*                                 MultiplyPower                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_ElectricFan_C::BehindCheck(const struct FVector& B, bool* IsBehind)
+void ABP_ElectricFan_C::MaxSpeedControl(class AActor* TargetActor, double* MultiplyPower)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ElectricFan_C", "BehindCheck");
+		Func = Class->GetFunction("BP_ElectricFan_C", "MaxSpeedControl");
 
-	Params::BP_ElectricFan_C_BehindCheck Parms{};
+	Params::BP_ElectricFan_C_MaxSpeedControl Parms{};
 
-	Parms.B = std::move(B);
+	Parms.TargetActor = TargetActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (IsBehind != nullptr)
-		*IsBehind = Parms.IsBehind;
+	if (MultiplyPower != nullptr)
+		*MultiplyPower = Parms.MultiplyPower;
+}
+
+
+// Function BP_ElectricFan.BP_ElectricFan_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_ElectricFan_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ElectricFan_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ElectricFan.BP_ElectricFan_C.SetTimeStopState
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ElectricFan_C::SetTimeStopState(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ElectricFan_C", "SetTimeStopState");
+
+	Params::BP_ElectricFan_C_SetTimeStopState Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ElectricFan.BP_ElectricFan_C.SetWindTrailSize
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Distance                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ElectricFan_C::SetWindTrailSize(double Distance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ElectricFan_C", "SetWindTrailSize");
+
+	Params::BP_ElectricFan_C_SetWindTrailSize Parms{};
+
+	Parms.Distance = Distance;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

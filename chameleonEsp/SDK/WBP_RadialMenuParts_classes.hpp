@@ -36,11 +36,11 @@ public:
 	struct FLinearColor                           SelectColor;                                       // 0x0394(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void SetSelectState(bool State);
-	void SetData(const struct FST_ItemCoreDatas& Data);
-	void SetCentorText(const class FText& InText, const struct FLinearColor& Specified_Color);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void ExecuteUbergraph_WBP_RadialMenuParts(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SetCentorText(const class FText& InText, const struct FLinearColor& Specified_Color);
+	void SetData(const struct FST_ItemCoreDatas& Data);
+	void SetSelectState(bool State);
 
 public:
 	static class UClass* StaticClass()

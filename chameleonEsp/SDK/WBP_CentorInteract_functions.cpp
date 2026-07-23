@@ -16,29 +16,39 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_CentorInteract.WBP_CentorInteract_C.SetTextAndImage
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_CentorInteract.WBP_CentorInteract_C.CentorTextState
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TSoftObjectPtr<class UTexture2D>        SoftTexture                                            (BlueprintVisible, BlueprintReadOnly, Parm, UObjectWrapper, HasGetValueTypeHash)
-// const class FString&                    InputText                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector2D&                 OverrideImageSize                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    InputDevice                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWBP_CentorInteract_C::SetTextAndImage(TSoftObjectPtr<class UTexture2D> SoftTexture, const class FString& InputText, bool State, const struct FVector2D& OverrideImageSize)
+void UWBP_CentorInteract_C::CentorTextState(bool State, const class FString& InputDevice)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CentorInteract_C", "SetTextAndImage");
+		Func = Class->GetFunction("WBP_CentorInteract_C", "CentorTextState");
 
-	Params::WBP_CentorInteract_C_SetTextAndImage Parms{};
+	Params::WBP_CentorInteract_C_CentorTextState Parms{};
 
-	Parms.SoftTexture = SoftTexture;
-	Parms.InputText = std::move(InputText);
 	Parms.State = State;
-	Parms.OverrideImageSize = std::move(OverrideImageSize);
+	Parms.InputDevice = std::move(InputDevice);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CentorInteract.WBP_CentorInteract_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_CentorInteract_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CentorInteract_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -62,37 +72,27 @@ void UWBP_CentorInteract_C::ExecuteUbergraph_WBP_CentorInteract(int32 EntryPoint
 }
 
 
-// Function WBP_CentorInteract.WBP_CentorInteract_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_CentorInteract_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CentorInteract_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_CentorInteract.WBP_CentorInteract_C.CentorTextState
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WBP_CentorInteract.WBP_CentorInteract_C.SetTextAndImage
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
+// TSoftObjectPtr<class UTexture2D>        SoftTexture                                            (BlueprintVisible, BlueprintReadOnly, Parm, UObjectWrapper, HasGetValueTypeHash)
+// const class FString&                    InputText                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FString&                    InputDevice                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FVector2D&                 OverrideImageSize                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_CentorInteract_C::CentorTextState(bool State, const class FString& InputDevice)
+void UWBP_CentorInteract_C::SetTextAndImage(TSoftObjectPtr<class UTexture2D> SoftTexture, const class FString& InputText, bool State, const struct FVector2D& OverrideImageSize)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CentorInteract_C", "CentorTextState");
+		Func = Class->GetFunction("WBP_CentorInteract_C", "SetTextAndImage");
 
-	Params::WBP_CentorInteract_C_CentorTextState Parms{};
+	Params::WBP_CentorInteract_C_SetTextAndImage Parms{};
 
+	Parms.SoftTexture = SoftTexture;
+	Parms.InputText = std::move(InputText);
 	Parms.State = State;
-	Parms.InputDevice = std::move(InputDevice);
+	Parms.OverrideImageSize = std::move(OverrideImageSize);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

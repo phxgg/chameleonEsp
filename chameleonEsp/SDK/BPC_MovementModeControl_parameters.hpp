@@ -16,17 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_MovementModeControl.BPC_MovementModeControl_C.ModeChange
-// 0x0010 (0x0010 - 0x0000)
-struct BPC_MovementModeControl_C_ModeChange final
-{
-public:
-	EMovementMode                                 ChangeMode;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Timer;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_MovementModeControl_C_ModeChange;
-
 // Function BPC_MovementModeControl.BPC_MovementModeControl_C.ExecuteUbergraph_BPC_MovementModeControl
 // 0x0040 (0x0040 - 0x0000)
 struct BPC_MovementModeControl_C_ExecuteUbergraph_BPC_MovementModeControl final
@@ -43,6 +32,17 @@ public:
 	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_MovementModeControl_C_ExecuteUbergraph_BPC_MovementModeControl;
+
+// Function BPC_MovementModeControl.BPC_MovementModeControl_C.ModeChange
+// 0x0010 (0x0010 - 0x0000)
+struct BPC_MovementModeControl_C_ModeChange final
+{
+public:
+	EMovementMode                                 ChangeMode;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Timer;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_MovementModeControl_C_ModeChange;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

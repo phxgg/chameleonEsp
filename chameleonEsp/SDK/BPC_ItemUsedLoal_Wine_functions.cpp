@@ -16,41 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_ItemUsedLoal_Wine.BPC_ItemUsedLoal_Wine_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// Function BPC_ItemUsedLoal_Wine.BPC_ItemUsedLoal_Wine_C.ExecuteUbergraph_BPC_ItemUsedLoal_Wine
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_ItemUsedLoal_Wine_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
+void UBPC_ItemUsedLoal_Wine_C::ExecuteUbergraph_BPC_ItemUsedLoal_Wine(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemUsedLoal_Wine_C", "ReceiveTick");
+		Func = Class->GetFunction("BPC_ItemUsedLoal_Wine_C", "ExecuteUbergraph_BPC_ItemUsedLoal_Wine");
 
-	Params::BPC_ItemUsedLoal_Wine_C_ReceiveTick Parms{};
+	Params::BPC_ItemUsedLoal_Wine_C_ExecuteUbergraph_BPC_ItemUsedLoal_Wine Parms{};
 
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ItemUsedLoal_Wine.BPC_ItemUsedLoal_Wine_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// EEndPlayReason                          EndPlayReason_ReceiveEndPlay                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ItemUsedLoal_Wine_C::ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemUsedLoal_Wine_C", "ReceiveEndPlay");
-
-	Params::BPC_ItemUsedLoal_Wine_C_ReceiveEndPlay Parms{};
-
-	Parms.EndPlayReason_ReceiveEndPlay = EndPlayReason_ReceiveEndPlay;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -70,21 +50,41 @@ void UBPC_ItemUsedLoal_Wine_C::ReceiveBeginPlay()
 }
 
 
-// Function BPC_ItemUsedLoal_Wine.BPC_ItemUsedLoal_Wine_C.ExecuteUbergraph_BPC_ItemUsedLoal_Wine
-// (Final, UbergraphFunction, HasDefaults)
+// Function BPC_ItemUsedLoal_Wine.BPC_ItemUsedLoal_Wine_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_ItemUsedLoal_Wine_C::ExecuteUbergraph_BPC_ItemUsedLoal_Wine(int32 EntryPoint)
+void UBPC_ItemUsedLoal_Wine_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemUsedLoal_Wine_C", "ExecuteUbergraph_BPC_ItemUsedLoal_Wine");
+		Func = Class->GetFunction("BPC_ItemUsedLoal_Wine_C", "ReceiveEndPlay");
 
-	Params::BPC_ItemUsedLoal_Wine_C_ExecuteUbergraph_BPC_ItemUsedLoal_Wine Parms{};
+	Params::BPC_ItemUsedLoal_Wine_C_ReceiveEndPlay Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_ItemUsedLoal_Wine.BPC_ItemUsedLoal_Wine_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemUsedLoal_Wine_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemUsedLoal_Wine_C", "ReceiveTick");
+
+	Params::BPC_ItemUsedLoal_Wine_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

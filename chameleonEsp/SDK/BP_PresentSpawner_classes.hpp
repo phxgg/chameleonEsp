@@ -33,16 +33,16 @@ public:
 	class ABP_FirstPersonGameMode_Online_LINK_C*  As_BP_First_Person_Game_Mode_Online_LINK;          // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UserConstructionScript();
-	void UpdateOverlapState();
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveBeginPlay();
-	void IsHouseAllGoal(bool* AllGoal);
-	void GoadGiftBox(class AActor* GiftBox);
-	void ExecuteUbergraph_BP_PresentSpawner(int32 EntryPoint);
-	void DestroyActor(class AActor* DestroyedActor);
-	void CleanUp();
 	void AddQueue(const class ABP_GoalHouse_C*& HouseActor);
+	void CleanUp();
+	void DestroyActor(class AActor* DestroyedActor);
+	void ExecuteUbergraph_BP_PresentSpawner(int32 EntryPoint);
+	void GoadGiftBox(class AActor* GiftBox);
+	void IsHouseAllGoal(bool* AllGoal);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void UpdateOverlapState();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

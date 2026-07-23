@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "EN_StanType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EN_StanType_structs.hpp"
 #include "ST_VAT_Datas_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "EN_DamageType_structs.hpp"
 #include "BP_EnablePotoIn_Base_classes.hpp"
+#include "EN_DamageType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -40,21 +40,21 @@ public:
 	class UMaterialInstanceDynamic*               DeleteDynamicMaterialInstance;                     // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_CopyActorBase(int32 EntryPoint);
-	void Fix();
-	void Delete();
-	void Reverse(const struct FTransform& NewPosition_Reverse, const struct FVector& HitNormal_Reverse);
-	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
-	void StaminaDamage(double Value);
-	void StanDamage(EN_StanType StanType);
-	void DeleteVATAnim__UpdateFunc();
-	void DeleteVATAnim__FinishedFunc();
-	void UserConstructionScript();
-	void GetCopyClass(class UStaticMeshComponent* CentorComponent_GetCopyClass, class UClass** Class_GetCopyClass_0, double* Scale_GetCopyClass, struct FVector* DefaultScale_GetCopyClass);
-	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
-	void GetParryState(bool* State);
-	void ReceiveBeginPlay();
 	void DestroyVAT();
+	void ReceiveBeginPlay();
+	void GetParryState(bool* State);
+	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
+	void GetCopyClass(class UStaticMeshComponent* CentorComponent, class UClass** Class_0, double* Scale, struct FVector* DefaultScale);
+	void UserConstructionScript();
+	void DeleteVATAnim__FinishedFunc();
+	void DeleteVATAnim__UpdateFunc();
+	void StanDamage(EN_StanType StanType);
+	void StaminaDamage(double Value);
+	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
+	void Reverse(const struct FTransform& NewPosition, const struct FVector& HitNormal);
+	void Delete();
+	void Fix();
+	void ExecuteUbergraph_BP_CopyActorBase(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

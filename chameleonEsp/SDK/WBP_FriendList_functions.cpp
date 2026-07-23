@@ -16,61 +16,35 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_FriendList.WBP_FriendList_C.UpdateEvent
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_FriendList.WBP_FriendList_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_FriendList_C::UpdateEvent()
+void UWBP_FriendList_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FriendList_C", "UpdateEvent");
+		Func = Class->GetFunction("WBP_FriendList_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_FriendList.WBP_FriendList_C.PushButton
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_FriendList.WBP_FriendList_C.ExecuteUbergraph_WBP_FriendList
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const struct FUniqueNetIdRepl&          ID                                                     (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_FriendList_C::PushButton(const struct FUniqueNetIdRepl& ID)
+void UWBP_FriendList_C::ExecuteUbergraph_WBP_FriendList(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FriendList_C", "PushButton");
+		Func = Class->GetFunction("WBP_FriendList_C", "ExecuteUbergraph_WBP_FriendList");
 
-	Params::WBP_FriendList_C_PushButton Parms{};
+	Params::WBP_FriendList_C_ExecuteUbergraph_WBP_FriendList Parms{};
 
-	Parms.ID = std::move(ID);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_FriendList.WBP_FriendList_C.OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   LocalUserNum                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FString&                    ListName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const class FString&                    ErrorStr                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UWBP_FriendList_C::OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7(int32 LocalUserNum, bool bWasSuccessful, const class FString& ListName, const class FString& ErrorStr)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FriendList_C", "OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7");
-
-	Params::WBP_FriendList_C_OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7 Parms{};
-
-	Parms.LocalUserNum = LocalUserNum;
-	Parms.bWasSuccessful = bWasSuccessful;
-	Parms.ListName = std::move(ListName);
-	Parms.ErrorStr = std::move(ErrorStr);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -102,35 +76,61 @@ void UWBP_FriendList_C::OnCallFailed_FBCD2806418BE785B5E6FEA7A395A2A7(int32 Loca
 }
 
 
-// Function WBP_FriendList.WBP_FriendList_C.ExecuteUbergraph_WBP_FriendList
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_FriendList.WBP_FriendList_C.OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   LocalUserNum                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bWasSuccessful                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    ListName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    ErrorStr                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWBP_FriendList_C::ExecuteUbergraph_WBP_FriendList(int32 EntryPoint)
+void UWBP_FriendList_C::OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7(int32 LocalUserNum, bool bWasSuccessful, const class FString& ListName, const class FString& ErrorStr)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FriendList_C", "ExecuteUbergraph_WBP_FriendList");
+		Func = Class->GetFunction("WBP_FriendList_C", "OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7");
 
-	Params::WBP_FriendList_C_ExecuteUbergraph_WBP_FriendList Parms{};
+	Params::WBP_FriendList_C_OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7 Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.LocalUserNum = LocalUserNum;
+	Parms.bWasSuccessful = bWasSuccessful;
+	Parms.ListName = std::move(ListName);
+	Parms.ErrorStr = std::move(ErrorStr);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_FriendList.WBP_FriendList_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_FriendList.WBP_FriendList_C.PushButton
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FUniqueNetIdRepl&          ID                                                     (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UWBP_FriendList_C::Construct()
+void UWBP_FriendList_C::PushButton(const struct FUniqueNetIdRepl& ID)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FriendList_C", "Construct");
+		Func = Class->GetFunction("WBP_FriendList_C", "PushButton");
+
+	Params::WBP_FriendList_C_PushButton Parms{};
+
+	Parms.ID = std::move(ID);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_FriendList.WBP_FriendList_C.UpdateEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_FriendList_C::UpdateEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FriendList_C", "UpdateEvent");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

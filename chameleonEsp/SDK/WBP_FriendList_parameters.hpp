@@ -16,41 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_FriendList.WBP_FriendList_C.PushButton
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_FriendList_C_PushButton final
-{
-public:
-	struct FUniqueNetIdRepl                       ID;                                                // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_FriendList_C_PushButton;
-
-// Function WBP_FriendList.WBP_FriendList_C.OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7
-// 0x0028 (0x0028 - 0x0000)
-struct WBP_FriendList_C_OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7 final
-{
-public:
-	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ListName;                                          // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 ErrorStr;                                          // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_FriendList_C_OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7;
-
-// Function WBP_FriendList.WBP_FriendList_C.OnCallFailed_FBCD2806418BE785B5E6FEA7A395A2A7
-// 0x0028 (0x0028 - 0x0000)
-struct WBP_FriendList_C_OnCallFailed_FBCD2806418BE785B5E6FEA7A395A2A7 final
-{
-public:
-	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ListName;                                          // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 ErrorStr;                                          // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_FriendList_C_OnCallFailed_FBCD2806418BE785B5E6FEA7A395A2A7;
-
 // Function WBP_FriendList.WBP_FriendList_C.ExecuteUbergraph_WBP_FriendList
 // 0x0210 (0x0210 - 0x0000)
 struct WBP_FriendList_C_ExecuteUbergraph_WBP_FriendList final
@@ -110,6 +75,41 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_FriendList_C_ExecuteUbergraph_WBP_FriendList;
+
+// Function WBP_FriendList.WBP_FriendList_C.OnCallFailed_FBCD2806418BE785B5E6FEA7A395A2A7
+// 0x0028 (0x0028 - 0x0000)
+struct WBP_FriendList_C_OnCallFailed_FBCD2806418BE785B5E6FEA7A395A2A7 final
+{
+public:
+	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ListName;                                          // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 ErrorStr;                                          // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_FriendList_C_OnCallFailed_FBCD2806418BE785B5E6FEA7A395A2A7;
+
+// Function WBP_FriendList.WBP_FriendList_C.OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7
+// 0x0028 (0x0028 - 0x0000)
+struct WBP_FriendList_C_OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7 final
+{
+public:
+	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ListName;                                          // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 ErrorStr;                                          // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_FriendList_C_OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7;
+
+// Function WBP_FriendList.WBP_FriendList_C.PushButton
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_FriendList_C_PushButton final
+{
+public:
+	struct FUniqueNetIdRepl                       ID;                                                // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_FriendList_C_PushButton;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

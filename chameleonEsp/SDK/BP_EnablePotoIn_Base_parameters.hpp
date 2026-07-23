@@ -10,18 +10,234 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_ItemBindType_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ENUM_ActorType_structs.hpp"
-#include "Engine_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
-#include "ST_ItemCoreDatas_structs.hpp"
 #include "ENUM_CameraMode_structs.hpp"
+#include "ENUM_ActorType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.IsInPhoto
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EnablePotoIn_Base_C_IsInPhoto final
+{
+public:
+	bool                                          Value;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_IsInPhoto;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.IsChangeImage
+// 0x0020 (0x0020 - 0x0000)
+struct BP_EnablePotoIn_Base_C_IsChangeImage final
+{
+public:
+	bool                                          IsInteract;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   OverrideText;                                      // 0x0008(0x0010)(Parm, OutParm)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_IsChangeImage;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.GetCopyClass
+// 0x0030 (0x0030 - 0x0000)
+struct BP_EnablePotoIn_Base_C_GetCopyClass final
+{
+public:
+	class UStaticMeshComponent*                   CentorComponent;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 Class_0;                                           // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Scale;                                             // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                DefaultScale;                                      // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_GetCopyClass;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.GetCentorPosition
+// 0x0030 (0x0030 - 0x0000)
+struct BP_EnablePotoIn_Base_C_GetCentorPosition final
+{
+public:
+	TArray<struct FVector>                        CentorPosition;                                    // 0x0000(0x0010)(Parm, OutParm)
+	TArray<struct FVector>                        ReturnVectors;                                     // 0x0010(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FVector>                        CallFunc_GetRayPositions_VectorArray;              // 0x0020(0x0010)(ReferenceParm)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_GetCentorPosition;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.GetActorInfo
+// 0x00A0 (0x00A0 - 0x0000)
+struct BP_EnablePotoIn_Base_C_GetActorInfo final
+{
+public:
+	struct FTransform                             DefaultTransform_0;                                // 0x0000(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Not_In_Shot;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CentorPosition;                                    // 0x0068(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPenguin;                                         // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_ActorType                                ActorType;                                         // 0x0081(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NonInPhoto;                                        // 0x0082(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_83[0x5];                                       // 0x0083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_GetActorInfo;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.GetParentCharacter
+// 0x0008 (0x0008 - 0x0000)
+struct BP_EnablePotoIn_Base_C_GetParentCharacter final
+{
+public:
+	class ABP_FirstPersonCharacter_Main_C*        FirstpersonCharacter;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_GetParentCharacter;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.GetItemInfo
+// 0x00B8 (0x00B8 - 0x0000)
+struct BP_EnablePotoIn_Base_C_GetItemInfo final
+{
+public:
+	ENUM_HandType                                 HandType;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_ClassType                                ClassType;                                         // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NotPickUp_0;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               HaveRotation;                                      // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                Add_Position;                                      // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsBoneAttach;                                      // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_ItemBindType                             BindType;                                          // 0x0039(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   BoneName;                                          // 0x003C(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_ItemCoreDatas                      CoreDatas;                                         // 0x0048(0x0070)(Parm, OutParm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_GetItemInfo;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.UserConstructionScript
+// 0x00A0 (0x00A0 - 0x0000)
+struct BP_EnablePotoIn_Base_C_UserConstructionScript final
+{
+public:
+	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0000(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetComponentBounds_Origin;                // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetComponentBounds_BoxExtent;             // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetComponentBounds_SphereRadius;          // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_VariableSet_ReverseTime_ImplicitCast;       // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_UserConstructionScript;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.Reverse
+// 0x0080 (0x0080 - 0x0000)
+struct BP_EnablePotoIn_Base_C_Reverse final
+{
+public:
+	struct FTransform                             NewPosition;                                       // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                HitNormal;                                         // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_Reverse;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.View In Out Function
+// 0x0004 (0x0004 - 0x0000)
+struct BP_EnablePotoIn_Base_C_View_In_Out_Function final
+{
+public:
+	int32                                         Stencil_Value;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_View_In_Out_Function;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.InAngleOfView
+// 0x0018 (0x0018 - 0x0000)
+struct BP_EnablePotoIn_Base_C_InAngleOfView final
+{
+public:
+	bool                                          InState;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        DeltaTime;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_CameraMode                               CameraMode;                                        // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_InAngleOfView;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.BndEvt__BP_EnablePotoIn_Base_StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature
+// 0x0130 (0x0130 - 0x0000)
+struct BP_EnablePotoIn_Base_C_BndEvt__BP_EnablePotoIn_Base_StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature final
+{
+public:
+	class UPrimitiveComponent*                    HitComponent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                NormalImpulse;                                     // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             Hit;                                               // 0x0030(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_BndEvt__BP_EnablePotoIn_Base_StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.SetTimeStopState
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EnablePotoIn_Base_C_SetTimeStopState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_SetTimeStopState;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.SetActorInfo
+// 0x0020 (0x0020 - 0x0000)
+struct BP_EnablePotoIn_Base_C_SetActorInfo final
+{
+public:
+	struct FVector                                ToPosition;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Comp;                                              // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_SetActorInfo;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.DropItem
+// 0x0030 (0x0030 - 0x0000)
+struct BP_EnablePotoIn_Base_C_DropItem final
+{
+public:
+	struct FVector                                Force_Vector;                                      // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CentorPosition;                                    // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_DropItem;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.UpdateCoreDatas
+// 0x0070 (0x0070 - 0x0000)
+struct BP_EnablePotoIn_Base_C_UpdateCoreDatas final
+{
+public:
+	struct FST_ItemCoreDatas                      CoreDatas;                                         // 0x0000(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_UpdateCoreDatas;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.PickState
+// 0x0018 (0x0018 - 0x0000)
+struct BP_EnablePotoIn_Base_C_PickState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         SlotIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_PickState;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.SetMeshDatas
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EnablePotoIn_Base_C_SetMeshDatas final
+{
+public:
+	bool                                          KeepScale;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_SetMeshDatas;
+
+// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BP_EnablePotoIn_Base_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_ReceiveEndPlay;
 
 // Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.ExecuteUbergraph_BP_EnablePotoIn_Base
 // 0x0C80 (0x0C80 - 0x0000)
@@ -162,222 +378,6 @@ public:
 	float                                         CallFunc_SetAngularDamping_InDamping_ImplicitCast_1; // 0x0C74(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_ExecuteUbergraph_BP_EnablePotoIn_Base;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EnablePotoIn_Base_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason_ReceiveEndPlay;                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_ReceiveEndPlay;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.SetMeshDatas
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EnablePotoIn_Base_C_SetMeshDatas final
-{
-public:
-	bool                                          KeepScale;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_SetMeshDatas;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.PickState
-// 0x0018 (0x0018 - 0x0000)
-struct BP_EnablePotoIn_Base_C_PickState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         SlotIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_PickState;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.UpdateCoreDatas
-// 0x0070 (0x0070 - 0x0000)
-struct BP_EnablePotoIn_Base_C_UpdateCoreDatas final
-{
-public:
-	struct FST_ItemCoreDatas                      CoreDatas;                                         // 0x0000(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_UpdateCoreDatas;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.DropItem
-// 0x0030 (0x0030 - 0x0000)
-struct BP_EnablePotoIn_Base_C_DropItem final
-{
-public:
-	struct FVector                                Force_Vector;                                      // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CentorPosition;                                    // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_DropItem;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.SetActorInfo
-// 0x0020 (0x0020 - 0x0000)
-struct BP_EnablePotoIn_Base_C_SetActorInfo final
-{
-public:
-	struct FVector                                ToPosition;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Comp;                                              // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_SetActorInfo;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.SetTimeStopState
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EnablePotoIn_Base_C_SetTimeStopState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_SetTimeStopState;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.BndEvt__BP_EnablePotoIn_Base_StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature
-// 0x0130 (0x0130 - 0x0000)
-struct BP_EnablePotoIn_Base_C_BndEvt__BP_EnablePotoIn_Base_StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature final
-{
-public:
-	class UPrimitiveComponent*                    HitComponent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                NormalImpulse;                                     // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             Hit;                                               // 0x0030(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_BndEvt__BP_EnablePotoIn_Base_StaticMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.InAngleOfView
-// 0x0018 (0x0018 - 0x0000)
-struct BP_EnablePotoIn_Base_C_InAngleOfView final
-{
-public:
-	bool                                          InState;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        DeltaTime;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_CameraMode                               CameraMode;                                        // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_InAngleOfView;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.View In Out Function
-// 0x0004 (0x0004 - 0x0000)
-struct BP_EnablePotoIn_Base_C_View_In_Out_Function final
-{
-public:
-	int32                                         Stencil_Value;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_View_In_Out_Function;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.Reverse
-// 0x0080 (0x0080 - 0x0000)
-struct BP_EnablePotoIn_Base_C_Reverse final
-{
-public:
-	struct FTransform                             NewPosition;                                       // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                HitNormal;                                         // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_Reverse;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.UserConstructionScript
-// 0x00A0 (0x00A0 - 0x0000)
-struct BP_EnablePotoIn_Base_C_UserConstructionScript final
-{
-public:
-	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0000(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetComponentBounds_Origin;                // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetComponentBounds_BoxExtent;             // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetComponentBounds_SphereRadius;          // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_VariableSet_ReverseTime_ImplicitCast;       // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_UserConstructionScript;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.GetItemInfo
-// 0x00B8 (0x00B8 - 0x0000)
-struct BP_EnablePotoIn_Base_C_GetItemInfo final
-{
-public:
-	ENUM_HandType                                 HandType;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_ClassType                                ClassType;                                         // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NotPickUp;                                         // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               HaveRotation;                                      // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                Add_Position;                                      // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsBoneAttach;                                      // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_ItemBindType                             BindType;                                          // 0x0039(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   BoneName;                                          // 0x003C(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_ItemCoreDatas                      CoreDatas;                                         // 0x0048(0x0070)(Parm, OutParm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_GetItemInfo;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.GetParentCharacter
-// 0x0008 (0x0008 - 0x0000)
-struct BP_EnablePotoIn_Base_C_GetParentCharacter final
-{
-public:
-	class ABP_FirstPersonCharacter_Main_C*        FirstpersonCharacter;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_GetParentCharacter;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.GetActorInfo
-// 0x00A0 (0x00A0 - 0x0000)
-struct BP_EnablePotoIn_Base_C_GetActorInfo final
-{
-public:
-	struct FTransform                             DefaultTransform;                                  // 0x0000(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Not_In_Shot;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CentorPosition;                                    // 0x0068(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPenguin;                                         // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_ActorType                                ActorType;                                         // 0x0081(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NonInPhoto;                                        // 0x0082(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_83[0x5];                                       // 0x0083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_GetActorInfo;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.GetCentorPosition
-// 0x0030 (0x0030 - 0x0000)
-struct BP_EnablePotoIn_Base_C_GetCentorPosition final
-{
-public:
-	TArray<struct FVector>                        CentorPosition;                                    // 0x0000(0x0010)(Parm, OutParm)
-	TArray<struct FVector>                        ReturnVectors;                                     // 0x0010(0x0010)(Edit, BlueprintVisible)
-	TArray<struct FVector>                        CallFunc_GetRayPositions_VectorArray;              // 0x0020(0x0010)(ReferenceParm)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_GetCentorPosition;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.GetCopyClass
-// 0x0030 (0x0030 - 0x0000)
-struct BP_EnablePotoIn_Base_C_GetCopyClass final
-{
-public:
-	class UStaticMeshComponent*                   CentorComponent;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 Class_0;                                           // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Scale;                                             // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                DefaultScale;                                      // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_GetCopyClass;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.IsChangeImage
-// 0x0020 (0x0020 - 0x0000)
-struct BP_EnablePotoIn_Base_C_IsChangeImage final
-{
-public:
-	bool                                          IsInteract;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   OverrideText;                                      // 0x0008(0x0010)(Parm, OutParm)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_IsChangeImage;
-
-// Function BP_EnablePotoIn_Base.BP_EnablePotoIn_Base_C.IsInPhoto
-// 0x0001 (0x0001 - 0x0000)
-struct BP_EnablePotoIn_Base_C_IsInPhoto final
-{
-public:
-	bool                                          Value;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnablePotoIn_Base_C_IsInPhoto;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,20 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_SimpleNiagaraSpawner.BP_SimpleNiagaraSpawner_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_SimpleNiagaraSpawner_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SimpleNiagaraSpawner_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_SimpleNiagaraSpawner.BP_SimpleNiagaraSpawner_C.ExecuteUbergraph_BP_SimpleNiagaraSpawner
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -47,6 +33,20 @@ void ABP_SimpleNiagaraSpawner_C::ExecuteUbergraph_BP_SimpleNiagaraSpawner(int32 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SimpleNiagaraSpawner.BP_SimpleNiagaraSpawner_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_SimpleNiagaraSpawner_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SimpleNiagaraSpawner_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -40,10 +40,10 @@ public:
 	struct FVector2D                              In_Shadow_Offset;                                  // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void UpdateTextIndex(int32 CompressedTextIndex);
-	void SetText(const class FText& Text);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void ExecuteUbergraph_WBP_CompressTextBlock(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SetText(const class FText& Text_0);
+	void UpdateTextIndex(int32 CompressedTextIndex_0);
 
 public:
 	static class UClass* StaticClass()

@@ -10,52 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "ST_ItemCoreDatas_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "PenguinHotel_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
-
-// Function WBP_RadialMenuParts.WBP_RadialMenuParts_C.SetSelectState
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_RadialMenuParts_C_SetSelectState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_RadialMenuParts_C_SetSelectState;
-
-// Function WBP_RadialMenuParts.WBP_RadialMenuParts_C.SetData
-// 0x0070 (0x0070 - 0x0000)
-struct WBP_RadialMenuParts_C_SetData final
-{
-public:
-	struct FST_ItemCoreDatas                      Data;                                              // 0x0000(0x0070)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_RadialMenuParts_C_SetData;
-
-// Function WBP_RadialMenuParts.WBP_RadialMenuParts_C.SetCentorText
-// 0x0020 (0x0020 - 0x0000)
-struct WBP_RadialMenuParts_C_SetCentorText final
-{
-public:
-	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FLinearColor                           Specified_Color;                                   // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_RadialMenuParts_C_SetCentorText;
-
-// Function WBP_RadialMenuParts.WBP_RadialMenuParts_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_RadialMenuParts_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_RadialMenuParts_C_PreConstruct;
 
 // Function WBP_RadialMenuParts.WBP_RadialMenuParts_C.ExecuteUbergraph_WBP_RadialMenuParts
 // 0x01F8 (0x01F8 - 0x0000)
@@ -98,6 +61,43 @@ public:
 	float                                         CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast; // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_RadialMenuParts_C_ExecuteUbergraph_WBP_RadialMenuParts;
+
+// Function WBP_RadialMenuParts.WBP_RadialMenuParts_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_RadialMenuParts_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_RadialMenuParts_C_PreConstruct;
+
+// Function WBP_RadialMenuParts.WBP_RadialMenuParts_C.SetCentorText
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_RadialMenuParts_C_SetCentorText final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FLinearColor                           Specified_Color;                                   // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_RadialMenuParts_C_SetCentorText;
+
+// Function WBP_RadialMenuParts.WBP_RadialMenuParts_C.SetData
+// 0x0070 (0x0070 - 0x0000)
+struct WBP_RadialMenuParts_C_SetData final
+{
+public:
+	struct FST_ItemCoreDatas                      Data;                                              // 0x0000(0x0070)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_RadialMenuParts_C_SetData;
+
+// Function WBP_RadialMenuParts.WBP_RadialMenuParts_C.SetSelectState
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_RadialMenuParts_C_SetSelectState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_RadialMenuParts_C_SetSelectState;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

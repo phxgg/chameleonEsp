@@ -32,9 +32,9 @@ public:
 	bool                                          CurrentVisibleState;                               // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetBarSize(double NewValue);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void ExecuteUbergraph_WBP_LINK_StaminaBar(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SetBarSize(double NewValue);
 
 public:
 	static class UClass* StaticClass()

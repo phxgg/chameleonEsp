@@ -14,15 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_SettingVoiceInputDevice.WBP_SettingVoiceInputDevice_C.Get_ConfigItem_Text_1_Text_0
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_SettingVoiceInputDevice_C_Get_ConfigItem_Text_1_Text_0 final
-{
-public:
-	class FText                                   ReturnText;                                        // 0x0000(0x0010)(Edit, BlueprintVisible)
-};
-DUMPER7_ASSERTS_WBP_SettingVoiceInputDevice_C_Get_ConfigItem_Text_1_Text_0;
-
 // Function WBP_SettingVoiceInputDevice.WBP_SettingVoiceInputDevice_C.ExecuteUbergraph_WBP_SettingVoiceInputDevice
 // 0x0004 (0x0004 - 0x0000)
 struct WBP_SettingVoiceInputDevice_C_ExecuteUbergraph_WBP_SettingVoiceInputDevice final
@@ -31,6 +22,15 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_SettingVoiceInputDevice_C_ExecuteUbergraph_WBP_SettingVoiceInputDevice;
+
+// Function WBP_SettingVoiceInputDevice.WBP_SettingVoiceInputDevice_C.Get_ConfigItem_Text_1_Text_0
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_SettingVoiceInputDevice_C_Get_ConfigItem_Text_1_Text_0 final
+{
+public:
+	class FText                                   ReturnText;                                        // 0x0000(0x0010)(Edit, BlueprintVisible)
+};
+DUMPER7_ASSERTS_WBP_SettingVoiceInputDevice_C_Get_ConfigItem_Text_1_Text_0;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

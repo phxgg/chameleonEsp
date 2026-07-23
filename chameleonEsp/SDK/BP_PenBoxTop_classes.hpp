@@ -28,12 +28,12 @@ public:
 	class ABP_PenBoxUnder_C*                      UnderBox;                                          // 0x02C8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void SleepCall();
-	void SimulatePhysicsCheck();
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_PenBoxTop(int32 EntryPoint);
-	void BndEvt__BP_PenBoxTop_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentSleepSignature__DelegateSignature(class UPrimitiveComponent* SleepingComponent, class FName BoneName);
 	void BndEvt__BP_PenBoxTop_StaticMesh_K2Node_ComponentBoundEvent_0_ComponentWakeSignature__DelegateSignature(class UPrimitiveComponent* WakingComponent, class FName BoneName);
+	void BndEvt__BP_PenBoxTop_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentSleepSignature__DelegateSignature(class UPrimitiveComponent* SleepingComponent, class FName BoneName);
+	void ExecuteUbergraph_BP_PenBoxTop(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void SimulatePhysicsCheck();
+	void SleepCall();
 
 public:
 	static class UClass* StaticClass()

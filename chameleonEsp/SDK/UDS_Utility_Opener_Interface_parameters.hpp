@@ -14,15 +14,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function UDS_Utility_Opener_Interface.UDS_Utility_Opener_Interface_C.Show Editor Warning Window
-// 0x0020 (0x0020 - 0x0000)
-struct UDS_Utility_Opener_Interface_C_Show_Editor_Warning_Window final
+// Function UDS_Utility_Opener_Interface.UDS_Utility_Opener_Interface_C.Open UDS Readme
+// 0x0018 (0x0018 - 0x0000)
+struct UDS_Utility_Opener_Interface_C_Open_UDS_Readme final
 {
 public:
-	class FString                                 title;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 Message;                                           // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Entry_Row;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         Category_Index;                                    // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UDS_Utility_Opener_Interface_C_Show_Editor_Warning_Window;
+DUMPER7_ASSERTS_UDS_Utility_Opener_Interface_C_Open_UDS_Readme;
 
 // Function UDS_Utility_Opener_Interface.UDS_Utility_Opener_Interface_C.Open UDS Readme Entry Set
 // 0x0010 (0x0010 - 0x0000)
@@ -33,15 +33,15 @@ public:
 };
 DUMPER7_ASSERTS_UDS_Utility_Opener_Interface_C_Open_UDS_Readme_Entry_Set;
 
-// Function UDS_Utility_Opener_Interface.UDS_Utility_Opener_Interface_C.Open UDS Readme
-// 0x0018 (0x0018 - 0x0000)
-struct UDS_Utility_Opener_Interface_C_Open_UDS_Readme final
+// Function UDS_Utility_Opener_Interface.UDS_Utility_Opener_Interface_C.Show Editor Warning Window
+// 0x0020 (0x0020 - 0x0000)
+struct UDS_Utility_Opener_Interface_C_Show_Editor_Warning_Window final
 {
 public:
-	class FString                                 Entry_Row;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         Category_Index;                                    // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 title;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Message;                                           // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UDS_Utility_Opener_Interface_C_Open_UDS_Readme;
+DUMPER7_ASSERTS_UDS_Utility_Opener_Interface_C_Show_Editor_Warning_Window;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -25,8 +25,8 @@ public:
 	class UWidgetAnimation*                       Shake;                                             // 0x0348(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ShakePlay();
 	void ExecuteUbergraph_WBP_ShortageStamina(int32 EntryPoint);
+	void ShakePlay();
 
 public:
 	static class UClass* StaticClass()

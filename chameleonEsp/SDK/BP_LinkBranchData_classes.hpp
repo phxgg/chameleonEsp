@@ -35,11 +35,11 @@ public:
 	TArray<class UPrimitiveComponent*>            AffectSortedPrimitives;                            // 0x0320(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
-	void ReceiveBeginPlay();
-	void GetSortedPrimitive(int32 Index_0, class UPrimitiveComponent** Primitive);
-	void GetSidePrimitive(int32 CenterIndex, int32 Distance, class UPrimitiveComponent** MinSide, class UPrimitiveComponent** MaxSide);
-	void ExecuteUbergraph_BP_LinkBranchData(int32 EntryPoint);
 	void AddPrimitive(TArray<class UPrimitiveComponent*>& Primitives);
+	void ExecuteUbergraph_BP_LinkBranchData(int32 EntryPoint);
+	void GetSidePrimitive(int32 CenterIndex, int32 Distance, class UPrimitiveComponent** MinSide, class UPrimitiveComponent** MaxSide);
+	void GetSortedPrimitive(int32 Index_0, class UPrimitiveComponent** Primitive);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

@@ -32,13 +32,13 @@ public:
 	class UBPGI_Main_C*                           As_BPGI_Main;                                      // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ScreenTypeSettingsUpdate();
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_ConfigGameGeneral(int32 EntryPoint);
-	void DeleteConfigWidget();
-	void Construct();
-	void BndEvt__WBP_ConfigGameGeneral_WBP_SettingSlider_Sencibility_K2Node_ComponentBoundEvent_0_UpdateSettingValue__DelegateSignature();
 	void ApplySettings();
+	void BndEvt__WBP_ConfigGameGeneral_WBP_SettingSlider_Sencibility_K2Node_ComponentBoundEvent_0_UpdateSettingValue__DelegateSignature();
+	void Construct();
+	void DeleteConfigWidget();
+	void ExecuteUbergraph_WBP_ConfigGameGeneral(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void ScreenTypeSettingsUpdate();
 
 public:
 	static class UClass* StaticClass()

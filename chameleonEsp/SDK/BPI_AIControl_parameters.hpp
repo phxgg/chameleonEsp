@@ -17,24 +17,25 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPI_AIControl.BPI_AIControl_C.SetStrafing
-// 0x0002 (0x0002 - 0x0000)
-struct BPI_AIControl_C_SetStrafing final
+// Function BPI_AIControl.BPI_AIControl_C.GetAvoidanceRotation
+// 0x0018 (0x0018 - 0x0000)
+struct BPI_AIControl_C_GetAvoidanceRotation final
 {
 public:
-	bool                                          IsStrafing;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_StrafingDirection                          Direction;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Rotation;                                          // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_BPI_AIControl_C_SetStrafing;
+DUMPER7_ASSERTS_BPI_AIControl_C_GetAvoidanceRotation;
 
-// Function BPI_AIControl.BPI_AIControl_C.IsBattleMode
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_AIControl_C_IsBattleMode final
+// Function BPI_AIControl.BPI_AIControl_C.IsAiming
+// 0x0008 (0x0008 - 0x0000)
+struct BPI_AIControl_C_IsAiming final
 {
 public:
-	bool                                          Bool;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsAiming_0;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SuccessCount;                                      // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPI_AIControl_C_IsBattleMode;
+DUMPER7_ASSERTS_BPI_AIControl_C_IsAiming;
 
 // Function BPI_AIControl.BPI_AIControl_C.IsAttackNow
 // 0x0001 (0x0001 - 0x0000)
@@ -45,25 +46,24 @@ public:
 };
 DUMPER7_ASSERTS_BPI_AIControl_C_IsAttackNow;
 
-// Function BPI_AIControl.BPI_AIControl_C.IsAiming
-// 0x0008 (0x0008 - 0x0000)
-struct BPI_AIControl_C_IsAiming final
+// Function BPI_AIControl.BPI_AIControl_C.IsBattleMode
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_AIControl_C_IsBattleMode final
 {
 public:
-	bool                                          IsAiming;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         SuccessCount;                                      // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Bool;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPI_AIControl_C_IsAiming;
+DUMPER7_ASSERTS_BPI_AIControl_C_IsBattleMode;
 
-// Function BPI_AIControl.BPI_AIControl_C.GetAvoidanceRotation
-// 0x0018 (0x0018 - 0x0000)
-struct BPI_AIControl_C_GetAvoidanceRotation final
+// Function BPI_AIControl.BPI_AIControl_C.SetStrafing
+// 0x0002 (0x0002 - 0x0000)
+struct BPI_AIControl_C_SetStrafing final
 {
 public:
-	struct FRotator                               Rotation;                                          // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          IsStrafing;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_StrafingDirection                          Direction;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPI_AIControl_C_GetAvoidanceRotation;
+DUMPER7_ASSERTS_BPI_AIControl_C_SetStrafing;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

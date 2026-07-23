@@ -14,15 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_TaskObject_ReDeliveryGiftBox.BPC_TaskObject_ReDeliveryGiftBox_C.GoalGiftBox
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_TaskObject_ReDeliveryGiftBox_C_GoalGiftBox final
-{
-public:
-	class AActor*                                 GiftBox;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_TaskObject_ReDeliveryGiftBox_C_GoalGiftBox;
-
 // Function BPC_TaskObject_ReDeliveryGiftBox.BPC_TaskObject_ReDeliveryGiftBox_C.ExecuteUbergraph_BPC_TaskObject_ReDeliveryGiftBox
 // 0x0068 (0x0068 - 0x0000)
 struct BPC_TaskObject_ReDeliveryGiftBox_C_ExecuteUbergraph_BPC_TaskObject_ReDeliveryGiftBox final
@@ -47,6 +38,15 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_TaskObject_ReDeliveryGiftBox_C_ExecuteUbergraph_BPC_TaskObject_ReDeliveryGiftBox;
+
+// Function BPC_TaskObject_ReDeliveryGiftBox.BPC_TaskObject_ReDeliveryGiftBox_C.GoalGiftBox
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_TaskObject_ReDeliveryGiftBox_C_GoalGiftBox final
+{
+public:
+	class AActor*                                 GiftBox;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_TaskObject_ReDeliveryGiftBox_C_GoalGiftBox;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,16 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_InfinityGenerator.BP_InfinityGenerator_C.Generate
-// 0x000C (0x000C - 0x0000)
-struct BP_InfinityGenerator_C_Generate final
-{
-public:
-	struct FRandomStream                          Seed;                                              // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
-	int32                                         DepthIndex;                                        // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_InfinityGenerator_C_Generate;
-
 // Function BP_InfinityGenerator.BP_InfinityGenerator_C.ExecuteUbergraph_BP_InfinityGenerator
 // 0x00E0 (0x00E0 - 0x0000)
 struct BP_InfinityGenerator_C_ExecuteUbergraph_BP_InfinityGenerator final
@@ -50,6 +40,16 @@ public:
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_InfinityGenerator_C_ExecuteUbergraph_BP_InfinityGenerator;
+
+// Function BP_InfinityGenerator.BP_InfinityGenerator_C.Generate
+// 0x000C (0x000C - 0x0000)
+struct BP_InfinityGenerator_C_Generate final
+{
+public:
+	struct FRandomStream                          Seed;                                              // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor)
+	int32                                         DepthIndex;                                        // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_InfinityGenerator_C_Generate;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

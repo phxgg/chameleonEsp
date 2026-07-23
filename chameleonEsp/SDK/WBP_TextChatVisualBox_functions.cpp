@@ -16,57 +16,65 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.UpdateBorderState
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_TextChatVisualBox_C::UpdateBorderState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "UpdateBorderState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.ReciveText
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.AddText
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    MainString                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    TargetText                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int32                                   MessageType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_TextChatVisualBox_C::ReciveText(const class FString& MainString, int32 Index_0)
+void UWBP_TextChatVisualBox_C::AddText(const class FString& TargetText, int32 MessageType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "ReciveText");
+		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "AddText");
 
-	Params::WBP_TextChatVisualBox_C_ReciveText Parms{};
+	Params::WBP_TextChatVisualBox_C_AddText Parms{};
 
-	Parms.MainString = std::move(MainString);
-	Parms.Index_0 = Index_0;
+	Parms.TargetText = std::move(TargetText);
+	Parms.MessageType = MessageType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature
+// (HasOutParams, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// ETextCommit                             CommitMethod                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_TextChatVisualBox_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_TextChatVisualBox_C::BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature");
 
-	Params::WBP_TextChatVisualBox_C_PreConstruct Parms{};
+	Params::WBP_TextChatVisualBox_C_BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature Parms{};
 
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
+	Parms.Text = std::move(Text);
+	Parms.CommitMethod = CommitMethod;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.ExecuteUbergraph_WBP_TextChatVisualBox
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TextChatVisualBox_C::ExecuteUbergraph_WBP_TextChatVisualBox(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "ExecuteUbergraph_WBP_TextChatVisualBox");
+
+	Params::WBP_TextChatVisualBox_C_ExecuteUbergraph_WBP_TextChatVisualBox Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -98,67 +106,59 @@ void UWBP_TextChatVisualBox_C::InpActEvt_IA_TextChat_K2Node_EnhancedInputActionE
 }
 
 
-// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.ExecuteUbergraph_WBP_TextChatVisualBox
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_TextChatVisualBox_C::ExecuteUbergraph_WBP_TextChatVisualBox(int32 EntryPoint)
+void UWBP_TextChatVisualBox_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "ExecuteUbergraph_WBP_TextChatVisualBox");
+		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "PreConstruct");
 
-	Params::WBP_TextChatVisualBox_C_ExecuteUbergraph_WBP_TextChatVisualBox Parms{};
+	Params::WBP_TextChatVisualBox_C_PreConstruct Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature
-// (HasOutParams, BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// ETextCommit                             CommitMethod                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_TextChatVisualBox_C::BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature");
-
-	Params::WBP_TextChatVisualBox_C_BndEvt__WBP_TextChatVisualBox_EditableTextBox_56_K2Node_ComponentBoundEvent_1_OnEditableTextBoxCommittedEvent__DelegateSignature Parms{};
-
-	Parms.Text = std::move(Text);
-	Parms.CommitMethod = CommitMethod;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.AddText
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.ReciveText
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    TargetText                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int32                                   MessageType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    MainString                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_TextChatVisualBox_C::AddText(const class FString& TargetText, int32 MessageType)
+void UWBP_TextChatVisualBox_C::ReciveText(const class FString& MainString, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "AddText");
+		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "ReciveText");
 
-	Params::WBP_TextChatVisualBox_C_AddText Parms{};
+	Params::WBP_TextChatVisualBox_C_ReciveText Parms{};
 
-	Parms.TargetText = std::move(TargetText);
-	Parms.MessageType = MessageType;
+	Parms.MainString = std::move(MainString);
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TextChatVisualBox.WBP_TextChatVisualBox_C.UpdateBorderState
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_TextChatVisualBox_C::UpdateBorderState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TextChatVisualBox_C", "UpdateBorderState");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

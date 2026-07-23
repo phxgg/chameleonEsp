@@ -37,11 +37,11 @@ public:
 	bool                                          UniqueSpawn;                                       // 0x035A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_EnvironmentSystem_DamagedSpawn(int32 EntryPoint);
-	void ReplicateEvent();
-	void SpawnMaterial();
-	void ReceiveBeginPlay();
 	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
+	void ReceiveBeginPlay();
+	void SpawnMaterial();
+	void ReplicateEvent();
+	void ExecuteUbergraph_BP_EnvironmentSystem_DamagedSpawn(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

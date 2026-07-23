@@ -27,9 +27,9 @@ public:
 	TArray<class ABP_GoalHouse_C*>                Out_Actors;                                        // 0x0120(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 
 public:
-	void ExecuteUbergraph_BPC_TaskObject_DeliveryGiftBox(int32 EntryPoint);
-	void GoalGiftBox(class AActor* GiftBox);
 	void TaskStart();
+	void GoalGiftBox(class AActor* GiftBox);
+	void ExecuteUbergraph_BPC_TaskObject_DeliveryGiftBox(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

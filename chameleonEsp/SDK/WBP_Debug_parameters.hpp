@@ -18,25 +18,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_Debug.WBP_Debug_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WBP_Debug_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry_Tick;                                   // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime_Tick;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Debug_C_Tick;
-
-// Function WBP_Debug.WBP_Debug_C.OnFinished_8D1D7EE049CBA34DF01468BA7D7B3EE1
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_Debug_C_OnFinished_8D1D7EE049CBA34DF01468BA7D7B3EE1 final
-{
-public:
-	struct FBandwidthProbeResult                  Result;                                            // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-};
-DUMPER7_ASSERTS_WBP_Debug_C_OnFinished_8D1D7EE049CBA34DF01468BA7D7B3EE1;
-
 // Function WBP_Debug.WBP_Debug_C.ExecuteUbergraph_WBP_Debug
 // 0x03A0 (0x03A0 - 0x0000)
 struct WBP_Debug_C_ExecuteUbergraph_WBP_Debug final
@@ -121,6 +102,25 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0398(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Debug_C_ExecuteUbergraph_WBP_Debug;
+
+// Function WBP_Debug.WBP_Debug_C.OnFinished_8D1D7EE049CBA34DF01468BA7D7B3EE1
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_Debug_C_OnFinished_8D1D7EE049CBA34DF01468BA7D7B3EE1 final
+{
+public:
+	struct FBandwidthProbeResult                  Result;                                            // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+};
+DUMPER7_ASSERTS_WBP_Debug_C_OnFinished_8D1D7EE049CBA34DF01468BA7D7B3EE1;
+
+// Function WBP_Debug.WBP_Debug_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WBP_Debug_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Debug_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

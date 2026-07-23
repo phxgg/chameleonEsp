@@ -27,8 +27,8 @@ public:
 	class AActor*                                 BeforeGenerate;                                    // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Generate(const struct FRandomStream& Seed, int32 DepthIndex);
 	void ExecuteUbergraph_BP_InfinityGenerator(int32 EntryPoint);
+	void Generate(const struct FRandomStream& Seed, int32 DepthIndex);
 
 public:
 	static class UClass* StaticClass()

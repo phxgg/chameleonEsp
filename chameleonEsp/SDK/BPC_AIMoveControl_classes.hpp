@@ -30,13 +30,13 @@ public:
 	class FName                                   Attack_Name;                                       // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void OnSuccess_95EC79A3420BD63D9809D388C58C8FFB(EPathFollowingResult MovementResult);
-	void OnFail_95EC79A3420BD63D9809D388C58C8FFB(EPathFollowingResult MovementResult);
-	void MoveTo(class AActor* TargetActor, double AcceptanceRadius, double GiveUpTime, double MultiplySpeed, bool StopOnOverlap, class FName AttackName);
-	void MoveStop();
-	void ExecuteUbergraph_BPC_AIMoveControl(int32 EntryPoint);
 	void ClearTimer();
+	void ExecuteUbergraph_BPC_AIMoveControl(int32 EntryPoint);
+	void MoveStop();
+	void MoveTo(class AActor* TargetActor, double AcceptanceRadius, double GiveUpTime, double MultiplySpeed, bool StopOnOverlap, class FName AttackName);
+	void OnFail_95EC79A3420BD63D9809D388C58C8FFB(EPathFollowingResult MovementResult);
+	void OnSuccess_95EC79A3420BD63D9809D388C58C8FFB(EPathFollowingResult MovementResult);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

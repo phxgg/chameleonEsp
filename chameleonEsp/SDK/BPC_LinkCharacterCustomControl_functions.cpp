@@ -16,69 +16,117 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.UpdateVisualHead
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_LinkCharacterCustomControl_C::UpdateVisualHead()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "UpdateVisualHead");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.UpdateVisualBody
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_LinkCharacterCustomControl_C::UpdateVisualBody()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "UpdateVisualBody");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.SetVisibility
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.ExecuteUbergraph_BPC_LinkCharacterCustomControl
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_LinkCharacterCustomControl_C::SetVisibility(bool Visibility)
+void UBPC_LinkCharacterCustomControl_C::ExecuteUbergraph_BPC_LinkCharacterCustomControl(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "SetVisibility");
+		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "ExecuteUbergraph_BPC_LinkCharacterCustomControl");
 
-	Params::BPC_LinkCharacterCustomControl_C_SetVisibility Parms{};
+	Params::BPC_LinkCharacterCustomControl_C_ExecuteUbergraph_BPC_LinkCharacterCustomControl Parms{};
 
-	Parms.Visibility = Visibility;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.SetHeadAccessorieVisiblity
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.Init
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMaterialInstanceDynamic*         OwnerDynamicMaterial_0                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_LinkCharacterCustomControl_C::SetHeadAccessorieVisiblity(bool State)
+void UBPC_LinkCharacterCustomControl_C::Init(class UMaterialInstanceDynamic* OwnerDynamicMaterial_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "SetHeadAccessorieVisiblity");
+		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "Init");
 
-	Params::BPC_LinkCharacterCustomControl_C_SetHeadAccessorieVisiblity Parms{};
+	Params::BPC_LinkCharacterCustomControl_C_Init Parms{};
 
-	Parms.State = State;
+	Parms.OwnerDynamicMaterial_0 = OwnerDynamicMaterial_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.OnRep_BodyColorIndex
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_LinkCharacterCustomControl_C::OnRep_BodyColorIndex()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "OnRep_BodyColorIndex");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.OnRep_HeadAccessorieIndex
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_LinkCharacterCustomControl_C::OnRep_HeadAccessorieIndex()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "OnRep_HeadAccessorieIndex");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.OnRep_IsGhostMode
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_LinkCharacterCustomControl_C::OnRep_IsGhostMode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "OnRep_IsGhostMode");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBPC_LinkCharacterCustomControl_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.SetBodyColorIndex(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_LinkCharacterCustomControl_C::SetBodyColorIndex_Server_(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "SetBodyColorIndex(Server)");
+
+	Params::BPC_LinkCharacterCustomControl_C_SetBodyColorIndex_Server_ Parms{};
+
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -104,119 +152,71 @@ void UBPC_LinkCharacterCustomControl_C::SetHeadAccessorieIndex_Server_(int32 Ind
 }
 
 
-// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.SetBodyColorIndex(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.SetHeadAccessorieVisiblity
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_LinkCharacterCustomControl_C::SetBodyColorIndex_Server_(int32 Index_0)
+void UBPC_LinkCharacterCustomControl_C::SetHeadAccessorieVisiblity(bool State)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "SetBodyColorIndex(Server)");
+		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "SetHeadAccessorieVisiblity");
 
-	Params::BPC_LinkCharacterCustomControl_C_SetBodyColorIndex_Server_ Parms{};
+	Params::BPC_LinkCharacterCustomControl_C_SetHeadAccessorieVisiblity Parms{};
 
-	Parms.Index_0 = Index_0;
+	Parms.State = State;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBPC_LinkCharacterCustomControl_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.OnRep_IsGhostMode
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_LinkCharacterCustomControl_C::OnRep_IsGhostMode()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "OnRep_IsGhostMode");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.OnRep_HeadAccessorieIndex
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_LinkCharacterCustomControl_C::OnRep_HeadAccessorieIndex()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "OnRep_HeadAccessorieIndex");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.OnRep_BodyColorIndex
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_LinkCharacterCustomControl_C::OnRep_BodyColorIndex()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "OnRep_BodyColorIndex");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.Init
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.SetVisibility
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UMaterialInstanceDynamic*         OwnerDynamicMaterial                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_LinkCharacterCustomControl_C::Init(class UMaterialInstanceDynamic* OwnerDynamicMaterial)
+void UBPC_LinkCharacterCustomControl_C::SetVisibility(bool Visibility)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "Init");
+		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "SetVisibility");
 
-	Params::BPC_LinkCharacterCustomControl_C_Init Parms{};
+	Params::BPC_LinkCharacterCustomControl_C_SetVisibility Parms{};
 
-	Parms.OwnerDynamicMaterial = OwnerDynamicMaterial;
+	Parms.Visibility = Visibility;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.ExecuteUbergraph_BPC_LinkCharacterCustomControl
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.UpdateVisualBody
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_LinkCharacterCustomControl_C::ExecuteUbergraph_BPC_LinkCharacterCustomControl(int32 EntryPoint)
+void UBPC_LinkCharacterCustomControl_C::UpdateVisualBody()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "ExecuteUbergraph_BPC_LinkCharacterCustomControl");
+		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "UpdateVisualBody");
 
-	Params::BPC_LinkCharacterCustomControl_C_ExecuteUbergraph_BPC_LinkCharacterCustomControl Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.UpdateVisualHead
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_LinkCharacterCustomControl_C::UpdateVisualHead()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LinkCharacterCustomControl_C", "UpdateVisualHead");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

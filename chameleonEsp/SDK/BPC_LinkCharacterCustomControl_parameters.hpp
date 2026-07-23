@@ -17,51 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.SetVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_LinkCharacterCustomControl_C_SetVisibility final
-{
-public:
-	bool                                          Visibility;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_LinkCharacterCustomControl_C_SetVisibility;
-
-// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.SetHeadAccessorieVisiblity
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_LinkCharacterCustomControl_C_SetHeadAccessorieVisiblity final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_LinkCharacterCustomControl_C_SetHeadAccessorieVisiblity;
-
-// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.SetHeadAccessorieIndex(Server)
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_LinkCharacterCustomControl_C_SetHeadAccessorieIndex_Server_ final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_LinkCharacterCustomControl_C_SetHeadAccessorieIndex_Server_;
-
-// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.SetBodyColorIndex(Server)
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_LinkCharacterCustomControl_C_SetBodyColorIndex_Server_ final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_LinkCharacterCustomControl_C_SetBodyColorIndex_Server_;
-
-// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.Init
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_LinkCharacterCustomControl_C_Init final
-{
-public:
-	class UMaterialInstanceDynamic*               OwnerDynamicMaterial;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_LinkCharacterCustomControl_C_Init;
-
 // Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.ExecuteUbergraph_BPC_LinkCharacterCustomControl
 // 0x0110 (0x0110 - 0x0000)
 struct BPC_LinkCharacterCustomControl_C_ExecuteUbergraph_BPC_LinkCharacterCustomControl final
@@ -105,6 +60,51 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x010A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_LinkCharacterCustomControl_C_ExecuteUbergraph_BPC_LinkCharacterCustomControl;
+
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.Init
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_LinkCharacterCustomControl_C_Init final
+{
+public:
+	class UMaterialInstanceDynamic*               OwnerDynamicMaterial_0;                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_LinkCharacterCustomControl_C_Init;
+
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.SetBodyColorIndex(Server)
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_LinkCharacterCustomControl_C_SetBodyColorIndex_Server_ final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_LinkCharacterCustomControl_C_SetBodyColorIndex_Server_;
+
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.SetHeadAccessorieIndex(Server)
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_LinkCharacterCustomControl_C_SetHeadAccessorieIndex_Server_ final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_LinkCharacterCustomControl_C_SetHeadAccessorieIndex_Server_;
+
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.SetHeadAccessorieVisiblity
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_LinkCharacterCustomControl_C_SetHeadAccessorieVisiblity final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_LinkCharacterCustomControl_C_SetHeadAccessorieVisiblity;
+
+// Function BPC_LinkCharacterCustomControl.BPC_LinkCharacterCustomControl_C.SetVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_LinkCharacterCustomControl_C_SetVisibility final
+{
+public:
+	bool                                          Visibility;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_LinkCharacterCustomControl_C_SetVisibility;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,108 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_GoalHouse.BP_GoalHouse_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_GoalHouse_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GoalHouse_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GoalHouse.BP_GoalHouse_C.TargetActivate
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GoalHouse_C::TargetActivate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GoalHouse_C", "TargetActivate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GoalHouse.BP_GoalHouse_C.SetHouseState(Replicate)
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GoalHouse_C::SetHouseState_Replicate_(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GoalHouse_C", "SetHouseState(Replicate)");
-
-	Params::BP_GoalHouse_C_SetHouseState_Replicate_ Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GoalHouse.BP_GoalHouse_C.SetHouseActiveState
-// (Private, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GoalHouse_C::SetHouseActiveState(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GoalHouse_C", "SetHouseActiveState");
-
-	Params::BP_GoalHouse_C_SetHouseActiveState Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GoalHouse.BP_GoalHouse_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_GoalHouse_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GoalHouse_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GoalHouse.BP_GoalHouse_C.ExecuteUbergraph_BP_GoalHouse
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GoalHouse_C::ExecuteUbergraph_BP_GoalHouse(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GoalHouse_C", "ExecuteUbergraph_BP_GoalHouse");
-
-	Params::BP_GoalHouse_C_ExecuteUbergraph_BP_GoalHouse Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_GoalHouse.BP_GoalHouse_C.BndEvt__BP_GoalHouse_ChimneyLocation_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
 // (HasOutParams, BlueprintEvent)
 // Parameters:
@@ -145,6 +43,108 @@ void ABP_GoalHouse_C::BndEvt__BP_GoalHouse_ChimneyLocation_K2Node_ComponentBound
 	Parms.SweepResult = std::move(SweepResult);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GoalHouse.BP_GoalHouse_C.ExecuteUbergraph_BP_GoalHouse
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GoalHouse_C::ExecuteUbergraph_BP_GoalHouse(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GoalHouse_C", "ExecuteUbergraph_BP_GoalHouse");
+
+	Params::BP_GoalHouse_C_ExecuteUbergraph_BP_GoalHouse Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GoalHouse.BP_GoalHouse_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_GoalHouse_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GoalHouse_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GoalHouse.BP_GoalHouse_C.SetHouseActiveState
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GoalHouse_C::SetHouseActiveState(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GoalHouse_C", "SetHouseActiveState");
+
+	Params::BP_GoalHouse_C_SetHouseActiveState Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GoalHouse.BP_GoalHouse_C.SetHouseState(Replicate)
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GoalHouse_C::SetHouseState_Replicate_(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GoalHouse_C", "SetHouseState(Replicate)");
+
+	Params::BP_GoalHouse_C_SetHouseState_Replicate_ Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GoalHouse.BP_GoalHouse_C.TargetActivate
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GoalHouse_C::TargetActivate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GoalHouse_C", "TargetActivate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GoalHouse.BP_GoalHouse_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_GoalHouse_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GoalHouse_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

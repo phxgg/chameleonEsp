@@ -16,353 +16,28 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.ExecuteUbergraph_BP_CraftedObject_Base
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CraftedObject_Base_C::ExecuteUbergraph_BP_CraftedObject_Base(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "ExecuteUbergraph_BP_CraftedObject_Base");
-
-	Params::BP_CraftedObject_Base_C_ExecuteUbergraph_BP_CraftedObject_Base Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void ABP_CraftedObject_Base_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.SetForceGrabTarget
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_FirstPersonCharacter_LINK_C*  ForceGrabTarget_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CraftedObject_Base_C::SetForceGrabTarget(class ABP_FirstPersonCharacter_LINK_C* ForceGrabTarget_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "SetForceGrabTarget");
-
-	Params::BP_CraftedObject_Base_C_SetForceGrabTarget Parms{};
-
-	Parms.ForceGrabTarget_0 = ForceGrabTarget_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.ForceGrab
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_CraftedObject_Base_C::ForceGrab()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "ForceGrab");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_CraftedObject_Base_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.DamageToPlayerController
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                HitRezult                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CraftedObject_Base_C::DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "DamageToPlayerController");
-
-	Params::BP_CraftedObject_Base_C_DamageToPlayerController Parms{};
-
-	Parms.TargetActor = TargetActor;
-	Parms.DamageValue = DamageValue;
-	Parms.TeamIndex = TeamIndex;
-	Parms.DamageType = DamageType;
-	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
-	Parms.UnAvoidable = UnAvoidable;
-	Parms.DamageName = DamageName;
-	Parms.HitRezult = std::move(HitRezult);
-	Parms.SourceActor = SourceActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.StaminaDamage
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CraftedObject_Base_C::StaminaDamage(double Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "StaminaDamage");
-
-	Params::BP_CraftedObject_Base_C_StaminaDamage Parms{};
-
-	Parms.Value = Value;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.StanDamage
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EN_StanType                             StanType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CraftedObject_Base_C::StanDamage(EN_StanType StanType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "StanDamage");
-
-	Params::BP_CraftedObject_Base_C_StanDamage Parms{};
-
-	Parms.StanType = StanType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.UpdateCoreDatas
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FST_ItemCoreDatas&         CoreDatas                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void ABP_CraftedObject_Base_C::UpdateCoreDatas(const struct FST_ItemCoreDatas& CoreDatas)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "UpdateCoreDatas");
-
-	Params::BP_CraftedObject_Base_C_UpdateCoreDatas Parms{};
-
-	Parms.CoreDatas = std::move(CoreDatas);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.PickState
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonCharacter_Main_C*  Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CraftedObject_Base_C::PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "PickState");
-
-	Params::BP_CraftedObject_Base_C_PickState Parms{};
-
-	Parms.State = State;
-	Parms.Character = Character;
-	Parms.SlotIndex = SlotIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.InteractItem
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_CraftedObject_Base_C::InteractItem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "InteractItem");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.SetMeshDatas
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    KeepScale                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CraftedObject_Base_C::SetMeshDatas(bool KeepScale)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "SetMeshDatas");
-
-	Params::BP_CraftedObject_Base_C_SetMeshDatas Parms{};
-
-	Parms.KeepScale = KeepScale;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.DropItem
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   Force_Vector                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   CentorPosition                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CraftedObject_Base_C::DropItem(const struct FVector& Force_Vector, const struct FVector& CentorPosition)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "DropItem");
-
-	Params::BP_CraftedObject_Base_C_DropItem Parms{};
-
-	Parms.Force_Vector = std::move(Force_Vector);
-	Parms.CentorPosition = std::move(CentorPosition);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.OnRep_ForceGrabTarget
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_CraftedObject_Base_C::OnRep_ForceGrabTarget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "OnRep_ForceGrabTarget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.GetParryState
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.IsChangeImage
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool*                                   State                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   IsInteract                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText*                            OverrideText                                           (Parm, OutParm)
 
-void ABP_CraftedObject_Base_C::GetParryState(bool* State)
+void ABP_CraftedObject_Base_C::IsChangeImage(bool* IsInteract, class FText* OverrideText)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "GetParryState");
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "IsChangeImage");
 
-	Params::BP_CraftedObject_Base_C_GetParryState Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (State != nullptr)
-		*State = Parms.State;
-}
-
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.Damage
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FFinishFilter*                   Finish                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CraftedObject_Base_C::Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "Damage");
-
-	Params::BP_CraftedObject_Base_C_Damage Parms{};
-
-	Parms.DamageValue = DamageValue;
-	Parms.TeamIndex = TeamIndex;
-	Parms.DamageType = DamageType;
-	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
-	Parms.UnAvoidable = UnAvoidable;
-	Parms.DamageName = DamageName;
-	Parms.SourceActor = SourceActor;
+	Params::BP_CraftedObject_Base_C_IsChangeImage Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Finish != nullptr)
-		*Finish = std::move(Parms.Finish);
-}
+	if (IsInteract != nullptr)
+		*IsInteract = Parms.IsInteract;
 
-
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.GetParentCharacter
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CraftedObject_Base_C::GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "GetParentCharacter");
-
-	Params::BP_CraftedObject_Base_C_GetParentCharacter Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (FirstpersonCharacter != nullptr)
-		*FirstpersonCharacter = Parms.FirstpersonCharacter;
+	if (OverrideText != nullptr)
+		*OverrideText = std::move(Parms.OverrideText);
 }
 
 
@@ -419,28 +94,353 @@ void ABP_CraftedObject_Base_C::GetItemInfo(ENUM_HandType* HandType, ENUM_ClassTy
 }
 
 
-// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.IsChangeImage
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.GetParentCharacter
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool*                                   IsInteract                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText*                            OverrideText                                           (Parm, OutParm)
+// class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CraftedObject_Base_C::IsChangeImage(bool* IsInteract, class FText* OverrideText)
+void ABP_CraftedObject_Base_C::GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_Base_C", "IsChangeImage");
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "GetParentCharacter");
 
-	Params::BP_CraftedObject_Base_C_IsChangeImage Parms{};
+	Params::BP_CraftedObject_Base_C_GetParentCharacter Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (IsInteract != nullptr)
-		*IsInteract = Parms.IsInteract;
+	if (FirstpersonCharacter != nullptr)
+		*FirstpersonCharacter = Parms.FirstpersonCharacter;
+}
 
-	if (OverrideText != nullptr)
-		*OverrideText = std::move(Parms.OverrideText);
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.Damage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FFinishFilter*                   Finish                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CraftedObject_Base_C::Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "Damage");
+
+	Params::BP_CraftedObject_Base_C_Damage Parms{};
+
+	Parms.DamageValue = DamageValue;
+	Parms.TeamIndex = TeamIndex;
+	Parms.DamageType = DamageType;
+	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
+	Parms.UnAvoidable = UnAvoidable;
+	Parms.DamageName = DamageName;
+	Parms.SourceActor = SourceActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Finish != nullptr)
+		*Finish = std::move(Parms.Finish);
+}
+
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.GetParryState
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   State                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CraftedObject_Base_C::GetParryState(bool* State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "GetParryState");
+
+	Params::BP_CraftedObject_Base_C_GetParryState Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (State != nullptr)
+		*State = Parms.State;
+}
+
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.OnRep_ForceGrabTarget
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_CraftedObject_Base_C::OnRep_ForceGrabTarget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "OnRep_ForceGrabTarget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.DropItem
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   Force_Vector                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   CentorPosition                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CraftedObject_Base_C::DropItem(const struct FVector& Force_Vector, const struct FVector& CentorPosition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "DropItem");
+
+	Params::BP_CraftedObject_Base_C_DropItem Parms{};
+
+	Parms.Force_Vector = std::move(Force_Vector);
+	Parms.CentorPosition = std::move(CentorPosition);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.SetMeshDatas
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    KeepScale                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CraftedObject_Base_C::SetMeshDatas(bool KeepScale)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "SetMeshDatas");
+
+	Params::BP_CraftedObject_Base_C_SetMeshDatas Parms{};
+
+	Parms.KeepScale = KeepScale;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.InteractItem
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_CraftedObject_Base_C::InteractItem()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "InteractItem");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.PickState
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C*  Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CraftedObject_Base_C::PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "PickState");
+
+	Params::BP_CraftedObject_Base_C_PickState Parms{};
+
+	Parms.State = State;
+	Parms.Character = Character;
+	Parms.SlotIndex = SlotIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.UpdateCoreDatas
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FST_ItemCoreDatas&         CoreDatas                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ABP_CraftedObject_Base_C::UpdateCoreDatas(const struct FST_ItemCoreDatas& CoreDatas)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "UpdateCoreDatas");
+
+	Params::BP_CraftedObject_Base_C_UpdateCoreDatas Parms{};
+
+	Parms.CoreDatas = std::move(CoreDatas);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.StanDamage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EN_StanType                             StanType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CraftedObject_Base_C::StanDamage(EN_StanType StanType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "StanDamage");
+
+	Params::BP_CraftedObject_Base_C_StanDamage Parms{};
+
+	Parms.StanType = StanType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.StaminaDamage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CraftedObject_Base_C::StaminaDamage(double Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "StaminaDamage");
+
+	Params::BP_CraftedObject_Base_C_StaminaDamage Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.DamageToPlayerController
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                HitRezult                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CraftedObject_Base_C::DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "DamageToPlayerController");
+
+	Params::BP_CraftedObject_Base_C_DamageToPlayerController Parms{};
+
+	Parms.TargetActor = TargetActor;
+	Parms.DamageValue = DamageValue;
+	Parms.TeamIndex = TeamIndex;
+	Parms.DamageType = DamageType;
+	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
+	Parms.UnAvoidable = UnAvoidable;
+	Parms.DamageName = DamageName;
+	Parms.HitRezult = std::move(HitRezult);
+	Parms.SourceActor = SourceActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_CraftedObject_Base_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.ForceGrab
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_CraftedObject_Base_C::ForceGrab()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "ForceGrab");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.SetForceGrabTarget
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonCharacter_LINK_C*  ForceGrabTarget_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CraftedObject_Base_C::SetForceGrabTarget(class ABP_FirstPersonCharacter_LINK_C* ForceGrabTarget_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "SetForceGrabTarget");
+
+	Params::BP_CraftedObject_Base_C_SetForceGrabTarget Parms{};
+
+	Parms.ForceGrabTarget_0 = ForceGrabTarget_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_CraftedObject_Base_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CraftedObject_Base.BP_CraftedObject_Base_C.ExecuteUbergraph_BP_CraftedObject_Base
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CraftedObject_Base_C::ExecuteUbergraph_BP_CraftedObject_Base(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_Base_C", "ExecuteUbergraph_BP_CraftedObject_Base");
+
+	Params::BP_CraftedObject_Base_C_ExecuteUbergraph_BP_CraftedObject_Base Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -25,10 +25,10 @@ public:
 	TMulticastInlineDelegate<void(const class FString& MainString, int32 Index_0)> ReciveText;       // 0x00C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void SendToText_Server_(const class FString& MainString, int32 Index_0);
-	void SendToText_Local_(const class FString& MainString, int32 Index_0);
-	void SendToText_Client_(const class FString& MainString, int32 Index_0);
 	void ExecuteUbergraph_BPC_TextChatControl(int32 EntryPoint);
+	void SendToText_Client_(const class FString& MainString, int32 Index_0);
+	void SendToText_Local_(const class FString& MainString, int32 Index_0);
+	void SendToText_Server_(const class FString& MainString, int32 Index_0);
 
 public:
 	static class UClass* StaticClass()

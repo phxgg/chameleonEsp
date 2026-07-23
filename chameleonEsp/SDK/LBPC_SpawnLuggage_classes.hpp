@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ST_SpawnLuggageDatas_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ST_SpawnLuggageDatas_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -28,8 +28,8 @@ public:
 	struct FST_SpawnLuggageDatas                  SpawnTarget;                                       // 0x0260(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
-	void SpawnItem(const struct FGuid& UniqueID);
 	void ExecuteUbergraph_LBPC_SpawnLuggage(int32 EntryPoint);
+	void SpawnItem(const struct FGuid& UniqueID);
 
 public:
 	static class UClass* StaticClass()

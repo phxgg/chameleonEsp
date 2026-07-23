@@ -17,32 +17,14 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPI_AI_Attack.BPI_AI_Attack_C.ThrowState
+// Function BPI_AI_Attack.BPI_AI_Attack_C.Attack
 // 0x0001 (0x0001 - 0x0000)
-struct BPI_AI_Attack_C_ThrowState final
+struct BPI_AI_Attack_C_Attack final
 {
 public:
-	EN_ThrowState                                 ThrowState;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAttackType                                   AttackType;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPI_AI_Attack_C_ThrowState;
-
-// Function BPI_AI_Attack.BPI_AI_Attack_C.DamageState
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_AI_Attack_C_DamageState final
-{
-public:
-	bool                                          Active;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPI_AI_Attack_C_DamageState;
-
-// Function BPI_AI_Attack.BPI_AI_Attack_C.Avoid
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_AI_Attack_C_Avoid final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPI_AI_Attack_C_Avoid;
+DUMPER7_ASSERTS_BPI_AI_Attack_C_Attack;
 
 // Function BPI_AI_Attack.BPI_AI_Attack_C.AttackNotify
 // 0x0004 (0x0004 - 0x0000)
@@ -53,14 +35,32 @@ public:
 };
 DUMPER7_ASSERTS_BPI_AI_Attack_C_AttackNotify;
 
-// Function BPI_AI_Attack.BPI_AI_Attack_C.Attack
+// Function BPI_AI_Attack.BPI_AI_Attack_C.Avoid
 // 0x0001 (0x0001 - 0x0000)
-struct BPI_AI_Attack_C_Attack final
+struct BPI_AI_Attack_C_Avoid final
 {
 public:
-	EAttackType                                   AttackType;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPI_AI_Attack_C_Attack;
+DUMPER7_ASSERTS_BPI_AI_Attack_C_Avoid;
+
+// Function BPI_AI_Attack.BPI_AI_Attack_C.DamageState
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_AI_Attack_C_DamageState final
+{
+public:
+	bool                                          Active;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPI_AI_Attack_C_DamageState;
+
+// Function BPI_AI_Attack.BPI_AI_Attack_C.ThrowState
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_AI_Attack_C_ThrowState final
+{
+public:
+	EN_ThrowState                                 ThrowState_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPI_AI_Attack_C_ThrowState;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

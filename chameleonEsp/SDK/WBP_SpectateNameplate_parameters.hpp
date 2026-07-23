@@ -14,42 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.ViewChange
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_SpectateNameplate_C_ViewChange final
-{
-public:
-	class ABP_FirstPersonCharacter_Main_C*        SourcePlayer;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_SpectateNameplate_C_ViewChange;
-
-// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.SetupSpectateNameplate
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_SpectateNameplate_C_SetupSpectateNameplate final
-{
-public:
-	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_SpectateNameplate_C_SetupSpectateNameplate;
-
-// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_SpectateNameplate_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_SpectateNameplate_C_PreConstruct;
-
-// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.GetCustomPlayerName
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_SpectateNameplate_C_GetCustomPlayerName final
-{
-public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_SpectateNameplate_C_GetCustomPlayerName;
-
 // Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.ExecuteUbergraph_WBP_SpectateNameplate
 // 0x0068 (0x0068 - 0x0000)
 struct WBP_SpectateNameplate_C_ExecuteUbergraph_WBP_SpectateNameplate final
@@ -71,6 +35,42 @@ public:
 	class ABP_FirstPersonCharacter_Main_C*        K2Node_Event_Character;                            // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_SpectateNameplate_C_ExecuteUbergraph_WBP_SpectateNameplate;
+
+// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.GetCustomPlayerName
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_SpectateNameplate_C_GetCustomPlayerName final
+{
+public:
+	class FString                                 playerName;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_SpectateNameplate_C_GetCustomPlayerName;
+
+// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_SpectateNameplate_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_SpectateNameplate_C_PreConstruct;
+
+// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.SetupSpectateNameplate
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_SpectateNameplate_C_SetupSpectateNameplate final
+{
+public:
+	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_SpectateNameplate_C_SetupSpectateNameplate;
+
+// Function WBP_SpectateNameplate.WBP_SpectateNameplate_C.ViewChange
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_SpectateNameplate_C_ViewChange final
+{
+public:
+	class ABP_FirstPersonCharacter_Main_C*        SourcePlayer;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_SpectateNameplate_C_ViewChange;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

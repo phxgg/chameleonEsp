@@ -10,754 +10,348 @@
 
 #include "Basic.hpp"
 
-#include "EN_ThrowState_structs.hpp"
-#include "EN_DamageType_structs.hpp"
-#include "AIModule_structs.hpp"
 #include "FinishFilter_structs.hpp"
 #include "ST_AttackDatas_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ENUM_ActorType_structs.hpp"
+#include "EN_DamageType_structs.hpp"
 #include "EN_StrafingDirection_structs.hpp"
+#include "ENUM_ActorType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EN_ThrowState_structs.hpp"
 #include "EN_StanType_structs.hpp"
-#include "ENUM_CameraMode_structs.hpp"
 #include "AttackType_structs.hpp"
+#include "ENUM_CameraMode_structs.hpp"
 #include "ST_EventValue_structs.hpp"
+#include "AIModule_structs.hpp"
 #include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function Enemy_AI_Base.Enemy_AI_Base_C.View In Out Function
-// 0x0004 (0x0004 - 0x0000)
-struct Enemy_AI_Base_C_View_In_Out_Function final
+// Function Enemy_AI_Base.Enemy_AI_Base_C.AIState
+// 0x0018 (0x0018 - 0x0000)
+struct Enemy_AI_Base_C_AIState final
 {
 public:
-	int32                                         Stencil_Value;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AAIController*                          CallFunc_GetAIController_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AAIController*                          CallFunc_GetAIController_ReturnValue_1;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Enemy_AI_Base_C_View_In_Out_Function;
+DUMPER7_ASSERTS_Enemy_AI_Base_C_AIState;
 
-// Function Enemy_AI_Base.Enemy_AI_Base_C.UserDatasAttackControl
-// 0x0058 (0x0058 - 0x0000)
-struct Enemy_AI_Base_C_UserDatasAttackControl final
-{
-public:
-	struct FST_AttackDatas                        AttackDatas;                                       // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	class FName                                   AttackName;                                        // 0x0050(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_UserDatasAttackControl;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.ThrowState
+// Function Enemy_AI_Base.Enemy_AI_Base_C.Attack
 // 0x0001 (0x0001 - 0x0000)
-struct Enemy_AI_Base_C_ThrowState final
+struct Enemy_AI_Base_C_Attack final
 {
 public:
-	EN_ThrowState                                 ThrowState;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAttackType                                   AttackType;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Enemy_AI_Base_C_ThrowState;
+DUMPER7_ASSERTS_Enemy_AI_Base_C_Attack;
 
-// Function Enemy_AI_Base.Enemy_AI_Base_C.SuperArmorCall
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_SuperArmorCall final
+// Function Enemy_AI_Base.Enemy_AI_Base_C.Attack_AC
+// 0x0028 (0x0028 - 0x0000)
+struct Enemy_AI_Base_C_Attack_AC final
 {
 public:
-	double                                        AddValue;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_SuperArmorCall;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.StrafingStateChange
-// 0x0002 (0x0002 - 0x0000)
-struct Enemy_AI_Base_C_StrafingStateChange final
-{
-public:
-	bool                                          IsStrafing;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_StrafingDirection                          Direction;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_StrafingStateChange;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.StopAI
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_StopAI final
-{
-public:
-	class AAIController*                          CallFunc_GetAIController_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_StopAI;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.StanDamage
-// 0x0001 (0x0001 - 0x0000)
-struct Enemy_AI_Base_C_StanDamage final
-{
-public:
-	EN_StanType                                   StanType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_StanDamage;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.Stan
-// 0x0010 (0x0010 - 0x0000)
-struct Enemy_AI_Base_C_Stan final
-{
-public:
-	double                                        Time;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_StanType                                   StanType;                                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_Stan;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.StaminaWearDown
-// 0x0058 (0x0058 - 0x0000)
-struct Enemy_AI_Base_C_StaminaWearDown final
-{
-public:
-	double                                        WearDownValue;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SlowDamage;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsParry;                                           // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetNormalizeValue_NormalizeValue;         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   AttackName;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageMultiply_0;                                  // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          MutipleHitPossible;                                // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue_1;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetNormalizeValue_NormalizeValue_1;       // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWBP_SuperStan_C*                       CallFunc_Create_ReturnValue;                       // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        StanMultiply;                                      // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Enemy_AI_Base_C_StaminaWearDown;
+DUMPER7_ASSERTS_Enemy_AI_Base_C_Attack_AC;
 
-// Function Enemy_AI_Base.Enemy_AI_Base_C.StaminaDamage
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_StaminaDamage final
+// Function Enemy_AI_Base.Enemy_AI_Base_C.Attack_AC_Remote
+// 0x0020 (0x0020 - 0x0000)
+struct Enemy_AI_Base_C_Attack_AC_Remote final
 {
 public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ComponentName;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageMultiply_0;                                  // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        StanMultiply;                                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Enemy_AI_Base_C_StaminaDamage;
+DUMPER7_ASSERTS_Enemy_AI_Base_C_Attack_AC_Remote;
 
-// Function Enemy_AI_Base.Enemy_AI_Base_C.StaminaCall
+// Function Enemy_AI_Base.Enemy_AI_Base_C.AttackDataTableSetup
+// 0x0010 (0x0010 - 0x0000)
+struct Enemy_AI_Base_C_AttackDataTableSetup final
+{
+public:
+	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0000(0x0010)(ReferenceParm)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_AttackDataTableSetup;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.AttackNamesControl
+// 0x0038 (0x0038 - 0x0000)
+struct Enemy_AI_Base_C_AttackNamesControl final
+{
+public:
+	class FName                                   AttackName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           Temp_wildcard_Variable;                            // 0x0008(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x002E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F[0x1];                                       // 0x002F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_AttackNamesControl;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.AttackNotify
+// 0x0004 (0x0004 - 0x0000)
+struct Enemy_AI_Base_C_AttackNotify final
+{
+public:
+	int32                                         ID;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_AttackNotify;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.Avoid
+// 0x0001 (0x0001 - 0x0000)
+struct Enemy_AI_Base_C_Avoid final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_Avoid;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__BP_Enemy_AI_Hamburger_Base_BPC_AttackCollisionControl_K2Node_ComponentBoundEvent_1_HitEvent__DelegateSignature
+// 0x0120 (0x0120 - 0x0000)
+struct Enemy_AI_Base_C_BndEvt__BP_Enemy_AI_Hamburger_Base_BPC_AttackCollisionControl_K2Node_ComponentBoundEvent_1_HitEvent__DelegateSignature final
+{
+public:
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__BP_Enemy_AI_Hamburger_Base_BPC_AttackCollisionControl_K2Node_ComponentBoundEvent_1_HitEvent__DelegateSignature;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__Enemy_AI_Base_AIPerception_K2Node_ComponentBoundEvent_7_PerceptionUpdatedDelegate__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_AIPerception_K2Node_ComponentBoundEvent_7_PerceptionUpdatedDelegate__DelegateSignature final
+{
+public:
+	TArray<class AActor*>                         UpdatedActors;                                     // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_AIPerception_K2Node_ComponentBoundEvent_7_PerceptionUpdatedDelegate__DelegateSignature;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__Enemy_AI_Base_BPC_AIMoveControl_K2Node_ComponentBoundEvent_2_MoveEndSignal__DelegateSignature
+// 0x000C (0x000C - 0x0000)
+struct Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_AIMoveControl_K2Node_ComponentBoundEvent_2_MoveEndSignal__DelegateSignature final
+{
+public:
+	EPathFollowingResult                          OutPutRezult;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   AttackName;                                        // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_AIMoveControl_K2Node_ComponentBoundEvent_2_MoveEndSignal__DelegateSignature;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__Enemy_AI_Base_BPC_HealthGaugeControl_K2Node_ComponentBoundEvent_3_ChangedValue__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_StaminaCall final
+struct Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_HealthGaugeControl_K2Node_ComponentBoundEvent_3_ChangedValue__DelegateSignature final
+{
+public:
+	double                                        UpdateValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_HealthGaugeControl_K2Node_ComponentBoundEvent_3_ChangedValue__DelegateSignature;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__Enemy_AI_Base_BPC_HealthGaugeControlSub_K2Node_ComponentBoundEvent_4_ChangedValue__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_HealthGaugeControlSub_K2Node_ComponentBoundEvent_4_ChangedValue__DelegateSignature final
+{
+public:
+	double                                        UpdateValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_HealthGaugeControlSub_K2Node_ComponentBoundEvent_4_ChangedValue__DelegateSignature;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_9_ChangedValue__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_9_ChangedValue__DelegateSignature final
+{
+public:
+	double                                        UpdateValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_9_ChangedValue__DelegateSignature;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControlSub_K2Node_ComponentBoundEvent_10_ChangedValue__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControlSub_K2Node_ComponentBoundEvent_10_ChangedValue__DelegateSignature final
+{
+public:
+	double                                        UpdateValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControlSub_K2Node_ComponentBoundEvent_10_ChangedValue__DelegateSignature;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__Enemy_AI_Base_CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature
+// 0x0130 (0x0130 - 0x0000)
+struct Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature final
+{
+public:
+	class UPrimitiveComponent*                    HitComponent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                NormalImpulse;                                     // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             Hit;                                               // 0x0030(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__Enemy_AI_Base_DeviceComponent_K2Node_ComponentBoundEvent_4_OnSignal__DelegateSignature
+// 0x0028 (0x0028 - 0x0000)
+struct Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_DeviceComponent_K2Node_ComponentBoundEvent_4_OnSignal__DelegateSignature final
+{
+public:
+	struct FST_EventValue                         SignalValue;                                       // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_DeviceComponent_K2Node_ComponentBoundEvent_4_OnSignal__DelegateSignature;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.Change Movement
+// 0x0001 (0x0001 - 0x0000)
+struct Enemy_AI_Base_C_Change_Movement final
+{
+public:
+	bool                                          Value;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_Change_Movement;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.Combo
+// 0x0010 (0x0010 - 0x0000)
+struct Enemy_AI_Base_C_Combo final
+{
+public:
+	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ComboName;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_Combo;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.CustomAttack
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_CustomAttack final
+{
+public:
+	class FName                                   AttackName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_CustomAttack;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.Damage
+// 0x0180 (0x0180 - 0x0000)
+struct Enemy_AI_Base_C_Damage final
+{
+public:
+	double                                        DamageValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TeamIndex_0;                                       // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_DamageType                                 DamageType;                                        // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             SourceAgentPoint;                                  // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UnAvoidable;                                       // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   DamageName;                                        // 0x0074(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 SourceActor;                                       // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FFinishFilter                          Finish;                                            // 0x0088(0x0002)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8A[0x6];                                       // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        DamageRatio;                                       // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          FinishBool;                                        // 0x0098(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x00B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x00EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EB[0x5];                                       // 0x00EB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetRowValue_Value;                        // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FB[0x5];                                       // 0x00FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0100(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_FindLookAtRotation_ReturnValue;           // 0x0118(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x0148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_Damage;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.Damage Effect
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_Damage_Effect final
+{
+public:
+	double                                        DamageRatio;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_Damage_Effect;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.DamageCall
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_DamageCall final
 {
 public:
 	double                                        AddValue;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Enemy_AI_Base_C_StaminaCall;
+DUMPER7_ASSERTS_Enemy_AI_Base_C_DamageCall;
 
-// Function Enemy_AI_Base.Enemy_AI_Base_C.SetUpBlackBoardValue
-// 0x0010 (0x0010 - 0x0000)
-struct Enemy_AI_Base_C_SetUpBlackBoardValue final
+// Function Enemy_AI_Base.Enemy_AI_Base_C.DamageState
+// 0x0001 (0x0001 - 0x0000)
+struct Enemy_AI_Base_C_DamageState final
 {
 public:
-	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBlackboardComponent*                   CallFunc_GetBlackboard_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          Active;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Enemy_AI_Base_C_SetUpBlackBoardValue;
+DUMPER7_ASSERTS_Enemy_AI_Base_C_DamageState;
 
-// Function Enemy_AI_Base.Enemy_AI_Base_C.SetStrafing
-// 0x0002 (0x0002 - 0x0000)
-struct Enemy_AI_Base_C_SetStrafing final
+// Function Enemy_AI_Base.Enemy_AI_Base_C.DamageToPlayerController
+// 0x01A0 (0x01A0 - 0x0000)
+struct Enemy_AI_Base_C_DamageToPlayerController final
 {
 public:
-	bool                                          IsStrafing;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_StrafingDirection                          Direction;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageValue;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TeamIndex_0;                                       // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_DamageType                                 DamageType;                                        // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_15[0xB];                                       // 0x0015(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             SourceAgentPoint;                                  // 0x0020(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UnAvoidable;                                       // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   DamageName;                                        // 0x0084(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             HitRezult;                                         // 0x0090(0x0100)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AActor*                                 SourceActor;                                       // 0x0190(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Enemy_AI_Base_C_SetStrafing;
+DUMPER7_ASSERTS_Enemy_AI_Base_C_DamageToPlayerController;
 
-// Function Enemy_AI_Base.Enemy_AI_Base_C.SetActorInfo
-// 0x0020 (0x0020 - 0x0000)
-struct Enemy_AI_Base_C_SetActorInfo final
+// Function Enemy_AI_Base.Enemy_AI_Base_C.DestroyLockOnSystems
+// 0x0038 (0x0038 - 0x0000)
+struct Enemy_AI_Base_C_DestroyLockOnSystems final
 {
 public:
-	struct FVector                                ToPosition;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Comp;                                              // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_SetActorInfo;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.Set Difficulty
-// 0x0004 (0x0004 - 0x0000)
-struct Enemy_AI_Base_C_Set_Difficulty final
-{
-public:
-	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_Set_Difficulty;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.Reverse
-// 0x0080 (0x0080 - 0x0000)
-struct Enemy_AI_Base_C_Reverse final
-{
-public:
-	struct FTransform                             NewPosition;                                       // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                HitNormal;                                         // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_Reverse;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.RestartAI
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_RestartAI final
-{
-public:
-	class AAIController*                          CallFunc_GetAIController_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_RestartAI;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.PhaseChangeCheck
-// 0x0048 (0x0048 - 0x0000)
-struct Enemy_AI_Base_C_PhaseChangeCheck final
-{
-public:
-	class FString                                 Comment;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	bool                                          PhaseChange;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CheckState;                                        // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class ULBPC_LockOn_C*>                 CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULBPC_LockOn_C*                         CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetNormalizeValue_NormalizeValue;         // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Enemy_AI_Base_C_PhaseChangeCheck;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_F892FC25472E66E809047FB1FBA2DF9B
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyEnd_F892FC25472E66E809047FB1FBA2DF9B final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_F892FC25472E66E809047FB1FBA2DF9B;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_DE3366654C5E4918D44FCBA3E1FFFDE1
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyEnd_DE3366654C5E4918D44FCBA3E1FFFDE1 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_DE3366654C5E4918D44FCBA3E1FFFDE1;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_C770FE1A4556A10A1DF7C19398AB17C4
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyEnd_C770FE1A4556A10A1DF7C19398AB17C4 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_C770FE1A4556A10A1DF7C19398AB17C4;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_BD4416DA4F8495B4F0081A86FA9C4192
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyEnd_BD4416DA4F8495B4F0081A86FA9C4192 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_BD4416DA4F8495B4F0081A86FA9C4192;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_78247E4C4C86921A63612294DED648BA
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyEnd_78247E4C4C86921A63612294DED648BA final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_78247E4C4C86921A63612294DED648BA;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_67E598DC4C1E9C3A96AB859FA2C2113E
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyEnd_67E598DC4C1E9C3A96AB859FA2C2113E final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_67E598DC4C1E9C3A96AB859FA2C2113E;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_4A4808B74EBDDEC087B4E1937DA87E3F
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyEnd_4A4808B74EBDDEC087B4E1937DA87E3F final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_4A4808B74EBDDEC087B4E1937DA87E3F;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_31AC38724CA60DE73382B0A8157A6526
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyEnd_31AC38724CA60DE73382B0A8157A6526 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_31AC38724CA60DE73382B0A8157A6526;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_1DFAA9FF4C0513B576788988F3746C0F
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyEnd_1DFAA9FF4C0513B576788988F3746C0F final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_1DFAA9FF4C0513B576788988F3746C0F;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_F892FC25472E66E809047FB1FBA2DF9B
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyBegin_F892FC25472E66E809047FB1FBA2DF9B final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_F892FC25472E66E809047FB1FBA2DF9B;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_DE3366654C5E4918D44FCBA3E1FFFDE1
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyBegin_DE3366654C5E4918D44FCBA3E1FFFDE1 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_DE3366654C5E4918D44FCBA3E1FFFDE1;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_C770FE1A4556A10A1DF7C19398AB17C4
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyBegin_C770FE1A4556A10A1DF7C19398AB17C4 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_C770FE1A4556A10A1DF7C19398AB17C4;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_BD4416DA4F8495B4F0081A86FA9C4192
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyBegin_BD4416DA4F8495B4F0081A86FA9C4192 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_BD4416DA4F8495B4F0081A86FA9C4192;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_78247E4C4C86921A63612294DED648BA
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyBegin_78247E4C4C86921A63612294DED648BA final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_78247E4C4C86921A63612294DED648BA;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_67E598DC4C1E9C3A96AB859FA2C2113E
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyBegin_67E598DC4C1E9C3A96AB859FA2C2113E final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_67E598DC4C1E9C3A96AB859FA2C2113E;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_4A4808B74EBDDEC087B4E1937DA87E3F
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyBegin_4A4808B74EBDDEC087B4E1937DA87E3F final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_4A4808B74EBDDEC087B4E1937DA87E3F;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_31AC38724CA60DE73382B0A8157A6526
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyBegin_31AC38724CA60DE73382B0A8157A6526 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_31AC38724CA60DE73382B0A8157A6526;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_1DFAA9FF4C0513B576788988F3746C0F
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnNotifyBegin_1DFAA9FF4C0513B576788988F3746C0F final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_1DFAA9FF4C0513B576788988F3746C0F;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_F892FC25472E66E809047FB1FBA2DF9B
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnInterrupted_F892FC25472E66E809047FB1FBA2DF9B final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_F892FC25472E66E809047FB1FBA2DF9B;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_DE3366654C5E4918D44FCBA3E1FFFDE1
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnInterrupted_DE3366654C5E4918D44FCBA3E1FFFDE1 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_DE3366654C5E4918D44FCBA3E1FFFDE1;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_C770FE1A4556A10A1DF7C19398AB17C4
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnInterrupted_C770FE1A4556A10A1DF7C19398AB17C4 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_C770FE1A4556A10A1DF7C19398AB17C4;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_BD4416DA4F8495B4F0081A86FA9C4192
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnInterrupted_BD4416DA4F8495B4F0081A86FA9C4192 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_BD4416DA4F8495B4F0081A86FA9C4192;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_78247E4C4C86921A63612294DED648BA
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnInterrupted_78247E4C4C86921A63612294DED648BA final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_78247E4C4C86921A63612294DED648BA;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_67E598DC4C1E9C3A96AB859FA2C2113E
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnInterrupted_67E598DC4C1E9C3A96AB859FA2C2113E final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_67E598DC4C1E9C3A96AB859FA2C2113E;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_4A4808B74EBDDEC087B4E1937DA87E3F
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnInterrupted_4A4808B74EBDDEC087B4E1937DA87E3F final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_4A4808B74EBDDEC087B4E1937DA87E3F;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_31AC38724CA60DE73382B0A8157A6526
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnInterrupted_31AC38724CA60DE73382B0A8157A6526 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_31AC38724CA60DE73382B0A8157A6526;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_1DFAA9FF4C0513B576788988F3746C0F
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnInterrupted_1DFAA9FF4C0513B576788988F3746C0F final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_1DFAA9FF4C0513B576788988F3746C0F;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_F892FC25472E66E809047FB1FBA2DF9B
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnCompleted_F892FC25472E66E809047FB1FBA2DF9B final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_F892FC25472E66E809047FB1FBA2DF9B;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_DE3366654C5E4918D44FCBA3E1FFFDE1
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnCompleted_DE3366654C5E4918D44FCBA3E1FFFDE1 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_DE3366654C5E4918D44FCBA3E1FFFDE1;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_C770FE1A4556A10A1DF7C19398AB17C4
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnCompleted_C770FE1A4556A10A1DF7C19398AB17C4 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_C770FE1A4556A10A1DF7C19398AB17C4;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_BD4416DA4F8495B4F0081A86FA9C4192
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnCompleted_BD4416DA4F8495B4F0081A86FA9C4192 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_BD4416DA4F8495B4F0081A86FA9C4192;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_78247E4C4C86921A63612294DED648BA
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnCompleted_78247E4C4C86921A63612294DED648BA final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_78247E4C4C86921A63612294DED648BA;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_67E598DC4C1E9C3A96AB859FA2C2113E
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnCompleted_67E598DC4C1E9C3A96AB859FA2C2113E final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_67E598DC4C1E9C3A96AB859FA2C2113E;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_4A4808B74EBDDEC087B4E1937DA87E3F
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnCompleted_4A4808B74EBDDEC087B4E1937DA87E3F final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_4A4808B74EBDDEC087B4E1937DA87E3F;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_31AC38724CA60DE73382B0A8157A6526
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnCompleted_31AC38724CA60DE73382B0A8157A6526 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_31AC38724CA60DE73382B0A8157A6526;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_1DFAA9FF4C0513B576788988F3746C0F
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnCompleted_1DFAA9FF4C0513B576788988F3746C0F final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_1DFAA9FF4C0513B576788988F3746C0F;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_F892FC25472E66E809047FB1FBA2DF9B
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnBlendOut_F892FC25472E66E809047FB1FBA2DF9B final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_F892FC25472E66E809047FB1FBA2DF9B;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_DE3366654C5E4918D44FCBA3E1FFFDE1
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnBlendOut_DE3366654C5E4918D44FCBA3E1FFFDE1 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_DE3366654C5E4918D44FCBA3E1FFFDE1;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_C770FE1A4556A10A1DF7C19398AB17C4
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnBlendOut_C770FE1A4556A10A1DF7C19398AB17C4 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_C770FE1A4556A10A1DF7C19398AB17C4;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_BD4416DA4F8495B4F0081A86FA9C4192
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnBlendOut_BD4416DA4F8495B4F0081A86FA9C4192 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_BD4416DA4F8495B4F0081A86FA9C4192;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_78247E4C4C86921A63612294DED648BA
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnBlendOut_78247E4C4C86921A63612294DED648BA final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_78247E4C4C86921A63612294DED648BA;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_67E598DC4C1E9C3A96AB859FA2C2113E
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnBlendOut_67E598DC4C1E9C3A96AB859FA2C2113E final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_67E598DC4C1E9C3A96AB859FA2C2113E;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_4A4808B74EBDDEC087B4E1937DA87E3F
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnBlendOut_4A4808B74EBDDEC087B4E1937DA87E3F final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_4A4808B74EBDDEC087B4E1937DA87E3F;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_31AC38724CA60DE73382B0A8157A6526
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnBlendOut_31AC38724CA60DE73382B0A8157A6526 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_31AC38724CA60DE73382B0A8157A6526;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_1DFAA9FF4C0513B576788988F3746C0F
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_OnBlendOut_1DFAA9FF4C0513B576788988F3746C0F final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_1DFAA9FF4C0513B576788988F3746C0F;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.IsPhaseChangeWait
-// 0x0018 (0x0018 - 0x0000)
-struct Enemy_AI_Base_C_IsPhaseChangeWait final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetNormalizeValue_NormalizeValue;         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_IsPhaseChangeWait;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.IsBattleMode
-// 0x0001 (0x0001 - 0x0000)
-struct Enemy_AI_Base_C_IsBattleMode final
-{
-public:
-	bool                                          Bool;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_IsBattleMode;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.IsAttackNow
-// 0x0001 (0x0001 - 0x0000)
-struct Enemy_AI_Base_C_IsAttackNow final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_IsAttackNow;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.IsAiming
-// 0x0030 (0x0030 - 0x0000)
-struct Enemy_AI_Base_C_IsAiming final
-{
-public:
-	bool                                          IsAiming;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         SuccessCount;                                      // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Rezult;                                            // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_ItemUse_C>        K2Node_DynamicCast_AsBPI_Item_Use;                 // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_MS_IsInView_ReturnValue;                  // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_IsAiming;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.InAngleOfView
-// 0x0018 (0x0018 - 0x0000)
-struct Enemy_AI_Base_C_InAngleOfView final
-{
-public:
-	bool                                          InState;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        DeltaTime;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_CameraMode                               CameraMode;                                        // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_InAngleOfView;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.GetParryState
-// 0x0001 (0x0001 - 0x0000)
-struct Enemy_AI_Base_C_GetParryState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_GetParryState;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.GetCopyClass
-// 0x0030 (0x0030 - 0x0000)
-struct Enemy_AI_Base_C_GetCopyClass final
-{
-public:
-	class UStaticMeshComponent*                   CentorComponent;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 Class_0;                                           // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Scale;                                             // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                DefaultScale;                                      // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_GetCopyClass;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.GetCentorPosition
-// 0x0020 (0x0020 - 0x0000)
-struct Enemy_AI_Base_C_GetCentorPosition final
-{
-public:
-	TArray<struct FVector>                        CentorPosition;                                    // 0x0000(0x0010)(Parm, OutParm)
-	TArray<struct FVector>                        CallFunc_GetRayPoints_Vectors;                     // 0x0010(0x0010)(ReferenceParm)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_GetCentorPosition;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.GetAvoidanceRotation
-// 0x00B0 (0x00B0 - 0x0000)
-struct Enemy_AI_Base_C_GetAvoidanceRotation final
-{
-public:
-	struct FRotator                               Rotation;                                          // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Conv_VectorToVector2D_ReturnValue;        // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_Vector2DToVector_ReturnValue;        // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Conv_VectorToVector2D_ReturnValue_1;      // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_Vector2DToVector_ReturnValue_1;      // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_FindLookAtRotation_ReturnValue;           // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_GetAvoidanceRotation;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.GetActorInfo
-// 0x00A0 (0x00A0 - 0x0000)
-struct Enemy_AI_Base_C_GetActorInfo final
-{
-public:
-	struct FTransform                             DefaultTransform;                                  // 0x0000(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Not_In_Shot;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CentorPosition;                                    // 0x0068(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPenguin;                                         // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_ActorType                                ActorType;                                         // 0x0081(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NonInPhoto;                                        // 0x0082(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_83[0x5];                                       // 0x0083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_GetActorInfo;
+DUMPER7_ASSERTS_Enemy_AI_Base_C_DestroyLockOnSystems;
 
 // Function Enemy_AI_Base.Enemy_AI_Base_C.ExecuteUbergraph_Enemy_AI_Base
 // 0x1820 (0x1820 - 0x0000)
@@ -766,7 +360,7 @@ struct Enemy_AI_Base_C_ExecuteUbergraph_Enemy_AI_Base final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class WBP_LockOn_0::UWBP_LockOn_C*            CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class WBP_LockOn::UWBP_LockOn_C*              CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1405,329 +999,735 @@ public:
 };
 DUMPER7_ASSERTS_Enemy_AI_Base_C_ExecuteUbergraph_Enemy_AI_Base;
 
-// Function Enemy_AI_Base.Enemy_AI_Base_C.DestroyLockOnSystems
-// 0x0038 (0x0038 - 0x0000)
-struct Enemy_AI_Base_C_DestroyLockOnSystems final
+// Function Enemy_AI_Base.Enemy_AI_Base_C.GetActorInfo
+// 0x00A0 (0x00A0 - 0x0000)
+struct Enemy_AI_Base_C_GetActorInfo final
 {
 public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class ULBPC_LockOn_C*>                 CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULBPC_LockOn_C*                         CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             DefaultTransform_0;                                // 0x0000(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Not_In_Shot;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CentorPosition;                                    // 0x0068(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPenguin;                                         // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_ActorType                                ActorType;                                         // 0x0081(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NonInPhoto;                                        // 0x0082(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_83[0x5];                                       // 0x0083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Enemy_AI_Base_C_DestroyLockOnSystems;
+DUMPER7_ASSERTS_Enemy_AI_Base_C_GetActorInfo;
 
-// Function Enemy_AI_Base.Enemy_AI_Base_C.DamageToPlayerController
-// 0x01A0 (0x01A0 - 0x0000)
-struct Enemy_AI_Base_C_DamageToPlayerController final
+// Function Enemy_AI_Base.Enemy_AI_Base_C.GetAvoidanceRotation
+// 0x00B0 (0x00B0 - 0x0000)
+struct Enemy_AI_Base_C_GetAvoidanceRotation final
 {
 public:
-	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        DamageValue;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TeamIndex;                                         // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_DamageType                                 DamageType;                                        // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15[0xB];                                       // 0x0015(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             SourceAgentPoint;                                  // 0x0020(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UnAvoidable;                                       // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   DamageName;                                        // 0x0084(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             HitRezult;                                         // 0x0090(0x0100)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class AActor*                                 SourceActor;                                       // 0x0190(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Rotation;                                          // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Conv_VectorToVector2D_ReturnValue;        // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_Vector2DToVector_ReturnValue;        // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Conv_VectorToVector2D_ReturnValue_1;      // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_Vector2DToVector_ReturnValue_1;      // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_FindLookAtRotation_ReturnValue;           // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_Enemy_AI_Base_C_DamageToPlayerController;
+DUMPER7_ASSERTS_Enemy_AI_Base_C_GetAvoidanceRotation;
 
-// Function Enemy_AI_Base.Enemy_AI_Base_C.DamageState
+// Function Enemy_AI_Base.Enemy_AI_Base_C.GetCentorPosition
+// 0x0020 (0x0020 - 0x0000)
+struct Enemy_AI_Base_C_GetCentorPosition final
+{
+public:
+	TArray<struct FVector>                        CentorPosition;                                    // 0x0000(0x0010)(Parm, OutParm)
+	TArray<struct FVector>                        CallFunc_GetRayPoints_Vectors;                     // 0x0010(0x0010)(ReferenceParm)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_GetCentorPosition;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.GetCopyClass
+// 0x0030 (0x0030 - 0x0000)
+struct Enemy_AI_Base_C_GetCopyClass final
+{
+public:
+	class UStaticMeshComponent*                   CentorComponent;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 Class_0;                                           // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Scale;                                             // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                DefaultScale;                                      // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_GetCopyClass;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.GetParryState
 // 0x0001 (0x0001 - 0x0000)
-struct Enemy_AI_Base_C_DamageState final
+struct Enemy_AI_Base_C_GetParryState final
 {
 public:
-	bool                                          Active;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          State;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Enemy_AI_Base_C_DamageState;
+DUMPER7_ASSERTS_Enemy_AI_Base_C_GetParryState;
 
-// Function Enemy_AI_Base.Enemy_AI_Base_C.DamageCall
+// Function Enemy_AI_Base.Enemy_AI_Base_C.InAngleOfView
+// 0x0018 (0x0018 - 0x0000)
+struct Enemy_AI_Base_C_InAngleOfView final
+{
+public:
+	bool                                          InState;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        DeltaTime;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_CameraMode                               CameraMode;                                        // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_InAngleOfView;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.IsAiming
+// 0x0030 (0x0030 - 0x0000)
+struct Enemy_AI_Base_C_IsAiming final
+{
+public:
+	bool                                          IsAiming_0;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SuccessCount;                                      // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Rezult;                                            // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_ItemUse_C>        K2Node_DynamicCast_AsBPI_Item_Use;                 // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_MS_IsInView_ReturnValue;                  // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_IsAiming;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.IsAttackNow
+// 0x0001 (0x0001 - 0x0000)
+struct Enemy_AI_Base_C_IsAttackNow final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_IsAttackNow;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.IsBattleMode
+// 0x0001 (0x0001 - 0x0000)
+struct Enemy_AI_Base_C_IsBattleMode final
+{
+public:
+	bool                                          Bool;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_IsBattleMode;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.IsPhaseChangeWait
+// 0x0018 (0x0018 - 0x0000)
+struct Enemy_AI_Base_C_IsPhaseChangeWait final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetNormalizeValue_NormalizeValue;         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_IsPhaseChangeWait;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_1DFAA9FF4C0513B576788988F3746C0F
 // 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_DamageCall final
+struct Enemy_AI_Base_C_OnBlendOut_1DFAA9FF4C0513B576788988F3746C0F final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_1DFAA9FF4C0513B576788988F3746C0F;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_31AC38724CA60DE73382B0A8157A6526
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnBlendOut_31AC38724CA60DE73382B0A8157A6526 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_31AC38724CA60DE73382B0A8157A6526;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_4A4808B74EBDDEC087B4E1937DA87E3F
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnBlendOut_4A4808B74EBDDEC087B4E1937DA87E3F final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_4A4808B74EBDDEC087B4E1937DA87E3F;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_67E598DC4C1E9C3A96AB859FA2C2113E
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnBlendOut_67E598DC4C1E9C3A96AB859FA2C2113E final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_67E598DC4C1E9C3A96AB859FA2C2113E;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_78247E4C4C86921A63612294DED648BA
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnBlendOut_78247E4C4C86921A63612294DED648BA final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_78247E4C4C86921A63612294DED648BA;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_BD4416DA4F8495B4F0081A86FA9C4192
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnBlendOut_BD4416DA4F8495B4F0081A86FA9C4192 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_BD4416DA4F8495B4F0081A86FA9C4192;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_C770FE1A4556A10A1DF7C19398AB17C4
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnBlendOut_C770FE1A4556A10A1DF7C19398AB17C4 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_C770FE1A4556A10A1DF7C19398AB17C4;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_DE3366654C5E4918D44FCBA3E1FFFDE1
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnBlendOut_DE3366654C5E4918D44FCBA3E1FFFDE1 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_DE3366654C5E4918D44FCBA3E1FFFDE1;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnBlendOut_F892FC25472E66E809047FB1FBA2DF9B
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnBlendOut_F892FC25472E66E809047FB1FBA2DF9B final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnBlendOut_F892FC25472E66E809047FB1FBA2DF9B;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_1DFAA9FF4C0513B576788988F3746C0F
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnCompleted_1DFAA9FF4C0513B576788988F3746C0F final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_1DFAA9FF4C0513B576788988F3746C0F;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_31AC38724CA60DE73382B0A8157A6526
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnCompleted_31AC38724CA60DE73382B0A8157A6526 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_31AC38724CA60DE73382B0A8157A6526;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_4A4808B74EBDDEC087B4E1937DA87E3F
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnCompleted_4A4808B74EBDDEC087B4E1937DA87E3F final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_4A4808B74EBDDEC087B4E1937DA87E3F;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_67E598DC4C1E9C3A96AB859FA2C2113E
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnCompleted_67E598DC4C1E9C3A96AB859FA2C2113E final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_67E598DC4C1E9C3A96AB859FA2C2113E;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_78247E4C4C86921A63612294DED648BA
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnCompleted_78247E4C4C86921A63612294DED648BA final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_78247E4C4C86921A63612294DED648BA;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_BD4416DA4F8495B4F0081A86FA9C4192
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnCompleted_BD4416DA4F8495B4F0081A86FA9C4192 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_BD4416DA4F8495B4F0081A86FA9C4192;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_C770FE1A4556A10A1DF7C19398AB17C4
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnCompleted_C770FE1A4556A10A1DF7C19398AB17C4 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_C770FE1A4556A10A1DF7C19398AB17C4;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_DE3366654C5E4918D44FCBA3E1FFFDE1
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnCompleted_DE3366654C5E4918D44FCBA3E1FFFDE1 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_DE3366654C5E4918D44FCBA3E1FFFDE1;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnCompleted_F892FC25472E66E809047FB1FBA2DF9B
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnCompleted_F892FC25472E66E809047FB1FBA2DF9B final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnCompleted_F892FC25472E66E809047FB1FBA2DF9B;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_1DFAA9FF4C0513B576788988F3746C0F
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnInterrupted_1DFAA9FF4C0513B576788988F3746C0F final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_1DFAA9FF4C0513B576788988F3746C0F;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_31AC38724CA60DE73382B0A8157A6526
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnInterrupted_31AC38724CA60DE73382B0A8157A6526 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_31AC38724CA60DE73382B0A8157A6526;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_4A4808B74EBDDEC087B4E1937DA87E3F
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnInterrupted_4A4808B74EBDDEC087B4E1937DA87E3F final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_4A4808B74EBDDEC087B4E1937DA87E3F;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_67E598DC4C1E9C3A96AB859FA2C2113E
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnInterrupted_67E598DC4C1E9C3A96AB859FA2C2113E final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_67E598DC4C1E9C3A96AB859FA2C2113E;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_78247E4C4C86921A63612294DED648BA
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnInterrupted_78247E4C4C86921A63612294DED648BA final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_78247E4C4C86921A63612294DED648BA;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_BD4416DA4F8495B4F0081A86FA9C4192
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnInterrupted_BD4416DA4F8495B4F0081A86FA9C4192 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_BD4416DA4F8495B4F0081A86FA9C4192;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_C770FE1A4556A10A1DF7C19398AB17C4
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnInterrupted_C770FE1A4556A10A1DF7C19398AB17C4 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_C770FE1A4556A10A1DF7C19398AB17C4;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_DE3366654C5E4918D44FCBA3E1FFFDE1
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnInterrupted_DE3366654C5E4918D44FCBA3E1FFFDE1 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_DE3366654C5E4918D44FCBA3E1FFFDE1;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnInterrupted_F892FC25472E66E809047FB1FBA2DF9B
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnInterrupted_F892FC25472E66E809047FB1FBA2DF9B final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnInterrupted_F892FC25472E66E809047FB1FBA2DF9B;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_1DFAA9FF4C0513B576788988F3746C0F
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyBegin_1DFAA9FF4C0513B576788988F3746C0F final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_1DFAA9FF4C0513B576788988F3746C0F;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_31AC38724CA60DE73382B0A8157A6526
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyBegin_31AC38724CA60DE73382B0A8157A6526 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_31AC38724CA60DE73382B0A8157A6526;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_4A4808B74EBDDEC087B4E1937DA87E3F
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyBegin_4A4808B74EBDDEC087B4E1937DA87E3F final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_4A4808B74EBDDEC087B4E1937DA87E3F;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_67E598DC4C1E9C3A96AB859FA2C2113E
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyBegin_67E598DC4C1E9C3A96AB859FA2C2113E final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_67E598DC4C1E9C3A96AB859FA2C2113E;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_78247E4C4C86921A63612294DED648BA
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyBegin_78247E4C4C86921A63612294DED648BA final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_78247E4C4C86921A63612294DED648BA;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_BD4416DA4F8495B4F0081A86FA9C4192
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyBegin_BD4416DA4F8495B4F0081A86FA9C4192 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_BD4416DA4F8495B4F0081A86FA9C4192;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_C770FE1A4556A10A1DF7C19398AB17C4
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyBegin_C770FE1A4556A10A1DF7C19398AB17C4 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_C770FE1A4556A10A1DF7C19398AB17C4;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_DE3366654C5E4918D44FCBA3E1FFFDE1
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyBegin_DE3366654C5E4918D44FCBA3E1FFFDE1 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_DE3366654C5E4918D44FCBA3E1FFFDE1;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyBegin_F892FC25472E66E809047FB1FBA2DF9B
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyBegin_F892FC25472E66E809047FB1FBA2DF9B final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyBegin_F892FC25472E66E809047FB1FBA2DF9B;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_1DFAA9FF4C0513B576788988F3746C0F
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyEnd_1DFAA9FF4C0513B576788988F3746C0F final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_1DFAA9FF4C0513B576788988F3746C0F;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_31AC38724CA60DE73382B0A8157A6526
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyEnd_31AC38724CA60DE73382B0A8157A6526 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_31AC38724CA60DE73382B0A8157A6526;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_4A4808B74EBDDEC087B4E1937DA87E3F
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyEnd_4A4808B74EBDDEC087B4E1937DA87E3F final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_4A4808B74EBDDEC087B4E1937DA87E3F;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_67E598DC4C1E9C3A96AB859FA2C2113E
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyEnd_67E598DC4C1E9C3A96AB859FA2C2113E final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_67E598DC4C1E9C3A96AB859FA2C2113E;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_78247E4C4C86921A63612294DED648BA
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyEnd_78247E4C4C86921A63612294DED648BA final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_78247E4C4C86921A63612294DED648BA;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_BD4416DA4F8495B4F0081A86FA9C4192
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyEnd_BD4416DA4F8495B4F0081A86FA9C4192 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_BD4416DA4F8495B4F0081A86FA9C4192;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_C770FE1A4556A10A1DF7C19398AB17C4
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyEnd_C770FE1A4556A10A1DF7C19398AB17C4 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_C770FE1A4556A10A1DF7C19398AB17C4;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_DE3366654C5E4918D44FCBA3E1FFFDE1
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyEnd_DE3366654C5E4918D44FCBA3E1FFFDE1 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_DE3366654C5E4918D44FCBA3E1FFFDE1;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.OnNotifyEnd_F892FC25472E66E809047FB1FBA2DF9B
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_OnNotifyEnd_F892FC25472E66E809047FB1FBA2DF9B final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_OnNotifyEnd_F892FC25472E66E809047FB1FBA2DF9B;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.PhaseChangeCheck
+// 0x0048 (0x0048 - 0x0000)
+struct Enemy_AI_Base_C_PhaseChangeCheck final
+{
+public:
+	class FString                                 Comment;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          PhaseChange;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CheckState;                                        // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetNormalizeValue_NormalizeValue;         // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_PhaseChangeCheck;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.RestartAI
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_RestartAI final
+{
+public:
+	class AAIController*                          CallFunc_GetAIController_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_RestartAI;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.Reverse
+// 0x0080 (0x0080 - 0x0000)
+struct Enemy_AI_Base_C_Reverse final
+{
+public:
+	struct FTransform                             NewPosition;                                       // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                HitNormal;                                         // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_Reverse;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.Set Difficulty
+// 0x0004 (0x0004 - 0x0000)
+struct Enemy_AI_Base_C_Set_Difficulty final
+{
+public:
+	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_Set_Difficulty;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.SetActorInfo
+// 0x0020 (0x0020 - 0x0000)
+struct Enemy_AI_Base_C_SetActorInfo final
+{
+public:
+	struct FVector                                ToPosition;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Comp;                                              // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_SetActorInfo;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.SetStrafing
+// 0x0002 (0x0002 - 0x0000)
+struct Enemy_AI_Base_C_SetStrafing final
+{
+public:
+	bool                                          IsStrafing_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_StrafingDirection                          Direction;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_SetStrafing;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.SetUpBlackBoardValue
+// 0x0010 (0x0010 - 0x0000)
+struct Enemy_AI_Base_C_SetUpBlackBoardValue final
+{
+public:
+	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBlackboardComponent*                   CallFunc_GetBlackboard_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_SetUpBlackBoardValue;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.StaminaCall
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_StaminaCall final
 {
 public:
 	double                                        AddValue;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Enemy_AI_Base_C_DamageCall;
+DUMPER7_ASSERTS_Enemy_AI_Base_C_StaminaCall;
 
-// Function Enemy_AI_Base.Enemy_AI_Base_C.Damage Effect
+// Function Enemy_AI_Base.Enemy_AI_Base_C.StaminaDamage
 // 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_Damage_Effect final
+struct Enemy_AI_Base_C_StaminaDamage final
 {
 public:
-	double                                        DamageRatio;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Enemy_AI_Base_C_Damage_Effect;
+DUMPER7_ASSERTS_Enemy_AI_Base_C_StaminaDamage;
 
-// Function Enemy_AI_Base.Enemy_AI_Base_C.Damage
-// 0x0180 (0x0180 - 0x0000)
-struct Enemy_AI_Base_C_Damage final
+// Function Enemy_AI_Base.Enemy_AI_Base_C.StaminaWearDown
+// 0x0058 (0x0058 - 0x0000)
+struct Enemy_AI_Base_C_StaminaWearDown final
 {
 public:
-	double                                        DamageValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TeamIndex;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_DamageType                                 DamageType;                                        // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             SourceAgentPoint;                                  // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UnAvoidable;                                       // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   DamageName;                                        // 0x0074(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 SourceActor;                                       // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFinishFilter                          Finish;                                            // 0x0088(0x0002)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8A[0x6];                                       // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        DamageRatio;                                       // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          FinishBool;                                        // 0x0098(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x00B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x00EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EB[0x5];                                       // 0x00EB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetRowValue_Value;                        // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FB[0x5];                                       // 0x00FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0100(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_FindLookAtRotation_ReturnValue;           // 0x0118(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x0148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_Damage;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.CustomAttack
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_CustomAttack final
-{
-public:
-	class FName                                   AttackName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_CustomAttack;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.Combo
-// 0x0010 (0x0010 - 0x0000)
-struct Enemy_AI_Base_C_Combo final
-{
-public:
-	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ComboName;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_Combo;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.Change Movement
-// 0x0001 (0x0001 - 0x0000)
-struct Enemy_AI_Base_C_Change_Movement final
-{
-public:
-	bool                                          Value;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_Change_Movement;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__Enemy_AI_Base_DeviceComponent_K2Node_ComponentBoundEvent_4_OnSignal__DelegateSignature
-// 0x0028 (0x0028 - 0x0000)
-struct Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_DeviceComponent_K2Node_ComponentBoundEvent_4_OnSignal__DelegateSignature final
-{
-public:
-	struct FST_EventValue                         SignalValue;                                       // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_DeviceComponent_K2Node_ComponentBoundEvent_4_OnSignal__DelegateSignature;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__Enemy_AI_Base_CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature
-// 0x0130 (0x0130 - 0x0000)
-struct Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature final
-{
-public:
-	class UPrimitiveComponent*                    HitComponent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                NormalImpulse;                                     // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             Hit;                                               // 0x0030(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControlSub_K2Node_ComponentBoundEvent_10_ChangedValue__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControlSub_K2Node_ComponentBoundEvent_10_ChangedValue__DelegateSignature final
-{
-public:
-	double                                        UpdateValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControlSub_K2Node_ComponentBoundEvent_10_ChangedValue__DelegateSignature;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_9_ChangedValue__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_9_ChangedValue__DelegateSignature final
-{
-public:
-	double                                        UpdateValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_9_ChangedValue__DelegateSignature;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__Enemy_AI_Base_BPC_HealthGaugeControlSub_K2Node_ComponentBoundEvent_4_ChangedValue__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_HealthGaugeControlSub_K2Node_ComponentBoundEvent_4_ChangedValue__DelegateSignature final
-{
-public:
-	double                                        UpdateValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_HealthGaugeControlSub_K2Node_ComponentBoundEvent_4_ChangedValue__DelegateSignature;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__Enemy_AI_Base_BPC_HealthGaugeControl_K2Node_ComponentBoundEvent_3_ChangedValue__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_HealthGaugeControl_K2Node_ComponentBoundEvent_3_ChangedValue__DelegateSignature final
-{
-public:
-	double                                        UpdateValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_HealthGaugeControl_K2Node_ComponentBoundEvent_3_ChangedValue__DelegateSignature;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__Enemy_AI_Base_BPC_AIMoveControl_K2Node_ComponentBoundEvent_2_MoveEndSignal__DelegateSignature
-// 0x000C (0x000C - 0x0000)
-struct Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_AIMoveControl_K2Node_ComponentBoundEvent_2_MoveEndSignal__DelegateSignature final
-{
-public:
-	EPathFollowingResult                          OutPutRezult;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   AttackName;                                        // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_BPC_AIMoveControl_K2Node_ComponentBoundEvent_2_MoveEndSignal__DelegateSignature;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__Enemy_AI_Base_AIPerception_K2Node_ComponentBoundEvent_7_PerceptionUpdatedDelegate__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_AIPerception_K2Node_ComponentBoundEvent_7_PerceptionUpdatedDelegate__DelegateSignature final
-{
-public:
-	TArray<class AActor*>                         UpdatedActors;                                     // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__Enemy_AI_Base_AIPerception_K2Node_ComponentBoundEvent_7_PerceptionUpdatedDelegate__DelegateSignature;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.BndEvt__BP_Enemy_AI_Hamburger_Base_BPC_AttackCollisionControl_K2Node_ComponentBoundEvent_1_HitEvent__DelegateSignature
-// 0x0120 (0x0120 - 0x0000)
-struct Enemy_AI_Base_C_BndEvt__BP_Enemy_AI_Hamburger_Base_BPC_AttackCollisionControl_K2Node_ComponentBoundEvent_1_HitEvent__DelegateSignature final
-{
-public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_BndEvt__BP_Enemy_AI_Hamburger_Base_BPC_AttackCollisionControl_K2Node_ComponentBoundEvent_1_HitEvent__DelegateSignature;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.Avoid
-// 0x0001 (0x0001 - 0x0000)
-struct Enemy_AI_Base_C_Avoid final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_Avoid;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.AttackNotify
-// 0x0004 (0x0004 - 0x0000)
-struct Enemy_AI_Base_C_AttackNotify final
-{
-public:
-	int32                                         ID;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_AttackNotify;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.AttackNamesControl
-// 0x0038 (0x0038 - 0x0000)
-struct Enemy_AI_Base_C_AttackNamesControl final
-{
-public:
-	class FName                                   AttackName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           Temp_wildcard_Variable;                            // 0x0008(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x002E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2F[0x1];                                       // 0x002F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_AttackNamesControl;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.AttackDataTableSetup
-// 0x0010 (0x0010 - 0x0000)
-struct Enemy_AI_Base_C_AttackDataTableSetup final
-{
-public:
-	TArray<class FName>                           CallFunc_GetDataTableRowNames_OutRowNames;         // 0x0000(0x0010)(ReferenceParm)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_AttackDataTableSetup;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.Attack_AC_Remote
-// 0x0020 (0x0020 - 0x0000)
-struct Enemy_AI_Base_C_Attack_AC_Remote final
-{
-public:
-	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ComponentName;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DamageMultiply;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        StanMultiply;                                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_Enemy_AI_Base_C_Attack_AC_Remote;
-
-// Function Enemy_AI_Base.Enemy_AI_Base_C.Attack_AC
-// 0x0028 (0x0028 - 0x0000)
-struct Enemy_AI_Base_C_Attack_AC final
-{
-public:
-	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   AttackName;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DamageMultiply;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          MutipleHitPossible;                                // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        WearDownValue;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SlowDamage;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsParry;                                           // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetNormalizeValue_NormalizeValue;         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        StanMultiply;                                      // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue_1;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetNormalizeValue_NormalizeValue_1;       // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWBP_SuperStan_C*                       CallFunc_Create_ReturnValue;                       // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Enemy_AI_Base_C_Attack_AC;
+DUMPER7_ASSERTS_Enemy_AI_Base_C_StaminaWearDown;
 
-// Function Enemy_AI_Base.Enemy_AI_Base_C.Attack
+// Function Enemy_AI_Base.Enemy_AI_Base_C.Stan
+// 0x0010 (0x0010 - 0x0000)
+struct Enemy_AI_Base_C_Stan final
+{
+public:
+	double                                        Time;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_StanType                                   StanType;                                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_Stan;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.StanDamage
 // 0x0001 (0x0001 - 0x0000)
-struct Enemy_AI_Base_C_Attack final
+struct Enemy_AI_Base_C_StanDamage final
 {
 public:
-	EAttackType                                   AttackType;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_StanType                                   StanType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Enemy_AI_Base_C_Attack;
+DUMPER7_ASSERTS_Enemy_AI_Base_C_StanDamage;
 
-// Function Enemy_AI_Base.Enemy_AI_Base_C.AIState
-// 0x0018 (0x0018 - 0x0000)
-struct Enemy_AI_Base_C_AIState final
+// Function Enemy_AI_Base.Enemy_AI_Base_C.StopAI
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_StopAI final
 {
 public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AAIController*                          CallFunc_GetAIController_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AAIController*                          CallFunc_GetAIController_ReturnValue_1;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AAIController*                          CallFunc_GetAIController_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Enemy_AI_Base_C_AIState;
+DUMPER7_ASSERTS_Enemy_AI_Base_C_StopAI;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.StrafingStateChange
+// 0x0002 (0x0002 - 0x0000)
+struct Enemy_AI_Base_C_StrafingStateChange final
+{
+public:
+	bool                                          IsStrafing_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_StrafingDirection                          Direction;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_StrafingStateChange;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.SuperArmorCall
+// 0x0008 (0x0008 - 0x0000)
+struct Enemy_AI_Base_C_SuperArmorCall final
+{
+public:
+	double                                        AddValue;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_SuperArmorCall;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.ThrowState
+// 0x0001 (0x0001 - 0x0000)
+struct Enemy_AI_Base_C_ThrowState final
+{
+public:
+	EN_ThrowState                                 ThrowState_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_ThrowState;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.UserDatasAttackControl
+// 0x0058 (0x0058 - 0x0000)
+struct Enemy_AI_Base_C_UserDatasAttackControl final
+{
+public:
+	struct FST_AttackDatas                        AttackDatas_0;                                     // 0x0000(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	class FName                                   AttackName;                                        // 0x0050(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_UserDatasAttackControl;
+
+// Function Enemy_AI_Base.Enemy_AI_Base_C.View In Out Function
+// 0x0004 (0x0004 - 0x0000)
+struct Enemy_AI_Base_C_View_In_Out_Function final
+{
+public:
+	int32                                         Stencil_Value;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Enemy_AI_Base_C_View_In_Out_Function;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,20 +16,40 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_TextChatControl.BPC_TextChatControl_C.SendToText(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Function BPC_TextChatControl.BPC_TextChatControl_C.ExecuteUbergraph_BPC_TextChatControl
+// (Final, UbergraphFunction)
 // Parameters:
-// const class FString&                    MainString                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_TextChatControl_C::SendToText_Server_(const class FString& MainString, int32 Index_0)
+void UBPC_TextChatControl_C::ExecuteUbergraph_BPC_TextChatControl(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_TextChatControl_C", "SendToText(Server)");
+		Func = Class->GetFunction("BPC_TextChatControl_C", "ExecuteUbergraph_BPC_TextChatControl");
 
-	Params::BPC_TextChatControl_C_SendToText_Server_ Parms{};
+	Params::BPC_TextChatControl_C_ExecuteUbergraph_BPC_TextChatControl Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_TextChatControl.BPC_TextChatControl_C.SendToText(Client)
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    MainString                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_TextChatControl_C::SendToText_Client_(const class FString& MainString, int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_TextChatControl_C", "SendToText(Client)");
+
+	Params::BPC_TextChatControl_C_SendToText_Client_ Parms{};
 
 	Parms.MainString = std::move(MainString);
 	Parms.Index_0 = Index_0;
@@ -60,43 +80,23 @@ void UBPC_TextChatControl_C::SendToText_Local_(const class FString& MainString, 
 }
 
 
-// Function BPC_TextChatControl.BPC_TextChatControl_C.SendToText(Client)
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Function BPC_TextChatControl.BPC_TextChatControl_C.SendToText(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    MainString                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_TextChatControl_C::SendToText_Client_(const class FString& MainString, int32 Index_0)
+void UBPC_TextChatControl_C::SendToText_Server_(const class FString& MainString, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_TextChatControl_C", "SendToText(Client)");
+		Func = Class->GetFunction("BPC_TextChatControl_C", "SendToText(Server)");
 
-	Params::BPC_TextChatControl_C_SendToText_Client_ Parms{};
+	Params::BPC_TextChatControl_C_SendToText_Server_ Parms{};
 
 	Parms.MainString = std::move(MainString);
 	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_TextChatControl.BPC_TextChatControl_C.ExecuteUbergraph_BPC_TextChatControl
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_TextChatControl_C::ExecuteUbergraph_BPC_TextChatControl(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_TextChatControl_C", "ExecuteUbergraph_BPC_TextChatControl");
-
-	Params::BPC_TextChatControl_C_ExecuteUbergraph_BPC_TextChatControl Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

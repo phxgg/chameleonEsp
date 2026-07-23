@@ -33,7 +33,7 @@ public:
 	bool                                          IsInfinity;                                        // 0x0314(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          SpawnRezult;                                       // 0x0315(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_316[0x2];                                      // 0x0316(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class AActor* GeneratedActor)> GeneratedActor;                     // 0x0318(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class AActor* GeneratedActor_0)> GeneratedActor;                   // 0x0318(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class AActor*                                 SpawnedActor;                                      // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	double                                        AddHeight;                                         // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	struct FVector2D                              ScaleRange;                                        // 0x0338(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
@@ -42,10 +42,10 @@ public:
 	struct FRandomStream                          Seed;                                              // 0x035C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn)
 
 public:
-	bool TraceRound(float Radius, const struct FVector& Start, struct FHitResult* OutHit);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_GenerateRandomBoxLocation_Wall(int32 EntryPoint);
 	void CheckSide(const struct FVector& Location, double BoundSizeMultiply, bool* Rezult);
+	void ExecuteUbergraph_BP_GenerateRandomBoxLocation_Wall(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	bool TraceRound(float Radius, const struct FVector& Start, struct FHitResult* OutHit);
 
 public:
 	static class UClass* StaticClass()

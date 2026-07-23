@@ -27,10 +27,10 @@ public:
 	class FText                                   SplitText;                                         // 0x0358(0x0010)(Edit, BlueprintVisible)
 
 public:
-	void SequenceEvent__ENTRYPOINTWBP_DeathBlackOut();
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_DeathBlackOut(int32 EntryPoint);
 	void AudioZero();
+	void ExecuteUbergraph_WBP_DeathBlackOut(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SequenceEvent__ENTRYPOINTWBP_DeathBlackOut();
 
 public:
 	static class UClass* StaticClass()

@@ -16,23 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function BPI_Hit.BPI_Hit_C.BPI_InteractStart(Server)
+// Function BPI_Hit.BPI_Hit_C.BPI_InteractEnd
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_FirstPersonCharacter_Main_C*  First_Person                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_Hit_C::BPI_InteractStart_Server_(class ABP_FirstPersonCharacter_Main_C* First_Person)
+void IBPI_Hit_C::BPI_InteractEnd()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_Hit_C", "BPI_InteractStart(Server)");
+		Func = AsUObject()->Class->GetFunction("BPI_Hit_C", "BPI_InteractEnd");
 
-	Params::BPI_Hit_C_BPI_InteractStart_Server_ Parms{};
-
-	Parms.First_Person = First_Person;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
+	AsUObject()->ProcessEvent(Func, nullptr);
 }
 
 
@@ -56,17 +50,23 @@ void IBPI_Hit_C::BPI_InteractStart_Local_(class ABP_FirstPersonCharacter_Main_C*
 }
 
 
-// Function BPI_Hit.BPI_Hit_C.BPI_InteractEnd
+// Function BPI_Hit.BPI_Hit_C.BPI_InteractStart(Server)
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonCharacter_Main_C*  First_Person                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_Hit_C::BPI_InteractEnd()
+void IBPI_Hit_C::BPI_InteractStart_Server_(class ABP_FirstPersonCharacter_Main_C* First_Person)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_Hit_C", "BPI_InteractEnd");
+		Func = AsUObject()->Class->GetFunction("BPI_Hit_C", "BPI_InteractStart(Server)");
 
-	AsUObject()->ProcessEvent(Func, nullptr);
+	Params::BPI_Hit_C_BPI_InteractStart_Server_ Parms{};
+
+	Parms.First_Person = First_Person;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
 

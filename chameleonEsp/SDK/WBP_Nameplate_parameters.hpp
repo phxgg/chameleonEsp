@@ -16,42 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_Nameplate.WBP_Nameplate_C.SetPlayerName
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_Nameplate_C_SetPlayerName final
-{
-public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Nameplate_C_SetPlayerName;
-
-// Function WBP_Nameplate.WBP_Nameplate_C.SetME
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_Nameplate_C_SetME final
-{
-public:
-	int32                                         Point;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Nameplate_C_SetME;
-
-// Function WBP_Nameplate.WBP_Nameplate_C.SetEEYAN
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_Nameplate_C_SetEEYAN final
-{
-public:
-	int32                                         Point;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Nameplate_C_SetEEYAN;
-
-// Function WBP_Nameplate.WBP_Nameplate_C.SetColor
-// 0x0014 (0x0014 - 0x0000)
-struct WBP_Nameplate_C_SetColor final
-{
-public:
-	struct FSlateColor                            Color_and_Opacity;                                 // 0x0000(0x0014)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
-};
-DUMPER7_ASSERTS_WBP_Nameplate_C_SetColor;
-
 // Function WBP_Nameplate.WBP_Nameplate_C.ExecuteUbergraph_WBP_Nameplate
 // 0x0068 (0x0068 - 0x0000)
 struct WBP_Nameplate_C_ExecuteUbergraph_WBP_Nameplate final
@@ -69,6 +33,42 @@ public:
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0058(0x0010)()
 };
 DUMPER7_ASSERTS_WBP_Nameplate_C_ExecuteUbergraph_WBP_Nameplate;
+
+// Function WBP_Nameplate.WBP_Nameplate_C.SetColor
+// 0x0014 (0x0014 - 0x0000)
+struct WBP_Nameplate_C_SetColor final
+{
+public:
+	struct FSlateColor                            Color_and_Opacity;                                 // 0x0000(0x0014)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_WBP_Nameplate_C_SetColor;
+
+// Function WBP_Nameplate.WBP_Nameplate_C.SetEEYAN
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_Nameplate_C_SetEEYAN final
+{
+public:
+	int32                                         Point;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Nameplate_C_SetEEYAN;
+
+// Function WBP_Nameplate.WBP_Nameplate_C.SetME
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_Nameplate_C_SetME final
+{
+public:
+	int32                                         Point;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Nameplate_C_SetME;
+
+// Function WBP_Nameplate.WBP_Nameplate_C.SetPlayerName
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_Nameplate_C_SetPlayerName final
+{
+public:
+	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Nameplate_C_SetPlayerName;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

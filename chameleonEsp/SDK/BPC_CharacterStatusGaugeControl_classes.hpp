@@ -39,22 +39,22 @@ public:
 	double                                        MultiplyHealValue;                                 // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateMaxValue(double Value);
-	void Update();
-	void SnapValue(double Value);
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveBeginPlay();
-	void GetRowValue(double* Value);
-	void GetNormalizeValue(double* NormalizeValue);
-	void GetNormalizeAnimationValue(double* NormalizeValue);
-	void GetAnimationStartValue(bool Normalize, double* StartValue);
-	void ExecuteUbergraph_BPC_CharacterStatusGaugeControl(int32 EntryPoint);
-	void ChangeValue(double AddValue, double AnimationTime);
-	void BlockAutoHeal();
-	void AutoHealStart();
-	void AutoHealDelay(double AddValuePerSec, double Rate, double WaitTime);
-	void AutoHeal(double AddValuePerSec, double Rate);
 	void AnimationState(bool State);
+	void AutoHeal(double AddValuePerSec, double Rate_0);
+	void AutoHealDelay(double AddValuePerSec, double Rate_0, double WaitTime);
+	void AutoHealStart();
+	void BlockAutoHeal();
+	void ChangeValue(double AddValue, double AnimationTime);
+	void ExecuteUbergraph_BPC_CharacterStatusGaugeControl(int32 EntryPoint);
+	void GetAnimationStartValue(bool Normalize, double* StartValue);
+	void GetNormalizeAnimationValue(double* NormalizeValue);
+	void GetNormalizeValue(double* NormalizeValue);
+	void GetRowValue(double* Value);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void SnapValue(double Value);
+	void Update();
+	void UpdateMaxValue(double Value);
 
 	void GetLastDirection(int32* Value) const;
 

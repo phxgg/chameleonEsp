@@ -16,20 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_PenBoxUnder.BP_PenBoxUnder_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_PenBoxUnder_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PenBoxUnder_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_PenBoxUnder.BP_PenBoxUnder_C.ExecuteUbergraph_BP_PenBoxUnder
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -47,6 +33,20 @@ void ABP_PenBoxUnder_C::ExecuteUbergraph_BP_PenBoxUnder(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PenBoxUnder.BP_PenBoxUnder_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_PenBoxUnder_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PenBoxUnder_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

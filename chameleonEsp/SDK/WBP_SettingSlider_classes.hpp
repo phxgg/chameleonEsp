@@ -46,13 +46,13 @@ public:
 	int32                                         MinTextCount;                                      // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Update_Config_Item();
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	class FText Get_ConfigItem_Text_1_Text_0();
-	void ExecuteUbergraph_WBP_SettingSlider(int32 EntryPoint);
-	void BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature();
-	void BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangeEvery__DelegateSignature(double Value);
 	void ApplySetting();
+	void BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangeEvery__DelegateSignature(double Value);
+	void BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature();
+	void ExecuteUbergraph_WBP_SettingSlider(int32 EntryPoint);
+	class FText Get_ConfigItem_Text_1_Text_0();
+	void PreConstruct(bool IsDesignTime);
+	void Update_Config_Item();
 
 public:
 	static class UClass* StaticClass()

@@ -18,6 +18,16 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function CopyVAT_Animation.CopyVAT_Animation_C.AnimationStart
+// 0x0018 (0x0018 - 0x0000)
+struct CopyVAT_Animation_C_AnimationStart final
+{
+public:
+	class UStaticMeshComponent*                   ToComponent;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FST_VAT_Datas                          VAT_Datas;                                         // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_CopyVAT_Animation_C_AnimationStart;
+
 // Function CopyVAT_Animation.CopyVAT_Animation_C.ExecuteUbergraph_CopyVAT_Animation
 // 0x0218 (0x0218 - 0x0000)
 struct CopyVAT_Animation_C_ExecuteUbergraph_CopyVAT_Animation final
@@ -44,16 +54,6 @@ public:
 	double                                        CallFunc_FClamp_Value_ImplicitCast;                // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_CopyVAT_Animation_C_ExecuteUbergraph_CopyVAT_Animation;
-
-// Function CopyVAT_Animation.CopyVAT_Animation_C.AnimationStart
-// 0x0018 (0x0018 - 0x0000)
-struct CopyVAT_Animation_C_AnimationStart final
-{
-public:
-	class UStaticMeshComponent*                   ToComponent;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FST_VAT_Datas                          VAT_Datas;                                         // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_CopyVAT_Animation_C_AnimationStart;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

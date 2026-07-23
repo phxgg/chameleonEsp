@@ -17,25 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_VoiceChatLists.WBP_VoiceChatLists_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WBP_VoiceChatLists_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry_Tick;                                   // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime_Tick;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_VoiceChatLists_C_Tick;
-
-// Function WBP_VoiceChatLists.WBP_VoiceChatLists_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_VoiceChatLists_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_VoiceChatLists_C_PreConstruct;
-
 // Function WBP_VoiceChatLists.WBP_VoiceChatLists_C.ExecuteUbergraph_WBP_VoiceChatLists
 // 0x00C0 (0x00C0 - 0x0000)
 struct WBP_VoiceChatLists_C_ExecuteUbergraph_WBP_VoiceChatLists final
@@ -67,6 +48,25 @@ public:
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_VoiceChatLists_C_ExecuteUbergraph_WBP_VoiceChatLists;
+
+// Function WBP_VoiceChatLists.WBP_VoiceChatLists_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_VoiceChatLists_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_VoiceChatLists_C_PreConstruct;
+
+// Function WBP_VoiceChatLists.WBP_VoiceChatLists_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WBP_VoiceChatLists_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_VoiceChatLists_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

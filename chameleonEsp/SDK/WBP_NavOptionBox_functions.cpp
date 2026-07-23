@@ -16,63 +16,29 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_NavOptionBox.WBP_NavOptionBox_C.UpdateUnderBoxColor
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_NavOptionBox_C::UpdateUnderBoxColor()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavOptionBox_C", "UpdateUnderBoxColor");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_NavOptionBox.WBP_NavOptionBox_C.UpdateOptions
+// Function WBP_NavOptionBox.WBP_NavOptionBox_C.AddUnderBars
 // (BlueprintCallable, BlueprintEvent)
 
-void UWBP_NavOptionBox_C::UpdateOptions()
+void UWBP_NavOptionBox_C::AddUnderBars()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavOptionBox_C", "UpdateOptions");
+		Func = Class->GetFunction("WBP_NavOptionBox_C", "AddUnderBars");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_NavOptionBox.WBP_NavOptionBox_C.PreConstruct
+// Function WBP_NavOptionBox.WBP_NavOptionBox_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_NavOptionBox_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_NavOptionBox_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavOptionBox_C", "PreConstruct");
-
-	Params::WBP_NavOptionBox_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_NavOptionBox.WBP_NavOptionBox_C.OnChangedValue
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_NavOptionBox_C::OnChangedValue()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavOptionBox_C", "OnChangedValue");
+		Func = Class->GetFunction("WBP_NavOptionBox_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,29 +64,63 @@ void UWBP_NavOptionBox_C::ExecuteUbergraph_WBP_NavOptionBox(int32 EntryPoint)
 }
 
 
-// Function WBP_NavOptionBox.WBP_NavOptionBox_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_NavOptionBox.WBP_NavOptionBox_C.OnChangedValue
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_NavOptionBox_C::Construct()
+void UWBP_NavOptionBox_C::OnChangedValue()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavOptionBox_C", "Construct");
+		Func = Class->GetFunction("WBP_NavOptionBox_C", "OnChangedValue");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_NavOptionBox.WBP_NavOptionBox_C.AddUnderBars
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_NavOptionBox.WBP_NavOptionBox_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_NavOptionBox_C::AddUnderBars()
+void UWBP_NavOptionBox_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavOptionBox_C", "AddUnderBars");
+		Func = Class->GetFunction("WBP_NavOptionBox_C", "PreConstruct");
+
+	Params::WBP_NavOptionBox_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_NavOptionBox.WBP_NavOptionBox_C.UpdateOptions
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_NavOptionBox_C::UpdateOptions()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_NavOptionBox_C", "UpdateOptions");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_NavOptionBox.WBP_NavOptionBox_C.UpdateUnderBoxColor
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_NavOptionBox_C::UpdateUnderBoxColor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_NavOptionBox_C", "UpdateUnderBoxColor");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

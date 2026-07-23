@@ -16,46 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_TaskBlock.WBP_TaskBlock_C.ProgressAdd
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   AddValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_TaskBlock_C::ProgressAdd(int32 AddValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TaskBlock_C", "ProgressAdd");
-
-	Params::WBP_TaskBlock_C_ProgressAdd Parms{};
-
-	Parms.AddValue = AddValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_TaskBlock.WBP_TaskBlock_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_TaskBlock_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TaskBlock_C", "PreConstruct");
-
-	Params::WBP_TaskBlock_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_TaskBlock.WBP_TaskBlock_C.ExecuteUbergraph_WBP_TaskBlock
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -71,6 +31,46 @@ void UWBP_TaskBlock_C::ExecuteUbergraph_WBP_TaskBlock(int32 EntryPoint)
 	Params::WBP_TaskBlock_C_ExecuteUbergraph_WBP_TaskBlock Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TaskBlock.WBP_TaskBlock_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TaskBlock_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TaskBlock_C", "PreConstruct");
+
+	Params::WBP_TaskBlock_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_TaskBlock.WBP_TaskBlock_C.ProgressAdd
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   AddValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_TaskBlock_C::ProgressAdd(int32 AddValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TaskBlock_C", "ProgressAdd");
+
+	Params::WBP_TaskBlock_C_ProgressAdd Parms{};
+
+	Parms.AddValue = AddValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

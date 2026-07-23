@@ -17,15 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_ClimbingCheck.BP_ClimbingCheck_C.Trigger
-// 0x0120 (0x0120 - 0x0000)
-struct BP_ClimbingCheck_C_Trigger final
-{
-public:
-	struct FSimulationTickParams                  Params_Trigger;                                    // 0x0000(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_BP_ClimbingCheck_C_Trigger;
-
 // Function BP_ClimbingCheck.BP_ClimbingCheck_C.ExecuteUbergraph_BP_ClimbingCheck
 // 0x0238 (0x0238 - 0x0000)
 struct BP_ClimbingCheck_C_ExecuteUbergraph_BP_ClimbingCheck final
@@ -44,13 +35,22 @@ public:
 };
 DUMPER7_ASSERTS_BP_ClimbingCheck_C_ExecuteUbergraph_BP_ClimbingCheck;
 
+// Function BP_ClimbingCheck.BP_ClimbingCheck_C.Trigger
+// 0x0120 (0x0120 - 0x0000)
+struct BP_ClimbingCheck_C_Trigger final
+{
+public:
+	struct FSimulationTickParams                  Params_0;                                          // 0x0000(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+};
+DUMPER7_ASSERTS_BP_ClimbingCheck_C_Trigger;
+
 // Function BP_ClimbingCheck.BP_ClimbingCheck_C.Evaluate
 // 0x01E8 (0x01E8 - 0x0000)
 struct BP_ClimbingCheck_C_Evaluate final
 {
 public:
-	struct FSimulationTickParams                  Params_Evaluate;                                   // 0x0000(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-	struct FTransitionEvalResult                  ReturnValue_Evaluate;                              // 0x0120(0x0008)(Parm, OutParm, ReturnParm, NoDestructor)
+	struct FSimulationTickParams                  Params_0;                                          // 0x0000(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+	struct FTransitionEvalResult                  ReturnValue;                                       // 0x0120(0x0008)(Parm, OutParm, ReturnParm, NoDestructor)
 	bool                                          Temp_bool_Variable;                                // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_K2_GetDataFromCollection_DidSucceed;      // 0x0129(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_12A[0x6];                                      // 0x012A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])

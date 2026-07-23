@@ -28,10 +28,10 @@ public:
 	bool                                          ForceHide;                                         // 0x0260(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void ForceUpdate();
-	void ExecuteUbergraph_LBPC_ComponentDistanceVisualUpdate(int32 EntryPoint);
 	void Check();
+	void ExecuteUbergraph_LBPC_ComponentDistanceVisualUpdate(int32 EntryPoint);
+	void ForceUpdate();
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

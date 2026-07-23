@@ -16,31 +16,51 @@
 
 SDK_NAMESPACE_START
 
-// Function UDS_Volume_Actor.UDS_Volume_Actor_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function UDS_Volume_Actor.UDS_Volume_Actor_C.Disable Volume
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AUDS_Volume_Actor_C::UserConstructionScript()
+void AUDS_Volume_Actor_C::Disable_Volume()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_Volume_Actor_C", "UserConstructionScript");
+		Func = Class->GetFunction("UDS_Volume_Actor_C", "Disable Volume");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function UDS_Volume_Actor.UDS_Volume_Actor_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function UDS_Volume_Actor.UDS_Volume_Actor_C.Enable Volume
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void AUDS_Volume_Actor_C::ReceiveBeginPlay()
+void AUDS_Volume_Actor_C::Enable_Volume()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_Volume_Actor_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("UDS_Volume_Actor_C", "Enable Volume");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UDS_Volume_Actor.UDS_Volume_Actor_C.ExecuteUbergraph_UDS_Volume_Actor
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AUDS_Volume_Actor_C::ExecuteUbergraph_UDS_Volume_Actor(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UDS_Volume_Actor_C", "ExecuteUbergraph_UDS_Volume_Actor");
+
+	Params::UDS_Volume_Actor_C_ExecuteUbergraph_UDS_Volume_Actor Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -68,49 +88,29 @@ void AUDS_Volume_Actor_C::Query_Blend_Radius(const struct FVector& Location, dou
 }
 
 
-// Function UDS_Volume_Actor.UDS_Volume_Actor_C.ExecuteUbergraph_UDS_Volume_Actor
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function UDS_Volume_Actor.UDS_Volume_Actor_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AUDS_Volume_Actor_C::ExecuteUbergraph_UDS_Volume_Actor(int32 EntryPoint)
+void AUDS_Volume_Actor_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_Volume_Actor_C", "ExecuteUbergraph_UDS_Volume_Actor");
-
-	Params::UDS_Volume_Actor_C_ExecuteUbergraph_UDS_Volume_Actor Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function UDS_Volume_Actor.UDS_Volume_Actor_C.Enable Volume
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AUDS_Volume_Actor_C::Enable_Volume()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_Volume_Actor_C", "Enable Volume");
+		Func = Class->GetFunction("UDS_Volume_Actor_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function UDS_Volume_Actor.UDS_Volume_Actor_C.Disable Volume
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function UDS_Volume_Actor.UDS_Volume_Actor_C.UserConstructionScript
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void AUDS_Volume_Actor_C::Disable_Volume()
+void AUDS_Volume_Actor_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_Volume_Actor_C", "Disable Volume");
+		Func = Class->GetFunction("UDS_Volume_Actor_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

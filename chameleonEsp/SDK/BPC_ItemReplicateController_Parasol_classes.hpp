@@ -27,16 +27,16 @@ public:
 	bool                                          IsUsedItem;                                        // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UseItem_Server_(bool State_UseItem_Server_);
-	void UseItem_Replicate_(bool State_UseItem_Replicate_);
-	void UseItem_Local_(bool State_UseItem_Local_);
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay);
-	void OpenParasol_Server_();
-	void OpenParasol_Replicate_();
-	void ForceClose();
-	void ExecuteUbergraph_BPC_ItemReplicateController_Parasol(int32 EntryPoint);
 	void AddForceNoDrop();
+	void ExecuteUbergraph_BPC_ItemReplicateController_Parasol(int32 EntryPoint);
+	void ForceClose();
+	void OpenParasol_Replicate_();
+	void OpenParasol_Server_();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ReceiveTick(float DeltaSeconds);
+	void UseItem_Local_(bool State);
+	void UseItem_Replicate_(bool State);
+	void UseItem_Server_(bool State);
 
 public:
 	static class UClass* StaticClass()

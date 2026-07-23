@@ -32,13 +32,13 @@ public:
 	TArray<class FText>                           AppendTargetTexts;                                 // 0x09C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void UpdateUnderBoxColor();
-	void UpdateOptions();
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void OnChangedValue();
-	void ExecuteUbergraph_WBP_NavOptionBox(int32 EntryPoint);
-	void Construct();
 	void AddUnderBars();
+	void Construct();
+	void ExecuteUbergraph_WBP_NavOptionBox(int32 EntryPoint);
+	void OnChangedValue();
+	void PreConstruct(bool IsDesignTime);
+	void UpdateOptions();
+	void UpdateUnderBoxColor();
 
 public:
 	static class UClass* StaticClass()

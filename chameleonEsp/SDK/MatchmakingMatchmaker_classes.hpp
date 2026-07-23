@@ -20,7 +20,7 @@ SDK_NAMESPACE_START
 
 // Class MatchmakingMatchmaker.Matchmaker
 // 0x02F0 (0x0598 - 0x02A8)
-class AMatchmaker final : public AActor
+class AMatchmaker : public AActor
 {
 public:
 	uint8                                         Pad_2A8[0x1E8];                                    // 0x02A8(0x01E8)(Fixing Size After Last Property [ Dumper-7 ])

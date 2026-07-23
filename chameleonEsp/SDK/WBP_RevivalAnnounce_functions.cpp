@@ -16,21 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_RevivalAnnounce.WBP_RevivalAnnounce_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_RevivalAnnounce.WBP_RevivalAnnounce_C.ExecuteUbergraph_WBP_RevivalAnnounce
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_RevivalAnnounce_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_RevivalAnnounce_C::ExecuteUbergraph_WBP_RevivalAnnounce(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RevivalAnnounce_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_RevivalAnnounce_C", "ExecuteUbergraph_WBP_RevivalAnnounce");
 
-	Params::WBP_RevivalAnnounce_C_PreConstruct Parms{};
+	Params::WBP_RevivalAnnounce_C_ExecuteUbergraph_WBP_RevivalAnnounce Parms{};
 
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -50,21 +50,21 @@ void UWBP_RevivalAnnounce_C::Finish()
 }
 
 
-// Function WBP_RevivalAnnounce.WBP_RevivalAnnounce_C.ExecuteUbergraph_WBP_RevivalAnnounce
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_RevivalAnnounce.WBP_RevivalAnnounce_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_RevivalAnnounce_C::ExecuteUbergraph_WBP_RevivalAnnounce(int32 EntryPoint)
+void UWBP_RevivalAnnounce_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_RevivalAnnounce_C", "ExecuteUbergraph_WBP_RevivalAnnounce");
+		Func = Class->GetFunction("WBP_RevivalAnnounce_C", "PreConstruct");
 
-	Params::WBP_RevivalAnnounce_C_ExecuteUbergraph_WBP_RevivalAnnounce Parms{};
+	Params::WBP_RevivalAnnounce_C_PreConstruct Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

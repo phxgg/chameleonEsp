@@ -16,6 +16,16 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_EnvironmentSystem_Container_Base.BP_EnvironmentSystem_Container_Base_C.UserConstructionScript
+// 0x0030 (0x0030 - 0x0000)
+struct BP_EnvironmentSystem_Container_Base_C_UserConstructionScript final
+{
+public:
+	struct FVector                                CallFunc_GetActorBounds_Origin;                    // 0x0000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetActorBounds_BoxExtent;                 // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_EnvironmentSystem_Container_Base_C_UserConstructionScript;
+
 // Function BP_EnvironmentSystem_Container_Base.BP_EnvironmentSystem_Container_Base_C.ExecuteUbergraph_BP_EnvironmentSystem_Container_Base
 // 0x0090 (0x0090 - 0x0000)
 struct BP_EnvironmentSystem_Container_Base_C_ExecuteUbergraph_BP_EnvironmentSystem_Container_Base final
@@ -29,16 +39,6 @@ public:
 	class ABP_Simple_VAT_Player_PBR_C*            CallFunc_FinishSpawningActor_ReturnValue;          // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_EnvironmentSystem_Container_Base_C_ExecuteUbergraph_BP_EnvironmentSystem_Container_Base;
-
-// Function BP_EnvironmentSystem_Container_Base.BP_EnvironmentSystem_Container_Base_C.UserConstructionScript
-// 0x0030 (0x0030 - 0x0000)
-struct BP_EnvironmentSystem_Container_Base_C_UserConstructionScript final
-{
-public:
-	struct FVector                                CallFunc_GetActorBounds_Origin;                    // 0x0000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetActorBounds_BoxExtent;                 // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_EnvironmentSystem_Container_Base_C_UserConstructionScript;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

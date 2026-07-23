@@ -20,8 +20,8 @@ SDK_NAMESPACE_START
 class IBPI_PhotoActorSignal_C final
 {
 public:
-	void DeleteActor(class AActor* Actor);
 	void AddActor(class AActor* Actor);
+	void DeleteActor(class AActor* Actor);
 
 public:
 	static class UClass* StaticClass()

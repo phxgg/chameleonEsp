@@ -58,11 +58,11 @@ public:
 	bool                                          Handle_Directional_Occlusion;                      // 0x0198(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Save_Unchanging_Values();
-	void Directional_Vector_Mask(const struct FVector& Direction, struct FLinearColor* Mask);
-	double Directional_Mask_Value(const struct FVector& Direction, const struct FVector& Compare);
-	struct FVector Current_Trace_Direction(const struct FVector& Facing_Direction, int32 Vertical_Step);
 	struct FVector Current_Facing_Direction(int32 Step);
+	struct FVector Current_Trace_Direction(const struct FVector& Facing_Direction, int32 Vertical_Step);
+	double Directional_Mask_Value(const struct FVector& Direction, const struct FVector& Compare);
+	void Directional_Vector_Mask(const struct FVector& Direction, struct FLinearColor* Mask);
+	void Save_Unchanging_Values();
 
 public:
 	static class UClass* StaticClass()

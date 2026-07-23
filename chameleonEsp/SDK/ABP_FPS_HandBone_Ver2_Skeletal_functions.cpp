@@ -19,9 +19,9 @@ SDK_NAMESPACE_START
 // Function ABP_FPS_HandBone_Ver2_Skeletal.ABP_FPS_HandBone_Ver2_Skeletal_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPoseLink*                       AnimGraph                                              (Parm, OutParm, NoDestructor)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
-void UABP_FPS_HandBone_Ver2_Skeletal_C::AnimGraph(struct FPoseLink* AnimGraph)
+void UABP_FPS_HandBone_Ver2_Skeletal_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -32,8 +32,8 @@ void UABP_FPS_HandBone_Ver2_Skeletal_C::AnimGraph(struct FPoseLink* AnimGraph)
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (AnimGraph != nullptr)
-		*AnimGraph = std::move(Parms.AnimGraph);
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
 

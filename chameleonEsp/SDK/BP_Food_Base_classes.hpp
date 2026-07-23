@@ -38,29 +38,29 @@ public:
 	double                                        kcal;                                              // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_Food_Base(int32 EntryPoint);
-	void UseItem();
-	void DefaultMontagePlay();
-	void PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex);
-	void SetMeshDatas(bool KeepScale);
-	void Shot(bool PressState, double PushTime, class ABP_FirstPersonCharacter_Main_C* SourcePlayer);
-	void ReceiveBeginPlay();
-	void Attack_AC_Remote(double TimeRange, class FName ComponentName, double DamageMultiply, double StanMultiply);
-	void Combo(double TimeRange, class FName ComboName);
-	void Attack_AC(double TimeRange, class FName AttackName, double DamageMultiply, bool MutipleHitPossible, double StanMultiply);
-	void CollisionReset();
-	void OnCompleted_AB8CFA264FD7DA0BDDFF52A4E41377D1(class FName NotifyName);
-	void OnBlendOut_AB8CFA264FD7DA0BDDFF52A4E41377D1(class FName NotifyName);
-	void OnInterrupted_AB8CFA264FD7DA0BDDFF52A4E41377D1(class FName NotifyName);
-	void OnNotifyBegin_AB8CFA264FD7DA0BDDFF52A4E41377D1(class FName NotifyName);
-	void OnNotifyEnd_AB8CFA264FD7DA0BDDFF52A4E41377D1(class FName NotifyName);
-	void OnCompleted_1EE8139B44BEF7533BB7DA8825C05C72(class FName NotifyName);
-	void OnBlendOut_1EE8139B44BEF7533BB7DA8825C05C72(class FName NotifyName);
-	void OnInterrupted_1EE8139B44BEF7533BB7DA8825C05C72(class FName NotifyName);
-	void OnNotifyBegin_1EE8139B44BEF7533BB7DA8825C05C72(class FName NotifyName);
-	void OnNotifyEnd_1EE8139B44BEF7533BB7DA8825C05C72(class FName NotifyName);
-	void ApplyDamage(class UObject* OtherActor, const struct FHitResult& Sweep_Result);
 	void IsChangeImage(bool* IsInteract, class FText* OverrideText);
+	void ApplyDamage(class UObject* OtherActor, const struct FHitResult& Sweep_Result);
+	void OnNotifyEnd_1EE8139B44BEF7533BB7DA8825C05C72(class FName NotifyName);
+	void OnNotifyBegin_1EE8139B44BEF7533BB7DA8825C05C72(class FName NotifyName);
+	void OnInterrupted_1EE8139B44BEF7533BB7DA8825C05C72(class FName NotifyName);
+	void OnBlendOut_1EE8139B44BEF7533BB7DA8825C05C72(class FName NotifyName);
+	void OnCompleted_1EE8139B44BEF7533BB7DA8825C05C72(class FName NotifyName);
+	void OnNotifyEnd_AB8CFA264FD7DA0BDDFF52A4E41377D1(class FName NotifyName);
+	void OnNotifyBegin_AB8CFA264FD7DA0BDDFF52A4E41377D1(class FName NotifyName);
+	void OnInterrupted_AB8CFA264FD7DA0BDDFF52A4E41377D1(class FName NotifyName);
+	void OnBlendOut_AB8CFA264FD7DA0BDDFF52A4E41377D1(class FName NotifyName);
+	void OnCompleted_AB8CFA264FD7DA0BDDFF52A4E41377D1(class FName NotifyName);
+	void CollisionReset();
+	void Attack_AC(double TimeRange, class FName AttackName, double DamageMultiply, bool MutipleHitPossible, double StanMultiply);
+	void Combo(double TimeRange, class FName ComboName);
+	void Attack_AC_Remote(double TimeRange, class FName ComponentName, double DamageMultiply, double StanMultiply);
+	void ReceiveBeginPlay();
+	void Shot(bool PressState, double PushTime, class ABP_FirstPersonCharacter_Main_C* SourcePlayer);
+	void SetMeshDatas(bool KeepScale);
+	void PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex);
+	void DefaultMontagePlay();
+	void UseItem();
+	void ExecuteUbergraph_BP_Food_Base(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

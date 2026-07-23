@@ -16,17 +16,24 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_TeleportPoints.BP_TeleportPoints_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_TeleportPoints.BP_TeleportPoints_C.GetAllTrasnfroms
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<struct FTransform>*              SpawnTransforms_0                                      (Parm, OutParm)
 
-void ABP_TeleportPoints_C::UserConstructionScript()
+void ABP_TeleportPoints_C::GetAllTrasnfroms(TArray<struct FTransform>* SpawnTransforms_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TeleportPoints_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_TeleportPoints_C", "GetAllTrasnfroms");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_TeleportPoints_C_GetAllTrasnfroms Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (SpawnTransforms_0 != nullptr)
+		*SpawnTransforms_0 = std::move(Parms.SpawnTransforms_0);
 }
 
 
@@ -44,24 +51,17 @@ void ABP_TeleportPoints_C::SetSpawnPoint()
 }
 
 
-// Function BP_TeleportPoints.BP_TeleportPoints_C.GetAllTrasnfroms
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// TArray<struct FTransform>*              SpawnTransforms                                        (Parm, OutParm)
+// Function BP_TeleportPoints.BP_TeleportPoints_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_TeleportPoints_C::GetAllTrasnfroms(TArray<struct FTransform>* SpawnTransforms)
+void ABP_TeleportPoints_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TeleportPoints_C", "GetAllTrasnfroms");
+		Func = Class->GetFunction("BP_TeleportPoints_C", "UserConstructionScript");
 
-	Params::BP_TeleportPoints_C_GetAllTrasnfroms Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (SpawnTransforms != nullptr)
-		*SpawnTransforms = std::move(Parms.SpawnTransforms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

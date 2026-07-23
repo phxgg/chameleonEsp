@@ -17,39 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_AIMoveControl.BPC_AIMoveControl_C.OnSuccess_95EC79A3420BD63D9809D388C58C8FFB
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_AIMoveControl_C_OnSuccess_95EC79A3420BD63D9809D388C58C8FFB final
-{
-public:
-	EPathFollowingResult                          MovementResult;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_AIMoveControl_C_OnSuccess_95EC79A3420BD63D9809D388C58C8FFB;
-
-// Function BPC_AIMoveControl.BPC_AIMoveControl_C.OnFail_95EC79A3420BD63D9809D388C58C8FFB
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_AIMoveControl_C_OnFail_95EC79A3420BD63D9809D388C58C8FFB final
-{
-public:
-	EPathFollowingResult                          MovementResult;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_AIMoveControl_C_OnFail_95EC79A3420BD63D9809D388C58C8FFB;
-
-// Function BPC_AIMoveControl.BPC_AIMoveControl_C.MoveTo
-// 0x0030 (0x0030 - 0x0000)
-struct BPC_AIMoveControl_C_MoveTo final
-{
-public:
-	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        AcceptanceRadius;                                  // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        GiveUpTime;                                        // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MultiplySpeed;                                     // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          StopOnOverlap;                                     // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   AttackName;                                        // 0x0024(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_AIMoveControl_C_MoveTo;
-
 // Function BPC_AIMoveControl.BPC_AIMoveControl_C.ExecuteUbergraph_BPC_AIMoveControl
 // 0x00E8 (0x00E8 - 0x0000)
 struct BPC_AIMoveControl_C_ExecuteUbergraph_BPC_AIMoveControl final
@@ -96,6 +63,39 @@ public:
 	float                                         K2Node_VariableSet_MaxWalkSpeed_ImplicitCast_2;    // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_AIMoveControl_C_ExecuteUbergraph_BPC_AIMoveControl;
+
+// Function BPC_AIMoveControl.BPC_AIMoveControl_C.MoveTo
+// 0x0030 (0x0030 - 0x0000)
+struct BPC_AIMoveControl_C_MoveTo final
+{
+public:
+	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        AcceptanceRadius;                                  // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GiveUpTime;                                        // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MultiplySpeed;                                     // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          StopOnOverlap;                                     // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   AttackName;                                        // 0x0024(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_AIMoveControl_C_MoveTo;
+
+// Function BPC_AIMoveControl.BPC_AIMoveControl_C.OnFail_95EC79A3420BD63D9809D388C58C8FFB
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_AIMoveControl_C_OnFail_95EC79A3420BD63D9809D388C58C8FFB final
+{
+public:
+	EPathFollowingResult                          MovementResult;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_AIMoveControl_C_OnFail_95EC79A3420BD63D9809D388C58C8FFB;
+
+// Function BPC_AIMoveControl.BPC_AIMoveControl_C.OnSuccess_95EC79A3420BD63D9809D388C58C8FFB
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_AIMoveControl_C_OnSuccess_95EC79A3420BD63D9809D388C58C8FFB final
+{
+public:
+	EPathFollowingResult                          MovementResult;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_AIMoveControl_C_OnSuccess_95EC79A3420BD63D9809D388C58C8FFB;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

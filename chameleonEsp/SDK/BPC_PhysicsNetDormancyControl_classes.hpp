@@ -24,12 +24,12 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void Wake(class UPrimitiveComponent* WakingComponent, class FName BoneName);
-	void SleepCall();
-	void Sleep(class UPrimitiveComponent* SleepingComponent, class FName BoneName);
-	void SimulatePhysicsCheck();
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BPC_PhysicsNetDormancyControl(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void SimulatePhysicsCheck();
+	void Sleep(class UPrimitiveComponent* SleepingComponent, class FName BoneName);
+	void SleepCall();
+	void Wake(class UPrimitiveComponent* WakingComponent, class FName BoneName);
 
 public:
 	static class UClass* StaticClass()

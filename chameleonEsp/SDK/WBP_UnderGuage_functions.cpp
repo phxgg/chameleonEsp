@@ -16,46 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_UnderGuage.WBP_UnderGuage_C.SetWidth
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Desired_Size_X                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UnderGuage_C::SetWidth(double Desired_Size_X)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UnderGuage_C", "SetWidth");
-
-	Params::WBP_UnderGuage_C_SetWidth Parms{};
-
-	Parms.Desired_Size_X = Desired_Size_X;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UnderGuage.WBP_UnderGuage_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UnderGuage_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UnderGuage_C", "PreConstruct");
-
-	Params::WBP_UnderGuage_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_UnderGuage.WBP_UnderGuage_C.ExecuteUbergraph_WBP_UnderGuage
 // (Final, UbergraphFunction)
 // Parameters:
@@ -71,6 +31,46 @@ void UWBP_UnderGuage_C::ExecuteUbergraph_WBP_UnderGuage(int32 EntryPoint)
 	Params::WBP_UnderGuage_C_ExecuteUbergraph_WBP_UnderGuage Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UnderGuage.WBP_UnderGuage_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_UnderGuage_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UnderGuage_C", "PreConstruct");
+
+	Params::WBP_UnderGuage_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UnderGuage.WBP_UnderGuage_C.SetWidth
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Desired_Size_X                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_UnderGuage_C::SetWidth(double Desired_Size_X)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UnderGuage_C", "SetWidth");
+
+	Params::WBP_UnderGuage_C_SetWidth Parms{};
+
+	Parms.Desired_Size_X = Desired_Size_X;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

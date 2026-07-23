@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_CopyActorBase_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_CopyActorBase_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -31,16 +31,16 @@ public:
 	class USphereComponent*                       Sphere;                                            // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void TimeStop(class AActor* Actor);
-	void TimerUpdate();
-	void TimeReStart(class AActor* Actor);
-	void SetTimeStopState(bool State_SetTimeStopState);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_TimeStopArea(int32 EntryPoint);
-	void DestroyVAT();
-	void Check();
-	void BndEvt__BP_TimeStopArea_Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 	void BndEvt__BP_TimeStopArea_Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__BP_TimeStopArea_Sphere_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	void Check();
+	void DestroyVAT();
+	void ExecuteUbergraph_BP_TimeStopArea(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void SetTimeStopState(bool State);
+	void TimeReStart(class AActor* Actor);
+	void TimerUpdate();
+	void TimeStop(class AActor* Actor);
 
 public:
 	static class UClass* StaticClass()

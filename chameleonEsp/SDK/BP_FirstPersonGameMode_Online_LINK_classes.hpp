@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "BP_FirstPersonGameMode_V2_classes.hpp"
-#include "EN_LINK_GamePhase_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
+#include "EN_LINK_GamePhase_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -56,83 +56,83 @@ public:
 	class FName                                   StartGameMode;                                     // 0x052C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UserStateClean();
-	void UpdateSpawnContllers();
-	void UpdateShopUI();
-	void UpdateOverlapingPlayers();
-	void UpdateGoalPointCount();
-	void UpdateCanJoin(bool State);
-	void UnZipAll();
-	void TravelMap();
-	void TimeChange();
-	void TimeAdd(int32 TextIndex, int32 AddValue, const class FString& CustomString);
-	void TeleportPlayers(class FName TargetPositionName);
-	void TaskClear();
-	void StormStart();
-	void StateUpdate(class AController* Controller, class FName StateName);
-	void StateCheck();
-	void Spawn(class AController* Controller_Spawn);
-	void ShowAnnounce(int32 TextIndex, bool LastAnnounce);
-	void SetMiniPenguinWeight(double Weight);
-	void SetGamePhase(EN_LINK_GamePhase GamePhase);
-	void SetCurrentPlayerNum();
-	void SetClearTime();
-	void SelectKing();
-	void ResetDayCycle();
-	void RemoveMap();
-	void RemoveCurrentGame(class AController* Controller);
-	void RemoveAllTasks();
-	void ReGenerateMap(int32 Level);
-	void ReceiveBeginPlay();
-	void QuickForceStart();
-	void PhaseTimerClear();
-	void PhaseTaskStart(int32 Phase);
-	void PhaseStart(int32 PhaseNumber, int32 PhaseTime);
-	void OverlapShopPlayers(int32 Length);
-	void OnUpdateSessionComplete_0015FF304852112AC6F85EB1B4FD7C13(class FName SessionName, bool bWasSuccessful);
-	void OnUpdateOverlapingPlayers(int32 Length);
-	void OnSessionUserInviteAccepted(bool bWasSuccessful, int32 ControllerId, const struct FUniqueNetIdRepl& UserId, const struct FOnlineSessionSearchResultBP& InviteResult);
-	void OnRequestComplete_596ADE20A86B39499222CE49C139BEF3(const class FString& Response, bool bSuccessful, const struct FHttpHeader& OutHeader);
-	void OnRequestComplete_04685BE662ED3B24A6652AE4019A5EE2(const class FString& Response, bool bSuccessful, const struct FHttpHeader& OutHeader);
-	void OnJoinSessionComplete_69EDB86241BB277C5E43CEB754903A82(class FName SessionName, EOnJoinSessionCompleteResult_ Result);
-	void OnCallFailed_69EDB86241BB277C5E43CEB754903A82(class FName SessionName, EOnJoinSessionCompleteResult_ Result);
-	void OnCallFailed_0015FF304852112AC6F85EB1B4FD7C13(class FName SessionName, bool bWasSuccessful);
-	void MoveTime();
-	void MemberJoin(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, const struct FUniqueNetIdRepl& MemberId);
-	void LogicStart();
-	void LastPhaseStart();
-	void LastGoal();
-	void KingVisualUpdate();
-	void K2_PostLogin(class APlayerController* NewPlayer_K2_PostLogin);
-	void K2_OnLogout(class AController* ExitingController_K2_OnLogout);
-	void ItemAllClear();
-	void IgrooGoalEvent();
-	void GoToWork();
-	void Goal(int32 PenguinCounet);
-	void GiveDefaultItem();
-	void GetTargetStateUsers(class FName TargetName, TArray<class AController*>* GetControllers);
-	int32 GetRandomBodyId();
-	void GetLiveAndDeathPlayers(TArray<class ABP_FirstPersonCharacter_Main_C*>* LiveCharacters, TArray<class ABP_FirstPersonCharacter_Main_C*>* DeathCharacters);
-	void GetGamePhase(EN_LINK_GamePhase* CurrentGamePhase);
-	void GenerateMap(int32 Level);
-	void GameStartWait();
-	void GameOver();
-	void GameClear();
-	void Freeze(class ABP_FirstPersonCharacter_Main_C* Character);
-	void ExecuteUbergraph_BP_FirstPersonGameMode_Online_LINK(int32 EntryPoint);
-	void DayStart();
-	void CountOut();
-	void Countdown();
-	void ClearStateUpdate();
-	void CheckGoalMiniPenguins(TArray<class ABP_FirstPersonCharacter_LINK_C*>* GoalMiniOwnersArray);
-	void CanLinkCheck(bool* Rezult);
-	void BodyIdReset();
-	void BackToLobby();
-	void AllPlayerStateReset();
 	void AddCoinAllPlayers(int32 AddValue);
+	void AllPlayerStateReset();
+	void BackToLobby();
+	void BodyIdReset();
+	void CanLinkCheck(bool* Rezult);
+	void CheckGoalMiniPenguins(TArray<class ABP_FirstPersonCharacter_LINK_C*>* GoalMiniOwnersArray);
+	void ClearStateUpdate();
+	void Countdown();
+	void CountOut();
+	void DayStart();
+	void ExecuteUbergraph_BP_FirstPersonGameMode_Online_LINK(int32 EntryPoint);
+	void Freeze(class ABP_FirstPersonCharacter_Main_C* Character);
+	void GameClear();
+	void GameOver();
+	void GameStartWait();
+	void GenerateMap(int32 Level);
+	void GetGamePhase(EN_LINK_GamePhase* CurrentGamePhase);
+	void GetLiveAndDeathPlayers(TArray<class ABP_FirstPersonCharacter_Main_C*>* LiveCharacters, TArray<class ABP_FirstPersonCharacter_Main_C*>* DeathCharacters);
+	int32 GetRandomBodyId();
+	void GetTargetStateUsers(class FName TargetName, TArray<class AController*>* GetControllers);
+	void GiveDefaultItem();
+	void Goal(int32 PenguinCounet);
+	void GoToWork();
+	void IgrooGoalEvent();
+	void ItemAllClear();
+	void K2_OnLogout(class AController* ExitingController);
+	void K2_PostLogin(class APlayerController* NewPlayer);
+	void KingVisualUpdate();
+	void LastGoal();
+	void LastPhaseStart();
+	void LogicStart();
+	void MemberJoin(const struct FUniqueNetIdRepl& LocalUserId, class UPartyId* PartyId, const struct FUniqueNetIdRepl& MemberId);
+	void MoveTime();
+	void OnCallFailed_0015FF304852112AC6F85EB1B4FD7C13(class FName SessionName, bool bWasSuccessful);
+	void OnCallFailed_69EDB86241BB277C5E43CEB754903A82(class FName SessionName, EOnJoinSessionCompleteResult_ Result);
+	void OnJoinSessionComplete_69EDB86241BB277C5E43CEB754903A82(class FName SessionName, EOnJoinSessionCompleteResult_ Result);
+	void OnRequestComplete_04685BE662ED3B24A6652AE4019A5EE2(const class FString& Response, bool bSuccessful, const struct FHttpHeader& OutHeader);
+	void OnRequestComplete_596ADE20A86B39499222CE49C139BEF3(const class FString& Response, bool bSuccessful, const struct FHttpHeader& OutHeader);
+	void OnSessionUserInviteAccepted(bool bWasSuccessful, int32 ControllerId, const struct FUniqueNetIdRepl& UserId, const struct FOnlineSessionSearchResultBP& InviteResult);
+	void OnUpdateOverlapingPlayers(int32 Length);
+	void OnUpdateSessionComplete_0015FF304852112AC6F85EB1B4FD7C13(class FName SessionName, bool bWasSuccessful);
+	void OverlapShopPlayers(int32 Length);
+	void PhaseStart(int32 PhaseNumber, int32 PhaseTime);
+	void PhaseTaskStart(int32 Phase);
+	void PhaseTimerClear();
+	void QuickForceStart();
+	void ReceiveBeginPlay();
+	void ReGenerateMap(int32 Level);
+	void RemoveAllTasks();
+	void RemoveCurrentGame(class AController* Controller);
+	void RemoveMap();
+	void ResetDayCycle();
+	void SelectKing();
+	void SetClearTime();
+	void SetCurrentPlayerNum();
+	void SetGamePhase(EN_LINK_GamePhase GamePhase);
+	void SetMiniPenguinWeight(double Weight);
+	void ShowAnnounce(int32 TextIndex, bool LastAnnounce);
+	void Spawn(class AController* Controller);
+	void StateCheck();
+	void StateUpdate(class AController* Controller, class FName StateName);
+	void StormStart();
+	void TaskClear();
+	void TeleportPlayers(class FName TargetPositionName);
+	void TimeAdd(int32 TextIndex, int32 AddValue, const class FString& CustomString);
+	void TimeChange();
+	void TravelMap();
+	void UnZipAll();
+	void UpdateCanJoin(bool State);
+	void UpdateGoalPointCount();
+	void UpdateOverlapingPlayers();
+	void UpdateShopUI();
+	void UpdateSpawnContllers();
+	void UserStateClean();
 
-	void IsAllTaskClear(bool* IsAllClear) const;
 	void GetGoalPointCount(int32* PointNum) const;
+	void IsAllTaskClear(bool* IsAllClear) const;
 
 public:
 	static class UClass* StaticClass()

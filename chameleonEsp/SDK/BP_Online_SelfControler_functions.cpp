@@ -16,31 +16,37 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Online_SelfControler.BP_Online_SelfControler_C.Return
+// Function BP_Online_SelfControler.BP_Online_SelfControler_C.CloseSettings
 // (BlueprintCallable, BlueprintEvent)
 
-void ABP_Online_SelfControler_C::Return()
+void ABP_Online_SelfControler_C::CloseSettings()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Online_SelfControler_C", "Return");
+		Func = Class->GetFunction("BP_Online_SelfControler_C", "CloseSettings");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_Online_SelfControler.BP_Online_SelfControler_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_Online_SelfControler.BP_Online_SelfControler_C.ExecuteUbergraph_BP_Online_SelfControler
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Online_SelfControler_C::ReceiveBeginPlay()
+void ABP_Online_SelfControler_C::ExecuteUbergraph_BP_Online_SelfControler(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Online_SelfControler_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_Online_SelfControler_C", "ExecuteUbergraph_BP_Online_SelfControler");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_Online_SelfControler_C_ExecuteUbergraph_BP_Online_SelfControler Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -70,35 +76,29 @@ void ABP_Online_SelfControler_C::InpActEvt_IA_Pause_K2Node_EnhancedInputActionEv
 }
 
 
-// Function BP_Online_SelfControler.BP_Online_SelfControler_C.ExecuteUbergraph_BP_Online_SelfControler
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_Online_SelfControler.BP_Online_SelfControler_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_Online_SelfControler_C::ExecuteUbergraph_BP_Online_SelfControler(int32 EntryPoint)
+void ABP_Online_SelfControler_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Online_SelfControler_C", "ExecuteUbergraph_BP_Online_SelfControler");
+		Func = Class->GetFunction("BP_Online_SelfControler_C", "ReceiveBeginPlay");
 
-	Params::BP_Online_SelfControler_C_ExecuteUbergraph_BP_Online_SelfControler Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_Online_SelfControler.BP_Online_SelfControler_C.CloseSettings
+// Function BP_Online_SelfControler.BP_Online_SelfControler_C.Return
 // (BlueprintCallable, BlueprintEvent)
 
-void ABP_Online_SelfControler_C::CloseSettings()
+void ABP_Online_SelfControler_C::Return()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Online_SelfControler_C", "CloseSettings");
+		Func = Class->GetFunction("BP_Online_SelfControler_C", "Return");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

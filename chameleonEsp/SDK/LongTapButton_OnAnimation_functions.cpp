@@ -16,137 +16,57 @@
 
 SDK_NAMESPACE_START
 
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.UpdateCompressedTextIndex
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   CompressedTextIndex                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void ULongTapButton_OnAnimation_C::UpdateCompressedTextIndex(int32 CompressedTextIndex)
+void ULongTapButton_OnAnimation_C::BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "UpdateCompressedTextIndex");
-
-	Params::LongTapButton_OnAnimation_C_UpdateCompressedTextIndex Parms{};
-
-	Parms.CompressedTextIndex = CompressedTextIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.ToNavigation
-// (BlueprintCallable, BlueprintEvent)
-
-void ULongTapButton_OnAnimation_C::ToNavigation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "ToNavigation");
+		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.SetRandomMiniPneguinText
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_3_OnButtonReleasedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void ULongTapButton_OnAnimation_C::SetRandomMiniPneguinText()
+void ULongTapButton_OnAnimation_C::BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_3_OnButtonReleasedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "SetRandomMiniPneguinText");
+		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_3_OnButtonReleasedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.SetActiveState
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ActiveState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
 
-void ULongTapButton_OnAnimation_C::SetActiveState(bool ActiveState)
+void ULongTapButton_OnAnimation_C::BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "SetActiveState");
-
-	Params::LongTapButton_OnAnimation_C_SetActiveState Parms{};
-
-	Parms.ActiveState = ActiveState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.PushAfter
-// (BlueprintCallable, BlueprintEvent)
-
-void ULongTapButton_OnAnimation_C::PushAfter()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "PushAfter");
+		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
 
-void ULongTapButton_OnAnimation_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void ULongTapButton_OnAnimation_C::BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "PreConstruct");
-
-	Params::LongTapButton_OnAnimation_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.GetText
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
-
-class FText ULongTapButton_OnAnimation_C::GetText()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "GetText");
-
-	Params::LongTapButton_OnAnimation_C_GetText Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.FromNavigation
-// (BlueprintCallable, BlueprintEvent)
-
-void ULongTapButton_OnAnimation_C::FromNavigation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "FromNavigation");
+		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -172,59 +92,139 @@ void ULongTapButton_OnAnimation_C::ExecuteUbergraph_LongTapButton_OnAnimation(in
 }
 
 
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.FromNavigation
+// (BlueprintCallable, BlueprintEvent)
 
-void ULongTapButton_OnAnimation_C::BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature()
+void ULongTapButton_OnAnimation_C::FromNavigation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature");
+		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "FromNavigation");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.GetText
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-void ULongTapButton_OnAnimation_C::BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature()
+class FText ULongTapButton_OnAnimation_C::GetText()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature");
+		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "GetText");
+
+	Params::LongTapButton_OnAnimation_C_GetText Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULongTapButton_OnAnimation_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "PreConstruct");
+
+	Params::LongTapButton_OnAnimation_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.PushAfter
+// (BlueprintCallable, BlueprintEvent)
+
+void ULongTapButton_OnAnimation_C::PushAfter()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "PushAfter");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_3_OnButtonReleasedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.SetActiveState
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ActiveState_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULongTapButton_OnAnimation_C::BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_3_OnButtonReleasedEvent__DelegateSignature()
+void ULongTapButton_OnAnimation_C::SetActiveState(bool ActiveState_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_3_OnButtonReleasedEvent__DelegateSignature");
+		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "SetActiveState");
+
+	Params::LongTapButton_OnAnimation_C_SetActiveState Parms{};
+
+	Parms.ActiveState_0 = ActiveState_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.SetRandomMiniPneguinText
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ULongTapButton_OnAnimation_C::SetRandomMiniPneguinText()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "SetRandomMiniPneguinText");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.ToNavigation
+// (BlueprintCallable, BlueprintEvent)
 
-void ULongTapButton_OnAnimation_C::BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature()
+void ULongTapButton_OnAnimation_C::ToNavigation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "BndEvt__LongTapButton_OnAnimation_UINavButtonBase_87_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature");
+		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "ToNavigation");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.UpdateCompressedTextIndex
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   CompressedTextIndex_0                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULongTapButton_OnAnimation_C::UpdateCompressedTextIndex(int32 CompressedTextIndex_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LongTapButton_OnAnimation_C", "UpdateCompressedTextIndex");
+
+	Params::LongTapButton_OnAnimation_C_UpdateCompressedTextIndex Parms{};
+
+	Parms.CompressedTextIndex_0 = CompressedTextIndex_0;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -27,11 +27,11 @@ public:
 	class UBillboardComponent*                    SpawnLocation_2;                                   // 0x0368(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveDestroyed();
-	void ReceiveBeginPlay();
-	void IsChangeImage(bool* IsInteract_IsChangeImage, class FText* OverrideText_IsChangeImage);
-	void ExecuteUbergraph_BP_CannonBarrel(int32 EntryPoint);
 	void BndEvt__BP_CannonBullet_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+	void ExecuteUbergraph_BP_CannonBarrel(int32 EntryPoint);
+	void IsChangeImage(bool* IsInteract, class FText* OverrideText);
+	void ReceiveBeginPlay();
+	void ReceiveDestroyed();
 
 public:
 	static class UClass* StaticClass()

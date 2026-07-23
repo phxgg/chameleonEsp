@@ -16,6 +16,20 @@
 
 SDK_NAMESPACE_START
 
+// Function BP_InstanceCreate_Manager.BP_InstanceCreate_Manager_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_InstanceCreate_Manager_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_InstanceCreate_Manager_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_InstanceCreate_Manager.BP_InstanceCreate_Manager_C.ExecuteUbergraph_BP_InstanceCreate_Manager
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -33,20 +47,6 @@ void ABP_InstanceCreate_Manager_C::ExecuteUbergraph_BP_InstanceCreate_Manager(in
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_InstanceCreate_Manager.BP_InstanceCreate_Manager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_InstanceCreate_Manager_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InstanceCreate_Manager_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

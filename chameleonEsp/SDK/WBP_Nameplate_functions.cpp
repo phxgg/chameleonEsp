@@ -16,61 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_Nameplate.WBP_Nameplate_C.SetPlayerName
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_Nameplate.WBP_Nameplate_C.ExecuteUbergraph_WBP_Nameplate
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const class FString&                    playerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Nameplate_C::SetPlayerName(const class FString& playerName)
+void UWBP_Nameplate_C::ExecuteUbergraph_WBP_Nameplate(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Nameplate_C", "SetPlayerName");
+		Func = Class->GetFunction("WBP_Nameplate_C", "ExecuteUbergraph_WBP_Nameplate");
 
-	Params::WBP_Nameplate_C_SetPlayerName Parms{};
+	Params::WBP_Nameplate_C_ExecuteUbergraph_WBP_Nameplate Parms{};
 
-	Parms.playerName = std::move(playerName);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Nameplate.WBP_Nameplate_C.SetME
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Point                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Nameplate_C::SetME(int32 Point)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Nameplate_C", "SetME");
-
-	Params::WBP_Nameplate_C_SetME Parms{};
-
-	Parms.Point = Point;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Nameplate.WBP_Nameplate_C.SetEEYAN
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Point                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Nameplate_C::SetEEYAN(int32 Point)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Nameplate_C", "SetEEYAN");
-
-	Params::WBP_Nameplate_C_SetEEYAN Parms{};
-
-	Parms.Point = Point;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -96,21 +56,61 @@ void UWBP_Nameplate_C::SetColor(const struct FSlateColor& Color_and_Opacity)
 }
 
 
-// Function WBP_Nameplate.WBP_Nameplate_C.ExecuteUbergraph_WBP_Nameplate
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_Nameplate.WBP_Nameplate_C.SetEEYAN
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Point                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Nameplate_C::ExecuteUbergraph_WBP_Nameplate(int32 EntryPoint)
+void UWBP_Nameplate_C::SetEEYAN(int32 Point)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Nameplate_C", "ExecuteUbergraph_WBP_Nameplate");
+		Func = Class->GetFunction("WBP_Nameplate_C", "SetEEYAN");
 
-	Params::WBP_Nameplate_C_ExecuteUbergraph_WBP_Nameplate Parms{};
+	Params::WBP_Nameplate_C_SetEEYAN Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Point = Point;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Nameplate.WBP_Nameplate_C.SetME
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Point                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Nameplate_C::SetME(int32 Point)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Nameplate_C", "SetME");
+
+	Params::WBP_Nameplate_C_SetME Parms{};
+
+	Parms.Point = Point;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Nameplate.WBP_Nameplate_C.SetPlayerName
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    playerName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWBP_Nameplate_C::SetPlayerName(const class FString& playerName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Nameplate_C", "SetPlayerName");
+
+	Params::WBP_Nameplate_C_SetPlayerName Parms{};
+
+	Parms.playerName = std::move(playerName);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

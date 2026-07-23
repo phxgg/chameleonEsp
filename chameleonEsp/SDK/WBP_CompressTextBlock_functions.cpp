@@ -16,66 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_CompressTextBlock.WBP_CompressTextBlock_C.UpdateTextIndex
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   CompressedTextIndex                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CompressTextBlock_C::UpdateTextIndex(int32 CompressedTextIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CompressTextBlock_C", "UpdateTextIndex");
-
-	Params::WBP_CompressTextBlock_C_UpdateTextIndex Parms{};
-
-	Parms.CompressedTextIndex = CompressedTextIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_CompressTextBlock.WBP_CompressTextBlock_C.SetText
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWBP_CompressTextBlock_C::SetText(const class FText& Text)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CompressTextBlock_C", "SetText");
-
-	Params::WBP_CompressTextBlock_C_SetText Parms{};
-
-	Parms.Text = std::move(Text);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_CompressTextBlock.WBP_CompressTextBlock_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CompressTextBlock_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CompressTextBlock_C", "PreConstruct");
-
-	Params::WBP_CompressTextBlock_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_CompressTextBlock.WBP_CompressTextBlock_C.ExecuteUbergraph_WBP_CompressTextBlock
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -91,6 +31,66 @@ void UWBP_CompressTextBlock_C::ExecuteUbergraph_WBP_CompressTextBlock(int32 Entr
 	Params::WBP_CompressTextBlock_C_ExecuteUbergraph_WBP_CompressTextBlock Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CompressTextBlock.WBP_CompressTextBlock_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CompressTextBlock_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CompressTextBlock_C", "PreConstruct");
+
+	Params::WBP_CompressTextBlock_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CompressTextBlock.WBP_CompressTextBlock_C.SetText
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      Text_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWBP_CompressTextBlock_C::SetText(const class FText& Text_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CompressTextBlock_C", "SetText");
+
+	Params::WBP_CompressTextBlock_C_SetText Parms{};
+
+	Parms.Text_0 = std::move(Text_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CompressTextBlock.WBP_CompressTextBlock_C.UpdateTextIndex
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   CompressedTextIndex_0                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CompressTextBlock_C::UpdateTextIndex(int32 CompressedTextIndex_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CompressTextBlock_C", "UpdateTextIndex");
+
+	Params::WBP_CompressTextBlock_C_UpdateTextIndex Parms{};
+
+	Parms.CompressedTextIndex_0 = CompressedTextIndex_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

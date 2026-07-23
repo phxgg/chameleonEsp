@@ -16,57 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_ItemSlots.WBP_ItemSlots_C.UpdateSlotStackData
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_ItemSlots_C_UpdateSlotStackData final
-{
-public:
-	int32                                         TargetIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         StackCount;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWBP_Item_C*                            CallFunc_Array_Get_Item;                           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ItemSlots_C_UpdateSlotStackData;
-
-// Function WBP_ItemSlots.WBP_ItemSlots_C.UpdateSlotData
-// 0x0068 (0x0068 - 0x0000)
-struct WBP_ItemSlots_C_UpdateSlotData final
-{
-public:
-	int32                                         TargetIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCPP_GameItemData                      ItemData;                                          // 0x0008(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class UWBP_Item_C*                            CallFunc_Array_Get_Item;                           // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ItemSlots_C_UpdateSlotData;
-
-// Function WBP_ItemSlots.WBP_ItemSlots_C.UpdateSelectSlot
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_ItemSlots_C_UpdateSelectSlot final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ItemSlots_C_UpdateSelectSlot;
-
-// Function WBP_ItemSlots.WBP_ItemSlots_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_ItemSlots_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ItemSlots_C_PreConstruct;
-
-// Function WBP_ItemSlots.WBP_ItemSlots_C.GetCurrentItemData
-// 0x0060 (0x0060 - 0x0000)
-struct WBP_ItemSlots_C_GetCurrentItemData final
-{
-public:
-	struct FCPP_GameItemData                      ItemData;                                          // 0x0000(0x0058)(Parm, OutParm)
-	class UWBP_Item_C*                            CallFunc_Array_Get_Item;                           // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ItemSlots_C_GetCurrentItemData;
-
 // Function WBP_ItemSlots.WBP_ItemSlots_C.ExecuteUbergraph_WBP_ItemSlots
 // 0x0090 (0x0090 - 0x0000)
 struct WBP_ItemSlots_C_ExecuteUbergraph_WBP_ItemSlots final
@@ -103,6 +52,57 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x008F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ItemSlots_C_ExecuteUbergraph_WBP_ItemSlots;
+
+// Function WBP_ItemSlots.WBP_ItemSlots_C.GetCurrentItemData
+// 0x0060 (0x0060 - 0x0000)
+struct WBP_ItemSlots_C_GetCurrentItemData final
+{
+public:
+	struct FCPP_GameItemData                      ItemData;                                          // 0x0000(0x0058)(Parm, OutParm)
+	class UWBP_Item_C*                            CallFunc_Array_Get_Item;                           // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ItemSlots_C_GetCurrentItemData;
+
+// Function WBP_ItemSlots.WBP_ItemSlots_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_ItemSlots_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ItemSlots_C_PreConstruct;
+
+// Function WBP_ItemSlots.WBP_ItemSlots_C.UpdateSelectSlot
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_ItemSlots_C_UpdateSelectSlot final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ItemSlots_C_UpdateSelectSlot;
+
+// Function WBP_ItemSlots.WBP_ItemSlots_C.UpdateSlotData
+// 0x0068 (0x0068 - 0x0000)
+struct WBP_ItemSlots_C_UpdateSlotData final
+{
+public:
+	int32                                         TargetIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCPP_GameItemData                      ItemData;                                          // 0x0008(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class UWBP_Item_C*                            CallFunc_Array_Get_Item;                           // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ItemSlots_C_UpdateSlotData;
+
+// Function WBP_ItemSlots.WBP_ItemSlots_C.UpdateSlotStackData
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_ItemSlots_C_UpdateSlotStackData final
+{
+public:
+	int32                                         TargetIndex;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         StackCount;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWBP_Item_C*                            CallFunc_Array_Get_Item;                           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ItemSlots_C_UpdateSlotStackData;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

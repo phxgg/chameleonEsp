@@ -13,9 +13,9 @@
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ENUM_ActorType_structs.hpp"
-#include "ENUM_CameraMode_structs.hpp"
 #include "EN_StrafingDirection_structs.hpp"
+#include "ENUM_CameraMode_structs.hpp"
+#include "ENUM_ActorType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -56,53 +56,53 @@ public:
 	double                                        DefautAcceleration;                                // 0x07E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_AI_Base(int32 EntryPoint);
-	void Set_Difficulty(int32 Value);
-	void PlayAvoidanceAnimation();
-	void CoolDownEnd();
-	void PlayPenguinVoice();
-	void StanEvent();
-	void SetStrafing(bool IsStrafing, EN_StrafingDirection Direction);
-	void Fix();
-	void Attack();
-	void ReceiveDestroyed();
-	void Fire_End();
-	void Fire();
-	void Reverse(const struct FTransform& NewPosition, const struct FVector& HitNormal);
-	void View_In_Out_Function(int32 Stencil_Value);
-	void Delete();
-	void InAngleOfView(bool InState, double DeltaTime, ENUM_CameraMode CameraMode);
-	void SetActorInfo(const struct FVector& ToPosition, class USceneComponent* Comp);
-	void ReceiveBeginPlay();
-	void OnCompleted_D66390244B1D26971A66C6879A2B7B30(class FName NotifyName);
-	void OnBlendOut_D66390244B1D26971A66C6879A2B7B30(class FName NotifyName);
-	void OnInterrupted_D66390244B1D26971A66C6879A2B7B30(class FName NotifyName);
-	void OnNotifyBegin_D66390244B1D26971A66C6879A2B7B30(class FName NotifyName);
-	void OnNotifyEnd_D66390244B1D26971A66C6879A2B7B30(class FName NotifyName);
-	void OnCompleted_7F7A9BDF48B2C2D2332A36937C7AF329(class FName NotifyName);
-	void OnBlendOut_7F7A9BDF48B2C2D2332A36937C7AF329(class FName NotifyName);
-	void OnInterrupted_7F7A9BDF48B2C2D2332A36937C7AF329(class FName NotifyName);
-	void OnNotifyBegin_7F7A9BDF48B2C2D2332A36937C7AF329(class FName NotifyName);
-	void OnNotifyEnd_7F7A9BDF48B2C2D2332A36937C7AF329(class FName NotifyName);
-	void OnCompleted_2220D7D146417860FF48A29DEC6C51FA(class FName NotifyName);
-	void OnBlendOut_2220D7D146417860FF48A29DEC6C51FA(class FName NotifyName);
-	void OnInterrupted_2220D7D146417860FF48A29DEC6C51FA(class FName NotifyName);
-	void OnNotifyBegin_2220D7D146417860FF48A29DEC6C51FA(class FName NotifyName);
-	void OnNotifyEnd_2220D7D146417860FF48A29DEC6C51FA(class FName NotifyName);
-	void OnCompleted_0618DEBD4A5929F3CACAEAA199FA94CD(class FName NotifyName);
-	void OnBlendOut_0618DEBD4A5929F3CACAEAA199FA94CD(class FName NotifyName);
-	void OnInterrupted_0618DEBD4A5929F3CACAEAA199FA94CD(class FName NotifyName);
-	void OnNotifyBegin_0618DEBD4A5929F3CACAEAA199FA94CD(class FName NotifyName);
-	void OnNotifyEnd_0618DEBD4A5929F3CACAEAA199FA94CD(class FName NotifyName);
-	void SoptAI();
-	void RestartAI();
-	void GetActorInfo(struct FTransform* DefaultTransform, bool* Not_In_Shot, struct FVector* CentorPosition, bool* IsPenguin, ENUM_ActorType* ActorType, bool* NonInPhoto);
-	void GetCentorPosition(TArray<struct FVector>* CentorPosition);
-	void GetCopyClass(class UStaticMeshComponent* CentorComponent, class UClass** Class_0, double* Scale, struct FVector* DefaultScale);
-	void IsAiming(bool* IsAiming, int32* SuccessCount);
-	void GetAvoidanceRotation(struct FRotator* Rotation);
-	void IsBattleMode(bool* Bool);
 	void IsAttackNow(bool* State);
+	void IsBattleMode(bool* Bool);
+	void GetAvoidanceRotation(struct FRotator* Rotation);
+	void IsAiming(bool* IsAiming_0, int32* SuccessCount);
+	void GetCopyClass(class UStaticMeshComponent* CentorComponent, class UClass** Class_0, double* Scale, struct FVector* DefaultScale);
+	void GetCentorPosition(TArray<struct FVector>* CentorPosition_0);
+	void GetActorInfo(struct FTransform* DefaultTransform_0, bool* Not_In_Shot, struct FVector* CentorPosition_0, bool* IsPenguin, ENUM_ActorType* ActorType, bool* NonInPhoto);
+	void RestartAI();
+	void SoptAI();
+	void OnNotifyEnd_0618DEBD4A5929F3CACAEAA199FA94CD(class FName NotifyName);
+	void OnNotifyBegin_0618DEBD4A5929F3CACAEAA199FA94CD(class FName NotifyName);
+	void OnInterrupted_0618DEBD4A5929F3CACAEAA199FA94CD(class FName NotifyName);
+	void OnBlendOut_0618DEBD4A5929F3CACAEAA199FA94CD(class FName NotifyName);
+	void OnCompleted_0618DEBD4A5929F3CACAEAA199FA94CD(class FName NotifyName);
+	void OnNotifyEnd_2220D7D146417860FF48A29DEC6C51FA(class FName NotifyName);
+	void OnNotifyBegin_2220D7D146417860FF48A29DEC6C51FA(class FName NotifyName);
+	void OnInterrupted_2220D7D146417860FF48A29DEC6C51FA(class FName NotifyName);
+	void OnBlendOut_2220D7D146417860FF48A29DEC6C51FA(class FName NotifyName);
+	void OnCompleted_2220D7D146417860FF48A29DEC6C51FA(class FName NotifyName);
+	void OnNotifyEnd_7F7A9BDF48B2C2D2332A36937C7AF329(class FName NotifyName);
+	void OnNotifyBegin_7F7A9BDF48B2C2D2332A36937C7AF329(class FName NotifyName);
+	void OnInterrupted_7F7A9BDF48B2C2D2332A36937C7AF329(class FName NotifyName);
+	void OnBlendOut_7F7A9BDF48B2C2D2332A36937C7AF329(class FName NotifyName);
+	void OnCompleted_7F7A9BDF48B2C2D2332A36937C7AF329(class FName NotifyName);
+	void OnNotifyEnd_D66390244B1D26971A66C6879A2B7B30(class FName NotifyName);
+	void OnNotifyBegin_D66390244B1D26971A66C6879A2B7B30(class FName NotifyName);
+	void OnInterrupted_D66390244B1D26971A66C6879A2B7B30(class FName NotifyName);
+	void OnBlendOut_D66390244B1D26971A66C6879A2B7B30(class FName NotifyName);
+	void OnCompleted_D66390244B1D26971A66C6879A2B7B30(class FName NotifyName);
+	void ReceiveBeginPlay();
+	void SetActorInfo(const struct FVector& ToPosition, class USceneComponent* Comp);
+	void InAngleOfView(bool InState, double DeltaTime, ENUM_CameraMode CameraMode);
+	void Delete();
+	void View_In_Out_Function(int32 Stencil_Value);
+	void Reverse(const struct FTransform& NewPosition, const struct FVector& HitNormal);
+	void Fire();
+	void Fire_End();
+	void ReceiveDestroyed();
+	void Attack();
+	void Fix();
+	void SetStrafing(bool IsStrafing, EN_StrafingDirection Direction);
+	void StanEvent();
+	void PlayPenguinVoice();
+	void CoolDownEnd();
+	void PlayAvoidanceAnimation();
+	void Set_Difficulty(int32 Value);
+	void ExecuteUbergraph_BP_AI_Base(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

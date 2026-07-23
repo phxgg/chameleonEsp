@@ -24,17 +24,17 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0048(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTLS_TouchMiniPenguin_DirectorBP_3();
-	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTLS_TouchMiniPenguin_DirectorBP_2();
-	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTLS_TouchMiniPenguin_DirectorBP_1();
-	void SequenceEvent__ENTRYPOINTLS_TouchMiniPenguin_DirectorBP_0(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter);
-	void SequenceEvent__ENTRYPOINTLS_TouchMiniPenguin_DirectorBP(class ABP_AI_Base_C* BP_AI_Base);
-	struct FMovieSceneDynamicBindingResolveResult RightItemPositon_DynamicBinding();
-	struct FMovieSceneDynamicBindingResolveResult LeftItemPositon_DynamicBinding();
-	struct FMovieSceneDynamicBindingResolveResult HeadPosition_DynamicBinding();
-	void ExecuteUbergraph_LS_TouchMiniPenguin_DirectorBP(int32 EntryPoint);
-	void BP_FirstPersonCharacter_Event(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter);
 	void BP_AI_Base_Event(class ABP_AI_Base_C* BP_AI_Base);
+	void BP_FirstPersonCharacter_Event(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter);
+	void ExecuteUbergraph_LS_TouchMiniPenguin_DirectorBP(int32 EntryPoint);
+	struct FMovieSceneDynamicBindingResolveResult HeadPosition_DynamicBinding();
+	struct FMovieSceneDynamicBindingResolveResult LeftItemPositon_DynamicBinding();
+	struct FMovieSceneDynamicBindingResolveResult RightItemPositon_DynamicBinding();
+	void SequenceEvent__ENTRYPOINTLS_TouchMiniPenguin_DirectorBP(class ABP_AI_Base_C* BP_AI_Base);
+	void SequenceEvent__ENTRYPOINTLS_TouchMiniPenguin_DirectorBP_0(class ABP_FirstPersonCharacter_Main_C* BP_FirstPersonCharacter);
+	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTLS_TouchMiniPenguin_DirectorBP_1();
+	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTLS_TouchMiniPenguin_DirectorBP_2();
+	struct FMovieSceneDynamicBindingResolveResult SequenceEvent__ENTRYPOINTLS_TouchMiniPenguin_DirectorBP_3();
 
 public:
 	static class UClass* StaticClass()

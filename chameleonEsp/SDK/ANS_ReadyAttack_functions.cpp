@@ -16,43 +16,16 @@
 
 SDK_NAMESPACE_START
 
-// Function ANS_ReadyAttack.ANS_ReadyAttack_C.Received_NotifyEnd
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class USkeletalMeshComponent*           MeshComp_Received_NotifyEnd                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UAnimSequenceBase*                Animation_Received_NotifyEnd                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FAnimNotifyEventReference& EventReference_Received_NotifyEnd                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// bool                                    ReturnValue_Received_NotifyEnd                         (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool UANS_ReadyAttack_C::Received_NotifyEnd(class USkeletalMeshComponent* MeshComp_Received_NotifyEnd, class UAnimSequenceBase* Animation_Received_NotifyEnd, const struct FAnimNotifyEventReference& EventReference_Received_NotifyEnd) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ANS_ReadyAttack_C", "Received_NotifyEnd");
-
-	Params::ANS_ReadyAttack_C_Received_NotifyEnd Parms{};
-
-	Parms.MeshComp_Received_NotifyEnd = MeshComp_Received_NotifyEnd;
-	Parms.Animation_Received_NotifyEnd = Animation_Received_NotifyEnd;
-	Parms.EventReference_Received_NotifyEnd = std::move(EventReference_Received_NotifyEnd);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function ANS_ReadyAttack.ANS_ReadyAttack_C.Received_NotifyBegin
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class USkeletalMeshComponent*           MeshComp_Received_NotifyBegin                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UAnimSequenceBase*                Animation_Received_NotifyBegin                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// float                                   TotalDuration_Received_NotifyBegin                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FAnimNotifyEventReference& EventReference_Received_NotifyBegin                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// bool                                    ReturnValue_Received_NotifyBegin                       (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// float                                   TotalDuration                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FAnimNotifyEventReference& EventReference                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UANS_ReadyAttack_C::Received_NotifyBegin(class USkeletalMeshComponent* MeshComp_Received_NotifyBegin, class UAnimSequenceBase* Animation_Received_NotifyBegin, float TotalDuration_Received_NotifyBegin, const struct FAnimNotifyEventReference& EventReference_Received_NotifyBegin) const
+bool UANS_ReadyAttack_C::Received_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration, const struct FAnimNotifyEventReference& EventReference) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -61,10 +34,37 @@ bool UANS_ReadyAttack_C::Received_NotifyBegin(class USkeletalMeshComponent* Mesh
 
 	Params::ANS_ReadyAttack_C_Received_NotifyBegin Parms{};
 
-	Parms.MeshComp_Received_NotifyBegin = MeshComp_Received_NotifyBegin;
-	Parms.Animation_Received_NotifyBegin = Animation_Received_NotifyBegin;
-	Parms.TotalDuration_Received_NotifyBegin = TotalDuration_Received_NotifyBegin;
-	Parms.EventReference_Received_NotifyBegin = std::move(EventReference_Received_NotifyBegin);
+	Parms.MeshComp = MeshComp;
+	Parms.Animation = Animation;
+	Parms.TotalDuration = TotalDuration;
+	Parms.EventReference = std::move(EventReference);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ANS_ReadyAttack.ANS_ReadyAttack_C.Received_NotifyEnd
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FAnimNotifyEventReference& EventReference                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UANS_ReadyAttack_C::Received_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ANS_ReadyAttack_C", "Received_NotifyEnd");
+
+	Params::ANS_ReadyAttack_C_Received_NotifyEnd Parms{};
+
+	Parms.MeshComp = MeshComp;
+	Parms.Animation = Animation;
+	Parms.EventReference = std::move(EventReference);
 
 	UObject::ProcessEvent(Func, &Parms);
 

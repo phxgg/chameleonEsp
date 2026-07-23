@@ -26,8 +26,8 @@ public:
 	struct FBlackboardKeySelector                 Key;                                               // 0x00B8(0x0028)(Edit, BlueprintVisible)
 
 public:
-	void ReceiveExecuteAI(class AAIController* OwnerController_ReceiveExecuteAI, class APawn* ControlledPawn_ReceiveExecuteAI);
 	void ExecuteUbergraph_BTTask_UpdateTarget(int32 EntryPoint);
+	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
 
 public:
 	static class UClass* StaticClass()

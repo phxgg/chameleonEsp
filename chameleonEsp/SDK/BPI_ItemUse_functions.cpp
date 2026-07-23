@@ -16,61 +16,37 @@
 
 SDK_NAMESPACE_START
 
-// Function BPI_ItemUse.BPI_ItemUse_C.Shot
+// Function BPI_ItemUse.BPI_ItemUse_C.Aim
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    PressState                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  PushTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonCharacter_Main_C*  SourcePlayer                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_ItemUse_C::Shot(bool PressState, double PushTime, class ABP_FirstPersonCharacter_Main_C* SourcePlayer)
+void IBPI_ItemUse_C::Aim(bool PressState)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_ItemUse_C", "Shot");
+		Func = AsUObject()->Class->GetFunction("BPI_ItemUse_C", "Aim");
 
-	Params::BPI_ItemUse_C_Shot Parms{};
+	Params::BPI_ItemUse_C_Aim Parms{};
 
 	Parms.PressState = PressState;
-	Parms.PushTime = PushTime;
-	Parms.SourcePlayer = SourcePlayer;
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPI_ItemUse.BPI_ItemUse_C.Reset
+// Function BPI_ItemUse.BPI_ItemUse_C.Change
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void IBPI_ItemUse_C::Reset()
+void IBPI_ItemUse_C::Change()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_ItemUse_C", "Reset");
+		Func = AsUObject()->Class->GetFunction("BPI_ItemUse_C", "Change");
 
 	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_ItemUse.BPI_ItemUse_C.Reload
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    PressState                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_ItemUse_C::Reload(bool PressState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_ItemUse_C", "Reload");
-
-	Params::BPI_ItemUse_C_Reload Parms{};
-
-	Parms.PressState = PressState;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
 
@@ -97,35 +73,59 @@ bool IBPI_ItemUse_C::MS_IsInView(class AActor* Actor)
 }
 
 
-// Function BPI_ItemUse.BPI_ItemUse_C.Change
+// Function BPI_ItemUse.BPI_ItemUse_C.Reload
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    PressState                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_ItemUse_C::Change()
+void IBPI_ItemUse_C::Reload(bool PressState)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_ItemUse_C", "Change");
+		Func = AsUObject()->Class->GetFunction("BPI_ItemUse_C", "Reload");
+
+	Params::BPI_ItemUse_C_Reload Parms{};
+
+	Parms.PressState = PressState;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_ItemUse.BPI_ItemUse_C.Reset
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_ItemUse_C::Reset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_ItemUse_C", "Reset");
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPI_ItemUse.BPI_ItemUse_C.Aim
+// Function BPI_ItemUse.BPI_ItemUse_C.Shot
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    PressState                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  PushTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C*  SourcePlayer                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_ItemUse_C::Aim(bool PressState)
+void IBPI_ItemUse_C::Shot(bool PressState, double PushTime, class ABP_FirstPersonCharacter_Main_C* SourcePlayer)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_ItemUse_C", "Aim");
+		Func = AsUObject()->Class->GetFunction("BPI_ItemUse_C", "Shot");
 
-	Params::BPI_ItemUse_C_Aim Parms{};
+	Params::BPI_ItemUse_C_Shot Parms{};
 
 	Parms.PressState = PressState;
+	Parms.PushTime = PushTime;
+	Parms.SourcePlayer = SourcePlayer;
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 }

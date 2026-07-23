@@ -29,10 +29,10 @@ public:
 	struct FVector                                LookAtLocation;                                    // 0x00D0(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetMaxSpeed(double Speed);
-	void ReceiveBeginPlay();
-	void OnRep_MaxWalkSpeed();
 	void ExecuteUbergraph_BPC_ReplicateAnimBPState(int32 EntryPoint);
+	void OnRep_MaxWalkSpeed();
+	void ReceiveBeginPlay();
+	void SetMaxSpeed(double Speed);
 
 public:
 	static class UClass* StaticClass()

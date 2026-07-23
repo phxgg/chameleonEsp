@@ -16,104 +16,55 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_PresentSpawner.BP_PresentSpawner_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_PresentSpawner_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PresentSpawner_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PresentSpawner.BP_PresentSpawner_C.UpdateOverlapState
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_PresentSpawner_C::UpdateOverlapState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PresentSpawner_C", "UpdateOverlapState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PresentSpawner.BP_PresentSpawner_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// Function BP_PresentSpawner.BP_PresentSpawner_C.AddQueue
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class ABP_GoalHouse_C*&           HouseActor                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PresentSpawner_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
+void ABP_PresentSpawner_C::AddQueue(const class ABP_GoalHouse_C*& HouseActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PresentSpawner_C", "ReceiveTick");
+		Func = Class->GetFunction("BP_PresentSpawner_C", "AddQueue");
 
-	Params::BP_PresentSpawner_C_ReceiveTick Parms{};
+	Params::BP_PresentSpawner_C_AddQueue Parms{};
 
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
+	Parms.HouseActor = HouseActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_PresentSpawner.BP_PresentSpawner_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_PresentSpawner.BP_PresentSpawner_C.CleanUp
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_PresentSpawner_C::ReceiveBeginPlay()
+void ABP_PresentSpawner_C::CleanUp()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PresentSpawner_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_PresentSpawner_C", "CleanUp");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_PresentSpawner.BP_PresentSpawner_C.IsHouseAllGoal
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool*                                   AllGoal                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PresentSpawner_C::IsHouseAllGoal(bool* AllGoal)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PresentSpawner_C", "IsHouseAllGoal");
-
-	Params::BP_PresentSpawner_C_IsHouseAllGoal Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (AllGoal != nullptr)
-		*AllGoal = Parms.AllGoal;
-}
-
-
-// Function BP_PresentSpawner.BP_PresentSpawner_C.GoadGiftBox
+// Function BP_PresentSpawner.BP_PresentSpawner_C.DestroyActor
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           GiftBox                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DestroyedActor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PresentSpawner_C::GoadGiftBox(class AActor* GiftBox)
+void ABP_PresentSpawner_C::DestroyActor(class AActor* DestroyedActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PresentSpawner_C", "GoadGiftBox");
+		Func = Class->GetFunction("BP_PresentSpawner_C", "DestroyActor");
 
-	Params::BP_PresentSpawner_C_GoadGiftBox Parms{};
+	Params::BP_PresentSpawner_C_DestroyActor Parms{};
 
-	Parms.GiftBox = GiftBox;
+	Parms.DestroyedActor = DestroyedActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -139,57 +90,106 @@ void ABP_PresentSpawner_C::ExecuteUbergraph_BP_PresentSpawner(int32 EntryPoint)
 }
 
 
-// Function BP_PresentSpawner.BP_PresentSpawner_C.DestroyActor
+// Function BP_PresentSpawner.BP_PresentSpawner_C.GoadGiftBox
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           DestroyedActor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           GiftBox                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PresentSpawner_C::DestroyActor(class AActor* DestroyedActor)
+void ABP_PresentSpawner_C::GoadGiftBox(class AActor* GiftBox)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PresentSpawner_C", "DestroyActor");
+		Func = Class->GetFunction("BP_PresentSpawner_C", "GoadGiftBox");
 
-	Params::BP_PresentSpawner_C_DestroyActor Parms{};
+	Params::BP_PresentSpawner_C_GoadGiftBox Parms{};
 
-	Parms.DestroyedActor = DestroyedActor;
+	Parms.GiftBox = GiftBox;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_PresentSpawner.BP_PresentSpawner_C.CleanUp
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_PresentSpawner.BP_PresentSpawner_C.IsHouseAllGoal
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   AllGoal                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PresentSpawner_C::CleanUp()
+void ABP_PresentSpawner_C::IsHouseAllGoal(bool* AllGoal)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PresentSpawner_C", "CleanUp");
+		Func = Class->GetFunction("BP_PresentSpawner_C", "IsHouseAllGoal");
+
+	Params::BP_PresentSpawner_C_IsHouseAllGoal Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (AllGoal != nullptr)
+		*AllGoal = Parms.AllGoal;
+}
+
+
+// Function BP_PresentSpawner.BP_PresentSpawner_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_PresentSpawner_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PresentSpawner_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_PresentSpawner.BP_PresentSpawner_C.AddQueue
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_PresentSpawner.BP_PresentSpawner_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// const class ABP_GoalHouse_C*&           HouseActor                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PresentSpawner_C::AddQueue(const class ABP_GoalHouse_C*& HouseActor)
+void ABP_PresentSpawner_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PresentSpawner_C", "AddQueue");
+		Func = Class->GetFunction("BP_PresentSpawner_C", "ReceiveTick");
 
-	Params::BP_PresentSpawner_C_AddQueue Parms{};
+	Params::BP_PresentSpawner_C_ReceiveTick Parms{};
 
-	Parms.HouseActor = HouseActor;
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PresentSpawner.BP_PresentSpawner_C.UpdateOverlapState
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_PresentSpawner_C::UpdateOverlapState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PresentSpawner_C", "UpdateOverlapState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PresentSpawner.BP_PresentSpawner_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_PresentSpawner_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PresentSpawner_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

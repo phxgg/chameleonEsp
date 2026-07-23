@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "EN_StanType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "EN_DamageType_structs.hpp"
+#include "EN_StanType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -32,19 +32,19 @@ public:
 	class UPointLightComponent*                   PointLight;                                        // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void StanDamage(EN_StanType StanType);
-	void StaminaDamage(double Value);
-	void ReceiveBeginPlay();
-	void OnNotifyEnd_90D943BF4AFCA5B61750AE8D3827B9E2(class FName NotifyName);
-	void OnNotifyBegin_90D943BF4AFCA5B61750AE8D3827B9E2(class FName NotifyName);
-	void OnInterrupted_90D943BF4AFCA5B61750AE8D3827B9E2(class FName NotifyName);
-	void OnCompleted_90D943BF4AFCA5B61750AE8D3827B9E2(class FName NotifyName);
-	void OnBlendOut_90D943BF4AFCA5B61750AE8D3827B9E2(class FName NotifyName);
-	void GetParryState(bool* State);
-	void ExecuteUbergraph_BP_RevivalBell(int32 EntryPoint);
-	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
-	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
 	void BellHit();
+	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
+	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
+	void ExecuteUbergraph_BP_RevivalBell(int32 EntryPoint);
+	void GetParryState(bool* State);
+	void OnBlendOut_90D943BF4AFCA5B61750AE8D3827B9E2(class FName NotifyName);
+	void OnCompleted_90D943BF4AFCA5B61750AE8D3827B9E2(class FName NotifyName);
+	void OnInterrupted_90D943BF4AFCA5B61750AE8D3827B9E2(class FName NotifyName);
+	void OnNotifyBegin_90D943BF4AFCA5B61750AE8D3827B9E2(class FName NotifyName);
+	void OnNotifyEnd_90D943BF4AFCA5B61750AE8D3827B9E2(class FName NotifyName);
+	void ReceiveBeginPlay();
+	void StaminaDamage(double Value);
+	void StanDamage(EN_StanType StanType);
 
 public:
 	static class UClass* StaticClass()

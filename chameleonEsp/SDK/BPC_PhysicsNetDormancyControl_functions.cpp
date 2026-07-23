@@ -16,37 +16,49 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_PhysicsNetDormancyControl.BPC_PhysicsNetDormancyControl_C.Wake
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_PhysicsNetDormancyControl.BPC_PhysicsNetDormancyControl_C.ExecuteUbergraph_BPC_PhysicsNetDormancyControl
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class UPrimitiveComponent*              WakingComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class FName                             BoneName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_PhysicsNetDormancyControl_C::Wake(class UPrimitiveComponent* WakingComponent, class FName BoneName)
+void UBPC_PhysicsNetDormancyControl_C::ExecuteUbergraph_BPC_PhysicsNetDormancyControl(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_PhysicsNetDormancyControl_C", "Wake");
+		Func = Class->GetFunction("BPC_PhysicsNetDormancyControl_C", "ExecuteUbergraph_BPC_PhysicsNetDormancyControl");
 
-	Params::BPC_PhysicsNetDormancyControl_C_Wake Parms{};
+	Params::BPC_PhysicsNetDormancyControl_C_ExecuteUbergraph_BPC_PhysicsNetDormancyControl Parms{};
 
-	Parms.WakingComponent = WakingComponent;
-	Parms.BoneName = BoneName;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_PhysicsNetDormancyControl.BPC_PhysicsNetDormancyControl_C.SleepCall
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_PhysicsNetDormancyControl.BPC_PhysicsNetDormancyControl_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void UBPC_PhysicsNetDormancyControl_C::SleepCall()
+void UBPC_PhysicsNetDormancyControl_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_PhysicsNetDormancyControl_C", "SleepCall");
+		Func = Class->GetFunction("BPC_PhysicsNetDormancyControl_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_PhysicsNetDormancyControl.BPC_PhysicsNetDormancyControl_C.SimulatePhysicsCheck
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_PhysicsNetDormancyControl_C::SimulatePhysicsCheck()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_PhysicsNetDormancyControl_C", "SimulatePhysicsCheck");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -74,49 +86,37 @@ void UBPC_PhysicsNetDormancyControl_C::Sleep(class UPrimitiveComponent* Sleeping
 }
 
 
-// Function BPC_PhysicsNetDormancyControl.BPC_PhysicsNetDormancyControl_C.SimulatePhysicsCheck
+// Function BPC_PhysicsNetDormancyControl.BPC_PhysicsNetDormancyControl_C.SleepCall
 // (BlueprintCallable, BlueprintEvent)
 
-void UBPC_PhysicsNetDormancyControl_C::SimulatePhysicsCheck()
+void UBPC_PhysicsNetDormancyControl_C::SleepCall()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_PhysicsNetDormancyControl_C", "SimulatePhysicsCheck");
+		Func = Class->GetFunction("BPC_PhysicsNetDormancyControl_C", "SleepCall");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_PhysicsNetDormancyControl.BPC_PhysicsNetDormancyControl_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBPC_PhysicsNetDormancyControl_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_PhysicsNetDormancyControl_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_PhysicsNetDormancyControl.BPC_PhysicsNetDormancyControl_C.ExecuteUbergraph_BPC_PhysicsNetDormancyControl
-// (Final, UbergraphFunction, HasDefaults)
+// Function BPC_PhysicsNetDormancyControl.BPC_PhysicsNetDormancyControl_C.Wake
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              WakingComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class FName                             BoneName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_PhysicsNetDormancyControl_C::ExecuteUbergraph_BPC_PhysicsNetDormancyControl(int32 EntryPoint)
+void UBPC_PhysicsNetDormancyControl_C::Wake(class UPrimitiveComponent* WakingComponent, class FName BoneName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_PhysicsNetDormancyControl_C", "ExecuteUbergraph_BPC_PhysicsNetDormancyControl");
+		Func = Class->GetFunction("BPC_PhysicsNetDormancyControl_C", "Wake");
 
-	Params::BPC_PhysicsNetDormancyControl_C_ExecuteUbergraph_BPC_PhysicsNetDormancyControl Parms{};
+	Params::BPC_PhysicsNetDormancyControl_C_Wake Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.WakingComponent = WakingComponent;
+	Parms.BoneName = BoneName;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

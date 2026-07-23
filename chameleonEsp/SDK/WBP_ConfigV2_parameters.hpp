@@ -16,46 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_ConfigV2.WBP_ConfigV2_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WBP_ConfigV2_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry_Tick;                                   // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime_Tick;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigV2_C_Tick;
-
-// Function WBP_ConfigV2.WBP_ConfigV2_C.OnDestroySessionComplete_E994E3BA416B92D5C7D03FB3DBF5BBA1
-// 0x000C (0x000C - 0x0000)
-struct WBP_ConfigV2_C_OnDestroySessionComplete_E994E3BA416B92D5C7D03FB3DBF5BBA1 final
-{
-public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigV2_C_OnDestroySessionComplete_E994E3BA416B92D5C7D03FB3DBF5BBA1;
-
-// Function WBP_ConfigV2.WBP_ConfigV2_C.OnCallFailed_E994E3BA416B92D5C7D03FB3DBF5BBA1
-// 0x000C (0x000C - 0x0000)
-struct WBP_ConfigV2_C_OnCallFailed_E994E3BA416B92D5C7D03FB3DBF5BBA1 final
-{
-public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigV2_C_OnCallFailed_E994E3BA416B92D5C7D03FB3DBF5BBA1;
-
-// Function WBP_ConfigV2.WBP_ConfigV2_C.GetInitialFocusComponent
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_ConfigV2_C_GetInitialFocusComponent final
-{
-public:
-	class UUINavComponent*                        ReturnValue_GetInitialFocusComponent;              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUINavComponent*                        CallFunc_GetInitialFocusComponent_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigV2_C_GetInitialFocusComponent;
-
 // Function WBP_ConfigV2.WBP_ConfigV2_C.ExecuteUbergraph_WBP_ConfigV2
 // 0x00C8 (0x00C8 - 0x0000)
 struct WBP_ConfigV2_C_ExecuteUbergraph_WBP_ConfigV2 final
@@ -98,6 +58,46 @@ public:
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ConfigV2_C_ExecuteUbergraph_WBP_ConfigV2;
+
+// Function WBP_ConfigV2.WBP_ConfigV2_C.GetInitialFocusComponent
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_ConfigV2_C_GetInitialFocusComponent final
+{
+public:
+	class UUINavComponent*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUINavComponent*                        CallFunc_GetInitialFocusComponent_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigV2_C_GetInitialFocusComponent;
+
+// Function WBP_ConfigV2.WBP_ConfigV2_C.OnCallFailed_E994E3BA416B92D5C7D03FB3DBF5BBA1
+// 0x000C (0x000C - 0x0000)
+struct WBP_ConfigV2_C_OnCallFailed_E994E3BA416B92D5C7D03FB3DBF5BBA1 final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigV2_C_OnCallFailed_E994E3BA416B92D5C7D03FB3DBF5BBA1;
+
+// Function WBP_ConfigV2.WBP_ConfigV2_C.OnDestroySessionComplete_E994E3BA416B92D5C7D03FB3DBF5BBA1
+// 0x000C (0x000C - 0x0000)
+struct WBP_ConfigV2_C_OnDestroySessionComplete_E994E3BA416B92D5C7D03FB3DBF5BBA1 final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigV2_C_OnDestroySessionComplete_E994E3BA416B92D5C7D03FB3DBF5BBA1;
+
+// Function WBP_ConfigV2.WBP_ConfigV2_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WBP_ConfigV2_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigV2_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,124 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function BPI_InPhoto.BPI_InPhoto_C.SetActorInfo
+// Function BPI_InPhoto.BPI_InPhoto_C.Delete
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   ToPosition                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class USceneComponent*                  Comp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_InPhoto_C::SetActorInfo(const struct FVector& ToPosition, class USceneComponent* Comp)
+void IBPI_InPhoto_C::Delete()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_InPhoto_C", "SetActorInfo");
+		Func = AsUObject()->Class->GetFunction("BPI_InPhoto_C", "Delete");
 
-	Params::BPI_InPhoto_C_SetActorInfo Parms{};
-
-	Parms.ToPosition = std::move(ToPosition);
-	Parms.Comp = Comp;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPI_InPhoto.BPI_InPhoto_C.Reverse
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FTransform&                NewPosition                                            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   HitNormal                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_InPhoto_C::Reverse(const struct FTransform& NewPosition, const struct FVector& HitNormal)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_InPhoto_C", "Reverse");
-
-	Params::BPI_InPhoto_C_Reverse Parms{};
-
-	Parms.NewPosition = std::move(NewPosition);
-	Parms.HitNormal = std::move(HitNormal);
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPI_InPhoto.BPI_InPhoto_C.InAngleOfView
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    InState                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ENUM_CameraMode                         CameraMode                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_InPhoto_C::InAngleOfView(bool InState, double DeltaTime, ENUM_CameraMode CameraMode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_InPhoto_C", "InAngleOfView");
-
-	Params::BPI_InPhoto_C_InAngleOfView Parms{};
-
-	Parms.InState = InState;
-	Parms.DeltaTime = DeltaTime;
-	Parms.CameraMode = CameraMode;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPI_InPhoto.BPI_InPhoto_C.GetCopyClass
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UStaticMeshComponent*             CentorComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UClass**                          Class_0                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double*                                 Scale                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector*                         DefaultScale                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_InPhoto_C::GetCopyClass(class UStaticMeshComponent* CentorComponent, class UClass** Class_0, double* Scale, struct FVector* DefaultScale)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_InPhoto_C", "GetCopyClass");
-
-	Params::BPI_InPhoto_C_GetCopyClass Parms{};
-
-	Parms.CentorComponent = CentorComponent;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	if (Class_0 != nullptr)
-		*Class_0 = Parms.Class_0;
-
-	if (Scale != nullptr)
-		*Scale = Parms.Scale;
-
-	if (DefaultScale != nullptr)
-		*DefaultScale = std::move(Parms.DefaultScale);
-}
-
-
-// Function BPI_InPhoto.BPI_InPhoto_C.GetCentorPosition
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FVector>*                 CentorPosition                                         (Parm, OutParm)
-
-void IBPI_InPhoto_C::GetCentorPosition(TArray<struct FVector>* CentorPosition)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_InPhoto_C", "GetCentorPosition");
-
-	Params::BPI_InPhoto_C_GetCentorPosition Parms{};
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	if (CentorPosition != nullptr)
-		*CentorPosition = std::move(Parms.CentorPosition);
+	AsUObject()->ProcessEvent(Func, nullptr);
 }
 
 
@@ -178,17 +71,124 @@ void IBPI_InPhoto_C::GetActorInfo(struct FTransform* DefaultTransform, bool* Not
 }
 
 
-// Function BPI_InPhoto.BPI_InPhoto_C.Delete
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BPI_InPhoto.BPI_InPhoto_C.GetCentorPosition
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FVector>*                 CentorPosition                                         (Parm, OutParm)
 
-void IBPI_InPhoto_C::Delete()
+void IBPI_InPhoto_C::GetCentorPosition(TArray<struct FVector>* CentorPosition)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_InPhoto_C", "Delete");
+		Func = AsUObject()->Class->GetFunction("BPI_InPhoto_C", "GetCentorPosition");
 
-	AsUObject()->ProcessEvent(Func, nullptr);
+	Params::BPI_InPhoto_C_GetCentorPosition Parms{};
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (CentorPosition != nullptr)
+		*CentorPosition = std::move(Parms.CentorPosition);
+}
+
+
+// Function BPI_InPhoto.BPI_InPhoto_C.GetCopyClass
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UStaticMeshComponent*             CentorComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UClass**                          Class_0                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double*                                 Scale                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         DefaultScale                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_InPhoto_C::GetCopyClass(class UStaticMeshComponent* CentorComponent, class UClass** Class_0, double* Scale, struct FVector* DefaultScale)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_InPhoto_C", "GetCopyClass");
+
+	Params::BPI_InPhoto_C_GetCopyClass Parms{};
+
+	Parms.CentorComponent = CentorComponent;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (Class_0 != nullptr)
+		*Class_0 = Parms.Class_0;
+
+	if (Scale != nullptr)
+		*Scale = Parms.Scale;
+
+	if (DefaultScale != nullptr)
+		*DefaultScale = std::move(Parms.DefaultScale);
+}
+
+
+// Function BPI_InPhoto.BPI_InPhoto_C.InAngleOfView
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    InState                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ENUM_CameraMode                         CameraMode                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_InPhoto_C::InAngleOfView(bool InState, double DeltaTime, ENUM_CameraMode CameraMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_InPhoto_C", "InAngleOfView");
+
+	Params::BPI_InPhoto_C_InAngleOfView Parms{};
+
+	Parms.InState = InState;
+	Parms.DeltaTime = DeltaTime;
+	Parms.CameraMode = CameraMode;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_InPhoto.BPI_InPhoto_C.Reverse
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FTransform&                NewPosition                                            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   HitNormal                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_InPhoto_C::Reverse(const struct FTransform& NewPosition, const struct FVector& HitNormal)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_InPhoto_C", "Reverse");
+
+	Params::BPI_InPhoto_C_Reverse Parms{};
+
+	Parms.NewPosition = std::move(NewPosition);
+	Parms.HitNormal = std::move(HitNormal);
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_InPhoto.BPI_InPhoto_C.SetActorInfo
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   ToPosition                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USceneComponent*                  Comp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_InPhoto_C::SetActorInfo(const struct FVector& ToPosition, class USceneComponent* Comp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_InPhoto_C", "SetActorInfo");
+
+	Params::BPI_InPhoto_C_SetActorInfo Parms{};
+
+	Parms.ToPosition = std::move(ToPosition);
+	Parms.Comp = Comp;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
 

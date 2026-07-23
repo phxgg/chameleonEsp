@@ -16,17 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BTS_NearAttack.BTS_NearAttack_C.ReceiveTickAI
-// 0x0018 (0x0018 - 0x0000)
-struct BTS_NearAttack_C_ReceiveTickAI final
-{
-public:
-	class AAIController*                          OwnerController_ReceiveTickAI;                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  ControlledPawn_ReceiveTickAI;                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         DeltaSeconds_ReceiveTickAI;                        // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BTS_NearAttack_C_ReceiveTickAI;
-
 // Function BTS_NearAttack.BTS_NearAttack_C.ExecuteUbergraph_BTS_NearAttack
 // 0x0068 (0x0068 - 0x0000)
 struct BTS_NearAttack_C_ExecuteUbergraph_BTS_NearAttack final
@@ -45,6 +34,17 @@ public:
 	float                                         CallFunc_SetBlackboardValueAsFloat_Value_ImplicitCast; // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BTS_NearAttack_C_ExecuteUbergraph_BTS_NearAttack;
+
+// Function BTS_NearAttack.BTS_NearAttack_C.ReceiveTickAI
+// 0x0018 (0x0018 - 0x0000)
+struct BTS_NearAttack_C_ReceiveTickAI final
+{
+public:
+	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         DeltaSeconds;                                      // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BTS_NearAttack_C_ReceiveTickAI;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

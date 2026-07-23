@@ -18,38 +18,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_FirstPersonGameMode.BP_FirstPersonGameMode_C.InteractSignal
-// 0x0010 (0x0010 - 0x0000)
-struct BP_FirstPersonGameMode_C_InteractSignal final
-{
-public:
-	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Actor;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_C_InteractSignal;
-
-// Function BP_FirstPersonGameMode.BP_FirstPersonGameMode_C.InpActEvt_Tab_K2Node_InputDebugKeyEvent_0
-// 0x0038 (0x0038 - 0x0000)
-struct BP_FirstPersonGameMode_C_InpActEvt_Tab_K2Node_InputDebugKeyEvent_0 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_C_InpActEvt_Tab_K2Node_InputDebugKeyEvent_0;
-
-// Function BP_FirstPersonGameMode.BP_FirstPersonGameMode_C.InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0
-// 0x0030 (0x0030 - 0x0000)
-struct BP_FirstPersonGameMode_C_InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonGameMode_C_InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0;
-
 // Function BP_FirstPersonGameMode.BP_FirstPersonGameMode_C.ExecuteUbergraph_BP_FirstPersonGameMode
 // 0x01C8 (0x01C8 - 0x0000)
 struct BP_FirstPersonGameMode_C_ExecuteUbergraph_BP_FirstPersonGameMode final
@@ -125,6 +93,38 @@ public:
 	float                                         CallFunc_SetSoundMixClassOverride_Volume_ImplicitCast_2; // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_FirstPersonGameMode_C_ExecuteUbergraph_BP_FirstPersonGameMode;
+
+// Function BP_FirstPersonGameMode.BP_FirstPersonGameMode_C.InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0
+// 0x0030 (0x0030 - 0x0000)
+struct BP_FirstPersonGameMode_C_InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_C_InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0;
+
+// Function BP_FirstPersonGameMode.BP_FirstPersonGameMode_C.InpActEvt_Tab_K2Node_InputDebugKeyEvent_0
+// 0x0038 (0x0038 - 0x0000)
+struct BP_FirstPersonGameMode_C_InpActEvt_Tab_K2Node_InputDebugKeyEvent_0 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_C_InpActEvt_Tab_K2Node_InputDebugKeyEvent_0;
+
+// Function BP_FirstPersonGameMode.BP_FirstPersonGameMode_C.InteractSignal
+// 0x0010 (0x0010 - 0x0000)
+struct BP_FirstPersonGameMode_C_InteractSignal final
+{
+public:
+	class ABP_FirstPersonCharacter_Main_C*        Character;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Actor;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonGameMode_C_InteractSignal;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

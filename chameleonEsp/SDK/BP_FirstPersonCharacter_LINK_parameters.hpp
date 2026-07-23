@@ -10,857 +10,219 @@
 
 #include "Basic.hpp"
 
-#include "EnhancedInput_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
 #include "EN_LINK_PlayerStateValueType_structs.hpp"
-#include "ST_ItemCoreDatas_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
-#include "EN_DamageType_structs.hpp"
 #include "FinishFilter_structs.hpp"
+#include "EnhancedInput_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
+#include "EN_DamageType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "EN_LINK_GamePhase_structs.hpp"
 #include "OnlineSubsystemBlueprints_structs.hpp"
 #include "PenguinHotel_structs.hpp"
-#include "EN_LINK_GamePhase_structs.hpp"
 #include "Mover_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.UpdateNameplate
-// 0x0020 (0x0020 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_UpdateNameplate final
-{
-public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class UWBP_Nameplate_C*                       CallFunc_Create_ReturnValue;                       // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_UpdateNameplate;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.UpdateBackpackWeight
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_UpdateBackpackWeight final
-{
-public:
-	double                                        BackpackWeight;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_UpdateBackpackWeight;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.Unzip(Server)
-// 0x0018 (0x0018 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_Unzip_Server_ final
-{
-public:
-	struct FVector                                RespawnPosition;                                   // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_Unzip_Server_;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.TargetPositionUpdate
-// 0x0030 (0x0030 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_TargetPositionUpdate final
-{
-public:
-	struct FVector                                Position_R;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Position_L;                                        // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_TargetPositionUpdate;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ShotEvent
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.AimEvent
 // 0x0001 (0x0001 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_ShotEvent final
+struct BP_FirstPersonCharacter_LINK_C_AimEvent final
 {
 public:
-	bool                                          State_ShotEvent;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ShotEvent;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_AimEvent;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetVoiceScale(Server)
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_SetVoiceScale_Server_ final
-{
-public:
-	double                                        CurrentVoiceScale;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetVoiceScale_Server_;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetSpectatingState
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.AllWidgetHide
 // 0x0001 (0x0001 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_SetSpectatingState final
-{
-public:
-	bool                                          State_SetSpectatingState;                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetSpectatingState;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetSlot
-// 0x0010 (0x0010 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_SetSlot final
-{
-public:
-	int32                                         TargetSlotValue;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_SlotChange_CurrentIndex;                  // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetSlot;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetHealthValue(Server)
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_SetHealthValue_Server_ final
-{
-public:
-	double                                        TargetValue_SetHealthValue_Server_;                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetHealthValue_Server_;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetHealthValue(LocalClient)
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_SetHealthValue_LocalClient_ final
-{
-public:
-	double                                        TargetValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetHealthValue_LocalClient_;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetFreeHand
-// 0x000C (0x000C - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_SetFreeHand final
+struct BP_FirstPersonCharacter_LINK_C_AllWidgetHide final
 {
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Multiply_IntInt_ReturnValue;              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_SlotChange_CurrentIndex;                  // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetFreeHand;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_AllWidgetHide;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetForce(Server)
-// 0x0020 (0x0020 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_SetForce_Server_ final
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.AllWidgetShow
+// 0x0001 (0x0001 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_AllWidgetShow final
 {
 public:
-	class UPrimitiveComponent*                    Primitive;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                NewVel;                                            // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetForce_Server_;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_AllWidgetShow;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetCurrentItem
-// 0x00D0 (0x00D0 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_SetCurrentItem final
-{
-public:
-	int32                                         SlotIndex_SetCurrentItem;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCPP_GameItemData                      ItemData_SetCurrentItem;                           // 0x0008(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FST_ItemCoreDatas                      CoreData_SetCurrentItem;                           // 0x0060(0x0070)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetCurrentItem;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetBodyVisibleState
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.BndEvt__BP_FirstPersonCharacter_LINK_AudioCapture_K2Node_ComponentBoundEvent_0_OnSynthEnvelopeValue__DelegateSignature
 // 0x0004 (0x0004 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_SetBodyVisibleState final
+struct BP_FirstPersonCharacter_LINK_C_BndEvt__BP_FirstPersonCharacter_LINK_AudioCapture_K2Node_ComponentBoundEvent_0_OnSynthEnvelopeValue__DelegateSignature final
 {
 public:
-	int32                                         StateIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         EnvelopeValue;                                     // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetBodyVisibleState;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_BndEvt__BP_FirstPersonCharacter_LINK_AudioCapture_K2Node_ComponentBoundEvent_0_OnSynthEnvelopeValue__DelegateSignature;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SelectIndex
-// 0x0010 (0x0010 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_SelectIndex final
-{
-public:
-	class UClass*                                 EmoteData;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Index_0;                                           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SelectIndex;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.RezultCheck
-// 0x0210 (0x0210 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_RezultCheck final
-{
-public:
-	struct FHitResult                             Hit;                                               // 0x0000(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          Rezult;                                            // 0x0100(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 HitActor;                                          // 0x0108(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                ImpactPoint;                                       // 0x0110(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    HitComponent;                                      // 0x0128(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CheckRezult;                                       // 0x0130(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0132(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_133[0x1];                                      // 0x0133(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0140(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0158(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x01CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x01D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x01F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsSimulatingPhysics_ReturnValue;          // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0209(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ObjectIsA_ReturnValue;                    // 0x020A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x020B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ActorHasTag_ReturnValue;                  // 0x020C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x020D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x020E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_RezultCheck;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ResetAllStates
-// 0x0030 (0x0030 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_ResetAllStates final
-{
-public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UBPC_ItemUsedLoal_Base_C*>       CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UBPC_ItemUsedLoal_Base_C*               CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ResetAllStates;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ReceiveTick;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.PinToTarget(Server)
-// 0x0080 (0x0080 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_PinToTarget_Server_ final
-{
-public:
-	struct FVector                                Destination;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             SpawnTransform;                                    // 0x0020(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_PinToTarget_Server_;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnSessionUserInviteAccepted
-// 0x01F0 (0x01F0 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_OnSessionUserInviteAccepted final
-{
-public:
-	bool                                          bWasSuccessful;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ControllerId;                                      // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-	struct FOnlineSessionSearchResultBP           InviteResult;                                      // 0x0038(0x01B8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnSessionUserInviteAccepted;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnNotifyEnd_48F7AF4944B2851728DF84BCFBBCFCCA
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.BndEvt__BP_FirstPersonCharacter_LINK_BPC_LINK_HandControl_R_K2Node_ComponentBoundEvent_0_GrabEnd__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_OnNotifyEnd_48F7AF4944B2851728DF84BCFBBCFCCA final
+struct BP_FirstPersonCharacter_LINK_C_BndEvt__BP_FirstPersonCharacter_LINK_BPC_LINK_HandControl_R_K2Node_ComponentBoundEvent_0_GrabEnd__DelegateSignature final
 {
 public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    GrabPrimitive;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnNotifyEnd_48F7AF4944B2851728DF84BCFBBCFCCA;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_BndEvt__BP_FirstPersonCharacter_LINK_BPC_LINK_HandControl_R_K2Node_ComponentBoundEvent_0_GrabEnd__DelegateSignature;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnNotifyBegin_48F7AF4944B2851728DF84BCFBBCFCCA
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.BndEvt__BP_FirstPersonCharacter_LINK_BPC_LongInputControl_LeftClick_K2Node_ComponentBoundEvent_3_InputEnd__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_OnNotifyBegin_48F7AF4944B2851728DF84BCFBBCFCCA final
+struct BP_FirstPersonCharacter_LINK_C_BndEvt__BP_FirstPersonCharacter_LINK_BPC_LongInputControl_LeftClick_K2Node_ComponentBoundEvent_3_InputEnd__DelegateSignature final
 {
 public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PushTime;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnNotifyBegin_48F7AF4944B2851728DF84BCFBBCFCCA;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_BndEvt__BP_FirstPersonCharacter_LINK_BPC_LongInputControl_LeftClick_K2Node_ComponentBoundEvent_3_InputEnd__DelegateSignature;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnLanded_2
-// 0x0100 (0x0100 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_OnLanded_2 final
-{
-public:
-	struct FHitResult                             Hit;                                               // 0x0000(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnLanded_2;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnJoinSessionComplete_CDC98A21428CD47CDCC078B71D0D8394
-// 0x000C (0x000C - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_OnJoinSessionComplete_CDC98A21428CD47CDCC078B71D0D8394 final
-{
-public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EOnJoinSessionCompleteResult_                 Result;                                            // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnJoinSessionComplete_CDC98A21428CD47CDCC078B71D0D8394;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnInterrupted_48F7AF4944B2851728DF84BCFBBCFCCA
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.BndEvt__BP_FirstPersonCharacter_LINK_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_4_ChangedValue__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_OnInterrupted_48F7AF4944B2851728DF84BCFBBCFCCA final
+struct BP_FirstPersonCharacter_LINK_C_BndEvt__BP_FirstPersonCharacter_LINK_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_4_ChangedValue__DelegateSignature final
 {
 public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        UpdateValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnInterrupted_48F7AF4944B2851728DF84BCFBBCFCCA;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_BndEvt__BP_FirstPersonCharacter_LINK_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_4_ChangedValue__DelegateSignature;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnDestroySessionComplete_9519D6EA4746536664CE01A6DA07331D
-// 0x000C (0x000C - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_OnDestroySessionComplete_9519D6EA4746536664CE01A6DA07331D final
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.CanDash
+// 0x0002 (0x0002 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_CanDash final
 {
 public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanDash_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnDestroySessionComplete_9519D6EA4746536664CE01A6DA07331D;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_CanDash;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnDestroySessionComplete_59E542A947E50C239AD252B4B4A3520D
-// 0x000C (0x000C - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_OnDestroySessionComplete_59E542A947E50C239AD252B4B4A3520D final
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.CanLook
+// 0x0007 (0x0007 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_CanLook final
 {
 public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnDestroySessionComplete_59E542A947E50C239AD252B4B4A3520D;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnCompleted_48F7AF4944B2851728DF84BCFBBCFCCA
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_OnCompleted_48F7AF4944B2851728DF84BCFBBCFCCA final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnCompleted_48F7AF4944B2851728DF84BCFBBCFCCA;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnCallFailed_CDC98A21428CD47CDCC078B71D0D8394
-// 0x000C (0x000C - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_OnCallFailed_CDC98A21428CD47CDCC078B71D0D8394 final
-{
-public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EOnJoinSessionCompleteResult_                 Result;                                            // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnCallFailed_CDC98A21428CD47CDCC078B71D0D8394;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnCallFailed_9519D6EA4746536664CE01A6DA07331D
-// 0x000C (0x000C - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_OnCallFailed_9519D6EA4746536664CE01A6DA07331D final
-{
-public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnCallFailed_9519D6EA4746536664CE01A6DA07331D;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnCallFailed_59E542A947E50C239AD252B4B4A3520D
-// 0x000C (0x000C - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_OnCallFailed_59E542A947E50C239AD252B4B4A3520D final
-{
-public:
-	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnCallFailed_59E542A947E50C239AD252B4B4A3520D;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnBlendOut_48F7AF4944B2851728DF84BCFBBCFCCA
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_OnBlendOut_48F7AF4944B2851728DF84BCFBBCFCCA final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnBlendOut_48F7AF4944B2851728DF84BCFBBCFCCA;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.IsLive
-// 0x0004 (0x0004 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_IsLive final
-{
-public:
-	bool                                          ReturnValue_IsLive;                                // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLive_ReturnValue;                       // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Rezult;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanLook_Rezult;                           // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_IsLive;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_CanLook;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.IsCanClimbing
-// 0x0018 (0x0018 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_IsCanClimbing final
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.CanSlotChange
+// 0x0007 (0x0007 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_CanSlotChange final
 {
 public:
-	bool                                          ReturnValue_IsCanClimbing;                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Rezult;                                            // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetNormalizeValue_NormalizeValue;         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLive_ReturnValue;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsCanClimbing_ReturnValue;                // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGrab_ReturnValue;                       // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Rezult;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLive_ReturnValue;                       // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CanSlotChange_Rezult;                     // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGrab_ReturnValue;                       // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_IsCanClimbing;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_CanSlotChange;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.IsBackPackItem
-// 0x0150 (0x0150 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_IsBackPackItem final
-{
-public:
-	class UObject*                                Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Rezult;                                            // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_ItemCoreDatas                      CoreDatas;                                         // 0x0010(0x0070)(Parm, OutParm, HasGetValueTypeHash)
-	TScriptInterface<class IBPI_ItemInterface_C>  K2Node_DynamicCast_AsBPI_Item_Interface;           // 0x0080(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_HandType                                 CallFunc_GetItemInfo_HandType;                     // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_ClassType                                CallFunc_GetItemInfo_ClassType;                    // 0x0092(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetItemInfo_NotPickUp;                    // 0x0093(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_GetItemInfo_HaveRotation;                 // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_GetItemInfo_Add_Position;                 // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetItemInfo_IsBoneAttach;                 // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_ItemBindType                             CallFunc_GetItemInfo_BindType;                     // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CA[0x2];                                       // 0x00CA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_GetItemInfo_BoneName;                     // 0x00CC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FST_ItemCoreDatas                      CallFunc_GetItemInfo_CoreDatas;                    // 0x00D8(0x0070)(HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x014A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_IsBackPackItem;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.Interact(Server)
-// 0x0010 (0x0010 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_Interact_Server_ final
-{
-public:
-	class AActor*                                 TargetActor_Interact_Server_;                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         SlotIndex_Interact_Server_;                        // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_Interact_Server_;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_V_K2Node_InputDebugKeyEvent_6
-// 0x0038 (0x0038 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_V_K2Node_InputDebugKeyEvent_6 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_V_K2Node_InputDebugKeyEvent_6;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_U_K2Node_InputDebugKeyEvent_11
-// 0x0038 (0x0038 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_U_K2Node_InputDebugKeyEvent_11 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_U_K2Node_InputDebugKeyEvent_11;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_Two_K2Node_InputKeyEvent_6
-// 0x0018 (0x0018 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_Two_K2Node_InputKeyEvent_6 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_Two_K2Node_InputKeyEvent_6;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_Three_K2Node_InputKeyEvent_5
-// 0x0018 (0x0018 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_Three_K2Node_InputKeyEvent_5 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_Three_K2Node_InputKeyEvent_5;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_Six_K2Node_InputDebugKeyEvent_7
-// 0x0038 (0x0038 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_Six_K2Node_InputDebugKeyEvent_7 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_Six_K2Node_InputDebugKeyEvent_7;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_Shift_P_K2Node_InputDebugKeyEvent_2
-// 0x0038 (0x0038 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_Shift_P_K2Node_InputDebugKeyEvent_2 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_Shift_P_K2Node_InputDebugKeyEvent_2;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_Seven_K2Node_InputDebugKeyEvent_9
-// 0x0038 (0x0038 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_Seven_K2Node_InputDebugKeyEvent_9 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_Seven_K2Node_InputDebugKeyEvent_9;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_One_K2Node_InputKeyEvent_7
-// 0x0018 (0x0018 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_One_K2Node_InputKeyEvent_7 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_One_K2Node_InputKeyEvent_7;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_O_K2Node_InputDebugKeyEvent_10
-// 0x0038 (0x0038 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_O_K2Node_InputDebugKeyEvent_10 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_O_K2Node_InputDebugKeyEvent_10;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_NumPadTwo_K2Node_InputKeyEvent_2
-// 0x0018 (0x0018 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_NumPadTwo_K2Node_InputKeyEvent_2 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_NumPadTwo_K2Node_InputKeyEvent_2;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_NumPadThree_K2Node_InputKeyEvent_1
-// 0x0018 (0x0018 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_NumPadThree_K2Node_InputKeyEvent_1 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_NumPadThree_K2Node_InputKeyEvent_1;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_NumPadOne_K2Node_InputKeyEvent_3
-// 0x0018 (0x0018 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_NumPadOne_K2Node_InputKeyEvent_3 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_NumPadOne_K2Node_InputKeyEvent_3;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_NumPadFour_K2Node_InputKeyEvent_0
-// 0x0018 (0x0018 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_NumPadFour_K2Node_InputKeyEvent_0 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_NumPadFour_K2Node_InputKeyEvent_0;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_M_K2Node_InputDebugKeyEvent_5
-// 0x0038 (0x0038 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_M_K2Node_InputDebugKeyEvent_5 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_M_K2Node_InputDebugKeyEvent_5;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_L_K2Node_InputDebugKeyEvent_4
-// 0x0038 (0x0038 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_L_K2Node_InputDebugKeyEvent_4 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_L_K2Node_InputDebugKeyEvent_4;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_K_K2Node_InputDebugKeyEvent_0
-// 0x0038 (0x0038 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_K_K2Node_InputDebugKeyEvent_0 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_K_K2Node_InputDebugKeyEvent_0;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_J_K2Node_InputDebugKeyEvent_1
-// 0x0038 (0x0038 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_J_K2Node_InputDebugKeyEvent_1 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_J_K2Node_InputDebugKeyEvent_1;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_6
-// 0x0030 (0x0030 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_6 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_6;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_5
-// 0x0030 (0x0030 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_5 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_5;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_4
-// 0x0030 (0x0030 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_4 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_4;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_IA_Pin_K2Node_EnhancedInputActionEvent_7
-// 0x0030 (0x0030 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Pin_K2Node_EnhancedInputActionEvent_7 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Pin_K2Node_EnhancedInputActionEvent_7;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_IA_Move_Default_K2Node_EnhancedInputActionEvent_0
-// 0x0030 (0x0030 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Move_Default_K2Node_EnhancedInputActionEvent_0 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Move_Default_K2Node_EnhancedInputActionEvent_0;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_3
-// 0x0030 (0x0030 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_3 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_3;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_2
-// 0x0030 (0x0030 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_2 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_2;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_1
-// 0x0030 (0x0030 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_1 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_1;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_Four_K2Node_InputKeyEvent_4
-// 0x0018 (0x0018 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_Four_K2Node_InputKeyEvent_4 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_Four_K2Node_InputKeyEvent_4;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_Five_K2Node_InputDebugKeyEvent_8
-// 0x0038 (0x0038 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_Five_K2Node_InputDebugKeyEvent_8 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_Five_K2Node_InputDebugKeyEvent_8;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_Ctrl_P_K2Node_InputDebugKeyEvent_3
-// 0x0038 (0x0038 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_InpActEvt_Ctrl_P_K2Node_InputDebugKeyEvent_3 final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_Ctrl_P_K2Node_InputDebugKeyEvent_3;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.Heat
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ChangeCurrentState
 // 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_Heat final
+struct BP_FirstPersonCharacter_LINK_C_ChangeCurrentState final
+{
+public:
+	class FName                                   StateName;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ChangeCurrentState;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ChangeStateValue
+// 0x0010 (0x0010 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_ChangeStateValue final
+{
+public:
+	EN_LINK_PlayerStateValueType                  PlayerStateValue;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Value;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ChangeStateValue;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ChangeViewMode
+// 0x000C (0x000C - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_ChangeViewMode final
+{
+public:
+	class FName                                   ModeName;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Quick;                                             // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ChangeViewMode;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ChangeWeight
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_ChangeWeight final
 {
 public:
 	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_Heat;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ChangeWeight;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.Grab(Client)
-// 0x0001 (0x0001 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_Grab_Client_ final
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.Damage
+// 0x00B0 (0x00B0 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_Damage final
 {
 public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TeamIndex;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_DamageType                                 DamageType;                                        // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             SourceAgentPoint;                                  // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UnAvoidable;                                       // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   DamageName;                                        // 0x0074(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 SourceActor;                                       // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FFinishFilter                          Finish;                                            // 0x0088(0x0002)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x008B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFinishFilter                          CallFunc_Damage_Finish;                            // 0x008D(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x008F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_Grab_Client_;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_Damage;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.Grab
-// 0x0001 (0x0001 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_Grab final
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.DamagedAnimation
+// 0x0010 (0x0010 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_DamagedAnimation final
 {
 public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UnAvoidable;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_Grab;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_DamagedAnimation;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.GetStateValue
-// 0x000C (0x000C - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_GetStateValue final
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.DropInventoryItem(Server)
+// 0x0028 (0x0028 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_DropInventoryItem_Server_ final
 {
 public:
-	class FName                                   TargetName_GetStateValue;                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue_GetStateValue;                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         SlotIndex;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                OverrideDropLocation;                              // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ForceNoDrop;                                       // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_GetStateValue;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.GetPlayerColor
-// 0x0004 (0x0004 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_GetPlayerColor final
-{
-public:
-	struct FColor                                 MainColor;                                         // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_GetPlayerColor;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.GetMoveSpeedMultiply
-// 0x0078 (0x0078 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_GetMoveSpeedMultiply final
-{
-public:
-	double                                        MultiplyValue_GetMoveSpeedMultiply;                // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_LINK_PlayerStateValueType                  Temp_byte_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_LINK_PlayerStateValueType                  Temp_byte_Variable_1;                              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetStateValue_Value;                      // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetStateValue_ReplicateValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetStateValue_Value_1;                    // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetStateValue_ReplicateValue_1;           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_GetMoveSpeedMultiply_MultiplyValue;       // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_ReturnValue_GetMoveSpeedMultiply; // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_GetMoveSpeedMultiply; // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_GetMoveSpeedMultiply;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.GetForceVelocity
-// 0x01A0 (0x01A0 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_GetForceVelocity final
-{
-public:
-	class UBPC_LINK_HandControl_C*                LINK_HandControl;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        SourcePositionComponent;                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        power;                                             // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DeltaSeconds;                                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Velocity;                                          // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_1;        // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_2;        // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetWorldAttachPosition_WorldPositon;      // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_GetWorldAttachPosition_WorldRotation;     // 0x00C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_3;        // 0x00E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x00F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0110(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x0140(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x0158(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_2;      // 0x0170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_3;      // 0x0188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_GetForceVelocity;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.GeneratePin
-// 0x0060 (0x0060 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_GeneratePin final
-{
-public:
-	struct FTransform                             SpawnTransform;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_GeneratePin;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ForceGrab
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_ForceGrab final
-{
-public:
-	const class AActor*                           TargetActor;                                       // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ForceGrab;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_DropInventoryItem_Server_;
 
 // Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ExecuteUbergraph_BP_FirstPersonCharacter_LINK
 // 0x2200 (0x2200 - 0x0000)
@@ -876,7 +238,7 @@ public:
 	EN_LINK_PlayerStateValueType                  Temp_byte_Variable_1;                              // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EN_LINK_PlayerStateValueType PlayerStateValue, double Value)> K2Node_CreateDelegate_OutputDelegate; // 0x0038(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EN_LINK_PlayerStateValueType PlayerStateValue_0, double Value)> K2Node_CreateDelegate_OutputDelegate; // 0x0038(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         Temp_object_Variable;                              // 0x0048(0x0010)(ConstParm, ReferenceParm)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1556,198 +918,836 @@ public:
 };
 DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ExecuteUbergraph_BP_FirstPersonCharacter_LINK;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.DropInventoryItem(Server)
-// 0x0028 (0x0028 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_DropInventoryItem_Server_ final
-{
-public:
-	int32                                         SlotIndex;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                OverrideDropLocation;                              // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ForceNoDrop;                                       // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_DropInventoryItem_Server_;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.DamagedAnimation
-// 0x0010 (0x0010 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_DamagedAnimation final
-{
-public:
-	double                                        DamageValue_DamagedAnimation;                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UnAvoidable_DamagedAnimation;                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_DamagedAnimation;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.Damage
-// 0x00B0 (0x00B0 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_Damage final
-{
-public:
-	double                                        DamageValue_Damage;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TeamIndex_Damage;                                  // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_DamageType                                 DamageType_Damage;                                 // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             SourceAgentPoint_Damage;                           // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UnAvoidable_Damage;                                // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   DamageName_Damage;                                 // 0x0074(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 SourceActor_Damage;                                // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFinishFilter                          Finish_Damage;                                     // 0x0088(0x0002)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x008B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFinishFilter                          CallFunc_Damage_Finish;                            // 0x008D(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue_Damage;   // 0x008F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_Damage;            // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_Damage;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ChangeWeight
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ForceGrab
 // 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_ChangeWeight final
+struct BP_FirstPersonCharacter_LINK_C_ForceGrab final
+{
+public:
+	const class AActor*                           TargetActor;                                       // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ForceGrab;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.GeneratePin
+// 0x0060 (0x0060 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_GeneratePin final
+{
+public:
+	struct FTransform                             SpawnTransform;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_GeneratePin;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.GetForceVelocity
+// 0x01A0 (0x01A0 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_GetForceVelocity final
+{
+public:
+	class UBPC_LINK_HandControl_C*                LINK_HandControl;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        SourcePositionComponent;                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        power;                                             // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DeltaSeconds;                                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Velocity;                                          // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_1;        // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_2;        // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetWorldAttachPosition_WorldPositon;      // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_GetWorldAttachPosition_WorldRotation;     // 0x00C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_3;        // 0x00E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x00F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0110(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x0140(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x0158(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_2;      // 0x0170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_3;      // 0x0188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_GetForceVelocity;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.GetMoveSpeedMultiply
+// 0x0078 (0x0078 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_GetMoveSpeedMultiply final
+{
+public:
+	double                                        MultiplyValue;                                     // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_LINK_PlayerStateValueType                  Temp_byte_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_LINK_PlayerStateValueType                  Temp_byte_Variable_1;                              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetStateValue_Value;                      // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetStateValue_ReplicateValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetStateValue_Value_1;                    // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetStateValue_ReplicateValue_1;           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_GetMoveSpeedMultiply_MultiplyValue;       // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_GetMoveSpeedMultiply;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.GetPlayerColor
+// 0x0004 (0x0004 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_GetPlayerColor final
+{
+public:
+	struct FColor                                 MainColor;                                         // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_GetPlayerColor;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.GetStateValue
+// 0x000C (0x000C - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_GetStateValue final
+{
+public:
+	class FName                                   TargetName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_GetStateValue;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.Grab
+// 0x0001 (0x0001 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_Grab final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_Grab;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.Grab(Client)
+// 0x0001 (0x0001 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_Grab_Client_ final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_Grab_Client_;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.Heat
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_Heat final
 {
 public:
 	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ChangeWeight;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_Heat;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ChangeViewMode
-// 0x000C (0x000C - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_ChangeViewMode final
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_Ctrl_P_K2Node_InputDebugKeyEvent_3
+// 0x0038 (0x0038 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_Ctrl_P_K2Node_InputDebugKeyEvent_3 final
 {
 public:
-	class FName                                   ModeName_ChangeViewMode;                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Quick_ChangeViewMode;                              // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ChangeViewMode;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_Ctrl_P_K2Node_InputDebugKeyEvent_3;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ChangeStateValue
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_Five_K2Node_InputDebugKeyEvent_8
+// 0x0038 (0x0038 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_Five_K2Node_InputDebugKeyEvent_8 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_Five_K2Node_InputDebugKeyEvent_8;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_Four_K2Node_InputKeyEvent_4
+// 0x0018 (0x0018 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_Four_K2Node_InputKeyEvent_4 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_Four_K2Node_InputKeyEvent_4;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_1
+// 0x0030 (0x0030 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_1 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_1;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_2
+// 0x0030 (0x0030 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_2 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_2;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_3
+// 0x0030 (0x0030 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_3 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Emote_K2Node_EnhancedInputActionEvent_3;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_IA_Move_Default_K2Node_EnhancedInputActionEvent_0
+// 0x0030 (0x0030 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Move_Default_K2Node_EnhancedInputActionEvent_0 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Move_Default_K2Node_EnhancedInputActionEvent_0;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_IA_Pin_K2Node_EnhancedInputActionEvent_7
+// 0x0030 (0x0030 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Pin_K2Node_EnhancedInputActionEvent_7 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_Pin_K2Node_EnhancedInputActionEvent_7;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_4
+// 0x0030 (0x0030 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_4 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_4;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_5
+// 0x0030 (0x0030 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_5 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_5;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_6
+// 0x0030 (0x0030 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_6 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_IA_RotateInput_K2Node_EnhancedInputActionEvent_6;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_J_K2Node_InputDebugKeyEvent_1
+// 0x0038 (0x0038 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_J_K2Node_InputDebugKeyEvent_1 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_J_K2Node_InputDebugKeyEvent_1;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_K_K2Node_InputDebugKeyEvent_0
+// 0x0038 (0x0038 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_K_K2Node_InputDebugKeyEvent_0 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_K_K2Node_InputDebugKeyEvent_0;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_L_K2Node_InputDebugKeyEvent_4
+// 0x0038 (0x0038 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_L_K2Node_InputDebugKeyEvent_4 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_L_K2Node_InputDebugKeyEvent_4;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_M_K2Node_InputDebugKeyEvent_5
+// 0x0038 (0x0038 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_M_K2Node_InputDebugKeyEvent_5 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_M_K2Node_InputDebugKeyEvent_5;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_NumPadFour_K2Node_InputKeyEvent_0
+// 0x0018 (0x0018 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_NumPadFour_K2Node_InputKeyEvent_0 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_NumPadFour_K2Node_InputKeyEvent_0;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_NumPadOne_K2Node_InputKeyEvent_3
+// 0x0018 (0x0018 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_NumPadOne_K2Node_InputKeyEvent_3 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_NumPadOne_K2Node_InputKeyEvent_3;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_NumPadThree_K2Node_InputKeyEvent_1
+// 0x0018 (0x0018 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_NumPadThree_K2Node_InputKeyEvent_1 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_NumPadThree_K2Node_InputKeyEvent_1;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_NumPadTwo_K2Node_InputKeyEvent_2
+// 0x0018 (0x0018 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_NumPadTwo_K2Node_InputKeyEvent_2 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_NumPadTwo_K2Node_InputKeyEvent_2;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_O_K2Node_InputDebugKeyEvent_10
+// 0x0038 (0x0038 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_O_K2Node_InputDebugKeyEvent_10 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_O_K2Node_InputDebugKeyEvent_10;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_One_K2Node_InputKeyEvent_7
+// 0x0018 (0x0018 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_One_K2Node_InputKeyEvent_7 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_One_K2Node_InputKeyEvent_7;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_Seven_K2Node_InputDebugKeyEvent_9
+// 0x0038 (0x0038 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_Seven_K2Node_InputDebugKeyEvent_9 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_Seven_K2Node_InputDebugKeyEvent_9;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_Shift_P_K2Node_InputDebugKeyEvent_2
+// 0x0038 (0x0038 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_Shift_P_K2Node_InputDebugKeyEvent_2 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_Shift_P_K2Node_InputDebugKeyEvent_2;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_Six_K2Node_InputDebugKeyEvent_7
+// 0x0038 (0x0038 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_Six_K2Node_InputDebugKeyEvent_7 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_Six_K2Node_InputDebugKeyEvent_7;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_Three_K2Node_InputKeyEvent_5
+// 0x0018 (0x0018 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_Three_K2Node_InputKeyEvent_5 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_Three_K2Node_InputKeyEvent_5;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_Two_K2Node_InputKeyEvent_6
+// 0x0018 (0x0018 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_Two_K2Node_InputKeyEvent_6 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_Two_K2Node_InputKeyEvent_6;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_U_K2Node_InputDebugKeyEvent_11
+// 0x0038 (0x0038 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_U_K2Node_InputDebugKeyEvent_11 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_U_K2Node_InputDebugKeyEvent_11;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.InpActEvt_V_K2Node_InputDebugKeyEvent_6
+// 0x0038 (0x0038 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_InpActEvt_V_K2Node_InputDebugKeyEvent_6 final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	struct FInputActionValue                      ActionValue;                                       // 0x0018(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_InpActEvt_V_K2Node_InputDebugKeyEvent_6;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.Interact(Server)
 // 0x0010 (0x0010 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_ChangeStateValue final
+struct BP_FirstPersonCharacter_LINK_C_Interact_Server_ final
 {
 public:
-	EN_LINK_PlayerStateValueType                  PlayerStateValue;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Value;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         SlotIndex;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ChangeStateValue;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_Interact_Server_;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ChangeCurrentState
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_ChangeCurrentState final
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.IsBackPackItem
+// 0x0150 (0x0150 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_IsBackPackItem final
 {
 public:
-	class FName                                   StateName;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Rezult;                                            // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_ItemCoreDatas                      CoreDatas;                                         // 0x0010(0x0070)(Parm, OutParm, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_ItemInterface_C>  K2Node_DynamicCast_AsBPI_Item_Interface;           // 0x0080(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_HandType                                 CallFunc_GetItemInfo_HandType;                     // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_ClassType                                CallFunc_GetItemInfo_ClassType;                    // 0x0092(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetItemInfo_NotPickUp;                    // 0x0093(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_GetItemInfo_HaveRotation;                 // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_GetItemInfo_Add_Position;                 // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetItemInfo_IsBoneAttach;                 // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_ItemBindType                             CallFunc_GetItemInfo_BindType;                     // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CA[0x2];                                       // 0x00CA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_GetItemInfo_BoneName;                     // 0x00CC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FST_ItemCoreDatas                      CallFunc_GetItemInfo_CoreDatas;                    // 0x00D8(0x0070)(HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x014A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ChangeCurrentState;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_IsBackPackItem;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.CanSlotChange
-// 0x0007 (0x0007 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_CanSlotChange final
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.IsCanClimbing
+// 0x0018 (0x0018 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_IsCanClimbing final
 {
 public:
-	bool                                          Rezult_CanSlotChange;                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLive_ReturnValue;                       // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanSlotChange_Rezult;                     // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsGrab_ReturnValue;                       // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Rezult;                                            // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetNormalizeValue_NormalizeValue;         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLive_ReturnValue;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsCanClimbing_ReturnValue;                // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGrab_ReturnValue;                       // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_CanSlotChange;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_IsCanClimbing;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.CanLook
-// 0x0007 (0x0007 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_CanLook final
-{
-public:
-	bool                                          Rezult_CanLook;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_CanLook;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanLook_Rezult;                           // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_CanLook;           // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_CanLook;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.CanDash
-// 0x0002 (0x0002 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_CanDash final
-{
-public:
-	bool                                          ReturnValue_CanDash;                               // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanDash_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_CanDash;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.BndEvt__BP_FirstPersonCharacter_LINK_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_4_ChangedValue__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_BndEvt__BP_FirstPersonCharacter_LINK_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_4_ChangedValue__DelegateSignature final
-{
-public:
-	double                                        UpdateValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_BndEvt__BP_FirstPersonCharacter_LINK_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_4_ChangedValue__DelegateSignature;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.BndEvt__BP_FirstPersonCharacter_LINK_BPC_LongInputControl_LeftClick_K2Node_ComponentBoundEvent_3_InputEnd__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_BndEvt__BP_FirstPersonCharacter_LINK_BPC_LongInputControl_LeftClick_K2Node_ComponentBoundEvent_3_InputEnd__DelegateSignature final
-{
-public:
-	double                                        PushTime;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_BndEvt__BP_FirstPersonCharacter_LINK_BPC_LongInputControl_LeftClick_K2Node_ComponentBoundEvent_3_InputEnd__DelegateSignature;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.BndEvt__BP_FirstPersonCharacter_LINK_BPC_LINK_HandControl_R_K2Node_ComponentBoundEvent_0_GrabEnd__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_BndEvt__BP_FirstPersonCharacter_LINK_BPC_LINK_HandControl_R_K2Node_ComponentBoundEvent_0_GrabEnd__DelegateSignature final
-{
-public:
-	class UPrimitiveComponent*                    GrabPrimitive;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_BndEvt__BP_FirstPersonCharacter_LINK_BPC_LINK_HandControl_R_K2Node_ComponentBoundEvent_0_GrabEnd__DelegateSignature;
-
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.BndEvt__BP_FirstPersonCharacter_LINK_AudioCapture_K2Node_ComponentBoundEvent_0_OnSynthEnvelopeValue__DelegateSignature
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.IsLive
 // 0x0004 (0x0004 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_BndEvt__BP_FirstPersonCharacter_LINK_AudioCapture_K2Node_ComponentBoundEvent_0_OnSynthEnvelopeValue__DelegateSignature final
+struct BP_FirstPersonCharacter_LINK_C_IsLive final
 {
 public:
-	float                                         EnvelopeValue;                                     // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLive_ReturnValue;                       // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_BndEvt__BP_FirstPersonCharacter_LINK_AudioCapture_K2Node_ComponentBoundEvent_0_OnSynthEnvelopeValue__DelegateSignature;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_IsLive;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.AllWidgetShow
-// 0x0001 (0x0001 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_AllWidgetShow final
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnBlendOut_48F7AF4944B2851728DF84BCFBBCFCCA
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_OnBlendOut_48F7AF4944B2851728DF84BCFBBCFCCA final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnBlendOut_48F7AF4944B2851728DF84BCFBBCFCCA;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnCallFailed_59E542A947E50C239AD252B4B4A3520D
+// 0x000C (0x000C - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_OnCallFailed_59E542A947E50C239AD252B4B4A3520D final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnCallFailed_59E542A947E50C239AD252B4B4A3520D;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnCallFailed_9519D6EA4746536664CE01A6DA07331D
+// 0x000C (0x000C - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_OnCallFailed_9519D6EA4746536664CE01A6DA07331D final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnCallFailed_9519D6EA4746536664CE01A6DA07331D;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnCallFailed_CDC98A21428CD47CDCC078B71D0D8394
+// 0x000C (0x000C - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_OnCallFailed_CDC98A21428CD47CDCC078B71D0D8394 final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EOnJoinSessionCompleteResult_                 Result;                                            // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnCallFailed_CDC98A21428CD47CDCC078B71D0D8394;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnCompleted_48F7AF4944B2851728DF84BCFBBCFCCA
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_OnCompleted_48F7AF4944B2851728DF84BCFBBCFCCA final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnCompleted_48F7AF4944B2851728DF84BCFBBCFCCA;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnDestroySessionComplete_59E542A947E50C239AD252B4B4A3520D
+// 0x000C (0x000C - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_OnDestroySessionComplete_59E542A947E50C239AD252B4B4A3520D final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnDestroySessionComplete_59E542A947E50C239AD252B4B4A3520D;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnDestroySessionComplete_9519D6EA4746536664CE01A6DA07331D
+// 0x000C (0x000C - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_OnDestroySessionComplete_9519D6EA4746536664CE01A6DA07331D final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWasSuccessful;                                    // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnDestroySessionComplete_9519D6EA4746536664CE01A6DA07331D;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnInterrupted_48F7AF4944B2851728DF84BCFBBCFCCA
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_OnInterrupted_48F7AF4944B2851728DF84BCFBBCFCCA final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnInterrupted_48F7AF4944B2851728DF84BCFBBCFCCA;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnJoinSessionComplete_CDC98A21428CD47CDCC078B71D0D8394
+// 0x000C (0x000C - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_OnJoinSessionComplete_CDC98A21428CD47CDCC078B71D0D8394 final
+{
+public:
+	class FName                                   SessionName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EOnJoinSessionCompleteResult_                 Result;                                            // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnJoinSessionComplete_CDC98A21428CD47CDCC078B71D0D8394;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnLanded_2
+// 0x0100 (0x0100 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_OnLanded_2 final
+{
+public:
+	struct FHitResult                             Hit;                                               // 0x0000(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnLanded_2;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnNotifyBegin_48F7AF4944B2851728DF84BCFBBCFCCA
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_OnNotifyBegin_48F7AF4944B2851728DF84BCFBBCFCCA final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnNotifyBegin_48F7AF4944B2851728DF84BCFBBCFCCA;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnNotifyEnd_48F7AF4944B2851728DF84BCFBBCFCCA
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_OnNotifyEnd_48F7AF4944B2851728DF84BCFBBCFCCA final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnNotifyEnd_48F7AF4944B2851728DF84BCFBBCFCCA;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.OnSessionUserInviteAccepted
+// 0x01F0 (0x01F0 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_OnSessionUserInviteAccepted final
+{
+public:
+	bool                                          bWasSuccessful;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ControllerId;                                      // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FUniqueNetIdRepl                       UserId;                                            // 0x0008(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	struct FOnlineSessionSearchResultBP           InviteResult;                                      // 0x0038(0x01B8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_OnSessionUserInviteAccepted;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.PinToTarget(Server)
+// 0x0080 (0x0080 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_PinToTarget_Server_ final
+{
+public:
+	struct FVector                                Destination;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             SpawnTransform;                                    // 0x0020(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_PinToTarget_Server_;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ReceiveTick;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ResetAllStates
+// 0x0030 (0x0030 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_ResetAllStates final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UBPC_ItemUsedLoal_Base_C*>       CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UBPC_ItemUsedLoal_Base_C*               CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ResetAllStates;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.RezultCheck
+// 0x0210 (0x0210 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_RezultCheck final
+{
+public:
+	struct FHitResult                             Hit;                                               // 0x0000(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          Rezult;                                            // 0x0100(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 HitActor;                                          // 0x0108(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ImpactPoint;                                       // 0x0110(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    HitComponent;                                      // 0x0128(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CheckRezult;                                       // 0x0130(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0132(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_133[0x1];                                      // 0x0133(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0140(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0158(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x01CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x01D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x01F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSimulatingPhysics_ReturnValue;          // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0209(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ObjectIsA_ReturnValue;                    // 0x020A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x020B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ActorHasTag_ReturnValue;                  // 0x020C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x020D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x020E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_RezultCheck;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SelectIndex
+// 0x0010 (0x0010 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_SelectIndex final
+{
+public:
+	class UClass*                                 EmoteData;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SelectIndex;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetBodyVisibleState
+// 0x0004 (0x0004 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_SetBodyVisibleState final
+{
+public:
+	int32                                         StateIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetBodyVisibleState;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetCurrentItem
+// 0x00D0 (0x00D0 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_SetCurrentItem final
+{
+public:
+	int32                                         SlotIndex;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCPP_GameItemData                      ItemData;                                          // 0x0008(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FST_ItemCoreDatas                      CoreData;                                          // 0x0060(0x0070)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetCurrentItem;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetForce(Server)
+// 0x0020 (0x0020 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_SetForce_Server_ final
+{
+public:
+	class UPrimitiveComponent*                    Primitive;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                NewVel;                                            // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetForce_Server_;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetFreeHand
+// 0x000C (0x000C - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_SetFreeHand final
 {
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Multiply_IntInt_ReturnValue;              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_SlotChange_CurrentIndex;                  // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_AllWidgetShow;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetFreeHand;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.AllWidgetHide
-// 0x0001 (0x0001 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_AllWidgetHide final
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetHealthValue(LocalClient)
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_SetHealthValue_LocalClient_ final
 {
 public:
-	bool                                          CallFunc_IsValid_ReturnValue_AllWidgetHide;        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TargetValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_AllWidgetHide;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetHealthValue_LocalClient_;
 
-// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.AimEvent
-// 0x0001 (0x0001 - 0x0000)
-struct BP_FirstPersonCharacter_LINK_C_AimEvent final
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetHealthValue(Server)
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_SetHealthValue_Server_ final
 {
 public:
-	bool                                          State_AimEvent;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TargetValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_AimEvent;
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetHealthValue_Server_;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetSlot
+// 0x0010 (0x0010 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_SetSlot final
+{
+public:
+	int32                                         TargetSlotValue;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_SlotChange_CurrentIndex;                  // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetSlot;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetSpectatingState
+// 0x0001 (0x0001 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_SetSpectatingState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetSpectatingState;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.SetVoiceScale(Server)
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_SetVoiceScale_Server_ final
+{
+public:
+	double                                        CurrentVoiceScale_0;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_SetVoiceScale_Server_;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.ShotEvent
+// 0x0001 (0x0001 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_ShotEvent final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_ShotEvent;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.TargetPositionUpdate
+// 0x0030 (0x0030 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_TargetPositionUpdate final
+{
+public:
+	struct FVector                                Position_R;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Position_L;                                        // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_TargetPositionUpdate;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.Unzip(Server)
+// 0x0018 (0x0018 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_Unzip_Server_ final
+{
+public:
+	struct FVector                                RespawnPosition;                                   // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_Unzip_Server_;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.UpdateBackpackWeight
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_UpdateBackpackWeight final
+{
+public:
+	double                                        BackpackWeight;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_UpdateBackpackWeight;
+
+// Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.UpdateNameplate
+// 0x0020 (0x0020 - 0x0000)
+struct BP_FirstPersonCharacter_LINK_C_UpdateNameplate final
+{
+public:
+	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UWBP_Nameplate_C*                       CallFunc_Create_ReturnValue;                       // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_FirstPersonCharacter_LINK_C_UpdateNameplate;
 
 // Function BP_FirstPersonCharacter_LINK.BP_FirstPersonCharacter_LINK_C.GetIsDeath
 // 0x0001 (0x0001 - 0x0000)

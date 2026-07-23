@@ -16,63 +16,43 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_ComboBox_ScreenMode.WBP_ComboBox_ScreenMode_C.UpdateScreenModeUI
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_ComboBox_ScreenMode.WBP_ComboBox_ScreenMode_C.ApplySetting
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_ComboBox_ScreenMode_C::UpdateScreenModeUI()
+void UWBP_ComboBox_ScreenMode_C::ApplySetting()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_ScreenMode_C", "UpdateScreenModeUI");
+		Func = Class->GetFunction("WBP_ComboBox_ScreenMode_C", "ApplySetting");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_ComboBox_ScreenMode.WBP_ComboBox_ScreenMode_C.Update Config Item
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_ComboBox_ScreenMode.WBP_ComboBox_ScreenMode_C.BndEvt__WBP_ComboBox_ScreenMode_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_ComboBox_ScreenMode_C::Update_Config_Item()
+void UWBP_ComboBox_ScreenMode_C::BndEvt__WBP_ComboBox_ScreenMode_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_ScreenMode_C", "Update Config Item");
+		Func = Class->GetFunction("WBP_ComboBox_ScreenMode_C", "BndEvt__WBP_ComboBox_ScreenMode_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_ComboBox_ScreenMode.WBP_ComboBox_ScreenMode_C.PreConstruct
+// Function WBP_ComboBox_ScreenMode.WBP_ComboBox_ScreenMode_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ComboBox_ScreenMode_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_ComboBox_ScreenMode_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_ScreenMode_C", "PreConstruct");
-
-	Params::WBP_ComboBox_ScreenMode_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_ComboBox_ScreenMode.WBP_ComboBox_ScreenMode_C.GetResolution
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_ComboBox_ScreenMode_C::GetResolution()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_ScreenMode_C", "GetResolution");
+		Func = Class->GetFunction("WBP_ComboBox_ScreenMode_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,43 +78,63 @@ void UWBP_ComboBox_ScreenMode_C::ExecuteUbergraph_WBP_ComboBox_ScreenMode(int32 
 }
 
 
-// Function WBP_ComboBox_ScreenMode.WBP_ComboBox_ScreenMode_C.Construct
+// Function WBP_ComboBox_ScreenMode.WBP_ComboBox_ScreenMode_C.GetResolution
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWBP_ComboBox_ScreenMode_C::GetResolution()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ComboBox_ScreenMode_C", "GetResolution");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ComboBox_ScreenMode.WBP_ComboBox_ScreenMode_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ComboBox_ScreenMode_C::Construct()
+void UWBP_ComboBox_ScreenMode_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_ScreenMode_C", "Construct");
+		Func = Class->GetFunction("WBP_ComboBox_ScreenMode_C", "PreConstruct");
+
+	Params::WBP_ComboBox_ScreenMode_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ComboBox_ScreenMode.WBP_ComboBox_ScreenMode_C.Update Config Item
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_ComboBox_ScreenMode_C::Update_Config_Item()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ComboBox_ScreenMode_C", "Update Config Item");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_ComboBox_ScreenMode.WBP_ComboBox_ScreenMode_C.BndEvt__WBP_ComboBox_ScreenMode_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_ComboBox_ScreenMode.WBP_ComboBox_ScreenMode_C.UpdateScreenModeUI
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_ComboBox_ScreenMode_C::BndEvt__WBP_ComboBox_ScreenMode_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature()
+void UWBP_ComboBox_ScreenMode_C::UpdateScreenModeUI()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_ScreenMode_C", "BndEvt__WBP_ComboBox_ScreenMode_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_ComboBox_ScreenMode.WBP_ComboBox_ScreenMode_C.ApplySetting
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_ComboBox_ScreenMode_C::ApplySetting()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_ScreenMode_C", "ApplySetting");
+		Func = Class->GetFunction("WBP_ComboBox_ScreenMode_C", "UpdateScreenModeUI");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

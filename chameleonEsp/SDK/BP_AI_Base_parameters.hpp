@@ -11,14 +11,368 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "ENUM_ActorType_structs.hpp"
-#include "ENUM_CameraMode_structs.hpp"
 #include "EN_StrafingDirection_structs.hpp"
+#include "ENUM_CameraMode_structs.hpp"
+#include "ENUM_ActorType_structs.hpp"
 #include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
+
+// Function BP_AI_Base.BP_AI_Base_C.IsAttackNow
+// 0x0001 (0x0001 - 0x0000)
+struct BP_AI_Base_C_IsAttackNow final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_IsAttackNow;
+
+// Function BP_AI_Base.BP_AI_Base_C.IsBattleMode
+// 0x0001 (0x0001 - 0x0000)
+struct BP_AI_Base_C_IsBattleMode final
+{
+public:
+	bool                                          Bool;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_IsBattleMode;
+
+// Function BP_AI_Base.BP_AI_Base_C.GetAvoidanceRotation
+// 0x00B0 (0x00B0 - 0x0000)
+struct BP_AI_Base_C_GetAvoidanceRotation final
+{
+public:
+	struct FRotator                               Rotation;                                          // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Conv_VectorToVector2D_ReturnValue;        // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_Vector2DToVector_ReturnValue;        // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Conv_VectorToVector2D_ReturnValue_1;      // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_Vector2DToVector_ReturnValue_1;      // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_FindLookAtRotation_ReturnValue;           // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_GetAvoidanceRotation;
+
+// Function BP_AI_Base.BP_AI_Base_C.IsAiming
+// 0x0030 (0x0030 - 0x0000)
+struct BP_AI_Base_C_IsAiming final
+{
+public:
+	bool                                          IsAiming_0;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SuccessCount;                                      // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Rezult;                                            // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_ItemUse_C>        K2Node_DynamicCast_AsBPI_Item_Use;                 // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_MS_IsInView_ReturnValue;                  // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_IsAiming;
+
+// Function BP_AI_Base.BP_AI_Base_C.GetCopyClass
+// 0x0030 (0x0030 - 0x0000)
+struct BP_AI_Base_C_GetCopyClass final
+{
+public:
+	class UStaticMeshComponent*                   CentorComponent;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 Class_0;                                           // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Scale;                                             // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                DefaultScale;                                      // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_GetCopyClass;
+
+// Function BP_AI_Base.BP_AI_Base_C.GetCentorPosition
+// 0x0050 (0x0050 - 0x0000)
+struct BP_AI_Base_C_GetCentorPosition final
+{
+public:
+	TArray<struct FVector>                        CentorPosition_0;                                  // 0x0000(0x0010)(Parm, OutParm)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FVector>                        K2Node_MakeArray_Array;                            // 0x0040(0x0010)(ReferenceParm)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_GetCentorPosition;
+
+// Function BP_AI_Base.BP_AI_Base_C.GetActorInfo
+// 0x00A0 (0x00A0 - 0x0000)
+struct BP_AI_Base_C_GetActorInfo final
+{
+public:
+	struct FTransform                             DefaultTransform_0;                                // 0x0000(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Not_In_Shot;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CentorPosition_0;                                  // 0x0068(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPenguin;                                         // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_ActorType                                ActorType;                                         // 0x0081(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NonInPhoto;                                        // 0x0082(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_83[0x5];                                       // 0x0083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_GetActorInfo;
+
+// Function BP_AI_Base.BP_AI_Base_C.RestartAI
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_RestartAI final
+{
+public:
+	class AAIController*                          CallFunc_GetAIController_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_RestartAI;
+
+// Function BP_AI_Base.BP_AI_Base_C.SoptAI
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_SoptAI final
+{
+public:
+	class AAIController*                          CallFunc_GetAIController_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_SoptAI;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnNotifyEnd_0618DEBD4A5929F3CACAEAA199FA94CD
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnNotifyEnd_0618DEBD4A5929F3CACAEAA199FA94CD final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnNotifyEnd_0618DEBD4A5929F3CACAEAA199FA94CD;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnNotifyBegin_0618DEBD4A5929F3CACAEAA199FA94CD
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnNotifyBegin_0618DEBD4A5929F3CACAEAA199FA94CD final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnNotifyBegin_0618DEBD4A5929F3CACAEAA199FA94CD;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnInterrupted_0618DEBD4A5929F3CACAEAA199FA94CD
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnInterrupted_0618DEBD4A5929F3CACAEAA199FA94CD final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnInterrupted_0618DEBD4A5929F3CACAEAA199FA94CD;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnBlendOut_0618DEBD4A5929F3CACAEAA199FA94CD
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnBlendOut_0618DEBD4A5929F3CACAEAA199FA94CD final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnBlendOut_0618DEBD4A5929F3CACAEAA199FA94CD;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnCompleted_0618DEBD4A5929F3CACAEAA199FA94CD
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnCompleted_0618DEBD4A5929F3CACAEAA199FA94CD final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnCompleted_0618DEBD4A5929F3CACAEAA199FA94CD;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnNotifyEnd_2220D7D146417860FF48A29DEC6C51FA
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnNotifyEnd_2220D7D146417860FF48A29DEC6C51FA final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnNotifyEnd_2220D7D146417860FF48A29DEC6C51FA;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnNotifyBegin_2220D7D146417860FF48A29DEC6C51FA
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnNotifyBegin_2220D7D146417860FF48A29DEC6C51FA final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnNotifyBegin_2220D7D146417860FF48A29DEC6C51FA;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnInterrupted_2220D7D146417860FF48A29DEC6C51FA
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnInterrupted_2220D7D146417860FF48A29DEC6C51FA final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnInterrupted_2220D7D146417860FF48A29DEC6C51FA;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnBlendOut_2220D7D146417860FF48A29DEC6C51FA
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnBlendOut_2220D7D146417860FF48A29DEC6C51FA final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnBlendOut_2220D7D146417860FF48A29DEC6C51FA;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnCompleted_2220D7D146417860FF48A29DEC6C51FA
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnCompleted_2220D7D146417860FF48A29DEC6C51FA final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnCompleted_2220D7D146417860FF48A29DEC6C51FA;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnNotifyEnd_7F7A9BDF48B2C2D2332A36937C7AF329
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnNotifyEnd_7F7A9BDF48B2C2D2332A36937C7AF329 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnNotifyEnd_7F7A9BDF48B2C2D2332A36937C7AF329;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnNotifyBegin_7F7A9BDF48B2C2D2332A36937C7AF329
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnNotifyBegin_7F7A9BDF48B2C2D2332A36937C7AF329 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnNotifyBegin_7F7A9BDF48B2C2D2332A36937C7AF329;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnInterrupted_7F7A9BDF48B2C2D2332A36937C7AF329
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnInterrupted_7F7A9BDF48B2C2D2332A36937C7AF329 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnInterrupted_7F7A9BDF48B2C2D2332A36937C7AF329;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnBlendOut_7F7A9BDF48B2C2D2332A36937C7AF329
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnBlendOut_7F7A9BDF48B2C2D2332A36937C7AF329 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnBlendOut_7F7A9BDF48B2C2D2332A36937C7AF329;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnCompleted_7F7A9BDF48B2C2D2332A36937C7AF329
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnCompleted_7F7A9BDF48B2C2D2332A36937C7AF329 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnCompleted_7F7A9BDF48B2C2D2332A36937C7AF329;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnNotifyEnd_D66390244B1D26971A66C6879A2B7B30
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnNotifyEnd_D66390244B1D26971A66C6879A2B7B30 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnNotifyEnd_D66390244B1D26971A66C6879A2B7B30;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnNotifyBegin_D66390244B1D26971A66C6879A2B7B30
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnNotifyBegin_D66390244B1D26971A66C6879A2B7B30 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnNotifyBegin_D66390244B1D26971A66C6879A2B7B30;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnInterrupted_D66390244B1D26971A66C6879A2B7B30
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnInterrupted_D66390244B1D26971A66C6879A2B7B30 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnInterrupted_D66390244B1D26971A66C6879A2B7B30;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnBlendOut_D66390244B1D26971A66C6879A2B7B30
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnBlendOut_D66390244B1D26971A66C6879A2B7B30 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnBlendOut_D66390244B1D26971A66C6879A2B7B30;
+
+// Function BP_AI_Base.BP_AI_Base_C.OnCompleted_D66390244B1D26971A66C6879A2B7B30
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AI_Base_C_OnCompleted_D66390244B1D26971A66C6879A2B7B30 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_OnCompleted_D66390244B1D26971A66C6879A2B7B30;
+
+// Function BP_AI_Base.BP_AI_Base_C.SetActorInfo
+// 0x0020 (0x0020 - 0x0000)
+struct BP_AI_Base_C_SetActorInfo final
+{
+public:
+	struct FVector                                ToPosition;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Comp;                                              // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_SetActorInfo;
+
+// Function BP_AI_Base.BP_AI_Base_C.InAngleOfView
+// 0x0018 (0x0018 - 0x0000)
+struct BP_AI_Base_C_InAngleOfView final
+{
+public:
+	bool                                          InState;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        DeltaTime;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_CameraMode                               CameraMode;                                        // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_InAngleOfView;
+
+// Function BP_AI_Base.BP_AI_Base_C.View In Out Function
+// 0x0004 (0x0004 - 0x0000)
+struct BP_AI_Base_C_View_In_Out_Function final
+{
+public:
+	int32                                         Stencil_Value;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_View_In_Out_Function;
+
+// Function BP_AI_Base.BP_AI_Base_C.Reverse
+// 0x0080 (0x0080 - 0x0000)
+struct BP_AI_Base_C_Reverse final
+{
+public:
+	struct FTransform                             NewPosition;                                       // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                HitNormal;                                         // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_Reverse;
+
+// Function BP_AI_Base.BP_AI_Base_C.SetStrafing
+// 0x0002 (0x0002 - 0x0000)
+struct BP_AI_Base_C_SetStrafing final
+{
+public:
+	bool                                          IsStrafing;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EN_StrafingDirection                          Direction;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_SetStrafing;
+
+// Function BP_AI_Base.BP_AI_Base_C.Set Difficulty
+// 0x0004 (0x0004 - 0x0000)
+struct BP_AI_Base_C_Set_Difficulty final
+{
+public:
+	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_AI_Base_C_Set_Difficulty;
 
 // Function BP_AI_Base.BP_AI_Base_C.ExecuteUbergraph_BP_AI_Base
 // 0x0CE0 (0x0CE0 - 0x0000)
@@ -212,360 +566,6 @@ public:
 	float                                         K2Node_VariableSet_MaxAcceleration_ImplicitCast;   // 0x0CD4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_AI_Base_C_ExecuteUbergraph_BP_AI_Base;
-
-// Function BP_AI_Base.BP_AI_Base_C.Set Difficulty
-// 0x0004 (0x0004 - 0x0000)
-struct BP_AI_Base_C_Set_Difficulty final
-{
-public:
-	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_Set_Difficulty;
-
-// Function BP_AI_Base.BP_AI_Base_C.SetStrafing
-// 0x0002 (0x0002 - 0x0000)
-struct BP_AI_Base_C_SetStrafing final
-{
-public:
-	bool                                          IsStrafing;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EN_StrafingDirection                          Direction;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_SetStrafing;
-
-// Function BP_AI_Base.BP_AI_Base_C.Reverse
-// 0x0080 (0x0080 - 0x0000)
-struct BP_AI_Base_C_Reverse final
-{
-public:
-	struct FTransform                             NewPosition;                                       // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                HitNormal;                                         // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_Reverse;
-
-// Function BP_AI_Base.BP_AI_Base_C.View In Out Function
-// 0x0004 (0x0004 - 0x0000)
-struct BP_AI_Base_C_View_In_Out_Function final
-{
-public:
-	int32                                         Stencil_Value;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_View_In_Out_Function;
-
-// Function BP_AI_Base.BP_AI_Base_C.InAngleOfView
-// 0x0018 (0x0018 - 0x0000)
-struct BP_AI_Base_C_InAngleOfView final
-{
-public:
-	bool                                          InState;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        DeltaTime;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_CameraMode                               CameraMode;                                        // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_InAngleOfView;
-
-// Function BP_AI_Base.BP_AI_Base_C.SetActorInfo
-// 0x0020 (0x0020 - 0x0000)
-struct BP_AI_Base_C_SetActorInfo final
-{
-public:
-	struct FVector                                ToPosition;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Comp;                                              // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_SetActorInfo;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnCompleted_D66390244B1D26971A66C6879A2B7B30
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnCompleted_D66390244B1D26971A66C6879A2B7B30 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnCompleted_D66390244B1D26971A66C6879A2B7B30;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnBlendOut_D66390244B1D26971A66C6879A2B7B30
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnBlendOut_D66390244B1D26971A66C6879A2B7B30 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnBlendOut_D66390244B1D26971A66C6879A2B7B30;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnInterrupted_D66390244B1D26971A66C6879A2B7B30
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnInterrupted_D66390244B1D26971A66C6879A2B7B30 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnInterrupted_D66390244B1D26971A66C6879A2B7B30;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnNotifyBegin_D66390244B1D26971A66C6879A2B7B30
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnNotifyBegin_D66390244B1D26971A66C6879A2B7B30 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnNotifyBegin_D66390244B1D26971A66C6879A2B7B30;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnNotifyEnd_D66390244B1D26971A66C6879A2B7B30
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnNotifyEnd_D66390244B1D26971A66C6879A2B7B30 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnNotifyEnd_D66390244B1D26971A66C6879A2B7B30;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnCompleted_7F7A9BDF48B2C2D2332A36937C7AF329
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnCompleted_7F7A9BDF48B2C2D2332A36937C7AF329 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnCompleted_7F7A9BDF48B2C2D2332A36937C7AF329;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnBlendOut_7F7A9BDF48B2C2D2332A36937C7AF329
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnBlendOut_7F7A9BDF48B2C2D2332A36937C7AF329 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnBlendOut_7F7A9BDF48B2C2D2332A36937C7AF329;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnInterrupted_7F7A9BDF48B2C2D2332A36937C7AF329
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnInterrupted_7F7A9BDF48B2C2D2332A36937C7AF329 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnInterrupted_7F7A9BDF48B2C2D2332A36937C7AF329;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnNotifyBegin_7F7A9BDF48B2C2D2332A36937C7AF329
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnNotifyBegin_7F7A9BDF48B2C2D2332A36937C7AF329 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnNotifyBegin_7F7A9BDF48B2C2D2332A36937C7AF329;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnNotifyEnd_7F7A9BDF48B2C2D2332A36937C7AF329
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnNotifyEnd_7F7A9BDF48B2C2D2332A36937C7AF329 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnNotifyEnd_7F7A9BDF48B2C2D2332A36937C7AF329;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnCompleted_2220D7D146417860FF48A29DEC6C51FA
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnCompleted_2220D7D146417860FF48A29DEC6C51FA final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnCompleted_2220D7D146417860FF48A29DEC6C51FA;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnBlendOut_2220D7D146417860FF48A29DEC6C51FA
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnBlendOut_2220D7D146417860FF48A29DEC6C51FA final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnBlendOut_2220D7D146417860FF48A29DEC6C51FA;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnInterrupted_2220D7D146417860FF48A29DEC6C51FA
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnInterrupted_2220D7D146417860FF48A29DEC6C51FA final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnInterrupted_2220D7D146417860FF48A29DEC6C51FA;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnNotifyBegin_2220D7D146417860FF48A29DEC6C51FA
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnNotifyBegin_2220D7D146417860FF48A29DEC6C51FA final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnNotifyBegin_2220D7D146417860FF48A29DEC6C51FA;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnNotifyEnd_2220D7D146417860FF48A29DEC6C51FA
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnNotifyEnd_2220D7D146417860FF48A29DEC6C51FA final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnNotifyEnd_2220D7D146417860FF48A29DEC6C51FA;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnCompleted_0618DEBD4A5929F3CACAEAA199FA94CD
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnCompleted_0618DEBD4A5929F3CACAEAA199FA94CD final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnCompleted_0618DEBD4A5929F3CACAEAA199FA94CD;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnBlendOut_0618DEBD4A5929F3CACAEAA199FA94CD
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnBlendOut_0618DEBD4A5929F3CACAEAA199FA94CD final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnBlendOut_0618DEBD4A5929F3CACAEAA199FA94CD;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnInterrupted_0618DEBD4A5929F3CACAEAA199FA94CD
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnInterrupted_0618DEBD4A5929F3CACAEAA199FA94CD final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnInterrupted_0618DEBD4A5929F3CACAEAA199FA94CD;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnNotifyBegin_0618DEBD4A5929F3CACAEAA199FA94CD
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnNotifyBegin_0618DEBD4A5929F3CACAEAA199FA94CD final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnNotifyBegin_0618DEBD4A5929F3CACAEAA199FA94CD;
-
-// Function BP_AI_Base.BP_AI_Base_C.OnNotifyEnd_0618DEBD4A5929F3CACAEAA199FA94CD
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_OnNotifyEnd_0618DEBD4A5929F3CACAEAA199FA94CD final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_OnNotifyEnd_0618DEBD4A5929F3CACAEAA199FA94CD;
-
-// Function BP_AI_Base.BP_AI_Base_C.SoptAI
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_SoptAI final
-{
-public:
-	class AAIController*                          CallFunc_GetAIController_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_SoptAI;
-
-// Function BP_AI_Base.BP_AI_Base_C.RestartAI
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AI_Base_C_RestartAI final
-{
-public:
-	class AAIController*                          CallFunc_GetAIController_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_RestartAI;
-
-// Function BP_AI_Base.BP_AI_Base_C.GetActorInfo
-// 0x00A0 (0x00A0 - 0x0000)
-struct BP_AI_Base_C_GetActorInfo final
-{
-public:
-	struct FTransform                             DefaultTransform;                                  // 0x0000(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Not_In_Shot;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CentorPosition;                                    // 0x0068(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPenguin;                                         // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENUM_ActorType                                ActorType;                                         // 0x0081(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NonInPhoto;                                        // 0x0082(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_83[0x5];                                       // 0x0083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_GetActorInfo;
-
-// Function BP_AI_Base.BP_AI_Base_C.GetCentorPosition
-// 0x0050 (0x0050 - 0x0000)
-struct BP_AI_Base_C_GetCentorPosition final
-{
-public:
-	TArray<struct FVector>                        CentorPosition;                                    // 0x0000(0x0010)(Parm, OutParm)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FVector>                        K2Node_MakeArray_Array;                            // 0x0040(0x0010)(ReferenceParm)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_GetCentorPosition;
-
-// Function BP_AI_Base.BP_AI_Base_C.GetCopyClass
-// 0x0030 (0x0030 - 0x0000)
-struct BP_AI_Base_C_GetCopyClass final
-{
-public:
-	class UStaticMeshComponent*                   CentorComponent;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 Class_0;                                           // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Scale;                                             // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                DefaultScale;                                      // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_GetCopyClass;
-
-// Function BP_AI_Base.BP_AI_Base_C.IsAiming
-// 0x0030 (0x0030 - 0x0000)
-struct BP_AI_Base_C_IsAiming final
-{
-public:
-	bool                                          IsAiming;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         SuccessCount;                                      // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Rezult;                                            // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_ItemUse_C>        K2Node_DynamicCast_AsBPI_Item_Use;                 // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_MS_IsInView_ReturnValue;                  // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_IsAiming;
-
-// Function BP_AI_Base.BP_AI_Base_C.GetAvoidanceRotation
-// 0x00B0 (0x00B0 - 0x0000)
-struct BP_AI_Base_C_GetAvoidanceRotation final
-{
-public:
-	struct FRotator                               Rotation;                                          // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Conv_VectorToVector2D_ReturnValue;        // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_Vector2DToVector_ReturnValue;        // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Conv_VectorToVector2D_ReturnValue_1;      // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_Vector2DToVector_ReturnValue_1;      // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_FindLookAtRotation_ReturnValue;           // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_GetAvoidanceRotation;
-
-// Function BP_AI_Base.BP_AI_Base_C.IsBattleMode
-// 0x0001 (0x0001 - 0x0000)
-struct BP_AI_Base_C_IsBattleMode final
-{
-public:
-	bool                                          Bool;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_IsBattleMode;
-
-// Function BP_AI_Base.BP_AI_Base_C.IsAttackNow
-// 0x0001 (0x0001 - 0x0000)
-struct BP_AI_Base_C_IsAttackNow final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_AI_Base_C_IsAttackNow;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

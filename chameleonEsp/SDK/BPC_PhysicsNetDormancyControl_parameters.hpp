@@ -16,26 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_PhysicsNetDormancyControl.BPC_PhysicsNetDormancyControl_C.Wake
-// 0x0010 (0x0010 - 0x0000)
-struct BPC_PhysicsNetDormancyControl_C_Wake final
-{
-public:
-	class UPrimitiveComponent*                    WakingComponent;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   BoneName;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PhysicsNetDormancyControl_C_Wake;
-
-// Function BPC_PhysicsNetDormancyControl.BPC_PhysicsNetDormancyControl_C.Sleep
-// 0x0010 (0x0010 - 0x0000)
-struct BPC_PhysicsNetDormancyControl_C_Sleep final
-{
-public:
-	class UPrimitiveComponent*                    SleepingComponent;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   BoneName;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_PhysicsNetDormancyControl_C_Sleep;
-
 // Function BPC_PhysicsNetDormancyControl.BPC_PhysicsNetDormancyControl_C.ExecuteUbergraph_BPC_PhysicsNetDormancyControl
 // 0x0098 (0x0098 - 0x0000)
 struct BPC_PhysicsNetDormancyControl_C_ExecuteUbergraph_BPC_PhysicsNetDormancyControl final
@@ -67,6 +47,26 @@ public:
 	TDelegate<void(class UPrimitiveComponent* WakingComponent, class FName BoneName)> K2Node_CreateDelegate_OutputDelegate_3; // 0x0088(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_PhysicsNetDormancyControl_C_ExecuteUbergraph_BPC_PhysicsNetDormancyControl;
+
+// Function BPC_PhysicsNetDormancyControl.BPC_PhysicsNetDormancyControl_C.Sleep
+// 0x0010 (0x0010 - 0x0000)
+struct BPC_PhysicsNetDormancyControl_C_Sleep final
+{
+public:
+	class UPrimitiveComponent*                    SleepingComponent;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   BoneName;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PhysicsNetDormancyControl_C_Sleep;
+
+// Function BPC_PhysicsNetDormancyControl.BPC_PhysicsNetDormancyControl_C.Wake
+// 0x0010 (0x0010 - 0x0000)
+struct BPC_PhysicsNetDormancyControl_C_Wake final
+{
+public:
+	class UPrimitiveComponent*                    WakingComponent;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   BoneName;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_PhysicsNetDormancyControl_C_Wake;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

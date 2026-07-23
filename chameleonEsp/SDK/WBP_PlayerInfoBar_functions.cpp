@@ -16,43 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_PlayerInfoBar.WBP_PlayerInfoBar_C.SetValue
+// Function WBP_PlayerInfoBar.WBP_PlayerInfoBar_C.Add Event
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PlayerInfoBar_C::SetValue(double Value)
+void UWBP_PlayerInfoBar_C::Add_Event()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PlayerInfoBar_C", "SetValue");
+		Func = Class->GetFunction("WBP_PlayerInfoBar_C", "Add Event");
 
-	Params::WBP_PlayerInfoBar_C_SetValue Parms{};
-
-	Parms.Value = Value;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_PlayerInfoBar.WBP_PlayerInfoBar_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_PlayerInfoBar_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PlayerInfoBar_C", "PreConstruct");
-
-	Params::WBP_PlayerInfoBar_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -76,17 +50,43 @@ void UWBP_PlayerInfoBar_C::ExecuteUbergraph_WBP_PlayerInfoBar(int32 EntryPoint)
 }
 
 
-// Function WBP_PlayerInfoBar.WBP_PlayerInfoBar_C.Add Event
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_PlayerInfoBar.WBP_PlayerInfoBar_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PlayerInfoBar_C::Add_Event()
+void UWBP_PlayerInfoBar_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PlayerInfoBar_C", "Add Event");
+		Func = Class->GetFunction("WBP_PlayerInfoBar_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_PlayerInfoBar_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_PlayerInfoBar.WBP_PlayerInfoBar_C.SetValue
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_PlayerInfoBar_C::SetValue(double Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PlayerInfoBar_C", "SetValue");
+
+	Params::WBP_PlayerInfoBar_C_SetValue Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

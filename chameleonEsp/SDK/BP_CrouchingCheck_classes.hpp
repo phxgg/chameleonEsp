@@ -24,11 +24,11 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0040(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void Trigger(const struct FSimulationTickParams& Params_Trigger);
-	void K2_OnRegistered();
 	void ExecuteUbergraph_BP_CrouchingCheck(int32 EntryPoint);
+	void K2_OnRegistered();
+	void Trigger(const struct FSimulationTickParams& Params_0);
 
-	struct FTransitionEvalResult Evaluate(const struct FSimulationTickParams& Params_Evaluate) const;
+	struct FTransitionEvalResult Evaluate(const struct FSimulationTickParams& Params_0) const;
 
 public:
 	static class UClass* StaticClass()

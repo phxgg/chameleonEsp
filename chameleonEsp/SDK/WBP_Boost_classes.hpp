@@ -26,9 +26,9 @@ public:
 	class UWidgetAnimation*                       Boost;                                             // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_Boost(int32 EntryPoint);
 	void EndEvent();
+	void ExecuteUbergraph_WBP_Boost(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()

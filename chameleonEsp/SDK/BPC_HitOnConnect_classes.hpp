@@ -25,13 +25,13 @@ public:
 	class ABP_FirstPersonCharacter_LINK_C*        OwnerCharacter;                                    // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void SleepEvent(class UPrimitiveComponent* SleepingComponent, class FName BoneName);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay);
-	void ReceiveBeginPlay();
-	void IsCanConnect(class UPrimitiveComponent* HitPrimitive, class ABP_FirstPersonGameMode_Online_LINK_C* GameModeLINK, bool* Rezult);
-	void HitEvent(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
-	void ExecuteUbergraph_BPC_HitOnConnect(int32 EntryPoint);
 	void DestroySafe();
+	void ExecuteUbergraph_BPC_HitOnConnect(int32 EntryPoint);
+	void HitEvent(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+	void IsCanConnect(class UPrimitiveComponent* HitPrimitive, class ABP_FirstPersonGameMode_Online_LINK_C* GameModeLINK, bool* Rezult);
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void SleepEvent(class UPrimitiveComponent* SleepingComponent, class FName BoneName);
 
 public:
 	static class UClass* StaticClass()

@@ -16,21 +16,55 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_Bar.WBP_Bar_C.SetSubBarValue
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_Bar.WBP_Bar_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_Bar_C::SetSubBarValue(double Value)
+void UWBP_Bar_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Bar_C", "SetSubBarValue");
+		Func = Class->GetFunction("WBP_Bar_C", "Construct");
 
-	Params::WBP_Bar_C_SetSubBarValue Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Value = Value;
+
+// Function WBP_Bar.WBP_Bar_C.ExecuteUbergraph_WBP_Bar
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Bar_C::ExecuteUbergraph_WBP_Bar(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Bar_C", "ExecuteUbergraph_WBP_Bar");
+
+	Params::WBP_Bar_C_ExecuteUbergraph_WBP_Bar Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Bar.WBP_Bar_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Bar_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Bar_C", "PreConstruct");
+
+	Params::WBP_Bar_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -56,57 +90,23 @@ void UWBP_Bar_C::SetMainBarValue(double Value)
 }
 
 
-// Function WBP_Bar.WBP_Bar_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_Bar.WBP_Bar_C.SetSubBarValue
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Bar_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_Bar_C::SetSubBarValue(double Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Bar_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_Bar_C", "SetSubBarValue");
 
-	Params::WBP_Bar_C_PreConstruct Parms{};
+	Params::WBP_Bar_C_SetSubBarValue Parms{};
 
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
+	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Bar.WBP_Bar_C.ExecuteUbergraph_WBP_Bar
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Bar_C::ExecuteUbergraph_WBP_Bar(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Bar_C", "ExecuteUbergraph_WBP_Bar");
-
-	Params::WBP_Bar_C_ExecuteUbergraph_WBP_Bar Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Bar.WBP_Bar_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_Bar_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Bar_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

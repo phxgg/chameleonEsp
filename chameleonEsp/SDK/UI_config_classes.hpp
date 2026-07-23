@@ -27,8 +27,8 @@ public:
 	class UUI_configItem_C*                       UI_configItem;                                     // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void Show_config();
 	void ExecuteUbergraph_UI_config(int32 EntryPoint);
+	void Show_config();
 
 public:
 	static class UClass* StaticClass()

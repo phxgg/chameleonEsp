@@ -16,26 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_VoiceChatObject.WBP_VoiceChatObject_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_VoiceChatObject_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatObject_C", "PreConstruct");
-
-	Params::WBP_VoiceChatObject_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_VoiceChatObject.WBP_VoiceChatObject_C.ExecuteUbergraph_WBP_VoiceChatObject
 // (Final, UbergraphFunction)
 // Parameters:
@@ -51,6 +31,26 @@ void UWBP_VoiceChatObject_C::ExecuteUbergraph_WBP_VoiceChatObject(int32 EntryPoi
 	Params::WBP_VoiceChatObject_C_ExecuteUbergraph_WBP_VoiceChatObject Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_VoiceChatObject.WBP_VoiceChatObject_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_VoiceChatObject_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_VoiceChatObject_C", "PreConstruct");
+
+	Params::WBP_VoiceChatObject_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

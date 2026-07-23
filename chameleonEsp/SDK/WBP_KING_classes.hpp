@@ -28,9 +28,9 @@ public:
 	class FString                                 TargetName;                                        // 0x0360(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExecuteUbergraph_WBP_KING(int32 EntryPoint);
 	void AnimationFinish();
+	void ExecuteUbergraph_WBP_KING(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()

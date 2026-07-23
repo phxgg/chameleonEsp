@@ -16,14 +16,16 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_CameraMoveAnimation.BPC_CameraMoveAnimation_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_CameraMoveAnimation_C_ReceiveTick final
+// Function BPC_CameraMoveAnimation.BPC_CameraMoveAnimation_C.AnimationStart
+// 0x0018 (0x0018 - 0x0000)
+struct BPC_CameraMoveAnimation_C_AnimationStart final
 {
 public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Front_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Right_0;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Time;                                              // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPC_CameraMoveAnimation_C_ReceiveTick;
+DUMPER7_ASSERTS_BPC_CameraMoveAnimation_C_AnimationStart;
 
 // Function BPC_CameraMoveAnimation.BPC_CameraMoveAnimation_C.ExecuteUbergraph_BPC_CameraMoveAnimation
 // 0x0100 (0x0100 - 0x0000)
@@ -70,16 +72,14 @@ public:
 };
 DUMPER7_ASSERTS_BPC_CameraMoveAnimation_C_ExecuteUbergraph_BPC_CameraMoveAnimation;
 
-// Function BPC_CameraMoveAnimation.BPC_CameraMoveAnimation_C.AnimationStart
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_CameraMoveAnimation_C_AnimationStart final
+// Function BPC_CameraMoveAnimation.BPC_CameraMoveAnimation_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_CameraMoveAnimation_C_ReceiveTick final
 {
 public:
-	double                                        Front;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Right;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Time;                                              // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPC_CameraMoveAnimation_C_AnimationStart;
+DUMPER7_ASSERTS_BPC_CameraMoveAnimation_C_ReceiveTick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

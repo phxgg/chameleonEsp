@@ -16,46 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_LINK_StaminaBar.WBP_LINK_StaminaBar_C.SetBarSize
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  NewValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_LINK_StaminaBar_C::SetBarSize(double NewValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LINK_StaminaBar_C", "SetBarSize");
-
-	Params::WBP_LINK_StaminaBar_C_SetBarSize Parms{};
-
-	Parms.NewValue = NewValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_LINK_StaminaBar.WBP_LINK_StaminaBar_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_LINK_StaminaBar_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_LINK_StaminaBar_C", "PreConstruct");
-
-	Params::WBP_LINK_StaminaBar_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_LINK_StaminaBar.WBP_LINK_StaminaBar_C.ExecuteUbergraph_WBP_LINK_StaminaBar
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -71,6 +31,46 @@ void UWBP_LINK_StaminaBar_C::ExecuteUbergraph_WBP_LINK_StaminaBar(int32 EntryPoi
 	Params::WBP_LINK_StaminaBar_C_ExecuteUbergraph_WBP_LINK_StaminaBar Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_LINK_StaminaBar.WBP_LINK_StaminaBar_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_LINK_StaminaBar_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_LINK_StaminaBar_C", "PreConstruct");
+
+	Params::WBP_LINK_StaminaBar_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_LINK_StaminaBar.WBP_LINK_StaminaBar_C.SetBarSize
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  NewValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_LINK_StaminaBar_C::SetBarSize(double NewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_LINK_StaminaBar_C", "SetBarSize");
+
+	Params::WBP_LINK_StaminaBar_C_SetBarSize Parms{};
+
+	Parms.NewValue = NewValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

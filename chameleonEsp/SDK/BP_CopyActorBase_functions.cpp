@@ -16,71 +16,200 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_CopyActorBase.BP_CopyActorBase_C.ExecuteUbergraph_BP_CopyActorBase
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_CopyActorBase.BP_CopyActorBase_C.DestroyVAT
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_CopyActorBase_C::ExecuteUbergraph_BP_CopyActorBase(int32 EntryPoint)
+void ABP_CopyActorBase_C::DestroyVAT()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CopyActorBase_C", "ExecuteUbergraph_BP_CopyActorBase");
+		Func = Class->GetFunction("BP_CopyActorBase_C", "DestroyVAT");
 
-	Params::BP_CopyActorBase_C_ExecuteUbergraph_BP_CopyActorBase Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function BP_CopyActorBase.BP_CopyActorBase_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_CopyActorBase_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CopyActorBase_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CopyActorBase.BP_CopyActorBase_C.GetParryState
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   State                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CopyActorBase_C::GetParryState(bool* State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CopyActorBase_C", "GetParryState");
+
+	Params::BP_CopyActorBase_C_GetParryState Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (State != nullptr)
+		*State = Parms.State;
+}
+
+
+// Function BP_CopyActorBase.BP_CopyActorBase_C.Damage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FFinishFilter*                   Finish                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CopyActorBase_C::Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CopyActorBase_C", "Damage");
+
+	Params::BP_CopyActorBase_C_Damage Parms{};
+
+	Parms.DamageValue = DamageValue;
+	Parms.TeamIndex = TeamIndex;
+	Parms.DamageType = DamageType;
+	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
+	Parms.UnAvoidable = UnAvoidable;
+	Parms.DamageName = DamageName;
+	Parms.SourceActor = SourceActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Finish != nullptr)
+		*Finish = std::move(Parms.Finish);
+}
+
+
+// Function BP_CopyActorBase.BP_CopyActorBase_C.GetCopyClass
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UStaticMeshComponent*             CentorComponent                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UClass**                          Class_0                                                (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double*                                 Scale                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         DefaultScale                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CopyActorBase_C::GetCopyClass(class UStaticMeshComponent* CentorComponent, class UClass** Class_0, double* Scale, struct FVector* DefaultScale)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CopyActorBase_C", "GetCopyClass");
+
+	Params::BP_CopyActorBase_C_GetCopyClass Parms{};
+
+	Parms.CentorComponent = CentorComponent;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Class_0 != nullptr)
+		*Class_0 = Parms.Class_0;
+
+	if (Scale != nullptr)
+		*Scale = Parms.Scale;
+
+	if (DefaultScale != nullptr)
+		*DefaultScale = std::move(Parms.DefaultScale);
+}
+
+
+// Function BP_CopyActorBase.BP_CopyActorBase_C.UserConstructionScript
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_CopyActorBase_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CopyActorBase_C", "UserConstructionScript");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CopyActorBase.BP_CopyActorBase_C.DeleteVATAnim__FinishedFunc
+// (BlueprintEvent)
+
+void ABP_CopyActorBase_C::DeleteVATAnim__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CopyActorBase_C", "DeleteVATAnim__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CopyActorBase.BP_CopyActorBase_C.DeleteVATAnim__UpdateFunc
+// (BlueprintEvent)
+
+void ABP_CopyActorBase_C::DeleteVATAnim__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CopyActorBase_C", "DeleteVATAnim__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CopyActorBase.BP_CopyActorBase_C.StanDamage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EN_StanType                             StanType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CopyActorBase_C::StanDamage(EN_StanType StanType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CopyActorBase_C", "StanDamage");
+
+	Params::BP_CopyActorBase_C_StanDamage Parms{};
+
+	Parms.StanType = StanType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_CopyActorBase.BP_CopyActorBase_C.Fix
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_CopyActorBase_C::Fix()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CopyActorBase_C", "Fix");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CopyActorBase.BP_CopyActorBase_C.Delete
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_CopyActorBase_C::Delete()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CopyActorBase_C", "Delete");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CopyActorBase.BP_CopyActorBase_C.Reverse
+// Function BP_CopyActorBase.BP_CopyActorBase_C.StaminaDamage
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FTransform&                NewPosition_Reverse                                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   HitNormal_Reverse                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CopyActorBase_C::Reverse(const struct FTransform& NewPosition_Reverse, const struct FVector& HitNormal_Reverse)
+void ABP_CopyActorBase_C::StaminaDamage(double Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CopyActorBase_C", "Reverse");
+		Func = Class->GetFunction("BP_CopyActorBase_C", "StaminaDamage");
 
-	Params::BP_CopyActorBase_C_Reverse Parms{};
+	Params::BP_CopyActorBase_C_StaminaDamage Parms{};
 
-	Parms.NewPosition_Reverse = std::move(NewPosition_Reverse);
-	Parms.HitNormal_Reverse = std::move(HitNormal_Reverse);
+	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -122,202 +251,73 @@ void ABP_CopyActorBase_C::DamageToPlayerController(class AActor* TargetActor, do
 }
 
 
-// Function BP_CopyActorBase.BP_CopyActorBase_C.StaminaDamage
+// Function BP_CopyActorBase.BP_CopyActorBase_C.Reverse
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FTransform&                NewPosition                                            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   HitNormal                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CopyActorBase_C::StaminaDamage(double Value)
+void ABP_CopyActorBase_C::Reverse(const struct FTransform& NewPosition, const struct FVector& HitNormal)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CopyActorBase_C", "StaminaDamage");
+		Func = Class->GetFunction("BP_CopyActorBase_C", "Reverse");
 
-	Params::BP_CopyActorBase_C_StaminaDamage Parms{};
+	Params::BP_CopyActorBase_C_Reverse Parms{};
 
-	Parms.Value = Value;
+	Parms.NewPosition = std::move(NewPosition);
+	Parms.HitNormal = std::move(HitNormal);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_CopyActorBase.BP_CopyActorBase_C.StanDamage
+// Function BP_CopyActorBase.BP_CopyActorBase_C.Delete
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EN_StanType                             StanType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CopyActorBase_C::StanDamage(EN_StanType StanType)
+void ABP_CopyActorBase_C::Delete()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CopyActorBase_C", "StanDamage");
+		Func = Class->GetFunction("BP_CopyActorBase_C", "Delete");
 
-	Params::BP_CopyActorBase_C_StanDamage Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.StanType = StanType;
+
+// Function BP_CopyActorBase.BP_CopyActorBase_C.Fix
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_CopyActorBase_C::Fix()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CopyActorBase_C", "Fix");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CopyActorBase.BP_CopyActorBase_C.ExecuteUbergraph_BP_CopyActorBase
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CopyActorBase_C::ExecuteUbergraph_BP_CopyActorBase(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CopyActorBase_C", "ExecuteUbergraph_BP_CopyActorBase");
+
+	Params::BP_CopyActorBase_C_ExecuteUbergraph_BP_CopyActorBase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CopyActorBase.BP_CopyActorBase_C.DeleteVATAnim__UpdateFunc
-// (BlueprintEvent)
-
-void ABP_CopyActorBase_C::DeleteVATAnim__UpdateFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CopyActorBase_C", "DeleteVATAnim__UpdateFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CopyActorBase.BP_CopyActorBase_C.DeleteVATAnim__FinishedFunc
-// (BlueprintEvent)
-
-void ABP_CopyActorBase_C::DeleteVATAnim__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CopyActorBase_C", "DeleteVATAnim__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CopyActorBase.BP_CopyActorBase_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_CopyActorBase_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CopyActorBase_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CopyActorBase.BP_CopyActorBase_C.GetCopyClass
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UStaticMeshComponent*             CentorComponent_GetCopyClass                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UClass**                          Class_GetCopyClass_0                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double*                                 Scale_GetCopyClass                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector*                         DefaultScale_GetCopyClass                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CopyActorBase_C::GetCopyClass(class UStaticMeshComponent* CentorComponent_GetCopyClass, class UClass** Class_GetCopyClass_0, double* Scale_GetCopyClass, struct FVector* DefaultScale_GetCopyClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CopyActorBase_C", "GetCopyClass");
-
-	Params::BP_CopyActorBase_C_GetCopyClass Parms{};
-
-	Parms.CentorComponent_GetCopyClass = CentorComponent_GetCopyClass;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Class_GetCopyClass_0 != nullptr)
-		*Class_GetCopyClass_0 = Parms.Class_GetCopyClass_0;
-
-	if (Scale_GetCopyClass != nullptr)
-		*Scale_GetCopyClass = Parms.Scale_GetCopyClass;
-
-	if (DefaultScale_GetCopyClass != nullptr)
-		*DefaultScale_GetCopyClass = std::move(Parms.DefaultScale_GetCopyClass);
-}
-
-
-// Function BP_CopyActorBase.BP_CopyActorBase_C.Damage
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FFinishFilter*                   Finish                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CopyActorBase_C::Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CopyActorBase_C", "Damage");
-
-	Params::BP_CopyActorBase_C_Damage Parms{};
-
-	Parms.DamageValue = DamageValue;
-	Parms.TeamIndex = TeamIndex;
-	Parms.DamageType = DamageType;
-	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
-	Parms.UnAvoidable = UnAvoidable;
-	Parms.DamageName = DamageName;
-	Parms.SourceActor = SourceActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Finish != nullptr)
-		*Finish = std::move(Parms.Finish);
-}
-
-
-// Function BP_CopyActorBase.BP_CopyActorBase_C.GetParryState
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   State                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CopyActorBase_C::GetParryState(bool* State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CopyActorBase_C", "GetParryState");
-
-	Params::BP_CopyActorBase_C_GetParryState Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (State != nullptr)
-		*State = Parms.State;
-}
-
-
-// Function BP_CopyActorBase.BP_CopyActorBase_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_CopyActorBase_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CopyActorBase_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CopyActorBase.BP_CopyActorBase_C.DestroyVAT
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_CopyActorBase_C::DestroyVAT()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CopyActorBase_C", "DestroyVAT");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

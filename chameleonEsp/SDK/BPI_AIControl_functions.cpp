@@ -16,60 +16,49 @@
 
 SDK_NAMESPACE_START
 
-// Function BPI_AIControl.BPI_AIControl_C.SetStrafing
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsStrafing                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EN_StrafingDirection                    Direction                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_AIControl_C::SetStrafing(bool IsStrafing, EN_StrafingDirection Direction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AIControl_C", "SetStrafing");
-
-	Params::BPI_AIControl_C_SetStrafing Parms{};
-
-	Parms.IsStrafing = IsStrafing;
-	Parms.Direction = Direction;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPI_AIControl.BPI_AIControl_C.PlayAvoidanceAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_AIControl_C::PlayAvoidanceAnimation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AIControl_C", "PlayAvoidanceAnimation");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_AIControl.BPI_AIControl_C.IsBattleMode
+// Function BPI_AIControl.BPI_AIControl_C.GetAvoidanceRotation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool*                                   Bool                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FRotator*                        Rotation                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void IBPI_AIControl_C::IsBattleMode(bool* Bool)
+void IBPI_AIControl_C::GetAvoidanceRotation(struct FRotator* Rotation)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AIControl_C", "IsBattleMode");
+		Func = AsUObject()->Class->GetFunction("BPI_AIControl_C", "GetAvoidanceRotation");
 
-	Params::BPI_AIControl_C_IsBattleMode Parms{};
+	Params::BPI_AIControl_C_GetAvoidanceRotation Parms{};
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 
-	if (Bool != nullptr)
-		*Bool = Parms.Bool;
+	if (Rotation != nullptr)
+		*Rotation = std::move(Parms.Rotation);
+}
+
+
+// Function BPI_AIControl.BPI_AIControl_C.IsAiming
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   IsAiming_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  SuccessCount                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_AIControl_C::IsAiming(bool* IsAiming_0, int32* SuccessCount)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AIControl_C", "IsAiming");
+
+	Params::BPI_AIControl_C_IsAiming Parms{};
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (IsAiming_0 != nullptr)
+		*IsAiming_0 = Parms.IsAiming_0;
+
+	if (SuccessCount != nullptr)
+		*SuccessCount = Parms.SuccessCount;
 }
 
 
@@ -94,49 +83,60 @@ void IBPI_AIControl_C::IsAttackNow(bool* State)
 }
 
 
-// Function BPI_AIControl.BPI_AIControl_C.IsAiming
+// Function BPI_AIControl.BPI_AIControl_C.IsBattleMode
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool*                                   IsAiming                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32*                                  SuccessCount                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Bool                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_AIControl_C::IsAiming(bool* IsAiming, int32* SuccessCount)
+void IBPI_AIControl_C::IsBattleMode(bool* Bool)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AIControl_C", "IsAiming");
+		Func = AsUObject()->Class->GetFunction("BPI_AIControl_C", "IsBattleMode");
 
-	Params::BPI_AIControl_C_IsAiming Parms{};
+	Params::BPI_AIControl_C_IsBattleMode Parms{};
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 
-	if (IsAiming != nullptr)
-		*IsAiming = Parms.IsAiming;
-
-	if (SuccessCount != nullptr)
-		*SuccessCount = Parms.SuccessCount;
+	if (Bool != nullptr)
+		*Bool = Parms.Bool;
 }
 
 
-// Function BPI_AIControl.BPI_AIControl_C.GetAvoidanceRotation
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FRotator*                        Rotation                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function BPI_AIControl.BPI_AIControl_C.PlayAvoidanceAnimation
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void IBPI_AIControl_C::GetAvoidanceRotation(struct FRotator* Rotation)
+void IBPI_AIControl_C::PlayAvoidanceAnimation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AIControl_C", "GetAvoidanceRotation");
+		Func = AsUObject()->Class->GetFunction("BPI_AIControl_C", "PlayAvoidanceAnimation");
 
-	Params::BPI_AIControl_C_GetAvoidanceRotation Parms{};
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_AIControl.BPI_AIControl_C.SetStrafing
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsStrafing                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EN_StrafingDirection                    Direction                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_AIControl_C::SetStrafing(bool IsStrafing, EN_StrafingDirection Direction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AIControl_C", "SetStrafing");
+
+	Params::BPI_AIControl_C_SetStrafing Parms{};
+
+	Parms.IsStrafing = IsStrafing;
+	Parms.Direction = Direction;
 
 	AsUObject()->ProcessEvent(Func, &Parms);
-
-	if (Rotation != nullptr)
-		*Rotation = std::move(Parms.Rotation);
 }
 
 

@@ -16,140 +16,39 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.ToPurple
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_GlueCrystal_Purple_C::ToPurple()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "ToPurple");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.StanDamage
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EN_StanType                             StanType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GlueCrystal_Purple_C::StanDamage(EN_StanType StanType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "StanDamage");
-
-	Params::BP_GlueCrystal_Purple_C_StanDamage Parms{};
-
-	Parms.StanType = StanType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.StaminaDamage
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GlueCrystal_Purple_C::StaminaDamage(double Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "StaminaDamage");
-
-	Params::BP_GlueCrystal_Purple_C_StaminaDamage Parms{};
-
-	Parms.Value = Value;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void ABP_GlueCrystal_Purple_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_GlueCrystal_Purple_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.PurpleChange
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_GlueCrystal_Purple_C::PurpleChange()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "PurpleChange");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.GetParryState
+// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.Damage
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool*                                   State                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FFinishFilter*                   Finish                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GlueCrystal_Purple_C::GetParryState(bool* State)
+void ABP_GlueCrystal_Purple_C::Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "GetParryState");
+		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "Damage");
 
-	Params::BP_GlueCrystal_Purple_C_GetParryState Parms{};
+	Params::BP_GlueCrystal_Purple_C_Damage Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (State != nullptr)
-		*State = Parms.State;
-}
-
-
-// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.ExecuteUbergraph_BP_GlueCrystal_Purple
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_GlueCrystal_Purple_C::ExecuteUbergraph_BP_GlueCrystal_Purple(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "ExecuteUbergraph_BP_GlueCrystal_Purple");
-
-	Params::BP_GlueCrystal_Purple_C_ExecuteUbergraph_BP_GlueCrystal_Purple Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.DamageValue = DamageValue;
+	Parms.TeamIndex = TeamIndex;
+	Parms.DamageType = DamageType;
+	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
+	Parms.UnAvoidable = UnAvoidable;
+	Parms.DamageName = DamageName;
+	Parms.SourceActor = SourceActor;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Finish != nullptr)
+		*Finish = std::move(Parms.Finish);
 }
 
 
@@ -189,39 +88,140 @@ void ABP_GlueCrystal_Purple_C::DamageToPlayerController(class AActor* TargetActo
 }
 
 
-// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.Damage
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.ExecuteUbergraph_BP_GlueCrystal_Purple
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FFinishFilter*                   Finish                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_GlueCrystal_Purple_C::Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish)
+void ABP_GlueCrystal_Purple_C::ExecuteUbergraph_BP_GlueCrystal_Purple(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "Damage");
+		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "ExecuteUbergraph_BP_GlueCrystal_Purple");
 
-	Params::BP_GlueCrystal_Purple_C_Damage Parms{};
+	Params::BP_GlueCrystal_Purple_C_ExecuteUbergraph_BP_GlueCrystal_Purple Parms{};
 
-	Parms.DamageValue = DamageValue;
-	Parms.TeamIndex = TeamIndex;
-	Parms.DamageType = DamageType;
-	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
-	Parms.UnAvoidable = UnAvoidable;
-	Parms.DamageName = DamageName;
-	Parms.SourceActor = SourceActor;
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.GetParryState
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   State                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GlueCrystal_Purple_C::GetParryState(bool* State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "GetParryState");
+
+	Params::BP_GlueCrystal_Purple_C_GetParryState Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Finish != nullptr)
-		*Finish = std::move(Parms.Finish);
+	if (State != nullptr)
+		*State = Parms.State;
+}
+
+
+// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.PurpleChange
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void ABP_GlueCrystal_Purple_C::PurpleChange()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "PurpleChange");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_GlueCrystal_Purple_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_GlueCrystal_Purple_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.StaminaDamage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GlueCrystal_Purple_C::StaminaDamage(double Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "StaminaDamage");
+
+	Params::BP_GlueCrystal_Purple_C_StaminaDamage Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.StanDamage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EN_StanType                             StanType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GlueCrystal_Purple_C::StanDamage(EN_StanType StanType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "StanDamage");
+
+	Params::BP_GlueCrystal_Purple_C_StanDamage Parms{};
+
+	Parms.StanType = StanType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_GlueCrystal_Purple.BP_GlueCrystal_Purple_C.ToPurple
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_GlueCrystal_Purple_C::ToPurple()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GlueCrystal_Purple_C", "ToPurple");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

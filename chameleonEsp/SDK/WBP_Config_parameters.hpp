@@ -16,37 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_Config.WBP_Config_C.Show config
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Config_C_Show_config final
-{
-public:
-	class UWidget*                                BeforeWidget;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Config_C_Show_config;
-
-// Function WBP_Config.WBP_Config_C.InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_Config_C_InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Config_C_InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0;
-
-// Function WBP_Config.WBP_Config_C.GetInitialFocusComponent
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_Config_C_GetInitialFocusComponent final
-{
-public:
-	class UUINavComponent*                        ReturnValue_GetInitialFocusComponent;              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUINavComponent*                        CallFunc_GetInitialFocusComponent_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Config_C_GetInitialFocusComponent;
-
 // Function WBP_Config.WBP_Config_C.ExecuteUbergraph_WBP_Config
 // 0x02B0 (0x02B0 - 0x0000)
 struct WBP_Config_C_ExecuteUbergraph_WBP_Config final
@@ -155,6 +124,37 @@ public:
 	float                                         CallFunc_SetSoundMixClassOverride_Volume_ImplicitCast_2; // 0x02AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Config_C_ExecuteUbergraph_WBP_Config;
+
+// Function WBP_Config.WBP_Config_C.GetInitialFocusComponent
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_Config_C_GetInitialFocusComponent final
+{
+public:
+	class UUINavComponent*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUINavComponent*                        CallFunc_GetInitialFocusComponent_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Config_C_GetInitialFocusComponent;
+
+// Function WBP_Config.WBP_Config_C.InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_Config_C_InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Config_C_InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0;
+
+// Function WBP_Config.WBP_Config_C.Show config
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Config_C_Show_config final
+{
+public:
+	class UWidget*                                BeforeWidget;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Config_C_Show_config;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

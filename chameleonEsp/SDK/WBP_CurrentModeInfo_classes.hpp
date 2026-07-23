@@ -36,10 +36,10 @@ public:
 	class ABP_GameState_LINK_C*                   As_BP_Game_State_LINK;                             // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateCall();
-	void RankUpdate();
-	void ExecuteUbergraph_WBP_CurrentModeInfo(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_WBP_CurrentModeInfo(int32 EntryPoint);
+	void RankUpdate();
+	void UpdateCall();
 
 public:
 	static class UClass* StaticClass()

@@ -32,9 +32,9 @@ public:
 	int32                                         CopyNum;                                           // 0x02F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UserConstructionScript();
+	void GetAllTrasnfroms(TArray<struct FTransform>* SpawnTransforms_0);
 	void SetSpawnPoint();
-	void GetAllTrasnfroms(TArray<struct FTransform>* SpawnTransforms);
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

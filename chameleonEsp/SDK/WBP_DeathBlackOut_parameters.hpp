@@ -14,15 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_DeathBlackOut.WBP_DeathBlackOut_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_DeathBlackOut_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_DeathBlackOut_C_PreConstruct;
-
 // Function WBP_DeathBlackOut.WBP_DeathBlackOut_C.ExecuteUbergraph_WBP_DeathBlackOut
 // 0x0058 (0x0058 - 0x0000)
 struct WBP_DeathBlackOut_C_ExecuteUbergraph_WBP_DeathBlackOut final
@@ -40,6 +31,15 @@ public:
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0048(0x0010)()
 };
 DUMPER7_ASSERTS_WBP_DeathBlackOut_C_ExecuteUbergraph_WBP_DeathBlackOut;
+
+// Function WBP_DeathBlackOut.WBP_DeathBlackOut_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_DeathBlackOut_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_DeathBlackOut_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

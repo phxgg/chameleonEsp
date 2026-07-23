@@ -16,21 +16,117 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_CustomMapParts.WBP_CustomMapParts_C.SelectUpdate
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_CustomMapParts.WBP_CustomMapParts_C.BndEvt__WBP_CustomMapParts_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_CustomMapParts_C::SelectUpdate(bool State)
+void UWBP_CustomMapParts_C::BndEvt__WBP_CustomMapParts_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CustomMapParts_C", "SelectUpdate");
+		Func = Class->GetFunction("WBP_CustomMapParts_C", "BndEvt__WBP_CustomMapParts_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature");
 
-	Params::WBP_CustomMapParts_C_SelectUpdate Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.State = State;
+
+// Function WBP_CustomMapParts.WBP_CustomMapParts_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_CustomMapParts_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CustomMapParts_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CustomMapParts.WBP_CustomMapParts_C.ExecuteUbergraph_WBP_CustomMapParts
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CustomMapParts_C::ExecuteUbergraph_WBP_CustomMapParts(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CustomMapParts_C", "ExecuteUbergraph_WBP_CustomMapParts");
+
+	Params::WBP_CustomMapParts_C_ExecuteUbergraph_WBP_CustomMapParts Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CustomMapParts.WBP_CustomMapParts_C.OnFailure_212C9A914520D8F7A114F290F6F7AA59
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    ItemId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FSteamWorkshopItemDetails& Details                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FString&                    ErrorMessage                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWBP_CustomMapParts_C::OnFailure_212C9A914520D8F7A114F290F6F7AA59(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CustomMapParts_C", "OnFailure_212C9A914520D8F7A114F290F6F7AA59");
+
+	Params::WBP_CustomMapParts_C_OnFailure_212C9A914520D8F7A114F290F6F7AA59 Parms{};
+
+	Parms.ItemId = std::move(ItemId);
+	Parms.Details = std::move(Details);
+	Parms.ErrorMessage = std::move(ErrorMessage);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CustomMapParts.WBP_CustomMapParts_C.OnSuccess_212C9A914520D8F7A114F290F6F7AA59
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    ItemId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FSteamWorkshopItemDetails& Details                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FString&                    ErrorMessage                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWBP_CustomMapParts_C::OnSuccess_212C9A914520D8F7A114F290F6F7AA59(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CustomMapParts_C", "OnSuccess_212C9A914520D8F7A114F290F6F7AA59");
+
+	Params::WBP_CustomMapParts_C_OnSuccess_212C9A914520D8F7A114F290F6F7AA59 Parms{};
+
+	Parms.ItemId = std::move(ItemId);
+	Parms.Details = std::move(Details);
+	Parms.ErrorMessage = std::move(ErrorMessage);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_CustomMapParts.WBP_CustomMapParts_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CustomMapParts_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CustomMapParts_C", "PreConstruct");
+
+	Params::WBP_CustomMapParts_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -62,119 +158,23 @@ void UWBP_CustomMapParts_C::Request(bool bSuccess, const class FString& ItemId, 
 }
 
 
-// Function WBP_CustomMapParts.WBP_CustomMapParts_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CustomMapParts_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CustomMapParts_C", "PreConstruct");
-
-	Params::WBP_CustomMapParts_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_CustomMapParts.WBP_CustomMapParts_C.OnSuccess_212C9A914520D8F7A114F290F6F7AA59
+// Function WBP_CustomMapParts.WBP_CustomMapParts_C.SelectUpdate
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    ItemId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const struct FSteamWorkshopItemDetails& Details                                                (BlueprintVisible, BlueprintReadOnly, Parm)
-// const class FString&                    ErrorMessage                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_CustomMapParts_C::OnSuccess_212C9A914520D8F7A114F290F6F7AA59(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage)
+void UWBP_CustomMapParts_C::SelectUpdate(bool State)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CustomMapParts_C", "OnSuccess_212C9A914520D8F7A114F290F6F7AA59");
+		Func = Class->GetFunction("WBP_CustomMapParts_C", "SelectUpdate");
 
-	Params::WBP_CustomMapParts_C_OnSuccess_212C9A914520D8F7A114F290F6F7AA59 Parms{};
+	Params::WBP_CustomMapParts_C_SelectUpdate Parms{};
 
-	Parms.ItemId = std::move(ItemId);
-	Parms.Details = std::move(Details);
-	Parms.ErrorMessage = std::move(ErrorMessage);
+	Parms.State = State;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_CustomMapParts.WBP_CustomMapParts_C.OnFailure_212C9A914520D8F7A114F290F6F7AA59
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    ItemId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const struct FSteamWorkshopItemDetails& Details                                                (BlueprintVisible, BlueprintReadOnly, Parm)
-// const class FString&                    ErrorMessage                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UWBP_CustomMapParts_C::OnFailure_212C9A914520D8F7A114F290F6F7AA59(const class FString& ItemId, const struct FSteamWorkshopItemDetails& Details, const class FString& ErrorMessage)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CustomMapParts_C", "OnFailure_212C9A914520D8F7A114F290F6F7AA59");
-
-	Params::WBP_CustomMapParts_C_OnFailure_212C9A914520D8F7A114F290F6F7AA59 Parms{};
-
-	Parms.ItemId = std::move(ItemId);
-	Parms.Details = std::move(Details);
-	Parms.ErrorMessage = std::move(ErrorMessage);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_CustomMapParts.WBP_CustomMapParts_C.ExecuteUbergraph_WBP_CustomMapParts
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CustomMapParts_C::ExecuteUbergraph_WBP_CustomMapParts(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CustomMapParts_C", "ExecuteUbergraph_WBP_CustomMapParts");
-
-	Params::WBP_CustomMapParts_C_ExecuteUbergraph_WBP_CustomMapParts Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_CustomMapParts.WBP_CustomMapParts_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_CustomMapParts_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CustomMapParts_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_CustomMapParts.WBP_CustomMapParts_C.BndEvt__WBP_CustomMapParts_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_CustomMapParts_C::BndEvt__WBP_CustomMapParts_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CustomMapParts_C", "BndEvt__WBP_CustomMapParts_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

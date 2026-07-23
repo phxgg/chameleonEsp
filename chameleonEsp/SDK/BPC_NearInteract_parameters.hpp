@@ -17,42 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_NearInteract.BPC_NearInteract_C.SetCheckState
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_NearInteract_C_SetCheckState final
-{
-public:
-	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_NearInteract_C_SetCheckState;
-
-// Function BPC_NearInteract.BPC_NearInteract_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_NearInteract_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_NearInteract_C_ReceiveTick;
-
-// Function BPC_NearInteract.BPC_NearInteract_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_NearInteract_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason_ReceiveEndPlay;                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_NearInteract_C_ReceiveEndPlay;
-
-// Function BPC_NearInteract.BPC_NearInteract_C.GetSelectActor
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_NearInteract_C_GetSelectActor final
-{
-public:
-	class AActor*                                 CurrentSelectActor;                                // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_NearInteract_C_GetSelectActor;
-
 // Function BPC_NearInteract.BPC_NearInteract_C.ExecuteUbergraph_BPC_NearInteract
 // 0x01E0 (0x01E0 - 0x0000)
 struct BPC_NearInteract_C_ExecuteUbergraph_BPC_NearInteract final
@@ -111,6 +75,42 @@ public:
 	double                                        CallFunc_DegAcos_A_ImplicitCast;                   // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_NearInteract_C_ExecuteUbergraph_BPC_NearInteract;
+
+// Function BPC_NearInteract.BPC_NearInteract_C.GetSelectActor
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_NearInteract_C_GetSelectActor final
+{
+public:
+	class AActor*                                 CurrentSelectActor_0;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_NearInteract_C_GetSelectActor;
+
+// Function BPC_NearInteract.BPC_NearInteract_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_NearInteract_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_NearInteract_C_ReceiveEndPlay;
+
+// Function BPC_NearInteract.BPC_NearInteract_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_NearInteract_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_NearInteract_C_ReceiveTick;
+
+// Function BPC_NearInteract.BPC_NearInteract_C.SetCheckState
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_NearInteract_C_SetCheckState final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_NearInteract_C_SetCheckState;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

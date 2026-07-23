@@ -16,15 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_TextChatTextBox.WBP_TextChatTextBox_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_TextChatTextBox_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_TextChatTextBox_C_PreConstruct;
-
 // Function WBP_TextChatTextBox.WBP_TextChatTextBox_C.ExecuteUbergraph_WBP_TextChatTextBox
 // 0x00B8 (0x00B8 - 0x0000)
 struct WBP_TextChatTextBox_C_ExecuteUbergraph_WBP_TextChatTextBox final
@@ -46,6 +37,15 @@ public:
 	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue_1;              // 0x00A8(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_TextChatTextBox_C_ExecuteUbergraph_WBP_TextChatTextBox;
+
+// Function WBP_TextChatTextBox.WBP_TextChatTextBox_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_TextChatTextBox_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_TextChatTextBox_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -17,38 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_Bar.WBP_Bar_C.SetSubBarValue
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_Bar_C_SetSubBarValue final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Bar_C_SetSubBarValue;
-
-// Function WBP_Bar.WBP_Bar_C.SetMainBarValue
-// 0x0028 (0x0028 - 0x0000)
-struct WBP_Bar_C_SetMainBarValue final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        NewLocalVar;                                       // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_GetLinearColorValue_ReturnValue;          // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetLinearColorValue_InTime_ImplicitCast;  // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Bar_C_SetMainBarValue;
-
-// Function WBP_Bar.WBP_Bar_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Bar_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Bar_C_PreConstruct;
-
 // Function WBP_Bar.WBP_Bar_C.ExecuteUbergraph_WBP_Bar
 // 0x0048 (0x0048 - 0x0000)
 struct WBP_Bar_C_ExecuteUbergraph_WBP_Bar final
@@ -68,6 +36,38 @@ public:
 	float                                         K2Node_MakeStruct_Bottom_ImplicitCast;             // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Bar_C_ExecuteUbergraph_WBP_Bar;
+
+// Function WBP_Bar.WBP_Bar_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Bar_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Bar_C_PreConstruct;
+
+// Function WBP_Bar.WBP_Bar_C.SetMainBarValue
+// 0x0028 (0x0028 - 0x0000)
+struct WBP_Bar_C_SetMainBarValue final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        NewLocalVar;                                       // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_GetLinearColorValue_ReturnValue;          // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetLinearColorValue_InTime_ImplicitCast;  // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Bar_C_SetMainBarValue;
+
+// Function WBP_Bar.WBP_Bar_C.SetSubBarValue
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_Bar_C_SetSubBarValue final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Bar_C_SetSubBarValue;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -360,6 +360,8 @@ public:
 	uint8                                         Pad_118[0xE8];                                     // 0x0118(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	class UFunction* GetFunction(const FName& ClassName, const FName& FuncName) const;
+	class UFunction* GetFunction(const FName& FuncName) const;
 	class UFunction* GetFunction(const char* ClassName, const char* FuncName) const;
 
 public:
@@ -385,7 +387,7 @@ class UFunction : public UStruct
 public:
 	using FNativeFuncPtr = void (*)(void* Context, void* TheStack, void* Result);
 
-	uint32                                        FunctionFlags;                                     // 0x00B0(0x0004)(NOT AUTO-GENERATED PROPERTY)
+	EFunctionFlags                                FunctionFlags;                                     // 0x00B0(0x0004)(NOT AUTO-GENERATED PROPERTY)
 	uint8                                         Pad_B4[0x24];                                      // 0x00B4(0x0024)(Fixing Size After Last Property [ Dumper-7 ])
 	FNativeFuncPtr                                ExecFunction;                                      // 0x00D8(0x0008)(NOT AUTO-GENERATED PROPERTY)
 

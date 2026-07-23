@@ -18,24 +18,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_PlayerInfoBar.WBP_PlayerInfoBar_C.SetValue
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_PlayerInfoBar_C_SetValue final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_PlayerInfoBar_C_SetValue;
-
-// Function WBP_PlayerInfoBar.WBP_PlayerInfoBar_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_PlayerInfoBar_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_PlayerInfoBar_C_PreConstruct;
-
 // Function WBP_PlayerInfoBar.WBP_PlayerInfoBar_C.ExecuteUbergraph_WBP_PlayerInfoBar
 // 0x0100 (0x0100 - 0x0000)
 struct WBP_PlayerInfoBar_C_ExecuteUbergraph_WBP_PlayerInfoBar final
@@ -90,6 +72,24 @@ public:
 	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_PlayerInfoBar_C_ExecuteUbergraph_WBP_PlayerInfoBar;
+
+// Function WBP_PlayerInfoBar.WBP_PlayerInfoBar_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_PlayerInfoBar_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_PlayerInfoBar_C_PreConstruct;
+
+// Function WBP_PlayerInfoBar.WBP_PlayerInfoBar_C.SetValue
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_PlayerInfoBar_C_SetValue final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_PlayerInfoBar_C_SetValue;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

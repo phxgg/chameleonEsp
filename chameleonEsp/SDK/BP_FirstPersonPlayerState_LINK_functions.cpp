@@ -16,335 +16,151 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.ViewChange
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.AddCoin
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_FirstPersonCharacter_Main_C*  SourcePlayer                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   AddValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonPlayerState_LINK_C::ViewChange(class ABP_FirstPersonCharacter_Main_C* SourcePlayer)
+void ABP_FirstPersonPlayerState_LINK_C::AddCoin(int32 AddValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "ViewChange");
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "AddCoin");
 
-	Params::BP_FirstPersonPlayerState_LINK_C_ViewChange Parms{};
+	Params::BP_FirstPersonPlayerState_LINK_C_AddCoin Parms{};
 
-	Parms.SourcePlayer = SourcePlayer;
+	Parms.AddValue = AddValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.UseCoin
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   CoinValue                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   Rezult                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonPlayerState_LINK_C::UseCoin(int32 CoinValue, bool* Rezult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "UseCoin");
-
-	Params::BP_FirstPersonPlayerState_LINK_C_UseCoin Parms{};
-
-	Parms.CoinValue = CoinValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Rezult != nullptr)
-		*Rezult = Parms.Rezult;
-}
-
-
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.StateValueSync(Server)
-// (Net, NetReliable, NetServer, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const EN_LINK_PlayerStateValueType&     Key                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const double&                           Value                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonPlayerState_LINK_C::StateValueSync_Server_(const EN_LINK_PlayerStateValueType& Key, const double& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "StateValueSync(Server)");
-
-	Params::BP_FirstPersonPlayerState_LINK_C_StateValueSync_Server_ Parms{};
-
-	Parms.Key = Key;
-	Parms.Value = Value;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.StateValueSync(Client)
-// (Net, NetReliable, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const EN_LINK_PlayerStateValueType&     Key                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const double&                           Value                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonPlayerState_LINK_C::StateValueSync_Client_(const EN_LINK_PlayerStateValueType& Key, const double& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "StateValueSync(Client)");
-
-	Params::BP_FirstPersonPlayerState_LINK_C_StateValueSync_Client_ Parms{};
-
-	Parms.Key = Key;
-	Parms.Value = Value;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.SetupSpectateNameplate
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.AddStateValue
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class ABP_FirstPersonCharacter_Main_C*  Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonPlayerState_LINK_C::SetupSpectateNameplate(class ABP_FirstPersonCharacter_Main_C* Character)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "SetupSpectateNameplate");
-
-	Params::BP_FirstPersonPlayerState_LINK_C_SetupSpectateNameplate Parms{};
-
-	Parms.Character = Character;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.SetStateValue
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EN_LINK_PlayerStateValueType            Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EN_LINK_PlayerStateValueType            ValueName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector2D&                 ClampValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonPlayerState_LINK_C::SetStateValue(EN_LINK_PlayerStateValueType Key, double Value)
+void ABP_FirstPersonPlayerState_LINK_C::AddStateValue(EN_LINK_PlayerStateValueType ValueName, double Value, const struct FVector2D& ClampValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "SetStateValue");
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "AddStateValue");
 
-	Params::BP_FirstPersonPlayerState_LINK_C_SetStateValue Parms{};
+	Params::BP_FirstPersonPlayerState_LINK_C_AddStateValue Parms{};
 
-	Parms.Key = Key;
+	Parms.ValueName = ValueName;
 	Parms.Value = Value;
+	Parms.ClampValue = std::move(ClampValue);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.SetName
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_0_ItemSelect__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const class FString&                    CustomPlayerName                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonPlayerState_LINK_C::SetName(const class FString& CustomPlayerName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "SetName");
-
-	Params::BP_FirstPersonPlayerState_LINK_C_SetName Parms{};
-
-	Parms.CustomPlayerName = std::move(CustomPlayerName);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.SetCoin
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   SetValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonPlayerState_LINK_C::SetCoin(int32 SetValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "SetCoin");
-
-	Params::BP_FirstPersonPlayerState_LINK_C_SetCoin Parms{};
-
-	Parms.SetValue = SetValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.SetBackPackMenuState
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonPlayerState_LINK_C::SetBackPackMenuState(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "SetBackPackMenuState");
-
-	Params::BP_FirstPersonPlayerState_LINK_C_SetBackPackMenuState Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.SendToText
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int32                                   MessageType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonPlayerState_LINK_C::SendToText(const class FString& Text, int32 MessageType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "SendToText");
-
-	Params::BP_FirstPersonPlayerState_LINK_C_SendToText Parms{};
-
-	Parms.Text = std::move(Text);
-	Parms.MessageType = MessageType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.RespawnItem(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   ItemIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FTransform&                CameraTransform                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CanSpawn                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonPlayerState_LINK_C::RespawnItem_Server_(int32 ItemIndex, const struct FTransform& CameraTransform, bool CanSpawn)
+void ABP_FirstPersonPlayerState_LINK_C::BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_0_ItemSelect__DelegateSignature(int32 Index_0, bool CanSpawn)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "RespawnItem(Server)");
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_0_ItemSelect__DelegateSignature");
 
-	Params::BP_FirstPersonPlayerState_LINK_C_RespawnItem_Server_ Parms{};
+	Params::BP_FirstPersonPlayerState_LINK_C_BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_0_ItemSelect__DelegateSignature Parms{};
 
-	Parms.ItemIndex = ItemIndex;
-	Parms.CameraTransform = std::move(CameraTransform);
+	Parms.Index_0 = Index_0;
 	Parms.CanSpawn = CanSpawn;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void ABP_FirstPersonPlayerState_LINK_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.ReceiveCopyProperties
-// (Event, Protected, BlueprintEvent)
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_1_ChangeWeight__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// class APlayerState*                     NewPlayerState_ReceiveCopyProperties                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  Weight                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonPlayerState_LINK_C::ReceiveCopyProperties(class APlayerState* NewPlayerState_ReceiveCopyProperties)
+void ABP_FirstPersonPlayerState_LINK_C::BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_1_ChangeWeight__DelegateSignature(double Weight)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "ReceiveCopyProperties");
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_1_ChangeWeight__DelegateSignature");
 
-	Params::BP_FirstPersonPlayerState_LINK_C_ReceiveCopyProperties Parms{};
+	Params::BP_FirstPersonPlayerState_LINK_C_BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_1_ChangeWeight__DelegateSignature Parms{};
 
-	Parms.NewPlayerState_ReceiveCopyProperties = NewPlayerState_ReceiveCopyProperties;
+	Parms.Weight = Weight;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_FirstPersonPlayerState_LINK_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.OnRep_HaveCoin
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_FirstPersonPlayerState_LINK_C::OnRep_HaveCoin()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "OnRep_HaveCoin");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.NameUpdate
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_FirstPersonPlayerState_LINK_C::NameUpdate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "NameUpdate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.Initialization
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.ExecuteUbergraph_BP_FirstPersonPlayerState_LINK
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class ABP_FirstPersonCharacter_Main_C*  Character_Initialization                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonPlayerState_LINK_C::Initialization(class ABP_FirstPersonCharacter_Main_C* Character_Initialization)
+void ABP_FirstPersonPlayerState_LINK_C::ExecuteUbergraph_BP_FirstPersonPlayerState_LINK(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "Initialization");
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "ExecuteUbergraph_BP_FirstPersonPlayerState_LINK");
 
-	Params::BP_FirstPersonPlayerState_LINK_C_Initialization Parms{};
+	Params::BP_FirstPersonPlayerState_LINK_C_ExecuteUbergraph_BP_FirstPersonPlayerState_LINK Parms{};
 
-	Parms.Character_Initialization = Character_Initialization;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.GetCurrentWeight
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double*                                 WeightPower                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonPlayerState_LINK_C::GetCurrentWeight(double* WeightPower)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "GetCurrentWeight");
+
+	Params::BP_FirstPersonPlayerState_LINK_C_GetCurrentWeight Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (WeightPower != nullptr)
+		*WeightPower = Parms.WeightPower;
+}
+
+
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.GetCustomPlayerName
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString*                          playerName                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonPlayerState_LINK_C::GetCustomPlayerName(class FString* playerName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "GetCustomPlayerName");
+
+	Params::BP_FirstPersonPlayerState_LINK_C_GetCustomPlayerName Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (playerName != nullptr)
+		*playerName = std::move(Parms.playerName);
 }
 
 
@@ -378,149 +194,333 @@ void ABP_FirstPersonPlayerState_LINK_C::GetStateValue(EN_LINK_PlayerStateValueTy
 }
 
 
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.GetCustomPlayerName
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.Initialization
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString*                          playerName                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C*  Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonPlayerState_LINK_C::GetCustomPlayerName(class FString* playerName)
+void ABP_FirstPersonPlayerState_LINK_C::Initialization(class ABP_FirstPersonCharacter_Main_C* Character)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "GetCustomPlayerName");
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "Initialization");
 
-	Params::BP_FirstPersonPlayerState_LINK_C_GetCustomPlayerName Parms{};
+	Params::BP_FirstPersonPlayerState_LINK_C_Initialization Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (playerName != nullptr)
-		*playerName = std::move(Parms.playerName);
-}
-
-
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.GetCurrentWeight
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// double*                                 WeightPower                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonPlayerState_LINK_C::GetCurrentWeight(double* WeightPower)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "GetCurrentWeight");
-
-	Params::BP_FirstPersonPlayerState_LINK_C_GetCurrentWeight Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (WeightPower != nullptr)
-		*WeightPower = Parms.WeightPower;
-}
-
-
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.ExecuteUbergraph_BP_FirstPersonPlayerState_LINK
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FirstPersonPlayerState_LINK_C::ExecuteUbergraph_BP_FirstPersonPlayerState_LINK(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "ExecuteUbergraph_BP_FirstPersonPlayerState_LINK");
-
-	Params::BP_FirstPersonPlayerState_LINK_C_ExecuteUbergraph_BP_FirstPersonPlayerState_LINK Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.Character = Character;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_1_ChangeWeight__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// double                                  Weight                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.NameUpdate
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_FirstPersonPlayerState_LINK_C::BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_1_ChangeWeight__DelegateSignature(double Weight)
+void ABP_FirstPersonPlayerState_LINK_C::NameUpdate()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_1_ChangeWeight__DelegateSignature");
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "NameUpdate");
 
-	Params::BP_FirstPersonPlayerState_LINK_C_BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_1_ChangeWeight__DelegateSignature Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Weight = Weight;
+
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.OnRep_HaveCoin
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_FirstPersonPlayerState_LINK_C::OnRep_HaveCoin()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "OnRep_HaveCoin");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_FirstPersonPlayerState_LINK_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.ReceiveCopyProperties
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class APlayerState*                     NewPlayerState                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonPlayerState_LINK_C::ReceiveCopyProperties(class APlayerState* NewPlayerState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "ReceiveCopyProperties");
+
+	Params::BP_FirstPersonPlayerState_LINK_C_ReceiveCopyProperties Parms{};
+
+	Parms.NewPlayerState = NewPlayerState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_0_ItemSelect__DelegateSignature
-// (BlueprintEvent)
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_FirstPersonPlayerState_LINK_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.RespawnItem(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ItemIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FTransform&                CameraTransform                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CanSpawn                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonPlayerState_LINK_C::BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_0_ItemSelect__DelegateSignature(int32 Index_0, bool CanSpawn)
+void ABP_FirstPersonPlayerState_LINK_C::RespawnItem_Server_(int32 ItemIndex, const struct FTransform& CameraTransform, bool CanSpawn)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_0_ItemSelect__DelegateSignature");
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "RespawnItem(Server)");
 
-	Params::BP_FirstPersonPlayerState_LINK_C_BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_0_ItemSelect__DelegateSignature Parms{};
+	Params::BP_FirstPersonPlayerState_LINK_C_RespawnItem_Server_ Parms{};
 
-	Parms.Index_0 = Index_0;
+	Parms.ItemIndex = ItemIndex;
+	Parms.CameraTransform = std::move(CameraTransform);
 	Parms.CanSpawn = CanSpawn;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.AddStateValue
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.SendToText
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EN_LINK_PlayerStateValueType            ValueName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector2D&                 ClampValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int32                                   MessageType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonPlayerState_LINK_C::AddStateValue(EN_LINK_PlayerStateValueType ValueName, double Value, const struct FVector2D& ClampValue)
+void ABP_FirstPersonPlayerState_LINK_C::SendToText(const class FString& Text, int32 MessageType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "AddStateValue");
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "SendToText");
 
-	Params::BP_FirstPersonPlayerState_LINK_C_AddStateValue Parms{};
+	Params::BP_FirstPersonPlayerState_LINK_C_SendToText Parms{};
 
-	Parms.ValueName = ValueName;
-	Parms.Value = Value;
-	Parms.ClampValue = std::move(ClampValue);
+	Parms.Text = std::move(Text);
+	Parms.MessageType = MessageType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.AddCoin
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.SetBackPackMenuState
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   AddValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FirstPersonPlayerState_LINK_C::AddCoin(int32 AddValue)
+void ABP_FirstPersonPlayerState_LINK_C::SetBackPackMenuState(bool State)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "AddCoin");
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "SetBackPackMenuState");
 
-	Params::BP_FirstPersonPlayerState_LINK_C_AddCoin Parms{};
+	Params::BP_FirstPersonPlayerState_LINK_C_SetBackPackMenuState Parms{};
 
-	Parms.AddValue = AddValue;
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.SetCoin
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   SetValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonPlayerState_LINK_C::SetCoin(int32 SetValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "SetCoin");
+
+	Params::BP_FirstPersonPlayerState_LINK_C_SetCoin Parms{};
+
+	Parms.SetValue = SetValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.SetName
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    CustomPlayerName_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonPlayerState_LINK_C::SetName(const class FString& CustomPlayerName_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "SetName");
+
+	Params::BP_FirstPersonPlayerState_LINK_C_SetName Parms{};
+
+	Parms.CustomPlayerName_0 = std::move(CustomPlayerName_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.SetStateValue
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EN_LINK_PlayerStateValueType            Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonPlayerState_LINK_C::SetStateValue(EN_LINK_PlayerStateValueType Key, double Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "SetStateValue");
+
+	Params::BP_FirstPersonPlayerState_LINK_C_SetStateValue Parms{};
+
+	Parms.Key = Key;
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.SetupSpectateNameplate
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonCharacter_Main_C*  Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonPlayerState_LINK_C::SetupSpectateNameplate(class ABP_FirstPersonCharacter_Main_C* Character)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "SetupSpectateNameplate");
+
+	Params::BP_FirstPersonPlayerState_LINK_C_SetupSpectateNameplate Parms{};
+
+	Parms.Character = Character;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.StateValueSync(Client)
+// (Net, NetReliable, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const EN_LINK_PlayerStateValueType&     Key                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const double&                           Value                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonPlayerState_LINK_C::StateValueSync_Client_(const EN_LINK_PlayerStateValueType& Key, const double& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "StateValueSync(Client)");
+
+	Params::BP_FirstPersonPlayerState_LINK_C_StateValueSync_Client_ Parms{};
+
+	Parms.Key = Key;
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.StateValueSync(Server)
+// (Net, NetReliable, NetServer, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const EN_LINK_PlayerStateValueType&     Key                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const double&                           Value                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonPlayerState_LINK_C::StateValueSync_Server_(const EN_LINK_PlayerStateValueType& Key, const double& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "StateValueSync(Server)");
+
+	Params::BP_FirstPersonPlayerState_LINK_C_StateValueSync_Server_ Parms{};
+
+	Parms.Key = Key;
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.UseCoin
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   CoinValue                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Rezult                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonPlayerState_LINK_C::UseCoin(int32 CoinValue, bool* Rezult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "UseCoin");
+
+	Params::BP_FirstPersonPlayerState_LINK_C_UseCoin Parms{};
+
+	Parms.CoinValue = CoinValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Rezult != nullptr)
+		*Rezult = Parms.Rezult;
+}
+
+
+// Function BP_FirstPersonPlayerState_LINK.BP_FirstPersonPlayerState_LINK_C.ViewChange
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonCharacter_Main_C*  SourcePlayer                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FirstPersonPlayerState_LINK_C::ViewChange(class ABP_FirstPersonCharacter_Main_C* SourcePlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FirstPersonPlayerState_LINK_C", "ViewChange");
+
+	Params::BP_FirstPersonPlayerState_LINK_C_ViewChange Parms{};
+
+	Parms.SourcePlayer = SourcePlayer;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

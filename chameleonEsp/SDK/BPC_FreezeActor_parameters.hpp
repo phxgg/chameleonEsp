@@ -16,15 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_FreezeActor.BPC_FreezeActor_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_FreezeActor_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason_ReceiveEndPlay;                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_FreezeActor_C_ReceiveEndPlay;
-
 // Function BPC_FreezeActor.BPC_FreezeActor_C.ExecuteUbergraph_BPC_FreezeActor
 // 0x0028 (0x0028 - 0x0000)
 struct BPC_FreezeActor_C_ExecuteUbergraph_BPC_FreezeActor final
@@ -42,6 +33,15 @@ public:
 	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_FreezeActor_C_ExecuteUbergraph_BPC_FreezeActor;
+
+// Function BPC_FreezeActor.BPC_FreezeActor_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_FreezeActor_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_FreezeActor_C_ReceiveEndPlay;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

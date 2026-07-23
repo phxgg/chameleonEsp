@@ -51,16 +51,16 @@ public:
 	class UBPGI_Main_C*                           As_BPGI_Main;                                      // 0x05C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateScreenEvent();
-	void Show_config(class UWidget* BeforeWidget);
-	void ScreenTypeSettingsUpdate();
-	void InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
-	class UUINavComponent* GetInitialFocusComponent();
-	void ExecuteUbergraph_WBP_Config(int32 EntryPoint);
-	void DeleteConfigWidget();
-	void Construct();
-	void BndEvt__WBP_Config_LongTapButton_Back_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature();
 	void BndEvt__WBP_Config_ApplyButton_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature();
+	void BndEvt__WBP_Config_LongTapButton_Back_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature();
+	void Construct();
+	void DeleteConfigWidget();
+	void ExecuteUbergraph_WBP_Config(int32 EntryPoint);
+	class UUINavComponent* GetInitialFocusComponent();
+	void InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void ScreenTypeSettingsUpdate();
+	void Show_config(class UWidget* BeforeWidget);
+	void UpdateScreenEvent();
 
 public:
 	static class UClass* StaticClass()

@@ -31,12 +31,12 @@ public:
 	struct FVector2D                              GraphScale;                                        // 0x0370(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void ExecuteUbergraph_WBP_FPSCounter(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
-	void OnPaint(struct FPaintContext& Context_OnPaint) const;
 	void CreatePaints(TArray<struct FVector2D>* Points) const;
+	void OnPaint(struct FPaintContext& Context) const;
 
 public:
 	static class UClass* StaticClass()

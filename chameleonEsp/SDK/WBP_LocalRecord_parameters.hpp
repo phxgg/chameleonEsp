@@ -17,25 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_LocalRecord.WBP_LocalRecord_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WBP_LocalRecord_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry_Tick;                                   // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime_Tick;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_LocalRecord_C_Tick;
-
-// Function WBP_LocalRecord.WBP_LocalRecord_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_LocalRecord_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_LocalRecord_C_PreConstruct;
-
 // Function WBP_LocalRecord.WBP_LocalRecord_C.ExecuteUbergraph_WBP_LocalRecord
 // 0x02D0 (0x02D0 - 0x0000)
 struct WBP_LocalRecord_C_ExecuteUbergraph_WBP_LocalRecord final
@@ -116,6 +97,25 @@ public:
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue_3;          // 0x02C0(0x0010)()
 };
 DUMPER7_ASSERTS_WBP_LocalRecord_C_ExecuteUbergraph_WBP_LocalRecord;
+
+// Function WBP_LocalRecord.WBP_LocalRecord_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_LocalRecord_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_LocalRecord_C_PreConstruct;
+
+// Function WBP_LocalRecord.WBP_LocalRecord_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WBP_LocalRecord_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_LocalRecord_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

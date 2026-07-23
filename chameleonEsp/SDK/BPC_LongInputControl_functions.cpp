@@ -16,55 +16,15 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_LongInputControl.BPC_LongInputControl_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_LongInputControl_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LongInputControl_C", "ReceiveTick");
-
-	Params::BPC_LongInputControl_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_LongInputControl.BPC_LongInputControl_C.PushState
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_LongInputControl_C::PushState(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LongInputControl_C", "PushState");
-
-	Params::BPC_LongInputControl_C_PushState Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_LongInputControl.BPC_LongInputControl_C.LongPushStartEvent
+// Function BPC_LongInputControl.BPC_LongInputControl_C.ClearPushCountTimer
 // (BlueprintCallable, BlueprintEvent)
 
-void UBPC_LongInputControl_C::LongPushStartEvent()
+void UBPC_LongInputControl_C::ClearPushCountTimer()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LongInputControl_C", "LongPushStartEvent");
+		Func = Class->GetFunction("BPC_LongInputControl_C", "ClearPushCountTimer");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -90,17 +50,57 @@ void UBPC_LongInputControl_C::ExecuteUbergraph_BPC_LongInputControl(int32 EntryP
 }
 
 
-// Function BPC_LongInputControl.BPC_LongInputControl_C.ClearPushCountTimer
+// Function BPC_LongInputControl.BPC_LongInputControl_C.LongPushStartEvent
 // (BlueprintCallable, BlueprintEvent)
 
-void UBPC_LongInputControl_C::ClearPushCountTimer()
+void UBPC_LongInputControl_C::LongPushStartEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LongInputControl_C", "ClearPushCountTimer");
+		Func = Class->GetFunction("BPC_LongInputControl_C", "LongPushStartEvent");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_LongInputControl.BPC_LongInputControl_C.PushState
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_LongInputControl_C::PushState(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LongInputControl_C", "PushState");
+
+	Params::BPC_LongInputControl_C_PushState Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_LongInputControl.BPC_LongInputControl_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_LongInputControl_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LongInputControl_C", "ReceiveTick");
+
+	Params::BPC_LongInputControl_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

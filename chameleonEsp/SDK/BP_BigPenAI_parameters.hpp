@@ -17,104 +17,35 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_BigPenAI.BP_BigPenAI_C.SoptAI
-// 0x0008 (0x0008 - 0x0000)
-struct BP_BigPenAI_C_SoptAI final
+// Function BP_BigPenAI.BP_BigPenAI_C.BndEvt__BP_BigPenAI_AttackPenguinZone_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature
+// 0x0120 (0x0120 - 0x0000)
+struct BP_BigPenAI_C_BndEvt__BP_BigPenAI_AttackPenguinZone_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature final
 {
 public:
-	class AAIController*                          CallFunc_GetAIController_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_BP_BigPenAI_C_SoptAI;
+DUMPER7_ASSERTS_BP_BigPenAI_C_BndEvt__BP_BigPenAI_AttackPenguinZone_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature;
 
-// Function BP_BigPenAI.BP_BigPenAI_C.OnNotifyEnd_E4FD70D84BF2E0A98592B193EDD6DC19
-// 0x0008 (0x0008 - 0x0000)
-struct BP_BigPenAI_C_OnNotifyEnd_E4FD70D84BF2E0A98592B193EDD6DC19 final
+// Function BP_BigPenAI.BP_BigPenAI_C.BndEvt__BP_BigPenAI_DestroyZone_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
+// 0x0120 (0x0120 - 0x0000)
+struct BP_BigPenAI_C_BndEvt__BP_BigPenAI_DestroyZone_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature final
 {
 public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_BP_BigPenAI_C_OnNotifyEnd_E4FD70D84BF2E0A98592B193EDD6DC19;
-
-// Function BP_BigPenAI.BP_BigPenAI_C.OnNotifyEnd_2DAE96654F8D533E451CEB8E88B79A47
-// 0x0008 (0x0008 - 0x0000)
-struct BP_BigPenAI_C_OnNotifyEnd_2DAE96654F8D533E451CEB8E88B79A47 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_BigPenAI_C_OnNotifyEnd_2DAE96654F8D533E451CEB8E88B79A47;
-
-// Function BP_BigPenAI.BP_BigPenAI_C.OnNotifyBegin_E4FD70D84BF2E0A98592B193EDD6DC19
-// 0x0008 (0x0008 - 0x0000)
-struct BP_BigPenAI_C_OnNotifyBegin_E4FD70D84BF2E0A98592B193EDD6DC19 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_BigPenAI_C_OnNotifyBegin_E4FD70D84BF2E0A98592B193EDD6DC19;
-
-// Function BP_BigPenAI.BP_BigPenAI_C.OnNotifyBegin_2DAE96654F8D533E451CEB8E88B79A47
-// 0x0008 (0x0008 - 0x0000)
-struct BP_BigPenAI_C_OnNotifyBegin_2DAE96654F8D533E451CEB8E88B79A47 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_BigPenAI_C_OnNotifyBegin_2DAE96654F8D533E451CEB8E88B79A47;
-
-// Function BP_BigPenAI.BP_BigPenAI_C.OnInterrupted_E4FD70D84BF2E0A98592B193EDD6DC19
-// 0x0008 (0x0008 - 0x0000)
-struct BP_BigPenAI_C_OnInterrupted_E4FD70D84BF2E0A98592B193EDD6DC19 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_BigPenAI_C_OnInterrupted_E4FD70D84BF2E0A98592B193EDD6DC19;
-
-// Function BP_BigPenAI.BP_BigPenAI_C.OnInterrupted_2DAE96654F8D533E451CEB8E88B79A47
-// 0x0008 (0x0008 - 0x0000)
-struct BP_BigPenAI_C_OnInterrupted_2DAE96654F8D533E451CEB8E88B79A47 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_BigPenAI_C_OnInterrupted_2DAE96654F8D533E451CEB8E88B79A47;
-
-// Function BP_BigPenAI.BP_BigPenAI_C.OnCompleted_E4FD70D84BF2E0A98592B193EDD6DC19
-// 0x0008 (0x0008 - 0x0000)
-struct BP_BigPenAI_C_OnCompleted_E4FD70D84BF2E0A98592B193EDD6DC19 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_BigPenAI_C_OnCompleted_E4FD70D84BF2E0A98592B193EDD6DC19;
-
-// Function BP_BigPenAI.BP_BigPenAI_C.OnCompleted_2DAE96654F8D533E451CEB8E88B79A47
-// 0x0008 (0x0008 - 0x0000)
-struct BP_BigPenAI_C_OnCompleted_2DAE96654F8D533E451CEB8E88B79A47 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_BigPenAI_C_OnCompleted_2DAE96654F8D533E451CEB8E88B79A47;
-
-// Function BP_BigPenAI.BP_BigPenAI_C.OnBlendOut_E4FD70D84BF2E0A98592B193EDD6DC19
-// 0x0008 (0x0008 - 0x0000)
-struct BP_BigPenAI_C_OnBlendOut_E4FD70D84BF2E0A98592B193EDD6DC19 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_BigPenAI_C_OnBlendOut_E4FD70D84BF2E0A98592B193EDD6DC19;
-
-// Function BP_BigPenAI.BP_BigPenAI_C.OnBlendOut_2DAE96654F8D533E451CEB8E88B79A47
-// 0x0008 (0x0008 - 0x0000)
-struct BP_BigPenAI_C_OnBlendOut_2DAE96654F8D533E451CEB8E88B79A47 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_BigPenAI_C_OnBlendOut_2DAE96654F8D533E451CEB8E88B79A47;
+DUMPER7_ASSERTS_BP_BigPenAI_C_BndEvt__BP_BigPenAI_DestroyZone_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature;
 
 // Function BP_BigPenAI.BP_BigPenAI_C.ExecuteUbergraph_BP_BigPenAI
 // 0x0438 (0x0438 - 0x0000)
@@ -188,35 +119,104 @@ public:
 };
 DUMPER7_ASSERTS_BP_BigPenAI_C_ExecuteUbergraph_BP_BigPenAI;
 
-// Function BP_BigPenAI.BP_BigPenAI_C.BndEvt__BP_BigPenAI_DestroyZone_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// 0x0120 (0x0120 - 0x0000)
-struct BP_BigPenAI_C_BndEvt__BP_BigPenAI_DestroyZone_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature final
+// Function BP_BigPenAI.BP_BigPenAI_C.OnBlendOut_2DAE96654F8D533E451CEB8E88B79A47
+// 0x0008 (0x0008 - 0x0000)
+struct BP_BigPenAI_C_OnBlendOut_2DAE96654F8D533E451CEB8E88B79A47 final
 {
 public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_BigPenAI_C_BndEvt__BP_BigPenAI_DestroyZone_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature;
+DUMPER7_ASSERTS_BP_BigPenAI_C_OnBlendOut_2DAE96654F8D533E451CEB8E88B79A47;
 
-// Function BP_BigPenAI.BP_BigPenAI_C.BndEvt__BP_BigPenAI_AttackPenguinZone_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature
-// 0x0120 (0x0120 - 0x0000)
-struct BP_BigPenAI_C_BndEvt__BP_BigPenAI_AttackPenguinZone_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature final
+// Function BP_BigPenAI.BP_BigPenAI_C.OnBlendOut_E4FD70D84BF2E0A98592B193EDD6DC19
+// 0x0008 (0x0008 - 0x0000)
+struct BP_BigPenAI_C_OnBlendOut_E4FD70D84BF2E0A98592B193EDD6DC19 final
 {
 public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x0100)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_BigPenAI_C_BndEvt__BP_BigPenAI_AttackPenguinZone_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature;
+DUMPER7_ASSERTS_BP_BigPenAI_C_OnBlendOut_E4FD70D84BF2E0A98592B193EDD6DC19;
+
+// Function BP_BigPenAI.BP_BigPenAI_C.OnCompleted_2DAE96654F8D533E451CEB8E88B79A47
+// 0x0008 (0x0008 - 0x0000)
+struct BP_BigPenAI_C_OnCompleted_2DAE96654F8D533E451CEB8E88B79A47 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_BigPenAI_C_OnCompleted_2DAE96654F8D533E451CEB8E88B79A47;
+
+// Function BP_BigPenAI.BP_BigPenAI_C.OnCompleted_E4FD70D84BF2E0A98592B193EDD6DC19
+// 0x0008 (0x0008 - 0x0000)
+struct BP_BigPenAI_C_OnCompleted_E4FD70D84BF2E0A98592B193EDD6DC19 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_BigPenAI_C_OnCompleted_E4FD70D84BF2E0A98592B193EDD6DC19;
+
+// Function BP_BigPenAI.BP_BigPenAI_C.OnInterrupted_2DAE96654F8D533E451CEB8E88B79A47
+// 0x0008 (0x0008 - 0x0000)
+struct BP_BigPenAI_C_OnInterrupted_2DAE96654F8D533E451CEB8E88B79A47 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_BigPenAI_C_OnInterrupted_2DAE96654F8D533E451CEB8E88B79A47;
+
+// Function BP_BigPenAI.BP_BigPenAI_C.OnInterrupted_E4FD70D84BF2E0A98592B193EDD6DC19
+// 0x0008 (0x0008 - 0x0000)
+struct BP_BigPenAI_C_OnInterrupted_E4FD70D84BF2E0A98592B193EDD6DC19 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_BigPenAI_C_OnInterrupted_E4FD70D84BF2E0A98592B193EDD6DC19;
+
+// Function BP_BigPenAI.BP_BigPenAI_C.OnNotifyBegin_2DAE96654F8D533E451CEB8E88B79A47
+// 0x0008 (0x0008 - 0x0000)
+struct BP_BigPenAI_C_OnNotifyBegin_2DAE96654F8D533E451CEB8E88B79A47 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_BigPenAI_C_OnNotifyBegin_2DAE96654F8D533E451CEB8E88B79A47;
+
+// Function BP_BigPenAI.BP_BigPenAI_C.OnNotifyBegin_E4FD70D84BF2E0A98592B193EDD6DC19
+// 0x0008 (0x0008 - 0x0000)
+struct BP_BigPenAI_C_OnNotifyBegin_E4FD70D84BF2E0A98592B193EDD6DC19 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_BigPenAI_C_OnNotifyBegin_E4FD70D84BF2E0A98592B193EDD6DC19;
+
+// Function BP_BigPenAI.BP_BigPenAI_C.OnNotifyEnd_2DAE96654F8D533E451CEB8E88B79A47
+// 0x0008 (0x0008 - 0x0000)
+struct BP_BigPenAI_C_OnNotifyEnd_2DAE96654F8D533E451CEB8E88B79A47 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_BigPenAI_C_OnNotifyEnd_2DAE96654F8D533E451CEB8E88B79A47;
+
+// Function BP_BigPenAI.BP_BigPenAI_C.OnNotifyEnd_E4FD70D84BF2E0A98592B193EDD6DC19
+// 0x0008 (0x0008 - 0x0000)
+struct BP_BigPenAI_C_OnNotifyEnd_E4FD70D84BF2E0A98592B193EDD6DC19 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_BigPenAI_C_OnNotifyEnd_E4FD70D84BF2E0A98592B193EDD6DC19;
+
+// Function BP_BigPenAI.BP_BigPenAI_C.SoptAI
+// 0x0008 (0x0008 - 0x0000)
+struct BP_BigPenAI_C_SoptAI final
+{
+public:
+	class AAIController*                          CallFunc_GetAIController_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_BigPenAI_C_SoptAI;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

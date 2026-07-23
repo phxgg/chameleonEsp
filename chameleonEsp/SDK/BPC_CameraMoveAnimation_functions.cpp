@@ -16,37 +16,27 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_CameraMoveAnimation.BPC_CameraMoveAnimation_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// Function BPC_CameraMoveAnimation.BPC_CameraMoveAnimation_C.AnimationStart
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Front_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Right_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_CameraMoveAnimation_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
+void UBPC_CameraMoveAnimation_C::AnimationStart(double Front_0, double Right_0, double Time)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CameraMoveAnimation_C", "ReceiveTick");
+		Func = Class->GetFunction("BPC_CameraMoveAnimation_C", "AnimationStart");
 
-	Params::BPC_CameraMoveAnimation_C_ReceiveTick Parms{};
+	Params::BPC_CameraMoveAnimation_C_AnimationStart Parms{};
 
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
+	Parms.Front_0 = Front_0;
+	Parms.Right_0 = Right_0;
+	Parms.Time = Time;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_CameraMoveAnimation.BPC_CameraMoveAnimation_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBPC_CameraMoveAnimation_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CameraMoveAnimation_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -70,25 +60,35 @@ void UBPC_CameraMoveAnimation_C::ExecuteUbergraph_BPC_CameraMoveAnimation(int32 
 }
 
 
-// Function BPC_CameraMoveAnimation.BPC_CameraMoveAnimation_C.AnimationStart
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Front                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Right                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_CameraMoveAnimation.BPC_CameraMoveAnimation_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void UBPC_CameraMoveAnimation_C::AnimationStart(double Front, double Right, double Time)
+void UBPC_CameraMoveAnimation_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_CameraMoveAnimation_C", "AnimationStart");
+		Func = Class->GetFunction("BPC_CameraMoveAnimation_C", "ReceiveBeginPlay");
 
-	Params::BPC_CameraMoveAnimation_C_AnimationStart Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Front = Front;
-	Parms.Right = Right;
-	Parms.Time = Time;
+
+// Function BPC_CameraMoveAnimation.BPC_CameraMoveAnimation_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_CameraMoveAnimation_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_CameraMoveAnimation_C", "ReceiveTick");
+
+	Params::BPC_CameraMoveAnimation_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

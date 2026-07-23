@@ -16,37 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_MiniPenguinWeight.WBP_MiniPenguinWeight_C.SetText
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_MiniPenguinWeight_C_SetText final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_MiniPenguinWeight_C_SetText;
-
-// Function WBP_MiniPenguinWeight.WBP_MiniPenguinWeight_C.SetColor
-// 0x0014 (0x0014 - 0x0000)
-struct WBP_MiniPenguinWeight_C_SetColor final
-{
-public:
-	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_MiniPenguinWeight_C_SetColor;
-
-// Function WBP_MiniPenguinWeight.WBP_MiniPenguinWeight_C.PlayAnimationMessage
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_MiniPenguinWeight_C_PlayAnimationMessage final
-{
-public:
-	bool                                          IsForward;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Index_0;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_MiniPenguinWeight_C_PlayAnimationMessage;
-
 // Function WBP_MiniPenguinWeight.WBP_MiniPenguinWeight_C.ExecuteUbergraph_WBP_MiniPenguinWeight
 // 0x0068 (0x0068 - 0x0000)
 struct WBP_MiniPenguinWeight_C_ExecuteUbergraph_WBP_MiniPenguinWeight final
@@ -66,6 +35,37 @@ public:
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0058(0x0010)()
 };
 DUMPER7_ASSERTS_WBP_MiniPenguinWeight_C_ExecuteUbergraph_WBP_MiniPenguinWeight;
+
+// Function WBP_MiniPenguinWeight.WBP_MiniPenguinWeight_C.PlayAnimationMessage
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_MiniPenguinWeight_C_PlayAnimationMessage final
+{
+public:
+	bool                                          IsForward;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_MiniPenguinWeight_C_PlayAnimationMessage;
+
+// Function WBP_MiniPenguinWeight.WBP_MiniPenguinWeight_C.SetColor
+// 0x0014 (0x0014 - 0x0000)
+struct WBP_MiniPenguinWeight_C_SetColor final
+{
+public:
+	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_MiniPenguinWeight_C_SetColor;
+
+// Function WBP_MiniPenguinWeight.WBP_MiniPenguinWeight_C.SetText
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_MiniPenguinWeight_C_SetText final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_MiniPenguinWeight_C_SetText;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

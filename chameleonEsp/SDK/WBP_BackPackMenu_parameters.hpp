@@ -19,37 +19,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_BackPackMenu.WBP_BackPackMenu_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WBP_BackPackMenu_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry_Tick;                                   // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime_Tick;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_BackPackMenu_C_Tick;
-
-// Function WBP_BackPackMenu.WBP_BackPackMenu_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_BackPackMenu_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_BackPackMenu_C_PreConstruct;
-
-// Function WBP_BackPackMenu.WBP_BackPackMenu_C.InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_BackPackMenu_C_InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_BackPackMenu_C_InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0;
-
 // Function WBP_BackPackMenu.WBP_BackPackMenu_C.ExecuteUbergraph_WBP_BackPackMenu
 // 0x00D8 (0x00D8 - 0x0000)
 struct WBP_BackPackMenu_C_ExecuteUbergraph_WBP_BackPackMenu final
@@ -76,6 +45,37 @@ public:
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_BackPackMenu_C_ExecuteUbergraph_WBP_BackPackMenu;
+
+// Function WBP_BackPackMenu.WBP_BackPackMenu_C.InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_BackPackMenu_C_InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_BackPackMenu_C_InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0;
+
+// Function WBP_BackPackMenu.WBP_BackPackMenu_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_BackPackMenu_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_BackPackMenu_C_PreConstruct;
+
+// Function WBP_BackPackMenu.WBP_BackPackMenu_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WBP_BackPackMenu_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_BackPackMenu_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

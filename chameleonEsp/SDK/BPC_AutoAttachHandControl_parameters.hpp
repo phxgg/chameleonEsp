@@ -14,6 +14,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BPC_AutoAttachHandControl.BPC_AutoAttachHandControl_C.ExecuteUbergraph_BPC_AutoAttachHandControl
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_AutoAttachHandControl_C_ExecuteUbergraph_BPC_AutoAttachHandControl final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_AutoAttachHandControl_C_ExecuteUbergraph_BPC_AutoAttachHandControl;
+
 // Function BPC_AutoAttachHandControl.BPC_AutoAttachHandControl_C.Grab
 // 0x0020 (0x0020 - 0x0000)
 struct BPC_AutoAttachHandControl_C_Grab final
@@ -26,15 +35,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_AutoAttachHandControl_C_Grab;
-
-// Function BPC_AutoAttachHandControl.BPC_AutoAttachHandControl_C.ExecuteUbergraph_BPC_AutoAttachHandControl
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_AutoAttachHandControl_C_ExecuteUbergraph_BPC_AutoAttachHandControl final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_AutoAttachHandControl_C_ExecuteUbergraph_BPC_AutoAttachHandControl;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

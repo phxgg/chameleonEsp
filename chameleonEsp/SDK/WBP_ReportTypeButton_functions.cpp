@@ -16,43 +16,31 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_ReportTypeButton.WBP_ReportTypeButton_C.SelectStateUpdate
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_ReportTypeButton.WBP_ReportTypeButton_C.BndEvt__WBP_ReportTypeButton_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_ReportTypeButton_C::SelectStateUpdate(bool State)
+void UWBP_ReportTypeButton_C::BndEvt__WBP_ReportTypeButton_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ReportTypeButton_C", "SelectStateUpdate");
+		Func = Class->GetFunction("WBP_ReportTypeButton_C", "BndEvt__WBP_ReportTypeButton_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
-	Params::WBP_ReportTypeButton_C_SelectStateUpdate Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_ReportTypeButton.WBP_ReportTypeButton_C.PreConstruct
+// Function WBP_ReportTypeButton.WBP_ReportTypeButton_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ReportTypeButton_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_ReportTypeButton_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ReportTypeButton_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_ReportTypeButton_C", "Construct");
 
-	Params::WBP_ReportTypeButton_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -76,31 +64,43 @@ void UWBP_ReportTypeButton_C::ExecuteUbergraph_WBP_ReportTypeButton(int32 EntryP
 }
 
 
-// Function WBP_ReportTypeButton.WBP_ReportTypeButton_C.Construct
+// Function WBP_ReportTypeButton.WBP_ReportTypeButton_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ReportTypeButton_C::Construct()
+void UWBP_ReportTypeButton_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ReportTypeButton_C", "Construct");
+		Func = Class->GetFunction("WBP_ReportTypeButton_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_ReportTypeButton_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_ReportTypeButton.WBP_ReportTypeButton_C.BndEvt__WBP_ReportTypeButton_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_ReportTypeButton.WBP_ReportTypeButton_C.SelectStateUpdate
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ReportTypeButton_C::BndEvt__WBP_ReportTypeButton_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+void UWBP_ReportTypeButton_C::SelectStateUpdate(bool State)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ReportTypeButton_C", "BndEvt__WBP_ReportTypeButton_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+		Func = Class->GetFunction("WBP_ReportTypeButton_C", "SelectStateUpdate");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_ReportTypeButton_C_SelectStateUpdate Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

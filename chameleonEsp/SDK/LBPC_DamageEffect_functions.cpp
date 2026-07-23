@@ -16,21 +16,59 @@
 
 SDK_NAMESPACE_START
 
-// Function LBPC_DamageEffect.LBPC_DamageEffect_C.SpawnStateChange
-// (BlueprintCallable, BlueprintEvent)
+// Function LBPC_DamageEffect.LBPC_DamageEffect_C.ExecuteUbergraph_LBPC_DamageEffect
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULBPC_DamageEffect_C::SpawnStateChange(bool State)
+void ULBPC_DamageEffect_C::ExecuteUbergraph_LBPC_DamageEffect(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_DamageEffect_C", "SpawnStateChange");
+		Func = Class->GetFunction("LBPC_DamageEffect_C", "ExecuteUbergraph_LBPC_DamageEffect");
 
-	Params::LBPC_DamageEffect_C_SpawnStateChange Parms{};
+	Params::LBPC_DamageEffect_C_ExecuteUbergraph_LBPC_DamageEffect Parms{};
 
-	Parms.State = State;
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LBPC_DamageEffect.LBPC_DamageEffect_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void ULBPC_DamageEffect_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LBPC_DamageEffect_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LBPC_DamageEffect.LBPC_DamageEffect_C.ReceiveParticleData
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<struct FBasicParticleData>&Data                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class UNiagaraSystem*                   NiagaraSystem_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   SimulationPositionOffset                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULBPC_DamageEffect_C::ReceiveParticleData(const TArray<struct FBasicParticleData>& Data, class UNiagaraSystem* NiagaraSystem_0, const struct FVector& SimulationPositionOffset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LBPC_DamageEffect_C", "ReceiveParticleData");
+
+	Params::LBPC_DamageEffect_C_ReceiveParticleData Parms{};
+
+	Parms.Data = std::move(Data);
+	Parms.NiagaraSystem_0 = NiagaraSystem_0;
+	Parms.SimulationPositionOffset = std::move(SimulationPositionOffset);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -56,59 +94,21 @@ void ULBPC_DamageEffect_C::SetDamage(double Multiply)
 }
 
 
-// Function LBPC_DamageEffect.LBPC_DamageEffect_C.ReceiveParticleData
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function LBPC_DamageEffect.LBPC_DamageEffect_C.SpawnStateChange
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const TArray<struct FBasicParticleData>&Data                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class UNiagaraSystem*                   NiagaraSystem                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   SimulationPositionOffset                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULBPC_DamageEffect_C::ReceiveParticleData(const TArray<struct FBasicParticleData>& Data, class UNiagaraSystem* NiagaraSystem, const struct FVector& SimulationPositionOffset)
+void ULBPC_DamageEffect_C::SpawnStateChange(bool State)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_DamageEffect_C", "ReceiveParticleData");
+		Func = Class->GetFunction("LBPC_DamageEffect_C", "SpawnStateChange");
 
-	Params::LBPC_DamageEffect_C_ReceiveParticleData Parms{};
+	Params::LBPC_DamageEffect_C_SpawnStateChange Parms{};
 
-	Parms.Data = std::move(Data);
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.SimulationPositionOffset = std::move(SimulationPositionOffset);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LBPC_DamageEffect.LBPC_DamageEffect_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void ULBPC_DamageEffect_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_DamageEffect_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function LBPC_DamageEffect.LBPC_DamageEffect_C.ExecuteUbergraph_LBPC_DamageEffect
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULBPC_DamageEffect_C::ExecuteUbergraph_LBPC_DamageEffect(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LBPC_DamageEffect_C", "ExecuteUbergraph_LBPC_DamageEffect");
-
-	Params::LBPC_DamageEffect_C_ExecuteUbergraph_LBPC_DamageEffect Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.State = State;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

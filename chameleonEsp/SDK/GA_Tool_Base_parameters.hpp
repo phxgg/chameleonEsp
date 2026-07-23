@@ -16,6 +16,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function GA_Tool_Base.GA_Tool_Base_C.EventReceived_1C4DAC504023E166C4A361AD9FA20411
+// 0x00B0 (0x00B0 - 0x0000)
+struct GA_Tool_Base_C_EventReceived_1C4DAC504023E166C4A361AD9FA20411 final
+{
+public:
+	struct FGameplayEventData                     Payload;                                           // 0x0000(0x00B0)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_GA_Tool_Base_C_EventReceived_1C4DAC504023E166C4A361AD9FA20411;
+
 // Function GA_Tool_Base.GA_Tool_Base_C.ExecuteUbergraph_GA_Tool_Base
 // 0x01E8 (0x01E8 - 0x0000)
 struct GA_Tool_Base_C_ExecuteUbergraph_GA_Tool_Base final
@@ -41,15 +50,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_GA_Tool_Base_C_ExecuteUbergraph_GA_Tool_Base;
-
-// Function GA_Tool_Base.GA_Tool_Base_C.EventReceived_1C4DAC504023E166C4A361AD9FA20411
-// 0x00B0 (0x00B0 - 0x0000)
-struct GA_Tool_Base_C_EventReceived_1C4DAC504023E166C4A361AD9FA20411 final
-{
-public:
-	struct FGameplayEventData                     Payload;                                           // 0x0000(0x00B0)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-DUMPER7_ASSERTS_GA_Tool_Base_C_EventReceived_1C4DAC504023E166C4A361AD9FA20411;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -29,10 +29,10 @@ public:
 	struct FVector2D                              RandomYawRange;                                    // 0x02C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void GenerateTree(const struct FRandomStream& Seed);
-	void Generate(const struct FRandomStream& Seed, int32 DepthIndex);
 	void ExecuteUbergraph_BP_TreeGenerater(int32 EntryPoint);
+	void Generate(const struct FRandomStream& Seed, int32 DepthIndex);
+	void GenerateTree(const struct FRandomStream& Seed);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

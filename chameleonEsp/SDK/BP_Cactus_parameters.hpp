@@ -17,6 +17,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_Cactus.BP_Cactus_C.BndEvt__BP_Cactus_BPC_DamageCollision_K2Node_ComponentBoundEvent_1_HitDamage__DelegateSignature
+// 0x0100 (0x0100 - 0x0000)
+struct BP_Cactus_C_BndEvt__BP_Cactus_BPC_DamageCollision_K2Node_ComponentBoundEvent_1_HitDamage__DelegateSignature final
+{
+public:
+	struct FHitResult                             Hit;                                               // 0x0000(0x0100)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+};
+DUMPER7_ASSERTS_BP_Cactus_C_BndEvt__BP_Cactus_BPC_DamageCollision_K2Node_ComponentBoundEvent_1_HitDamage__DelegateSignature;
+
 // Function BP_Cactus.BP_Cactus_C.ExecuteUbergraph_BP_Cactus
 // 0x02E0 (0x02E0 - 0x0000)
 struct BP_Cactus_C_ExecuteUbergraph_BP_Cactus final
@@ -66,15 +75,6 @@ public:
 	bool                                          CallFunc_ObjectIsA_ReturnValue;                    // 0x02D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_Cactus_C_ExecuteUbergraph_BP_Cactus;
-
-// Function BP_Cactus.BP_Cactus_C.BndEvt__BP_Cactus_BPC_DamageCollision_K2Node_ComponentBoundEvent_1_HitDamage__DelegateSignature
-// 0x0100 (0x0100 - 0x0000)
-struct BP_Cactus_C_BndEvt__BP_Cactus_BPC_DamageCollision_K2Node_ComponentBoundEvent_1_HitDamage__DelegateSignature final
-{
-public:
-	struct FHitResult                             Hit;                                               // 0x0000(0x0100)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_BP_Cactus_C_BndEvt__BP_Cactus_BPC_DamageCollision_K2Node_ComponentBoundEvent_1_HitDamage__DelegateSignature;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

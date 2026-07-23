@@ -28,8 +28,8 @@ public:
 	TArray<class UClass*>                         Containers;                                        // 0x02C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_ContainerGenerater(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

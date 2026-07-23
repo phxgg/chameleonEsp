@@ -16,51 +16,99 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_Config.WBP_Config_C.UpdateScreenEvent
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_Config.WBP_Config_C.BndEvt__WBP_Config_ApplyButton_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_Config_C::UpdateScreenEvent()
+void UWBP_Config_C::BndEvt__WBP_Config_ApplyButton_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Config_C", "UpdateScreenEvent");
+		Func = Class->GetFunction("WBP_Config_C", "BndEvt__WBP_Config_ApplyButton_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Config.WBP_Config_C.Show config
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          BeforeWidget                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function WBP_Config.WBP_Config_C.BndEvt__WBP_Config_LongTapButton_Back_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_Config_C::Show_config(class UWidget* BeforeWidget)
+void UWBP_Config_C::BndEvt__WBP_Config_LongTapButton_Back_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Config_C", "Show config");
+		Func = Class->GetFunction("WBP_Config_C", "BndEvt__WBP_Config_LongTapButton_Back_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature");
 
-	Params::WBP_Config_C_Show_config Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.BeforeWidget = BeforeWidget;
+
+// Function WBP_Config.WBP_Config_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_Config_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Config_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Config.WBP_Config_C.DeleteConfigWidget
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Config_C::DeleteConfigWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Config_C", "DeleteConfigWidget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Config.WBP_Config_C.ExecuteUbergraph_WBP_Config
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Config_C::ExecuteUbergraph_WBP_Config(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Config_C", "ExecuteUbergraph_WBP_Config");
+
+	Params::WBP_Config_C_ExecuteUbergraph_WBP_Config Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Config.WBP_Config_C.ScreenTypeSettingsUpdate
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_Config.WBP_Config_C.GetInitialFocusComponent
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUINavComponent*                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Config_C::ScreenTypeSettingsUpdate()
+class UUINavComponent* UWBP_Config_C::GetInitialFocusComponent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Config_C", "ScreenTypeSettingsUpdate");
+		Func = Class->GetFunction("WBP_Config_C", "GetInitialFocusComponent");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_Config_C_GetInitialFocusComponent Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -90,97 +138,49 @@ void UWBP_Config_C::InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0(const s
 }
 
 
-// Function WBP_Config.WBP_Config_C.GetInitialFocusComponent
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUINavComponent*                  ReturnValue_GetInitialFocusComponent                   (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function WBP_Config.WBP_Config_C.ScreenTypeSettingsUpdate
+// (Public, BlueprintCallable, BlueprintEvent)
 
-class UUINavComponent* UWBP_Config_C::GetInitialFocusComponent()
+void UWBP_Config_C::ScreenTypeSettingsUpdate()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Config_C", "GetInitialFocusComponent");
+		Func = Class->GetFunction("WBP_Config_C", "ScreenTypeSettingsUpdate");
 
-	Params::WBP_Config_C_GetInitialFocusComponent Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Config.WBP_Config_C.ExecuteUbergraph_WBP_Config
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_Config.WBP_Config_C.Show config
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          BeforeWidget                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Config_C::ExecuteUbergraph_WBP_Config(int32 EntryPoint)
+void UWBP_Config_C::Show_config(class UWidget* BeforeWidget)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Config_C", "ExecuteUbergraph_WBP_Config");
+		Func = Class->GetFunction("WBP_Config_C", "Show config");
 
-	Params::WBP_Config_C_ExecuteUbergraph_WBP_Config Parms{};
+	Params::WBP_Config_C_Show_config Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.BeforeWidget = BeforeWidget;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Config.WBP_Config_C.DeleteConfigWidget
+// Function WBP_Config.WBP_Config_C.UpdateScreenEvent
 // (BlueprintCallable, BlueprintEvent)
 
-void UWBP_Config_C::DeleteConfigWidget()
+void UWBP_Config_C::UpdateScreenEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Config_C", "DeleteConfigWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Config.WBP_Config_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_Config_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Config_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Config.WBP_Config_C.BndEvt__WBP_Config_LongTapButton_Back_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_Config_C::BndEvt__WBP_Config_LongTapButton_Back_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Config_C", "BndEvt__WBP_Config_LongTapButton_Back_K2Node_ComponentBoundEvent_1_PushEnd__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Config.WBP_Config_C.BndEvt__WBP_Config_ApplyButton_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_Config_C::BndEvt__WBP_Config_ApplyButton_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Config_C", "BndEvt__WBP_Config_ApplyButton_K2Node_ComponentBoundEvent_2_PushEnd__DelegateSignature");
+		Func = Class->GetFunction("WBP_Config_C", "UpdateScreenEvent");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

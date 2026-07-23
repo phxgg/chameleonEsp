@@ -24,10 +24,10 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_EnvironmentSystem_Tree_Sand_C;   // 0x0360(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void SpawnMaterial();
-	void ReplicateEvent();
-	void ReceiveDestroyed();
 	void ExecuteUbergraph_BP_EnvironmentSystem_Tree_Sand(int32 EntryPoint);
+	void ReceiveDestroyed();
+	void ReplicateEvent();
+	void SpawnMaterial();
 
 public:
 	static class UClass* StaticClass()

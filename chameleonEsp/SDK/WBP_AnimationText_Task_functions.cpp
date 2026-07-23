@@ -16,23 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_AnimationText_Task.WBP_AnimationText_Task_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_AnimationText_Task.WBP_AnimationText_Task_C.AnimationEndEvent
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_AnimationText_Task_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_AnimationText_Task_C::AnimationEndEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AnimationText_Task_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_AnimationText_Task_C", "AnimationEndEvent");
 
-	Params::WBP_AnimationText_Task_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -56,17 +50,23 @@ void UWBP_AnimationText_Task_C::ExecuteUbergraph_WBP_AnimationText_Task(int32 En
 }
 
 
-// Function WBP_AnimationText_Task.WBP_AnimationText_Task_C.AnimationEndEvent
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_AnimationText_Task.WBP_AnimationText_Task_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_AnimationText_Task_C::AnimationEndEvent()
+void UWBP_AnimationText_Task_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_AnimationText_Task_C", "AnimationEndEvent");
+		Func = Class->GetFunction("WBP_AnimationText_Task_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_AnimationText_Task_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

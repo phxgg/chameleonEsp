@@ -16,24 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_BaggageStatus.WBP_BaggageStatus_C.SetWeight
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_BaggageStatus_C_SetWeight final
-{
-public:
-	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_BaggageStatus_C_SetWeight;
-
-// Function WBP_BaggageStatus.WBP_BaggageStatus_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_BaggageStatus_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_BaggageStatus_C_PreConstruct;
-
 // Function WBP_BaggageStatus.WBP_BaggageStatus_C.ExecuteUbergraph_WBP_BaggageStatus
 // 0x0048 (0x0048 - 0x0000)
 struct WBP_BaggageStatus_C_ExecuteUbergraph_WBP_BaggageStatus final
@@ -51,6 +33,24 @@ public:
 	double                                        CallFunc_Lerp_ReturnValue;                         // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_BaggageStatus_C_ExecuteUbergraph_WBP_BaggageStatus;
+
+// Function WBP_BaggageStatus.WBP_BaggageStatus_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_BaggageStatus_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_BaggageStatus_C_PreConstruct;
+
+// Function WBP_BaggageStatus.WBP_BaggageStatus_C.SetWeight
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_BaggageStatus_C_SetWeight final
+{
+public:
+	double                                        Value;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_BaggageStatus_C_SetWeight;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

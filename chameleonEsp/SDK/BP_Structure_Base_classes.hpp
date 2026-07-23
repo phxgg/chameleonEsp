@@ -27,8 +27,8 @@ public:
 	struct FRandomStream                          RandomSeed;                                        // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor)
 
 public:
-	void Generate();
 	void ExecuteUbergraph_BP_Structure_Base(int32 EntryPoint);
+	void Generate();
 
 public:
 	static class UClass* StaticClass()

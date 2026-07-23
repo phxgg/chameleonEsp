@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ST_InstanceGroupDatas_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ST_InstanceGroupDatas_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -27,9 +27,9 @@ public:
 	struct FST_InstanceGroupDatas                 InstanceDatas;                                     // 0x02B8(0x0020)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void InstancePack();
 	void ExecuteUbergraph_BP_InstanceCreate_Base(int32 EntryPoint);
+	void InstancePack();
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()

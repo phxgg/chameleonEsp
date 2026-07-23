@@ -37,13 +37,13 @@ public:
 	struct FLinearColor                           Select_Color;                                      // 0x03A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_RadialMenu(int32 EntryPoint);
-	void SetItemDatasImageOnly(const TArray<struct FST_ItemCoreDatas>& CoreDatas);
-	void SetItemDatas(const TArray<struct FST_ItemCoreDatas>& CoreDatas);
-	void CurrentSelectionVelocity(const struct FVector2D& MouseVelocity);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	int32 GetRezultIndex(const struct FVector2D& InVec);
 	void GetSlideValue(double InputValue, int32 SplitSize, double SlideValue, int32* Rezult);
+	int32 GetRezultIndex(const struct FVector2D& InVec);
+	void PreConstruct(bool IsDesignTime);
+	void CurrentSelectionVelocity(const struct FVector2D& MouseVelocity);
+	void SetItemDatas(const TArray<struct FST_ItemCoreDatas>& CoreDatas);
+	void SetItemDatasImageOnly(const TArray<struct FST_ItemCoreDatas>& CoreDatas);
+	void ExecuteUbergraph_WBP_RadialMenu(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

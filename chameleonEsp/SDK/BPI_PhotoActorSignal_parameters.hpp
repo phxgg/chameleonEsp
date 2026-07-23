@@ -14,15 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPI_PhotoActorSignal.BPI_PhotoActorSignal_C.DeleteActor
-// 0x0008 (0x0008 - 0x0000)
-struct BPI_PhotoActorSignal_C_DeleteActor final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPI_PhotoActorSignal_C_DeleteActor;
-
 // Function BPI_PhotoActorSignal.BPI_PhotoActorSignal_C.AddActor
 // 0x0008 (0x0008 - 0x0000)
 struct BPI_PhotoActorSignal_C_AddActor final
@@ -31,6 +22,15 @@ public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPI_PhotoActorSignal_C_AddActor;
+
+// Function BPI_PhotoActorSignal.BPI_PhotoActorSignal_C.DeleteActor
+// 0x0008 (0x0008 - 0x0000)
+struct BPI_PhotoActorSignal_C_DeleteActor final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPI_PhotoActorSignal_C_DeleteActor;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

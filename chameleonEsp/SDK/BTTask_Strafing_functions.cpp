@@ -16,78 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BTTask_Strafing.BTTask_Strafing_C.Select World Direction
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EN_StrafingDirection                    Strafing_Direction                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            ControlePawn                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FVector*                         World_Direction                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBTTask_Strafing_C::Select_World_Direction(EN_StrafingDirection Strafing_Direction, class APawn* ControlePawn, struct FVector* World_Direction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTTask_Strafing_C", "Select World Direction");
-
-	Params::BTTask_Strafing_C_Select_World_Direction Parms{};
-
-	Parms.Strafing_Direction = Strafing_Direction;
-	Parms.ControlePawn = ControlePawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (World_Direction != nullptr)
-		*World_Direction = std::move(Parms.World_Direction);
-}
-
-
-// Function BTTask_Strafing.BTTask_Strafing_C.ReceiveTickAI
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AAIController*                    OwnerController_ReceiveTickAI                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            ControlledPawn_ReceiveTickAI                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// float                                   DeltaSeconds_ReceiveTickAI                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBTTask_Strafing_C::ReceiveTickAI(class AAIController* OwnerController_ReceiveTickAI, class APawn* ControlledPawn_ReceiveTickAI, float DeltaSeconds_ReceiveTickAI)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTTask_Strafing_C", "ReceiveTickAI");
-
-	Params::BTTask_Strafing_C_ReceiveTickAI Parms{};
-
-	Parms.OwnerController_ReceiveTickAI = OwnerController_ReceiveTickAI;
-	Parms.ControlledPawn_ReceiveTickAI = ControlledPawn_ReceiveTickAI;
-	Parms.DeltaSeconds_ReceiveTickAI = DeltaSeconds_ReceiveTickAI;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BTTask_Strafing.BTTask_Strafing_C.ReceiveExecuteAI
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AAIController*                    OwnerController_ReceiveExecuteAI                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            ControlledPawn_ReceiveExecuteAI                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBTTask_Strafing_C::ReceiveExecuteAI(class AAIController* OwnerController_ReceiveExecuteAI, class APawn* ControlledPawn_ReceiveExecuteAI)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTTask_Strafing_C", "ReceiveExecuteAI");
-
-	Params::BTTask_Strafing_C_ReceiveExecuteAI Parms{};
-
-	Parms.OwnerController_ReceiveExecuteAI = OwnerController_ReceiveExecuteAI;
-	Parms.ControlledPawn_ReceiveExecuteAI = ControlledPawn_ReceiveExecuteAI;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BTTask_Strafing.BTTask_Strafing_C.ExecuteUbergraph_BTTask_Strafing
 // (Final, UbergraphFunction)
 // Parameters:
@@ -105,6 +33,78 @@ void UBTTask_Strafing_C::ExecuteUbergraph_BTTask_Strafing(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BTTask_Strafing.BTTask_Strafing_C.ReceiveExecuteAI
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AAIController*                    OwnerController                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            ControlledPawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBTTask_Strafing_C::ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTTask_Strafing_C", "ReceiveExecuteAI");
+
+	Params::BTTask_Strafing_C_ReceiveExecuteAI Parms{};
+
+	Parms.OwnerController = OwnerController;
+	Parms.ControlledPawn = ControlledPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BTTask_Strafing.BTTask_Strafing_C.ReceiveTickAI
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AAIController*                    OwnerController                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            ControlledPawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBTTask_Strafing_C::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTTask_Strafing_C", "ReceiveTickAI");
+
+	Params::BTTask_Strafing_C_ReceiveTickAI Parms{};
+
+	Parms.OwnerController = OwnerController;
+	Parms.ControlledPawn = ControlledPawn;
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BTTask_Strafing.BTTask_Strafing_C.Select World Direction
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EN_StrafingDirection                    Strafing_Direction_0                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            ControlePawn                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         World_Direction                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBTTask_Strafing_C::Select_World_Direction(EN_StrafingDirection Strafing_Direction_0, class APawn* ControlePawn, struct FVector* World_Direction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTTask_Strafing_C", "Select World Direction");
+
+	Params::BTTask_Strafing_C_Select_World_Direction Parms{};
+
+	Parms.Strafing_Direction_0 = Strafing_Direction_0;
+	Parms.ControlePawn = ControlePawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (World_Direction != nullptr)
+		*World_Direction = std::move(Parms.World_Direction);
 }
 
 

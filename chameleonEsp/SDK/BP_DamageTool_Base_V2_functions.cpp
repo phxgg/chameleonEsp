@@ -16,187 +16,264 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.ExecuteUbergraph_BP_DamageTool_Base_V2
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.IsChangeImage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   IsInteract                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText*                            OverrideText                                           (Parm, OutParm)
 
-void ABP_DamageTool_Base_V2_C::ExecuteUbergraph_BP_DamageTool_Base_V2(int32 EntryPoint)
+void ABP_DamageTool_Base_V2_C::IsChangeImage(bool* IsInteract, class FText* OverrideText)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "ExecuteUbergraph_BP_DamageTool_Base_V2");
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "IsChangeImage");
 
-	Params::BP_DamageTool_Base_V2_C_ExecuteUbergraph_BP_DamageTool_Base_V2 Parms{};
+	Params::BP_DamageTool_Base_V2_C_IsChangeImage Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsInteract != nullptr)
+		*IsInteract = Parms.IsInteract;
+
+	if (OverrideText != nullptr)
+		*OverrideText = std::move(Parms.OverrideText);
+}
+
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.ApplyDamage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                Sweep_Result                                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+
+void ABP_DamageTool_Base_V2_C::ApplyDamage(class UObject* OtherActor, const struct FHitResult& Sweep_Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "ApplyDamage");
+
+	Params::BP_DamageTool_Base_V2_C_ApplyDamage Parms{};
+
+	Parms.OtherActor = OtherActor;
+	Parms.Sweep_Result = std::move(Sweep_Result);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.BndEvt__BP_DamageTool_Base_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_1_OnUniqueEvent__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class FName                             EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DamageTool_Base_V2_C::BndEvt__BP_DamageTool_Base_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_1_OnUniqueEvent__DelegateSignature(class FName EventName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "BndEvt__BP_DamageTool_Base_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_1_OnUniqueEvent__DelegateSignature");
-
-	Params::BP_DamageTool_Base_V2_C_BndEvt__BP_DamageTool_Base_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_1_OnUniqueEvent__DelegateSignature Parms{};
-
-	Parms.EventName = EventName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.DefaultMontagePlay
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnNotifyEnd_09216A5F450F81DD4AA575987ACD9FD6
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_DamageTool_Base_V2_C::DefaultMontagePlay()
+void ABP_DamageTool_Base_V2_C::OnNotifyEnd_09216A5F450F81DD4AA575987ACD9FD6(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "DefaultMontagePlay");
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnNotifyEnd_09216A5F450F81DD4AA575987ACD9FD6");
+
+	Params::BP_DamageTool_Base_V2_C_OnNotifyEnd_09216A5F450F81DD4AA575987ACD9FD6 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnNotifyBegin_09216A5F450F81DD4AA575987ACD9FD6
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DamageTool_Base_V2_C::OnNotifyBegin_09216A5F450F81DD4AA575987ACD9FD6(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnNotifyBegin_09216A5F450F81DD4AA575987ACD9FD6");
+
+	Params::BP_DamageTool_Base_V2_C_OnNotifyBegin_09216A5F450F81DD4AA575987ACD9FD6 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnInterrupted_09216A5F450F81DD4AA575987ACD9FD6
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DamageTool_Base_V2_C::OnInterrupted_09216A5F450F81DD4AA575987ACD9FD6(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnInterrupted_09216A5F450F81DD4AA575987ACD9FD6");
+
+	Params::BP_DamageTool_Base_V2_C_OnInterrupted_09216A5F450F81DD4AA575987ACD9FD6 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnBlendOut_09216A5F450F81DD4AA575987ACD9FD6
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DamageTool_Base_V2_C::OnBlendOut_09216A5F450F81DD4AA575987ACD9FD6(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnBlendOut_09216A5F450F81DD4AA575987ACD9FD6");
+
+	Params::BP_DamageTool_Base_V2_C_OnBlendOut_09216A5F450F81DD4AA575987ACD9FD6 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnCompleted_09216A5F450F81DD4AA575987ACD9FD6
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DamageTool_Base_V2_C::OnCompleted_09216A5F450F81DD4AA575987ACD9FD6(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnCompleted_09216A5F450F81DD4AA575987ACD9FD6");
+
+	Params::BP_DamageTool_Base_V2_C_OnCompleted_09216A5F450F81DD4AA575987ACD9FD6 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnNotifyEnd_F05B6598419A998A4627419382E250E0
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DamageTool_Base_V2_C::OnNotifyEnd_F05B6598419A998A4627419382E250E0(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnNotifyEnd_F05B6598419A998A4627419382E250E0");
+
+	Params::BP_DamageTool_Base_V2_C_OnNotifyEnd_F05B6598419A998A4627419382E250E0 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnNotifyBegin_F05B6598419A998A4627419382E250E0
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DamageTool_Base_V2_C::OnNotifyBegin_F05B6598419A998A4627419382E250E0(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnNotifyBegin_F05B6598419A998A4627419382E250E0");
+
+	Params::BP_DamageTool_Base_V2_C_OnNotifyBegin_F05B6598419A998A4627419382E250E0 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnInterrupted_F05B6598419A998A4627419382E250E0
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DamageTool_Base_V2_C::OnInterrupted_F05B6598419A998A4627419382E250E0(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnInterrupted_F05B6598419A998A4627419382E250E0");
+
+	Params::BP_DamageTool_Base_V2_C_OnInterrupted_F05B6598419A998A4627419382E250E0 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnBlendOut_F05B6598419A998A4627419382E250E0
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DamageTool_Base_V2_C::OnBlendOut_F05B6598419A998A4627419382E250E0(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnBlendOut_F05B6598419A998A4627419382E250E0");
+
+	Params::BP_DamageTool_Base_V2_C_OnBlendOut_F05B6598419A998A4627419382E250E0 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnCompleted_F05B6598419A998A4627419382E250E0
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DamageTool_Base_V2_C::OnCompleted_F05B6598419A998A4627419382E250E0(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnCompleted_F05B6598419A998A4627419382E250E0");
+
+	Params::BP_DamageTool_Base_V2_C_OnCompleted_F05B6598419A998A4627419382E250E0 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.CollisionReset
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_DamageTool_Base_V2_C::CollisionReset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "CollisionReset");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.PickState
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonCharacter_Main_C*  Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DamageTool_Base_V2_C::PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "PickState");
-
-	Params::BP_DamageTool_Base_V2_C_PickState Parms{};
-
-	Parms.State = State;
-	Parms.Character = Character;
-	Parms.SlotIndex = SlotIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.SetMeshDatas
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    KeepScale                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DamageTool_Base_V2_C::SetMeshDatas(bool KeepScale)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "SetMeshDatas");
-
-	Params::BP_DamageTool_Base_V2_C_SetMeshDatas Parms{};
-
-	Parms.KeepScale = KeepScale;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.Shot
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    PressState_Shot                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  PushTime_Shot                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonCharacter_Main_C*  SourcePlayer_Shot                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DamageTool_Base_V2_C::Shot(bool PressState_Shot, double PushTime_Shot, class ABP_FirstPersonCharacter_Main_C* SourcePlayer_Shot)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "Shot");
-
-	Params::BP_DamageTool_Base_V2_C_Shot Parms{};
-
-	Parms.PressState_Shot = PressState_Shot;
-	Parms.PushTime_Shot = PushTime_Shot;
-	Parms.SourcePlayer_Shot = SourcePlayer_Shot;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_DamageTool_Base_V2_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.Attack_AC_Remote
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  TimeRange                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             ComponentName                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  DamageMultiply                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  StanMultiply                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DamageTool_Base_V2_C::Attack_AC_Remote(double TimeRange, class FName ComponentName, double DamageMultiply, double StanMultiply)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "Attack_AC_Remote");
-
-	Params::BP_DamageTool_Base_V2_C_Attack_AC_Remote Parms{};
-
-	Parms.TimeRange = TimeRange;
-	Parms.ComponentName = ComponentName;
-	Parms.DamageMultiply = DamageMultiply;
-	Parms.StanMultiply = StanMultiply;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.Combo
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  TimeRange                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             ComboName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DamageTool_Base_V2_C::Combo(double TimeRange, class FName ComboName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "Combo");
-
-	Params::BP_DamageTool_Base_V2_C_Combo Parms{};
-
-	Parms.TimeRange = TimeRange;
-	Parms.ComboName = ComboName;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -228,264 +305,187 @@ void ABP_DamageTool_Base_V2_C::Attack_AC(double TimeRange, class FName AttackNam
 }
 
 
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.CollisionReset
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.Combo
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  TimeRange                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             ComboName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_DamageTool_Base_V2_C::CollisionReset()
+void ABP_DamageTool_Base_V2_C::Combo(double TimeRange, class FName ComboName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "CollisionReset");
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "Combo");
+
+	Params::BP_DamageTool_Base_V2_C_Combo Parms{};
+
+	Parms.TimeRange = TimeRange;
+	Parms.ComboName = ComboName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.Attack_AC_Remote
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  TimeRange                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             ComponentName                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  DamageMultiply                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  StanMultiply                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DamageTool_Base_V2_C::Attack_AC_Remote(double TimeRange, class FName ComponentName, double DamageMultiply, double StanMultiply)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "Attack_AC_Remote");
+
+	Params::BP_DamageTool_Base_V2_C_Attack_AC_Remote Parms{};
+
+	Parms.TimeRange = TimeRange;
+	Parms.ComponentName = ComponentName;
+	Parms.DamageMultiply = DamageMultiply;
+	Parms.StanMultiply = StanMultiply;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_DamageTool_Base_V2_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnCompleted_F05B6598419A998A4627419382E250E0
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DamageTool_Base_V2_C::OnCompleted_F05B6598419A998A4627419382E250E0(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnCompleted_F05B6598419A998A4627419382E250E0");
-
-	Params::BP_DamageTool_Base_V2_C_OnCompleted_F05B6598419A998A4627419382E250E0 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnBlendOut_F05B6598419A998A4627419382E250E0
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DamageTool_Base_V2_C::OnBlendOut_F05B6598419A998A4627419382E250E0(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnBlendOut_F05B6598419A998A4627419382E250E0");
-
-	Params::BP_DamageTool_Base_V2_C_OnBlendOut_F05B6598419A998A4627419382E250E0 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnInterrupted_F05B6598419A998A4627419382E250E0
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DamageTool_Base_V2_C::OnInterrupted_F05B6598419A998A4627419382E250E0(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnInterrupted_F05B6598419A998A4627419382E250E0");
-
-	Params::BP_DamageTool_Base_V2_C_OnInterrupted_F05B6598419A998A4627419382E250E0 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnNotifyBegin_F05B6598419A998A4627419382E250E0
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DamageTool_Base_V2_C::OnNotifyBegin_F05B6598419A998A4627419382E250E0(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnNotifyBegin_F05B6598419A998A4627419382E250E0");
-
-	Params::BP_DamageTool_Base_V2_C_OnNotifyBegin_F05B6598419A998A4627419382E250E0 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnNotifyEnd_F05B6598419A998A4627419382E250E0
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DamageTool_Base_V2_C::OnNotifyEnd_F05B6598419A998A4627419382E250E0(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnNotifyEnd_F05B6598419A998A4627419382E250E0");
-
-	Params::BP_DamageTool_Base_V2_C_OnNotifyEnd_F05B6598419A998A4627419382E250E0 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnCompleted_09216A5F450F81DD4AA575987ACD9FD6
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DamageTool_Base_V2_C::OnCompleted_09216A5F450F81DD4AA575987ACD9FD6(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnCompleted_09216A5F450F81DD4AA575987ACD9FD6");
-
-	Params::BP_DamageTool_Base_V2_C_OnCompleted_09216A5F450F81DD4AA575987ACD9FD6 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnBlendOut_09216A5F450F81DD4AA575987ACD9FD6
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DamageTool_Base_V2_C::OnBlendOut_09216A5F450F81DD4AA575987ACD9FD6(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnBlendOut_09216A5F450F81DD4AA575987ACD9FD6");
-
-	Params::BP_DamageTool_Base_V2_C_OnBlendOut_09216A5F450F81DD4AA575987ACD9FD6 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnInterrupted_09216A5F450F81DD4AA575987ACD9FD6
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DamageTool_Base_V2_C::OnInterrupted_09216A5F450F81DD4AA575987ACD9FD6(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnInterrupted_09216A5F450F81DD4AA575987ACD9FD6");
-
-	Params::BP_DamageTool_Base_V2_C_OnInterrupted_09216A5F450F81DD4AA575987ACD9FD6 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnNotifyBegin_09216A5F450F81DD4AA575987ACD9FD6
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DamageTool_Base_V2_C::OnNotifyBegin_09216A5F450F81DD4AA575987ACD9FD6(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnNotifyBegin_09216A5F450F81DD4AA575987ACD9FD6");
-
-	Params::BP_DamageTool_Base_V2_C_OnNotifyBegin_09216A5F450F81DD4AA575987ACD9FD6 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.OnNotifyEnd_09216A5F450F81DD4AA575987ACD9FD6
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_DamageTool_Base_V2_C::OnNotifyEnd_09216A5F450F81DD4AA575987ACD9FD6(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "OnNotifyEnd_09216A5F450F81DD4AA575987ACD9FD6");
-
-	Params::BP_DamageTool_Base_V2_C_OnNotifyEnd_09216A5F450F81DD4AA575987ACD9FD6 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.ApplyDamage
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.Shot
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                Sweep_Result                                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// bool                                    PressState                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  PushTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C*  SourcePlayer                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_DamageTool_Base_V2_C::ApplyDamage(class UObject* OtherActor, const struct FHitResult& Sweep_Result)
+void ABP_DamageTool_Base_V2_C::Shot(bool PressState, double PushTime, class ABP_FirstPersonCharacter_Main_C* SourcePlayer)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "ApplyDamage");
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "Shot");
 
-	Params::BP_DamageTool_Base_V2_C_ApplyDamage Parms{};
+	Params::BP_DamageTool_Base_V2_C_Shot Parms{};
 
-	Parms.OtherActor = OtherActor;
-	Parms.Sweep_Result = std::move(Sweep_Result);
+	Parms.PressState = PressState;
+	Parms.PushTime = PushTime;
+	Parms.SourcePlayer = SourcePlayer;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.IsChangeImage
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.SetMeshDatas
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool*                                   IsInteract                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText*                            OverrideText                                           (Parm, OutParm)
+// bool                                    KeepScale                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_DamageTool_Base_V2_C::IsChangeImage(bool* IsInteract, class FText* OverrideText)
+void ABP_DamageTool_Base_V2_C::SetMeshDatas(bool KeepScale)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "IsChangeImage");
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "SetMeshDatas");
 
-	Params::BP_DamageTool_Base_V2_C_IsChangeImage Parms{};
+	Params::BP_DamageTool_Base_V2_C_SetMeshDatas Parms{};
+
+	Parms.KeepScale = KeepScale;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	if (IsInteract != nullptr)
-		*IsInteract = Parms.IsInteract;
 
-	if (OverrideText != nullptr)
-		*OverrideText = std::move(Parms.OverrideText);
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.PickState
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C*  Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DamageTool_Base_V2_C::PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "PickState");
+
+	Params::BP_DamageTool_Base_V2_C_PickState Parms{};
+
+	Parms.State = State;
+	Parms.Character = Character;
+	Parms.SlotIndex = SlotIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.DefaultMontagePlay
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_DamageTool_Base_V2_C::DefaultMontagePlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "DefaultMontagePlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.BndEvt__BP_DamageTool_Base_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_1_OnUniqueEvent__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class FName                             EventName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DamageTool_Base_V2_C::BndEvt__BP_DamageTool_Base_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_1_OnUniqueEvent__DelegateSignature(class FName EventName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "BndEvt__BP_DamageTool_Base_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_1_OnUniqueEvent__DelegateSignature");
+
+	Params::BP_DamageTool_Base_V2_C_BndEvt__BP_DamageTool_Base_V2_BPC_ComboControl_K2Node_ComponentBoundEvent_1_OnUniqueEvent__DelegateSignature Parms{};
+
+	Parms.EventName = EventName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DamageTool_Base_V2.BP_DamageTool_Base_V2_C.ExecuteUbergraph_BP_DamageTool_Base_V2
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DamageTool_Base_V2_C::ExecuteUbergraph_BP_DamageTool_Base_V2(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DamageTool_Base_V2_C", "ExecuteUbergraph_BP_DamageTool_Base_V2");
+
+	Params::BP_DamageTool_Base_V2_C_ExecuteUbergraph_BP_DamageTool_Base_V2 Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

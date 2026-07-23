@@ -16,37 +16,59 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.ScreenTypeSettingsUpdate
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.ApplySettings
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_ConfigGameGeneral_C::ScreenTypeSettingsUpdate()
+void UWBP_ConfigGameGeneral_C::ApplySettings()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigGameGeneral_C", "ScreenTypeSettingsUpdate");
+		Func = Class->GetFunction("WBP_ConfigGameGeneral_C", "ApplySettings");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.BndEvt__WBP_ConfigGameGeneral_WBP_SettingSlider_Sencibility_K2Node_ComponentBoundEvent_0_UpdateSettingValue__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_ConfigGameGeneral_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_ConfigGameGeneral_C::BndEvt__WBP_ConfigGameGeneral_WBP_SettingSlider_Sencibility_K2Node_ComponentBoundEvent_0_UpdateSettingValue__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigGameGeneral_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_ConfigGameGeneral_C", "BndEvt__WBP_ConfigGameGeneral_WBP_SettingSlider_Sencibility_K2Node_ComponentBoundEvent_0_UpdateSettingValue__DelegateSignature");
 
-	Params::WBP_ConfigGameGeneral_C_PreConstruct Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_ConfigGameGeneral_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigGameGeneral_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.DeleteConfigWidget
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_ConfigGameGeneral_C::DeleteConfigWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ConfigGameGeneral_C", "DeleteConfigWidget");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -70,57 +92,35 @@ void UWBP_ConfigGameGeneral_C::ExecuteUbergraph_WBP_ConfigGameGeneral(int32 Entr
 }
 
 
-// Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.DeleteConfigWidget
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_ConfigGameGeneral_C::DeleteConfigWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigGameGeneral_C", "DeleteConfigWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.Construct
+// Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ConfigGameGeneral_C::Construct()
+void UWBP_ConfigGameGeneral_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigGameGeneral_C", "Construct");
+		Func = Class->GetFunction("WBP_ConfigGameGeneral_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_ConfigGameGeneral_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.BndEvt__WBP_ConfigGameGeneral_WBP_SettingSlider_Sencibility_K2Node_ComponentBoundEvent_0_UpdateSettingValue__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.ScreenTypeSettingsUpdate
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_ConfigGameGeneral_C::BndEvt__WBP_ConfigGameGeneral_WBP_SettingSlider_Sencibility_K2Node_ComponentBoundEvent_0_UpdateSettingValue__DelegateSignature()
+void UWBP_ConfigGameGeneral_C::ScreenTypeSettingsUpdate()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigGameGeneral_C", "BndEvt__WBP_ConfigGameGeneral_WBP_SettingSlider_Sencibility_K2Node_ComponentBoundEvent_0_UpdateSettingValue__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_ConfigGameGeneral.WBP_ConfigGameGeneral_C.ApplySettings
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_ConfigGameGeneral_C::ApplySettings()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ConfigGameGeneral_C", "ApplySettings");
+		Func = Class->GetFunction("WBP_ConfigGameGeneral_C", "ScreenTypeSettingsUpdate");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -26,10 +26,10 @@ public:
 	class UBillboardComponent*                    SpawnPosition1;                                    // 0x0370(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SpawnMaterial();
-	void ReplicateEvent();
-	void ReceiveDestroyed();
 	void ExecuteUbergraph_BP_EnvironmentSystem_Ruins(int32 EntryPoint);
+	void ReceiveDestroyed();
+	void ReplicateEvent();
+	void SpawnMaterial();
 
 public:
 	static class UClass* StaticClass()

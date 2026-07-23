@@ -18,56 +18,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.UpdateCompressedTextIndex
-// 0x0004 (0x0004 - 0x0000)
-struct LongTapButton_OnAnimation_C_UpdateCompressedTextIndex final
-{
-public:
-	int32                                         CompressedTextIndex;                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LongTapButton_OnAnimation_C_UpdateCompressedTextIndex;
-
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.SetRandomMiniPneguinText
-// 0x0014 (0x0014 - 0x0000)
-struct LongTapButton_OnAnimation_C_SetRandomMiniPneguinText final
-{
-public:
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LongTapButton_OnAnimation_C_SetRandomMiniPneguinText;
-
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.SetActiveState
-// 0x0001 (0x0001 - 0x0000)
-struct LongTapButton_OnAnimation_C_SetActiveState final
-{
-public:
-	bool                                          ActiveState;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LongTapButton_OnAnimation_C_SetActiveState;
-
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct LongTapButton_OnAnimation_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_LongTapButton_OnAnimation_C_PreConstruct;
-
-// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.GetText
-// 0x0010 (0x0010 - 0x0000)
-struct LongTapButton_OnAnimation_C_GetText final
-{
-public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
-};
-DUMPER7_ASSERTS_LongTapButton_OnAnimation_C_GetText;
-
 // Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.ExecuteUbergraph_LongTapButton_OnAnimation
 // 0x0108 (0x0108 - 0x0000)
 struct LongTapButton_OnAnimation_C_ExecuteUbergraph_LongTapButton_OnAnimation final
@@ -109,6 +59,56 @@ public:
 	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_LongTapButton_OnAnimation_C_ExecuteUbergraph_LongTapButton_OnAnimation;
+
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.GetText
+// 0x0010 (0x0010 - 0x0000)
+struct LongTapButton_OnAnimation_C_GetText final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+};
+DUMPER7_ASSERTS_LongTapButton_OnAnimation_C_GetText;
+
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct LongTapButton_OnAnimation_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LongTapButton_OnAnimation_C_PreConstruct;
+
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.SetActiveState
+// 0x0001 (0x0001 - 0x0000)
+struct LongTapButton_OnAnimation_C_SetActiveState final
+{
+public:
+	bool                                          ActiveState_0;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LongTapButton_OnAnimation_C_SetActiveState;
+
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.SetRandomMiniPneguinText
+// 0x0014 (0x0014 - 0x0000)
+struct LongTapButton_OnAnimation_C_SetRandomMiniPneguinText final
+{
+public:
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LongTapButton_OnAnimation_C_SetRandomMiniPneguinText;
+
+// Function LongTapButton_OnAnimation.LongTapButton_OnAnimation_C.UpdateCompressedTextIndex
+// 0x0004 (0x0004 - 0x0000)
+struct LongTapButton_OnAnimation_C_UpdateCompressedTextIndex final
+{
+public:
+	int32                                         CompressedTextIndex_0;                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LongTapButton_OnAnimation_C_UpdateCompressedTextIndex;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,35 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_GlueValueText.WBP_GlueValueText_C.UpdateBarWidth
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_GlueValueText_C::UpdateBarWidth()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GlueValueText_C", "UpdateBarWidth");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GlueValueText.WBP_GlueValueText_C.SetText
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_GlueValueText.WBP_GlueValueText_C.ExecuteUbergraph_WBP_GlueValueText
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_GlueValueText_C::SetText(const class FText& InText)
+void UWBP_GlueValueText_C::ExecuteUbergraph_WBP_GlueValueText(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GlueValueText_C", "SetText");
+		Func = Class->GetFunction("WBP_GlueValueText_C", "ExecuteUbergraph_WBP_GlueValueText");
 
-	Params::WBP_GlueValueText_C_SetText Parms{};
+	Params::WBP_GlueValueText_C_ExecuteUbergraph_WBP_GlueValueText Parms{};
 
-	Parms.InText = std::move(InText);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -70,23 +56,37 @@ void UWBP_GlueValueText_C::SetBarWidth(double Desired_Size_X)
 }
 
 
-// Function WBP_GlueValueText.WBP_GlueValueText_C.ExecuteUbergraph_WBP_GlueValueText
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_GlueValueText.WBP_GlueValueText_C.SetText
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWBP_GlueValueText_C::ExecuteUbergraph_WBP_GlueValueText(int32 EntryPoint)
+void UWBP_GlueValueText_C::SetText(const class FText& InText)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GlueValueText_C", "ExecuteUbergraph_WBP_GlueValueText");
+		Func = Class->GetFunction("WBP_GlueValueText_C", "SetText");
 
-	Params::WBP_GlueValueText_C_ExecuteUbergraph_WBP_GlueValueText Parms{};
+	Params::WBP_GlueValueText_C_SetText Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InText = std::move(InText);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_GlueValueText.WBP_GlueValueText_C.UpdateBarWidth
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_GlueValueText_C::UpdateBarWidth()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_GlueValueText_C", "UpdateBarWidth");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

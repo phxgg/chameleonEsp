@@ -16,79 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_announcement.WBP_announcement_C.SetText
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_announcement.WBP_announcement_C.ExecuteUbergraph_WBP_announcement
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_announcement_C::SetText(const class FText& Text, int32 Index_0)
+void UWBP_announcement_C::ExecuteUbergraph_WBP_announcement(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_announcement_C", "SetText");
+		Func = Class->GetFunction("WBP_announcement_C", "ExecuteUbergraph_WBP_announcement");
 
-	Params::WBP_announcement_C_SetText Parms{};
+	Params::WBP_announcement_C_ExecuteUbergraph_WBP_announcement Parms{};
 
-	Parms.Text = std::move(Text);
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_announcement.WBP_announcement_C.SetColor
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FLinearColor&              Color                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_announcement_C::SetColor(const struct FLinearColor& Color, int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_announcement_C", "SetColor");
-
-	Params::WBP_announcement_C_SetColor Parms{};
-
-	Parms.Color = std::move(Color);
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_announcement.WBP_announcement_C.RemoveWidget
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_announcement_C::RemoveWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_announcement_C", "RemoveWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_announcement.WBP_announcement_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_announcement_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_announcement_C", "PreConstruct");
-
-	Params::WBP_announcement_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -116,21 +58,79 @@ void UWBP_announcement_C::PlayAnimationMessage(bool IsForward, int32 Index_0)
 }
 
 
-// Function WBP_announcement.WBP_announcement_C.ExecuteUbergraph_WBP_announcement
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_announcement.WBP_announcement_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_announcement_C::ExecuteUbergraph_WBP_announcement(int32 EntryPoint)
+void UWBP_announcement_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_announcement_C", "ExecuteUbergraph_WBP_announcement");
+		Func = Class->GetFunction("WBP_announcement_C", "PreConstruct");
 
-	Params::WBP_announcement_C_ExecuteUbergraph_WBP_announcement Parms{};
+	Params::WBP_announcement_C_PreConstruct Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_announcement.WBP_announcement_C.RemoveWidget
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_announcement_C::RemoveWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_announcement_C", "RemoveWidget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_announcement.WBP_announcement_C.SetColor
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FLinearColor&              Color                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_announcement_C::SetColor(const struct FLinearColor& Color, int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_announcement_C", "SetColor");
+
+	Params::WBP_announcement_C_SetColor Parms{};
+
+	Parms.Color = std::move(Color);
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_announcement.WBP_announcement_C.SetText
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_announcement_C::SetText(const class FText& Text, int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_announcement_C", "SetText");
+
+	Params::WBP_announcement_C_SetText Parms{};
+
+	Parms.Text = std::move(Text);
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

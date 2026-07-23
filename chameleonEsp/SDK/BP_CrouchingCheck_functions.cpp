@@ -16,40 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_CrouchingCheck.BP_CrouchingCheck_C.Trigger
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FSimulationTickParams&     Params_Trigger                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-
-void UBP_CrouchingCheck_C::Trigger(const struct FSimulationTickParams& Params_Trigger)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CrouchingCheck_C", "Trigger");
-
-	Params::BP_CrouchingCheck_C_Trigger Parms{};
-
-	Parms.Params_Trigger = std::move(Params_Trigger);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CrouchingCheck.BP_CrouchingCheck_C.K2_OnRegistered
-// (Event, Protected, BlueprintEvent)
-
-void UBP_CrouchingCheck_C::K2_OnRegistered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CrouchingCheck_C", "K2_OnRegistered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_CrouchingCheck.BP_CrouchingCheck_C.ExecuteUbergraph_BP_CrouchingCheck
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -70,13 +36,47 @@ void UBP_CrouchingCheck_C::ExecuteUbergraph_BP_CrouchingCheck(int32 EntryPoint)
 }
 
 
+// Function BP_CrouchingCheck.BP_CrouchingCheck_C.K2_OnRegistered
+// (Event, Protected, BlueprintEvent)
+
+void UBP_CrouchingCheck_C::K2_OnRegistered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CrouchingCheck_C", "K2_OnRegistered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CrouchingCheck.BP_CrouchingCheck_C.Trigger
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FSimulationTickParams&     Params_0                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+
+void UBP_CrouchingCheck_C::Trigger(const struct FSimulationTickParams& Params_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CrouchingCheck_C", "Trigger");
+
+	Params::BP_CrouchingCheck_C_Trigger Parms{};
+
+	Parms.Params_0 = std::move(Params_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_CrouchingCheck.BP_CrouchingCheck_C.Evaluate
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// const struct FSimulationTickParams&     Params_Evaluate                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// struct FTransitionEvalResult            ReturnValue_Evaluate                                   (Parm, OutParm, ReturnParm, NoDestructor)
+// const struct FSimulationTickParams&     Params_0                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// struct FTransitionEvalResult            ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor)
 
-struct FTransitionEvalResult UBP_CrouchingCheck_C::Evaluate(const struct FSimulationTickParams& Params_Evaluate) const
+struct FTransitionEvalResult UBP_CrouchingCheck_C::Evaluate(const struct FSimulationTickParams& Params_0) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -85,7 +85,7 @@ struct FTransitionEvalResult UBP_CrouchingCheck_C::Evaluate(const struct FSimula
 
 	Params::BP_CrouchingCheck_C_Evaluate Parms{};
 
-	Parms.Params_Evaluate = std::move(Params_Evaluate);
+	Parms.Params_0 = std::move(Params_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 

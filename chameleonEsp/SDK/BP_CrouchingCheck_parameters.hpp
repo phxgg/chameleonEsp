@@ -17,15 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_CrouchingCheck.BP_CrouchingCheck_C.Trigger
-// 0x0120 (0x0120 - 0x0000)
-struct BP_CrouchingCheck_C_Trigger final
-{
-public:
-	struct FSimulationTickParams                  Params_Trigger;                                    // 0x0000(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-};
-DUMPER7_ASSERTS_BP_CrouchingCheck_C_Trigger;
-
 // Function BP_CrouchingCheck.BP_CrouchingCheck_C.ExecuteUbergraph_BP_CrouchingCheck
 // 0x0128 (0x0128 - 0x0000)
 struct BP_CrouchingCheck_C_ExecuteUbergraph_BP_CrouchingCheck final
@@ -37,13 +28,22 @@ public:
 };
 DUMPER7_ASSERTS_BP_CrouchingCheck_C_ExecuteUbergraph_BP_CrouchingCheck;
 
+// Function BP_CrouchingCheck.BP_CrouchingCheck_C.Trigger
+// 0x0120 (0x0120 - 0x0000)
+struct BP_CrouchingCheck_C_Trigger final
+{
+public:
+	struct FSimulationTickParams                  Params_0;                                          // 0x0000(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+};
+DUMPER7_ASSERTS_BP_CrouchingCheck_C_Trigger;
+
 // Function BP_CrouchingCheck.BP_CrouchingCheck_C.Evaluate
 // 0x0228 (0x0228 - 0x0000)
 struct BP_CrouchingCheck_C_Evaluate final
 {
 public:
-	struct FSimulationTickParams                  Params_Evaluate;                                   // 0x0000(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-	struct FTransitionEvalResult                  ReturnValue_Evaluate;                              // 0x0120(0x0008)(Parm, OutParm, ReturnParm, NoDestructor)
+	struct FSimulationTickParams                  Params_0;                                          // 0x0000(0x0120)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+	struct FTransitionEvalResult                  ReturnValue;                                       // 0x0120(0x0008)(Parm, OutParm, ReturnParm, NoDestructor)
 	const class UStanceSettings*                  CallFunc_FindSharedSettings_BP_ReturnValue;        // 0x0128(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_K2_GetDataFromCollection_DidSucceed;      // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])

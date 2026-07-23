@@ -30,21 +30,21 @@ public:
 	struct FVector                                GrabCentorPosition;                                // 0x0108(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UseItem_Server_(bool State_UseItem_Server_);
-	void UseItem_Replicate_(bool State_UseItem_Replicate_);
-	void UseItem_Local_(bool State_UseItem_Local_);
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay);
-	void ReceiveBeginPlay();
-	void OnNotifyEnd_DE6FBB4444253A46022144A98AE44FAE(class FName NotifyName);
-	void OnNotifyBegin_DE6FBB4444253A46022144A98AE44FAE(class FName NotifyName);
-	void OnInterrupted_DE6FBB4444253A46022144A98AE44FAE(class FName NotifyName);
-	void OnCompleted_DE6FBB4444253A46022144A98AE44FAE(class FName NotifyName);
-	void OnBlendOut_DE6FBB4444253A46022144A98AE44FAE(class FName NotifyName);
-	void Grab_Server_(const struct FVector& CentorLocation);
-	void Grab_Replicate_(const struct FVector& CentorLocation);
-	void ExecuteUbergraph_BPC_ItemReplicateController_MagicHand(int32 EntryPoint);
 	void CharacterReplicated();
+	void ExecuteUbergraph_BPC_ItemReplicateController_MagicHand(int32 EntryPoint);
+	void Grab_Replicate_(const struct FVector& CentorLocation);
+	void Grab_Server_(const struct FVector& CentorLocation);
+	void OnBlendOut_DE6FBB4444253A46022144A98AE44FAE(class FName NotifyName);
+	void OnCompleted_DE6FBB4444253A46022144A98AE44FAE(class FName NotifyName);
+	void OnInterrupted_DE6FBB4444253A46022144A98AE44FAE(class FName NotifyName);
+	void OnNotifyBegin_DE6FBB4444253A46022144A98AE44FAE(class FName NotifyName);
+	void OnNotifyEnd_DE6FBB4444253A46022144A98AE44FAE(class FName NotifyName);
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ReceiveTick(float DeltaSeconds);
+	void UseItem_Local_(bool State);
+	void UseItem_Replicate_(bool State);
+	void UseItem_Server_(bool State);
 
 public:
 	static class UClass* StaticClass()

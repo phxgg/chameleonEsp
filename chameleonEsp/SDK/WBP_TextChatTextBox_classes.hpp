@@ -33,10 +33,10 @@ public:
 	float                                         TextDuration;                                      // 0x0394(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void Finish();
-	void ExecuteUbergraph_WBP_TextChatTextBox(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_WBP_TextChatTextBox(int32 EntryPoint);
+	void Finish();
+	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()

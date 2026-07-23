@@ -16,16 +16,14 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_TeleportPoints.BP_TeleportPoints_C.UserConstructionScript
-// 0x0028 (0x0028 - 0x0000)
-struct BP_TeleportPoints_C_UserConstructionScript final
+// Function BP_TeleportPoints.BP_TeleportPoints_C.GetAllTrasnfroms
+// 0x0010 (0x0010 - 0x0000)
+struct BP_TeleportPoints_C_GetAllTrasnfroms final
 {
 public:
-	double                                        CallFunc_BreakVector2D_X;                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector2D_Y;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FTransform>                     SpawnTransforms_0;                                 // 0x0000(0x0010)(Parm, OutParm)
 };
-DUMPER7_ASSERTS_BP_TeleportPoints_C_UserConstructionScript;
+DUMPER7_ASSERTS_BP_TeleportPoints_C_GetAllTrasnfroms;
 
 // Function BP_TeleportPoints.BP_TeleportPoints_C.SetSpawnPoint
 // 0x0260 (0x0260 - 0x0000)
@@ -82,14 +80,16 @@ public:
 };
 DUMPER7_ASSERTS_BP_TeleportPoints_C_SetSpawnPoint;
 
-// Function BP_TeleportPoints.BP_TeleportPoints_C.GetAllTrasnfroms
-// 0x0010 (0x0010 - 0x0000)
-struct BP_TeleportPoints_C_GetAllTrasnfroms final
+// Function BP_TeleportPoints.BP_TeleportPoints_C.UserConstructionScript
+// 0x0028 (0x0028 - 0x0000)
+struct BP_TeleportPoints_C_UserConstructionScript final
 {
 public:
-	TArray<struct FTransform>                     SpawnTransforms;                                   // 0x0000(0x0010)(Parm, OutParm)
+	double                                        CallFunc_BreakVector2D_X;                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector2D_Y;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_TeleportPoints_C_GetAllTrasnfroms;
+DUMPER7_ASSERTS_BP_TeleportPoints_C_UserConstructionScript;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

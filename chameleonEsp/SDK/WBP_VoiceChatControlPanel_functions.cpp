@@ -16,6 +16,20 @@
 
 SDK_NAMESPACE_START
 
+// Function WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_VoiceChatControlPanel_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_VoiceChatControlPanel_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C.ExecuteUbergraph_WBP_VoiceChatControlPanel
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -33,20 +47,6 @@ void UWBP_VoiceChatControlPanel_C::ExecuteUbergraph_WBP_VoiceChatControlPanel(in
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_VoiceChatControlPanel.WBP_VoiceChatControlPanel_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_VoiceChatControlPanel_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_VoiceChatControlPanel_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

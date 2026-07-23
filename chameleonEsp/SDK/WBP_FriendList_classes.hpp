@@ -33,12 +33,12 @@ public:
 	class UScrollBox*                             ScrollBox_44;                                      // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void UpdateEvent();
-	void PushButton(const struct FUniqueNetIdRepl& ID);
-	void OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7(int32 LocalUserNum, bool bWasSuccessful, const class FString& ListName, const class FString& ErrorStr);
-	void OnCallFailed_FBCD2806418BE785B5E6FEA7A395A2A7(int32 LocalUserNum, bool bWasSuccessful, const class FString& ListName, const class FString& ErrorStr);
-	void ExecuteUbergraph_WBP_FriendList(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_WBP_FriendList(int32 EntryPoint);
+	void OnCallFailed_FBCD2806418BE785B5E6FEA7A395A2A7(int32 LocalUserNum, bool bWasSuccessful, const class FString& ListName, const class FString& ErrorStr);
+	void OnReadFriendsListComplete_FBCD2806418BE785B5E6FEA7A395A2A7(int32 LocalUserNum, bool bWasSuccessful, const class FString& ListName, const class FString& ErrorStr);
+	void PushButton(const struct FUniqueNetIdRepl& ID);
+	void UpdateEvent();
 
 public:
 	static class UClass* StaticClass()

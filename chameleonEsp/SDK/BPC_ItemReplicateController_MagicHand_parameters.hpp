@@ -17,114 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.UseItem(Server)
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_ItemReplicateController_MagicHand_C_UseItem_Server_ final
-{
-public:
-	bool                                          State_UseItem_Server_;                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_UseItem_Server_;
-
-// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.UseItem(Replicate)
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_ItemReplicateController_MagicHand_C_UseItem_Replicate_ final
-{
-public:
-	bool                                          State_UseItem_Replicate_;                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_UseItem_Replicate_;
-
-// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.UseItem(Local)
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_ItemReplicateController_MagicHand_C_UseItem_Local_ final
-{
-public:
-	bool                                          State_UseItem_Local_;                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_UseItem_Local_;
-
-// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_ItemReplicateController_MagicHand_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_ReceiveTick;
-
-// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_ItemReplicateController_MagicHand_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason_ReceiveEndPlay;                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_ReceiveEndPlay;
-
-// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.OnNotifyEnd_DE6FBB4444253A46022144A98AE44FAE
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_ItemReplicateController_MagicHand_C_OnNotifyEnd_DE6FBB4444253A46022144A98AE44FAE final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_OnNotifyEnd_DE6FBB4444253A46022144A98AE44FAE;
-
-// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.OnNotifyBegin_DE6FBB4444253A46022144A98AE44FAE
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_ItemReplicateController_MagicHand_C_OnNotifyBegin_DE6FBB4444253A46022144A98AE44FAE final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_OnNotifyBegin_DE6FBB4444253A46022144A98AE44FAE;
-
-// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.OnInterrupted_DE6FBB4444253A46022144A98AE44FAE
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_ItemReplicateController_MagicHand_C_OnInterrupted_DE6FBB4444253A46022144A98AE44FAE final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_OnInterrupted_DE6FBB4444253A46022144A98AE44FAE;
-
-// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.OnCompleted_DE6FBB4444253A46022144A98AE44FAE
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_ItemReplicateController_MagicHand_C_OnCompleted_DE6FBB4444253A46022144A98AE44FAE final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_OnCompleted_DE6FBB4444253A46022144A98AE44FAE;
-
-// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.OnBlendOut_DE6FBB4444253A46022144A98AE44FAE
-// 0x0008 (0x0008 - 0x0000)
-struct BPC_ItemReplicateController_MagicHand_C_OnBlendOut_DE6FBB4444253A46022144A98AE44FAE final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_OnBlendOut_DE6FBB4444253A46022144A98AE44FAE;
-
-// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.Grab(Server)
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_ItemReplicateController_MagicHand_C_Grab_Server_ final
-{
-public:
-	struct FVector                                CentorLocation;                                    // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_Grab_Server_;
-
-// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.Grab(Replicate)
-// 0x0018 (0x0018 - 0x0000)
-struct BPC_ItemReplicateController_MagicHand_C_Grab_Replicate_ final
-{
-public:
-	struct FVector                                CentorLocation;                                    // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_Grab_Replicate_;
-
 // Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.ExecuteUbergraph_BPC_ItemReplicateController_MagicHand
 // 0x07F0 (0x07F0 - 0x0000)
 struct BPC_ItemReplicateController_MagicHand_C_ExecuteUbergraph_BPC_ItemReplicateController_MagicHand final
@@ -257,6 +149,114 @@ public:
 	float                                         CallFunc_SphereOverlapActors_SphereRadius_ImplicitCast_1; // 0x07E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_ExecuteUbergraph_BPC_ItemReplicateController_MagicHand;
+
+// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.Grab(Replicate)
+// 0x0018 (0x0018 - 0x0000)
+struct BPC_ItemReplicateController_MagicHand_C_Grab_Replicate_ final
+{
+public:
+	struct FVector                                CentorLocation;                                    // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_Grab_Replicate_;
+
+// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.Grab(Server)
+// 0x0018 (0x0018 - 0x0000)
+struct BPC_ItemReplicateController_MagicHand_C_Grab_Server_ final
+{
+public:
+	struct FVector                                CentorLocation;                                    // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_Grab_Server_;
+
+// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.OnBlendOut_DE6FBB4444253A46022144A98AE44FAE
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_ItemReplicateController_MagicHand_C_OnBlendOut_DE6FBB4444253A46022144A98AE44FAE final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_OnBlendOut_DE6FBB4444253A46022144A98AE44FAE;
+
+// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.OnCompleted_DE6FBB4444253A46022144A98AE44FAE
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_ItemReplicateController_MagicHand_C_OnCompleted_DE6FBB4444253A46022144A98AE44FAE final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_OnCompleted_DE6FBB4444253A46022144A98AE44FAE;
+
+// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.OnInterrupted_DE6FBB4444253A46022144A98AE44FAE
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_ItemReplicateController_MagicHand_C_OnInterrupted_DE6FBB4444253A46022144A98AE44FAE final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_OnInterrupted_DE6FBB4444253A46022144A98AE44FAE;
+
+// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.OnNotifyBegin_DE6FBB4444253A46022144A98AE44FAE
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_ItemReplicateController_MagicHand_C_OnNotifyBegin_DE6FBB4444253A46022144A98AE44FAE final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_OnNotifyBegin_DE6FBB4444253A46022144A98AE44FAE;
+
+// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.OnNotifyEnd_DE6FBB4444253A46022144A98AE44FAE
+// 0x0008 (0x0008 - 0x0000)
+struct BPC_ItemReplicateController_MagicHand_C_OnNotifyEnd_DE6FBB4444253A46022144A98AE44FAE final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_OnNotifyEnd_DE6FBB4444253A46022144A98AE44FAE;
+
+// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_ItemReplicateController_MagicHand_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_ReceiveEndPlay;
+
+// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_ItemReplicateController_MagicHand_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_ReceiveTick;
+
+// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.UseItem(Local)
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_ItemReplicateController_MagicHand_C_UseItem_Local_ final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_UseItem_Local_;
+
+// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.UseItem(Replicate)
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_ItemReplicateController_MagicHand_C_UseItem_Replicate_ final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_UseItem_Replicate_;
+
+// Function BPC_ItemReplicateController_MagicHand.BPC_ItemReplicateController_MagicHand_C.UseItem(Server)
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_ItemReplicateController_MagicHand_C_UseItem_Server_ final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_MagicHand_C_UseItem_Server_;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -28,11 +28,11 @@ public:
 	bool                                          ConstructEnd;                                      // 0x0368(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_SettingSliderFPS(int32 EntryPoint);
-	void Construct();
-	void BndEvt__WBP_SettingSliderFPS_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangeEvery__DelegateSignature(double Value);
-	void BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature();
 	void ApplySetting();
+	void BndEvt__WBP_SettingSlider_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_4_OnValueChangedEvent__DelegateSignature();
+	void BndEvt__WBP_SettingSliderFPS_WBP_NavSlider_Penguin_K2Node_ComponentBoundEvent_0_OnValueChangeEvery__DelegateSignature(double Value);
+	void Construct();
+	void ExecuteUbergraph_WBP_SettingSliderFPS(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

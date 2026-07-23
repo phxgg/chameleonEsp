@@ -16,39 +16,53 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.VisibleState
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_HealthAndStaminaBar_C::VisibleState(bool State)
+void UWBP_HealthAndStaminaBar_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "VisibleState");
+		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "Construct");
 
-	Params::WBP_HealthAndStaminaBar_C_VisibleState Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.State = State;
+
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.ExecuteUbergraph_WBP_HealthAndStaminaBar
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HealthAndStaminaBar_C::ExecuteUbergraph_WBP_HealthAndStaminaBar(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "ExecuteUbergraph_WBP_HealthAndStaminaBar");
+
+	Params::WBP_HealthAndStaminaBar_C_ExecuteUbergraph_WBP_HealthAndStaminaBar Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.StaminaBarUpdateSub
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.HealthBarUpdate
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HealthAndStaminaBar_C::StaminaBarUpdateSub(double Value)
+void UWBP_HealthAndStaminaBar_C::HealthBarUpdate(double Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "StaminaBarUpdateSub");
+		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "HealthBarUpdate");
 
-	Params::WBP_HealthAndStaminaBar_C_StaminaBarUpdateSub Parms{};
+	Params::WBP_HealthAndStaminaBar_C_HealthBarUpdate Parms{};
 
 	Parms.Value = Value;
 
@@ -56,19 +70,19 @@ void UWBP_HealthAndStaminaBar_C::StaminaBarUpdateSub(double Value)
 }
 
 
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.StaminaBarUpdate
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.HealthBarUpdateSub
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HealthAndStaminaBar_C::StaminaBarUpdate(double Value)
+void UWBP_HealthAndStaminaBar_C::HealthBarUpdateSub(double Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "StaminaBarUpdate");
+		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "HealthBarUpdateSub");
 
-	Params::WBP_HealthAndStaminaBar_C_StaminaBarUpdate Parms{};
+	Params::WBP_HealthAndStaminaBar_C_HealthBarUpdateSub Parms{};
 
 	Parms.Value = Value;
 
@@ -76,22 +90,22 @@ void UWBP_HealthAndStaminaBar_C::StaminaBarUpdate(double Value)
 }
 
 
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.SetText
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.PlayAnimationMessage
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool                                    IsForward                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HealthAndStaminaBar_C::SetText(const class FText& Text, int32 Index_0)
+void UWBP_HealthAndStaminaBar_C::PlayAnimationMessage(bool IsForward, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "SetText");
+		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "PlayAnimationMessage");
 
-	Params::WBP_HealthAndStaminaBar_C_SetText Parms{};
+	Params::WBP_HealthAndStaminaBar_C_PlayAnimationMessage Parms{};
 
-	Parms.Text = std::move(Text);
+	Parms.IsForward = IsForward;
 	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -120,41 +134,41 @@ void UWBP_HealthAndStaminaBar_C::SetColor(const struct FLinearColor& Color, int3
 }
 
 
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.PlayAnimationMessage
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.SetText
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsForward                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
 // int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HealthAndStaminaBar_C::PlayAnimationMessage(bool IsForward, int32 Index_0)
+void UWBP_HealthAndStaminaBar_C::SetText(const class FText& Text, int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "PlayAnimationMessage");
+		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "SetText");
 
-	Params::WBP_HealthAndStaminaBar_C_PlayAnimationMessage Parms{};
+	Params::WBP_HealthAndStaminaBar_C_SetText Parms{};
 
-	Parms.IsForward = IsForward;
+	Parms.Text = std::move(Text);
 	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.HealthBarUpdateSub
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.StaminaBarUpdate
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HealthAndStaminaBar_C::HealthBarUpdateSub(double Value)
+void UWBP_HealthAndStaminaBar_C::StaminaBarUpdate(double Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "HealthBarUpdateSub");
+		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "StaminaBarUpdate");
 
-	Params::WBP_HealthAndStaminaBar_C_HealthBarUpdateSub Parms{};
+	Params::WBP_HealthAndStaminaBar_C_StaminaBarUpdate Parms{};
 
 	Parms.Value = Value;
 
@@ -162,19 +176,19 @@ void UWBP_HealthAndStaminaBar_C::HealthBarUpdateSub(double Value)
 }
 
 
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.HealthBarUpdate
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.StaminaBarUpdateSub
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HealthAndStaminaBar_C::HealthBarUpdate(double Value)
+void UWBP_HealthAndStaminaBar_C::StaminaBarUpdateSub(double Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "HealthBarUpdate");
+		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "StaminaBarUpdateSub");
 
-	Params::WBP_HealthAndStaminaBar_C_HealthBarUpdate Parms{};
+	Params::WBP_HealthAndStaminaBar_C_StaminaBarUpdateSub Parms{};
 
 	Parms.Value = Value;
 
@@ -182,37 +196,23 @@ void UWBP_HealthAndStaminaBar_C::HealthBarUpdate(double Value)
 }
 
 
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.ExecuteUbergraph_WBP_HealthAndStaminaBar
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.VisibleState
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HealthAndStaminaBar_C::ExecuteUbergraph_WBP_HealthAndStaminaBar(int32 EntryPoint)
+void UWBP_HealthAndStaminaBar_C::VisibleState(bool State)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "ExecuteUbergraph_WBP_HealthAndStaminaBar");
+		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "VisibleState");
 
-	Params::WBP_HealthAndStaminaBar_C_ExecuteUbergraph_WBP_HealthAndStaminaBar Parms{};
+	Params::WBP_HealthAndStaminaBar_C_VisibleState Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.State = State;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HealthAndStaminaBar.WBP_HealthAndStaminaBar_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_HealthAndStaminaBar_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HealthAndStaminaBar_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -16,37 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_DeathBlackOut.WBP_DeathBlackOut_C.SequenceEvent__ENTRYPOINTWBP_DeathBlackOut
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_DeathBlackOut.WBP_DeathBlackOut_C.AudioZero
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_DeathBlackOut_C::SequenceEvent__ENTRYPOINTWBP_DeathBlackOut()
+void UWBP_DeathBlackOut_C::AudioZero()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DeathBlackOut_C", "SequenceEvent__ENTRYPOINTWBP_DeathBlackOut");
+		Func = Class->GetFunction("WBP_DeathBlackOut_C", "AudioZero");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_DeathBlackOut.WBP_DeathBlackOut_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_DeathBlackOut_C::PreConstruct(bool IsDesignTime_PreConstruct)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DeathBlackOut_C", "PreConstruct");
-
-	Params::WBP_DeathBlackOut_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -70,15 +50,35 @@ void UWBP_DeathBlackOut_C::ExecuteUbergraph_WBP_DeathBlackOut(int32 EntryPoint)
 }
 
 
-// Function WBP_DeathBlackOut.WBP_DeathBlackOut_C.AudioZero
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_DeathBlackOut.WBP_DeathBlackOut_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_DeathBlackOut_C::AudioZero()
+void UWBP_DeathBlackOut_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_DeathBlackOut_C", "AudioZero");
+		Func = Class->GetFunction("WBP_DeathBlackOut_C", "PreConstruct");
+
+	Params::WBP_DeathBlackOut_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_DeathBlackOut.WBP_DeathBlackOut_C.SequenceEvent__ENTRYPOINTWBP_DeathBlackOut
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_DeathBlackOut_C::SequenceEvent__ENTRYPOINTWBP_DeathBlackOut()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_DeathBlackOut_C", "SequenceEvent__ENTRYPOINTWBP_DeathBlackOut");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

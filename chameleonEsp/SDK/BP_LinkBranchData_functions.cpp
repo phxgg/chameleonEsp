@@ -16,41 +16,45 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_LinkBranchData.BP_LinkBranchData_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_LinkBranchData_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LinkBranchData_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_LinkBranchData.BP_LinkBranchData_C.GetSortedPrimitive
+// Function BP_LinkBranchData.BP_LinkBranchData_C.AddPrimitive
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent**             Primitive                                              (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// TArray<class UPrimitiveComponent*>&     Primitives                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 
-void ABP_LinkBranchData_C::GetSortedPrimitive(int32 Index_0, class UPrimitiveComponent** Primitive)
+void ABP_LinkBranchData_C::AddPrimitive(TArray<class UPrimitiveComponent*>& Primitives)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LinkBranchData_C", "GetSortedPrimitive");
+		Func = Class->GetFunction("BP_LinkBranchData_C", "AddPrimitive");
 
-	Params::BP_LinkBranchData_C_GetSortedPrimitive Parms{};
+	Params::BP_LinkBranchData_C_AddPrimitive Parms{};
 
-	Parms.Index_0 = Index_0;
+	Parms.Primitives = std::move(Primitives);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Primitive != nullptr)
-		*Primitive = Parms.Primitive;
+	Primitives = std::move(Parms.Primitives);
+}
+
+
+// Function BP_LinkBranchData.BP_LinkBranchData_C.ExecuteUbergraph_BP_LinkBranchData
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_LinkBranchData_C::ExecuteUbergraph_BP_LinkBranchData(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LinkBranchData_C", "ExecuteUbergraph_BP_LinkBranchData");
+
+	Params::BP_LinkBranchData_C_ExecuteUbergraph_BP_LinkBranchData Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -84,45 +88,41 @@ void ABP_LinkBranchData_C::GetSidePrimitive(int32 CenterIndex, int32 Distance, c
 }
 
 
-// Function BP_LinkBranchData.BP_LinkBranchData_C.ExecuteUbergraph_BP_LinkBranchData
-// (Final, UbergraphFunction)
+// Function BP_LinkBranchData.BP_LinkBranchData_C.GetSortedPrimitive
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent**             Primitive                                              (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void ABP_LinkBranchData_C::ExecuteUbergraph_BP_LinkBranchData(int32 EntryPoint)
+void ABP_LinkBranchData_C::GetSortedPrimitive(int32 Index_0, class UPrimitiveComponent** Primitive)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LinkBranchData_C", "ExecuteUbergraph_BP_LinkBranchData");
+		Func = Class->GetFunction("BP_LinkBranchData_C", "GetSortedPrimitive");
 
-	Params::BP_LinkBranchData_C_ExecuteUbergraph_BP_LinkBranchData Parms{};
+	Params::BP_LinkBranchData_C_GetSortedPrimitive Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Primitive != nullptr)
+		*Primitive = Parms.Primitive;
 }
 
 
-// Function BP_LinkBranchData.BP_LinkBranchData_C.AddPrimitive
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class UPrimitiveComponent*>&     Primitives                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// Function BP_LinkBranchData.BP_LinkBranchData_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_LinkBranchData_C::AddPrimitive(TArray<class UPrimitiveComponent*>& Primitives)
+void ABP_LinkBranchData_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LinkBranchData_C", "AddPrimitive");
+		Func = Class->GetFunction("BP_LinkBranchData_C", "ReceiveBeginPlay");
 
-	Params::BP_LinkBranchData_C_AddPrimitive Parms{};
-
-	Parms.Primitives = std::move(Primitives);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Primitives = std::move(Parms.Primitives);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

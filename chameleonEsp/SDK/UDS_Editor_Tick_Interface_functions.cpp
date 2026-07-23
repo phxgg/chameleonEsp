@@ -16,6 +16,20 @@
 
 SDK_NAMESPACE_START
 
+// Function UDS_Editor_Tick_Interface.UDS_Editor_Tick_Interface_C.Constructed Handler
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IUDS_Editor_Tick_Interface_C::Constructed_Handler()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("UDS_Editor_Tick_Interface_C", "Constructed Handler");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
 // Function UDS_Editor_Tick_Interface.UDS_Editor_Tick_Interface_C.Start Tick Timer
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -33,20 +47,6 @@ void IUDS_Editor_Tick_Interface_C::Start_Tick_Timer(class AUltra_Dynamic_Sky_C* 
 	Parms.UDS = UDS;
 
 	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function UDS_Editor_Tick_Interface.UDS_Editor_Tick_Interface_C.Constructed Handler
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IUDS_Editor_Tick_Interface_C::Constructed_Handler()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("UDS_Editor_Tick_Interface_C", "Constructed Handler");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
 }
 
 

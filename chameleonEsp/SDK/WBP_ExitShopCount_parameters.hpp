@@ -17,48 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_ExitShopCount.WBP_ExitShopCount_C.SetUIText
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_ExitShopCount_C_SetUIText final
-{
-public:
-	int32                                         AppendPreset;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Text;                                              // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-DUMPER7_ASSERTS_WBP_ExitShopCount_C_SetUIText;
-
-// Function WBP_ExitShopCount.WBP_ExitShopCount_C.SetText
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_ExitShopCount_C_SetText final
-{
-public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ExitShopCount_C_SetText;
-
-// Function WBP_ExitShopCount.WBP_ExitShopCount_C.SetColor
-// 0x0014 (0x0014 - 0x0000)
-struct WBP_ExitShopCount_C_SetColor final
-{
-public:
-	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ExitShopCount_C_SetColor;
-
-// Function WBP_ExitShopCount.WBP_ExitShopCount_C.PlayAnimationMessage
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_ExitShopCount_C_PlayAnimationMessage final
-{
-public:
-	bool                                          IsForward;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Index_0;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ExitShopCount_C_PlayAnimationMessage;
-
 // Function WBP_ExitShopCount.WBP_ExitShopCount_C.ExecuteUbergraph_WBP_ExitShopCount
 // 0x00B8 (0x00B8 - 0x0000)
 struct WBP_ExitShopCount_C_ExecuteUbergraph_WBP_ExitShopCount final
@@ -90,6 +48,48 @@ public:
 	struct FWidgetAnimationHandle                 CallFunc_PlayAnimation_ReturnValue;                // 0x00A8(0x0010)(NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ExitShopCount_C_ExecuteUbergraph_WBP_ExitShopCount;
+
+// Function WBP_ExitShopCount.WBP_ExitShopCount_C.PlayAnimationMessage
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_ExitShopCount_C_PlayAnimationMessage final
+{
+public:
+	bool                                          IsForward;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Index_0;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ExitShopCount_C_PlayAnimationMessage;
+
+// Function WBP_ExitShopCount.WBP_ExitShopCount_C.SetColor
+// 0x0014 (0x0014 - 0x0000)
+struct WBP_ExitShopCount_C_SetColor final
+{
+public:
+	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ExitShopCount_C_SetColor;
+
+// Function WBP_ExitShopCount.WBP_ExitShopCount_C.SetText
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_ExitShopCount_C_SetText final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         Index_0;                                           // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ExitShopCount_C_SetText;
+
+// Function WBP_ExitShopCount.WBP_ExitShopCount_C.SetUIText
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_ExitShopCount_C_SetUIText final
+{
+public:
+	int32                                         AppendPreset;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Text;                                              // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_WBP_ExitShopCount_C_SetUIText;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

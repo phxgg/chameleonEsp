@@ -30,7 +30,7 @@ public:
 	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0458(0x0048)()
 
 public:
-	void AnimGraph(struct FPoseLink* AnimGraph);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()

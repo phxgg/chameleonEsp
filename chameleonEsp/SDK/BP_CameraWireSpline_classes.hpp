@@ -27,10 +27,10 @@ public:
 	class AActor*                                 AttachToActor;                                     // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UserConstructionScript();
-	void SplineSet();
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_CameraWireSpline(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void SplineSet();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

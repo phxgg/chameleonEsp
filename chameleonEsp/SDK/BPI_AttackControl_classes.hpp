@@ -20,10 +20,10 @@ SDK_NAMESPACE_START
 class IBPI_AttackControl_C final
 {
 public:
-	void Combo(double TimeRange, class FName ComboName);
-	void CollisionReset();
-	void Attack_AC_Remote(double TimeRange, class FName ComponentName, double DamageMultiply, double StanMultiply);
 	void Attack_AC(double TimeRange, class FName AttackName, double DamageMultiply, bool MutipleHitPossible, double StanMultiply);
+	void Attack_AC_Remote(double TimeRange, class FName ComponentName, double DamageMultiply, double StanMultiply);
+	void CollisionReset();
+	void Combo(double TimeRange, class FName ComboName);
 
 public:
 	static class UClass* StaticClass()

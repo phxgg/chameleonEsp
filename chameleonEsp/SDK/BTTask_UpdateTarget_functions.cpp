@@ -16,28 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BTTask_UpdateTarget.BTTask_UpdateTarget_C.ReceiveExecuteAI
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AAIController*                    OwnerController_ReceiveExecuteAI                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            ControlledPawn_ReceiveExecuteAI                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBTTask_UpdateTarget_C::ReceiveExecuteAI(class AAIController* OwnerController_ReceiveExecuteAI, class APawn* ControlledPawn_ReceiveExecuteAI)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTTask_UpdateTarget_C", "ReceiveExecuteAI");
-
-	Params::BTTask_UpdateTarget_C_ReceiveExecuteAI Parms{};
-
-	Parms.OwnerController_ReceiveExecuteAI = OwnerController_ReceiveExecuteAI;
-	Parms.ControlledPawn_ReceiveExecuteAI = ControlledPawn_ReceiveExecuteAI;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BTTask_UpdateTarget.BTTask_UpdateTarget_C.ExecuteUbergraph_BTTask_UpdateTarget
 // (Final, UbergraphFunction)
 // Parameters:
@@ -53,6 +31,28 @@ void UBTTask_UpdateTarget_C::ExecuteUbergraph_BTTask_UpdateTarget(int32 EntryPoi
 	Params::BTTask_UpdateTarget_C_ExecuteUbergraph_BTTask_UpdateTarget Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BTTask_UpdateTarget.BTTask_UpdateTarget_C.ReceiveExecuteAI
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class AAIController*                    OwnerController                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            ControlledPawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBTTask_UpdateTarget_C::ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTTask_UpdateTarget_C", "ReceiveExecuteAI");
+
+	Params::BTTask_UpdateTarget_C_ReceiveExecuteAI Parms{};
+
+	Parms.OwnerController = OwnerController;
+	Parms.ControlledPawn = ControlledPawn;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

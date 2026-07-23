@@ -16,23 +16,14 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function UDS_Volume_Actor.UDS_Volume_Actor_C.UserConstructionScript
-// 0x0150 (0x0150 - 0x0000)
-struct UDS_Volume_Actor_C_UserConstructionScript final
+// Function UDS_Volume_Actor.UDS_Volume_Actor_C.ExecuteUbergraph_UDS_Volume_Actor
+// 0x0004 (0x0004 - 0x0000)
+struct UDS_Volume_Actor_C_ExecuteUbergraph_UDS_Volume_Actor final
 {
 public:
-	struct FTransform                             Temp_struct_Variable;                              // 0x0000(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             Temp_struct_Variable_1;                            // 0x0060(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          CallFunc_AddComponent_ReturnValue;                 // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       CallFunc_AddComponent_ReturnValue_1;               // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             Temp_struct_Variable_2;                            // 0x00D0(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCapsuleComponent*                      CallFunc_AddComponent_ReturnValue_2;               // 0x0130(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_139[0x3];                                      // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SetCapsuleRadius_Radius_ImplicitCast;     // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast; // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UDS_Volume_Actor_C_UserConstructionScript;
+DUMPER7_ASSERTS_UDS_Volume_Actor_C_ExecuteUbergraph_UDS_Volume_Actor;
 
 // Function UDS_Volume_Actor.UDS_Volume_Actor_C.Query Blend Radius
 // 0x01A0 (0x01A0 - 0x0000)
@@ -73,14 +64,23 @@ public:
 };
 DUMPER7_ASSERTS_UDS_Volume_Actor_C_Query_Blend_Radius;
 
-// Function UDS_Volume_Actor.UDS_Volume_Actor_C.ExecuteUbergraph_UDS_Volume_Actor
-// 0x0004 (0x0004 - 0x0000)
-struct UDS_Volume_Actor_C_ExecuteUbergraph_UDS_Volume_Actor final
+// Function UDS_Volume_Actor.UDS_Volume_Actor_C.UserConstructionScript
+// 0x0150 (0x0150 - 0x0000)
+struct UDS_Volume_Actor_C_UserConstructionScript final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             Temp_struct_Variable;                              // 0x0000(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             Temp_struct_Variable_1;                            // 0x0060(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          CallFunc_AddComponent_ReturnValue;                 // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       CallFunc_AddComponent_ReturnValue_1;               // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             Temp_struct_Variable_2;                            // 0x00D0(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCapsuleComponent*                      CallFunc_AddComponent_ReturnValue_2;               // 0x0130(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_139[0x3];                                      // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SetCapsuleRadius_Radius_ImplicitCast;     // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast; // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UDS_Volume_Actor_C_ExecuteUbergraph_UDS_Volume_Actor;
+DUMPER7_ASSERTS_UDS_Volume_Actor_C_UserConstructionScript;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -16,17 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_ExplotionSphere_Base.BP_ExplotionSphere_Base_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_ExplotionSphere_Base.BP_ExplotionSphere_Base_C.BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UNiagaraComponent*                PSystem                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void ABP_ExplotionSphere_Base_C::ReceiveBeginPlay()
+void ABP_ExplotionSphere_Base_C::BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature(class UNiagaraComponent* PSystem)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ExplotionSphere_Base_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_ExplotionSphere_Base_C", "BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_ExplotionSphere_Base_C_BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature Parms{};
+
+	Parms.PSystem = PSystem;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -50,23 +56,17 @@ void ABP_ExplotionSphere_Base_C::ExecuteUbergraph_BP_ExplotionSphere_Base(int32 
 }
 
 
-// Function BP_ExplotionSphere_Base.BP_ExplotionSphere_Base_C.BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UNiagaraComponent*                PSystem                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function BP_ExplotionSphere_Base.BP_ExplotionSphere_Base_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_ExplotionSphere_Base_C::BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature(class UNiagaraComponent* PSystem)
+void ABP_ExplotionSphere_Base_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ExplotionSphere_Base_C", "BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature");
+		Func = Class->GetFunction("BP_ExplotionSphere_Base_C", "ReceiveBeginPlay");
 
-	Params::BP_ExplotionSphere_Base_C_BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature Parms{};
-
-	Parms.PSystem = PSystem;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

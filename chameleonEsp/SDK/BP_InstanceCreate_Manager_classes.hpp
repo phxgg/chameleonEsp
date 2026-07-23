@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ST_InstanceGroupDatas_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ST_InstanceGroupDatas_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -28,8 +28,8 @@ public:
 	TMap<class UStaticMesh*, struct FST_InstanceGroupDatas> MeshDatas;                               // 0x02C8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void ExecuteUbergraph_BP_InstanceCreate_Manager(int32 EntryPoint);
 	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_InstanceCreate_Manager(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

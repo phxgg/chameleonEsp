@@ -17,15 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_IceRefrigerator.BP_IceRefrigerator_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_IceRefrigerator_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_IceRefrigerator_C_ReceiveTick;
-
 // Function BP_IceRefrigerator.BP_IceRefrigerator_C.ExecuteUbergraph_BP_IceRefrigerator
 // 0x0260 (0x0260 - 0x0000)
 struct BP_IceRefrigerator_C_ExecuteUbergraph_BP_IceRefrigerator final
@@ -106,6 +97,15 @@ public:
 	float                                         CallFunc_GetInstancesOverlappingSphere_Radius_ImplicitCast; // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_IceRefrigerator_C_ExecuteUbergraph_BP_IceRefrigerator;
+
+// Function BP_IceRefrigerator.BP_IceRefrigerator_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_IceRefrigerator_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_IceRefrigerator_C_ReceiveTick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

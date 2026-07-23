@@ -17,24 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_LINK_StaminaBar.WBP_LINK_StaminaBar_C.SetBarSize
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_LINK_StaminaBar_C_SetBarSize final
-{
-public:
-	double                                        NewValue;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_LINK_StaminaBar_C_SetBarSize;
-
-// Function WBP_LINK_StaminaBar.WBP_LINK_StaminaBar_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_LINK_StaminaBar_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_LINK_StaminaBar_C_PreConstruct;
-
 // Function WBP_LINK_StaminaBar.WBP_LINK_StaminaBar_C.ExecuteUbergraph_WBP_LINK_StaminaBar
 // 0x0098 (0x0098 - 0x0000)
 struct WBP_LINK_StaminaBar_C_ExecuteUbergraph_WBP_LINK_StaminaBar final
@@ -57,6 +39,24 @@ public:
 	float                                         CallFunc_SetWidthOverride_InWidthOverride_ImplicitCast; // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_LINK_StaminaBar_C_ExecuteUbergraph_WBP_LINK_StaminaBar;
+
+// Function WBP_LINK_StaminaBar.WBP_LINK_StaminaBar_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_LINK_StaminaBar_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_LINK_StaminaBar_C_PreConstruct;
+
+// Function WBP_LINK_StaminaBar.WBP_LINK_StaminaBar_C.SetBarSize
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_LINK_StaminaBar_C_SetBarSize final
+{
+public:
+	double                                        NewValue;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_LINK_StaminaBar_C_SetBarSize;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

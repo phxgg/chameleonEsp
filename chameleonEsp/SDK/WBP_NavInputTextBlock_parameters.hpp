@@ -16,65 +16,24 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.SetInputText
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.BndEvt__WBP_NavInputTextBlock_EditableText_24_K2Node_ComponentBoundEvent_2_OnEditableTextCommittedEvent__DelegateSignature
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_NavInputTextBlock_C_BndEvt__WBP_NavInputTextBlock_EditableText_24_K2Node_ComponentBoundEvent_2_OnEditableTextCommittedEvent__DelegateSignature final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_NavInputTextBlock_C_BndEvt__WBP_NavInputTextBlock_EditableText_24_K2Node_ComponentBoundEvent_2_OnEditableTextCommittedEvent__DelegateSignature;
+
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
-struct WBP_NavInputTextBlock_C_SetInputText final
+struct WBP_NavInputTextBlock_C_BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature final
 {
 public:
-	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_WBP_NavInputTextBlock_C_SetInputText;
-
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.SetEditableText
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_NavInputTextBlock_C_SetEditableText final
-{
-public:
-	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-DUMPER7_ASSERTS_WBP_NavInputTextBlock_C_SetEditableText;
-
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_NavInputTextBlock_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_NavInputTextBlock_C_PreConstruct;
-
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.GetNumerText
-// 0x0090 (0x0090 - 0x0000)
-struct WBP_NavInputTextBlock_C_GetNumerText final
-{
-public:
-	class FText                                   InText;                                            // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-	class FString                                 ReturnText;                                        // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Len_ReturnValue;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_MakeLiteralString_ReturnValue;            // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetSubstring_ReturnValue;                 // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Contains_ReturnValue;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_NavInputTextBlock_C_GetNumerText;
-
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.GetInputText
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_NavInputTextBlock_C_GetInputText final
-{
-public:
-	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0010(0x0010)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_NavInputTextBlock_C_GetInputText;
+DUMPER7_ASSERTS_WBP_NavInputTextBlock_C_BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature;
 
 // Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.ExecuteUbergraph_WBP_NavInputTextBlock
 // 0x0340 (0x0340 - 0x0000)
@@ -152,24 +111,65 @@ public:
 };
 DUMPER7_ASSERTS_WBP_NavInputTextBlock_C_ExecuteUbergraph_WBP_NavInputTextBlock;
 
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_NavInputTextBlock_C_BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature final
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.GetInputText
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_NavInputTextBlock_C_GetInputText final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0010(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_NavInputTextBlock_C_BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature;
+DUMPER7_ASSERTS_WBP_NavInputTextBlock_C_GetInputText;
 
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.BndEvt__WBP_NavInputTextBlock_EditableText_24_K2Node_ComponentBoundEvent_2_OnEditableTextCommittedEvent__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_NavInputTextBlock_C_BndEvt__WBP_NavInputTextBlock_EditableText_24_K2Node_ComponentBoundEvent_2_OnEditableTextCommittedEvent__DelegateSignature final
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.GetNumerText
+// 0x0090 (0x0090 - 0x0000)
+struct WBP_NavInputTextBlock_C_GetNumerText final
 {
 public:
-	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   InText;                                            // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+	class FString                                 ReturnText;                                        // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Len_ReturnValue;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_MakeLiteralString_ReturnValue;            // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetSubstring_ReturnValue;                 // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Contains_ReturnValue;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_NavInputTextBlock_C_BndEvt__WBP_NavInputTextBlock_EditableText_24_K2Node_ComponentBoundEvent_2_OnEditableTextCommittedEvent__DelegateSignature;
+DUMPER7_ASSERTS_WBP_NavInputTextBlock_C_GetNumerText;
+
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_NavInputTextBlock_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_NavInputTextBlock_C_PreConstruct;
+
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.SetEditableText
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_NavInputTextBlock_C_SetEditableText final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_WBP_NavInputTextBlock_C_SetEditableText;
+
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.SetInputText
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_NavInputTextBlock_C_SetInputText final
+{
+public:
+	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_WBP_NavInputTextBlock_C_SetInputText;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

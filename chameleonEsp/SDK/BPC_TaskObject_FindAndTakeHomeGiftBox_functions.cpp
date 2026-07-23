@@ -16,21 +16,35 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_TaskObject_FindAndTakeHomeGiftBox.BPC_TaskObject_FindAndTakeHomeGiftBox_C.ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_TaskObject_FindAndTakeHomeGiftBox.BPC_TaskObject_FindAndTakeHomeGiftBox_C.TaskStart
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_TaskObject_FindAndTakeHomeGiftBox_C::ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox(int32 EntryPoint)
+void UBPC_TaskObject_FindAndTakeHomeGiftBox_C::TaskStart()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_TaskObject_FindAndTakeHomeGiftBox_C", "ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox");
+		Func = Class->GetFunction("BPC_TaskObject_FindAndTakeHomeGiftBox_C", "TaskStart");
 
-	Params::BPC_TaskObject_FindAndTakeHomeGiftBox_C_ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function BPC_TaskObject_FindAndTakeHomeGiftBox.BPC_TaskObject_FindAndTakeHomeGiftBox_C.GeneratedActor
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           GeneratedActor_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_TaskObject_FindAndTakeHomeGiftBox_C::GeneratedActor(class AActor* GeneratedActor_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_TaskObject_FindAndTakeHomeGiftBox_C", "GeneratedActor");
+
+	Params::BPC_TaskObject_FindAndTakeHomeGiftBox_C_GeneratedActor Parms{};
+
+	Parms.GeneratedActor_0 = GeneratedActor_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -56,37 +70,23 @@ void UBPC_TaskObject_FindAndTakeHomeGiftBox_C::GoalActor(class AActor* Actor)
 }
 
 
-// Function BPC_TaskObject_FindAndTakeHomeGiftBox.BPC_TaskObject_FindAndTakeHomeGiftBox_C.GeneratedActor
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_TaskObject_FindAndTakeHomeGiftBox.BPC_TaskObject_FindAndTakeHomeGiftBox_C.ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class AActor*                           GeneratedActor                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_TaskObject_FindAndTakeHomeGiftBox_C::GeneratedActor(class AActor* GeneratedActor)
+void UBPC_TaskObject_FindAndTakeHomeGiftBox_C::ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_TaskObject_FindAndTakeHomeGiftBox_C", "GeneratedActor");
+		Func = Class->GetFunction("BPC_TaskObject_FindAndTakeHomeGiftBox_C", "ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox");
 
-	Params::BPC_TaskObject_FindAndTakeHomeGiftBox_C_GeneratedActor Parms{};
+	Params::BPC_TaskObject_FindAndTakeHomeGiftBox_C_ExecuteUbergraph_BPC_TaskObject_FindAndTakeHomeGiftBox Parms{};
 
-	Parms.GeneratedActor = GeneratedActor;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_TaskObject_FindAndTakeHomeGiftBox.BPC_TaskObject_FindAndTakeHomeGiftBox_C.TaskStart
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_TaskObject_FindAndTakeHomeGiftBox_C::TaskStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_TaskObject_FindAndTakeHomeGiftBox_C", "TaskStart");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

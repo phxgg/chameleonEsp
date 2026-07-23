@@ -12,8 +12,8 @@
 
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "EN_CinemaPlayMode_structs.hpp"
 #include "BP_DeviceBase_classes.hpp"
+#include "EN_CinemaPlayMode_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -40,11 +40,11 @@ public:
 	bool                                          WidgetAutoShow;                                    // 0x0339(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SequenceEnd();
-	void ReceiveBeginPlay();
-	void PlayDeviceSequence(class UMovieSceneSequencePlayer* LevelSequence, EN_CinemaPlayMode PlayMode);
-	void ExecuteUbergraph_BP_CinemaDevice(int32 EntryPoint);
 	void BndEvt__BP_CinemaDevice_DeviceComonent_K2Node_ComponentBoundEvent_0_OnSignal__DelegateSignature(const struct FST_EventValue& SignalValue);
+	void ExecuteUbergraph_BP_CinemaDevice(int32 EntryPoint);
+	void PlayDeviceSequence(class UMovieSceneSequencePlayer* LevelSequence, EN_CinemaPlayMode PlayMode_0);
+	void ReceiveBeginPlay();
+	void SequenceEnd();
 
 public:
 	static class UClass* StaticClass()

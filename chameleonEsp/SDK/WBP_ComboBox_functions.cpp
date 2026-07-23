@@ -16,63 +16,43 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_ComboBox.WBP_ComboBox_C.UpdateScreenResolutionUI
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_ComboBox.WBP_ComboBox_C.ApplySetting
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_ComboBox_C::UpdateScreenResolutionUI()
+void UWBP_ComboBox_C::ApplySetting()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_C", "UpdateScreenResolutionUI");
+		Func = Class->GetFunction("WBP_ComboBox_C", "ApplySetting");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_ComboBox.WBP_ComboBox_C.Update Config Item
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_ComboBox.WBP_ComboBox_C.BndEvt__WBP_ComboBox_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_ComboBox_C::Update_Config_Item()
+void UWBP_ComboBox_C::BndEvt__WBP_ComboBox_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_C", "Update Config Item");
+		Func = Class->GetFunction("WBP_ComboBox_C", "BndEvt__WBP_ComboBox_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_ComboBox.WBP_ComboBox_C.PreConstruct
+// Function WBP_ComboBox.WBP_ComboBox_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ComboBox_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_ComboBox_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_C", "PreConstruct");
-
-	Params::WBP_ComboBox_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_ComboBox.WBP_ComboBox_C.GetResolution
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_ComboBox_C::GetResolution()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_C", "GetResolution");
+		Func = Class->GetFunction("WBP_ComboBox_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -98,43 +78,63 @@ void UWBP_ComboBox_C::ExecuteUbergraph_WBP_ComboBox(int32 EntryPoint)
 }
 
 
-// Function WBP_ComboBox.WBP_ComboBox_C.Construct
+// Function WBP_ComboBox.WBP_ComboBox_C.GetResolution
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWBP_ComboBox_C::GetResolution()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ComboBox_C", "GetResolution");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ComboBox.WBP_ComboBox_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_ComboBox_C::Construct()
+void UWBP_ComboBox_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_C", "Construct");
+		Func = Class->GetFunction("WBP_ComboBox_C", "PreConstruct");
+
+	Params::WBP_ComboBox_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_ComboBox.WBP_ComboBox_C.Update Config Item
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_ComboBox_C::Update_Config_Item()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ComboBox_C", "Update Config Item");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_ComboBox.WBP_ComboBox_C.BndEvt__WBP_ComboBox_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_ComboBox.WBP_ComboBox_C.UpdateScreenResolutionUI
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_ComboBox_C::BndEvt__WBP_ComboBox_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature()
+void UWBP_ComboBox_C::UpdateScreenResolutionUI()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_C", "BndEvt__WBP_ComboBox_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_ComboBox.WBP_ComboBox_C.ApplySetting
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_ComboBox_C::ApplySetting()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ComboBox_C", "ApplySetting");
+		Func = Class->GetFunction("WBP_ComboBox_C", "UpdateScreenResolutionUI");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

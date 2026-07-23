@@ -14,16 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BTTask_AttackEnemy.BTTask_AttackEnemy_C.ReceiveExecuteAI
-// 0x0010 (0x0010 - 0x0000)
-struct BTTask_AttackEnemy_C_ReceiveExecuteAI final
-{
-public:
-	class AAIController*                          OwnerController_ReceiveExecuteAI;                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  ControlledPawn_ReceiveExecuteAI;                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BTTask_AttackEnemy_C_ReceiveExecuteAI;
-
 // Function BTTask_AttackEnemy.BTTask_AttackEnemy_C.ExecuteUbergraph_BTTask_AttackEnemy
 // 0x0050 (0x0050 - 0x0000)
 struct BTTask_AttackEnemy_C_ExecuteUbergraph_BTTask_AttackEnemy final
@@ -41,6 +31,16 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BTTask_AttackEnemy_C_ExecuteUbergraph_BTTask_AttackEnemy;
+
+// Function BTTask_AttackEnemy.BTTask_AttackEnemy_C.ReceiveExecuteAI
+// 0x0010 (0x0010 - 0x0000)
+struct BTTask_AttackEnemy_C_ReceiveExecuteAI final
+{
+public:
+	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BTTask_AttackEnemy_C_ReceiveExecuteAI;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

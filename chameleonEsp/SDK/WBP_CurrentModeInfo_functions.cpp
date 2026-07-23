@@ -16,29 +16,15 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_CurrentModeInfo.WBP_CurrentModeInfo_C.UpdateCall
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_CurrentModeInfo.WBP_CurrentModeInfo_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_CurrentModeInfo_C::UpdateCall()
+void UWBP_CurrentModeInfo_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CurrentModeInfo_C", "UpdateCall");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_CurrentModeInfo.WBP_CurrentModeInfo_C.RankUpdate
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_CurrentModeInfo_C::RankUpdate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CurrentModeInfo_C", "RankUpdate");
+		Func = Class->GetFunction("WBP_CurrentModeInfo_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -64,15 +50,29 @@ void UWBP_CurrentModeInfo_C::ExecuteUbergraph_WBP_CurrentModeInfo(int32 EntryPoi
 }
 
 
-// Function WBP_CurrentModeInfo.WBP_CurrentModeInfo_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_CurrentModeInfo.WBP_CurrentModeInfo_C.RankUpdate
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_CurrentModeInfo_C::Construct()
+void UWBP_CurrentModeInfo_C::RankUpdate()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CurrentModeInfo_C", "Construct");
+		Func = Class->GetFunction("WBP_CurrentModeInfo_C", "RankUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CurrentModeInfo.WBP_CurrentModeInfo_C.UpdateCall
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_CurrentModeInfo_C::UpdateCall()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CurrentModeInfo_C", "UpdateCall");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

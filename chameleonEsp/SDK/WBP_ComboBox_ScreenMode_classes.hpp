@@ -31,14 +31,14 @@ public:
 	TMulticastInlineDelegate<void()>              UpdateScreenSetting;                               // 0x03D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UpdateScreenModeUI();
-	void Update_Config_Item();
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void GetResolution();
-	void ExecuteUbergraph_WBP_ComboBox_ScreenMode(int32 EntryPoint);
-	void Construct();
-	void BndEvt__WBP_ComboBox_ScreenMode_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature();
 	void ApplySetting();
+	void BndEvt__WBP_ComboBox_ScreenMode_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature();
+	void Construct();
+	void ExecuteUbergraph_WBP_ComboBox_ScreenMode(int32 EntryPoint);
+	void GetResolution();
+	void PreConstruct(bool IsDesignTime);
+	void Update_Config_Item();
+	void UpdateScreenModeUI();
 
 public:
 	static class UClass* StaticClass()

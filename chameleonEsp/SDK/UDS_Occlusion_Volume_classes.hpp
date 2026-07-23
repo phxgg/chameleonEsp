@@ -28,11 +28,11 @@ public:
 	bool                                          Block_Weather_Particles;                           // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void Query_Occlusion_Multiplier(const struct FVector& Location, double* Multiplier);
-	void ExecuteUbergraph_UDS_Occlusion_Volume(int32 EntryPoint);
 	void Configure_Weather_Particle_Blocking();
+	void ExecuteUbergraph_UDS_Occlusion_Volume(int32 EntryPoint);
+	void Query_Occlusion_Multiplier(const struct FVector& Location, double* Multiplier);
+	void ReceiveBeginPlay();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

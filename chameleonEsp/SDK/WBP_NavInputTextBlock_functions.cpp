@@ -16,77 +16,114 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.TextNumUpdate
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.BndEvt__WBP_NavInputTextBlock_EditableText_24_K2Node_ComponentBoundEvent_2_OnEditableTextCommittedEvent__DelegateSignature
+// (HasOutParams, BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// ETextCommit                             CommitMethod                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_NavInputTextBlock_C::TextNumUpdate()
+void UWBP_NavInputTextBlock_C::BndEvt__WBP_NavInputTextBlock_EditableText_24_K2Node_ComponentBoundEvent_2_OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "TextNumUpdate");
+		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "BndEvt__WBP_NavInputTextBlock_EditableText_24_K2Node_ComponentBoundEvent_2_OnEditableTextCommittedEvent__DelegateSignature");
+
+	Params::WBP_NavInputTextBlock_C_BndEvt__WBP_NavInputTextBlock_EditableText_24_K2Node_ComponentBoundEvent_2_OnEditableTextCommittedEvent__DelegateSignature Parms{};
+
+	Parms.Text = std::move(Text);
+	Parms.CommitMethod = CommitMethod;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature
+// (HasOutParams, BlueprintEvent)
+// Parameters:
+// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UWBP_NavInputTextBlock_C::BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature");
+
+	Params::WBP_NavInputTextBlock_C_BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature Parms{};
+
+	Parms.Text = std::move(Text);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.BndEvt__WBP_NavInputTextBlock_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_NavInputTextBlock_C::BndEvt__WBP_NavInputTextBlock_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "BndEvt__WBP_NavInputTextBlock_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.SetInputText
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWBP_NavInputTextBlock_C::SetInputText(const class FText& InText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "SetInputText");
-
-	Params::WBP_NavInputTextBlock_C_SetInputText Parms{};
-
-	Parms.InText = std::move(InText);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.SetEditableText
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UWBP_NavInputTextBlock_C::SetEditableText(const class FText& InText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "SetEditableText");
-
-	Params::WBP_NavInputTextBlock_C_SetEditableText Parms{};
-
-	Parms.InText = std::move(InText);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.PreConstruct
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_NavInputTextBlock_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_NavInputTextBlock_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "Construct");
 
-	Params::WBP_NavInputTextBlock_C_PreConstruct Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
+
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.ExecuteUbergraph_WBP_NavInputTextBlock
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_NavInputTextBlock_C::ExecuteUbergraph_WBP_NavInputTextBlock(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "ExecuteUbergraph_WBP_NavInputTextBlock");
+
+	Params::WBP_NavInputTextBlock_C_ExecuteUbergraph_WBP_NavInputTextBlock Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.GetInputText
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FString*                          Text                                                   (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWBP_NavInputTextBlock_C::GetInputText(class FString* Text)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "GetInputText");
+
+	Params::WBP_NavInputTextBlock_C_GetInputText Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Text != nullptr)
+		*Text = std::move(Parms.Text);
 }
 
 
@@ -113,114 +150,77 @@ class FString UWBP_NavInputTextBlock_C::GetNumerText(const class FText& InText)
 }
 
 
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.GetInputText
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FString*                          Text                                                   (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
-
-void UWBP_NavInputTextBlock_C::GetInputText(class FString* Text)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "GetInputText");
-
-	Params::WBP_NavInputTextBlock_C_GetInputText Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Text != nullptr)
-		*Text = std::move(Parms.Text);
-}
-
-
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.ExecuteUbergraph_WBP_NavInputTextBlock
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_NavInputTextBlock_C::ExecuteUbergraph_WBP_NavInputTextBlock(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "ExecuteUbergraph_WBP_NavInputTextBlock");
-
-	Params::WBP_NavInputTextBlock_C_ExecuteUbergraph_WBP_NavInputTextBlock Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.Construct
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_NavInputTextBlock_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.BndEvt__WBP_NavInputTextBlock_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_NavInputTextBlock_C::BndEvt__WBP_NavInputTextBlock_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "BndEvt__WBP_NavInputTextBlock_NavButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature
-// (HasOutParams, BlueprintEvent)
 // Parameters:
-// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_NavInputTextBlock_C::BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature(const class FText& Text)
+void UWBP_NavInputTextBlock_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature");
+		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "PreConstruct");
 
-	Params::WBP_NavInputTextBlock_C_BndEvt__WBP_NavInputTextBlock_EditableText_K2Node_ComponentBoundEvent_1_OnEditableTextChangedEvent__DelegateSignature Parms{};
+	Params::WBP_NavInputTextBlock_C_PreConstruct Parms{};
 
-	Parms.Text = std::move(Text);
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.BndEvt__WBP_NavInputTextBlock_EditableText_24_K2Node_ComponentBoundEvent_2_OnEditableTextCommittedEvent__DelegateSignature
-// (HasOutParams, BlueprintEvent)
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.SetEditableText
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// ETextCommit                             CommitMethod                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWBP_NavInputTextBlock_C::BndEvt__WBP_NavInputTextBlock_EditableText_24_K2Node_ComponentBoundEvent_2_OnEditableTextCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
+void UWBP_NavInputTextBlock_C::SetEditableText(const class FText& InText)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "BndEvt__WBP_NavInputTextBlock_EditableText_24_K2Node_ComponentBoundEvent_2_OnEditableTextCommittedEvent__DelegateSignature");
+		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "SetEditableText");
 
-	Params::WBP_NavInputTextBlock_C_BndEvt__WBP_NavInputTextBlock_EditableText_24_K2Node_ComponentBoundEvent_2_OnEditableTextCommittedEvent__DelegateSignature Parms{};
+	Params::WBP_NavInputTextBlock_C_SetEditableText Parms{};
 
-	Parms.Text = std::move(Text);
-	Parms.CommitMethod = CommitMethod;
+	Parms.InText = std::move(InText);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.SetInputText
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWBP_NavInputTextBlock_C::SetInputText(const class FText& InText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "SetInputText");
+
+	Params::WBP_NavInputTextBlock_C_SetInputText Parms{};
+
+	Parms.InText = std::move(InText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_NavInputTextBlock.WBP_NavInputTextBlock_C.TextNumUpdate
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_NavInputTextBlock_C::TextNumUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_NavInputTextBlock_C", "TextNumUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

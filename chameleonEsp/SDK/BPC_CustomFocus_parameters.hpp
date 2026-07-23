@@ -16,25 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_CustomFocus.BPC_CustomFocus_C.SetFocus
-// 0x0010 (0x0010 - 0x0000)
-struct BPC_CustomFocus_C_SetFocus final
-{
-public:
-	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_CustomFocus_C_SetFocus;
-
-// Function BPC_CustomFocus.BPC_CustomFocus_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_CustomFocus_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_CustomFocus_C_ReceiveTick;
-
 // Function BPC_CustomFocus.BPC_CustomFocus_C.ExecuteUbergraph_BPC_CustomFocus
 // 0x0098 (0x0098 - 0x0000)
 struct BPC_CustomFocus_C_ExecuteUbergraph_BPC_CustomFocus final
@@ -58,6 +39,25 @@ public:
 	float                                         CallFunc_RInterpTo_InterpSpeed_ImplicitCast;       // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_CustomFocus_C_ExecuteUbergraph_BPC_CustomFocus;
+
+// Function BPC_CustomFocus.BPC_CustomFocus_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_CustomFocus_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_CustomFocus_C_ReceiveTick;
+
+// Function BPC_CustomFocus.BPC_CustomFocus_C.SetFocus
+// 0x0010 (0x0010 - 0x0000)
+struct BPC_CustomFocus_C_SetFocus final
+{
+public:
+	class AActor*                                 TargetActor_0;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_CustomFocus_C_SetFocus;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

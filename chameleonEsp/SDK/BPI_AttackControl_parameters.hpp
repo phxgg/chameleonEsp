@@ -14,28 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPI_AttackControl.BPI_AttackControl_C.Combo
-// 0x0010 (0x0010 - 0x0000)
-struct BPI_AttackControl_C_Combo final
-{
-public:
-	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ComboName;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPI_AttackControl_C_Combo;
-
-// Function BPI_AttackControl.BPI_AttackControl_C.Attack_AC_Remote
-// 0x0020 (0x0020 - 0x0000)
-struct BPI_AttackControl_C_Attack_AC_Remote final
-{
-public:
-	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ComponentName;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DamageMultiply;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        StanMultiply;                                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPI_AttackControl_C_Attack_AC_Remote;
-
 // Function BPI_AttackControl.BPI_AttackControl_C.Attack_AC
 // 0x0028 (0x0028 - 0x0000)
 struct BPI_AttackControl_C_Attack_AC final
@@ -49,6 +27,28 @@ public:
 	double                                        StanMultiply;                                      // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPI_AttackControl_C_Attack_AC;
+
+// Function BPI_AttackControl.BPI_AttackControl_C.Attack_AC_Remote
+// 0x0020 (0x0020 - 0x0000)
+struct BPI_AttackControl_C_Attack_AC_Remote final
+{
+public:
+	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ComponentName;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DamageMultiply;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        StanMultiply;                                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPI_AttackControl_C_Attack_AC_Remote;
+
+// Function BPI_AttackControl.BPI_AttackControl_C.Combo
+// 0x0010 (0x0010 - 0x0000)
+struct BPI_AttackControl_C_Combo final
+{
+public:
+	double                                        TimeRange;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ComboName;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPI_AttackControl_C_Combo;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

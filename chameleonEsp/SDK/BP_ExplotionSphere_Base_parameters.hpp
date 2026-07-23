@@ -10,13 +10,22 @@
 
 #include "Basic.hpp"
 
+#include "FinishFilter_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "FinishFilter_structs.hpp"
 
 
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
+
+// Function BP_ExplotionSphere_Base.BP_ExplotionSphere_Base_C.BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct BP_ExplotionSphere_Base_C_BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature final
+{
+public:
+	class UNiagaraComponent*                      PSystem;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_ExplotionSphere_Base_C_BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature;
 
 // Function BP_ExplotionSphere_Base.BP_ExplotionSphere_Base_C.ExecuteUbergraph_BP_ExplotionSphere_Base
 // 0x0140 (0x0140 - 0x0000)
@@ -58,15 +67,6 @@ public:
 	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x0128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_ExplotionSphere_Base_C_ExecuteUbergraph_BP_ExplotionSphere_Base;
-
-// Function BP_ExplotionSphere_Base.BP_ExplotionSphere_Base_C.BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct BP_ExplotionSphere_Base_C_BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature final
-{
-public:
-	class UNiagaraComponent*                      PSystem;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_ExplotionSphere_Base_C_BndEvt__BP_ExplotionSphere_Base_Niagara_K2Node_ComponentBoundEvent_0_OnNiagaraSystemFinished__DelegateSignature;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "EN_StanType_structs.hpp"
-#include "ENUM_ClassType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "EN_StanType_structs.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
-#include "ENUM_ItemBindType_structs.hpp"
-#include "ENUM_HandType_structs.hpp"
 #include "EN_DamageType_structs.hpp"
+#include "ENUM_HandType_structs.hpp"
+#include "ENUM_ClassType_structs.hpp"
+#include "ENUM_ItemBindType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -37,25 +37,25 @@ public:
 	class ABP_FirstPersonCharacter_LINK_C*        ForceGrabTarget;                                   // 0x0348(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, RepNotify, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_CraftedObject_Base(int32 EntryPoint);
-	void ReceiveDestroyed();
-	void SetForceGrabTarget(class ABP_FirstPersonCharacter_LINK_C* ForceGrabTarget_0);
-	void ForceGrab();
-	void ReceiveBeginPlay();
-	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
-	void StaminaDamage(double Value);
-	void StanDamage(EN_StanType StanType);
-	void UpdateCoreDatas(const struct FST_ItemCoreDatas& CoreDatas);
-	void PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex);
-	void InteractItem();
-	void SetMeshDatas(bool KeepScale);
-	void DropItem(const struct FVector& Force_Vector, const struct FVector& CentorPosition);
-	void OnRep_ForceGrabTarget();
-	void GetParryState(bool* State);
-	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
-	void GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter);
-	void GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* ClassType, bool* NotPickUp, struct FRotator* HaveRotation, struct FVector* Add_Position, bool* IsBoneAttach, ENUM_ItemBindType* BindType, class FName* BoneName, struct FST_ItemCoreDatas* CoreDatas);
 	void IsChangeImage(bool* IsInteract, class FText* OverrideText);
+	void GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* ClassType, bool* NotPickUp, struct FRotator* HaveRotation, struct FVector* Add_Position, bool* IsBoneAttach, ENUM_ItemBindType* BindType, class FName* BoneName, struct FST_ItemCoreDatas* CoreDatas);
+	void GetParentCharacter(class ABP_FirstPersonCharacter_Main_C** FirstpersonCharacter);
+	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
+	void GetParryState(bool* State);
+	void OnRep_ForceGrabTarget();
+	void DropItem(const struct FVector& Force_Vector, const struct FVector& CentorPosition);
+	void SetMeshDatas(bool KeepScale);
+	void InteractItem();
+	void PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex);
+	void UpdateCoreDatas(const struct FST_ItemCoreDatas& CoreDatas);
+	void StanDamage(EN_StanType StanType);
+	void StaminaDamage(double Value);
+	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
+	void ReceiveBeginPlay();
+	void ForceGrab();
+	void SetForceGrabTarget(class ABP_FirstPersonCharacter_LINK_C* ForceGrabTarget_0);
+	void ReceiveDestroyed();
+	void ExecuteUbergraph_BP_CraftedObject_Base(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

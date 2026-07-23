@@ -16,27 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function UDS_Weather_Settings.UDS_Weather_Settings_C.Get State Sources
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TMap<class UUDS_Weather_Settings_C*, double>*Sources                                                (Parm, OutParm)
-
-void UUDS_Weather_Settings_C::Get_State_Sources(TMap<class UUDS_Weather_Settings_C*, double>* Sources)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UDS_Weather_Settings_C", "Get State Sources");
-
-	Params::UDS_Weather_Settings_C_Get_State_Sources Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Sources != nullptr)
-		*Sources = std::move(Parms.Sources);
-}
-
-
 // Function UDS_Weather_Settings.UDS_Weather_Settings_C.Custom Weather Behavior
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -58,6 +37,27 @@ void UUDS_Weather_Settings_C::Custom_Weather_Behavior(double Alpha, class AActor
 	Parms.UDW = UDW;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UDS_Weather_Settings.UDS_Weather_Settings_C.Get State Sources
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TMap<class UUDS_Weather_Settings_C*, double>*Sources                                                (Parm, OutParm)
+
+void UUDS_Weather_Settings_C::Get_State_Sources(TMap<class UUDS_Weather_Settings_C*, double>* Sources)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UDS_Weather_Settings_C", "Get State Sources");
+
+	Params::UDS_Weather_Settings_C_Get_State_Sources Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Sources != nullptr)
+		*Sources = std::move(Parms.Sources);
 }
 
 

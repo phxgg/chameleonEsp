@@ -17,51 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.UseItem(Server)
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_ItemReplicateController_Parasol_C_UseItem_Server_ final
-{
-public:
-	bool                                          State_UseItem_Server_;                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_Parasol_C_UseItem_Server_;
-
-// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.UseItem(Replicate)
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_ItemReplicateController_Parasol_C_UseItem_Replicate_ final
-{
-public:
-	bool                                          State_UseItem_Replicate_;                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_Parasol_C_UseItem_Replicate_;
-
-// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.UseItem(Local)
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_ItemReplicateController_Parasol_C_UseItem_Local_ final
-{
-public:
-	bool                                          State_UseItem_Local_;                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_Parasol_C_UseItem_Local_;
-
-// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BPC_ItemReplicateController_Parasol_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_ReceiveTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_Parasol_C_ReceiveTick;
-
-// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_ItemReplicateController_Parasol_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason_ReceiveEndPlay;                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_ItemReplicateController_Parasol_C_ReceiveEndPlay;
-
 // Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.ExecuteUbergraph_BPC_ItemReplicateController_Parasol
 // 0x0120 (0x0120 - 0x0000)
 struct BPC_ItemReplicateController_Parasol_C_ExecuteUbergraph_BPC_ItemReplicateController_Parasol final
@@ -115,6 +70,51 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1;   // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_ItemReplicateController_Parasol_C_ExecuteUbergraph_BPC_ItemReplicateController_Parasol;
+
+// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_ItemReplicateController_Parasol_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_Parasol_C_ReceiveEndPlay;
+
+// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BPC_ItemReplicateController_Parasol_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_Parasol_C_ReceiveTick;
+
+// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.UseItem(Local)
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_ItemReplicateController_Parasol_C_UseItem_Local_ final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_Parasol_C_UseItem_Local_;
+
+// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.UseItem(Replicate)
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_ItemReplicateController_Parasol_C_UseItem_Replicate_ final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_Parasol_C_UseItem_Replicate_;
+
+// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.UseItem(Server)
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_ItemReplicateController_Parasol_C_UseItem_Server_ final
+{
+public:
+	bool                                          State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_ItemReplicateController_Parasol_C_UseItem_Server_;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

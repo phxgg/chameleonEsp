@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Enum_configItem_before_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
+#include "Enum_configItem_before_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -40,15 +40,15 @@ public:
 	double                                        look_spead_limit;                                  // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Update_Lookspead(int32 Add);
-	void Update_GRAPHIC(int32 Add);
-	void Update_flame_rate(double Add);
-	void update_configItem();
-	void Update_confg_value();
-	void look_spead(class FText* slook_pead);
-	void ExecuteUbergraph_UI_configItem(int32 EntryPoint);
-	void BndEvt__UI_configItem_Light_BTN_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__UI_configItem_Left_BTN_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__UI_configItem_Light_BTN_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
+	void ExecuteUbergraph_UI_configItem(int32 EntryPoint);
+	void look_spead(class FText* slook_pead);
+	void Update_confg_value();
+	void update_configItem();
+	void Update_flame_rate(double Add);
+	void Update_GRAPHIC(int32 Add);
+	void Update_Lookspead(int32 Add);
 
 public:
 	static class UClass* StaticClass()

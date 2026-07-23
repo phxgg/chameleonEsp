@@ -25,10 +25,10 @@ public:
 	class UVerticalBox*                           VerticalBox_19;                                    // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void VoiceStateUpdate();
-	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void ExecuteUbergraph_WBP_VoiceChatLists(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void VoiceStateUpdate();
 
 public:
 	static class UClass* StaticClass()

@@ -16,418 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_Wine.BP_Wine_C.UseItem
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Wine_C::UseItem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "UseItem");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Wine.BP_Wine_C.Shot
+// Function BP_Wine.BP_Wine_C.ApplyDamage
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    PressState_Shot                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  PushTime_Shot                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonCharacter_Main_C*  SourcePlayer_Shot                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                Sweep_Result                                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
-void ABP_Wine_C::Shot(bool PressState_Shot, double PushTime_Shot, class ABP_FirstPersonCharacter_Main_C* SourcePlayer_Shot)
+void ABP_Wine_C::ApplyDamage(class UObject* OtherActor, const struct FHitResult& Sweep_Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "Shot");
+		Func = Class->GetFunction("BP_Wine_C", "ApplyDamage");
 
-	Params::BP_Wine_C_Shot Parms{};
+	Params::BP_Wine_C_ApplyDamage Parms{};
 
-	Parms.PressState_Shot = PressState_Shot;
-	Parms.PushTime_Shot = PushTime_Shot;
-	Parms.SourcePlayer_Shot = SourcePlayer_Shot;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Wine.BP_Wine_C.SetMeshDatas
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    KeepScale_SetMeshDatas                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Wine_C::SetMeshDatas(bool KeepScale_SetMeshDatas)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "SetMeshDatas");
-
-	Params::BP_Wine_C_SetMeshDatas Parms{};
-
-	Parms.KeepScale_SetMeshDatas = KeepScale_SetMeshDatas;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Wine.BP_Wine_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_Wine_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Wine.BP_Wine_C.PickState
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State_PickState                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_FirstPersonCharacter_Main_C*  Character_PickState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   SlotIndex_PickState                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Wine_C::PickState(bool State_PickState, class ABP_FirstPersonCharacter_Main_C* Character_PickState, int32 SlotIndex_PickState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "PickState");
-
-	Params::BP_Wine_C_PickState Parms{};
-
-	Parms.State_PickState = State_PickState;
-	Parms.Character_PickState = Character_PickState;
-	Parms.SlotIndex_PickState = SlotIndex_PickState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Wine.BP_Wine_C.OnNotifyEnd_62D71E2A4546ADF8B88CE08928DE1DB6
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Wine_C::OnNotifyEnd_62D71E2A4546ADF8B88CE08928DE1DB6(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "OnNotifyEnd_62D71E2A4546ADF8B88CE08928DE1DB6");
-
-	Params::BP_Wine_C_OnNotifyEnd_62D71E2A4546ADF8B88CE08928DE1DB6 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Wine.BP_Wine_C.OnNotifyEnd_21535C9142AC0105AED557A0ED37C34F
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Wine_C::OnNotifyEnd_21535C9142AC0105AED557A0ED37C34F(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "OnNotifyEnd_21535C9142AC0105AED557A0ED37C34F");
-
-	Params::BP_Wine_C_OnNotifyEnd_21535C9142AC0105AED557A0ED37C34F Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Wine.BP_Wine_C.OnNotifyBegin_62D71E2A4546ADF8B88CE08928DE1DB6
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Wine_C::OnNotifyBegin_62D71E2A4546ADF8B88CE08928DE1DB6(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "OnNotifyBegin_62D71E2A4546ADF8B88CE08928DE1DB6");
-
-	Params::BP_Wine_C_OnNotifyBegin_62D71E2A4546ADF8B88CE08928DE1DB6 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Wine.BP_Wine_C.OnNotifyBegin_21535C9142AC0105AED557A0ED37C34F
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Wine_C::OnNotifyBegin_21535C9142AC0105AED557A0ED37C34F(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "OnNotifyBegin_21535C9142AC0105AED557A0ED37C34F");
-
-	Params::BP_Wine_C_OnNotifyBegin_21535C9142AC0105AED557A0ED37C34F Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Wine.BP_Wine_C.OnInterrupted_62D71E2A4546ADF8B88CE08928DE1DB6
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Wine_C::OnInterrupted_62D71E2A4546ADF8B88CE08928DE1DB6(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "OnInterrupted_62D71E2A4546ADF8B88CE08928DE1DB6");
-
-	Params::BP_Wine_C_OnInterrupted_62D71E2A4546ADF8B88CE08928DE1DB6 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Wine.BP_Wine_C.OnInterrupted_21535C9142AC0105AED557A0ED37C34F
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Wine_C::OnInterrupted_21535C9142AC0105AED557A0ED37C34F(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "OnInterrupted_21535C9142AC0105AED557A0ED37C34F");
-
-	Params::BP_Wine_C_OnInterrupted_21535C9142AC0105AED557A0ED37C34F Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Wine.BP_Wine_C.OnCompleted_62D71E2A4546ADF8B88CE08928DE1DB6
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Wine_C::OnCompleted_62D71E2A4546ADF8B88CE08928DE1DB6(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "OnCompleted_62D71E2A4546ADF8B88CE08928DE1DB6");
-
-	Params::BP_Wine_C_OnCompleted_62D71E2A4546ADF8B88CE08928DE1DB6 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Wine.BP_Wine_C.OnCompleted_21535C9142AC0105AED557A0ED37C34F
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Wine_C::OnCompleted_21535C9142AC0105AED557A0ED37C34F(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "OnCompleted_21535C9142AC0105AED557A0ED37C34F");
-
-	Params::BP_Wine_C_OnCompleted_21535C9142AC0105AED557A0ED37C34F Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Wine.BP_Wine_C.OnBlendOut_62D71E2A4546ADF8B88CE08928DE1DB6
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Wine_C::OnBlendOut_62D71E2A4546ADF8B88CE08928DE1DB6(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "OnBlendOut_62D71E2A4546ADF8B88CE08928DE1DB6");
-
-	Params::BP_Wine_C_OnBlendOut_62D71E2A4546ADF8B88CE08928DE1DB6 Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Wine.BP_Wine_C.OnBlendOut_21535C9142AC0105AED557A0ED37C34F
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Wine_C::OnBlendOut_21535C9142AC0105AED557A0ED37C34F(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "OnBlendOut_21535C9142AC0105AED557A0ED37C34F");
-
-	Params::BP_Wine_C_OnBlendOut_21535C9142AC0105AED557A0ED37C34F Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Wine.BP_Wine_C.IsChangeImage
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   IsInteract_IsChangeImage                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText*                            OverrideText_IsChangeImage                             (Parm, OutParm)
-
-void ABP_Wine_C::IsChangeImage(bool* IsInteract_IsChangeImage, class FText* OverrideText_IsChangeImage)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "IsChangeImage");
-
-	Params::BP_Wine_C_IsChangeImage Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsInteract_IsChangeImage != nullptr)
-		*IsInteract_IsChangeImage = Parms.IsInteract_IsChangeImage;
-
-	if (OverrideText_IsChangeImage != nullptr)
-		*OverrideText_IsChangeImage = std::move(Parms.OverrideText_IsChangeImage);
-}
-
-
-// Function BP_Wine.BP_Wine_C.ExecuteUbergraph_BP_Wine
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Wine_C::ExecuteUbergraph_BP_Wine(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "ExecuteUbergraph_BP_Wine");
-
-	Params::BP_Wine_C_ExecuteUbergraph_BP_Wine Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Wine.BP_Wine_C.DefaultMontagePlay
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_Wine_C::DefaultMontagePlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "DefaultMontagePlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Wine.BP_Wine_C.Combo
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  TimeRange                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             ComboName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Wine_C::Combo(double TimeRange, class FName ComboName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "Combo");
-
-	Params::BP_Wine_C_Combo Parms{};
-
-	Parms.TimeRange = TimeRange;
-	Parms.ComboName = ComboName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Wine.BP_Wine_C.CollisionReset
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_Wine_C::CollisionReset()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "CollisionReset");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_Wine.BP_Wine_C.Attack_AC_Remote
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  TimeRange                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             ComponentName                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  DamageMultiply                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  StanMultiply                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_Wine_C::Attack_AC_Remote(double TimeRange, class FName ComponentName, double DamageMultiply, double StanMultiply)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "Attack_AC_Remote");
-
-	Params::BP_Wine_C_Attack_AC_Remote Parms{};
-
-	Parms.TimeRange = TimeRange;
-	Parms.ComponentName = ComponentName;
-	Parms.DamageMultiply = DamageMultiply;
-	Parms.StanMultiply = StanMultiply;
+	Parms.OtherActor = OtherActor;
+	Parms.Sweep_Result = std::move(Sweep_Result);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -461,25 +66,420 @@ void ABP_Wine_C::Attack_AC(double TimeRange, class FName AttackName, double Dama
 }
 
 
-// Function BP_Wine.BP_Wine_C.ApplyDamage
+// Function BP_Wine.BP_Wine_C.Attack_AC_Remote
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                Sweep_Result                                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// double                                  TimeRange                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             ComponentName                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  DamageMultiply                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  StanMultiply                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_Wine_C::ApplyDamage(class UObject* OtherActor, const struct FHitResult& Sweep_Result)
+void ABP_Wine_C::Attack_AC_Remote(double TimeRange, class FName ComponentName, double DamageMultiply, double StanMultiply)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Wine_C", "ApplyDamage");
+		Func = Class->GetFunction("BP_Wine_C", "Attack_AC_Remote");
 
-	Params::BP_Wine_C_ApplyDamage Parms{};
+	Params::BP_Wine_C_Attack_AC_Remote Parms{};
 
-	Parms.OtherActor = OtherActor;
-	Parms.Sweep_Result = std::move(Sweep_Result);
+	Parms.TimeRange = TimeRange;
+	Parms.ComponentName = ComponentName;
+	Parms.DamageMultiply = DamageMultiply;
+	Parms.StanMultiply = StanMultiply;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Wine.BP_Wine_C.CollisionReset
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Wine_C::CollisionReset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "CollisionReset");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Wine.BP_Wine_C.Combo
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  TimeRange                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             ComboName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Wine_C::Combo(double TimeRange, class FName ComboName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "Combo");
+
+	Params::BP_Wine_C_Combo Parms{};
+
+	Parms.TimeRange = TimeRange;
+	Parms.ComboName = ComboName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Wine.BP_Wine_C.DefaultMontagePlay
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Wine_C::DefaultMontagePlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "DefaultMontagePlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Wine.BP_Wine_C.ExecuteUbergraph_BP_Wine
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Wine_C::ExecuteUbergraph_BP_Wine(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "ExecuteUbergraph_BP_Wine");
+
+	Params::BP_Wine_C_ExecuteUbergraph_BP_Wine Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Wine.BP_Wine_C.IsChangeImage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   IsInteract                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText*                            OverrideText                                           (Parm, OutParm)
+
+void ABP_Wine_C::IsChangeImage(bool* IsInteract, class FText* OverrideText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "IsChangeImage");
+
+	Params::BP_Wine_C_IsChangeImage Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsInteract != nullptr)
+		*IsInteract = Parms.IsInteract;
+
+	if (OverrideText != nullptr)
+		*OverrideText = std::move(Parms.OverrideText);
+}
+
+
+// Function BP_Wine.BP_Wine_C.OnBlendOut_21535C9142AC0105AED557A0ED37C34F
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Wine_C::OnBlendOut_21535C9142AC0105AED557A0ED37C34F(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "OnBlendOut_21535C9142AC0105AED557A0ED37C34F");
+
+	Params::BP_Wine_C_OnBlendOut_21535C9142AC0105AED557A0ED37C34F Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Wine.BP_Wine_C.OnBlendOut_62D71E2A4546ADF8B88CE08928DE1DB6
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Wine_C::OnBlendOut_62D71E2A4546ADF8B88CE08928DE1DB6(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "OnBlendOut_62D71E2A4546ADF8B88CE08928DE1DB6");
+
+	Params::BP_Wine_C_OnBlendOut_62D71E2A4546ADF8B88CE08928DE1DB6 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Wine.BP_Wine_C.OnCompleted_21535C9142AC0105AED557A0ED37C34F
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Wine_C::OnCompleted_21535C9142AC0105AED557A0ED37C34F(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "OnCompleted_21535C9142AC0105AED557A0ED37C34F");
+
+	Params::BP_Wine_C_OnCompleted_21535C9142AC0105AED557A0ED37C34F Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Wine.BP_Wine_C.OnCompleted_62D71E2A4546ADF8B88CE08928DE1DB6
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Wine_C::OnCompleted_62D71E2A4546ADF8B88CE08928DE1DB6(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "OnCompleted_62D71E2A4546ADF8B88CE08928DE1DB6");
+
+	Params::BP_Wine_C_OnCompleted_62D71E2A4546ADF8B88CE08928DE1DB6 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Wine.BP_Wine_C.OnInterrupted_21535C9142AC0105AED557A0ED37C34F
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Wine_C::OnInterrupted_21535C9142AC0105AED557A0ED37C34F(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "OnInterrupted_21535C9142AC0105AED557A0ED37C34F");
+
+	Params::BP_Wine_C_OnInterrupted_21535C9142AC0105AED557A0ED37C34F Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Wine.BP_Wine_C.OnInterrupted_62D71E2A4546ADF8B88CE08928DE1DB6
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Wine_C::OnInterrupted_62D71E2A4546ADF8B88CE08928DE1DB6(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "OnInterrupted_62D71E2A4546ADF8B88CE08928DE1DB6");
+
+	Params::BP_Wine_C_OnInterrupted_62D71E2A4546ADF8B88CE08928DE1DB6 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Wine.BP_Wine_C.OnNotifyBegin_21535C9142AC0105AED557A0ED37C34F
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Wine_C::OnNotifyBegin_21535C9142AC0105AED557A0ED37C34F(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "OnNotifyBegin_21535C9142AC0105AED557A0ED37C34F");
+
+	Params::BP_Wine_C_OnNotifyBegin_21535C9142AC0105AED557A0ED37C34F Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Wine.BP_Wine_C.OnNotifyBegin_62D71E2A4546ADF8B88CE08928DE1DB6
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Wine_C::OnNotifyBegin_62D71E2A4546ADF8B88CE08928DE1DB6(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "OnNotifyBegin_62D71E2A4546ADF8B88CE08928DE1DB6");
+
+	Params::BP_Wine_C_OnNotifyBegin_62D71E2A4546ADF8B88CE08928DE1DB6 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Wine.BP_Wine_C.OnNotifyEnd_21535C9142AC0105AED557A0ED37C34F
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Wine_C::OnNotifyEnd_21535C9142AC0105AED557A0ED37C34F(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "OnNotifyEnd_21535C9142AC0105AED557A0ED37C34F");
+
+	Params::BP_Wine_C_OnNotifyEnd_21535C9142AC0105AED557A0ED37C34F Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Wine.BP_Wine_C.OnNotifyEnd_62D71E2A4546ADF8B88CE08928DE1DB6
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Wine_C::OnNotifyEnd_62D71E2A4546ADF8B88CE08928DE1DB6(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "OnNotifyEnd_62D71E2A4546ADF8B88CE08928DE1DB6");
+
+	Params::BP_Wine_C_OnNotifyEnd_62D71E2A4546ADF8B88CE08928DE1DB6 Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Wine.BP_Wine_C.PickState
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C*  Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   SlotIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Wine_C::PickState(bool State, class ABP_FirstPersonCharacter_Main_C* Character, int32 SlotIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "PickState");
+
+	Params::BP_Wine_C_PickState Parms{};
+
+	Parms.State = State;
+	Parms.Character = Character;
+	Parms.SlotIndex = SlotIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Wine.BP_Wine_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_Wine_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Wine.BP_Wine_C.SetMeshDatas
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    KeepScale                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Wine_C::SetMeshDatas(bool KeepScale)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "SetMeshDatas");
+
+	Params::BP_Wine_C_SetMeshDatas Parms{};
+
+	Parms.KeepScale = KeepScale;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Wine.BP_Wine_C.Shot
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    PressState                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  PushTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_FirstPersonCharacter_Main_C*  SourcePlayer                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Wine_C::Shot(bool PressState, double PushTime, class ABP_FirstPersonCharacter_Main_C* SourcePlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "Shot");
+
+	Params::BP_Wine_C_Shot Parms{};
+
+	Parms.PressState = PressState;
+	Parms.PushTime = PushTime;
+	Parms.SourcePlayer = SourcePlayer;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_Wine.BP_Wine_C.UseItem
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Wine_C::UseItem()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Wine_C", "UseItem");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

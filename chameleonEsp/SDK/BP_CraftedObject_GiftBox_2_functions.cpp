@@ -16,109 +16,39 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_CraftedObject_GiftBox_2.BP_CraftedObject_GiftBox_2_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_CraftedObject_GiftBox_2_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_GiftBox_2_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CraftedObject_GiftBox_2.BP_CraftedObject_GiftBox_2_C.OnRep_OverrideMass
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_CraftedObject_GiftBox_2_C::OnRep_OverrideMass()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_GiftBox_2_C", "OnRep_OverrideMass");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CraftedObject_GiftBox_2.BP_CraftedObject_GiftBox_2_C.IsChangeImage
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_CraftedObject_GiftBox_2.BP_CraftedObject_GiftBox_2_C.Damage
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool*                                   IsInteract_IsChangeImage                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText*                            OverrideText_IsChangeImage                             (Parm, OutParm)
+// double                                  DamageValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TeamIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EN_DamageType                           DamageType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FTransform&                SourceAgentPoint                                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UnAvoidable                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             DamageName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FFinishFilter*                   Finish                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CraftedObject_GiftBox_2_C::IsChangeImage(bool* IsInteract_IsChangeImage, class FText* OverrideText_IsChangeImage)
+void ABP_CraftedObject_GiftBox_2_C::Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_GiftBox_2_C", "IsChangeImage");
+		Func = Class->GetFunction("BP_CraftedObject_GiftBox_2_C", "Damage");
 
-	Params::BP_CraftedObject_GiftBox_2_C_IsChangeImage Parms{};
+	Params::BP_CraftedObject_GiftBox_2_C_Damage Parms{};
+
+	Parms.DamageValue = DamageValue;
+	Parms.TeamIndex = TeamIndex;
+	Parms.DamageType = DamageType;
+	Parms.SourceAgentPoint = std::move(SourceAgentPoint);
+	Parms.UnAvoidable = UnAvoidable;
+	Parms.DamageName = DamageName;
+	Parms.SourceActor = SourceActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (IsInteract_IsChangeImage != nullptr)
-		*IsInteract_IsChangeImage = Parms.IsInteract_IsChangeImage;
-
-	if (OverrideText_IsChangeImage != nullptr)
-		*OverrideText_IsChangeImage = std::move(Parms.OverrideText_IsChangeImage);
-}
-
-
-// Function BP_CraftedObject_GiftBox_2.BP_CraftedObject_GiftBox_2_C.GetItemInfo
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ENUM_HandType*                          HandType_GetItemInfo                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ENUM_ClassType*                         ClassType_GetItemInfo                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   NotPickUp_GetItemInfo                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FRotator*                        HaveRotation_GetItemInfo                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FVector*                         Add_Position_GetItemInfo                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   IsBoneAttach_GetItemInfo                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ENUM_ItemBindType*                      BindType_GetItemInfo                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName*                            BoneName_GetItemInfo                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FST_ItemCoreDatas*               CoreDatas_GetItemInfo                                  (Parm, OutParm, HasGetValueTypeHash)
-
-void ABP_CraftedObject_GiftBox_2_C::GetItemInfo(ENUM_HandType* HandType_GetItemInfo, ENUM_ClassType* ClassType_GetItemInfo, bool* NotPickUp_GetItemInfo, struct FRotator* HaveRotation_GetItemInfo, struct FVector* Add_Position_GetItemInfo, bool* IsBoneAttach_GetItemInfo, ENUM_ItemBindType* BindType_GetItemInfo, class FName* BoneName_GetItemInfo, struct FST_ItemCoreDatas* CoreDatas_GetItemInfo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_GiftBox_2_C", "GetItemInfo");
-
-	Params::BP_CraftedObject_GiftBox_2_C_GetItemInfo Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (HandType_GetItemInfo != nullptr)
-		*HandType_GetItemInfo = Parms.HandType_GetItemInfo;
-
-	if (ClassType_GetItemInfo != nullptr)
-		*ClassType_GetItemInfo = Parms.ClassType_GetItemInfo;
-
-	if (NotPickUp_GetItemInfo != nullptr)
-		*NotPickUp_GetItemInfo = Parms.NotPickUp_GetItemInfo;
-
-	if (HaveRotation_GetItemInfo != nullptr)
-		*HaveRotation_GetItemInfo = std::move(Parms.HaveRotation_GetItemInfo);
-
-	if (Add_Position_GetItemInfo != nullptr)
-		*Add_Position_GetItemInfo = std::move(Parms.Add_Position_GetItemInfo);
-
-	if (IsBoneAttach_GetItemInfo != nullptr)
-		*IsBoneAttach_GetItemInfo = Parms.IsBoneAttach_GetItemInfo;
-
-	if (BindType_GetItemInfo != nullptr)
-		*BindType_GetItemInfo = Parms.BindType_GetItemInfo;
-
-	if (BoneName_GetItemInfo != nullptr)
-		*BoneName_GetItemInfo = Parms.BoneName_GetItemInfo;
-
-	if (CoreDatas_GetItemInfo != nullptr)
-		*CoreDatas_GetItemInfo = std::move(Parms.CoreDatas_GetItemInfo);
+	if (Finish != nullptr)
+		*Finish = std::move(Parms.Finish);
 }
 
 
@@ -142,39 +72,109 @@ void ABP_CraftedObject_GiftBox_2_C::ExecuteUbergraph_BP_CraftedObject_GiftBox_2(
 }
 
 
-// Function BP_CraftedObject_GiftBox_2.BP_CraftedObject_GiftBox_2_C.Damage
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_CraftedObject_GiftBox_2.BP_CraftedObject_GiftBox_2_C.GetItemInfo
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  DamageValue_Damage                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   TeamIndex_Damage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EN_DamageType                           DamageType_Damage                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FTransform&                SourceAgentPoint_Damage                                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    UnAvoidable_Damage                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             DamageName_Damage                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           SourceActor_Damage                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FFinishFilter*                   Finish_Damage                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ENUM_HandType*                          HandType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ENUM_ClassType*                         ClassType                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   NotPickUp                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FRotator*                        HaveRotation                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FVector*                         Add_Position                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   IsBoneAttach                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ENUM_ItemBindType*                      BindType                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName*                            BoneName                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FST_ItemCoreDatas*               CoreDatas                                              (Parm, OutParm, HasGetValueTypeHash)
 
-void ABP_CraftedObject_GiftBox_2_C::Damage(double DamageValue_Damage, int32 TeamIndex_Damage, EN_DamageType DamageType_Damage, const struct FTransform& SourceAgentPoint_Damage, bool UnAvoidable_Damage, class FName DamageName_Damage, class AActor* SourceActor_Damage, struct FFinishFilter* Finish_Damage)
+void ABP_CraftedObject_GiftBox_2_C::GetItemInfo(ENUM_HandType* HandType, ENUM_ClassType* ClassType, bool* NotPickUp, struct FRotator* HaveRotation, struct FVector* Add_Position, bool* IsBoneAttach, ENUM_ItemBindType* BindType, class FName* BoneName, struct FST_ItemCoreDatas* CoreDatas)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CraftedObject_GiftBox_2_C", "Damage");
+		Func = Class->GetFunction("BP_CraftedObject_GiftBox_2_C", "GetItemInfo");
 
-	Params::BP_CraftedObject_GiftBox_2_C_Damage Parms{};
-
-	Parms.DamageValue_Damage = DamageValue_Damage;
-	Parms.TeamIndex_Damage = TeamIndex_Damage;
-	Parms.DamageType_Damage = DamageType_Damage;
-	Parms.SourceAgentPoint_Damage = std::move(SourceAgentPoint_Damage);
-	Parms.UnAvoidable_Damage = UnAvoidable_Damage;
-	Parms.DamageName_Damage = DamageName_Damage;
-	Parms.SourceActor_Damage = SourceActor_Damage;
+	Params::BP_CraftedObject_GiftBox_2_C_GetItemInfo Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Finish_Damage != nullptr)
-		*Finish_Damage = std::move(Parms.Finish_Damage);
+	if (HandType != nullptr)
+		*HandType = Parms.HandType;
+
+	if (ClassType != nullptr)
+		*ClassType = Parms.ClassType;
+
+	if (NotPickUp != nullptr)
+		*NotPickUp = Parms.NotPickUp;
+
+	if (HaveRotation != nullptr)
+		*HaveRotation = std::move(Parms.HaveRotation);
+
+	if (Add_Position != nullptr)
+		*Add_Position = std::move(Parms.Add_Position);
+
+	if (IsBoneAttach != nullptr)
+		*IsBoneAttach = Parms.IsBoneAttach;
+
+	if (BindType != nullptr)
+		*BindType = Parms.BindType;
+
+	if (BoneName != nullptr)
+		*BoneName = Parms.BoneName;
+
+	if (CoreDatas != nullptr)
+		*CoreDatas = std::move(Parms.CoreDatas);
+}
+
+
+// Function BP_CraftedObject_GiftBox_2.BP_CraftedObject_GiftBox_2_C.IsChangeImage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   IsInteract                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText*                            OverrideText                                           (Parm, OutParm)
+
+void ABP_CraftedObject_GiftBox_2_C::IsChangeImage(bool* IsInteract, class FText* OverrideText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_GiftBox_2_C", "IsChangeImage");
+
+	Params::BP_CraftedObject_GiftBox_2_C_IsChangeImage Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsInteract != nullptr)
+		*IsInteract = Parms.IsInteract;
+
+	if (OverrideText != nullptr)
+		*OverrideText = std::move(Parms.OverrideText);
+}
+
+
+// Function BP_CraftedObject_GiftBox_2.BP_CraftedObject_GiftBox_2_C.OnRep_OverrideMass
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_CraftedObject_GiftBox_2_C::OnRep_OverrideMass()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_GiftBox_2_C", "OnRep_OverrideMass");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CraftedObject_GiftBox_2.BP_CraftedObject_GiftBox_2_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_CraftedObject_GiftBox_2_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CraftedObject_GiftBox_2_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

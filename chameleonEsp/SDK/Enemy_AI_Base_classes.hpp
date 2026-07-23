@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
+#include "EN_ThrowState_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "EN_ThrowState_structs.hpp"
-#include "EN_DamageType_structs.hpp"
-#include "EN_StrafingDirection_structs.hpp"
 #include "EN_EnemyType_structs.hpp"
+#include "EN_DamageType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ST_AttackDatas_structs.hpp"
+#include "EN_StrafingDirection_structs.hpp"
 #include "ENUM_ActorType_structs.hpp"
 #include "EN_StanType_structs.hpp"
+#include "AttackType_structs.hpp"
 #include "ENUM_CameraMode_structs.hpp"
 #include "AIModule_structs.hpp"
-#include "AttackType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -96,10 +96,10 @@ public:
 	bool                                          IsStrafing;                                        // 0x08F4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_8F5[0x3];                                      // 0x08F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        ReciveDamageValue;                                 // 0x08F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class WBP_LockOn_0::UWBP_LockOn_C*            LockOnUI;                                          // 0x0900(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class WBP_LockOn::UWBP_LockOn_C*              LockOnUI;                                          // 0x0900(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        MaxHealth;                                         // 0x0908(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Add_Multiply;                                      // 0x0910(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(EN_ThrowState ThrowState)> ThrowEvent;                             // 0x0918(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(EN_ThrowState ThrowState_0)> ThrowEvent;                           // 0x0918(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          HeadTrance;                                        // 0x0928(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_929[0x7];                                      // 0x0929(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void()>              AttackCancel;                                      // 0x0930(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
@@ -165,130 +165,130 @@ public:
 	bool                                          BeforeBarVisibleState;                             // 0x0B30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ViewCheck();
-	void View_In_Out_Function(int32 Stencil_Value);
-	void UserDatasAttackControl(const struct FST_AttackDatas& AttackDatas, class FName AttackName);
-	void UserConstructionScript();
-	void UpdateWarpPoint();
-	void UnStanTimerReset();
-	void UnStan();
-	void ThrowState(EN_ThrowState ThrowState);
-	void SuperArmorCall(double AddValue);
-	void StrafingStateChange(bool IsStrafing, EN_StrafingDirection Direction);
-	void StopAI();
-	void StanDamage(EN_StanType StanType);
-	void Stan(double Time, EN_StanType StanType);
-	void StaminSubGaugeStart();
-	void StaminaWearDown(double WearDownValue, bool SlowDamage, bool IsParry);
-	void StaminaDamage(double Value);
-	void StaminaCall(double AddValue);
-	void SetUpBlackBoardValue();
-	void SetStrafing(bool IsStrafing, EN_StrafingDirection Direction);
-	void SetActorInfo(const struct FVector& ToPosition, class USceneComponent* Comp);
-	void Set_Difficulty(int32 Value);
-	void Reverse(const struct FTransform& NewPosition, const struct FVector& HitNormal);
-	void RestartAI();
-	void ReceiveDestroyed();
-	void ReceiveBeginPlay();
-	void PlayAvoidanceAnimation();
-	void PhaseChangeCheck(const class FString& Comment, bool* PhaseChange);
-	void PhaseChange();
-	void OnNotifyEnd_F892FC25472E66E809047FB1FBA2DF9B(class FName NotifyName);
-	void OnNotifyEnd_DE3366654C5E4918D44FCBA3E1FFFDE1(class FName NotifyName);
-	void OnNotifyEnd_C770FE1A4556A10A1DF7C19398AB17C4(class FName NotifyName);
-	void OnNotifyEnd_BD4416DA4F8495B4F0081A86FA9C4192(class FName NotifyName);
-	void OnNotifyEnd_78247E4C4C86921A63612294DED648BA(class FName NotifyName);
-	void OnNotifyEnd_67E598DC4C1E9C3A96AB859FA2C2113E(class FName NotifyName);
-	void OnNotifyEnd_4A4808B74EBDDEC087B4E1937DA87E3F(class FName NotifyName);
-	void OnNotifyEnd_31AC38724CA60DE73382B0A8157A6526(class FName NotifyName);
-	void OnNotifyEnd_1DFAA9FF4C0513B576788988F3746C0F(class FName NotifyName);
-	void OnNotifyBegin_F892FC25472E66E809047FB1FBA2DF9B(class FName NotifyName);
-	void OnNotifyBegin_DE3366654C5E4918D44FCBA3E1FFFDE1(class FName NotifyName);
-	void OnNotifyBegin_C770FE1A4556A10A1DF7C19398AB17C4(class FName NotifyName);
-	void OnNotifyBegin_BD4416DA4F8495B4F0081A86FA9C4192(class FName NotifyName);
-	void OnNotifyBegin_78247E4C4C86921A63612294DED648BA(class FName NotifyName);
-	void OnNotifyBegin_67E598DC4C1E9C3A96AB859FA2C2113E(class FName NotifyName);
-	void OnNotifyBegin_4A4808B74EBDDEC087B4E1937DA87E3F(class FName NotifyName);
-	void OnNotifyBegin_31AC38724CA60DE73382B0A8157A6526(class FName NotifyName);
-	void OnNotifyBegin_1DFAA9FF4C0513B576788988F3746C0F(class FName NotifyName);
-	void OnInterrupted_F892FC25472E66E809047FB1FBA2DF9B(class FName NotifyName);
-	void OnInterrupted_DE3366654C5E4918D44FCBA3E1FFFDE1(class FName NotifyName);
-	void OnInterrupted_C770FE1A4556A10A1DF7C19398AB17C4(class FName NotifyName);
-	void OnInterrupted_BD4416DA4F8495B4F0081A86FA9C4192(class FName NotifyName);
-	void OnInterrupted_78247E4C4C86921A63612294DED648BA(class FName NotifyName);
-	void OnInterrupted_67E598DC4C1E9C3A96AB859FA2C2113E(class FName NotifyName);
-	void OnInterrupted_4A4808B74EBDDEC087B4E1937DA87E3F(class FName NotifyName);
-	void OnInterrupted_31AC38724CA60DE73382B0A8157A6526(class FName NotifyName);
-	void OnInterrupted_1DFAA9FF4C0513B576788988F3746C0F(class FName NotifyName);
-	void OnCompleted_F892FC25472E66E809047FB1FBA2DF9B(class FName NotifyName);
-	void OnCompleted_DE3366654C5E4918D44FCBA3E1FFFDE1(class FName NotifyName);
-	void OnCompleted_C770FE1A4556A10A1DF7C19398AB17C4(class FName NotifyName);
-	void OnCompleted_BD4416DA4F8495B4F0081A86FA9C4192(class FName NotifyName);
-	void OnCompleted_78247E4C4C86921A63612294DED648BA(class FName NotifyName);
-	void OnCompleted_67E598DC4C1E9C3A96AB859FA2C2113E(class FName NotifyName);
-	void OnCompleted_4A4808B74EBDDEC087B4E1937DA87E3F(class FName NotifyName);
-	void OnCompleted_31AC38724CA60DE73382B0A8157A6526(class FName NotifyName);
-	void OnCompleted_1DFAA9FF4C0513B576788988F3746C0F(class FName NotifyName);
-	void OnBlendOut_F892FC25472E66E809047FB1FBA2DF9B(class FName NotifyName);
-	void OnBlendOut_DE3366654C5E4918D44FCBA3E1FFFDE1(class FName NotifyName);
-	void OnBlendOut_C770FE1A4556A10A1DF7C19398AB17C4(class FName NotifyName);
-	void OnBlendOut_BD4416DA4F8495B4F0081A86FA9C4192(class FName NotifyName);
-	void OnBlendOut_78247E4C4C86921A63612294DED648BA(class FName NotifyName);
-	void OnBlendOut_67E598DC4C1E9C3A96AB859FA2C2113E(class FName NotifyName);
-	void OnBlendOut_4A4808B74EBDDEC087B4E1937DA87E3F(class FName NotifyName);
-	void OnBlendOut_31AC38724CA60DE73382B0A8157A6526(class FName NotifyName);
-	void OnBlendOut_1DFAA9FF4C0513B576788988F3746C0F(class FName NotifyName);
-	bool IsPhaseChangeWait();
-	void IsBattleMode(bool* Bool);
-	void IsAttackNow(bool* State);
-	void IsAiming(bool* IsAiming, int32* SuccessCount);
-	void InAngleOfView(bool InState, double DeltaTime, ENUM_CameraMode CameraMode);
-	void HealthSubAnimation();
-	void GetParryState(bool* State);
-	void GetCopyClass(class UStaticMeshComponent* CentorComponent, class UClass** Class_0, double* Scale, struct FVector* DefaultScale);
-	void GetCentorPosition(TArray<struct FVector>* CentorPosition);
-	void GetAvoidanceRotation(struct FRotator* Rotation);
-	void GetActorInfo(struct FTransform* DefaultTransform, bool* Not_In_Shot, struct FVector* CentorPosition, bool* IsPenguin, ENUM_ActorType* ActorType, bool* NonInPhoto);
-	void Fix();
-	void ExecuteUbergraph_Enemy_AI_Base(int32 EntryPoint);
-	void DownTime();
-	void DestroyLockOnSystems();
-	void Delete();
-	void DeathOverride__UpdateFunc();
-	void DeathOverride__FinishedFunc();
-	void DeathEvent();
-	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
-	void DamageState(bool Active);
-	void DamagedRedBody();
-	void DamageCall(double AddValue);
-	void Damage_Effect(double DamageRatio);
-	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
-	void CustomAttack(class FName AttackName);
-	void CoolDownEnd();
-	void Combo(double TimeRange, class FName ComboName);
-	void CollisionReset();
-	void Change_Movement(bool Value);
-	void BossBarReset();
-	void BndEvt__Enemy_AI_Base_DeviceComponent_K2Node_ComponentBoundEvent_4_OnSignal__DelegateSignature(const struct FST_EventValue& SignalValue);
-	void BndEvt__Enemy_AI_Base_CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
-	void BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControlSub_K2Node_ComponentBoundEvent_10_ChangedValue__DelegateSignature(double UpdateValue);
-	void BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_9_ChangedValue__DelegateSignature(double UpdateValue);
-	void BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_3_ChangeAnimationEnd__DelegateSignature();
-	void BndEvt__Enemy_AI_Base_BPC_HealthGaugeControlSub_K2Node_ComponentBoundEvent_4_ChangedValue__DelegateSignature(double UpdateValue);
-	void BndEvt__Enemy_AI_Base_BPC_HealthGaugeControl_K2Node_ComponentBoundEvent_3_ChangedValue__DelegateSignature(double UpdateValue);
-	void BndEvt__Enemy_AI_Base_BPC_AIMoveControl_K2Node_ComponentBoundEvent_2_MoveEndSignal__DelegateSignature(EPathFollowingResult OutPutRezult, class FName AttackName);
-	void BndEvt__Enemy_AI_Base_AIPerception_K2Node_ComponentBoundEvent_7_PerceptionUpdatedDelegate__DelegateSignature(const TArray<class AActor*>& UpdatedActors);
-	void BndEvt__BP_Enemy_AI_Hamburger_Base_BPC_AttackCollisionControl_K2Node_ComponentBoundEvent_1_HitEvent__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void Avoid(bool State);
-	void AttackReset();
-	void AttackNotify(int32 ID);
-	void AttackNamesControl(class FName AttackName);
-	void AttackDataTableSetup();
-	void Attack_AC_Remote(double TimeRange, class FName ComponentName, double DamageMultiply, double StanMultiply);
-	void Attack_AC(double TimeRange, class FName AttackName, double DamageMultiply, bool MutipleHitPossible, double StanMultiply);
-	void Attack(EAttackType AttackType);
-	void AnimComboBlock();
 	void AIState(bool State);
+	void AnimComboBlock();
+	void Attack(EAttackType AttackType);
+	void Attack_AC(double TimeRange, class FName AttackName, double DamageMultiply_0, bool MutipleHitPossible, double StanMultiply);
+	void Attack_AC_Remote(double TimeRange, class FName ComponentName, double DamageMultiply_0, double StanMultiply);
+	void AttackDataTableSetup();
+	void AttackNamesControl(class FName AttackName);
+	void AttackNotify(int32 ID);
+	void AttackReset();
+	void Avoid(bool State);
+	void BndEvt__BP_Enemy_AI_Hamburger_Base_BPC_AttackCollisionControl_K2Node_ComponentBoundEvent_1_HitEvent__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__Enemy_AI_Base_AIPerception_K2Node_ComponentBoundEvent_7_PerceptionUpdatedDelegate__DelegateSignature(const TArray<class AActor*>& UpdatedActors);
+	void BndEvt__Enemy_AI_Base_BPC_AIMoveControl_K2Node_ComponentBoundEvent_2_MoveEndSignal__DelegateSignature(EPathFollowingResult OutPutRezult, class FName AttackName);
+	void BndEvt__Enemy_AI_Base_BPC_HealthGaugeControl_K2Node_ComponentBoundEvent_3_ChangedValue__DelegateSignature(double UpdateValue);
+	void BndEvt__Enemy_AI_Base_BPC_HealthGaugeControlSub_K2Node_ComponentBoundEvent_4_ChangedValue__DelegateSignature(double UpdateValue);
+	void BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_3_ChangeAnimationEnd__DelegateSignature();
+	void BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControl_K2Node_ComponentBoundEvent_9_ChangedValue__DelegateSignature(double UpdateValue);
+	void BndEvt__Enemy_AI_Base_BPC_StaminaGaugeControlSub_K2Node_ComponentBoundEvent_10_ChangedValue__DelegateSignature(double UpdateValue);
+	void BndEvt__Enemy_AI_Base_CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+	void BndEvt__Enemy_AI_Base_DeviceComponent_K2Node_ComponentBoundEvent_4_OnSignal__DelegateSignature(const struct FST_EventValue& SignalValue);
+	void BossBarReset();
+	void Change_Movement(bool Value);
+	void CollisionReset();
+	void Combo(double TimeRange, class FName ComboName);
+	void CoolDownEnd();
+	void CustomAttack(class FName AttackName);
+	void Damage(double DamageValue, int32 TeamIndex_0, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
+	void Damage_Effect(double DamageRatio);
+	void DamageCall(double AddValue);
+	void DamagedRedBody();
+	void DamageState(bool Active);
+	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex_0, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
+	void DeathEvent();
+	void DeathOverride__FinishedFunc();
+	void DeathOverride__UpdateFunc();
+	void Delete();
+	void DestroyLockOnSystems();
+	void DownTime();
+	void ExecuteUbergraph_Enemy_AI_Base(int32 EntryPoint);
+	void Fix();
+	void GetActorInfo(struct FTransform* DefaultTransform_0, bool* Not_In_Shot, struct FVector* CentorPosition, bool* IsPenguin, ENUM_ActorType* ActorType, bool* NonInPhoto);
+	void GetAvoidanceRotation(struct FRotator* Rotation);
+	void GetCentorPosition(TArray<struct FVector>* CentorPosition);
+	void GetCopyClass(class UStaticMeshComponent* CentorComponent, class UClass** Class_0, double* Scale, struct FVector* DefaultScale);
+	void GetParryState(bool* State);
+	void HealthSubAnimation();
+	void InAngleOfView(bool InState, double DeltaTime, ENUM_CameraMode CameraMode);
+	void IsAiming(bool* IsAiming_0, int32* SuccessCount);
+	void IsAttackNow(bool* State);
+	void IsBattleMode(bool* Bool);
+	bool IsPhaseChangeWait();
+	void OnBlendOut_1DFAA9FF4C0513B576788988F3746C0F(class FName NotifyName);
+	void OnBlendOut_31AC38724CA60DE73382B0A8157A6526(class FName NotifyName);
+	void OnBlendOut_4A4808B74EBDDEC087B4E1937DA87E3F(class FName NotifyName);
+	void OnBlendOut_67E598DC4C1E9C3A96AB859FA2C2113E(class FName NotifyName);
+	void OnBlendOut_78247E4C4C86921A63612294DED648BA(class FName NotifyName);
+	void OnBlendOut_BD4416DA4F8495B4F0081A86FA9C4192(class FName NotifyName);
+	void OnBlendOut_C770FE1A4556A10A1DF7C19398AB17C4(class FName NotifyName);
+	void OnBlendOut_DE3366654C5E4918D44FCBA3E1FFFDE1(class FName NotifyName);
+	void OnBlendOut_F892FC25472E66E809047FB1FBA2DF9B(class FName NotifyName);
+	void OnCompleted_1DFAA9FF4C0513B576788988F3746C0F(class FName NotifyName);
+	void OnCompleted_31AC38724CA60DE73382B0A8157A6526(class FName NotifyName);
+	void OnCompleted_4A4808B74EBDDEC087B4E1937DA87E3F(class FName NotifyName);
+	void OnCompleted_67E598DC4C1E9C3A96AB859FA2C2113E(class FName NotifyName);
+	void OnCompleted_78247E4C4C86921A63612294DED648BA(class FName NotifyName);
+	void OnCompleted_BD4416DA4F8495B4F0081A86FA9C4192(class FName NotifyName);
+	void OnCompleted_C770FE1A4556A10A1DF7C19398AB17C4(class FName NotifyName);
+	void OnCompleted_DE3366654C5E4918D44FCBA3E1FFFDE1(class FName NotifyName);
+	void OnCompleted_F892FC25472E66E809047FB1FBA2DF9B(class FName NotifyName);
+	void OnInterrupted_1DFAA9FF4C0513B576788988F3746C0F(class FName NotifyName);
+	void OnInterrupted_31AC38724CA60DE73382B0A8157A6526(class FName NotifyName);
+	void OnInterrupted_4A4808B74EBDDEC087B4E1937DA87E3F(class FName NotifyName);
+	void OnInterrupted_67E598DC4C1E9C3A96AB859FA2C2113E(class FName NotifyName);
+	void OnInterrupted_78247E4C4C86921A63612294DED648BA(class FName NotifyName);
+	void OnInterrupted_BD4416DA4F8495B4F0081A86FA9C4192(class FName NotifyName);
+	void OnInterrupted_C770FE1A4556A10A1DF7C19398AB17C4(class FName NotifyName);
+	void OnInterrupted_DE3366654C5E4918D44FCBA3E1FFFDE1(class FName NotifyName);
+	void OnInterrupted_F892FC25472E66E809047FB1FBA2DF9B(class FName NotifyName);
+	void OnNotifyBegin_1DFAA9FF4C0513B576788988F3746C0F(class FName NotifyName);
+	void OnNotifyBegin_31AC38724CA60DE73382B0A8157A6526(class FName NotifyName);
+	void OnNotifyBegin_4A4808B74EBDDEC087B4E1937DA87E3F(class FName NotifyName);
+	void OnNotifyBegin_67E598DC4C1E9C3A96AB859FA2C2113E(class FName NotifyName);
+	void OnNotifyBegin_78247E4C4C86921A63612294DED648BA(class FName NotifyName);
+	void OnNotifyBegin_BD4416DA4F8495B4F0081A86FA9C4192(class FName NotifyName);
+	void OnNotifyBegin_C770FE1A4556A10A1DF7C19398AB17C4(class FName NotifyName);
+	void OnNotifyBegin_DE3366654C5E4918D44FCBA3E1FFFDE1(class FName NotifyName);
+	void OnNotifyBegin_F892FC25472E66E809047FB1FBA2DF9B(class FName NotifyName);
+	void OnNotifyEnd_1DFAA9FF4C0513B576788988F3746C0F(class FName NotifyName);
+	void OnNotifyEnd_31AC38724CA60DE73382B0A8157A6526(class FName NotifyName);
+	void OnNotifyEnd_4A4808B74EBDDEC087B4E1937DA87E3F(class FName NotifyName);
+	void OnNotifyEnd_67E598DC4C1E9C3A96AB859FA2C2113E(class FName NotifyName);
+	void OnNotifyEnd_78247E4C4C86921A63612294DED648BA(class FName NotifyName);
+	void OnNotifyEnd_BD4416DA4F8495B4F0081A86FA9C4192(class FName NotifyName);
+	void OnNotifyEnd_C770FE1A4556A10A1DF7C19398AB17C4(class FName NotifyName);
+	void OnNotifyEnd_DE3366654C5E4918D44FCBA3E1FFFDE1(class FName NotifyName);
+	void OnNotifyEnd_F892FC25472E66E809047FB1FBA2DF9B(class FName NotifyName);
+	void PhaseChange();
+	void PhaseChangeCheck(const class FString& Comment, bool* PhaseChange);
+	void PlayAvoidanceAnimation();
+	void ReceiveBeginPlay();
+	void ReceiveDestroyed();
+	void RestartAI();
+	void Reverse(const struct FTransform& NewPosition, const struct FVector& HitNormal);
+	void Set_Difficulty(int32 Value);
+	void SetActorInfo(const struct FVector& ToPosition, class USceneComponent* Comp);
+	void SetStrafing(bool IsStrafing_0, EN_StrafingDirection Direction);
+	void SetUpBlackBoardValue();
+	void StaminaCall(double AddValue);
+	void StaminaDamage(double Value);
+	void StaminaWearDown(double WearDownValue, bool SlowDamage, bool IsParry);
+	void StaminSubGaugeStart();
+	void Stan(double Time, EN_StanType StanType);
+	void StanDamage(EN_StanType StanType);
+	void StopAI();
+	void StrafingStateChange(bool IsStrafing_0, EN_StrafingDirection Direction);
+	void SuperArmorCall(double AddValue);
+	void ThrowState(EN_ThrowState ThrowState_0);
+	void UnStan();
+	void UnStanTimerReset();
+	void UpdateWarpPoint();
+	void UserConstructionScript();
+	void UserDatasAttackControl(const struct FST_AttackDatas& AttackDatas_0, class FName AttackName);
+	void View_In_Out_Function(int32 Stencil_Value);
+	void ViewCheck();
 
 public:
 	static class UClass* StaticClass()

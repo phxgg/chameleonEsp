@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "ABP_MiniPenguin_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 #include "ControlRig_structs.hpp"
+#include "ABP_MiniPenguin_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -94,11 +94,11 @@ public:
 	class UBPC_ReplicateAnimBPState_C*            ReplicateAnimBPState;                              // 0x1440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_ABP_MiniPenguin(int32 EntryPoint);
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniPenguin_AnimGraphNode_TransitionResult_4E49FAE24595B658CDCDB9AA6E945C84();
-	void BlueprintUpdateAnimation(float DeltaTimeX_BlueprintUpdateAnimation);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void BlueprintInitializeAnimation();
-	void AnimGraph(struct FPoseLink* AnimGraph);
+	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniPenguin_AnimGraphNode_TransitionResult_4E49FAE24595B658CDCDB9AA6E945C84();
+	void ExecuteUbergraph_ABP_MiniPenguin(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

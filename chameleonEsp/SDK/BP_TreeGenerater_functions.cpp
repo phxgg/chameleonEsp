@@ -16,35 +16,21 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_TreeGenerater.BP_TreeGenerater_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_TreeGenerater_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TreeGenerater_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_TreeGenerater.BP_TreeGenerater_C.GenerateTree
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_TreeGenerater.BP_TreeGenerater_C.ExecuteUbergraph_BP_TreeGenerater
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const struct FRandomStream&             Seed                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_TreeGenerater_C::GenerateTree(const struct FRandomStream& Seed)
+void ABP_TreeGenerater_C::ExecuteUbergraph_BP_TreeGenerater(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TreeGenerater_C", "GenerateTree");
+		Func = Class->GetFunction("BP_TreeGenerater_C", "ExecuteUbergraph_BP_TreeGenerater");
 
-	Params::BP_TreeGenerater_C_GenerateTree Parms{};
+	Params::BP_TreeGenerater_C_ExecuteUbergraph_BP_TreeGenerater Parms{};
 
-	Parms.Seed = std::move(Seed);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -72,23 +58,37 @@ void ABP_TreeGenerater_C::Generate(const struct FRandomStream& Seed, int32 Depth
 }
 
 
-// Function BP_TreeGenerater.BP_TreeGenerater_C.ExecuteUbergraph_BP_TreeGenerater
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_TreeGenerater.BP_TreeGenerater_C.GenerateTree
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FRandomStream&             Seed                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor)
 
-void ABP_TreeGenerater_C::ExecuteUbergraph_BP_TreeGenerater(int32 EntryPoint)
+void ABP_TreeGenerater_C::GenerateTree(const struct FRandomStream& Seed)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_TreeGenerater_C", "ExecuteUbergraph_BP_TreeGenerater");
+		Func = Class->GetFunction("BP_TreeGenerater_C", "GenerateTree");
 
-	Params::BP_TreeGenerater_C_ExecuteUbergraph_BP_TreeGenerater Parms{};
+	Params::BP_TreeGenerater_C_GenerateTree Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Seed = std::move(Seed);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_TreeGenerater.BP_TreeGenerater_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_TreeGenerater_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_TreeGenerater_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

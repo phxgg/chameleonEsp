@@ -16,17 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_GlobalTimeControl.BPC_GlobalTimeControl_C.TimeReset
-// (BlueprintCallable, BlueprintEvent)
+// Function BPC_GlobalTimeControl.BPC_GlobalTimeControl_C.ExecuteUbergraph_BPC_GlobalTimeControl
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_GlobalTimeControl_C::TimeReset()
+void UBPC_GlobalTimeControl_C::ExecuteUbergraph_BPC_GlobalTimeControl(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GlobalTimeControl_C", "TimeReset");
+		Func = Class->GetFunction("BPC_GlobalTimeControl_C", "ExecuteUbergraph_BPC_GlobalTimeControl");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_GlobalTimeControl_C_ExecuteUbergraph_BPC_GlobalTimeControl Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -54,23 +60,17 @@ void UBPC_GlobalTimeControl_C::SlowTime(double Drutaion, double Multiply, bool C
 }
 
 
-// Function BPC_GlobalTimeControl.BPC_GlobalTimeControl_C.ExecuteUbergraph_BPC_GlobalTimeControl
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_GlobalTimeControl.BPC_GlobalTimeControl_C.TimeReset
+// (BlueprintCallable, BlueprintEvent)
 
-void UBPC_GlobalTimeControl_C::ExecuteUbergraph_BPC_GlobalTimeControl(int32 EntryPoint)
+void UBPC_GlobalTimeControl_C::TimeReset()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_GlobalTimeControl_C", "ExecuteUbergraph_BPC_GlobalTimeControl");
+		Func = Class->GetFunction("BPC_GlobalTimeControl_C", "TimeReset");
 
-	Params::BPC_GlobalTimeControl_C_ExecuteUbergraph_BPC_GlobalTimeControl Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

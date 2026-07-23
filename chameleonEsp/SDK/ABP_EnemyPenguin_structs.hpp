@@ -15,19 +15,6 @@
 
 SDK_NAMESPACE_START
 
-// ScriptStruct ABP_EnemyPenguin.ABP_EnemyPenguin_C.AnimBlueprintGeneratedMutableData
-// 0x0013 (0x0014 - 0x0001)
-struct ABP_EnemyPenguin::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-public:
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         __FloatProperty;                                   // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_0;                                 // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_1;                                 // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         __FloatProperty_2;                                 // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_ABP_EnemyPenguin__FAnimBlueprintGeneratedMutableData;
-
 // ScriptStruct ABP_EnemyPenguin.ABP_EnemyPenguin_C.AnimBlueprintGeneratedConstantData
 // 0x04BF (0x04C0 - 0x0001)
 struct ABP_EnemyPenguin::FAnimBlueprintGeneratedConstantData final : public FAnimBlueprintConstantData
@@ -76,5 +63,18 @@ public:
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot;                           // 0x0490(0x0030)()
 };
 DUMPER7_ASSERTS_ABP_EnemyPenguin__FAnimBlueprintGeneratedConstantData;
+
+// ScriptStruct ABP_EnemyPenguin.ABP_EnemyPenguin_C.AnimBlueprintGeneratedMutableData
+// 0x0013 (0x0014 - 0x0001)
+struct ABP_EnemyPenguin::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+public:
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         __FloatProperty;                                   // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_0;                                 // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_1;                                 // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         __FloatProperty_2;                                 // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ABP_EnemyPenguin__FAnimBlueprintGeneratedMutableData;
 
 SDK_NAMESPACE_END

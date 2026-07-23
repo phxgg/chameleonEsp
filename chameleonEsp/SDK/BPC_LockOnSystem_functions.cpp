@@ -16,100 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_LockOnSystem.BPC_LockOnSystem_C.ExecuteUbergraph_BPC_LockOnSystem
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_LockOnSystem_C::ExecuteUbergraph_BPC_LockOnSystem(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LockOnSystem_C", "ExecuteUbergraph_BPC_LockOnSystem");
-
-	Params::BPC_LockOnSystem_C_ExecuteUbergraph_BPC_LockOnSystem Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_LockOnSystem.BPC_LockOnSystem_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_LockOnSystem_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LockOnSystem_C", "ReceiveTick");
-
-	Params::BPC_LockOnSystem_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_LockOnSystem.BPC_LockOnSystem_C.LockOnCheck
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FTransform&                OwnerViewTransform                                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_LockOnSystem_C::LockOnCheck(const struct FTransform& OwnerViewTransform)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LockOnSystem_C", "LockOnCheck");
-
-	Params::BPC_LockOnSystem_C_LockOnCheck Parms{};
-
-	Parms.OwnerViewTransform = std::move(OwnerViewTransform);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_LockOnSystem.BPC_LockOnSystem_C.LockOn
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_LockOnSystem_C::LockOn(bool State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LockOnSystem_C", "LockOn");
-
-	Params::BPC_LockOnSystem_C_LockOn Parms{};
-
-	Parms.State = State;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_LockOnSystem.BPC_LockOnSystem_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBPC_LockOnSystem_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LockOnSystem_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BPC_LockOnSystem.BPC_LockOnSystem_C.LockOnTargetFind
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -135,6 +41,100 @@ void UBPC_LockOnSystem_C::LockOnTargetFind(const struct FTransform& View_Transfo
 
 	if (ReturnLockOnComponent != nullptr)
 		*ReturnLockOnComponent = Parms.ReturnLockOnComponent;
+}
+
+
+// Function BPC_LockOnSystem.BPC_LockOnSystem_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBPC_LockOnSystem_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LockOnSystem_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_LockOnSystem.BPC_LockOnSystem_C.LockOn
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_LockOnSystem_C::LockOn(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LockOnSystem_C", "LockOn");
+
+	Params::BPC_LockOnSystem_C_LockOn Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_LockOnSystem.BPC_LockOnSystem_C.LockOnCheck
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FTransform&                OwnerViewTransform                                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_LockOnSystem_C::LockOnCheck(const struct FTransform& OwnerViewTransform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LockOnSystem_C", "LockOnCheck");
+
+	Params::BPC_LockOnSystem_C_LockOnCheck Parms{};
+
+	Parms.OwnerViewTransform = std::move(OwnerViewTransform);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_LockOnSystem.BPC_LockOnSystem_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_LockOnSystem_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LockOnSystem_C", "ReceiveTick");
+
+	Params::BPC_LockOnSystem_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_LockOnSystem.BPC_LockOnSystem_C.ExecuteUbergraph_BPC_LockOnSystem
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_LockOnSystem_C::ExecuteUbergraph_BPC_LockOnSystem(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LockOnSystem_C", "ExecuteUbergraph_BPC_LockOnSystem");
+
+	Params::BPC_LockOnSystem_C_ExecuteUbergraph_BPC_LockOnSystem Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -27,8 +27,8 @@ public:
 	TArray<struct FUniqueNetIdRepl>               BoxTarget;                                         // 0x0358(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void ExecuteUbergraph_WBP_VoiceChatControlPanel(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_WBP_VoiceChatControlPanel(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

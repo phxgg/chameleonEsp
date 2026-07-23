@@ -16,29 +16,35 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_EnvironmentSystem_Tree1.BP_EnvironmentSystem_Tree1_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_EnvironmentSystem_Tree1.BP_EnvironmentSystem_Tree1_C.ExecuteUbergraph_BP_EnvironmentSystem_Tree1
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EnvironmentSystem_Tree1_C::UserConstructionScript()
+void ABP_EnvironmentSystem_Tree1_C::ExecuteUbergraph_BP_EnvironmentSystem_Tree1(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Tree1_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_EnvironmentSystem_Tree1_C", "ExecuteUbergraph_BP_EnvironmentSystem_Tree1");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_EnvironmentSystem_Tree1_C_ExecuteUbergraph_BP_EnvironmentSystem_Tree1 Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_EnvironmentSystem_Tree1.BP_EnvironmentSystem_Tree1_C.SpawnMaterial
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_EnvironmentSystem_Tree1.BP_EnvironmentSystem_Tree1_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
 
-void ABP_EnvironmentSystem_Tree1_C::SpawnMaterial()
+void ABP_EnvironmentSystem_Tree1_C::ReceiveDestroyed()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Tree1_C", "SpawnMaterial");
+		Func = Class->GetFunction("BP_EnvironmentSystem_Tree1_C", "ReceiveDestroyed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -58,37 +64,31 @@ void ABP_EnvironmentSystem_Tree1_C::ReplicateEvent()
 }
 
 
-// Function BP_EnvironmentSystem_Tree1.BP_EnvironmentSystem_Tree1_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
+// Function BP_EnvironmentSystem_Tree1.BP_EnvironmentSystem_Tree1_C.SpawnMaterial
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_EnvironmentSystem_Tree1_C::ReceiveDestroyed()
+void ABP_EnvironmentSystem_Tree1_C::SpawnMaterial()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Tree1_C", "ReceiveDestroyed");
+		Func = Class->GetFunction("BP_EnvironmentSystem_Tree1_C", "SpawnMaterial");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_EnvironmentSystem_Tree1.BP_EnvironmentSystem_Tree1_C.ExecuteUbergraph_BP_EnvironmentSystem_Tree1
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_EnvironmentSystem_Tree1.BP_EnvironmentSystem_Tree1_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_EnvironmentSystem_Tree1_C::ExecuteUbergraph_BP_EnvironmentSystem_Tree1(int32 EntryPoint)
+void ABP_EnvironmentSystem_Tree1_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Tree1_C", "ExecuteUbergraph_BP_EnvironmentSystem_Tree1");
+		Func = Class->GetFunction("BP_EnvironmentSystem_Tree1_C", "UserConstructionScript");
 
-	Params::BP_EnvironmentSystem_Tree1_C_ExecuteUbergraph_BP_EnvironmentSystem_Tree1 Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -15,20 +15,6 @@
 
 SDK_NAMESPACE_START
 
-// Function UDW_WeatherControlledActor_Interface.UDW_WeatherControlledActor_Interface_C.UDW Instant Update
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IUDW_WeatherControlledActor_Interface_C::UDW_Instant_Update()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("UDW_WeatherControlledActor_Interface_C", "UDW Instant Update");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
 // Function UDW_WeatherControlledActor_Interface.UDW_WeatherControlledActor_Interface_C.UDW Editor Update
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -38,6 +24,20 @@ void IUDW_WeatherControlledActor_Interface_C::UDW_Editor_Update()
 
 	if (Func == nullptr)
 		Func = AsUObject()->Class->GetFunction("UDW_WeatherControlledActor_Interface_C", "UDW Editor Update");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function UDW_WeatherControlledActor_Interface.UDW_WeatherControlledActor_Interface_C.UDW Instant Update
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IUDW_WeatherControlledActor_Interface_C::UDW_Instant_Update()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("UDW_WeatherControlledActor_Interface_C", "UDW Instant Update");
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }

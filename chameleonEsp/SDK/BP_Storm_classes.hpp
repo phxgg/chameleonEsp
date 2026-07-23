@@ -57,25 +57,25 @@ public:
 	int32                                         CurrentLevel;                                      // 0x03A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void TeleportStorm(const struct FVector& Location);
-	void StormVisual__UpdateFunc();
-	void StormVisual__FinishedFunc();
-	void StormErrorPlayerCheck();
-	void SpeedUpdate();
-	void ShowStormReplicate();
-	void SetStormVisibleState(bool VisualState);
-	void SetStormMoveState(bool State);
-	void SetStormLevel(int32 Level);
-	void ResetPosition();
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveBeginPlay();
-	void PositionUpdate(const struct FVector& StartLocation);
-	void MoveToCheckPoint(class FName Tag);
-	void MoveSignal();
-	void MoveCountDownStart(int32 CountDownTime, class FName StopperName);
-	void MinusTime();
-	void ForceStateCheck();
 	void ExecuteUbergraph_BP_Storm(int32 EntryPoint);
+	void ForceStateCheck();
+	void MinusTime();
+	void MoveCountDownStart(int32 CountDownTime, class FName StopperName);
+	void MoveSignal();
+	void MoveToCheckPoint(class FName Tag);
+	void PositionUpdate(const struct FVector& StartLocation_0);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void ResetPosition();
+	void SetStormLevel(int32 Level);
+	void SetStormMoveState(bool State);
+	void SetStormVisibleState(bool VisualState);
+	void ShowStormReplicate();
+	void SpeedUpdate();
+	void StormErrorPlayerCheck();
+	void StormVisual__FinishedFunc();
+	void StormVisual__UpdateFunc();
+	void TeleportStorm(const struct FVector& Location);
 
 public:
 	static class UClass* StaticClass()

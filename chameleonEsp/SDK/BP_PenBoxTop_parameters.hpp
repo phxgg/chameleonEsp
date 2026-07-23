@@ -16,6 +16,26 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BP_PenBoxTop.BP_PenBoxTop_C.BndEvt__BP_PenBoxTop_StaticMesh_K2Node_ComponentBoundEvent_0_ComponentWakeSignature__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct BP_PenBoxTop_C_BndEvt__BP_PenBoxTop_StaticMesh_K2Node_ComponentBoundEvent_0_ComponentWakeSignature__DelegateSignature final
+{
+public:
+	class UPrimitiveComponent*                    WakingComponent;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   BoneName;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PenBoxTop_C_BndEvt__BP_PenBoxTop_StaticMesh_K2Node_ComponentBoundEvent_0_ComponentWakeSignature__DelegateSignature;
+
+// Function BP_PenBoxTop.BP_PenBoxTop_C.BndEvt__BP_PenBoxTop_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentSleepSignature__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct BP_PenBoxTop_C_BndEvt__BP_PenBoxTop_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentSleepSignature__DelegateSignature final
+{
+public:
+	class UPrimitiveComponent*                    SleepingComponent;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   BoneName;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PenBoxTop_C_BndEvt__BP_PenBoxTop_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentSleepSignature__DelegateSignature;
+
 // Function BP_PenBoxTop.BP_PenBoxTop_C.ExecuteUbergraph_BP_PenBoxTop
 // 0x0080 (0x0080 - 0x0000)
 struct BP_PenBoxTop_C_ExecuteUbergraph_BP_PenBoxTop final
@@ -45,26 +65,6 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_PenBoxTop_C_ExecuteUbergraph_BP_PenBoxTop;
-
-// Function BP_PenBoxTop.BP_PenBoxTop_C.BndEvt__BP_PenBoxTop_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentSleepSignature__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct BP_PenBoxTop_C_BndEvt__BP_PenBoxTop_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentSleepSignature__DelegateSignature final
-{
-public:
-	class UPrimitiveComponent*                    SleepingComponent;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   BoneName;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_PenBoxTop_C_BndEvt__BP_PenBoxTop_StaticMesh_K2Node_ComponentBoundEvent_1_ComponentSleepSignature__DelegateSignature;
-
-// Function BP_PenBoxTop.BP_PenBoxTop_C.BndEvt__BP_PenBoxTop_StaticMesh_K2Node_ComponentBoundEvent_0_ComponentWakeSignature__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct BP_PenBoxTop_C_BndEvt__BP_PenBoxTop_StaticMesh_K2Node_ComponentBoundEvent_0_ComponentWakeSignature__DelegateSignature final
-{
-public:
-	class UPrimitiveComponent*                    WakingComponent;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   BoneName;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_PenBoxTop_C_BndEvt__BP_PenBoxTop_StaticMesh_K2Node_ComponentBoundEvent_0_ComponentWakeSignature__DelegateSignature;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

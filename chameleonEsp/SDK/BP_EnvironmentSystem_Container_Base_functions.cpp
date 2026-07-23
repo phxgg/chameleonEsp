@@ -16,49 +16,15 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_EnvironmentSystem_Container_Base.BP_EnvironmentSystem_Container_Base_C.ExecuteUbergraph_BP_EnvironmentSystem_Container_Base
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_EnvironmentSystem_Container_Base.BP_EnvironmentSystem_Container_Base_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_EnvironmentSystem_Container_Base_C::ExecuteUbergraph_BP_EnvironmentSystem_Container_Base(int32 EntryPoint)
+void ABP_EnvironmentSystem_Container_Base_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Container_Base_C", "ExecuteUbergraph_BP_EnvironmentSystem_Container_Base");
-
-	Params::BP_EnvironmentSystem_Container_Base_C_ExecuteUbergraph_BP_EnvironmentSystem_Container_Base Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_EnvironmentSystem_Container_Base.BP_EnvironmentSystem_Container_Base_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void ABP_EnvironmentSystem_Container_Base_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Container_Base_C", "ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_EnvironmentSystem_Container_Base.BP_EnvironmentSystem_Container_Base_C.ReplicateEvent
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void ABP_EnvironmentSystem_Container_Base_C::ReplicateEvent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Container_Base_C", "ReplicateEvent");
+		Func = Class->GetFunction("BP_EnvironmentSystem_Container_Base_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -78,17 +44,51 @@ void ABP_EnvironmentSystem_Container_Base_C::SpawnMaterial()
 }
 
 
-// Function BP_EnvironmentSystem_Container_Base.BP_EnvironmentSystem_Container_Base_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_EnvironmentSystem_Container_Base.BP_EnvironmentSystem_Container_Base_C.ReplicateEvent
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 
-void ABP_EnvironmentSystem_Container_Base_C::UserConstructionScript()
+void ABP_EnvironmentSystem_Container_Base_C::ReplicateEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EnvironmentSystem_Container_Base_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_EnvironmentSystem_Container_Base_C", "ReplicateEvent");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EnvironmentSystem_Container_Base.BP_EnvironmentSystem_Container_Base_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_EnvironmentSystem_Container_Base_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnvironmentSystem_Container_Base_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_EnvironmentSystem_Container_Base.BP_EnvironmentSystem_Container_Base_C.ExecuteUbergraph_BP_EnvironmentSystem_Container_Base
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EnvironmentSystem_Container_Base_C::ExecuteUbergraph_BP_EnvironmentSystem_Container_Base(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EnvironmentSystem_Container_Base_C", "ExecuteUbergraph_BP_EnvironmentSystem_Container_Base");
+
+	Params::BP_EnvironmentSystem_Container_Base_C_ExecuteUbergraph_BP_EnvironmentSystem_Container_Base Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

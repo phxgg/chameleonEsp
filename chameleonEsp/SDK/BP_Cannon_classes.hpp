@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "EN_StanType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "EN_DamageType_structs.hpp"
+#include "EN_StanType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -36,17 +36,17 @@ public:
 	class ABP_GameState_LINK_C*                   As_BP_Game_State_LINK;                             // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void StanDamage(EN_StanType StanType);
-	void StaminaDamage(double Value);
-	void ShotCannon(class AActor* TargetActor);
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
-	void ReceiveBeginPlay();
-	void PhysicsOn_Replicate_();
-	void PhysicsOn_Local_();
-	void GetParryState(bool* State);
-	void ExecuteUbergraph_BP_Cannon(int32 EntryPoint);
-	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
 	void Damage(double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, class AActor* SourceActor, struct FFinishFilter* Finish);
+	void DamageToPlayerController(class AActor* TargetActor, double DamageValue, int32 TeamIndex, EN_DamageType DamageType, const struct FTransform& SourceAgentPoint, bool UnAvoidable, class FName DamageName, const struct FHitResult& HitRezult, class AActor* SourceActor);
+	void ExecuteUbergraph_BP_Cannon(int32 EntryPoint);
+	void GetParryState(bool* State);
+	void PhysicsOn_Local_();
+	void PhysicsOn_Replicate_();
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void ShotCannon(class AActor* TargetActor);
+	void StaminaDamage(double Value);
+	void StanDamage(EN_StanType StanType);
 
 public:
 	static class UClass* StaticClass()

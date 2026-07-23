@@ -20,37 +20,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_EmoteMenu.WBP_EmoteMenu_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WBP_EmoteMenu_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry_Tick;                                   // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime_Tick;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_EmoteMenu_C_Tick;
-
-// Function WBP_EmoteMenu.WBP_EmoteMenu_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_EmoteMenu_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_EmoteMenu_C_PreConstruct;
-
-// Function WBP_EmoteMenu.WBP_EmoteMenu_C.InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_EmoteMenu_C_InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_EmoteMenu_C_InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0;
-
 // Function WBP_EmoteMenu.WBP_EmoteMenu_C.ExecuteUbergraph_WBP_EmoteMenu
 // 0x0150 (0x0150 - 0x0000)
 struct WBP_EmoteMenu_C_ExecuteUbergraph_WBP_EmoteMenu final
@@ -85,6 +54,37 @@ public:
 	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_EmoteMenu_C_ExecuteUbergraph_WBP_EmoteMenu;
+
+// Function WBP_EmoteMenu.WBP_EmoteMenu_C.InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_EmoteMenu_C_InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_EmoteMenu_C_InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0;
+
+// Function WBP_EmoteMenu.WBP_EmoteMenu_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_EmoteMenu_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_EmoteMenu_C_PreConstruct;
+
+// Function WBP_EmoteMenu.WBP_EmoteMenu_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WBP_EmoteMenu_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_EmoteMenu_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

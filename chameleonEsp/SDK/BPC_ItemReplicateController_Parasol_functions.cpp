@@ -16,143 +16,15 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.UseItem(Server)
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State_UseItem_Server_                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ItemReplicateController_Parasol_C::UseItem_Server_(bool State_UseItem_Server_)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "UseItem(Server)");
-
-	Params::BPC_ItemReplicateController_Parasol_C_UseItem_Server_ Parms{};
-
-	Parms.State_UseItem_Server_ = State_UseItem_Server_;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.UseItem(Replicate)
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State_UseItem_Replicate_                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ItemReplicateController_Parasol_C::UseItem_Replicate_(bool State_UseItem_Replicate_)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "UseItem(Replicate)");
-
-	Params::BPC_ItemReplicateController_Parasol_C_UseItem_Replicate_ Parms{};
-
-	Parms.State_UseItem_Replicate_ = State_UseItem_Replicate_;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.UseItem(Local)
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    State_UseItem_Local_                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ItemReplicateController_Parasol_C::UseItem_Local_(bool State_UseItem_Local_)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "UseItem(Local)");
-
-	Params::BPC_ItemReplicateController_Parasol_C_UseItem_Local_ Parms{};
-
-	Parms.State_UseItem_Local_ = State_UseItem_Local_;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds_ReceiveTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ItemReplicateController_Parasol_C::ReceiveTick(float DeltaSeconds_ReceiveTick)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "ReceiveTick");
-
-	Params::BPC_ItemReplicateController_Parasol_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds_ReceiveTick = DeltaSeconds_ReceiveTick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// EEndPlayReason                          EndPlayReason_ReceiveEndPlay                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_ItemReplicateController_Parasol_C::ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "ReceiveEndPlay");
-
-	Params::BPC_ItemReplicateController_Parasol_C_ReceiveEndPlay Parms{};
-
-	Parms.EndPlayReason_ReceiveEndPlay = EndPlayReason_ReceiveEndPlay;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.OpenParasol(Server)
-// (Net, NetServer, BlueprintCallable, BlueprintEvent)
-
-void UBPC_ItemReplicateController_Parasol_C::OpenParasol_Server_()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "OpenParasol(Server)");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.OpenParasol(Replicate)
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void UBPC_ItemReplicateController_Parasol_C::OpenParasol_Replicate_()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "OpenParasol(Replicate)");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.ForceClose
+// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.AddForceNoDrop
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 
-void UBPC_ItemReplicateController_Parasol_C::ForceClose()
+void UBPC_ItemReplicateController_Parasol_C::AddForceNoDrop()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "ForceClose");
+		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "AddForceNoDrop");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -178,17 +50,145 @@ void UBPC_ItemReplicateController_Parasol_C::ExecuteUbergraph_BPC_ItemReplicateC
 }
 
 
-// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.AddForceNoDrop
+// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.ForceClose
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 
-void UBPC_ItemReplicateController_Parasol_C::AddForceNoDrop()
+void UBPC_ItemReplicateController_Parasol_C::ForceClose()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "AddForceNoDrop");
+		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "ForceClose");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.OpenParasol(Replicate)
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void UBPC_ItemReplicateController_Parasol_C::OpenParasol_Replicate_()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "OpenParasol(Replicate)");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.OpenParasol(Server)
+// (Net, NetServer, BlueprintCallable, BlueprintEvent)
+
+void UBPC_ItemReplicateController_Parasol_C::OpenParasol_Server_()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "OpenParasol(Server)");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemReplicateController_Parasol_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "ReceiveEndPlay");
+
+	Params::BPC_ItemReplicateController_Parasol_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemReplicateController_Parasol_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "ReceiveTick");
+
+	Params::BPC_ItemReplicateController_Parasol_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.UseItem(Local)
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemReplicateController_Parasol_C::UseItem_Local_(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "UseItem(Local)");
+
+	Params::BPC_ItemReplicateController_Parasol_C_UseItem_Local_ Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.UseItem(Replicate)
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemReplicateController_Parasol_C::UseItem_Replicate_(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "UseItem(Replicate)");
+
+	Params::BPC_ItemReplicateController_Parasol_C_UseItem_Replicate_ Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_ItemReplicateController_Parasol.BPC_ItemReplicateController_Parasol_C.UseItem(Server)
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_ItemReplicateController_Parasol_C::UseItem_Server_(bool State)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_ItemReplicateController_Parasol_C", "UseItem(Server)");
+
+	Params::BPC_ItemReplicateController_Parasol_C_UseItem_Server_ Parms{};
+
+	Parms.State = State;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -28,14 +28,14 @@ public:
 	TMulticastInlineDelegate<void()>              UpdateScreenSetting;                               // 0x0368(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UpdateScreenResolutionUI();
-	void Update_Config_Item();
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void GetResolution();
-	void ExecuteUbergraph_WBP_ComboBox(int32 EntryPoint);
-	void Construct();
-	void BndEvt__WBP_ComboBox_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature();
 	void ApplySetting();
+	void BndEvt__WBP_ComboBox_WBP_NavOptionBox_K2Node_ComponentBoundEvent_0_OnValueChangedEvent__DelegateSignature();
+	void Construct();
+	void ExecuteUbergraph_WBP_ComboBox(int32 EntryPoint);
+	void GetResolution();
+	void PreConstruct(bool IsDesignTime);
+	void Update_Config_Item();
+	void UpdateScreenResolutionUI();
 
 public:
 	static class UClass* StaticClass()

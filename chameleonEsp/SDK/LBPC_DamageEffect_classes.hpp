@@ -27,11 +27,11 @@ public:
 	double                                        CureentDamageValue;                                // 0x0258(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SpawnStateChange(bool State);
-	void SetDamage(double Multiply);
-	void ReceiveParticleData(const TArray<struct FBasicParticleData>& Data, class UNiagaraSystem* NiagaraSystem, const struct FVector& SimulationPositionOffset);
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_LBPC_DamageEffect(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveParticleData(const TArray<struct FBasicParticleData>& Data, class UNiagaraSystem* NiagaraSystem_0, const struct FVector& SimulationPositionOffset);
+	void SetDamage(double Multiply);
+	void SpawnStateChange(bool State);
 
 public:
 	static class UClass* StaticClass()

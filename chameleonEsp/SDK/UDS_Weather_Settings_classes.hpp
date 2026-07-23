@@ -37,8 +37,8 @@ public:
 	TSoftObjectPtr<class UTexture2D>              Symbol_Texture;                                    // 0x0110(0x0028)(Edit, BlueprintVisible, AdvancedDisplay, HasGetValueTypeHash)
 
 public:
-	void Get_State_Sources(TMap<class UUDS_Weather_Settings_C*, double>* Sources);
 	void Custom_Weather_Behavior(double Alpha, class AActor* UDS, class AActor* UDW);
+	void Get_State_Sources(TMap<class UUDS_Weather_Settings_C*, double>* Sources);
 
 public:
 	static class UClass* StaticClass()

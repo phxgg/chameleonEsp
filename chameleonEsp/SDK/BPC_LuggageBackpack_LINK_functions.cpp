@@ -16,57 +16,261 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.SyncCoreWeightDatas
-// (Net, NetReliable, HasOutParams, NetClient, BlueprintCallable, BlueprintEvent)
+// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.AddItem
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const TArray<double>&                   WeightValue                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FST_ItemCoreDatas&         ItemInfo                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// bool*                                   IsSuccess                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_LuggageBackpack_LINK_C::SyncCoreWeightDatas(const TArray<double>& WeightValue)
+void UBPC_LuggageBackpack_LINK_C::AddItem(const struct FST_ItemCoreDatas& ItemInfo, bool* IsSuccess)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "SyncCoreWeightDatas");
+		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "AddItem");
 
-	Params::BPC_LuggageBackpack_LINK_C_SyncCoreWeightDatas Parms{};
+	Params::BPC_LuggageBackpack_LINK_C_AddItem Parms{};
 
-	Parms.WeightValue = std::move(WeightValue);
+	Parms.ItemInfo = std::move(ItemInfo);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsSuccess != nullptr)
+		*IsSuccess = Parms.IsSuccess;
+}
+
+
+// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.ChangedEvent
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_LuggageBackpack_LINK_C::ChangedEvent(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "ChangedEvent");
+
+	Params::BPC_LuggageBackpack_LINK_C_ChangedEvent Parms{};
+
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.SyncCall
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.ChangeWeightEvent
+// (Net, NetClient, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Weight                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_LuggageBackpack_LINK_C::SyncCall()
+void UBPC_LuggageBackpack_LINK_C::ChangeWeightEvent(double Weight)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "SyncCall");
+		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "ChangeWeightEvent");
+
+	Params::BPC_LuggageBackpack_LINK_C_ChangeWeightEvent Parms{};
+
+	Parms.Weight = Weight;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.ClearAllItems
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBPC_LuggageBackpack_LINK_C::ClearAllItems()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "ClearAllItems");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.SelectIndex
+// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.CloseBackPack
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_LuggageBackpack_LINK_C::SelectIndex(int32 Index_0)
+void UBPC_LuggageBackpack_LINK_C::CloseBackPack()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "SelectIndex");
+		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "CloseBackPack");
 
-	Params::BPC_LuggageBackpack_LINK_C_SelectIndex Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Index_0 = Index_0;
+
+// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.ExecuteUbergraph_BPC_LuggageBackpack_LINK
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_LuggageBackpack_LINK_C::ExecuteUbergraph_BPC_LuggageBackpack_LINK(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "ExecuteUbergraph_BPC_LuggageBackpack_LINK");
+
+	Params::BPC_LuggageBackpack_LINK_C_ExecuteUbergraph_BPC_LuggageBackpack_LINK Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.GetHeightPosition
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_FirstPersonCharacter_Main_C*  FirstpersonCharacter                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// float                                   Distance                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         Location                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_LuggageBackpack_LINK_C::GetHeightPosition(class ABP_FirstPersonCharacter_Main_C* FirstpersonCharacter, float Distance, struct FVector* Location)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "GetHeightPosition");
+
+	Params::BPC_LuggageBackpack_LINK_C_GetHeightPosition Parms{};
+
+	Parms.FirstpersonCharacter = FirstpersonCharacter;
+	Parms.Distance = Distance;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Location != nullptr)
+		*Location = std::move(Parms.Location);
+}
+
+
+// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.GetHeightPosition_FromTransform
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FTransform&                CameraTransform                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Distance                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   BodyLocation                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         Location                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_LuggageBackpack_LINK_C::GetHeightPosition_FromTransform(const struct FTransform& CameraTransform, float Distance, const struct FVector& BodyLocation, struct FVector* Location)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "GetHeightPosition_FromTransform");
+
+	Params::BPC_LuggageBackpack_LINK_C_GetHeightPosition_FromTransform Parms{};
+
+	Parms.CameraTransform = std::move(CameraTransform);
+	Parms.Distance = Distance;
+	Parms.BodyLocation = std::move(BodyLocation);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Location != nullptr)
+		*Location = std::move(Parms.Location);
+}
+
+
+// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.GetSumWeight
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double*                                 SumWeight                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPC_LuggageBackpack_LINK_C::GetSumWeight(double* SumWeight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "GetSumWeight");
+
+	Params::BPC_LuggageBackpack_LINK_C_GetSumWeight Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (SumWeight != nullptr)
+		*SumWeight = Parms.SumWeight;
+}
+
+
+// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.GetSyncWeights
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<double>*                         Weights                                                (Parm, OutParm)
+
+void UBPC_LuggageBackpack_LINK_C::GetSyncWeights(TArray<double>* Weights)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "GetSyncWeights");
+
+	Params::BPC_LuggageBackpack_LINK_C_GetSyncWeights Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Weights != nullptr)
+		*Weights = std::move(Parms.Weights);
+}
+
+
+// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.MapUpdate
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<double>&                         WeightValues                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UBPC_LuggageBackpack_LINK_C::MapUpdate(TArray<double>& WeightValues)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "MapUpdate");
+
+	Params::BPC_LuggageBackpack_LINK_C_MapUpdate Parms{};
+
+	Parms.WeightValues = std::move(WeightValues);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	WeightValues = std::move(Parms.WeightValues);
+}
+
+
+// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.OnRep_BackPackDatas
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_LuggageBackpack_LINK_C::OnRep_BackPackDatas()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "OnRep_BackPackDatas");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.OpenBackPack
+// (BlueprintCallable, BlueprintEvent)
+
+void UBPC_LuggageBackpack_LINK_C::OpenBackPack()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "OpenBackPack");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -100,233 +304,19 @@ void UBPC_LuggageBackpack_LINK_C::RespawnItem(int32 ItemIndex, const struct FTra
 }
 
 
-// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.OpenBackPack
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_LuggageBackpack_LINK_C::OpenBackPack()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "OpenBackPack");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.OnRep_BackPackDatas
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_LuggageBackpack_LINK_C::OnRep_BackPackDatas()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "OnRep_BackPackDatas");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.MapUpdate
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<double>&                         WeightValues                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UBPC_LuggageBackpack_LINK_C::MapUpdate(TArray<double>& WeightValues)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "MapUpdate");
-
-	Params::BPC_LuggageBackpack_LINK_C_MapUpdate Parms{};
-
-	Parms.WeightValues = std::move(WeightValues);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	WeightValues = std::move(Parms.WeightValues);
-}
-
-
-// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.GetSyncWeights
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// TArray<double>*                         Weights                                                (Parm, OutParm)
-
-void UBPC_LuggageBackpack_LINK_C::GetSyncWeights(TArray<double>* Weights)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "GetSyncWeights");
-
-	Params::BPC_LuggageBackpack_LINK_C_GetSyncWeights Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Weights != nullptr)
-		*Weights = std::move(Parms.Weights);
-}
-
-
-// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.GetSumWeight
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double*                                 SumWeight                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_LuggageBackpack_LINK_C::GetSumWeight(double* SumWeight)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "GetSumWeight");
-
-	Params::BPC_LuggageBackpack_LINK_C_GetSumWeight Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (SumWeight != nullptr)
-		*SumWeight = Parms.SumWeight;
-}
-
-
-// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.GetHeightPosition_FromTransform
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FTransform&                CameraTransform                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Distance                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   BodyLocation                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector*                         Location                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_LuggageBackpack_LINK_C::GetHeightPosition_FromTransform(const struct FTransform& CameraTransform, float Distance, const struct FVector& BodyLocation, struct FVector* Location)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "GetHeightPosition_FromTransform");
-
-	Params::BPC_LuggageBackpack_LINK_C_GetHeightPosition_FromTransform Parms{};
-
-	Parms.CameraTransform = std::move(CameraTransform);
-	Parms.Distance = Distance;
-	Parms.BodyLocation = std::move(BodyLocation);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Location != nullptr)
-		*Location = std::move(Parms.Location);
-}
-
-
-// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.GetHeightPosition
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABP_FirstPersonCharacter_Main_C*  FirstpersonCharacter                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// float                                   Distance                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector*                         Location                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_LuggageBackpack_LINK_C::GetHeightPosition(class ABP_FirstPersonCharacter_Main_C* FirstpersonCharacter, float Distance, struct FVector* Location)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "GetHeightPosition");
-
-	Params::BPC_LuggageBackpack_LINK_C_GetHeightPosition Parms{};
-
-	Parms.FirstpersonCharacter = FirstpersonCharacter;
-	Parms.Distance = Distance;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Location != nullptr)
-		*Location = std::move(Parms.Location);
-}
-
-
-// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.ExecuteUbergraph_BPC_LuggageBackpack_LINK
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_LuggageBackpack_LINK_C::ExecuteUbergraph_BPC_LuggageBackpack_LINK(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "ExecuteUbergraph_BPC_LuggageBackpack_LINK");
-
-	Params::BPC_LuggageBackpack_LINK_C_ExecuteUbergraph_BPC_LuggageBackpack_LINK Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.CloseBackPack
-// (BlueprintCallable, BlueprintEvent)
-
-void UBPC_LuggageBackpack_LINK_C::CloseBackPack()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "CloseBackPack");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.ClearAllItems
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UBPC_LuggageBackpack_LINK_C::ClearAllItems()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "ClearAllItems");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.ChangeWeightEvent
-// (Net, NetClient, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Weight                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPC_LuggageBackpack_LINK_C::ChangeWeightEvent(double Weight)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "ChangeWeightEvent");
-
-	Params::BPC_LuggageBackpack_LINK_C_ChangeWeightEvent Parms{};
-
-	Parms.Weight = Weight;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.ChangedEvent
+// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.SelectIndex
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_LuggageBackpack_LINK_C::ChangedEvent(int32 Index_0)
+void UBPC_LuggageBackpack_LINK_C::SelectIndex(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "ChangedEvent");
+		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "SelectIndex");
 
-	Params::BPC_LuggageBackpack_LINK_C_ChangedEvent Parms{};
+	Params::BPC_LuggageBackpack_LINK_C_SelectIndex Parms{};
 
 	Parms.Index_0 = Index_0;
 
@@ -334,27 +324,37 @@ void UBPC_LuggageBackpack_LINK_C::ChangedEvent(int32 Index_0)
 }
 
 
-// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.AddItem
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FST_ItemCoreDatas&         ItemInfo                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
-// bool*                                   IsSuccess                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.SyncCall
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 
-void UBPC_LuggageBackpack_LINK_C::AddItem(const struct FST_ItemCoreDatas& ItemInfo, bool* IsSuccess)
+void UBPC_LuggageBackpack_LINK_C::SyncCall()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "AddItem");
+		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "SyncCall");
 
-	Params::BPC_LuggageBackpack_LINK_C_AddItem Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.ItemInfo = std::move(ItemInfo);
+
+// Function BPC_LuggageBackpack_LINK.BPC_LuggageBackpack_LINK_C.SyncCoreWeightDatas
+// (Net, NetReliable, HasOutParams, NetClient, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<double>&                   WeightValue                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UBPC_LuggageBackpack_LINK_C::SyncCoreWeightDatas(const TArray<double>& WeightValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPC_LuggageBackpack_LINK_C", "SyncCoreWeightDatas");
+
+	Params::BPC_LuggageBackpack_LINK_C_SyncCoreWeightDatas Parms{};
+
+	Parms.WeightValue = std::move(WeightValue);
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsSuccess != nullptr)
-		*IsSuccess = Parms.IsSuccess;
 }
 
 

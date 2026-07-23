@@ -17,16 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_Compass.WBP_Compass_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WBP_Compass_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry_Tick;                                   // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime_Tick;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Compass_C_Tick;
-
 // Function WBP_Compass.WBP_Compass_C.ExecuteUbergraph_WBP_Compass
 // 0x00F0 (0x00F0 - 0x0000)
 struct WBP_Compass_C_ExecuteUbergraph_WBP_Compass final
@@ -55,6 +45,16 @@ public:
 	double                                        CallFunc_FFloor_A_ImplicitCast;                    // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Compass_C_ExecuteUbergraph_WBP_Compass;
+
+// Function WBP_Compass.WBP_Compass_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WBP_Compass_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Compass_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

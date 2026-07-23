@@ -39,25 +39,25 @@ public:
 	bool                                          Do_Incremental_Traces;                             // 0x02E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_UDS_PlayerOcclusion(int32 EntryPoint);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason_ReceiveEndPlay);
-	void ReceiveParticleData(const TArray<struct FBasicParticleData>& Data, class UNiagaraSystem* NiagaraSystem, const struct FVector& SimulationPositionOffset);
-	void Initialize();
-	void Incremental_Occlusion_Traces();
-	void Update_Current_Occlusion();
-	void Periodic_Context_Checks();
-	void Update_Ignored_Actors();
-	void Get_Sample_Location();
-	void Check_For_Portal_Components();
-	void Delayed_Startup();
-	void Portal_Direction_Mask(const struct FVector& Direction, struct FLinearColor* Mask);
-	void Editor_Tick(const struct FVector& Occlusion_Location);
-	EDrawDebugTrace Trace_Debugs();
-	void Runtime_Tick();
-	void Custom_Global_Occlusion_Sample(const struct FVector& Location, double* Global_Occlusion);
-	void Test_Point_for_Occlusion_Volumes(const struct FVector& Location, double* Final_Multiplier);
-	void Start_Up_GPU_Distance_Field_System();
 	void Apply_Directional_Occlusion_Modifiers(const struct FLinearColor& In, struct FLinearColor* Out);
+	void Start_Up_GPU_Distance_Field_System();
+	void Test_Point_for_Occlusion_Volumes(const struct FVector& Location, double* Final_Multiplier);
+	void Custom_Global_Occlusion_Sample(const struct FVector& Location, double* Global_Occlusion);
+	void Runtime_Tick();
+	EDrawDebugTrace Trace_Debugs();
+	void Editor_Tick(const struct FVector& Occlusion_Location);
+	void Portal_Direction_Mask(const struct FVector& Direction, struct FLinearColor* Mask);
+	void Delayed_Startup();
+	void Check_For_Portal_Components();
+	void Get_Sample_Location();
+	void Update_Ignored_Actors();
+	void Periodic_Context_Checks();
+	void Update_Current_Occlusion();
+	void Incremental_Occlusion_Traces();
+	void Initialize();
+	void ReceiveParticleData(const TArray<struct FBasicParticleData>& Data, class UNiagaraSystem* NiagaraSystem, const struct FVector& SimulationPositionOffset);
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ExecuteUbergraph_UDS_PlayerOcclusion(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

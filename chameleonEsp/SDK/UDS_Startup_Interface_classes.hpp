@@ -20,8 +20,8 @@ SDK_NAMESPACE_START
 class IUDS_Startup_Interface_C final
 {
 public:
-	void UDS_Starting_Up(class AUltra_Dynamic_Sky_C* UDS);
 	void UDS_Ending_Play();
+	void UDS_Starting_Up(class AUltra_Dynamic_Sky_C* UDS);
 
 public:
 	static class UClass* StaticClass()

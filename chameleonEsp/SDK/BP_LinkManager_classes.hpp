@@ -30,21 +30,21 @@ public:
 	class ABP_LinkDataBank_C*                     LinkDataBank;                                      // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateGlueGroundDistance();
-	void UpdateForceValue();
-	void UpdateBranch();
-	void SetGlueData(class ACPP_Glue* TargetGlue, EN_GlueType GlueType, bool State);
-	void SelectBranchDatas(class ABP_Glue_CustomPhysics_C* Glue, class ABP_LinkBranchData_C** BranchData, bool* IsNewBranch);
-	void ReceiveBeginPlay();
-	void PropagationReset();
-	void PropagationProtoStart(class UPrimitiveComponent* Primitive);
-	void PropagationProto(class UPrimitiveComponent* Primitive);
-	void PropagationForce(class UPrimitiveComponent* TargetPrimitive, class UPrimitiveComponent* Primitive, const TSet<int32>& UsedBranch, double ForceValue, const TSet<int32>& ParallelIndex);
-	void Propagation(class UPrimitiveComponent* TargetPrimitive, TArray<int32>& UsedBranch);
-	void MergeCheckForce(class UPrimitiveComponent* Primitive, const TSet<int32>& UsedBranchIndex, double& ForceValue);
-	void MergeCheck(class UPrimitiveComponent* Primitive, TArray<int32>& UsedBranchIndex);
-	void ExecuteUbergraph_BP_LinkManager(int32 EntryPoint);
 	void AddCustomForce(class UPrimitiveComponent* SourcePrimitive, class UPrimitiveComponent* PrePrimitive, double& ForceValue);
+	void ExecuteUbergraph_BP_LinkManager(int32 EntryPoint);
+	void MergeCheck(class UPrimitiveComponent* Primitive, TArray<int32>& UsedBranchIndex);
+	void MergeCheckForce(class UPrimitiveComponent* Primitive, const TSet<int32>& UsedBranchIndex, double& ForceValue);
+	void Propagation(class UPrimitiveComponent* TargetPrimitive, TArray<int32>& UsedBranch);
+	void PropagationForce(class UPrimitiveComponent* TargetPrimitive, class UPrimitiveComponent* Primitive, const TSet<int32>& UsedBranch, double ForceValue, const TSet<int32>& ParallelIndex);
+	void PropagationProto(class UPrimitiveComponent* Primitive);
+	void PropagationProtoStart(class UPrimitiveComponent* Primitive);
+	void PropagationReset();
+	void ReceiveBeginPlay();
+	void SelectBranchDatas(class ABP_Glue_CustomPhysics_C* Glue, class ABP_LinkBranchData_C** BranchData, bool* IsNewBranch);
+	void SetGlueData(class ACPP_Glue* TargetGlue, EN_GlueType GlueType, bool State);
+	void UpdateBranch();
+	void UpdateForceValue();
+	void UpdateGlueGroundDistance();
 
 public:
 	static class UClass* StaticClass()

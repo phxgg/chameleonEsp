@@ -25,12 +25,12 @@ public:
 	class UPrimitiveComponent*                    AddForceTarget;                                    // 0x00E8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UseItem_Server_(bool State_UseItem_Server_);
-	void UseItem_Replicate_(bool State_UseItem_Replicate_);
-	void UseItem_Local_(bool State_UseItem_Local_);
-	void SetForceTarget(class UPrimitiveComponent* AddForceTarget);
-	void ReceiveTick(float DeltaSeconds_ReceiveTick);
 	void ExecuteUbergraph_BPC_ItemReplicateController_Magnet(int32 EntryPoint);
+	void ReceiveTick(float DeltaSeconds);
+	void SetForceTarget(class UPrimitiveComponent* AddForceTarget_0);
+	void UseItem_Local_(bool State);
+	void UseItem_Replicate_(bool State);
+	void UseItem_Server_(bool State);
 
 public:
 	static class UClass* StaticClass()

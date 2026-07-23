@@ -29,11 +29,11 @@ public:
 	class UImage*                                 Image;                                             // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetPlayerName(const class FString& playerName);
-	void SetME(int32 Point);
-	void SetEEYAN(int32 Point);
-	void SetColor(const struct FSlateColor& Color_and_Opacity);
 	void ExecuteUbergraph_WBP_Nameplate(int32 EntryPoint);
+	void SetColor(const struct FSlateColor& Color_and_Opacity);
+	void SetEEYAN(int32 Point);
+	void SetME(int32 Point);
+	void SetPlayerName(const class FString& playerName);
 
 public:
 	static class UClass* StaticClass()

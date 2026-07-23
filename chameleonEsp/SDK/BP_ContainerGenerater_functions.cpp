@@ -16,20 +16,6 @@
 
 SDK_NAMESPACE_START
 
-// Function BP_ContainerGenerater.BP_ContainerGenerater_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_ContainerGenerater_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ContainerGenerater_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_ContainerGenerater.BP_ContainerGenerater_C.ExecuteUbergraph_BP_ContainerGenerater
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -47,6 +33,20 @@ void ABP_ContainerGenerater_C::ExecuteUbergraph_BP_ContainerGenerater(int32 Entr
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ContainerGenerater.BP_ContainerGenerater_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_ContainerGenerater_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ContainerGenerater_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

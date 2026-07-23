@@ -21,12 +21,12 @@ SDK_NAMESPACE_START
 class IBPI_AIControl_C final
 {
 public:
-	void SetStrafing(bool IsStrafing, EN_StrafingDirection Direction);
-	void PlayAvoidanceAnimation();
-	void IsBattleMode(bool* Bool);
-	void IsAttackNow(bool* State);
-	void IsAiming(bool* IsAiming, int32* SuccessCount);
 	void GetAvoidanceRotation(struct FRotator* Rotation);
+	void IsAiming(bool* IsAiming_0, int32* SuccessCount);
+	void IsAttackNow(bool* State);
+	void IsBattleMode(bool* Bool);
+	void PlayAvoidanceAnimation();
+	void SetStrafing(bool IsStrafing, EN_StrafingDirection Direction);
 
 public:
 	static class UClass* StaticClass()

@@ -17,6 +17,15 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
+// Function BPC_TaskObject_Base.BPC_TaskObject_Base_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BPC_TaskObject_Base_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPC_TaskObject_Base_C_ReceiveEndPlay;
+
 // Function BPC_TaskObject_Base.BPC_TaskObject_Base_C.ExecuteUbergraph_BPC_TaskObject_Base
 // 0x0048 (0x0048 - 0x0000)
 struct BPC_TaskObject_Base_C_ExecuteUbergraph_BPC_TaskObject_Base final
@@ -33,15 +42,6 @@ public:
 	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BPC_TaskObject_Base_C_ExecuteUbergraph_BPC_TaskObject_Base;
-
-// Function BPC_TaskObject_Base.BPC_TaskObject_Base_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BPC_TaskObject_Base_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BPC_TaskObject_Base_C_ReceiveEndPlay;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -27,11 +27,11 @@ public:
 	TArray<class FString>                         DeviceIDs;                                         // 0x09E8(0x0010)(Edit, BlueprintVisible)
 
 public:
-	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void OnValueChangeEvent();
-	void ExecuteUbergraph_WBP_OptionBox_VoiceInputOrOutputDevice(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_WBP_OptionBox_VoiceInputOrOutputDevice(int32 EntryPoint);
+	void OnValueChangeEvent();
+	void PreConstruct(bool IsDesignTime);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()

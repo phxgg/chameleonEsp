@@ -17,47 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_Item.WBP_Item_C.SetStackData
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_Item_C_SetStackData final
-{
-public:
-	int32                                         StackCount;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
-};
-DUMPER7_ASSERTS_WBP_Item_C_SetStackData;
-
-// Function WBP_Item.WBP_Item_C.SetData
-// 0x0060 (0x0060 - 0x0000)
-struct WBP_Item_C_SetData final
-{
-public:
-	struct FCPP_GameItemData                      ItemData;                                          // 0x0000(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         StackCount;                                        // 0x0058(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Item_C_SetData;
-
-// Function WBP_Item.WBP_Item_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Item_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Item_C_PreConstruct;
-
-// Function WBP_Item.WBP_Item_C.PlaySlotAnim
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Item_C_PlaySlotAnim final
-{
-public:
-	bool                                          IsSelect;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_Item_C_PlaySlotAnim;
-
 // Function WBP_Item.WBP_Item_C.ExecuteUbergraph_WBP_Item
 // 0x0020 (0x0020 - 0x0000)
 struct WBP_Item_C_ExecuteUbergraph_WBP_Item final
@@ -75,6 +34,47 @@ public:
 	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_Item_C_ExecuteUbergraph_WBP_Item;
+
+// Function WBP_Item.WBP_Item_C.PlaySlotAnim
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Item_C_PlaySlotAnim final
+{
+public:
+	bool                                          IsSelect;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Item_C_PlaySlotAnim;
+
+// Function WBP_Item.WBP_Item_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Item_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Item_C_PreConstruct;
+
+// Function WBP_Item.WBP_Item_C.SetData
+// 0x0060 (0x0060 - 0x0000)
+struct WBP_Item_C_SetData final
+{
+public:
+	struct FCPP_GameItemData                      ItemData;                                          // 0x0000(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         StackCount_0;                                      // 0x0058(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_Item_C_SetData;
+
+// Function WBP_Item.WBP_Item_C.SetStackData
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_Item_C_SetStackData final
+{
+public:
+	int32                                         StackCount_0;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0010)()
+};
+DUMPER7_ASSERTS_WBP_Item_C_SetStackData;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

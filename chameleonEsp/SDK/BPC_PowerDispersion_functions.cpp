@@ -16,17 +16,27 @@
 
 SDK_NAMESPACE_START
 
-// Function BPC_PowerDispersion.BPC_PowerDispersion_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// Function BPC_PowerDispersion.BPC_PowerDispersion_C.Dispersion
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   PowerPosition                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  power                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBPC_PowerDispersion_C::ReceiveBeginPlay()
+void UBPC_PowerDispersion_C::Dispersion(const struct FVector& PowerPosition, double power, class AActor* SourceActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_PowerDispersion_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BPC_PowerDispersion_C", "Dispersion");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BPC_PowerDispersion_C_Dispersion Parms{};
+
+	Parms.PowerPosition = std::move(PowerPosition);
+	Parms.power = power;
+	Parms.SourceActor = SourceActor;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -50,27 +60,17 @@ void UBPC_PowerDispersion_C::ExecuteUbergraph_BPC_PowerDispersion(int32 EntryPoi
 }
 
 
-// Function BPC_PowerDispersion.BPC_PowerDispersion_C.Dispersion
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   PowerPosition                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  power                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           SourceActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function BPC_PowerDispersion.BPC_PowerDispersion_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void UBPC_PowerDispersion_C::Dispersion(const struct FVector& PowerPosition, double power, class AActor* SourceActor)
+void UBPC_PowerDispersion_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPC_PowerDispersion_C", "Dispersion");
+		Func = Class->GetFunction("BPC_PowerDispersion_C", "ReceiveBeginPlay");
 
-	Params::BPC_PowerDispersion_C_Dispersion Parms{};
-
-	Parms.PowerPosition = std::move(PowerPosition);
-	Parms.power = power;
-	Parms.SourceActor = SourceActor;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

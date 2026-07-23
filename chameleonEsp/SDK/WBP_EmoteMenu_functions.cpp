@@ -16,71 +16,35 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_EmoteMenu.WBP_EmoteMenu_C.Tick
+// Function WBP_EmoteMenu.WBP_EmoteMenu_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry_Tick                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime_Tick                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_EmoteMenu_C::Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick)
+void UWBP_EmoteMenu_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EmoteMenu_C", "Tick");
-
-	Params::WBP_EmoteMenu_C_Tick Parms{};
-
-	Parms.MyGeometry_Tick = std::move(MyGeometry_Tick);
-	Parms.InDeltaTime_Tick = InDeltaTime_Tick;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_EmoteMenu.WBP_EmoteMenu_C.SelectEnd
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_EmoteMenu_C::SelectEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EmoteMenu_C", "SelectEnd");
+		Func = Class->GetFunction("WBP_EmoteMenu_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_EmoteMenu.WBP_EmoteMenu_C.ReUpdate
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_EmoteMenu_C::ReUpdate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EmoteMenu_C", "ReUpdate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_EmoteMenu.WBP_EmoteMenu_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_EmoteMenu.WBP_EmoteMenu_C.ExecuteUbergraph_WBP_EmoteMenu
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_EmoteMenu_C::PreConstruct(bool IsDesignTime_PreConstruct)
+void UWBP_EmoteMenu_C::ExecuteUbergraph_WBP_EmoteMenu(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EmoteMenu_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_EmoteMenu_C", "ExecuteUbergraph_WBP_EmoteMenu");
 
-	Params::WBP_EmoteMenu_C_PreConstruct Parms{};
+	Params::WBP_EmoteMenu_C_ExecuteUbergraph_WBP_EmoteMenu Parms{};
 
-	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -112,37 +76,73 @@ void UWBP_EmoteMenu_C::InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0(const
 }
 
 
-// Function WBP_EmoteMenu.WBP_EmoteMenu_C.ExecuteUbergraph_WBP_EmoteMenu
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_EmoteMenu.WBP_EmoteMenu_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_EmoteMenu_C::ExecuteUbergraph_WBP_EmoteMenu(int32 EntryPoint)
+void UWBP_EmoteMenu_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EmoteMenu_C", "ExecuteUbergraph_WBP_EmoteMenu");
+		Func = Class->GetFunction("WBP_EmoteMenu_C", "PreConstruct");
 
-	Params::WBP_EmoteMenu_C_ExecuteUbergraph_WBP_EmoteMenu Parms{};
+	Params::WBP_EmoteMenu_C_PreConstruct Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_EmoteMenu.WBP_EmoteMenu_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_EmoteMenu.WBP_EmoteMenu_C.ReUpdate
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_EmoteMenu_C::Construct()
+void UWBP_EmoteMenu_C::ReUpdate()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_EmoteMenu_C", "Construct");
+		Func = Class->GetFunction("WBP_EmoteMenu_C", "ReUpdate");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_EmoteMenu.WBP_EmoteMenu_C.SelectEnd
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_EmoteMenu_C::SelectEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_EmoteMenu_C", "SelectEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_EmoteMenu.WBP_EmoteMenu_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_EmoteMenu_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_EmoteMenu_C", "Tick");
+
+	Params::WBP_EmoteMenu_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

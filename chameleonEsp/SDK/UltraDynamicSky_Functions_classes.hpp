@@ -21,19 +21,19 @@ SDK_NAMESPACE_START
 class UUltraDynamicSky_Functions_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void Transition_Time_of_Day_·_𝖴𝖣𝖲(double New_Time_of_Day, double Transition_Duration__Seconds_, EEasingFunc Easing_Function, double Easing_Exponent, bool Allow_Time_Going_Backwards, class UObject* __WorldContext);
-	static void Set_Time_with_Time_Code_·_𝖴𝖣𝖲(const struct FTimecode& Timecode, class UObject* __WorldContext);
-	static void Set_Time_of_Day_·_𝖴𝖣𝖲(double Time_of_Day, class UObject* __WorldContext);
-	static void Set_Date_and_Time_·_𝖴𝖣𝖲(const struct FDateTime& DateTime, class UObject* __WorldContext);
-	static void Random_Value_in_Float_Range_Structure(const struct FFloatRange& Range, const struct FRandomStream& Stream, class UObject* __WorldContext, double* Out);
-	static void Is_It_Daytime__·_𝖴𝖣𝖲(class UObject* __WorldContext, bool* Daytime);
-	static void Get_Ultra_Dynamic_Sky(class UObject* __WorldContext, class AUltra_Dynamic_Sky_C** UDS, bool* Valid);
-	static void Get_TimeCode_·_𝖴𝖣𝖲(class UObject* __WorldContext, struct FTimecode* Timecode);
-	static void Get_Time_of_Day_·_𝖴𝖣𝖲(class UObject* __WorldContext, double* Time_of_Day);
-	static void Get_Day_of_the_Week_·_𝖴𝖣𝖲(class UObject* __WorldContext, int32* Index_0, class FString* Name_0);
-	static void Get_DateTime_·_𝖴𝖣𝖲(class UObject* __WorldContext, struct FDateTime* DateTime);
-	static void Create_UDS_and_UDW_State_for_Saving_·_𝖴𝖣𝖲(class UObject* __WorldContext, struct FUDS_and_UDW_State* Packaged_State);
 	static void Apply_Saved_UDS_and_UDW_State_·_𝖴𝖣𝖲(const struct FUDS_and_UDW_State& State, class UObject* __WorldContext);
+	static void Create_UDS_and_UDW_State_for_Saving_·_𝖴𝖣𝖲(class UObject* __WorldContext, struct FUDS_and_UDW_State* Packaged_State);
+	static void Get_DateTime_·_𝖴𝖣𝖲(class UObject* __WorldContext, struct FDateTime* DateTime);
+	static void Get_Day_of_the_Week_·_𝖴𝖣𝖲(class UObject* __WorldContext, int32* Index_0, class FString* Name_0);
+	static void Get_Time_of_Day_·_𝖴𝖣𝖲(class UObject* __WorldContext, double* Time_of_Day);
+	static void Get_TimeCode_·_𝖴𝖣𝖲(class UObject* __WorldContext, struct FTimecode* Timecode);
+	static void Get_Ultra_Dynamic_Sky(class UObject* __WorldContext, class AUltra_Dynamic_Sky_C** UDS, bool* Valid);
+	static void Is_It_Daytime__·_𝖴𝖣𝖲(class UObject* __WorldContext, bool* Daytime);
+	static void Random_Value_in_Float_Range_Structure(const struct FFloatRange& Range, const struct FRandomStream& Stream, class UObject* __WorldContext, double* Out);
+	static void Set_Date_and_Time_·_𝖴𝖣𝖲(const struct FDateTime& DateTime, class UObject* __WorldContext);
+	static void Set_Time_of_Day_·_𝖴𝖣𝖲(double Time_of_Day, class UObject* __WorldContext);
+	static void Set_Time_with_Time_Code_·_𝖴𝖣𝖲(const struct FTimecode& Timecode, class UObject* __WorldContext);
+	static void Transition_Time_of_Day_·_𝖴𝖣𝖲(double New_Time_of_Day, double Transition_Duration__Seconds_, EEasingFunc Easing_Function, double Easing_Exponent, bool Allow_Time_Going_Backwards, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

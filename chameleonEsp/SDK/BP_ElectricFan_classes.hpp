@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_CopyActorBase_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_CopyActorBase_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -37,15 +37,15 @@ public:
 	double                                        HitDistance;                                       // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetWindTrailSize(double Distance);
-	void SetTimeStopState(bool State_SetTimeStopState);
-	void ReceiveBeginPlay();
-	void MaxSpeedControl(class AActor* TargetActor, double* MultiplyPower);
-	double GetAttenuation(const struct FVector& v1, double power);
-	void ExecuteUbergraph_BP_ElectricFan(int32 EntryPoint);
-	void DestroyVAT();
-	void Check();
 	void BehindCheck(const struct FVector& B, bool* IsBehind);
+	void Check();
+	void DestroyVAT();
+	void ExecuteUbergraph_BP_ElectricFan(int32 EntryPoint);
+	double GetAttenuation(const struct FVector& v1, double power);
+	void MaxSpeedControl(class AActor* TargetActor, double* MultiplyPower);
+	void ReceiveBeginPlay();
+	void SetTimeStopState(bool State);
+	void SetWindTrailSize(double Distance);
 
 public:
 	static class UClass* StaticClass()

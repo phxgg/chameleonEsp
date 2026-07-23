@@ -28,10 +28,10 @@ public:
 	bool                                          IsCurrentPlayLoop;                                 // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetValue(float Value);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void PlayChargeSound();
 	void ExecuteUbergraph_WBP_CentorCharge(int32 EntryPoint);
+	void PlayChargeSound();
+	void PreConstruct(bool IsDesignTime);
+	void SetValue(float Value);
 
 public:
 	static class UClass* StaticClass()

@@ -14,215 +14,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateVSyncState
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_ConfigItem_C_UpdateVSyncState final
-{
-public:
-	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Conv_IntToBool_ReturnValue;               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateVSyncState;
-
-// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateVisualEffectQuality
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_ConfigItem_C_UpdateVisualEffectQuality final
-{
-public:
-	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
-	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
-	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateVisualEffectQuality;
-
-// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateTextureQuality
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_ConfigItem_C_UpdateTextureQuality final
-{
-public:
-	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
-	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
-	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateTextureQuality;
-
-// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateShadowQuality
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_ConfigItem_C_UpdateShadowQuality final
-{
-public:
-	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
-	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
-	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateShadowQuality;
-
-// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateShadingQuality
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_ConfigItem_C_UpdateShadingQuality final
-{
-public:
-	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
-	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
-	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateShadingQuality;
-
-// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateReflectionQuality
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_ConfigItem_C_UpdateReflectionQuality final
-{
-public:
-	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
-	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
-	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateReflectionQuality;
-
-// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdatePost Processing Quality
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_ConfigItem_C_UpdatePost_Processing_Quality final
-{
-public:
-	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
-	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
-	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdatePost_Processing_Quality;
-
-// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateOverall Scalability Level
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_ConfigItem_C_UpdateOverall_Scalability_Level final
-{
-public:
-	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
-	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
-	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateOverall_Scalability_Level;
-
-// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateGlobal Illumination
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_ConfigItem_C_UpdateGlobal_Illumination final
-{
-public:
-	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
-	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
-	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateGlobal_Illumination;
-
-// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateFrameRate
-// 0x0020 (0x0020 - 0x0000)
-struct WBP_ConfigItem_C_UpdateFrameRate final
-{
-public:
-	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFrameRateLimit_NewLimit_ImplicitCast;  // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_VariableSet_Frame_Rate_Limit_ImplicitCast;  // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateFrameRate;
-
-// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateAudio Quality Level
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_ConfigItem_C_UpdateAudio_Quality_Level final
-{
-public:
-	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
-	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
-	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateAudio_Quality_Level;
-
-// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateAntiAliasingQuality
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_ConfigItem_C_UpdateAntiAliasingQuality final
-{
-public:
-	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
-	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
-	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateAntiAliasingQuality;
-
-// Function WBP_ConfigItem.WBP_ConfigItem_C.SetVarValue
-// 0x000C (0x000C - 0x0000)
-struct WBP_ConfigItem_C_SetVarValue final
-{
-public:
-	int32                                         inInt;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetOptionIndex_ReturnValue;               // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigItem_C_SetVarValue;
-
-// Function WBP_ConfigItem.WBP_ConfigItem_C.RemoveMin
-// 0x00E8 (0x00E8 - 0x0000)
-struct WBP_ConfigItem_C_RemoveMin final
-{
-public:
-	class FText                                   SourceText;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class FText                                   ReturnText;                                        // 0x0010(0x0010)(Parm, OutParm)
-	class FString                                 ReturnString;                                      // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable;                              // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TArray<class FString>                         CallFunc_SplitText_ReturnValue;                    // 0x0040(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Array_Get_Item;                           // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Temp_string_Variable_1;                            // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0098(0x0010)()
-	bool                                          Temp_bool_Variable;                                // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_Select_Default;                             // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigItem_C_RemoveMin;
-
-// Function WBP_ConfigItem.WBP_ConfigItem_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_ConfigItem_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_WBP_ConfigItem_C_PreConstruct;
-
 // Function WBP_ConfigItem.WBP_ConfigItem_C.ExecuteUbergraph_WBP_ConfigItem
 // 0x0120 (0x0120 - 0x0000)
 struct WBP_ConfigItem_C_ExecuteUbergraph_WBP_ConfigItem final
@@ -276,6 +67,215 @@ public:
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_ConfigItem_C_ExecuteUbergraph_WBP_ConfigItem;
+
+// Function WBP_ConfigItem.WBP_ConfigItem_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_ConfigItem_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigItem_C_PreConstruct;
+
+// Function WBP_ConfigItem.WBP_ConfigItem_C.RemoveMin
+// 0x00E8 (0x00E8 - 0x0000)
+struct WBP_ConfigItem_C_RemoveMin final
+{
+public:
+	class FText                                   SourceText;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FText                                   ReturnText;                                        // 0x0010(0x0010)(Parm, OutParm)
+	class FString                                 ReturnString;                                      // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 Temp_string_Variable;                              // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TArray<class FString>                         CallFunc_SplitText_ReturnValue;                    // 0x0040(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Array_Get_Item;                           // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Temp_string_Variable_1;                            // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0098(0x0010)()
+	bool                                          Temp_bool_Variable;                                // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_Select_Default;                             // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigItem_C_RemoveMin;
+
+// Function WBP_ConfigItem.WBP_ConfigItem_C.SetVarValue
+// 0x000C (0x000C - 0x0000)
+struct WBP_ConfigItem_C_SetVarValue final
+{
+public:
+	int32                                         inInt;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetOptionIndex_ReturnValue;               // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigItem_C_SetVarValue;
+
+// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateAntiAliasingQuality
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_ConfigItem_C_UpdateAntiAliasingQuality final
+{
+public:
+	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
+	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateAntiAliasingQuality;
+
+// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateAudio Quality Level
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_ConfigItem_C_UpdateAudio_Quality_Level final
+{
+public:
+	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
+	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateAudio_Quality_Level;
+
+// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateFrameRate
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_ConfigItem_C_UpdateFrameRate final
+{
+public:
+	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFrameRateLimit_NewLimit_ImplicitCast;  // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_Frame_Rate_Limit_ImplicitCast;  // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateFrameRate;
+
+// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateGlobal Illumination
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_ConfigItem_C_UpdateGlobal_Illumination final
+{
+public:
+	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
+	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateGlobal_Illumination;
+
+// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateOverall Scalability Level
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_ConfigItem_C_UpdateOverall_Scalability_Level final
+{
+public:
+	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
+	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateOverall_Scalability_Level;
+
+// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdatePost Processing Quality
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_ConfigItem_C_UpdatePost_Processing_Quality final
+{
+public:
+	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
+	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdatePost_Processing_Quality;
+
+// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateReflectionQuality
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_ConfigItem_C_UpdateReflectionQuality final
+{
+public:
+	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
+	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateReflectionQuality;
+
+// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateShadingQuality
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_ConfigItem_C_UpdateShadingQuality final
+{
+public:
+	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
+	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateShadingQuality;
+
+// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateShadowQuality
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_ConfigItem_C_UpdateShadowQuality final
+{
+public:
+	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
+	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateShadowQuality;
+
+// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateTextureQuality
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_ConfigItem_C_UpdateTextureQuality final
+{
+public:
+	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
+	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateTextureQuality;
+
+// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateVisualEffectQuality
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_ConfigItem_C_UpdateVisualEffectQuality final
+{
+public:
+	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 FlameRateArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible)
+	TArray<int32>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateVisualEffectQuality;
+
+// Function WBP_ConfigItem.WBP_ConfigItem_C.UpdateVSyncState
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_ConfigItem_C_UpdateVSyncState final
+{
+public:
+	int32                                         LimitIndex;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_IntToBool_ReturnValue;               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WBP_ConfigItem_C_UpdateVSyncState;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

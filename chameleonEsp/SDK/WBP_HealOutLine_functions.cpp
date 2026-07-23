@@ -16,23 +16,17 @@
 
 SDK_NAMESPACE_START
 
-// Function WBP_HealOutLine.WBP_HealOutLine_C.ExecuteUbergraph_WBP_HealOutLine
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_HealOutLine.WBP_HealOutLine_C.AnimationEnd
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_HealOutLine_C::ExecuteUbergraph_WBP_HealOutLine(int32 EntryPoint)
+void UWBP_HealOutLine_C::AnimationEnd()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HealOutLine_C", "ExecuteUbergraph_WBP_HealOutLine");
+		Func = Class->GetFunction("WBP_HealOutLine_C", "AnimationEnd");
 
-	Params::WBP_HealOutLine_C_ExecuteUbergraph_WBP_HealOutLine Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -50,17 +44,23 @@ void UWBP_HealOutLine_C::Construct()
 }
 
 
-// Function WBP_HealOutLine.WBP_HealOutLine_C.AnimationEnd
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_HealOutLine.WBP_HealOutLine_C.ExecuteUbergraph_WBP_HealOutLine
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HealOutLine_C::AnimationEnd()
+void UWBP_HealOutLine_C::ExecuteUbergraph_WBP_HealOutLine(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HealOutLine_C", "AnimationEnd");
+		Func = Class->GetFunction("WBP_HealOutLine_C", "ExecuteUbergraph_WBP_HealOutLine");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_HealOutLine_C_ExecuteUbergraph_WBP_HealOutLine Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

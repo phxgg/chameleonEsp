@@ -17,18 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function BP_Online_SelfControler.BP_Online_SelfControler_C.InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0
-// 0x0030 (0x0030 - 0x0000)
-struct BP_Online_SelfControler_C_InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0 final
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_Online_SelfControler_C_InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0;
-
 // Function BP_Online_SelfControler.BP_Online_SelfControler_C.ExecuteUbergraph_BP_Online_SelfControler
 // 0x0180 (0x0180 - 0x0000)
 struct BP_Online_SelfControler_C_ExecuteUbergraph_BP_Online_SelfControler final
@@ -98,6 +86,18 @@ public:
 	float                                         K2Node_SetFieldsInStruct_MotionBlurAmount_ImplicitCast; // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_Online_SelfControler_C_ExecuteUbergraph_BP_Online_SelfControler;
+
+// Function BP_Online_SelfControler.BP_Online_SelfControler_C.InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0
+// 0x0030 (0x0030 - 0x0000)
+struct BP_Online_SelfControler_C_InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0 final
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Online_SelfControler_C_InpActEvt_IA_Pause_K2Node_EnhancedInputActionEvent_0;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END
