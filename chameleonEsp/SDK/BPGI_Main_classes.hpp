@@ -11,9 +11,10 @@
 #include "Basic.hpp"
 
 #include "RedpointEOSFramework_classes.hpp"
-#include "Engine_structs.hpp"
 #include "UINavigation_structs.hpp"
+#include "Engine_structs.hpp"
 #include "EN_InputJudgementType_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -46,6 +47,7 @@ public:
 	void OnCallFailed_0646E9BD4A18BBF176FCAEA43F9771E1(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
 	void OnCallFailed_0646E9BD4A18BBF176FCAEA44F5EA191(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
 	void OnCallFailed_4473CEAA43FDA8DFD02079B1F2500B1B(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename);
+	void OnInputDeviceConnectionChange_イベント(EInputDeviceConnectionState NewConnectionState, const struct FPlatformUserId& PlatformUserId, const struct FInputDeviceId& InputDeviceId);
 	void OnReadUserFileComplete_4473CEAA43FDA8DFD02079B1F2500B1B(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename);
 	void OnWriteUserFileCanceled_0646E9BD4A18BBF176FCAEA43F9771E1(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);
 	void OnWriteUserFileCanceled_0646E9BD4A18BBF176FCAEA44F5EA191(bool bWasSuccessful, const struct FUniqueNetIdRepl& UserId, const class FString& Filename, int64 BytesWritten);

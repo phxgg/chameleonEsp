@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "UMG_structs.hpp"
-#include "Engine_structs.hpp"
-#include "OnlineSubsystemBlueprints_structs.hpp"
 #include "EN_LINK_GamePhase_structs.hpp"
+#include "UMG_structs.hpp"
+#include "OnlineSubsystemBlueprints_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -229,7 +229,7 @@ DUMPER7_ASSERTS_BP_GameState_LINK_C_RevivalAnnounce_Server_;
 struct BP_GameState_LINK_C_RevivalAnnounce_Client_ final
 {
 public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 PlayerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_GameState_LINK_C_RevivalAnnounce_Client_;
 
@@ -678,7 +678,7 @@ DUMPER7_ASSERTS_BP_GameState_LINK_C_DeathAnnounce_Server_;
 struct BP_GameState_LINK_C_DeathAnnounce_Client_ final
 {
 public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 PlayerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_GameState_LINK_C_DeathAnnounce_Client_;
 

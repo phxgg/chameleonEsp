@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "PenguinHotel_structs.hpp"
 #include "ST_ItemCoreDatas_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "PenguinHotel_structs.hpp"
 #include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 

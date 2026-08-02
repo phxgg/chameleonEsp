@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "EN_LINK_PlayerStateValueType_structs.hpp"
+#include "Engine_structs.hpp"
 #include "BP_FirstPersonPlayerState_classes.hpp"
 
 
@@ -54,7 +54,7 @@ public:
 	void NameUpdate();
 	void Initialization(class ABP_FirstPersonCharacter_Main_C* Character_Initialization);
 	void GetStateValue(EN_LINK_PlayerStateValueType& Key, double* Value, double* ReplicateValue);
-	void GetCustomPlayerName(class FString* playerName);
+	void GetCustomPlayerName(class FString* PlayerName);
 	void GetCurrentWeight(double* WeightPower);
 	void ExecuteUbergraph_BP_FirstPersonPlayerState_LINK(int32 EntryPoint);
 	void BndEvt__BP_FirstPersonPlayerState_LINK_BPC_LuggageBackpack_LINK_K2Node_ComponentBoundEvent_1_ChangeWeight__DelegateSignature(double Weight);

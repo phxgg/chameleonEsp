@@ -102,6 +102,27 @@ void UWBP_FriendList_C::OnCallFailed_FBCD2806418BE785B5E6FEA7A395A2A7(int32 Loca
 }
 
 
+// Function WBP_FriendList.WBP_FriendList_C.GetSortedFriends
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class UOnlineFriendRef*>*        RezultPlayers                                          (Parm, OutParm)
+
+void UWBP_FriendList_C::GetSortedFriends(TArray<class UOnlineFriendRef*>* RezultPlayers)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FriendList_C", "GetSortedFriends");
+
+	Params::WBP_FriendList_C_GetSortedFriends Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (RezultPlayers != nullptr)
+		*RezultPlayers = std::move(Parms.RezultPlayers);
+}
+
+
 // Function WBP_FriendList.WBP_FriendList_C.ExecuteUbergraph_WBP_FriendList
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -131,6 +152,20 @@ void UWBP_FriendList_C::Construct()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("WBP_FriendList_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_FriendList.WBP_FriendList_C.BndEvt__WBP_FriendList_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_FriendList_C::BndEvt__WBP_FriendList_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FriendList_C", "BndEvt__WBP_FriendList_LongTapButton_OnAnimation_K2Node_ComponentBoundEvent_0_PushEnd__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

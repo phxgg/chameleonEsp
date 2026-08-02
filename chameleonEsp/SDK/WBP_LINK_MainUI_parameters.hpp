@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
-#include "UMG_structs.hpp"
 #include "PenguinHotel_structs.hpp"
 #include "EN_LINK_PlayerStateValueType_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -293,7 +293,7 @@ DUMPER7_ASSERTS_WBP_LINK_MainUI_C_AddTaskBlock;
 struct WBP_LINK_MainUI_C_AddPlayerRevivalUI final
 {
 public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 PlayerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_LINK_MainUI_C_AddPlayerRevivalUI;
 
@@ -302,7 +302,7 @@ DUMPER7_ASSERTS_WBP_LINK_MainUI_C_AddPlayerRevivalUI;
 struct WBP_LINK_MainUI_C_AddPlayerDeathUI final
 {
 public:
-	class FString                                 playerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 PlayerName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WBP_LINK_MainUI_C_AddPlayerDeathUI;
 

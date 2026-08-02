@@ -12,35 +12,15 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "TemplateSequence_structs.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CinematicCamera_structs.hpp"
+#include "TemplateSequence_structs.hpp"
 
 
 SDK_NAMESPACE_START
-
-// Class TemplateSequence.CameraAnimationBoundObjectInstantiator
-// 0x0000 (0x0040 - 0x0040)
-class UCameraAnimationBoundObjectInstantiator final : public UMovieSceneEntityInstantiatorSystem
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CameraAnimationBoundObjectInstantiator")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CameraAnimationBoundObjectInstantiator")
-	}
-	static class UCameraAnimationBoundObjectInstantiator* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCameraAnimationBoundObjectInstantiator>();
-	}
-};
-DUMPER7_ASSERTS_UCameraAnimationBoundObjectInstantiator;
 
 // Class TemplateSequence.TemplateSequence
 // 0x0080 (0x00E8 - 0x0068)
@@ -66,26 +46,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UTemplateSequence;
-
-// Class TemplateSequence.CameraAnimationSpawnableSystem
-// 0x0000 (0x0040 - 0x0040)
-class UCameraAnimationSpawnableSystem final : public UMovieSceneEntitySystem
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CameraAnimationSpawnableSystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CameraAnimationSpawnableSystem")
-	}
-	static class UCameraAnimationSpawnableSystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCameraAnimationSpawnableSystem>();
-	}
-};
-DUMPER7_ASSERTS_UCameraAnimationSpawnableSystem;
 
 // Class TemplateSequence.CameraAnimationSequence
 // 0x0000 (0x00E8 - 0x00E8)
@@ -170,6 +130,46 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UCameraAnimationSequencePlayer;
+
+// Class TemplateSequence.CameraAnimationSpawnableSystem
+// 0x0000 (0x0040 - 0x0040)
+class UCameraAnimationSpawnableSystem final : public UMovieSceneEntitySystem
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraAnimationSpawnableSystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraAnimationSpawnableSystem")
+	}
+	static class UCameraAnimationSpawnableSystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraAnimationSpawnableSystem>();
+	}
+};
+DUMPER7_ASSERTS_UCameraAnimationSpawnableSystem;
+
+// Class TemplateSequence.CameraAnimationBoundObjectInstantiator
+// 0x0000 (0x0040 - 0x0040)
+class UCameraAnimationBoundObjectInstantiator final : public UMovieSceneEntityInstantiatorSystem
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CameraAnimationBoundObjectInstantiator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraAnimationBoundObjectInstantiator")
+	}
+	static class UCameraAnimationBoundObjectInstantiator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraAnimationBoundObjectInstantiator>();
+	}
+};
+DUMPER7_ASSERTS_UCameraAnimationBoundObjectInstantiator;
 
 // Class TemplateSequence.CameraAnimationEntitySystemLinker
 // 0x0000 (0x0768 - 0x0768)

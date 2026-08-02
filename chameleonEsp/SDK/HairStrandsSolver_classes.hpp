@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "DataflowSimulation_structs.hpp"
-#include "HairStrandsSolver_structs.hpp"
 #include "Engine_classes.hpp"
+#include "HairStrandsSolver_structs.hpp"
+#include "DataflowSimulation_structs.hpp"
 
 
 SDK_NAMESPACE_START

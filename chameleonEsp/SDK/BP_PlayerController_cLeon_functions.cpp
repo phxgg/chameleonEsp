@@ -378,6 +378,20 @@ void ABP_PlayerController_cLeon_C::CameraReset()
 }
 
 
+// Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.ApplySettings
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_PlayerController_cLeon_C::ApplySettings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerController_cLeon_C", "ApplySettings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_PlayerController_cLeon.BP_PlayerController_cLeon_C.AddMainWidgets
 // (BlueprintCallable, BlueprintEvent)
 

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "IKRig_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Engine_classes.hpp"
+#include "IKRig_structs.hpp"
 #include "PBIK_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -187,30 +187,6 @@ public:
 };
 DUMPER7_ASSERTS_UIKRetargetFKChainsController;
 
-// Class IKRig.IKRetargetSpeedPlantingController
-// 0x0000 (0x0030 - 0x0030)
-class UIKRetargetSpeedPlantingController final : public UIKRetargetOpControllerBase
-{
-public:
-	struct FIKRetargetSpeedPlantingOpSettings GetSettings();
-	void SetSettings(const struct FIKRetargetSpeedPlantingOpSettings& InSettings);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("IKRetargetSpeedPlantingController")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"IKRetargetSpeedPlantingController")
-	}
-	static class UIKRetargetSpeedPlantingController* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UIKRetargetSpeedPlantingController>();
-	}
-};
-DUMPER7_ASSERTS_UIKRetargetSpeedPlantingController;
-
 // Class IKRig.IKRetargetIKChainsController
 // 0x0000 (0x0030 - 0x0030)
 class UIKRetargetIKChainsController final : public UIKRetargetOpControllerBase
@@ -281,41 +257,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_URetargetChainSettings;
-
-// Class IKRig.PinBoneOp
-// 0x00F0 (0x0120 - 0x0030)
-class UPinBoneOp final : public URetargetOpBase
-{
-public:
-	TArray<struct FPinBoneData>                   BonesToPin;                                        // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	ERetargetSourceOrTarget                       PinTo;                                             // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCopyTranslation;                                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCopyRotation;                                     // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCopyScale;                                        // 0x0043(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPinBoneTranslationMode                       TranslationMode;                                   // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPinBoneRotationMode                          RotationMode;                                      // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_46[0xA];                                       // 0x0046(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             GlobalOffset;                                      // 0x0050(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             LocalOffset;                                       // 0x00B0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMaintainOffset;                                   // 0x0110(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EPinBoneType                                  PinType;                                           // 0x0111(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_112[0xE];                                      // 0x0112(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PinBoneOp")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PinBoneOp")
-	}
-	static class UPinBoneOp* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPinBoneOp>();
-	}
-};
-DUMPER7_ASSERTS_UPinBoneOp;
 
 // Class IKRig.RetargetRootSettings
 // 0x00C0 (0x00E8 - 0x0028)
@@ -419,30 +360,6 @@ public:
 };
 DUMPER7_ASSERTS_URetargetProfileLibrary;
 
-// Class IKRig.IKRetargetRunIKRigController
-// 0x0000 (0x0030 - 0x0030)
-class UIKRetargetRunIKRigController final : public UIKRetargetOpControllerBase
-{
-public:
-	struct FIKRetargetRunIKRigOpSettings GetSettings();
-	void SetSettings(const struct FIKRetargetRunIKRigOpSettings& InSettings);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("IKRetargetRunIKRigController")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"IKRetargetRunIKRigController")
-	}
-	static class UIKRetargetRunIKRigController* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UIKRetargetRunIKRigController>();
-	}
-};
-DUMPER7_ASSERTS_UIKRetargetRunIKRigController;
-
 // Class IKRig.IKGoalCreatorInterface
 // 0x0000 (0x0000 - 0x0000)
 class IIKGoalCreatorInterface final
@@ -530,6 +447,41 @@ public:
 };
 DUMPER7_ASSERTS_UIKRetargetPinBoneController;
 
+// Class IKRig.PinBoneOp
+// 0x00F0 (0x0120 - 0x0030)
+class UPinBoneOp final : public URetargetOpBase
+{
+public:
+	TArray<struct FPinBoneData>                   BonesToPin;                                        // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	ERetargetSourceOrTarget                       PinTo;                                             // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCopyTranslation;                                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCopyRotation;                                     // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCopyScale;                                        // 0x0043(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPinBoneTranslationMode                       TranslationMode;                                   // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPinBoneRotationMode                          RotationMode;                                      // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_46[0xA];                                       // 0x0046(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             GlobalOffset;                                      // 0x0050(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             LocalOffset;                                       // 0x00B0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMaintainOffset;                                   // 0x0110(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EPinBoneType                                  PinType;                                           // 0x0111(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_112[0xE];                                      // 0x0112(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PinBoneOp")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PinBoneOp")
+	}
+	static class UPinBoneOp* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPinBoneOp>();
+	}
+};
+DUMPER7_ASSERTS_UPinBoneOp;
+
 // Class IKRig.IKRetargetAdditivePoseController
 // 0x0000 (0x0030 - 0x0030)
 class UIKRetargetAdditivePoseController final : public UIKRetargetOpControllerBase
@@ -616,6 +568,30 @@ public:
 };
 DUMPER7_ASSERTS_URootMotionGeneratorOp;
 
+// Class IKRig.IKRetargetRunIKRigController
+// 0x0000 (0x0030 - 0x0030)
+class UIKRetargetRunIKRigController final : public UIKRetargetOpControllerBase
+{
+public:
+	struct FIKRetargetRunIKRigOpSettings GetSettings();
+	void SetSettings(const struct FIKRetargetRunIKRigOpSettings& InSettings);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("IKRetargetRunIKRigController")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"IKRetargetRunIKRigController")
+	}
+	static class UIKRetargetRunIKRigController* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UIKRetargetRunIKRigController>();
+	}
+};
+DUMPER7_ASSERTS_UIKRetargetRunIKRigController;
+
 // Class IKRig.IKRetargetScaleSourceController
 // 0x0000 (0x0030 - 0x0030)
 class UIKRetargetScaleSourceController final : public UIKRetargetOpControllerBase
@@ -639,6 +615,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UIKRetargetScaleSourceController;
+
+// Class IKRig.IKRetargetSpeedPlantingController
+// 0x0000 (0x0030 - 0x0030)
+class UIKRetargetSpeedPlantingController final : public UIKRetargetOpControllerBase
+{
+public:
+	struct FIKRetargetSpeedPlantingOpSettings GetSettings();
+	void SetSettings(const struct FIKRetargetSpeedPlantingOpSettings& InSettings);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("IKRetargetSpeedPlantingController")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"IKRetargetSpeedPlantingController")
+	}
+	static class UIKRetargetSpeedPlantingController* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UIKRetargetSpeedPlantingController>();
+	}
+};
+DUMPER7_ASSERTS_UIKRetargetSpeedPlantingController;
 
 // Class IKRig.IKRetargetStrideWarpingController
 // 0x0000 (0x0030 - 0x0030)

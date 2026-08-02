@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "UINavigation_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "UINavigation_classes.hpp"
 
 
 SDK_NAMESPACE_START

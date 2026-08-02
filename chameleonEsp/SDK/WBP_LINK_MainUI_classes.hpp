@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "EN_LINK_PlayerStateValueType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "EN_LINK_PlayerStateValueType_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -85,8 +85,8 @@ public:
 	void ChangeSpectateUI(bool IsSpectate);
 	void AddTimerPopup(int32 TextIndex, int32 AddTime, const class FString& CustomString);
 	void AddTaskBlock(const class FText& TaskText, int32 SumProgress, class UWBP_TaskBlock_C** CreatedWidget);
-	void AddPlayerRevivalUI(const class FString& playerName);
-	void AddPlayerDeathUI(const class FString& playerName);
+	void AddPlayerRevivalUI(const class FString& PlayerName);
+	void AddPlayerDeathUI(const class FString& PlayerName);
 
 public:
 	static class UClass* StaticClass()

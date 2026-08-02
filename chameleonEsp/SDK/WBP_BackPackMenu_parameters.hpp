@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "EnhancedInput_structs.hpp"
 #include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "EnhancedInput_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -38,9 +38,9 @@ public:
 };
 DUMPER7_ASSERTS_WBP_BackPackMenu_C_PreConstruct;
 
-// Function WBP_BackPackMenu.WBP_BackPackMenu_C.InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0
+// Function WBP_BackPackMenu.WBP_BackPackMenu_C.InpActEvt_IA_Look_Mouse_K2Node_EnhancedInputActionEvent_0
 // 0x0030 (0x0030 - 0x0000)
-struct WBP_BackPackMenu_C_InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0 final
+struct WBP_BackPackMenu_C_InpActEvt_IA_Look_Mouse_K2Node_EnhancedInputActionEvent_0 final
 {
 public:
 	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
@@ -48,7 +48,7 @@ public:
 	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	const class UInputAction*                     SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WBP_BackPackMenu_C_InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0;
+DUMPER7_ASSERTS_WBP_BackPackMenu_C_InpActEvt_IA_Look_Mouse_K2Node_EnhancedInputActionEvent_0;
 
 // Function WBP_BackPackMenu.WBP_BackPackMenu_C.ExecuteUbergraph_WBP_BackPackMenu
 // 0x00D8 (0x00D8 - 0x0000)

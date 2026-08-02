@@ -16,8 +16,8 @@
 #include "DeveloperSettings_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Mover_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Mover_structs.hpp"
 #include "NetworkPrediction_classes.hpp"
 #include "AnimGraphRuntime_classes.hpp"
 
@@ -479,55 +479,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UPlanarConstraintUtils;
-
-// Class Mover.FlyingMode
-// 0x0010 (0x0080 - 0x0070)
-class UFlyingMode : public UBaseMovementMode
-{
-public:
-	bool                                          bRespectDistanceOverWalkableSurfaces;              // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("FlyingMode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"FlyingMode")
-	}
-	static class UFlyingMode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFlyingMode>();
-	}
-};
-DUMPER7_ASSERTS_UFlyingMode;
-
-// Class Mover.PhysicsDrivenFlyingMode
-// 0x0010 (0x0090 - 0x0080)
-class UPhysicsDrivenFlyingMode : public UFlyingMode
-{
-public:
-	uint8                                         Pad_80[0x8];                                       // 0x0080(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TwistTorqueLimit;                                  // 0x0088(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SwingTorqueLimit;                                  // 0x008C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PhysicsDrivenFlyingMode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PhysicsDrivenFlyingMode")
-	}
-	static class UPhysicsDrivenFlyingMode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPhysicsDrivenFlyingMode>();
-	}
-};
-DUMPER7_ASSERTS_UPhysicsDrivenFlyingMode;
 
 // Class Mover.FloorQueryUtils
 // 0x0000 (0x0028 - 0x0028)
@@ -1449,71 +1400,6 @@ public:
 };
 DUMPER7_ASSERTS_UStanceSettings;
 
-// Class Mover.FallingMode
-// 0x0038 (0x00A8 - 0x0070)
-class UFallingMode : public UBaseMovementMode
-{
-public:
-	TMulticastInlineDelegate<void(const class FName& NextMovementModeName, const struct FHitResult& HitResult)> OnLanded; // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	bool                                          bCancelVerticalSpeedOnLanding;                     // 0x0080(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AirControlPercentage;                              // 0x0084(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FallingDeceleration;                               // 0x0088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OverTerminalSpeedFallingDeceleration;              // 0x008C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TerminalMovementPlaneSpeed;                        // 0x0090(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShouldClampTerminalVerticalSpeed;                 // 0x0094(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         VerticalFallingDeceleration;                       // 0x0098(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TerminalVerticalSpeed;                             // 0x009C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void ProcessLanded(const struct FFloorCheckResult& FloorResult, struct FVector* Velocity, struct FRelativeBaseInfo* BaseInfo, struct FMoverTickEndData* TickEndData) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("FallingMode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"FallingMode")
-	}
-	static class UFallingMode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFallingMode>();
-	}
-};
-DUMPER7_ASSERTS_UFallingMode;
-
-// Class Mover.PhysicsDrivenFallingMode
-// 0x0020 (0x00C8 - 0x00A8)
-class UPhysicsDrivenFallingMode : public UFallingMode
-{
-public:
-	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TwistTorqueLimit;                                  // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         SwingTorqueLimit;                                  // 0x00B4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TOptional<float>                              TargetHeightOverride;                              // 0x00B8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         QueryRadius;                                       // 0x00C0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PhysicsDrivenFallingMode")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PhysicsDrivenFallingMode")
-	}
-	static class UPhysicsDrivenFallingMode* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPhysicsDrivenFallingMode>();
-	}
-};
-DUMPER7_ASSERTS_UPhysicsDrivenFallingMode;
-
 // Class Mover.WaterMovementUtils
 // 0x0000 (0x0028 - 0x0028)
 class UWaterMovementUtils final : public UBlueprintFunctionLibrary
@@ -1696,6 +1582,67 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UAsyncWalkingMode;
+
+// Class Mover.FallingMode
+// 0x0038 (0x00A8 - 0x0070)
+class UFallingMode : public UBaseMovementMode
+{
+public:
+	TMulticastInlineDelegate<void(const class FName& NextMovementModeName, const struct FHitResult& HitResult)> OnLanded; // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	bool                                          bCancelVerticalSpeedOnLanding;                     // 0x0080(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AirControlPercentage;                              // 0x0084(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FallingDeceleration;                               // 0x0088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OverTerminalSpeedFallingDeceleration;              // 0x008C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TerminalMovementPlaneSpeed;                        // 0x0090(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShouldClampTerminalVerticalSpeed;                 // 0x0094(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         VerticalFallingDeceleration;                       // 0x0098(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TerminalVerticalSpeed;                             // 0x009C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ProcessLanded(const struct FFloorCheckResult& FloorResult, struct FVector* Velocity, struct FRelativeBaseInfo* BaseInfo, struct FMoverTickEndData* TickEndData) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("FallingMode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FallingMode")
+	}
+	static class UFallingMode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFallingMode>();
+	}
+};
+DUMPER7_ASSERTS_UFallingMode;
+
+// Class Mover.FlyingMode
+// 0x0010 (0x0080 - 0x0070)
+class UFlyingMode : public UBaseMovementMode
+{
+public:
+	bool                                          bRespectDistanceOverWalkableSurfaces;              // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("FlyingMode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FlyingMode")
+	}
+	static class UFlyingMode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFlyingMode>();
+	}
+};
+DUMPER7_ASSERTS_UFlyingMode;
 
 // Class Mover.SwimmingMode
 // 0x00B8 (0x0128 - 0x0070)
@@ -2008,6 +1955,59 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMoverSimulation;
+
+// Class Mover.PhysicsDrivenFallingMode
+// 0x0020 (0x00C8 - 0x00A8)
+class UPhysicsDrivenFallingMode : public UFallingMode
+{
+public:
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TwistTorqueLimit;                                  // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         SwingTorqueLimit;                                  // 0x00B4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TOptional<float>                              TargetHeightOverride;                              // 0x00B8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         QueryRadius;                                       // 0x00C0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PhysicsDrivenFallingMode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PhysicsDrivenFallingMode")
+	}
+	static class UPhysicsDrivenFallingMode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPhysicsDrivenFallingMode>();
+	}
+};
+DUMPER7_ASSERTS_UPhysicsDrivenFallingMode;
+
+// Class Mover.PhysicsDrivenFlyingMode
+// 0x0010 (0x0090 - 0x0080)
+class UPhysicsDrivenFlyingMode : public UFlyingMode
+{
+public:
+	uint8                                         Pad_80[0x8];                                       // 0x0080(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TwistTorqueLimit;                                  // 0x0088(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SwingTorqueLimit;                                  // 0x008C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PhysicsDrivenFlyingMode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PhysicsDrivenFlyingMode")
+	}
+	static class UPhysicsDrivenFlyingMode* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPhysicsDrivenFlyingMode>();
+	}
+};
+DUMPER7_ASSERTS_UPhysicsDrivenFlyingMode;
 
 // Class Mover.PhysicsDrivenSwimmingMode
 // 0x0018 (0x0140 - 0x0128)

@@ -410,6 +410,32 @@ public:
 };
 DUMPER7_ASSERTS_UMovieSceneScriptingEventChannel;
 
+// Class SequencerScripting.MovieSceneMaterialTrackExtensions
+// 0x0000 (0x0028 - 0x0028)
+class UMovieSceneMaterialTrackExtensions final : public UBlueprintFunctionLibrary
+{
+public:
+	static int32 GetMaterialIndex(class UMovieSceneComponentMaterialTrack* Track);
+	static struct FComponentMaterialInfo GetMaterialInfo(class UMovieSceneComponentMaterialTrack* Track);
+	static void SetMaterialIndex(class UMovieSceneComponentMaterialTrack* Track, const int32 MaterialIndex);
+	static void SetMaterialInfo(class UMovieSceneComponentMaterialTrack* Track, const struct FComponentMaterialInfo& MaterialInfo);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneMaterialTrackExtensions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneMaterialTrackExtensions")
+	}
+	static class UMovieSceneMaterialTrackExtensions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneMaterialTrackExtensions>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneMaterialTrackExtensions;
+
 // Class SequencerScripting.MovieSceneScriptingFloatKey
 // 0x0000 (0x0040 - 0x0040)
 class UMovieSceneScriptingFloatKey : public UMovieSceneScriptingKey
@@ -473,6 +499,44 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieSceneScriptingActualFloatKey;
+
+// Class SequencerScripting.MovieSceneScriptingParticleChannel
+// 0x0030 (0x0060 - 0x0030)
+class UMovieSceneScriptingParticleChannel final : public UMovieSceneScriptingChannel
+{
+public:
+	uint8                                         Pad_30[0x30];                                      // 0x0030(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class UMovieSceneScriptingParticleKey* AddKey(const struct FFrameNumber& InTime, EParticleKey NewParticleValue, float SubFrame, EMovieSceneTimeUnit TimeUnit);
+	void RemoveDefault();
+	void RemoveKey(class UMovieSceneScriptingKey* Key);
+	void SetDefault(EParticleKey InDefaultValue);
+	void Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit);
+
+	struct FSequencerScriptingRange ComputeEffectiveRange() const;
+	TArray<EParticleKey> EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate) const;
+	EParticleKey GetDefault() const;
+	TArray<class UMovieSceneScriptingKey*> GetKeys() const;
+	TArray<class UMovieSceneScriptingKey*> GetKeysByIndex(const TArray<int32>& Indices) const;
+	int32 GetNumKeys() const;
+	bool HasDefault() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneScriptingParticleChannel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneScriptingParticleChannel")
+	}
+	static class UMovieSceneScriptingParticleChannel* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneScriptingParticleChannel>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneScriptingParticleChannel;
 
 // Class SequencerScripting.MovieSceneScriptingDoubleAsFloatKey
 // 0x0020 (0x0060 - 0x0040)
@@ -608,6 +672,31 @@ public:
 };
 DUMPER7_ASSERTS_UMovieSceneScriptingIntegerChannel;
 
+// Class SequencerScripting.MovieSceneEventTrackExtensions
+// 0x0000 (0x0028 - 0x0028)
+class UMovieSceneEventTrackExtensions final : public UBlueprintFunctionLibrary
+{
+public:
+	static class UMovieSceneEventRepeaterSection* AddEventRepeaterSection(class UMovieSceneEventTrack* InTrack);
+	static class UMovieSceneEventTriggerSection* AddEventTriggerSection(class UMovieSceneEventTrack* InTrack);
+	static class UClass* GetBoundObjectPropertyClass(const struct FMovieSceneEvent& EventKey);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneEventTrackExtensions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneEventTrackExtensions")
+	}
+	static class UMovieSceneEventTrackExtensions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneEventTrackExtensions>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneEventTrackExtensions;
+
 // Class SequencerScripting.MovieSceneScriptingObjectPathKey
 // 0x0020 (0x0060 - 0x0040)
 class UMovieSceneScriptingObjectPathKey final : public UMovieSceneScriptingKey
@@ -702,44 +791,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieSceneScriptingParticleKey;
-
-// Class SequencerScripting.MovieSceneScriptingParticleChannel
-// 0x0030 (0x0060 - 0x0030)
-class UMovieSceneScriptingParticleChannel final : public UMovieSceneScriptingChannel
-{
-public:
-	uint8                                         Pad_30[0x30];                                      // 0x0030(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UMovieSceneScriptingParticleKey* AddKey(const struct FFrameNumber& InTime, EParticleKey NewParticleValue, float SubFrame, EMovieSceneTimeUnit TimeUnit);
-	void RemoveDefault();
-	void RemoveKey(class UMovieSceneScriptingKey* Key);
-	void SetDefault(EParticleKey InDefaultValue);
-	void Transform(const struct FFrameNumber& OffsetFrame, double Scale, const struct FFrameNumber& PivotFrame, const struct FSequencerScriptingRange& ScriptingRange, EMovieSceneTimeUnit TimeUnit);
-
-	struct FSequencerScriptingRange ComputeEffectiveRange() const;
-	TArray<EParticleKey> EvaluateKeys(const struct FSequencerScriptingRange& Range, const struct FFrameRate& FrameRate) const;
-	EParticleKey GetDefault() const;
-	TArray<class UMovieSceneScriptingKey*> GetKeys() const;
-	TArray<class UMovieSceneScriptingKey*> GetKeysByIndex(const TArray<int32>& Indices) const;
-	int32 GetNumKeys() const;
-	bool HasDefault() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneScriptingParticleChannel")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneScriptingParticleChannel")
-	}
-	static class UMovieSceneScriptingParticleChannel* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneScriptingParticleChannel>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneScriptingParticleChannel;
 
 // Class SequencerScripting.MovieSceneScriptingStringKey
 // 0x0020 (0x0060 - 0x0040)
@@ -851,31 +902,6 @@ public:
 };
 DUMPER7_ASSERTS_UMovieSceneBindingExtensions;
 
-// Class SequencerScripting.MovieSceneEventTrackExtensions
-// 0x0000 (0x0028 - 0x0028)
-class UMovieSceneEventTrackExtensions final : public UBlueprintFunctionLibrary
-{
-public:
-	static class UMovieSceneEventRepeaterSection* AddEventRepeaterSection(class UMovieSceneEventTrack* InTrack);
-	static class UMovieSceneEventTriggerSection* AddEventTriggerSection(class UMovieSceneEventTrack* InTrack);
-	static class UClass* GetBoundObjectPropertyClass(const struct FMovieSceneEvent& EventKey);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneEventTrackExtensions")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneEventTrackExtensions")
-	}
-	static class UMovieSceneEventTrackExtensions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneEventTrackExtensions>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneEventTrackExtensions;
-
 // Class SequencerScripting.MovieSceneFolderExtensions
 // 0x0000 (0x0028 - 0x0028)
 class UMovieSceneFolderExtensions final : public UBlueprintFunctionLibrary
@@ -910,32 +936,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieSceneFolderExtensions;
-
-// Class SequencerScripting.MovieSceneMaterialTrackExtensions
-// 0x0000 (0x0028 - 0x0028)
-class UMovieSceneMaterialTrackExtensions final : public UBlueprintFunctionLibrary
-{
-public:
-	static int32 GetMaterialIndex(class UMovieSceneComponentMaterialTrack* Track);
-	static struct FComponentMaterialInfo GetMaterialInfo(class UMovieSceneComponentMaterialTrack* Track);
-	static void SetMaterialIndex(class UMovieSceneComponentMaterialTrack* Track, const int32 MaterialIndex);
-	static void SetMaterialInfo(class UMovieSceneComponentMaterialTrack* Track, const struct FComponentMaterialInfo& MaterialInfo);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneMaterialTrackExtensions")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneMaterialTrackExtensions")
-	}
-	static class UMovieSceneMaterialTrackExtensions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneMaterialTrackExtensions>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneMaterialTrackExtensions;
 
 // Class SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions
 // 0x0000 (0x0028 - 0x0028)

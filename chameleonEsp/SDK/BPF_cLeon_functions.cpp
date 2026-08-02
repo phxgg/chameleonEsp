@@ -16,6 +16,28 @@
 
 SDK_NAMESPACE_START
 
+// Function BPF_cLeon.BPF_cLeon_C.SetSwitchMouseState
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    UseMouse                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPF_cLeon_C::SetSwitchMouseState(bool UseMouse, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPF_cLeon_C", "SetSwitchMouseState");
+
+	Params::BPF_cLeon_C_SetSwitchMouseState Parms{};
+
+	Parms.UseMouse = UseMouse;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPF_cLeon.BPF_cLeon_C.GetTelepportPointName
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

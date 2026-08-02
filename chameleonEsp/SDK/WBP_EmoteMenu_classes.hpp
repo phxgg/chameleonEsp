@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ST_ItemCoreDatas_structs.hpp"
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "ST_ItemCoreDatas_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -43,7 +43,8 @@ public:
 	void SelectEnd();
 	void ReUpdate();
 	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void InpActEvt_IA_Look_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Look_Mouse_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
+	void InpActEvt_IA_Look_Controller_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, const class UInputAction* SourceAction);
 	void ExecuteUbergraph_WBP_EmoteMenu(int32 EntryPoint);
 	void Construct();
 

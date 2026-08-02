@@ -91,6 +91,18 @@ public:
 };
 DUMPER7_ASSERTS_FDataRegistryId;
 
+// ScriptStruct DataRegistry.DataRegistryOrTableRow
+// 0x0028 (0x0028 - 0x0000)
+struct FDataRegistryOrTableRow final
+{
+public:
+	bool                                          bUseDataRegistryId;                                // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataTableRowHandle                    DataTableRow;                                      // 0x0008(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDataRegistryId                        DataRegistryId;                                    // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDataRegistryOrTableRow;
+
 // ScriptStruct DataRegistry.SoftDataRegistryOrTable
 // 0x0038 (0x0038 - 0x0000)
 struct FSoftDataRegistryOrTable final
@@ -146,17 +158,5 @@ public:
 	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FDataRegistrySourceItemId;
-
-// ScriptStruct DataRegistry.DataRegistryOrTableRow
-// 0x0028 (0x0028 - 0x0000)
-struct FDataRegistryOrTableRow final
-{
-public:
-	bool                                          bUseDataRegistryId;                                // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataTableRowHandle                    DataTableRow;                                      // 0x0008(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FDataRegistryId                        DataRegistryId;                                    // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FDataRegistryOrTableRow;
 
 SDK_NAMESPACE_END

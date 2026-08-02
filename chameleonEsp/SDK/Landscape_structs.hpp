@@ -310,15 +310,6 @@ public:
 };
 DUMPER7_ASSERTS_FLandscapeLayer;
 
-// ScriptStruct Landscape.ForeignWorldSplineData
-// 0x0001 (0x0001 - 0x0000)
-struct FForeignWorldSplineData final
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FForeignWorldSplineData;
-
 // ScriptStruct Landscape.LandscapeEditToolRenderData
 // 0x0038 (0x0038 - 0x0000)
 struct FLandscapeEditToolRenderData final
@@ -380,17 +371,6 @@ public:
 	TArray<class ULandscapeWeightmapUsage*>       TextureUsages;                                     // 0x0020(0x0010)(ZeroConstructor, Transient, NonTransactional, UObjectWrapper, NativeAccessSpecifierPublic, TObjectPtr)
 };
 DUMPER7_ASSERTS_FWeightmapData;
-
-// ScriptStruct Landscape.LandscapeProxyMaterialOverride
-// 0x0010 (0x0010 - 0x0000)
-struct FLandscapeProxyMaterialOverride final
-{
-public:
-	struct FPerPlatformInt                        LODIndex;                                          // 0x0000(0x0004)(NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     Material;                                          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
-};
-DUMPER7_ASSERTS_FLandscapeProxyMaterialOverride;
 
 // ScriptStruct Landscape.HeightmapData
 // 0x0008 (0x0008 - 0x0000)
@@ -521,6 +501,15 @@ public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FForeignSplineSegmentData;
+
+// ScriptStruct Landscape.ForeignWorldSplineData
+// 0x0001 (0x0001 - 0x0000)
+struct FForeignWorldSplineData final
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FForeignWorldSplineData;
 
 // ScriptStruct Landscape.LandscapeSplineInterpPoint
 // 0x00E0 (0x00E0 - 0x0000)
@@ -654,6 +643,17 @@ public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FLandscapeImportLayerInfo;
+
+// ScriptStruct Landscape.LandscapeProxyMaterialOverride
+// 0x0010 (0x0010 - 0x0000)
+struct FLandscapeProxyMaterialOverride final
+{
+public:
+	struct FPerPlatformInt                        LODIndex;                                          // 0x0000(0x0004)(NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     Material;                                          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
+};
+DUMPER7_ASSERTS_FLandscapeProxyMaterialOverride;
 
 // ScriptStruct Landscape.LandscapeTexture2DMipMap
 // 0x0038 (0x0038 - 0x0000)

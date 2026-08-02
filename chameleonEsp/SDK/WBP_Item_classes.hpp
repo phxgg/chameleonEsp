@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "PenguinHotel_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "PenguinHotel_structs.hpp"
 
 
 SDK_NAMESPACE_START

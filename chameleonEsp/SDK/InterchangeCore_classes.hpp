@@ -247,54 +247,6 @@ public:
 };
 DUMPER7_ASSERTS_UInterchangeResultError_Generic;
 
-// Class InterchangeCore.InterchangeBaseNodeContainer
-// 0x00A0 (0x00C8 - 0x0028)
-class UInterchangeBaseNodeContainer final : public UObject
-{
-public:
-	TMap<class FString, class UInterchangeBaseNode*> Nodes;                                          // 0x0028(0x0050)(Edit, EditConst, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
-	uint8                                         Pad_78[0x50];                                      // 0x0078(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class FString AddNode(class UInterchangeBaseNode* Node);
-	bool ClearNodeParentUid(const class FString& NodeUniqueID);
-	void ComputeChildrenCache();
-	class UInterchangeBaseNode* GetNodeChildren(const class FString& NodeUniqueID, int32 ChildIndex);
-	void LoadFromFile(const class FString& Filename);
-	void RemoveNode(const class FString& NodeUniqueID);
-	void ReplaceNode(const class FString& NodeUniqueID, class UInterchangeFactoryBaseNode* NewNode);
-	void Reset();
-	void ResetChildrenCache();
-	void SaveToFile(const class FString& Filename);
-	void SetNamespace(const class FString& Namespace, class UClass* TargetClass);
-	bool SetNodeDesiredChildIndex(const class FString& NodeUniqueID, const int32& NewNodeDesiredChildIndex);
-	bool SetNodeParentUid(const class FString& NodeUniqueID, const class FString& NewParentNodeUid);
-
-	class UInterchangeFactoryBaseNode* GetFactoryNode(const class FString& NodeUniqueID) const;
-	bool GetIsAncestor(const class FString& NodeUniqueID, const class FString& AncestorUID) const;
-	const class UInterchangeBaseNode* GetNode(const class FString& NodeUniqueID) const;
-	int32 GetNodeChildrenCount(const class FString& NodeUniqueID) const;
-	TArray<class FString> GetNodeChildrenUids(const class FString& NodeUniqueID) const;
-	void GetNodes(const class UClass* ClassNode, TArray<class FString>* OutNodes) const;
-	void GetRoots(TArray<class FString>* RootNodes) const;
-	bool IsNodeUidValid(const class FString& NodeUniqueID) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("InterchangeBaseNodeContainer")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"InterchangeBaseNodeContainer")
-	}
-	static class UInterchangeBaseNodeContainer* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeBaseNodeContainer>();
-	}
-};
-DUMPER7_ASSERTS_UInterchangeBaseNodeContainer;
-
 // Class InterchangeCore.InterchangeResultError_ReimportFail
 // 0x0000 (0x0070 - 0x0070)
 class UInterchangeResultError_ReimportFail final : public UInterchangeResultError
@@ -515,6 +467,54 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UInterchangeBaseNode;
+
+// Class InterchangeCore.InterchangeBaseNodeContainer
+// 0x00A0 (0x00C8 - 0x0028)
+class UInterchangeBaseNodeContainer final : public UObject
+{
+public:
+	TMap<class FString, class UInterchangeBaseNode*> Nodes;                                          // 0x0028(0x0050)(Edit, EditConst, UObjectWrapper, NativeAccessSpecifierPrivate, TObjectPtr)
+	uint8                                         Pad_78[0x50];                                      // 0x0078(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class FString AddNode(class UInterchangeBaseNode* Node);
+	bool ClearNodeParentUid(const class FString& NodeUniqueID);
+	void ComputeChildrenCache();
+	class UInterchangeBaseNode* GetNodeChildren(const class FString& NodeUniqueID, int32 ChildIndex);
+	void LoadFromFile(const class FString& Filename);
+	void RemoveNode(const class FString& NodeUniqueID);
+	void ReplaceNode(const class FString& NodeUniqueID, class UInterchangeFactoryBaseNode* NewNode);
+	void Reset();
+	void ResetChildrenCache();
+	void SaveToFile(const class FString& Filename);
+	void SetNamespace(const class FString& Namespace, class UClass* TargetClass);
+	bool SetNodeDesiredChildIndex(const class FString& NodeUniqueID, const int32& NewNodeDesiredChildIndex);
+	bool SetNodeParentUid(const class FString& NodeUniqueID, const class FString& NewParentNodeUid);
+
+	class UInterchangeFactoryBaseNode* GetFactoryNode(const class FString& NodeUniqueID) const;
+	bool GetIsAncestor(const class FString& NodeUniqueID, const class FString& AncestorUID) const;
+	const class UInterchangeBaseNode* GetNode(const class FString& NodeUniqueID) const;
+	int32 GetNodeChildrenCount(const class FString& NodeUniqueID) const;
+	TArray<class FString> GetNodeChildrenUids(const class FString& NodeUniqueID) const;
+	void GetNodes(const class UClass* ClassNode, TArray<class FString>* OutNodes) const;
+	void GetRoots(TArray<class FString>* RootNodes) const;
+	bool IsNodeUidValid(const class FString& NodeUniqueID) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("InterchangeBaseNodeContainer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InterchangeBaseNodeContainer")
+	}
+	static class UInterchangeBaseNodeContainer* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeBaseNodeContainer>();
+	}
+};
+DUMPER7_ASSERTS_UInterchangeBaseNodeContainer;
 
 // Class InterchangeCore.InterchangeFactoryBaseNode
 // 0x0160 (0x01C0 - 0x0060)

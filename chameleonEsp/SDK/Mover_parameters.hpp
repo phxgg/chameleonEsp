@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Mover_structs.hpp"
-#include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Mover_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -1527,19 +1527,6 @@ public:
 };
 DUMPER7_ASSERTS_BaseMovementModeTransition_K2_GetMoverComponent;
 
-// Function Mover.FallingMode.ProcessLanded
-// 0x0280 (0x0280 - 0x0000)
-struct FallingMode_ProcessLanded final
-{
-public:
-	struct FFloorCheckResult                      FloorResult;                                       // 0x0000(0x0110)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FVector                                Velocity;                                          // 0x0110(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_128[0x8];                                      // 0x0128(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRelativeBaseInfo                      BaseInfo;                                          // 0x0130(0x0070)(Parm, OutParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FMoverTickEndData                      TickEndData;                                       // 0x01A0(0x00E0)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FallingMode_ProcessLanded;
-
 // Function Mover.WaterMovementUtils.ComputeControlledWaterMove
 // 0x0130 (0x0130 - 0x0000)
 struct WaterMovementUtils_ComputeControlledWaterMove final
@@ -1619,6 +1606,19 @@ public:
 	TSubclassOf<class UObject>                    TurnGeneratorClass;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AsyncWalkingMode_SetTurnGeneratorClass;
+
+// Function Mover.FallingMode.ProcessLanded
+// 0x0280 (0x0280 - 0x0000)
+struct FallingMode_ProcessLanded final
+{
+public:
+	struct FFloorCheckResult                      FloorResult;                                       // 0x0000(0x0110)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FVector                                Velocity;                                          // 0x0110(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_128[0x8];                                      // 0x0128(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRelativeBaseInfo                      BaseInfo;                                          // 0x0130(0x0070)(Parm, OutParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FMoverTickEndData                      TickEndData;                                       // 0x01A0(0x00E0)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FallingMode_ProcessLanded;
 
 // Function Mover.WalkingMode.GetTurnGenerator
 // 0x0008 (0x0008 - 0x0000)

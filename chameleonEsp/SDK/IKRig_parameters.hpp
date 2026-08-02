@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "IKRig_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -89,24 +89,6 @@ public:
 };
 DUMPER7_ASSERTS_IKRetargetFKChainsController_SetSettings;
 
-// Function IKRig.IKRetargetSpeedPlantingController.GetSettings
-// 0x0038 (0x0038 - 0x0000)
-struct IKRetargetSpeedPlantingController_GetSettings final
-{
-public:
-	struct FIKRetargetSpeedPlantingOpSettings     ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_IKRetargetSpeedPlantingController_GetSettings;
-
-// Function IKRig.IKRetargetSpeedPlantingController.SetSettings
-// 0x0038 (0x0038 - 0x0000)
-struct IKRetargetSpeedPlantingController_SetSettings final
-{
-public:
-	struct FIKRetargetSpeedPlantingOpSettings     InSettings;                                        // 0x0000(0x0038)(Parm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_IKRetargetSpeedPlantingController_SetSettings;
-
 // Function IKRig.IKRetargetIKChainsController.GetSettings
 // 0x0038 (0x0038 - 0x0000)
 struct IKRetargetIKChainsController_GetSettings final
@@ -145,24 +127,6 @@ public:
 	class UIKRetargetOpControllerBase*            ReturnValue;                                       // 0x0130(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_RetargetProfileLibrary_GetOpControllerFromRetargetProfile;
-
-// Function IKRig.IKRetargetRunIKRigController.GetSettings
-// 0x0040 (0x0040 - 0x0000)
-struct IKRetargetRunIKRigController_GetSettings final
-{
-public:
-	struct FIKRetargetRunIKRigOpSettings          ReturnValue;                                       // 0x0000(0x0040)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_IKRetargetRunIKRigController_GetSettings;
-
-// Function IKRig.IKRetargetRunIKRigController.SetSettings
-// 0x0040 (0x0040 - 0x0000)
-struct IKRetargetRunIKRigController_SetSettings final
-{
-public:
-	struct FIKRetargetRunIKRigOpSettings          InSettings;                                        // 0x0000(0x0040)(Parm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_IKRetargetRunIKRigController_SetSettings;
 
 // Function IKRig.IKGoalCreatorInterface.AddIKGoals
 // 0x0050 (0x0050 - 0x0000)
@@ -354,6 +318,24 @@ public:
 };
 DUMPER7_ASSERTS_IKRetargetRootMotionController_SetTargetRootBone;
 
+// Function IKRig.IKRetargetRunIKRigController.GetSettings
+// 0x0040 (0x0040 - 0x0000)
+struct IKRetargetRunIKRigController_GetSettings final
+{
+public:
+	struct FIKRetargetRunIKRigOpSettings          ReturnValue;                                       // 0x0000(0x0040)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetRunIKRigController_GetSettings;
+
+// Function IKRig.IKRetargetRunIKRigController.SetSettings
+// 0x0040 (0x0040 - 0x0000)
+struct IKRetargetRunIKRigController_SetSettings final
+{
+public:
+	struct FIKRetargetRunIKRigOpSettings          InSettings;                                        // 0x0000(0x0040)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetRunIKRigController_SetSettings;
+
 // Function IKRig.IKRetargetScaleSourceController.GetSettings
 // 0x0018 (0x0018 - 0x0000)
 struct IKRetargetScaleSourceController_GetSettings final
@@ -371,6 +353,24 @@ public:
 	struct FIKRetargetScaleSourceOpSettings       InSettings;                                        // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_IKRetargetScaleSourceController_SetSettings;
+
+// Function IKRig.IKRetargetSpeedPlantingController.GetSettings
+// 0x0038 (0x0038 - 0x0000)
+struct IKRetargetSpeedPlantingController_GetSettings final
+{
+public:
+	struct FIKRetargetSpeedPlantingOpSettings     ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetSpeedPlantingController_GetSettings;
+
+// Function IKRig.IKRetargetSpeedPlantingController.SetSettings
+// 0x0038 (0x0038 - 0x0000)
+struct IKRetargetSpeedPlantingController_SetSettings final
+{
+public:
+	struct FIKRetargetSpeedPlantingOpSettings     InSettings;                                        // 0x0000(0x0038)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_IKRetargetSpeedPlantingController_SetSettings;
 
 // Function IKRig.IKRetargetStrideWarpingController.GetSettings
 // 0x0060 (0x0060 - 0x0000)

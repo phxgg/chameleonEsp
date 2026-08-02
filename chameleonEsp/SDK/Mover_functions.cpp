@@ -4171,43 +4171,6 @@ class UMoverComponent* UBaseMovementModeTransition::K2_GetMoverComponent() const
 }
 
 
-// Function Mover.FallingMode.ProcessLanded
-// (RequiredAPI, Native, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FFloorCheckResult&         FloorResult                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-// struct FVector*                         Velocity                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRelativeBaseInfo*               BaseInfo                                               (Parm, OutParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-// struct FMoverTickEndData*               TickEndData                                            (Parm, OutParm, NativeAccessSpecifierPublic)
-
-void UFallingMode::ProcessLanded(const struct FFloorCheckResult& FloorResult, struct FVector* Velocity, struct FRelativeBaseInfo* BaseInfo, struct FMoverTickEndData* TickEndData) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FallingMode", "ProcessLanded");
-
-	Params::FallingMode_ProcessLanded Parms{};
-
-	Parms.FloorResult = std::move(FloorResult);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Velocity != nullptr)
-		*Velocity = std::move(Parms.Velocity);
-
-	if (BaseInfo != nullptr)
-		*BaseInfo = std::move(Parms.BaseInfo);
-
-	if (TickEndData != nullptr)
-		*TickEndData = std::move(Parms.TickEndData);
-}
-
-
 // Function Mover.WaterMovementUtils.ComputeControlledWaterMove
 // (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -4426,6 +4389,43 @@ void UAsyncWalkingMode::SetTurnGeneratorClass(TSubclassOf<class UObject> TurnGen
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Mover.FallingMode.ProcessLanded
+// (RequiredAPI, Native, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FFloorCheckResult&         FloorResult                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// struct FVector*                         Velocity                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRelativeBaseInfo*               BaseInfo                                               (Parm, OutParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// struct FMoverTickEndData*               TickEndData                                            (Parm, OutParm, NativeAccessSpecifierPublic)
+
+void UFallingMode::ProcessLanded(const struct FFloorCheckResult& FloorResult, struct FVector* Velocity, struct FRelativeBaseInfo* BaseInfo, struct FMoverTickEndData* TickEndData) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FallingMode", "ProcessLanded");
+
+	Params::FallingMode_ProcessLanded Parms{};
+
+	Parms.FloorResult = std::move(FloorResult);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Velocity != nullptr)
+		*Velocity = std::move(Parms.Velocity);
+
+	if (BaseInfo != nullptr)
+		*BaseInfo = std::move(Parms.BaseInfo);
+
+	if (TickEndData != nullptr)
+		*TickEndData = std::move(Parms.TickEndData);
 }
 
 
